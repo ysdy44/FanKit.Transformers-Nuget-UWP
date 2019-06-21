@@ -52,12 +52,14 @@ namespace FanKit.Transformers
 
         #region DependencyProperty
 
+        /// <summary> Gets or sets <see cref = "IndicatorControl" />'s mode. </summary>
         public IndicatorMode Mode
         {
-            get { return (IndicatorMode)GetValue(LayerProperty); }
-            set { SetValue(LayerProperty, value); }
+            get { return (IndicatorMode)GetValue(ModeProperty); }
+            set { SetValue(ModeProperty, value); }
         }
-        public static readonly DependencyProperty LayerProperty = DependencyProperty.Register(nameof(Mode), typeof(IndicatorMode), typeof(IndicatorControl), new PropertyMetadata(IndicatorMode.None, (sender, e) =>
+        /// <summary> Identifies the <see cref = "IndicatorControl.Mode" /> dependency property. </summary>
+        public static readonly DependencyProperty ModeProperty = DependencyProperty.Register(nameof(Mode), typeof(IndicatorMode), typeof(IndicatorControl), new PropertyMetadata(IndicatorMode.None, (sender, e) =>
         {
             IndicatorControl con = (IndicatorControl)sender;
 
@@ -105,6 +107,8 @@ namespace FanKit.Transformers
 
         #endregion
 
+        /// <summary> Rotating radians </summary>
+        public double Radians { get => this.RotateTransform.Angle; set => this.RotateTransform.Angle = value; }
 
         //@Converter
         public IndicatorControl()

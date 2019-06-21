@@ -88,9 +88,22 @@ namespace FanKit.Transformers
         }
 
 
+
+
+
         /*    
-         *    /// <summary> Find Homography. </summary>
-              public static Matrix3x2 FindHomography222222(Transformer source, Transformer destination)
+   
+        Nuget:
+        《MathNet.Numerics》
+
+        Namespace:
+        using MathNet.Numerics.LinearAlgebra.Double;
+            
+         
+         
+         
+         /// <summary> Find Homography. </summary>
+              public static Matrix3x2 FindHomography(Transformer source, Transformer destination)
               {
                   float x0 = source.LeftTop.X, x1 = source.RightTop.X, x2 = source.LeftBottom.X, x3 = source.RightBottom.X;
                   float y0 = source.LeftTop.Y, y1 = source.RightTop.Y, y2 = source.LeftBottom.Y, y3 = source.RightBottom.Y;

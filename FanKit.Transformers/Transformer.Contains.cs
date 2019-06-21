@@ -110,15 +110,16 @@ namespace FanKit.Transformers
             if (Transformer.InNodeRadius(centerRight, point)) return TransformerMode.ScaleRight;
             if (Transformer.InNodeRadius(centerBottom, point)) return TransformerMode.ScaleBottom;
 
-            //Outside
-            Vector2 outsideLeft = Transformer.OutsideNode(centerLeft, centerRight);
-            Vector2 outsideTop = Transformer.OutsideNode(centerTop, centerBottom);
-            Vector2 outsideRight = Transformer.OutsideNode(centerRight, centerLeft);
-            Vector2 outsideBottom = Transformer.OutsideNode(centerBottom, centerTop);
-
             //Rotation
             if (disabledRadian == false)
             {
+                //Outside
+                Vector2 outsideLeft = Transformer.OutsideNode(centerLeft, centerRight);
+                Vector2 outsideTop = Transformer.OutsideNode(centerTop, centerBottom);
+                Vector2 outsideRight = Transformer.OutsideNode(centerRight, centerLeft);
+                Vector2 outsideBottom = Transformer.OutsideNode(centerBottom, centerTop);
+
+                //Rotation
                 if (Transformer.InNodeRadius(outsideTop, point)) return TransformerMode.Rotation;
 
                 //Skew

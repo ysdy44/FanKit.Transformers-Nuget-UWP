@@ -16,8 +16,8 @@ namespace FanKit.Transformers
         /// <summary> <see cref = "TransformerMatrix.Destination" />'s old cache. </summary>
         public Transformer OldDestination;
 
-        /// <summary> Is disable rotate radian? </summary>
-        public bool DdisabledRadian;
+        /// <summary> Is disable rotate radian? Defult **false**. </summary>
+        public bool DisabledRadian;
 
 
         //@Constructs
@@ -32,7 +32,7 @@ namespace FanKit.Transformers
 
             this.OldDestination = transformer;
 
-            this.DdisabledRadian = false;
+            this.DisabledRadian = false;
         }
         /// <summary>
         /// Constructs a <see cref = "TransformerMatrix" />.
@@ -51,7 +51,7 @@ namespace FanKit.Transformers
 
             this.OldDestination = transformer;
 
-            this.DdisabledRadian = false;
+            this.DisabledRadian = false;
         }
         /// <summary>
         /// Constructs a <see cref = "TransformerMatrix" />. 
@@ -71,7 +71,7 @@ namespace FanKit.Transformers
 
             this.OldDestination = transformer;
 
-            this.DdisabledRadian = false;
+            this.DisabledRadian = false;
         }
 
 
