@@ -3,17 +3,17 @@ using System.Numerics;
 
 namespace FanKit.Transformers
 {
-    /// <summary> 
-    /// Represents a Transformer (LeftTop, RightTop, RightBottom, LeftBottom). 
+    /// <summary>
+    /// Math of <see cref = "Transformer" />. 
     /// </summary>
-    public partial struct Transformer
+    public struct TransformerMath
     {
         /// <summary> 15 degress in angle system. </summary>
         public const float RadiansStep = 0.2617993833333333f;
         /// <summary> 7.5 degress in angle system. </summary>
         public const float RadiansStepHalf = 0.1308996916666667f;
         /// <summary> To find a multiple of the nearest 15. </summary>
-        public static float RadiansStepFrequency(float radian) => ((int)((radian + Transformer.RadiansStepHalf) / Transformer.RadiansStep)) * Transformer.RadiansStep;//Get step radians
+        public static float RadiansStepFrequency(float radian) => ((int)((radian + TransformerMath.RadiansStepHalf) / TransformerMath.RadiansStep)) * TransformerMath.RadiansStep;//Get step radians
 
 
         /// <summary> Math.PI </summary>

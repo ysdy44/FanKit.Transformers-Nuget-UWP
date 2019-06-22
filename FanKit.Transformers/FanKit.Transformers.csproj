@@ -113,6 +113,7 @@
     <Compile Include="IndicatorControl.xaml.cs">
       <DependentUpon>IndicatorControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="LineDistance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RemoteControl.xaml.cs">
       <DependentUpon>RemoteControl.xaml</DependentUpon>
@@ -121,13 +122,17 @@
     <Compile Include="Transformer.Controller.cs" />
     <Compile Include="Transformer.cs" />
     <Compile Include="Transformer.Homography.cs" />
-    <Compile Include="Transformer.Vector.cs" />
+    <Compile Include="Transformer.Mode.cs" />
+    <Compile Include="TransformerMath.cs" />
     <Compile Include="TransformerMatrix.cs" />
     <Compile Include="TransformerMode.cs" />
     <Compile Include="TransformerRect.cs" />
     <EmbeddedResource Include="Properties\FanKit.Transformers.rd.xml" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="MathNet.Numerics">
+      <Version>4.8.1</Version>
+    </PackageReference>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.1.7</Version>
     </PackageReference>

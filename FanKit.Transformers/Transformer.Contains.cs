@@ -6,7 +6,7 @@ namespace FanKit.Transformers
     /// Represents a Transformer (LeftTop, RightTop, RightBottom, LeftBottom). 
     /// </summary>
     public partial struct Transformer
-    {  
+    {
         /// <summary> Radius of node'. Defult 12. </summary>
         private const float NodeRadius = 12.0f;
         /// <summary> Whether the distance exceeds [NodeRadius]. Defult: 144. </summary>
@@ -25,14 +25,6 @@ namespace FanKit.Transformers
         internal static Vector2 OutsideNode(Vector2 nearNode, Vector2 farNode) => nearNode - Vector2.Normalize(farNode - nearNode) * Transformer.NodeDistanceDouble;
 
         /// <summary>
-        /// Point inside the transformer's quadrangle.
-        /// </summary>
-        /// <param name="point"> The point. </param>
-        /// <param name="transformer"> The source transformer. </param>
-        /// <returns></returns>
-        public static bool InQuadrangle(Vector2 point, Transformer transformer) => Transformer.InQuadrangle(point, transformer.LeftTop, transformer.RightTop, transformer.RightBottom, transformer.LeftBottom);
-
-        /// <summary>
         /// Point inside the Quadrangle
         /// </summary>
         /// <param name="point"> The point. </param>
@@ -49,6 +41,21 @@ namespace FanKit.Transformers
             float d = (leftBottom.X - rightBottom.X) * (point.Y - rightBottom.Y) - (leftBottom.Y - rightBottom.Y) * (point.X - rightBottom.X);
             return (a > 0 && b > 0 && c > 0 && d > 0) || (a < 0 && b < 0 && c < 0 && d < 0);
         }
+        /// <summary>
+        /// Point inside the transformer's quadrangle.
+        /// </summary>
+        /// <param name="point"> The point. </param>
+        /// <param name="transformer"> The source transformer. </param>
+        /// <returns></returns>
+        public static bool InQuadrangle(Vector2 point, Transformer transformer) => Transformer.InQuadrangle(point, transformer.LeftTop, transformer.RightTop, transformer.RightBottom, transformer.LeftBottom);
+        /// <summary>
+        /// Point inside the transformer's quadrangle.
+        /// </summary>
+        /// <param name="point"> The point. </param>
+        /// <returns></returns>
+        public bool InQuadrangle(Vector2 point) => Transformer.InQuadrangle(point, this.LeftTop, this.RightTop, this.RightBottom, this.LeftBottom);
+
+
 
         /// <summary>
         /// The transformer was contained in a rectangle.
@@ -57,14 +64,13 @@ namespace FanKit.Transformers
         /// <param name="top"> The destination rectangle's top. </param>
         /// <param name="right"> The destination rectangle's right. </param>
         /// <param name="bottom"> The destination rectangle's bottom. </param>
-        /// <param name="transformer"> The source rectangle's left. </param>
         /// <returns></returns>
-        public static bool Contained(float left, float top, float right, float bottom, Transformer transformer)
+        public bool Contained(float left, float top, float right, float bottom)
         {
-            if (transformer.MinX < left) return false;
-            if (transformer.MinY < top) return false;
-            if (transformer.MaxX > right) return false;
-            if (transformer.MaxY > bottom) return false;
+            if (this.MinX < left) return false;
+            if (this.MinY < top) return false;
+            if (this.MaxX > right) return false;
+            if (this.MaxY > bottom) return false;
 
             return true;
         }
@@ -72,70 +78,8 @@ namespace FanKit.Transformers
         /// The transformer was contained in a rectangle.
         /// </summary>
         /// <param name="rect"> The destination rectangle. </param>
-        /// <param name="transformer"> The source rectangle's left. </param>
         /// <returns></returns>
-        public static bool Contained(TransformerRect rect, Transformer transformer) => Transformer.Contained(rect.Left, rect.Top, rect.Right, rect.Bottom, transformer);
+        public bool Contained(TransformerRect rect) => this.Contained(rect.Left, rect.Top, rect.Right, rect.Bottom);
 
-        /// <summary>
-        /// Gets the radian area filled by the skew node contains the specified point. 
-        /// </summary>
-        /// <param name="point"> Input point. </param>
-        /// <param name="transformer"> Layer's Transformer. </param>
-        /// <param name="matrix"></param>
-        /// <param name="disabledRadian"> disabled radian </param>
-        /// <returns></returns>
-        public static TransformerMode ContainsNodeMode(Vector2 point, Transformer transformer, Matrix3x2 matrix, bool disabledRadian = false)
-        {
-            //LTRB
-            Vector2 leftTop = Vector2.Transform(transformer.LeftTop, matrix);
-            Vector2 rightTop = Vector2.Transform(transformer.RightTop, matrix);
-            Vector2 rightBottom = Vector2.Transform(transformer.RightBottom, matrix);
-            Vector2 leftBottom = Vector2.Transform(transformer.LeftBottom, matrix);
-
-            //Scale2
-            if (Transformer.InNodeRadius(leftTop, point)) return TransformerMode.ScaleLeftTop;
-            if (Transformer.InNodeRadius(rightTop, point)) return TransformerMode.ScaleRightTop;
-            if (Transformer.InNodeRadius(rightBottom, point)) return TransformerMode.ScaleRightBottom;
-            if (Transformer.InNodeRadius(leftBottom, point)) return TransformerMode.ScaleLeftBottom;
-
-            //Center
-            Vector2 centerLeft = (leftTop + leftBottom) / 2;
-            Vector2 centerTop = (leftTop + rightTop) / 2;
-            Vector2 centerRight = (rightTop + rightBottom) / 2;
-            Vector2 centerBottom = (leftBottom + rightBottom) / 2;
-
-            //Scale1
-            if (Transformer.InNodeRadius(centerLeft, point)) return TransformerMode.ScaleLeft;
-            if (Transformer.InNodeRadius(centerTop, point)) return TransformerMode.ScaleTop;
-            if (Transformer.InNodeRadius(centerRight, point)) return TransformerMode.ScaleRight;
-            if (Transformer.InNodeRadius(centerBottom, point)) return TransformerMode.ScaleBottom;
-
-            //Rotation
-            if (disabledRadian == false)
-            {
-                //Outside
-                Vector2 outsideLeft = Transformer.OutsideNode(centerLeft, centerRight);
-                Vector2 outsideTop = Transformer.OutsideNode(centerTop, centerBottom);
-                Vector2 outsideRight = Transformer.OutsideNode(centerRight, centerLeft);
-                Vector2 outsideBottom = Transformer.OutsideNode(centerBottom, centerTop);
-
-                //Rotation
-                if (Transformer.InNodeRadius(outsideTop, point)) return TransformerMode.Rotation;
-
-                //Skew
-                //if (Transformer.InNodeRadius(outsideLeft, point)) return TransformerMode.SkewLeft;
-                //if (Transformer.InNodeRadius(outsideTop, point)) return TransformerMode.SkewTop;
-                if (Transformer.InNodeRadius(outsideRight, point)) return TransformerMode.SkewRight;
-                if (Transformer.InNodeRadius(outsideBottom, point)) return TransformerMode.SkewBottom;
-            }
-
-            //Translation
-            if (Transformer.InQuadrangle(point, leftTop, rightTop, rightBottom, leftBottom))
-            {
-                return TransformerMode.Translation;
-            }
-
-            return TransformerMode.None;
-        }
     }
 }

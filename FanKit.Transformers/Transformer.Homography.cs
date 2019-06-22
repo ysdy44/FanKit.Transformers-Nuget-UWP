@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Numerics;
+using MathNet.Numerics.LinearAlgebra.Double;
 
 namespace FanKit.Transformers
 {
@@ -9,7 +10,7 @@ namespace FanKit.Transformers
     public partial struct Transformer
     {
         /// <summary> Find Homography. </summary>
-        public static Matrix3x2 FindHomography(Transformer source, Transformer destination)
+        public static Matrix3x2 FindHomography22(Transformer source, Transformer destination)
         {
             float x0 = source.LeftTop.X, x1 = source.RightTop.X, x2 = source.LeftBottom.X, x3 = source.RightBottom.X;
             float y0 = source.LeftTop.Y, y1 = source.RightTop.Y, y2 = source.LeftBottom.Y, y3 = source.RightBottom.Y;
@@ -91,6 +92,41 @@ namespace FanKit.Transformers
 
 
 
+
+        /// <summary> Find Homography. </summary>
+        public static Matrix3x2 FindHomography(Transformer source, Transformer destination)
+        {
+            float x0 = source.LeftTop.X, x1 = source.RightTop.X, x2 = source.LeftBottom.X, x3 = source.RightBottom.X;
+            float y0 = source.LeftTop.Y, y1 = source.RightTop.Y, y2 = source.LeftBottom.Y, y3 = source.RightBottom.Y;
+            float u0 = destination.LeftTop.X, u1 = destination.RightTop.X, u2 = destination.LeftBottom.X, u3 = destination.RightBottom.X;
+            float v0 = destination.LeftTop.Y, v1 = destination.RightTop.Y, v2 = destination.LeftBottom.Y, v3 = destination.RightBottom.Y;
+
+            DenseMatrix matrix = DenseMatrix.OfArray(new double[,]
+            {
+                          { x0, y0, 1, 0, 0, 0, -u0* x0, -u0* y0 },
+                          { 0, 0, 0, x0, y0, 1, -v0* x0, -v0* y0 },
+                          { x1, y1, 1, 0, 0, 0, -u1* x1, -u1* y1 },
+                          { 0, 0, 0, x1, y1, 1, -v1* x1, -v1* y1 },
+                          { x3, y3, 1, 0, 0, 0, -u3* x3, -u3* y3 },
+                          { 0, 0, 0, x3, y3, 1, -v3* x3, -v3* y3 },
+                          { x2, y2, 1, 0, 0, 0, -u2* x2, -u2* y2 },
+                          { 0, 0, 0, x2, y2, 1, -v2* x2, -v2* y2 },
+            });
+
+            DenseVector vector = new DenseVector(new double[8]
+            {
+                          u0, v0, u1, v1,
+                          u3, v3, u2, v2
+            });
+
+            var ret = matrix.PseudoInverse() * vector;
+            return new Matrix3x2
+            (
+                m11: (float)ret[0], m12: (float)ret[3],
+                m21: (float)ret[1], m22: (float)ret[4],
+                m31: (float)ret[2], m32: (float)ret[5]
+            );
+        }
         /*    
    
         Nuget:
