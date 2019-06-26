@@ -5,7 +5,7 @@ namespace FanKit.Transformers
     /// <summary>
     /// Contains two <see cref = "Transformer" />s (Source and Destination). 
     /// </summary>
-    public partial struct TransformerMatrix
+    public struct TransformerMatrix
     {
         /// <summary> The source Transformer. </summary>
         public Transformer Source;

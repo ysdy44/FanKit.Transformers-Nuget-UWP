@@ -16,12 +16,12 @@ namespace FanKit.Transformers
         public static float RadiansStepFrequency(float radian) => ((int)((radian + TransformerMath.RadiansStepHalf) / TransformerMath.RadiansStep)) * TransformerMath.RadiansStep;//Get step radians
 
 
-        /// <summary> Math.PI </summary>
-        public const float PI = 3.1415926535897931f;
-        /// <summary> Half of Math.PI </summary>
-        public const float PiHalf = 1.57079632679469655f;
-        /// <summary> Quarter of Math.PI </summary>
-        public const float PiQuarter = 0.78539816339734827f;
+        /// <summary>The number pi</summary>
+        public const float Pi = 3.1415926535897932384626433832795028841971693993751f;
+        /// <summary>The number pi/2</summary>
+        public const float PiOver2 = 1.5707963267948966192313216916397514420985846996876f;
+        /// <summary>The number pi/4</summary>
+        public const float PiOver4 = 0.78539816339744830961566084581987572104929234984378f;
 
 
         /// <summary> Get the [Foot Point] of point and LIne. </summary>

@@ -1,0 +1,28 @@
+﻿<Page
+    x:Class="FanKit.Transformers.TestApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:fanKitTransformers="using:FanKit.Transformers"
+    xmlns:canvas="using:Microsoft.Graphics.Canvas.UI.Xaml"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Resources>
+        <fanKitTransformers:CanvasOperator x:Name="CanvasOperator" DestinationControl="{x:Bind CanvasControl}" Single_Start="CanvasOperator_Single_Start" Single_Delta="CanvasOperator_Single_Delta" Single_Complete="CanvasOperator_Single_Complete"/>
+    </Page.Resources>
+
+    <Grid>
+
+        <canvas:CanvasControl x:Name="CanvasControl" Draw="CanvasControl_Draw" CreateResources="CanvasControl_CreateResources"/>
+      
+        <StackPanel Padding="6" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <TextBlock Text="Ratio"/>
+            <ToggleSwitch x:Name="RatioButton"/>
+            <TextBlock Text="Center"/>
+            <ToggleSwitch x:Name="CenterButton"/>
+        </StackPanel>
+
+    </Grid>
+</Page>
