@@ -8,8 +8,12 @@ namespace FanKit.Transformers
     /// </summary>
     public partial struct Transformer
     {
-
-        /// <summary> Find Homography. </summary>
+        /// <summary>
+        /// Find Homography.  
+        /// </summary>
+        /// <param name="source"> The source Transformer. </param>
+        /// <param name="destination"> The destination Transformer. </param>
+        /// <returns> matrix </returns>
         public static Matrix3x2 FindHomography(Transformer source, Transformer destination)
         {
 
@@ -80,7 +84,7 @@ namespace FanKit.Transformers
             return ret;
         }
 
-        public static MathNet.Numerics.LinearAlgebra.Matrix<double> DoMultiply(MathNet.Numerics.LinearAlgebra.Matrix<double> vvvvvvvvvvvv, MathNet.Numerics.LinearAlgebra.Vector<double> rightSide, MathNet.Numerics.LinearAlgebra.Vector<double> result)
+        private static MathNet.Numerics.LinearAlgebra.Matrix<double> DoMultiply(MathNet.Numerics.LinearAlgebra.Matrix<double> vvvvvvvvvvvv, MathNet.Numerics.LinearAlgebra.Vector<double> rightSide, MathNet.Numerics.LinearAlgebra.Vector<double> result)
         {
             for (var i = 0; i < vvvvvvvvvvvv.RowCount; i++)
             {

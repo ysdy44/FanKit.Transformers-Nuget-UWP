@@ -16,7 +16,7 @@
     <Grid>
 
         <canvas:CanvasControl x:Name="CanvasControl" Draw="CanvasControl_Draw" CreateResources="CanvasControl_CreateResources"/>
-      
+        
         <StackPanel Padding="6" HorizontalAlignment="Left" VerticalAlignment="Top">
             <TextBlock Text="Ratio"/>
             <ToggleSwitch x:Name="RatioButton"/>

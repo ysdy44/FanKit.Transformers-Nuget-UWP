@@ -16,7 +16,7 @@ namespace FanKit.Transformers
         /// <param name="point"> point </param>
         /// <param name="startingTransformer"> starting transformer </param>
         /// <param name="inverseMatrix"> inverse matrix </param>
-        /// <param name="isRatio"> Maintain a ratio when scaling.  </param>
+        /// <param name="isRatio"> Maintain a ratio when scaling. </param>
         /// <param name="isCenter"> Scaling around the center. </param>
         /// <param name="isStepFrequency"> Step Frequency when spinning. </param>
         /// <returns> Transformer </returns>

@@ -30,11 +30,11 @@ Run the "TestApp".
 
 ```xaml
 
-    xmlns:fanKitTransformers="using:FanKit.Transformers"
+    xmlns:transformers="using:FanKit.Transformers"
     xmlns:canvas="using:Microsoft.Graphics.Canvas.UI.Xaml"
 
     <Page.Resources>
-        <fanKitTransformers:CanvasOperator x:Name="CanvasOperator" DestinationControl="{x:Bind CanvasControl}" Single_Start="CanvasOperator_Single_Start" Single_Delta="CanvasOperator_Single_Delta" Single_Complete="CanvasOperator_Single_Complete"/>
+        <transformers:CanvasOperator x:Name="CanvasOperator" DestinationControl="{x:Bind CanvasControl}" Single_Start="CanvasOperator_Single_Start" Single_Delta="CanvasOperator_Single_Delta" Single_Complete="CanvasOperator_Single_Complete"/>
     </Page.Resources>
 
         <canvas:CanvasControl x:Name="CanvasControl" Draw="CanvasControl_Draw" CreateResources="CanvasControl_CreateResources"/>
