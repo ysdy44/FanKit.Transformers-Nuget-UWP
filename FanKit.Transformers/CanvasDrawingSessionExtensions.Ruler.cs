@@ -11,8 +11,8 @@ namespace FanKit.Transformers
     public static partial class CanvasDrawingSessionExtensions
     {
         //Text
-        static Windows.UI.Color TextColor = Windows.UI.Color.FromArgb(255, 127, 127, 127);
-        static CanvasTextFormat TextFormat = new CanvasTextFormat()
+        static readonly Windows.UI.Color TextColor = Windows.UI.Color.FromArgb(255, 127, 127, 127);
+        static readonly CanvasTextFormat TextFormat = new CanvasTextFormat()
         {
             FontSize = 14,
             HorizontalAlignment = CanvasHorizontalAlignment.Center,
@@ -24,9 +24,9 @@ namespace FanKit.Transformers
         //Axis
         const float AxisLine = 12;
         const float AxisThickLine = 20;
-        static Windows.UI.Color AxisColor = Windows.UI.Color.FromArgb(255, 127, 127, 127);
-        static Windows.UI.Color AxisLineColor = Windows.UI.Color.FromArgb(127, 127, 127, 127);
-        static Windows.UI.Color AxisThickLineColor = Windows.UI.Color.FromArgb(127, 127, 127, 127);
+        static readonly Windows.UI.Color AxisColor = Windows.UI.Color.FromArgb(255, 127, 127, 127);
+        static readonly Windows.UI.Color AxisLineColor = Windows.UI.Color.FromArgb(127, 127, 127, 127);
+        static readonly Windows.UI.Color AxisThickLineColor = Windows.UI.Color.FromArgb(127, 127, 127, 127);
 
         private static void _DrawAxis(CanvasDrawingSession ds, CanvasTransformer canvasTransformer, float axisLine, float axisThickLine, Windows.UI.Color axisColor, Windows.UI.Color axisLineColor, Windows.UI.Color axisThickLineColor, Windows.UI.Color textColor, CanvasTextFormat textFormat)
         {
@@ -116,10 +116,10 @@ namespace FanKit.Transformers
         const float RulerLine = 8;
         const float RulerThickLine = 12;
 
-        static Windows.UI.Color RulerBackgroundColor = Windows.UI.Color.FromArgb(64, 127, 127, 127);
-        static Windows.UI.Color RulerColor = Windows.UI.Color.FromArgb(255, 127, 127, 127);
-        static Windows.UI.Color RulerLineColor = Windows.UI.Color.FromArgb(127, 127, 127, 127);
-        static Windows.UI.Color RulerThickLineColor = Windows.UI.Color.FromArgb(127, 127, 127, 127);
+        static readonly Windows.UI.Color RulerBackgroundColor = Windows.UI.Color.FromArgb(64, 127, 127, 127);
+        static readonly Windows.UI.Color RulerColor = Windows.UI.Color.FromArgb(255, 127, 127, 127);
+        static readonly Windows.UI.Color RulerLineColor = Windows.UI.Color.FromArgb(127, 127, 127, 127);
+        static readonly Windows.UI.Color RulerThickLineColor = Windows.UI.Color.FromArgb(127, 127, 127, 127);
 
         private static void _DrawRuler(CanvasDrawingSession ds, CanvasTransformer canvasTransformer, float rulerWidth, float rulerLine, float rulerThickLine, Windows.UI.Color rulerBackgroundColor, Windows.UI.Color rulerColor, Windows.UI.Color rulerLineColor, Windows.UI.Color rulerThickLineColor, Windows.UI.Color textColor, CanvasTextFormat textFormat)
         {

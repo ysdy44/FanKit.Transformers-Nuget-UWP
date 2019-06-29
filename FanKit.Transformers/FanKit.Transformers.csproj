@@ -108,6 +108,7 @@
   <ItemGroup>
     <Compile Include="CanvasDrawingSessionExtensions.cs" />
     <Compile Include="CanvasDrawingSessionExtensions.Node.cs" />
+    <Compile Include="CanvasDrawingSessionExtensions.Card.cs" />
     <Compile Include="CanvasDrawingSessionExtensions.Ruler.cs" />
     <Compile Include="CanvasOperator.cs" />
     <Compile Include="CanvasTransformer.cs" />
