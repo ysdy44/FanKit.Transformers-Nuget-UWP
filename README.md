@@ -27,7 +27,6 @@ Search 'FanKit.Transformers
 Run the "TestApp".
 
 ```xaml
-
     xmlns:transformers="using:FanKit.Transformers"
     xmlns:canvas="using:Microsoft.Graphics.Canvas.UI.Xaml"
 
@@ -35,33 +34,21 @@ Run the "TestApp".
         <transformers:CanvasOperator x:Name="CanvasOperator" DestinationControl="{x:Bind CanvasControl}" Single_Start="CanvasOperator_Single_Start" Single_Delta="CanvasOperator_Single_Delta" Single_Complete="CanvasOperator_Single_Complete"/>
     </Page.Resources>
 
-        <canvas:CanvasControl x:Name="CanvasControl" Draw="CanvasControl_Draw" CreateResources="CanvasControl_CreateResources"/>
-      
-
+   <canvas:CanvasControl x:Name="CanvasControl" Draw="CanvasControl_Draw" CreateResources="CanvasControl_CreateResources"/>   
 "
-
- 
-
 ```
 and
 
 ```csharp
-
-
 using FanKit.Transformers;
 using Microsoft.Graphics.Canvas;
 using System.Numerics;
-
-
 ...
+    //Controller
+    Transformer transformer = Transformer.Controller(this.TransformerMode, startingPoint, point, this.Layer.TransformerMatrix.OldDestination, isRatio, isCenter);
 
-            //Controller
-            Transformer transformer = Transformer.Controller(this.TransformerMode, startingPoint, point, this.Layer.TransformerMatrix.OldDestination, isRatio, isCenter);
-
-            this.Layer.TransformerMatrix.Destination = transformer;
+    this.Layer.TransformerMatrix.Destination = transformer;
 ...
- 
-
 ```
 
 
