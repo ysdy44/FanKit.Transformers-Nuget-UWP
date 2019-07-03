@@ -5,32 +5,6 @@ using Windows.Foundation;
 namespace FanKit.Transformers
 {
     /// <summary>
-    /// <see cref = "CanvasTransformer" />'s matrix mode. 
-    /// </summary>
-    public enum MatrixTransformerMode
-    {
-        /// <summary> Canvas > Virtual > Control . </summary>
-        CanvasToVirtualToControl,
-        /// <summary> Canvas > Virtual. </summary>
-        CanvasToVirtual,
-        /// <summary> Virtual > Control . </summary>
-        VirtualToControl,
-    }
-
-    /// <summary> 
-    /// <see cref = "CanvasTransformer" />'s inverse matrix mode. 
-    /// </summary>
-    public enum InverseMatrixTransformerMode
-    {
-        /// <summary> Control > Virtual > Canvas . </summary>
-        ControlToVirtualToCanvas,
-        /// <summary> Control > Virtual. </summary>
-        ControlToVirtual,
-        /// <summary> Virtual > Canvas . </summary>
-        VirtualToCanvas,
-    }
-
-    /// <summary>
     /// Transformer: 
     /// Provide matrix for RenderLayer by Position、Scale、Radians.
     /// 

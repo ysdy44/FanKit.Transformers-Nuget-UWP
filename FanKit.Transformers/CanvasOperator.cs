@@ -269,7 +269,7 @@ namespace FanKit.Transformers
     /// <summary>
     /// <see cref = "CanvasOperator" />'s input device.
     /// </summary>
-    internal enum InputDevice
+    public enum InputDevice
     {
         None,
 

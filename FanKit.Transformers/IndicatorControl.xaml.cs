@@ -7,40 +7,6 @@ using Windows.UI.Xaml.Shapes;
 
 namespace FanKit.Transformers
 {
-
-    /// <summary>
-    /// Mode of <see cref = "IndicatorControl" />. 
-    /// </summary>
-    public enum IndicatorMode
-    {
-        /// <summary> Normal. </summary>
-        None,
-
-        /// <summary> LeftTop. </summary>
-        LeftTop,
-        /// <summary> RightTop. </summary>
-        RightTop,
-        /// <summary> RightBottom. </summary>
-        RightBottom,
-        /// <summary> LeftBottom. </summary>
-        LeftBottom,
-
-        /// <summary> Left. </summary>
-        Left,
-        /// <summary> Top. </summary>
-        Top,
-        /// <summary> Right. </summary>
-        Right,
-        /// <summary> Bottom. </summary>
-        Bottom,
-
-        /// <summary> Center. </summary>
-        Center,
-    }
-
-    //@Delegate
-    public delegate void IndicatorModeHandler(IndicatorMode mode);
-
     /// <summary>
     /// Transformed indicator control.
     /// </summary>
@@ -101,7 +67,7 @@ namespace FanKit.Transformers
 
                     default: break;
                 }
-                con.ModeChanged?.Invoke(value);//Delegate
+                con.ModeChanged?.Invoke(con, value);//Delegate
             }
         }));
 

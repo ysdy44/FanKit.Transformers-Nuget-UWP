@@ -6,31 +6,29 @@ using Windows.UI.Xaml.Input;
 
 namespace FanKit.Transformers
 {
-    //Delegate
-    public delegate void RemoteVectorHandler(object sender, Vector2 value);
-
     /// <summary>
     /// Transformed remote control.
     /// </summary>
     public sealed partial class RemoteControl : UserControl
     {
         //@Delegate
-        /// <summary> Move the round button trigger **ValueChangeStarted** event. </summary>
+        /// <summary> Occurs when the value change starts. </summary>
         public event RemoteVectorHandler ValueChangeStarted;
-        /// <summary> Move the round button trigger **ValueChangeDelta** event. </summary>
+        /// <summary> Occurs when value change. </summary>
         public event RemoteVectorHandler ValueChangeDelta;
-        /// <summary> Move the round button trigger **ValueChangeCompleted** event. </summary>
+        /// <summary> Occurs when the value change is complete. </summary>
         public event RemoteVectorHandler ValueChangeCompleted;
+        
 
         /// <summary> Click the button around to trigger **Moved** event. </summary>
         public event RemoteVectorHandler Moved;
 
 
         //Size
-        private Size RootGrigSize;
-        private readonly Size CanvasSize = new Size(246, 246);
-        private readonly Size ManipulationSize = new Size(140, 140);
-        private readonly Size RemoteSize = new Size(40, 40);
+         Size RootGrigSize;
+         readonly Size CanvasSize = new Size(246, 246);
+         readonly Size ManipulationSize = new Size(140, 140);
+         readonly Size RemoteSize = new Size(40, 40);
 
         /// <summary>
         /// Remote's Center
