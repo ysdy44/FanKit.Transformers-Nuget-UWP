@@ -6,8 +6,11 @@ namespace FanKit.Transformers
     /// Icon of <see cref = "Transformer" />. 
     /// </summary>
     public sealed partial class Icon : UserControl
-    {       
-        //@Converter
+    {
+        //@Constructs
+        /// <summary>
+        /// Constructs a <see cref="Icon"/>. 
+        /// </summary>
         public Icon()
         {
             this.InitializeComponent();

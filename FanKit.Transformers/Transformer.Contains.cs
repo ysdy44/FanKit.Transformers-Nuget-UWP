@@ -3,7 +3,7 @@
 namespace FanKit.Transformers
 {
     /// <summary> 
-    /// Represents a Transformer (LeftTop, RightTop, RightBottom, LeftBottom). 
+    /// A structure encapsulating four vector values (LeftTop, RightTop, RightBottom, LeftBottom). 
     /// </summary>
     public partial struct Transformer
     {

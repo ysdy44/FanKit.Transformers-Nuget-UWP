@@ -3,7 +3,7 @@
 namespace FanKit.Transformers
 {
     /// <summary> 
-    /// Represents a Transformer (LeftTop, RightTop, RightBottom, LeftBottom). 
+    /// A structure encapsulating four vector values (LeftTop, RightTop, RightBottom, LeftBottom). 
     /// </summary>
     public partial struct Transformer
     {
@@ -62,7 +62,7 @@ namespace FanKit.Transformers
         /// <param name="point"> Input point. </param>
         /// <param name="transformer"> Layer's Transformer. </param>
         /// <param name="disabledRadian"> disabled radian </param>
-        /// <returns></returns>
+        /// <returns> The selected mode. </returns>
         public static TransformerMode ContainsNodeMode(Vector2 point, Transformer transformer, bool disabledRadian = false)
         {
             Vector2 leftTop = (transformer.LeftTop);
@@ -80,7 +80,7 @@ namespace FanKit.Transformers
         /// <param name="transformer"> Layer's Transformer. </param>
         /// <param name="matrix"></param>
         /// <param name="disabledRadian"> disabled radian </param>
-        /// <returns></returns>
+        /// <returns> The selected mode. </returns>
         public static TransformerMode ContainsNodeMode(Vector2 point, Transformer transformer, Matrix3x2 matrix, bool disabledRadian = false)
         {
             Vector2 leftTop = Vector2.Transform(transformer.LeftTop, matrix);

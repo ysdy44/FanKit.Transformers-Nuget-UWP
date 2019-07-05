@@ -96,7 +96,10 @@ namespace FanKit.Transformers
         Vector2 Vector;
 
 
-        //@Converter
+        //@Constructs
+        /// <summary>
+        /// Constructs a <see cref="RemoteControl"/>.
+        /// </summary>
         public RemoteControl()
         {
             this.InitializeComponent();

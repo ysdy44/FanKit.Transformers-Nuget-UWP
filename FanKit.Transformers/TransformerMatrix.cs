@@ -3,9 +3,9 @@
 namespace FanKit.Transformers
 {
     /// <summary>
-    /// Contains two <see cref = "Transformer" />s (Source and Destination). 
+    /// A structure encapsulating two transformer values  (Source and Destination). 
     /// </summary>
-    public struct TransformerMatrix
+    public struct TransformerMatrix: ICacheTransform
     {
         /// <summary> The source Transformer. </summary>
         public Transformer Source;
@@ -21,7 +21,9 @@ namespace FanKit.Transformers
 
 
         //@Constructs
-        /// <summary> Constructs a <see cref = "TransformerMatrix" />. </summary>
+        /// <summary> 
+        /// Constructs a <see cref = "TransformerMatrix" />. 
+        /// </summary>
         public TransformerMatrix(Transformer transformer)
         {
             //Source
@@ -38,7 +40,7 @@ namespace FanKit.Transformers
         /// Constructs a <see cref = "TransformerMatrix" />.
         /// </summary>
         /// <param name="pointA"> Frist point of transformer matrix.</param>
-        /// <param name="pointA"> Second point of transformer matrix.</param>
+        /// <param name="pointB"> Second point of transformer matrix.</param>
         public TransformerMatrix(Vector2 pointA, Vector2 pointB)
         {
             Transformer transformer = new Transformer(pointA, pointB);
@@ -57,7 +59,7 @@ namespace FanKit.Transformers
         /// Constructs a <see cref = "TransformerMatrix" />. 
         /// </summary> 
         /// <param name="width"> Width of transformer matrix.</param>
-        /// <param name="height"> Height transformer matrix.</param>
+        /// <param name="height"> Height of transformer matrix.</param>
         /// <param name="postion"> Postion of transformer matrix. </param>
         public TransformerMatrix(float width, float height, Vector2 postion)
         {
@@ -76,9 +78,27 @@ namespace FanKit.Transformers
 
 
         /// <summary>
-        /// Gets <see cref = "TransformerMatrix" />'s matrix.
+        /// Gets transformer-matrix>'s resulting matrix.
         /// </summary>
-        /// <returns> matrix </returns>
+        /// <returns> The product matrix. </returns>
         public Matrix3x2 GetMatrix() => Transformer.FindHomography(this.Source, this.Destination);
-  }
+
+
+        //@Override
+        /// <summary>
+        ///  Cache the transformer-matrix's transformer.
+        /// </summary>
+        public void CacheTransform() => this.OldDestination = this.Destination;
+        /// <summary>
+        ///  Transforms the TransformerMatrix by the given matrix.
+        /// </summary>
+        /// <param name="matrix"> The resulting matrix. </param>
+        public void TransformMultiplies(Matrix3x2 matrix) => this.Destination = this.OldDestination * matrix;
+
+        /// <summary>
+        ///  Transforms the TransformerMatrix by the given vector.
+        /// </summary>
+        /// <param name="vector"> The add value use to summed. </param>
+        public void TransformAdd(Vector2 vector) => this.Destination = this.OldDestination + vector;
+    }
 }

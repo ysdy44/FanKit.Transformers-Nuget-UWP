@@ -25,6 +25,7 @@ namespace FanKit.Transformers
             get { return (Control)GetValue(DestinationControlProperty); }
             set { SetValue(DestinationControlProperty, value); }
         }
+        /// <summary> Identifies the <see cref = "CanvasOperator.DestinationControl" /> dependency property. </summary>
         public static DependencyProperty DestinationControlProperty = DependencyProperty.Register(nameof(DestinationControl), typeof(Windows.UI.Xaml.Controls.Control), typeof(CanvasOperator), new PropertyMetadata(null, (sender, e) =>
         {
             CanvasOperator con = (CanvasOperator)sender;
@@ -45,71 +46,62 @@ namespace FanKit.Transformers
 
         #endregion
 
+
         #region Delegate
 
 
+        //@Delegate
         /// <summary>
-        /// One Finger | Mouse Left Button | Pen
+        /// Method that represents the handling of the Single_Start, Single_Delta, Single_Complete event.
         /// </summary>
-        /// <param name="point"> The position of the point. </param>
+        /// <param name="point"> The position of the touch point. </param>
         public delegate void SingleHandler(Vector2 point);
+        /// <summary> Occurs when the one-finger | mouse-left-button | pen event starts. </summary>
         public event SingleHandler Single_Start = null;
+        /// <summary> Occurs when one-finger | mouse-left-button | pen event change. </summary>
         public event SingleHandler Single_Delta = null;
+        /// <summary> Occurs when the one-finger | mouse-left-button | pen event is complete. </summary>
         public event SingleHandler Single_Complete = null;
 
+
         /// <summary>
-        /// Mouse right button
-        /// </summary>
-        /// <param name="point"> The position of the point. </param>
+        /// Method that represents the handling of the Right_Start, Right_Delta, Right_Complete event.
+        /// <param name="point"> The position of the mouse point. </param>
+        /// </summary>>
         public delegate void RightHandler(Vector2 point);
+        /// <summary> Occurs when the mouse-right-button event starts. </summary>
         public event RightHandler Right_Start = null;
+        /// <summary> Occurs when mouse-right-button event change. </summary>
         public event RightHandler Right_Delta = null;
+        /// <summary> Occurs when the mouse-right-button event is complete. </summary>
         public event RightHandler Right_Complete = null;
 
+
         /// <summary>
-        /// Two fingers
+        /// Method that represents the handling of the Double_Start, Double_Delta, Double_Complete event.
         /// </summary>
-        /// <param name="center"> The center of the double finger. </param>
+        /// <param name="center"> The center of the two finger. </param>
         /// <param name="space"> The space between two fingers. </param>
         public delegate void DoubleHandler(Vector2 center, float space);
+        /// <summary> Occurs when the double-finger event starts. </summary>
         public event DoubleHandler Double_Start = null;
+        /// <summary> Occurs when double-finger event change. </summary>
         public event DoubleHandler Double_Delta = null;
+        /// <summary> Occurs when the double-finger event is complete. </summary>
         public event DoubleHandler Double_Complete = null;
 
-        /// <summary>Mouse Wheel Changed  </summary>
+
+        /// <summary>
+        /// Occurs when the incremental value of the pointer wheel changes.
+        /// </summary>
         public event DoubleHandler Wheel_Changed = null;
 
 
         #endregion
 
-        #region PointerRouted
-
-
-        /// <summary> Return pointer position. </summary>
-        public Vector2 Pointer_Position(PointerRoutedEventArgs e) => e.GetCurrentPoint(this.DestinationControl).Position.ToVector2();
-        /// <summary> Return pointer pressure. </summary>
-        public float Pointer_Pressure(PointerRoutedEventArgs e) => e.GetCurrentPoint(this.DestinationControl).Properties.Pressure;
-        /// <summary> Return pointer wheel delta. </summary>
-        public float Pointer_WheelDelta(PointerRoutedEventArgs e) => e.GetCurrentPoint(this.DestinationControl).Properties.MouseWheelDelta;
-
-        /// <summary> Touch or not. </summary>
-        public bool Pointer_IsTouch(PointerRoutedEventArgs e) => e.GetCurrentPoint(this.DestinationControl).PointerDevice.PointerDeviceType == PointerDeviceType.Touch;
-        /// <summary> Pen or not. </summary>
-        public bool Pointer_IsPen(PointerRoutedEventArgs e) => e.GetCurrentPoint(this.DestinationControl).PointerDevice.PointerDeviceType == PointerDeviceType.Pen && e.GetCurrentPoint(this.DestinationControl).Properties.IsBarrelButtonPressed == false && e.GetCurrentPoint(this.DestinationControl).IsInContact;
-        /// <summary> Barrel or not. </summary>
-        public bool Pointer_IsBarrel(PointerRoutedEventArgs e) => e.GetCurrentPoint(this.DestinationControl).PointerDevice.PointerDeviceType == PointerDeviceType.Pen && e.GetCurrentPoint(this.DestinationControl).Properties.IsBarrelButtonPressed == true && e.GetCurrentPoint(this.DestinationControl).IsInContact;
-
-        /// <summary> Mouse or not. </summary>
-        public bool Pointer_IsMouse(PointerRoutedEventArgs e) => e.GetCurrentPoint(this.DestinationControl).PointerDevice.PointerDeviceType == PointerDeviceType.Mouse;
-        /// <summary> Mouse left button or not. </summary>
-        public bool Pointer_IsLeft(PointerRoutedEventArgs e) => e.GetCurrentPoint(this.DestinationControl).PointerDevice.PointerDeviceType == PointerDeviceType.Mouse && e.GetCurrentPoint(this.DestinationControl).Properties.IsLeftButtonPressed;
-        /// <summary> Mouse right button or not. </summary>
-        public bool Pointer_IsRight(PointerRoutedEventArgs e) => e.GetCurrentPoint(this.DestinationControl).Properties.IsRightButtonPressed || e.GetCurrentPoint(this.DestinationControl).Properties.IsMiddleButtonPressed;
-
-
-        #endregion
 
         #region Point
+
 
         InputDevice Device = InputDevice.None;
 
@@ -138,9 +130,9 @@ namespace FanKit.Transformers
         //Pointer Pressed
         private void Control_PointerPressed(object sender, PointerRoutedEventArgs e)
         {
-            Vector2 point = this.Pointer_Position(e);
+            Vector2 point = CanvasOperator.PointerPosition(this.DestinationControl, e);
 
-            if (this.Pointer_IsTouch(e))
+            if (CanvasOperator.PointerIsTouch(this.DestinationControl, e))
             {
                 this._pointers.Add(e.Pointer.PointerId);
                 if (e.Pointer.PointerId % 2 == 0) this._evenPointer = point;
@@ -162,7 +154,7 @@ namespace FanKit.Transformers
             }
             else
             {
-                if (this.Pointer_IsRight(e))
+                if (CanvasOperator.PointerIsRight(this.DestinationControl, e))
                 {
                     if (this.Device != InputDevice.Right)
                     {
@@ -170,7 +162,7 @@ namespace FanKit.Transformers
                         this.Right_Start?.Invoke(point);//Delegate
                     }
                 }
-                if (this.Pointer_IsLeft(e) || this.Pointer_IsPen(e))
+                if (CanvasOperator.PointerIsLeft(this.DestinationControl, e) || CanvasOperator.PointerIsPen(this.DestinationControl, e))
                 {
                     if (this.Device != InputDevice.Single)
                     {
@@ -180,11 +172,10 @@ namespace FanKit.Transformers
                 }
             }
         }
-
         //Pointer Released
         private void Control_PointerReleased(object sender, PointerRoutedEventArgs e)
         {
-            Vector2 point = this.Pointer_Position(e);
+            Vector2 point = CanvasOperator.PointerPosition(this.DestinationControl, e);
 
             if (this.Device == InputDevice.Right)
             {
@@ -206,14 +197,12 @@ namespace FanKit.Transformers
         }
 
 
-
-
         //Pointer Moved
         private void Control_PointerMoved(object sender, PointerRoutedEventArgs e)
         {
-            Vector2 point = this.Pointer_Position(e);
+            Vector2 point = CanvasOperator.PointerPosition(this.DestinationControl, e);
 
-            if (this.Pointer_IsTouch(e))
+            if (CanvasOperator.PointerIsTouch(this.DestinationControl, e))
             {
                 if (e.Pointer.PointerId % 2 == 0) this._evenPointer = point;
                 if (e.Pointer.PointerId % 2 == 1) this._oddPointer = point;
@@ -255,11 +244,84 @@ namespace FanKit.Transformers
         //Wheel Changed
         private void Control_PointerWheelChanged(object sender, PointerRoutedEventArgs e)
         {
-            Vector2 point = this.Pointer_Position(e);
-            float space = this.Pointer_WheelDelta(e);
+            Vector2 point = CanvasOperator.PointerPosition(this.DestinationControl, e);
+            float space = CanvasOperator.PointerWheelDelta(this.DestinationControl, e);
 
             this.Wheel_Changed?.Invoke(point, space);//Delegate
         }
+
+
+        #endregion
+
+
+        #region PointerRouted
+
+        //@Static
+        /// <summary>
+        /// Gets the position of touch point
+        /// </summary>
+        /// <param name="relativeTo"> Any UIElement derived objects connected to the same object tree. </param>
+        /// <param name="e"> Event data for events. </param>
+        /// <returns> The position of touch point.</returns>
+        public static Vector2 PointerPosition(UIElement relativeTo, PointerRoutedEventArgs e) => e.GetCurrentPoint(relativeTo).Position.ToVector2();
+        /// <summary>
+        /// Gets the pressure of touch point
+        /// </summary>
+        /// <param name="relativeTo"> Any UIElement derived objects connected to the same object tree. </param>
+        /// <param name="e"> Event data for events. </param>
+        /// <returns> The pressure of touch point.</returns>
+        public static float PointerPressure(UIElement relativeTo, PointerRoutedEventArgs e) => e.GetCurrentPoint(relativeTo).Properties.Pressure;
+        /// <summary>
+        /// Gets the value entered by the wheel button.
+        /// </summary>
+        /// <param name="relativeTo"> Any UIElement derived objects connected to the same object tree. </param>
+        /// <param name="e"> Event data for events. </param>
+        /// <returns> The value entered by the wheel button. </returns>
+        public static float PointerWheelDelta(UIElement relativeTo, PointerRoutedEventArgs e) => e.GetCurrentPoint(relativeTo).Properties.MouseWheelDelta;
+
+        /// <summary>
+        /// Judging the action.
+        /// </summary>
+        /// <param name="relativeTo"> Any UIElement derived objects connected to the same object tree. </param>
+        /// <param name="e"> Event data for events. </param>
+        /// <returns> If the action is triggered by a touch, return **true**. </returns>
+        public static bool PointerIsTouch(UIElement relativeTo, PointerRoutedEventArgs e) => e.GetCurrentPoint(relativeTo).PointerDevice.PointerDeviceType == PointerDeviceType.Touch;
+        /// <summary>
+        /// Judging the action.
+        /// </summary>
+        /// <param name="relativeTo"> Any UIElement derived objects connected to the same object tree. </param>
+        /// <param name="e"> Event data for events. </param>
+        /// <returns> If the action is triggered by a pen, return **true**. </returns>
+        public static bool PointerIsPen(UIElement relativeTo, PointerRoutedEventArgs e) => e.GetCurrentPoint(relativeTo).PointerDevice.PointerDeviceType == PointerDeviceType.Pen && e.GetCurrentPoint(relativeTo).Properties.IsBarrelButtonPressed == false && e.GetCurrentPoint(relativeTo).IsInContact;
+        /// <summary>
+        /// Judging the action.
+        /// </summary>
+        /// <param name="relativeTo"> Any UIElement derived objects connected to the same object tree. </param>
+        /// <param name="e"> Event data for events. </param>
+        /// <returns> If the action is triggered by a barrel, return **true**. </returns>
+        public static bool PointerIsBarrel(UIElement relativeTo, PointerRoutedEventArgs e) => e.GetCurrentPoint(relativeTo).PointerDevice.PointerDeviceType == PointerDeviceType.Pen && e.GetCurrentPoint(relativeTo).Properties.IsBarrelButtonPressed == true && e.GetCurrentPoint(relativeTo).IsInContact;
+
+        /// <summary>
+        /// Judging the action.
+        /// </summary>
+        /// <param name="relativeTo"> Any UIElement derived objects connected to the same object tree. </param>
+        /// <param name="e"> Event data for events. </param>
+        /// <returns> If the action is triggered by a mouse, return **true**. </returns>
+        public static bool PointerIsMouse(UIElement relativeTo, PointerRoutedEventArgs e) => e.GetCurrentPoint(relativeTo).PointerDevice.PointerDeviceType == PointerDeviceType.Mouse;
+        /// <summary>
+        /// Judging the action.
+        /// </summary>
+        /// <param name="relativeTo"> Any UIElement derived objects connected to the same object tree. </param>
+        /// <param name="e"> Event data for events. </param>
+        /// <returns> If the action is triggered by a mouse-left-button, return **true**. </returns>
+        public static bool PointerIsLeft(UIElement relativeTo, PointerRoutedEventArgs e) => e.GetCurrentPoint(relativeTo).PointerDevice.PointerDeviceType == PointerDeviceType.Mouse && e.GetCurrentPoint(relativeTo).Properties.IsLeftButtonPressed;
+        /// <summary>
+        /// Judging the action.
+        /// </summary>
+        /// <param name="relativeTo"> Any UIElement derived objects connected to the same object tree. </param>
+        /// <param name="e"> Event data for events. </param>
+        /// <returns> If the action is triggered by a mouse-right-button, return **true**. </returns>
+        public static bool PointerIsRight(UIElement relativeTo, PointerRoutedEventArgs e) => e.GetCurrentPoint(relativeTo).Properties.IsRightButtonPressed || e.GetCurrentPoint(relativeTo).Properties.IsMiddleButtonPressed;
 
 
         #endregion
@@ -271,15 +333,16 @@ namespace FanKit.Transformers
     /// </summary>
     public enum InputDevice
     {
+        /// <summary> Normal. </summary>
         None,
 
-        /// <summary>One Finger | Mouse Left Button | Pen</summary>
+        /// <summary>one-finger | mouse-left-button | pen</summary>
         Single,
 
         /// <summary>Two Fingers</summary>
         Double,
 
-        /// <summary>Mouse Right Button </summary>
+        /// <summary>Mouse-Right -Button </summary>
         Right,
     }
 }

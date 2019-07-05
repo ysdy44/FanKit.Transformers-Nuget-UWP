@@ -4,7 +4,7 @@ using System.Numerics;
 namespace FanKit.Transformers
 {
     /// <summary> 
-    /// Represents a Transformer (LeftTop, RightTop, RightBottom, LeftBottom). 
+    /// A structure encapsulating four vector values (LeftTop, RightTop, RightBottom, LeftBottom). 
     /// </summary>
     public partial struct Transformer
     {
@@ -21,7 +21,7 @@ namespace FanKit.Transformers
 
         //@Constructs
         /// <summary>
-        /// Constructs a <see cref = "Transformer" />.
+        /// Constructs a transformer.
         /// </summary>
         /// <param name="left"> Transformer's left. </param>
         /// <param name="top"> Transformer's top. </param>
@@ -35,7 +35,7 @@ namespace FanKit.Transformers
             this.LeftBottom = new Vector2(left, bottom);
         }
         /// <summary>
-        /// Constructs a <see cref = "Transformer" />.
+        /// Constructs a transformer.
         /// </summary>
         /// <param name="rect"> Transformer's initial rectangle. </param>
         public Transformer(TransformerRect rect)
@@ -47,10 +47,10 @@ namespace FanKit.Transformers
         }
 
         /// <summary>
-        /// Constructs a <see cref = "Transformer" />.
+        /// Constructs a transformer.
         /// </summary>
         /// <param name="pointA"> Frist point of transformer.</param>
-        /// <param name="pointA"> Second point of transformer.</param>
+        /// <param name="pointB"> Second point of transformer.</param>
         public Transformer(Vector2 pointA, Vector2 pointB)
         {
             TransformerRect rect = new TransformerRect(pointA, pointB);
@@ -62,10 +62,10 @@ namespace FanKit.Transformers
         }
         
         /// <summary>
-        /// Constructs a <see cref = "Transformer" />.
+        /// Constructs a transformer.
         /// </summary>
         /// <param name="pointA"> Frist point of rectangle.</param>
-        /// <param name="pointA"> Second point of rectangle.</param>
+        /// <param name="pointB"> Second point of rectangle.</param>
         /// <param name="isCenter"> Scaling around the center. </param>
         /// <param name="isRatio"> Maintain a ratio when scaling. </param>
         public Transformer(Vector2 pointA, Vector2 pointB, bool isCenter, bool isRatio)
@@ -79,10 +79,10 @@ namespace FanKit.Transformers
         }
 
         /// <summary>
-        /// Constructs a <see cref = "Transformer" />.
+        /// Constructs a transformer.
         /// </summary>
         /// <param name="width"> Width of transformer.</param>
-        /// <param name="height"> Height transformer.</param>
+        /// <param name="height"> Height of transformer.</param>
         /// <param name="postion"> Postion of transformer. </param>
         public Transformer(float width, float height, Vector2 postion)
         {
@@ -123,11 +123,11 @@ namespace FanKit.Transformers
 
         //@Static
         /// <summary>
-        /// Adds <see cref = "Transformer" /> and vector.
+        /// Adds transformer and vector together.
         /// </summary>
         /// <param name="transformer"> The source transformer. </param>
         /// <param name="vector"> The added vector. </param>
-        /// <returns> Transformer </returns>
+        /// <returns> The resulting transformer. </returns>
         public static Transformer Add(Transformer transformer, Vector2 vector) => new Transformer
         {
             LeftTop = transformer.LeftTop + vector,
@@ -137,11 +137,11 @@ namespace FanKit.Transformers
         };
 
         /// <summary>
-        /// Multiplies <see cref = "Transformer" /> and vector.
+        /// Multiplies transformer and vector  and returns the resulting transformer.
         /// </summary>
         /// <param name="transformer"> The source transformer. </param>
         /// <param name="matrix"> The transformation matrix. </param>
-        /// <returns> Transformer </returns>
+        /// <returns> The product transformer. </returns>
         public static Transformer Multiplies(Transformer transformer, Matrix3x2 matrix) => new Transformer
         {
             LeftTop = Vector2.Transform(transformer.LeftTop, matrix),
@@ -149,5 +149,25 @@ namespace FanKit.Transformers
             RightBottom = Vector2.Transform(transformer.RightBottom, matrix),
             LeftBottom = Vector2.Transform(transformer.LeftBottom, matrix)
         };
+
+
+        //@Static
+        /// <summary>
+        /// Adds transformer and vector together.
+        /// </summary>
+        /// <param name="value1"> The source transformer. </param>
+        /// <param name="value2"> The source vector. </param>
+        /// <returns> The summed transformer. </returns>
+        public static Transformer operator +(Transformer value1, Vector2 value2) => Transformer.Add(value1, value2);
+
+        /// <summary>
+        /// Multiplies transformer and vector  and returns the resulting transformer.
+        /// </summary>
+        /// <param name="value1">  The source transformer. </param>
+        /// <param name="value2"> The scaling value to use. </param>
+        /// <returns> The resulting transformer. </returns>
+        public static Transformer operator *(Transformer value1, Matrix3x2 value2) => Transformer.Multiplies(value1, value2);
+
+
     }
 }

@@ -113,6 +113,7 @@
     <Compile Include="CanvasDrawingSessionExtensions.Ruler.cs" />
     <Compile Include="CanvasOperator.cs" />
     <Compile Include="CanvasTransformer.cs" />
+    <Compile Include="Interface\ICacheTransform.cs" />
     <Compile Include="Icon.xaml.cs">
       <DependentUpon>Icon.xaml</DependentUpon>
     </Compile>
@@ -168,6 +169,7 @@
       <Name>Numerics</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

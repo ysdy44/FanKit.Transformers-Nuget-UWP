@@ -6,15 +6,15 @@ namespace FanKit.Transformers
 {
     /// <summary>
     /// Transformer: 
-    /// Provide matrix for RenderLayer by Position、Scale、Radians.
+    /// Provide matrix by Position、Scale、Radians.
     /// 
     /// 
-    /// TODO：
-    /// Canvas Layer：
+    /// TODO:
+    /// Canvas Layer:
     ///    The original size of the layer.
-    /// Virtual Layer： 
+    /// Virtual Layer:
     ///    Render all layers together and make their center points coincide with the origin (0,0) and then zoom;
-    /// Control Layer： 
+    /// Control Layer:
     ///    Rotate around the origin first, then shift. (The canvas has a rotation angle)
     ///    
     /// </summary>
@@ -43,6 +43,9 @@ namespace FanKit.Transformers
 
 
         //@Construct
+        /// <summary>
+        /// Constructs a <see cref = "CanvasTransformer" />.
+        /// </summary>
         public CanvasTransformer()
         {
             this.ReloadMatrix();
@@ -66,7 +69,9 @@ namespace FanKit.Transformers
         }
         private Size size;
 
-        /// <summary> Fit to the screen. </summary>
+        /// <summary> 
+        /// Fit to the screen. 
+        /// </summary>
         public void Fit()
         {
             float widthScale = this.ControlWidth / this.Width / 8.0f * 7.0f;
@@ -85,7 +90,7 @@ namespace FanKit.Transformers
         /// <summary>
         /// Fit to the screen with scale.
         /// </summary>
-        /// <param name="scale"> scale </param>
+        /// <param name="scale"> The scalar value. </param>
         public void Fit(float scale)
         {
             this.Scale = scale;
@@ -115,7 +120,7 @@ namespace FanKit.Transformers
 
         /// <summary>
         /// Gets <see cref = "CanvasTransformer" />'s matrix.
-        ///   Call the <see cref = "CanvasTransformer.ReloadMatrix" /> method before using.
+        /// Call the <see cref = "CanvasTransformer.ReloadMatrix" /> method before using.
         /// </summary>
         /// <param name="mode"> <see cref = "CanvasTransformer" />'s matrix mode. </param>
         /// <returns> matrix </returns>

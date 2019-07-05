@@ -4,22 +4,21 @@ using System.Numerics;
 namespace FanKit.Transformers
 {
     /// <summary> 
-    /// Represents a Transformer (LeftTop, RightTop, RightBottom, LeftBottom). 
+    /// A structure encapsulating four vector values (LeftTop, RightTop, RightBottom, LeftBottom). 
     /// </summary>
     public partial struct Transformer
     {
         /// <summary>
-        /// It controls the transformation of <see cref = "Transformer" />.
+        /// It controls the transformation of transformer.
         /// </summary>
         /// <param name="mode"> TransformerMode </param>
         /// <param name="startingPoint"> starting point </param>
         /// <param name="point"> point </param>
         /// <param name="startingTransformer"> starting transformer </param>
-        /// <param name="inverseMatrix"> inverse matrix </param>
         /// <param name="isRatio"> Maintain a ratio when scaling. </param>
         /// <param name="isCenter"> Scaling around the center. </param>
         /// <param name="isStepFrequency"> Step Frequency when spinning. </param>
-        /// <returns> Transformer </returns>
+        /// <returns> The controlled transformer. </returns>
         public static Transformer Controller(TransformerMode mode, Vector2 startingPoint, Vector2 point, Transformer startingTransformer, bool isRatio = false, bool isCenter = false, bool isStepFrequency = false)
         {
             switch (mode)
@@ -49,7 +48,7 @@ namespace FanKit.Transformers
             return startingTransformer;
         }
         /// <summary>
-        /// It controls the transformation of <see cref = "Transformer" />.
+        /// It controls the transformation of transformer.
         /// </summary>
         /// <param name="mode"> TransformerMode </param>
         /// <param name="startingPoint"> starting point </param>
@@ -59,7 +58,7 @@ namespace FanKit.Transformers
         /// <param name="isRatio"> Maintain a ratio when scaling.  </param>
         /// <param name="isCenter"> Scaling around the center. </param>
         /// <param name="isStepFrequency"> Step Frequency when spinning. </param>
-        /// <returns> Transformer </returns>
+        /// <returns> The controlled transformer. </returns>
         public static Transformer Controller(TransformerMode mode, Vector2 startingPoint, Vector2 point, Transformer startingTransformer, Matrix3x2 inverseMatrix, bool isRatio = false, bool isCenter = false, bool isStepFrequency = false)
         {
             switch (mode)

@@ -76,7 +76,10 @@ namespace FanKit.Transformers
         /// <summary> Rotating radians </summary>
         public double Radians { get => this.RotateTransform.Angle; set => this.RotateTransform.Angle = value; }
 
-        //@Converter
+        //@Constructs
+        /// <summary>
+        /// Constructs a <see cref = "IndicatorControl" />.
+        /// </summary>
         public IndicatorControl()
         {
             this.InitializeComponent();

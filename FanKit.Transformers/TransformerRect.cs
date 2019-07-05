@@ -4,7 +4,7 @@ using System.Numerics;
 namespace FanKit.Transformers
 {
     /// <summary> 
-    /// Represents a Rect (Left, Top, Right, Bottom). 
+    /// A structure encapsulating four range values (Left, Top, Right, Bottom). 
     /// </summary>
     public struct TransformerRect
     {
@@ -32,7 +32,7 @@ namespace FanKit.Transformers
         /// Constructs a <see cref = "TransformerRect" />.
         /// </summary>
         /// <param name="pointA"> Frist point of rectangle.</param>
-        /// <param name="pointA"> Second point of rectangle.</param>
+        /// <param name="pointB"> Second point of rectangle.</param>
         public TransformerRect(Vector2 pointA, Vector2 pointB)
         {
             float left = Math.Min(pointA.X, pointB.X);
@@ -55,7 +55,7 @@ namespace FanKit.Transformers
         /// Constructs a <see cref = "TransformerRect" />.
         /// </summary>
         /// <param name="pointA"> Frist point of rectangle.</param>
-        /// <param name="pointA"> Second point of rectangle.</param>
+        /// <param name="pointB"> Second point of rectangle.</param>
         /// <param name="isCenter"> Scaling around the center. </param>
         /// <param name="isRatio"> Maintain a ratio when scaling. </param>
         public TransformerRect(Vector2 pointA, Vector2 pointB, bool isCenter, bool isRatio)

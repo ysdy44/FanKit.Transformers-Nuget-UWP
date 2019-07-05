@@ -4,7 +4,7 @@ using System.Numerics;
 namespace FanKit.Transformers
 {
     /// <summary>
-    /// Represents a Transformer (LeftTop, RightTop, RightBottom, LeftBottom). 
+    /// A structure encapsulating four vector values (LeftTop, RightTop, RightBottom, LeftBottom). 
     /// </summary>
     public partial struct Transformer
     {
@@ -13,7 +13,7 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="source"> The source Transformer. </param>
         /// <param name="destination"> The destination Transformer. </param>
-        /// <returns> matrix </returns>
+        /// <returns> The homologous matrix. </returns>
         public static Matrix3x2 FindHomography(Transformer source, Transformer destination)
         {
 
