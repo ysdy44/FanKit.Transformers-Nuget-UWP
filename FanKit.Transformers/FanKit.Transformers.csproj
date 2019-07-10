@@ -114,10 +114,10 @@
     <Compile Include="CanvasOperator.cs" />
     <Compile Include="CanvasTransformer.cs" />
     <Compile Include="Interface\ICacheTransform.cs" />
-    <Compile Include="Icon.xaml.cs">
+    <Compile Include="Controls\Icon.xaml.cs">
       <DependentUpon>Icon.xaml</DependentUpon>
     </Compile>
-    <Compile Include="IndicatorControl.xaml.cs">
+    <Compile Include="Controls\IndicatorControl.xaml.cs">
       <DependentUpon>IndicatorControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Enums\IndicatorMode.cs" />
@@ -126,7 +126,7 @@
     <Compile Include="LineDistance.cs" />
     <Compile Include="Enums\MatrixTransformerMode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RemoteControl.xaml.cs">
+    <Compile Include="Controls\RemoteControl.xaml.cs">
       <DependentUpon>RemoteControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Handlers\RemoteVectorHandler.cs" />
@@ -150,15 +150,15 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Icon.xaml">
+    <Page Include="Controls\Icon.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="IndicatorControl.xaml">
+    <Page Include="Controls\IndicatorControl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="RemoteControl.xaml">
+    <Page Include="Controls\RemoteControl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

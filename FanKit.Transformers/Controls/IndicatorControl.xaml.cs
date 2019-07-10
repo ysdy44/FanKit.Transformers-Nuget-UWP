@@ -198,5 +198,54 @@ namespace FanKit.Transformers
 
             this.FadeStoryboard.Begin();
         }
+
+
+        //@Static
+        /// <summary>
+        /// Turn IndicatorMode into HorizontalAlignment.
+        /// </summary>
+        /// <param name="mode"> The source IndicatorMode. </param>
+        /// <returns> The product HorizontalAlignment. </returns>
+        public static HorizontalAlignment ToHorizontalAlignment(IndicatorMode mode)
+        {        
+            switch (mode)
+            {
+                case IndicatorMode.None: return HorizontalAlignment.Center;
+                case IndicatorMode.LeftTop: return HorizontalAlignment.Left;
+                case IndicatorMode.RightTop: return HorizontalAlignment.Right;
+                case IndicatorMode.RightBottom: return HorizontalAlignment.Right;
+                case IndicatorMode.LeftBottom: return HorizontalAlignment.Left;
+                case IndicatorMode.Left: return HorizontalAlignment.Left;
+                case IndicatorMode.Top: return HorizontalAlignment.Center;
+                case IndicatorMode.Right: return HorizontalAlignment.Right;
+                case IndicatorMode.Bottom: return HorizontalAlignment.Center;
+                case IndicatorMode.Center: return HorizontalAlignment.Center;
+                default: return HorizontalAlignment.Center;
+            }
+        }
+  
+        /// <summary>
+        /// Turn IndicatorMode into VerticalAlignment.
+        /// </summary>
+        /// <param name="mode"> The source IndicatorMode. </param>
+        /// <returns> The product VerticalAlignment. </returns>
+        public static VerticalAlignment ToVerticalAlignment(IndicatorMode mode)
+        {
+            switch (mode)
+            {
+                case IndicatorMode.None: return VerticalAlignment.Center;
+                case IndicatorMode.LeftTop: return VerticalAlignment.Top;
+                case IndicatorMode.RightTop: return VerticalAlignment.Top;
+                case IndicatorMode.RightBottom: return VerticalAlignment.Bottom;
+                case IndicatorMode.LeftBottom: return VerticalAlignment.Bottom;
+                case IndicatorMode.Left: return VerticalAlignment.Center;
+                case IndicatorMode.Top: return VerticalAlignment.Top;
+                case IndicatorMode.Right: return VerticalAlignment.Center;
+                case IndicatorMode.Bottom: return VerticalAlignment.Bottom;
+                case IndicatorMode.Center: return VerticalAlignment.Center;
+                default: return VerticalAlignment.Center;
+            }
+        }
+
     }
 }
