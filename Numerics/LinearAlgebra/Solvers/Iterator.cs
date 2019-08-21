@@ -43,12 +43,7 @@ namespace MathNet.Numerics.LinearAlgebra.Solvers
         ///     to the child iterators.
         /// </summary>
         private readonly List<IIterationStopCriterion<T>> _stopCriteria;
-
-        /// <summary>
-        ///     The status of the iterator.
-        /// </summary>
-        private IterationStatus _status = IterationStatus.Continue;
-
+        
 
         /// <summary>
         ///     Initializes a new instance of the <seecreIterator{ T} class with the specified stop criteria.
@@ -71,7 +66,6 @@ namespace MathNet.Numerics.LinearAlgebra.Solvers
         /// </remarks>
         public void Cancel()
         {
-            _status = IterationStatus.Cancelled;
         }
         
 

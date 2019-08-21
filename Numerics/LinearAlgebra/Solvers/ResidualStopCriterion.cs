@@ -49,21 +49,6 @@ namespace MathNet.Numerics.LinearAlgebra.Solvers
         private readonly int _minimumIterationsBelowMaximum;
 
         /// <summary>
-        ///     The number of iterations since the residuals got below the maximum.
-        /// </summary>
-        private int _iterationCount;
-
-        /// <summary>
-        ///     The iteration number of the last iteration.
-        /// </summary>
-        private int _lastIteration = -1;
-
-        /// <summary>
-        ///     The status of the calculation
-        /// </summary>
-        private IterationStatus _status = IterationStatus.Continue;
-
-        /// <summary>
         ///     Initializes a new instance of the
         ///     <seecreResidualStopCriterion{ T} class with the specified
         ///         maximum residual and minimum number of iterations.

@@ -43,11 +43,7 @@ namespace MathNet.Numerics.LinearAlgebra.Solvers
         ///     The maximum number of iterations the calculation is allowed to perform.
         /// </summary>
         private readonly int _maximumNumberOfIterations;
-
-        /// <summary>
-        ///     The status of the calculation
-        /// </summary>
-        private IterationStatus _status = IterationStatus.Continue;
+        
 
 
         /// <summary>

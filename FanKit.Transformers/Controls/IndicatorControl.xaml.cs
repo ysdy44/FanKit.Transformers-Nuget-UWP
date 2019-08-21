@@ -73,7 +73,7 @@ namespace FanKit.Transformers
 
         #endregion
 
-        /// <summary> Rotating radians </summary>
+        /// <summary> Rotating radians. </summary>
         public double Radians { get => this.RotateTransform.Angle; set => this.RotateTransform.Angle = value; }
 
         //@Constructs

@@ -103,7 +103,7 @@ namespace FanKit.Transformers
         #region Point
 
 
-        InputDevice Device = InputDevice.None;
+        InputDevice _device = InputDevice.None;
 
         readonly HashSet<uint> _pointers = new HashSet<uint>();
 
@@ -113,7 +113,7 @@ namespace FanKit.Transformers
         Vector2 _evenStartingPointer;
         Vector2 _oddStartingPointer;
 
-        Vector2 __startingPointer;
+        Vector2 _startingPointer;
 
 
         //Pointer Entered
@@ -140,7 +140,7 @@ namespace FanKit.Transformers
 
                 if (this._pointers.Count > 1)
                 {
-                    if (this.Device != InputDevice.Double)
+                    if (this._device != InputDevice.Double)
                     {
                         this._evenStartingPointer = this._evenPointer;
                         this._oddStartingPointer = this._oddPointer;
@@ -148,25 +148,25 @@ namespace FanKit.Transformers
                 }
                 else
                 {
-                    if (this.Device != InputDevice.Single)
-                        this.__startingPointer = point;
+                    if (this._device != InputDevice.Single)
+                        this._startingPointer = point;
                 }
             }
             else
             {
                 if (CanvasOperator.PointerIsRight(this.DestinationControl, e))
                 {
-                    if (this.Device != InputDevice.Right)
+                    if (this._device != InputDevice.Right)
                     {
-                        this.Device = InputDevice.Right;
+                        this._device = InputDevice.Right;
                         this.Right_Start?.Invoke(point);//Delegate
                     }
                 }
                 if (CanvasOperator.PointerIsLeft(this.DestinationControl, e) || CanvasOperator.PointerIsPen(this.DestinationControl, e))
                 {
-                    if (this.Device != InputDevice.Single)
+                    if (this._device != InputDevice.Single)
                     {
-                        this.Device = InputDevice.Single;
+                        this._device = InputDevice.Single;
                         this.Single_Start?.Invoke(point);//Delegate
                     }
                 }
@@ -177,19 +177,19 @@ namespace FanKit.Transformers
         {
             Vector2 point = CanvasOperator.PointerPosition(this.DestinationControl, e);
 
-            if (this.Device == InputDevice.Right)
+            if (this._device == InputDevice.Right)
             {
-                this.Device = InputDevice.None;
+                this._device = InputDevice.None;
                 this.Right_Complete?.Invoke(point);//Delegate
             }
-            else if (this.Device == InputDevice.Double)
+            else if (this._device == InputDevice.Double)
             {
-                this.Device = InputDevice.None;
+                this._device = InputDevice.None;
                 this.Double_Complete?.Invoke(point, (this._oddPointer - this._evenPointer).Length());//Delegate
             }
-            else if (this.Device == InputDevice.Single)
+            else if (this._device == InputDevice.Single)
             {
-                this.Device = InputDevice.None;
+                this._device = InputDevice.None;
                 this.Single_Complete?.Invoke(point);//Delegate
             }
 
@@ -209,36 +209,36 @@ namespace FanKit.Transformers
 
                 if (this._pointers.Count > 1)
                 {
-                    if (this.Device != InputDevice.Double)
+                    if (this._device != InputDevice.Double)
                     {
                         if (Math.Abs(this._evenStartingPointer.X - this._evenPointer.X) > 2 || Math.Abs(this._evenStartingPointer.Y - this._evenPointer.Y) > 2 || Math.Abs(this._oddStartingPointer.X - this._oddPointer.X) > 2 || Math.Abs(this._oddStartingPointer.Y - this._oddPointer.Y) > 2)
                         {
-                            this.Device = InputDevice.Double;
+                            this._device = InputDevice.Double;
                             this.Double_Start?.Invoke((this._oddPointer + this._evenPointer) / 2, (this._oddPointer - this._evenPointer).Length());//Delegate
                         }
                     }
-                    else if (this.Device == InputDevice.Double) this.Double_Delta?.Invoke((this._oddPointer + this._evenPointer) / 2, (this._oddPointer - this._evenPointer).Length());//Delegate
+                    else if (this._device == InputDevice.Double) this.Double_Delta?.Invoke((this._oddPointer + this._evenPointer) / 2, (this._oddPointer - this._evenPointer).Length());//Delegate
                 }
                 else
                 {
-                    if (this.Device != InputDevice.Single)
+                    if (this._device != InputDevice.Single)
                     {
-                        double length = (this.__startingPointer - point).Length();
+                        double length = (this._startingPointer - point).Length();
 
                         if (length > 2 && length < 12)
                         {
-                            this.Device = InputDevice.Single;
+                            this._device = InputDevice.Single;
                             this.Single_Start?.Invoke(point);//Delegate
                         }
                     }
-                    else if (this.Device == InputDevice.Single) this.Single_Delta?.Invoke(point);//Delegate
+                    else if (this._device == InputDevice.Single) this.Single_Delta?.Invoke(point);//Delegate
                 }
             }
             else
             {
-                if (this.Device == InputDevice.Right) this.Right_Delta?.Invoke(point);//Delegate
+                if (this._device == InputDevice.Right) this.Right_Delta?.Invoke(point);//Delegate
 
-                if (this.Device == InputDevice.Single) this.Single_Delta?.Invoke(point);//Delegate
+                if (this._device == InputDevice.Single) this.Single_Delta?.Invoke(point);//Delegate
             }
         }
         //Wheel Changed
@@ -329,20 +329,20 @@ namespace FanKit.Transformers
     }
 
     /// <summary>
-    /// <see cref = "CanvasOperator" />'s input device.
+    /// The input device type of <see cref = "CanvasOperator" />.
     /// </summary>
     public enum InputDevice
     {
         /// <summary> Normal. </summary>
         None,
 
-        /// <summary>one-finger | mouse-left-button | pen</summary>
+        /// <summary> One-finger | Mouse-Left-Button | Pen. </summary>
         Single,
 
-        /// <summary>Two Fingers</summary>
+        /// <summary> Two Fingers. </summary>
         Double,
 
-        /// <summary>Mouse-Right -Button </summary>
+        /// <summary> Mouse-Right-Button. </summary>
         Right,
     }
 }

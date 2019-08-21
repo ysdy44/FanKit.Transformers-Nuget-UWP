@@ -96,7 +96,7 @@ namespace FanKit.Transformers
         /// Get vector of the radians in the coordinate system. 
         /// </summary>
         /// <param name="radians"> The radians. </param>
-        /// <param name="center"> The center of coordinate system.  </param>
+        /// <param name="center"> The center of coordinate system. </param>
         /// <param name="length">The length of vector. </param>
         /// <returns> The product vector. </returns>
         public static Vector2 RadiansToVector(float radians, Vector2 center, float length = 40.0f) => new Vector2((float)Math.Cos(radians) * length + center.X, (float)Math.Sin(radians) * length + center.Y);

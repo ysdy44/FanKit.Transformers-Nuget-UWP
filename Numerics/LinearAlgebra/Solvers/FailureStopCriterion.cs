@@ -39,15 +39,6 @@ namespace MathNet.Numerics.LinearAlgebra.Solvers
     public sealed class FailureStopCriterion<T> : IIterationStopCriterion<T>
         where T : struct, IEquatable<T>, IFormattable
     {
-        /// <summary>
-        ///     The iteration number of the last iteration.
-        /// </summary>
-        private int _lastIteration = -1;
-
-        /// <summary>
-        ///     The status of the calculation
-        /// </summary>
-        private IterationStatus _status = IterationStatus.Continue;
 
 
         /// <summary>

@@ -11,10 +11,10 @@ namespace FanKit.Transformers
         /// <summary>
         /// It controls the transformation of transformer.
         /// </summary>
-        /// <param name="mode"> TransformerMode </param>
-        /// <param name="startingPoint"> starting point </param>
-        /// <param name="point"> point </param>
-        /// <param name="startingTransformer"> starting transformer </param>
+        /// <param name="mode"> The mode. </param>
+        /// <param name="startingPoint"> The starting point. </param>
+        /// <param name="point"> The point. </param>
+        /// <param name="startingTransformer"> The starting transformer. </param>
         /// <param name="isRatio"> Maintain a ratio when scaling. </param>
         /// <param name="isCenter"> Scaling around the center. </param>
         /// <param name="isStepFrequency"> Step Frequency when spinning. </param>
@@ -25,24 +25,24 @@ namespace FanKit.Transformers
             {
                 case TransformerMode.None: return startingTransformer;
 
-                case TransformerMode.Translation: return Transformer.Translation(startingPoint, point, startingTransformer);
+                case TransformerMode.Translation: return Transformer._translation(startingPoint, point, startingTransformer);
 
-                case TransformerMode.Rotation: return Transformer.Rotation(startingPoint, point, startingTransformer, isStepFrequency);
+                case TransformerMode.Rotation: return Transformer._rotation(startingPoint, point, startingTransformer, isStepFrequency);
 
-                case TransformerMode.SkewLeft: return Transformer.SkewLeft(startingPoint, point, startingTransformer, isCenter);
-                case TransformerMode.SkewTop: return Transformer.SkewTop(startingPoint, point, startingTransformer, isCenter);
-                case TransformerMode.SkewRight: return Transformer.SkewRight(startingPoint, point, startingTransformer, isCenter);
-                case TransformerMode.SkewBottom: return Transformer.SkewBottom(startingPoint, point, startingTransformer, isCenter);
+                case TransformerMode.SkewLeft: return Transformer._skewLeft(startingPoint, point, startingTransformer, isCenter);
+                case TransformerMode.SkewTop: return Transformer._skewTop(startingPoint, point, startingTransformer, isCenter);
+                case TransformerMode.SkewRight: return Transformer._skewRight(startingPoint, point, startingTransformer, isCenter);
+                case TransformerMode.SkewBottom: return Transformer._skewBottom(startingPoint, point, startingTransformer, isCenter);
 
-                case TransformerMode.ScaleLeft: return Transformer.ScaleLeft(point, startingTransformer, isRatio, isCenter);
-                case TransformerMode.ScaleTop: return Transformer.ScaleTop(point, startingTransformer, isRatio, isCenter);
-                case TransformerMode.ScaleRight: return Transformer.ScaleRight(point, startingTransformer, isRatio, isCenter);
-                case TransformerMode.ScaleBottom: return Transformer.ScaleBottom(point, startingTransformer, isRatio, isCenter);
+                case TransformerMode.ScaleLeft: return Transformer._scaleLeft(point, startingTransformer, isRatio, isCenter);
+                case TransformerMode.ScaleTop: return Transformer._scaleTop(point, startingTransformer, isRatio, isCenter);
+                case TransformerMode.ScaleRight: return Transformer._scaleRight(point, startingTransformer, isRatio, isCenter);
+                case TransformerMode.ScaleBottom: return Transformer._scaleBottom(point, startingTransformer, isRatio, isCenter);
 
-                case TransformerMode.ScaleLeftTop: return Transformer.ScaleLeftTop(point, startingTransformer, isRatio, isCenter);
-                case TransformerMode.ScaleRightTop: return Transformer.ScaleRightTop(point, startingTransformer, isRatio, isCenter);
-                case TransformerMode.ScaleRightBottom: return Transformer.ScaleRightBottom(point, startingTransformer, isRatio, isCenter);
-                case TransformerMode.ScaleLeftBottom: return Transformer.ScaleLeftBottom(point, startingTransformer, isRatio, isCenter);
+                case TransformerMode.ScaleLeftTop: return Transformer._scaleLeftTop(point, startingTransformer, isRatio, isCenter);
+                case TransformerMode.ScaleRightTop: return Transformer._scaleRightTop(point, startingTransformer, isRatio, isCenter);
+                case TransformerMode.ScaleRightBottom: return Transformer._scaleRightBottom(point, startingTransformer, isRatio, isCenter);
+                case TransformerMode.ScaleLeftBottom: return Transformer._scaleLeftBottom(point, startingTransformer, isRatio, isCenter);
             }
 
             return startingTransformer;
@@ -50,12 +50,12 @@ namespace FanKit.Transformers
         /// <summary>
         /// It controls the transformation of transformer.
         /// </summary>
-        /// <param name="mode"> TransformerMode </param>
-        /// <param name="startingPoint"> starting point </param>
-        /// <param name="point"> point </param>
-        /// <param name="startingTransformer"> starting transformer </param>
-        /// <param name="inverseMatrix"> inverse matrix </param>
-        /// <param name="isRatio"> Maintain a ratio when scaling.  </param>
+        /// <param name="mode"> The mode. </param>
+        /// <param name="startingPoint"> The starting point. </param>
+        /// <param name="point"> The point. </param>
+        /// <param name="startingTransformer"> The starting transformer. </param>
+        /// <param name="inverseMatrix"> The inverse matrix. </param>
+        /// <param name="isRatio"> Maintain a ratio when scaling. </param>
         /// <param name="isCenter"> Scaling around the center. </param>
         /// <param name="isStepFrequency"> Step Frequency when spinning. </param>
         /// <returns> The controlled transformer. </returns>
@@ -65,24 +65,24 @@ namespace FanKit.Transformers
             {
                 case TransformerMode.None: return startingTransformer;
 
-                case TransformerMode.Translation: return Transformer.Translation(startingPoint, point, startingTransformer, inverseMatrix);
+                case TransformerMode.Translation: return Transformer._translation(startingPoint, point, startingTransformer, inverseMatrix);
 
-                case TransformerMode.Rotation: return Transformer.Rotation(startingPoint, point, startingTransformer, inverseMatrix, isStepFrequency);
+                case TransformerMode.Rotation: return Transformer._rotation(startingPoint, point, startingTransformer, inverseMatrix, isStepFrequency);
 
-                case TransformerMode.SkewLeft: return Transformer.SkewLeft(startingPoint, point, startingTransformer, isCenter);
-                case TransformerMode.SkewTop: return Transformer.SkewTop(startingPoint, point, startingTransformer, isCenter);
-                case TransformerMode.SkewRight: return Transformer.SkewRight(startingPoint, point, startingTransformer, isCenter);
-                case TransformerMode.SkewBottom: return Transformer.SkewBottom(startingPoint, point, startingTransformer, isCenter);
+                case TransformerMode.SkewLeft: return Transformer._skewLeft(startingPoint, point, startingTransformer, isCenter);
+                case TransformerMode.SkewTop: return Transformer._skewTop(startingPoint, point, startingTransformer, isCenter);
+                case TransformerMode.SkewRight: return Transformer._skewRight(startingPoint, point, startingTransformer, isCenter);
+                case TransformerMode.SkewBottom: return Transformer._skewBottom(startingPoint, point, startingTransformer, isCenter);
 
-                case TransformerMode.ScaleLeft: return Transformer.ScaleLeft(point, startingTransformer, inverseMatrix, isRatio, isCenter);
-                case TransformerMode.ScaleTop: return Transformer.ScaleTop(point, startingTransformer, inverseMatrix, isRatio, isCenter);
-                case TransformerMode.ScaleRight: return Transformer.ScaleRight(point, startingTransformer, inverseMatrix, isRatio, isCenter);
-                case TransformerMode.ScaleBottom: return Transformer.ScaleBottom(point, startingTransformer, inverseMatrix, isRatio, isCenter);
+                case TransformerMode.ScaleLeft: return Transformer._scaleLeft(point, startingTransformer, inverseMatrix, isRatio, isCenter);
+                case TransformerMode.ScaleTop: return Transformer._scaleTop(point, startingTransformer, inverseMatrix, isRatio, isCenter);
+                case TransformerMode.ScaleRight: return Transformer._scaleRight(point, startingTransformer, inverseMatrix, isRatio, isCenter);
+                case TransformerMode.ScaleBottom: return Transformer._scaleBottom(point, startingTransformer, inverseMatrix, isRatio, isCenter);
 
-                case TransformerMode.ScaleLeftTop: return Transformer.ScaleLeftTop(point, startingTransformer, inverseMatrix, isRatio, isCenter);
-                case TransformerMode.ScaleRightTop: return Transformer.ScaleRightTop(point, startingTransformer, inverseMatrix, isRatio, isCenter);
-                case TransformerMode.ScaleRightBottom: return Transformer.ScaleRightBottom(point, startingTransformer, inverseMatrix, isRatio, isCenter);
-                case TransformerMode.ScaleLeftBottom: return Transformer.ScaleLeftBottom(point, startingTransformer, inverseMatrix, isRatio, isCenter);
+                case TransformerMode.ScaleLeftTop: return Transformer._scaleLeftTop(point, startingTransformer, inverseMatrix, isRatio, isCenter);
+                case TransformerMode.ScaleRightTop: return Transformer._scaleRightTop(point, startingTransformer, inverseMatrix, isRatio, isCenter);
+                case TransformerMode.ScaleRightBottom: return Transformer._scaleRightBottom(point, startingTransformer, inverseMatrix, isRatio, isCenter);
+                case TransformerMode.ScaleLeftBottom: return Transformer._scaleLeftBottom(point, startingTransformer, inverseMatrix, isRatio, isCenter);
             }
 
             return startingTransformer;
@@ -91,14 +91,14 @@ namespace FanKit.Transformers
 
 
         //Translation
-        private static Transformer Translation(Vector2 startingPoint, Vector2 point, Transformer startingTransformer)
+        private static Transformer _translation(Vector2 startingPoint, Vector2 point, Transformer startingTransformer)
         {
             Vector2 canvasStartingPoint = (startingPoint);
             Vector2 canvasPoint = (point);
 
             return Transformer.Add(startingTransformer, canvasPoint - canvasStartingPoint);
         }
-        private static Transformer Translation(Vector2 startingPoint, Vector2 point, Transformer startingTransformer, Matrix3x2 inverseMatrix)
+        private static Transformer _translation(Vector2 startingPoint, Vector2 point, Transformer startingTransformer, Matrix3x2 inverseMatrix)
         {
             Vector2 canvasStartingPoint = Vector2.Transform(startingPoint, inverseMatrix);
             Vector2 canvasPoint = Vector2.Transform(point, inverseMatrix);
@@ -109,7 +109,7 @@ namespace FanKit.Transformers
 
 
         //Rotation      
-        private static Transformer Rotation(Vector2 startingPoint, Vector2 point, Transformer startingTransformer, bool isStepFrequency)
+        private static Transformer _rotation(Vector2 startingPoint, Vector2 point, Transformer startingTransformer, bool isStepFrequency)
         {
             Vector2 canvasPoint = (point);
             Vector2 canvasStartingPoint = (startingPoint);
@@ -124,7 +124,7 @@ namespace FanKit.Transformers
             Matrix3x2 rotationMatrix = Matrix3x2.CreateRotation(radian, center);
             return Transformer.Multiplies(startingTransformer, rotationMatrix);
         }
-        private static Transformer Rotation(Vector2 startingPoint, Vector2 point, Transformer startingTransformer, Matrix3x2 inverseMatrix, bool isStepFrequency)
+        private static Transformer _rotation(Vector2 startingPoint, Vector2 point, Transformer startingTransformer, Matrix3x2 inverseMatrix, bool isStepFrequency)
         {
             Vector2 canvasPoint = Vector2.Transform(point, inverseMatrix);
             Vector2 canvasStartingPoint = Vector2.Transform(startingPoint, inverseMatrix);
@@ -143,7 +143,7 @@ namespace FanKit.Transformers
 
 
         //Skew
-        private static Vector2 Skew(Vector2 startingPoint, Vector2 point, Vector2 linePoineA, Vector2 linePoineB)
+        private static Vector2 _skew(Vector2 startingPoint, Vector2 point, Vector2 linePoineA, Vector2 linePoineB)
         {
             Vector2 canvasStartingSkewPoint = TransformerMath.FootPoint(startingPoint, linePoineA, linePoineB);
             Vector2 canvasSkewPoint = TransformerMath.FootPoint(point, linePoineA, linePoineB);
@@ -154,11 +154,11 @@ namespace FanKit.Transformers
             return halfVector;
         }
 
-        private static Transformer SkewLeft(Vector2 startingPoint, Vector2 point, Transformer startingTransformer, bool isCenter)
+        private static Transformer _skewLeft(Vector2 startingPoint, Vector2 point, Transformer startingTransformer, bool isCenter)
         {
             Vector2 linePoineA = startingTransformer.LeftTop;
             Vector2 linePoineB = startingTransformer.LeftBottom;
-            Vector2 vector = Transformer.Skew(startingPoint, point, linePoineA, linePoineB);
+            Vector2 vector = Transformer._skew(startingPoint, point, linePoineA, linePoineB);
 
             startingTransformer.LeftTop += vector;
             startingTransformer.LeftBottom += vector;
@@ -171,11 +171,11 @@ namespace FanKit.Transformers
 
             return startingTransformer;
         }
-        private static Transformer SkewTop(Vector2 startingPoint, Vector2 point, Transformer startingTransformer, bool isCenter)
+        private static Transformer _skewTop(Vector2 startingPoint, Vector2 point, Transformer startingTransformer, bool isCenter)
         {
             Vector2 linePoineA = startingTransformer.LeftTop;
             Vector2 linePoineB = startingTransformer.RightTop;
-            Vector2 vector = Transformer.Skew(startingPoint, point, linePoineA, linePoineB);
+            Vector2 vector = Transformer._skew(startingPoint, point, linePoineA, linePoineB);
 
             startingTransformer.LeftTop += vector;
             startingTransformer.RightTop += vector;
@@ -188,11 +188,11 @@ namespace FanKit.Transformers
 
             return startingTransformer;
         }
-        private static Transformer SkewRight(Vector2 startingPoint, Vector2 point, Transformer startingTransformer, bool isCenter)
+        private static Transformer _skewRight(Vector2 startingPoint, Vector2 point, Transformer startingTransformer, bool isCenter)
         {
             Vector2 linePoineA = startingTransformer.RightTop;
             Vector2 linePoineB = startingTransformer.RightBottom;
-            Vector2 vector = Transformer.Skew(startingPoint, point, linePoineA, linePoineB);
+            Vector2 vector = Transformer._skew(startingPoint, point, linePoineA, linePoineB);
 
             startingTransformer.RightTop += vector;
             startingTransformer.RightBottom += vector;
@@ -205,11 +205,11 @@ namespace FanKit.Transformers
 
             return startingTransformer;
         }
-        private static Transformer SkewBottom(Vector2 startingPoint, Vector2 point, Transformer startingTransformer, bool isCenter)
+        private static Transformer _skewBottom(Vector2 startingPoint, Vector2 point, Transformer startingTransformer, bool isCenter)
         {
             Vector2 linePoineA = startingTransformer.LeftBottom;
             Vector2 linePoineB = startingTransformer.RightBottom;
-            Vector2 vector = Transformer.Skew(startingPoint, point, linePoineA, linePoineB);
+            Vector2 vector = Transformer._skew(startingPoint, point, linePoineA, linePoineB);
 
             startingTransformer.RightBottom += vector;
             startingTransformer.LeftBottom += vector;
@@ -226,7 +226,7 @@ namespace FanKit.Transformers
 
 
         //ScaleAround
-        private static Transformer ScaleAround(Vector2 point, Transformer startingTransformer, bool isRatio, bool isCenter, Vector2 linePoint, Vector2 lineDiagonalPoint, Func<Transformer, bool, Vector2, Transformer> _func)
+        private static Transformer _scaleAround(Vector2 point, Transformer startingTransformer, bool isRatio, bool isCenter, Vector2 linePoint, Vector2 lineDiagonalPoint, Func<Transformer, bool, Vector2, Transformer> _func)
         {
             Vector2 canvasPoint = (point);
             Vector2 footPoint = TransformerMath.FootPoint(canvasPoint, linePoint, lineDiagonalPoint);
@@ -246,7 +246,7 @@ namespace FanKit.Transformers
                 return _func(startingTransformer, isCenter, vector);
             }
         }
-        private static Transformer ScaleAround(Vector2 point, Transformer startingTransformer, Matrix3x2 inverseMatrix, bool isRatio, bool isCenter, Vector2 linePoint, Vector2 lineDiagonalPoint, Func<Transformer, bool, Vector2, Transformer> _func)
+        private static Transformer _scaleAround(Vector2 point, Transformer startingTransformer, Matrix3x2 inverseMatrix, bool isRatio, bool isCenter, Vector2 linePoint, Vector2 lineDiagonalPoint, Func<Transformer, bool, Vector2, Transformer> _func)
         {
             Vector2 canvasPoint = Vector2.Transform(point, inverseMatrix);
             Vector2 footPoint = TransformerMath.FootPoint(canvasPoint, linePoint, lineDiagonalPoint);
@@ -268,19 +268,19 @@ namespace FanKit.Transformers
         }
 
 
-        private static Transformer ScaleLeft(Vector2 point, Transformer startingTransformer, bool isRatio, bool isCenter)
+        private static Transformer _scaleLeft(Vector2 point, Transformer startingTransformer, bool isRatio, bool isCenter)
         {
             Vector2 linePoint = startingTransformer.CenterLeft;
             Vector2 lineDiagonalPoint = startingTransformer.CenterRight;
 
-            return Transformer.ScaleAround(point, startingTransformer, isRatio, isCenter, linePoint, lineDiagonalPoint, Transformer._funcScaleLeft);
+            return Transformer._scaleAround(point, startingTransformer, isRatio, isCenter, linePoint, lineDiagonalPoint, Transformer._funcScaleLeft);
         }
-        private static Transformer ScaleLeft(Vector2 point, Transformer startingTransformer, Matrix3x2 inverseMatrix, bool isRatio, bool isCenter)
+        private static Transformer _scaleLeft(Vector2 point, Transformer startingTransformer, Matrix3x2 inverseMatrix, bool isRatio, bool isCenter)
         {
             Vector2 linePoint = startingTransformer.CenterLeft;
             Vector2 lineDiagonalPoint = startingTransformer.CenterRight;
 
-            return Transformer.ScaleAround(point, startingTransformer, inverseMatrix, isRatio, isCenter, linePoint, lineDiagonalPoint, Transformer._funcScaleLeft);
+            return Transformer._scaleAround(point, startingTransformer, inverseMatrix, isRatio, isCenter, linePoint, lineDiagonalPoint, Transformer._funcScaleLeft);
         }
         static Transformer _funcScaleLeft(Transformer startingTransformer, bool isCenter, Vector2 vector)
         {
@@ -296,19 +296,19 @@ namespace FanKit.Transformers
             return startingTransformer;
         }
 
-        private static Transformer ScaleTop(Vector2 point, Transformer startingTransformer, bool isRatio, bool isCenter)
+        private static Transformer _scaleTop(Vector2 point, Transformer startingTransformer, bool isRatio, bool isCenter)
         {
             Vector2 linePoint = startingTransformer.CenterTop;
             Vector2 lineDiagonalPoint = startingTransformer.CenterBottom;
 
-            return Transformer.ScaleAround(point, startingTransformer, isRatio, isCenter, linePoint, lineDiagonalPoint, Transformer._funcScaleTop);
+            return Transformer._scaleAround(point, startingTransformer, isRatio, isCenter, linePoint, lineDiagonalPoint, Transformer._funcScaleTop);
         }
-        private static Transformer ScaleTop(Vector2 point, Transformer startingTransformer, Matrix3x2 inverseMatrix, bool isRatio, bool isCenter)
+        private static Transformer _scaleTop(Vector2 point, Transformer startingTransformer, Matrix3x2 inverseMatrix, bool isRatio, bool isCenter)
         {
             Vector2 linePoint = startingTransformer.CenterTop;
             Vector2 lineDiagonalPoint = startingTransformer.CenterBottom;
 
-            return Transformer.ScaleAround(point, startingTransformer, inverseMatrix, isRatio, isCenter, linePoint, lineDiagonalPoint, Transformer._funcScaleTop);
+            return Transformer._scaleAround(point, startingTransformer, inverseMatrix, isRatio, isCenter, linePoint, lineDiagonalPoint, Transformer._funcScaleTop);
         }
         static Transformer _funcScaleTop(Transformer startingTransformer, bool isCenter, Vector2 vector)
         {
@@ -324,19 +324,19 @@ namespace FanKit.Transformers
             return startingTransformer;
         }
 
-        private static Transformer ScaleRight(Vector2 point, Transformer startingTransformer, bool isRatio, bool isCenter)
+        private static Transformer _scaleRight(Vector2 point, Transformer startingTransformer, bool isRatio, bool isCenter)
         {
             Vector2 linePoint = startingTransformer.CenterRight;
             Vector2 lineDiagonalPoint = startingTransformer.CenterLeft;
 
-            return Transformer.ScaleAround(point, startingTransformer, isRatio, isCenter, linePoint, lineDiagonalPoint, Transformer._funcScaleRight);
+            return Transformer._scaleAround(point, startingTransformer, isRatio, isCenter, linePoint, lineDiagonalPoint, Transformer._funcScaleRight);
         }
-        private static Transformer ScaleRight(Vector2 point, Transformer startingTransformer, Matrix3x2 inverseMatrix, bool isRatio, bool isCenter)
+        private static Transformer _scaleRight(Vector2 point, Transformer startingTransformer, Matrix3x2 inverseMatrix, bool isRatio, bool isCenter)
         {
             Vector2 linePoint = startingTransformer.CenterRight;
             Vector2 lineDiagonalPoint = startingTransformer.CenterLeft;
 
-            return Transformer.ScaleAround(point, startingTransformer, inverseMatrix, isRatio, isCenter, linePoint, lineDiagonalPoint, Transformer._funcScaleRight);
+            return Transformer._scaleAround(point, startingTransformer, inverseMatrix, isRatio, isCenter, linePoint, lineDiagonalPoint, Transformer._funcScaleRight);
         }
         static Transformer _funcScaleRight(Transformer startingTransformer, bool isCenter, Vector2 vector)
         {
@@ -352,19 +352,19 @@ namespace FanKit.Transformers
             return startingTransformer;
         }
 
-        private static Transformer ScaleBottom(Vector2 point, Transformer startingTransformer, bool isRatio, bool isCenter)
+        private static Transformer _scaleBottom(Vector2 point, Transformer startingTransformer, bool isRatio, bool isCenter)
         {
             Vector2 linePoint = startingTransformer.CenterBottom;
             Vector2 lineDiagonalPoint = startingTransformer.CenterTop;
 
-            return Transformer.ScaleAround(point, startingTransformer, isRatio, isCenter, linePoint, lineDiagonalPoint, Transformer._funcScaleBottom);
+            return Transformer._scaleAround(point, startingTransformer, isRatio, isCenter, linePoint, lineDiagonalPoint, Transformer._funcScaleBottom);
         }
-        private static Transformer ScaleBottom(Vector2 point, Transformer startingTransformer, Matrix3x2 inverseMatrix, bool isRatio, bool isCenter)
+        private static Transformer _scaleBottom(Vector2 point, Transformer startingTransformer, Matrix3x2 inverseMatrix, bool isRatio, bool isCenter)
         {
             Vector2 linePoint = startingTransformer.CenterBottom;
             Vector2 lineDiagonalPoint = startingTransformer.CenterTop;
 
-            return Transformer.ScaleAround(point, startingTransformer, inverseMatrix, isRatio, isCenter, linePoint, lineDiagonalPoint, Transformer._funcScaleBottom);
+            return Transformer._scaleAround(point, startingTransformer, inverseMatrix, isRatio, isCenter, linePoint, lineDiagonalPoint, Transformer._funcScaleBottom);
         }
         static Transformer _funcScaleBottom(Transformer startingTransformer, bool isCenter, Vector2 vector)
         {
@@ -383,7 +383,7 @@ namespace FanKit.Transformers
 
 
         //ScaleCorner
-        private static Transformer ScaleCorner(Vector2 point, Transformer startingTransformer, bool isRatio, bool isCenter, Vector2 linePoint, Vector2 lineDiagonalPoint, Func<Vector2, Vector2, Vector2, Vector2, Transformer> _func)
+        private static Transformer _scaleCorner(Vector2 point, Transformer startingTransformer, bool isRatio, bool isCenter, Vector2 linePoint, Vector2 lineDiagonalPoint, Func<Vector2, Vector2, Vector2, Vector2, Transformer> _func)
         {
             Vector2 canvasPoint = (point);
 
@@ -411,7 +411,7 @@ namespace FanKit.Transformers
                 return _func(returnPoint, returnDiagonalPoint, returnHorizontalPoint, returnVerticalPoint);
             }
         }
-        private static Transformer ScaleCorner(Vector2 point, Transformer startingTransformer, Matrix3x2 inverseMatrix, bool isRatio, bool isCenter, Vector2 linePoint, Vector2 lineDiagonalPoint, Func<Vector2, Vector2, Vector2, Vector2, Transformer> _func)
+        private static Transformer _scaleCorner(Vector2 point, Transformer startingTransformer, Matrix3x2 inverseMatrix, bool isRatio, bool isCenter, Vector2 linePoint, Vector2 lineDiagonalPoint, Func<Vector2, Vector2, Vector2, Vector2, Transformer> _func)
         {
             Vector2 canvasPoint = Vector2.Transform(point, inverseMatrix);
 
@@ -441,19 +441,19 @@ namespace FanKit.Transformers
         }
 
 
-        private static Transformer ScaleLeftTop(Vector2 point, Transformer startingTransformer, bool isRatio, bool isCenter)
+        private static Transformer _scaleLeftTop(Vector2 point, Transformer startingTransformer, bool isRatio, bool isCenter)
         {
             Vector2 linePoint = startingTransformer.LeftTop;
             Vector2 lineDiagonalPoint = startingTransformer.RightBottom;
 
-            return Transformer.ScaleCorner(point, startingTransformer, isRatio, isCenter, linePoint, lineDiagonalPoint, Transformer._funcScaleLeftTop);
+            return Transformer._scaleCorner(point, startingTransformer, isRatio, isCenter, linePoint, lineDiagonalPoint, Transformer._funcScaleLeftTop);
         }
-        private static Transformer ScaleLeftTop(Vector2 point, Transformer startingTransformer, Matrix3x2 inverseMatrix, bool isRatio, bool isCenter)
+        private static Transformer _scaleLeftTop(Vector2 point, Transformer startingTransformer, Matrix3x2 inverseMatrix, bool isRatio, bool isCenter)
         {
             Vector2 linePoint = startingTransformer.LeftTop;
             Vector2 lineDiagonalPoint = startingTransformer.RightBottom;
 
-            return Transformer.ScaleCorner(point, startingTransformer, inverseMatrix, isRatio, isCenter, linePoint, lineDiagonalPoint, Transformer._funcScaleLeftTop);
+            return Transformer._scaleCorner(point, startingTransformer, inverseMatrix, isRatio, isCenter, linePoint, lineDiagonalPoint, Transformer._funcScaleLeftTop);
         }
         static Transformer _funcScaleLeftTop(Vector2 returnPoint, Vector2 returnDiagonalPoint, Vector2 returnHorizontalPoint, Vector2 returnVerticalPoint)
         {
@@ -466,19 +466,19 @@ namespace FanKit.Transformers
             };
         }
 
-        private static Transformer ScaleRightTop(Vector2 point, Transformer startingTransformer, bool isRatio, bool isCenter)
+        private static Transformer _scaleRightTop(Vector2 point, Transformer startingTransformer, bool isRatio, bool isCenter)
         {
             Vector2 linePoint = startingTransformer.RightTop;
             Vector2 lineDiagonalPoint = startingTransformer.LeftBottom;
 
-            return Transformer.ScaleCorner(point, startingTransformer, isRatio, isCenter, linePoint, lineDiagonalPoint, Transformer._funcScaleRightTop);
+            return Transformer._scaleCorner(point, startingTransformer, isRatio, isCenter, linePoint, lineDiagonalPoint, Transformer._funcScaleRightTop);
         }
-        private static Transformer ScaleRightTop(Vector2 point, Transformer startingTransformer, Matrix3x2 inverseMatrix, bool isRatio, bool isCenter)
+        private static Transformer _scaleRightTop(Vector2 point, Transformer startingTransformer, Matrix3x2 inverseMatrix, bool isRatio, bool isCenter)
         {
             Vector2 linePoint = startingTransformer.RightTop;
             Vector2 lineDiagonalPoint = startingTransformer.LeftBottom;
 
-            return Transformer.ScaleCorner(point, startingTransformer, inverseMatrix, isRatio, isCenter, linePoint, lineDiagonalPoint, Transformer._funcScaleRightTop);
+            return Transformer._scaleCorner(point, startingTransformer, inverseMatrix, isRatio, isCenter, linePoint, lineDiagonalPoint, Transformer._funcScaleRightTop);
         }
         static Transformer _funcScaleRightTop(Vector2 returnPoint, Vector2 returnDiagonalPoint, Vector2 returnHorizontalPoint, Vector2 returnVerticalPoint)
         {
@@ -491,19 +491,19 @@ namespace FanKit.Transformers
             };
         }
 
-        private static Transformer ScaleRightBottom(Vector2 point, Transformer startingTransformer, bool isRatio, bool isCenter)
+        private static Transformer _scaleRightBottom(Vector2 point, Transformer startingTransformer, bool isRatio, bool isCenter)
         {
             Vector2 linePoint = startingTransformer.RightBottom;
             Vector2 lineDiagonalPoint = startingTransformer.LeftTop;
 
-            return Transformer.ScaleCorner(point, startingTransformer, isRatio, isCenter, linePoint, lineDiagonalPoint, Transformer._funcScaleRightBottom);
+            return Transformer._scaleCorner(point, startingTransformer, isRatio, isCenter, linePoint, lineDiagonalPoint, Transformer._funcScaleRightBottom);
         }
-        private static Transformer ScaleRightBottom(Vector2 point, Transformer startingTransformer, Matrix3x2 inverseMatrix, bool isRatio, bool isCenter)
+        private static Transformer _scaleRightBottom(Vector2 point, Transformer startingTransformer, Matrix3x2 inverseMatrix, bool isRatio, bool isCenter)
         {
             Vector2 linePoint = startingTransformer.RightBottom;
             Vector2 lineDiagonalPoint = startingTransformer.LeftTop;
 
-            return Transformer.ScaleCorner(point, startingTransformer, inverseMatrix, isRatio, isCenter, linePoint, lineDiagonalPoint, Transformer._funcScaleRightBottom);
+            return Transformer._scaleCorner(point, startingTransformer, inverseMatrix, isRatio, isCenter, linePoint, lineDiagonalPoint, Transformer._funcScaleRightBottom);
         }
         static Transformer _funcScaleRightBottom(Vector2 returnPoint, Vector2 returnDiagonalPoint, Vector2 returnHorizontalPoint, Vector2 returnVerticalPoint)
         {
@@ -516,19 +516,19 @@ namespace FanKit.Transformers
             };
         }
 
-        private static Transformer ScaleLeftBottom(Vector2 point, Transformer startingTransformer, bool isRatio, bool isCenter)
+        private static Transformer _scaleLeftBottom(Vector2 point, Transformer startingTransformer, bool isRatio, bool isCenter)
         {
             Vector2 linePoint = startingTransformer.LeftBottom;
             Vector2 lineDiagonalPoint = startingTransformer.RightTop;
 
-            return Transformer.ScaleCorner(point, startingTransformer, isRatio, isCenter, linePoint, lineDiagonalPoint, Transformer._funcScaleLeftBottom);
+            return Transformer._scaleCorner(point, startingTransformer, isRatio, isCenter, linePoint, lineDiagonalPoint, Transformer._funcScaleLeftBottom);
         }
-        private static Transformer ScaleLeftBottom(Vector2 point, Transformer startingTransformer, Matrix3x2 inverseMatrix, bool isRatio, bool isCenter)
+        private static Transformer _scaleLeftBottom(Vector2 point, Transformer startingTransformer, Matrix3x2 inverseMatrix, bool isRatio, bool isCenter)
         {
             Vector2 linePoint = startingTransformer.LeftBottom;
             Vector2 lineDiagonalPoint = startingTransformer.RightTop;
 
-            return Transformer.ScaleCorner(point, startingTransformer, inverseMatrix, isRatio, isCenter, linePoint, lineDiagonalPoint, Transformer._funcScaleLeftBottom);
+            return Transformer._scaleCorner(point, startingTransformer, inverseMatrix, isRatio, isCenter, linePoint, lineDiagonalPoint, Transformer._funcScaleLeftBottom);
         }
         static Transformer _funcScaleLeftBottom(Vector2 returnPoint, Vector2 returnDiagonalPoint, Vector2 returnHorizontalPoint, Vector2 returnVerticalPoint)
         {

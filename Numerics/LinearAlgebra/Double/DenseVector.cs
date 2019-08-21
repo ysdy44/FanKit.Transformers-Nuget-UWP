@@ -1,20 +1,9 @@
-﻿using System;
-using System.Diagnostics;
-using MathNet.Numerics.LinearAlgebra.Double.Factorization;
-using MathNet.Numerics.LinearAlgebra.Factorization;
-using MathNet.Numerics.LinearAlgebra.Storage;
+﻿using MathNet.Numerics.LinearAlgebra.Storage;
 using MathNet.Numerics.Providers.LinearAlgebra;
 using MathNet.Numerics.Threading;
 using System;
 using System.Diagnostics;
-using System.Globalization;
 using System.Linq;
-using MathNet.Numerics.LinearAlgebra.Storage;
-using MathNet.Numerics.Providers.LinearAlgebra;
-using MathNet.Numerics.Threading;
-
-
-
 
 namespace MathNet.Numerics.LinearAlgebra.Double
 {

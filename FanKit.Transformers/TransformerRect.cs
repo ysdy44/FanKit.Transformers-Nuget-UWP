@@ -31,8 +31,8 @@ namespace FanKit.Transformers
         /// <summary>
         /// Constructs a <see cref = "TransformerRect" />.
         /// </summary>
-        /// <param name="pointA"> Frist point of rectangle.</param>
-        /// <param name="pointB"> Second point of rectangle.</param>
+        /// <param name="pointA"> The frist point of rectangle. </param>
+        /// <param name="pointB"> The second point of rectangle. </param>
         public TransformerRect(Vector2 pointA, Vector2 pointB)
         {
             float left = Math.Min(pointA.X, pointB.X);
@@ -54,8 +54,8 @@ namespace FanKit.Transformers
         /// <summary>
         /// Constructs a <see cref = "TransformerRect" />.
         /// </summary>
-        /// <param name="pointA"> Frist point of rectangle.</param>
-        /// <param name="pointB"> Second point of rectangle.</param>
+        /// <param name="pointA"> The frist point of rectangle. </param>
+        /// <param name="pointB"> The second point of rectangle. </param>
         /// <param name="isCenter"> Scaling around the center. </param>
         /// <param name="isRatio"> Maintain a ratio when scaling. </param>
         public TransformerRect(Vector2 pointA, Vector2 pointB, bool isCenter, bool isRatio)
@@ -92,9 +92,9 @@ namespace FanKit.Transformers
         /// <summary>
         /// Constructs a <see cref = "TransformerRect" />.
         /// </summary>
-        /// <param name="width"> Width of rectangle.</param>
-        /// <param name="height"> Height rectangle.</param>
-        /// <param name="postion"> Postion of rectangle. </param>
+        /// <param name="width"> The width. </param>
+        /// <param name="height"> The height. </param>
+        /// <param name="postion"> The postion. </param>
         public TransformerRect(float width, float height, Vector2 postion)
         {
             float left = postion.X;

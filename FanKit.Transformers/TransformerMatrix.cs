@@ -39,8 +39,8 @@ namespace FanKit.Transformers
         /// <summary>
         /// Constructs a <see cref = "TransformerMatrix" />.
         /// </summary>
-        /// <param name="pointA"> Frist point of transformer matrix.</param>
-        /// <param name="pointB"> Second point of transformer matrix.</param>
+        /// <param name="pointA"> The frist point of transformer matrix. </param>
+        /// <param name="pointB"> The second point of transformer matrix. </param>
         public TransformerMatrix(Vector2 pointA, Vector2 pointB)
         {
             Transformer transformer = new Transformer(pointA, pointB);
@@ -58,9 +58,9 @@ namespace FanKit.Transformers
         /// <summary>
         /// Constructs a <see cref = "TransformerMatrix" />. 
         /// </summary> 
-        /// <param name="width"> Width of transformer matrix.</param>
-        /// <param name="height"> Height of transformer matrix.</param>
-        /// <param name="postion"> Postion of transformer matrix. </param>
+        /// <param name="width"> The width. </param>
+        /// <param name="height"> The height. </param>
+        /// <param name="postion"> The postion. </param>
         public TransformerMatrix(float width, float height, Vector2 postion)
         {
             Transformer transformer = new Transformer(width, height,postion);

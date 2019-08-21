@@ -25,13 +25,13 @@ namespace FanKit.Transformers
 
 
         //Size
-         Size RootGrigSize;
-         readonly Size CanvasSize = new Size(246, 246);
-         readonly Size ManipulationSize = new Size(140, 140);
-         readonly Size RemoteSize = new Size(40, 40);
+         Size _rootGrigSize;
+         readonly Size _canvasSize = new Size(246, 246);
+         readonly Size _manipulationSize = new Size(140, 140);
+         readonly Size _remoteSize = new Size(40, 40);
 
         /// <summary>
-        /// Remote's Center
+        /// Remote's Center.
         /// </summary>
         public Vector2 RemoteCenter
         {
@@ -41,7 +41,7 @@ namespace FanKit.Transformers
                 Vector2 vector = value;
 
                 float length = value.Length() * 2;
-                float manipulationEdge = (float)Math.Sqrt((this.ManipulationSize.Width - this.RemoteEllipse.Width) * (this.ManipulationSize.Height - this.RemoteEllipse.Height));
+                float manipulationEdge = (float)Math.Sqrt((this._manipulationSize.Width - this.RemoteEllipse.Width) * (this._manipulationSize.Height - this.RemoteEllipse.Height));
 
                 // Exceeding the edge?
                 if (length > manipulationEdge)
@@ -51,24 +51,24 @@ namespace FanKit.Transformers
                 }
 
                 //Canvas
-                Canvas.SetLeft(this.RemoteEllipse, vector.X + (this.CanvasSize.Width - this.RemoteSize.Width) / 2);
-                Canvas.SetTop(this.RemoteEllipse, vector.Y + (this.CanvasSize.Height - this.RemoteSize.Height) / 2);
+                Canvas.SetLeft(this.RemoteEllipse, vector.X + (this._canvasSize.Width - this._remoteSize.Width) / 2);
+                Canvas.SetTop(this.RemoteEllipse, vector.Y + (this._canvasSize.Height - this._remoteSize.Height) / 2);
 
                 this.remoteCenter = value;
             }
         }
         private Vector2 remoteCenter;
 
-        private Vector2 ManipulationCenter
+        private Vector2 _manipulationCenter
         {
             set
             {
-                Canvas.SetLeft(this.ManipulationEllipse, value.X + (this.CanvasSize.Width - this.ManipulationSize.Width) / 2);
-                Canvas.SetTop(this.ManipulationEllipse, value.Y + (this.CanvasSize.Height - this.ManipulationSize.Height) / 2);
+                Canvas.SetLeft(this.ManipulationEllipse, value.X + (this._canvasSize.Width - this._manipulationSize.Width) / 2);
+                Canvas.SetTop(this.ManipulationEllipse, value.Y + (this._canvasSize.Height - this._manipulationSize.Height) / 2);
             }
         }
 
-        private bool IsManipulation
+        private bool _isManipulation
         {
             set
             {
@@ -93,7 +93,7 @@ namespace FanKit.Transformers
             }
         }
 
-        Vector2 Vector;
+        Vector2 _vector;
 
 
         //@Constructs
@@ -106,20 +106,20 @@ namespace FanKit.Transformers
             this.RootGrid.SizeChanged += (s, e) =>
             {
                 if (e.NewSize == e.PreviousSize) return;
-                this.RootGrigSize = e.NewSize;
+                this._rootGrigSize = e.NewSize;
             };
 
 
             //Canvas
-            this.Canvas.Width = this.CanvasSize.Width;
-            this.Canvas.Height = this.CanvasSize.Height;
+            this.Canvas.Width = this._canvasSize.Width;
+            this.Canvas.Height = this._canvasSize.Height;
             //Manipulation
-            this.ManipulationEllipse.Width = this.ManipulationSize.Width;
-            this.ManipulationEllipse.Height = this.ManipulationSize.Height;
-            this.ManipulationCenter = Vector2.Zero;
+            this.ManipulationEllipse.Width = this._manipulationSize.Width;
+            this.ManipulationEllipse.Height = this._manipulationSize.Height;
+            this._manipulationCenter = Vector2.Zero;
             //Remote
-            this.RemoteEllipse.Width = this.RemoteSize.Width;
-            this.RemoteEllipse.Height = this.RemoteSize.Height;
+            this.RemoteEllipse.Width = this._remoteSize.Width;
+            this.RemoteEllipse.Height = this._remoteSize.Height;
             this.RemoteCenter = Vector2.Zero;
 
 
@@ -160,30 +160,30 @@ namespace FanKit.Transformers
             this.ManipulationEllipse.ManipulationStarted += (s, e) =>
             {
                 //Manipulation
-                this.IsManipulation = true;
+                this._isManipulation = true;
 
-                this.Vector = Vector2.Zero;
+                this._vector = Vector2.Zero;
                 this.ValueChangeStarted?.Invoke(this, Vector2.Zero); //Delegate
             };
             this.ManipulationEllipse.ManipulationDelta += (s, e) =>
             {
                 //Manipulation
                 Point point = e.Delta.Translation;
-                double x = point.X * this.CanvasSize.Width / this.RootGrigSize.Width;
-                double y = point.Y * this.CanvasSize.Height / this.RootGrigSize.Height;
+                double x = point.X * this._canvasSize.Width / this._rootGrigSize.Width;
+                double y = point.Y * this._canvasSize.Height / this._rootGrigSize.Height;
                 this.RemoteCenter += new Vector2((float)x, (float)y);
                 
-                this.Vector += point.ToVector2();
-                this.ValueChangeDelta?.Invoke(this, this.Vector); //Delegate
+                this._vector += point.ToVector2();
+                this.ValueChangeDelta?.Invoke(this, this._vector); //Delegate
             };
             this.ManipulationEllipse.ManipulationCompleted += (s, e) =>
             {
                 //Manipulation
-                this.IsManipulation = false;
+                this._isManipulation = false;
                 this.RemoteCenter = Vector2.Zero;
 
-                this.Vector = e.Position.ToVector2();
-                this.ValueChangeCompleted?.Invoke(this, this.Vector); //Delegate
+                this._vector = e.Position.ToVector2();
+                this.ValueChangeCompleted?.Invoke(this, this._vector); //Delegate
             };
         }
     }

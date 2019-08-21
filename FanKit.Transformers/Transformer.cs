@@ -23,10 +23,10 @@ namespace FanKit.Transformers
         /// <summary>
         /// Constructs a transformer.
         /// </summary>
-        /// <param name="left"> Transformer's left. </param>
-        /// <param name="top"> Transformer's top. </param>
-        /// <param name="right"> Transformer's right. </param>
-        /// <param name="bottom"> Transformer's bottom. </param>
+        /// <param name="left"> The left. </param>
+        /// <param name="top"> The top. </param>
+        /// <param name="right"> The right. </param>
+        /// <param name="bottom"> The bottom. </param>
         public Transformer(float left, float top, float right, float bottom)
         {
             this.LeftTop = new Vector2(left, top);
@@ -37,20 +37,20 @@ namespace FanKit.Transformers
         /// <summary>
         /// Constructs a transformer.
         /// </summary>
-        /// <param name="rect"> Transformer's initial rectangle. </param>
-        public Transformer(TransformerRect rect)
+        /// <param name="transformerRect"> The initial rectangle. </param>
+        public Transformer(TransformerRect transformerRect)
         {
-            this.LeftTop = rect.LeftTop;
-            this.RightTop = rect.RightTop;
-            this.RightBottom = rect.RightBottom;
-            this.LeftBottom = rect.LeftBottom;
+            this.LeftTop = transformerRect.LeftTop;
+            this.RightTop = transformerRect.RightTop;
+            this.RightBottom = transformerRect.RightBottom;
+            this.LeftBottom = transformerRect.LeftBottom;
         }
 
         /// <summary>
         /// Constructs a transformer.
         /// </summary>
-        /// <param name="pointA"> Frist point of transformer.</param>
-        /// <param name="pointB"> Second point of transformer.</param>
+        /// <param name="pointA"> The frist point of transformer. </param>
+        /// <param name="pointB"> The second point of transformer. </param>
         public Transformer(Vector2 pointA, Vector2 pointB)
         {
             TransformerRect rect = new TransformerRect(pointA, pointB);
@@ -60,12 +60,12 @@ namespace FanKit.Transformers
             this.RightBottom = rect.RightBottom;
             this.LeftBottom = rect.LeftBottom;
         }
-        
+
         /// <summary>
         /// Constructs a transformer.
         /// </summary>
-        /// <param name="pointA"> Frist point of rectangle.</param>
-        /// <param name="pointB"> Second point of rectangle.</param>
+        /// <param name="pointA"> The frist point of transformer. </param>
+        /// <param name="pointB"> The second point of transformer. </param>
         /// <param name="isCenter"> Scaling around the center. </param>
         /// <param name="isRatio"> Maintain a ratio when scaling. </param>
         public Transformer(Vector2 pointA, Vector2 pointB, bool isCenter, bool isRatio)
@@ -81,9 +81,9 @@ namespace FanKit.Transformers
         /// <summary>
         /// Constructs a transformer.
         /// </summary>
-        /// <param name="width"> Width of transformer.</param>
-        /// <param name="height"> Height of transformer.</param>
-        /// <param name="postion"> Postion of transformer. </param>
+        /// <param name="width"> The width. </param>
+        /// <param name="height"> The height. </param>
+        /// <param name="postion"> The postion. </param>
         public Transformer(float width, float height, Vector2 postion)
         {
             this.LeftTop = postion;

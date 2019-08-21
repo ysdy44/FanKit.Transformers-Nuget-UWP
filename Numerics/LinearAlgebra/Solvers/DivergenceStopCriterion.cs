@@ -46,22 +46,7 @@ namespace MathNet.Numerics.LinearAlgebra.Solvers
         ///     The number of iterations over which a residual increase should be tracked before issuing a divergence warning.
         /// </summary>
         private readonly int _minimumNumberOfIterations;
-
-        /// <summary>
-        ///     The iteration number of the last iteration.
-        /// </summary>
-        private int _lastIteration = -1;
-
-        /// <summary>
-        ///     The array that holds the tracking information.
-        /// </summary>
-        private double[] _residualHistory;
-
-        /// <summary>
-        ///     The status of the calculation
-        /// </summary>
-        private IterationStatus _status = IterationStatus.Continue;
-
+        
         /// <summary>
         ///     Initializes a new instance of the
         ///     <seecreDivergenceStopCriterion{ T} class with the specified maximum

@@ -1,4 +1,5 @@
-﻿using System.Numerics;
+﻿using System;
+using System.Numerics;
 
 namespace FanKit.Transformers
 {
@@ -7,22 +8,29 @@ namespace FanKit.Transformers
     /// </summary>
     public partial struct Transformer
     {
-        /// <summary> Radius of node'. Defult 12. </summary>
-        private const float NodeRadius = 12.0f;
-        /// <summary> Whether the distance exceeds [NodeRadius]. Defult: 144. </summary>
-        public static bool InNodeRadius(Vector2 node0, Vector2 node1) => (node0 - node1).LengthSquared() < 144.0f;// Transformer.NodeRadius * Transformer.NodeRadius;
+        static Transformer()
+        {
+            Transformer._nodeRadiusSquare = Transformer.NodeRadius * Transformer.NodeRadius;
 
+            Transformer._nodeDistanceSquare = Transformer.NodeDistance * Transformer.NodeDistance;
+            Transformer._nodeDistanceDouble = Transformer.NodeDistance + Transformer.NodeDistance;
+        }
+
+        /// <summary> Radius of node'. Defult 12. </summary>
+        public const float NodeRadius = 12.0f;
+        private static float _nodeRadiusSquare;
+        /// <summary> Whether the distance exceeds [NodeRadius]. Defult: 144. </summary>
+        public static bool InNodeRadius(Vector2 node0, Vector2 node1) => (node0 - node1).LengthSquared() < Transformer._nodeRadiusSquare;
 
         /// <summary> Minimum distance between two nodes. Defult 20. </summary>
-        private const float NodeDistance = 20.0f;
-        /// <summary> Double [NodeDistance]. Defult 40. </summary>
-        private const float NodeDistanceDouble = 40.0f;
+        public const float NodeDistance = 20.0f;
+        private static float _nodeDistanceSquare;
+        private static float _nodeDistanceDouble;
         /// <summary> Whether the distance'LengthSquared exceeds [NodeDistance]. Defult: 400. </summary>
-        public static bool OutNodeDistance(Vector2 node0, Vector2 node1) => (node0 - node1).LengthSquared() > 400.0f;// Transformer.NodeDistance * Transformer.NodeDistance;
-
-
+        public static bool OutNodeDistance(Vector2 node0, Vector2 node1) => (node0 - node1).LengthSquared() > Transformer. _nodeDistanceSquare;
+     
         /// <summary> Get outside node. </summary>
-        internal static Vector2 OutsideNode(Vector2 nearNode, Vector2 farNode) => nearNode - Vector2.Normalize(farNode - nearNode) * Transformer.NodeDistanceDouble;
+        internal static Vector2 _outsideNode(Vector2 nearNode, Vector2 farNode) => nearNode - Vector2.Normalize(farNode - nearNode) * Transformer._nodeDistanceDouble;
 
         /// <summary>
         /// Point inside the Quadrangle
@@ -46,25 +54,25 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="point"> The point. </param>
         /// <param name="transformer"> The source transformer. </param>
-        /// <returns></returns>
+        /// <returns> return **true** if the point inside the quadrangle. </returns>
         public static bool InQuadrangle(Vector2 point, Transformer transformer) => Transformer.InQuadrangle(point, transformer.LeftTop, transformer.RightTop, transformer.RightBottom, transformer.LeftBottom);
         /// <summary>
         /// Point inside the transformer's quadrangle.
         /// </summary>
         /// <param name="point"> The point. </param>
-        /// <returns></returns>
+        /// <returns> return **true** if the point inside the quadrangle. </returns>
         public bool InQuadrangle(Vector2 point) => Transformer.InQuadrangle(point, this.LeftTop, this.RightTop, this.RightBottom, this.LeftBottom);
 
 
 
         /// <summary>
-        /// The transformer was contained in a rectangle.
+        /// The transformer was contained in the rectangle.
         /// </summary>
         /// <param name="left"> The destination rectangle's left. </param>
         /// <param name="top"> The destination rectangle's top. </param>
         /// <param name="right"> The destination rectangle's right. </param>
         /// <param name="bottom"> The destination rectangle's bottom. </param>
-        /// <returns></returns>
+        /// <returns> return **true** if the transformer was contained in rectangle. </returns>
         public bool Contained(float left, float top, float right, float bottom)
         {
             if (this.MinX < left) return false;
@@ -77,9 +85,9 @@ namespace FanKit.Transformers
         /// <summary>
         /// The transformer was contained in a rectangle.
         /// </summary>
-        /// <param name="rect"> The destination rectangle. </param>
-        /// <returns></returns>
-        public bool Contained(TransformerRect rect) => this.Contained(rect.Left, rect.Top, rect.Right, rect.Bottom);
+        /// <param name="transformerRect"> The destination rectangle. </param>
+        /// <returns> return **true** if the transformer was contained in rectangle. </returns>
+        public bool Contained(TransformerRect transformerRect) => this.Contained(transformerRect.Left, transformerRect.Top, transformerRect.Right, transformerRect.Bottom);
 
     }
 }

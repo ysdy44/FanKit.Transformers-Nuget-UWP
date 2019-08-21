@@ -36,7 +36,7 @@ namespace FanKit.Transformers
         /// <summary> CanvasControl's center. </summary>
         public Vector2 ControlCenter { get; private set; } = new Vector2(500.0f, 500.0f);
 
-        /// /// <summary> <see cref = "CanvasTransformer" />'s translation. </summary>
+        /// <summary> <see cref = "CanvasTransformer" />'s translation. </summary>
         public Vector2 Position = new Vector2(0.0f, 0.0f);
         /// <summary> <see cref = "CanvasTransformer" />'s rotation. </summary>
         public float Radian = 0.0f;
@@ -108,54 +108,54 @@ namespace FanKit.Transformers
 
 
         //Matrix
-        Matrix3x2 Matrix;
-        Matrix3x2 CanvasToVirtualMatrix;
-        Matrix3x2 VirtualToControlMatrix;
+        Matrix3x2 _matrix;
+        Matrix3x2 _canvasToVirtualMatrix;
+        Matrix3x2 _virtualToControlMatrix;
 
         //InverseMatrix
-        Matrix3x2 InverseMatrix;
-        Matrix3x2 ControlToVirtualInverseMatrix;
-        Matrix3x2 VirtualToCanvasInverseMatrix;
+        Matrix3x2 _inverseMatrix;
+        Matrix3x2 _controlToVirtualInverseMatrix;
+        Matrix3x2 _virtualToCanvasInverseMatrix;
 
 
         /// <summary>
         /// Gets <see cref = "CanvasTransformer" />'s matrix.
         /// Call the <see cref = "CanvasTransformer.ReloadMatrix" /> method before using.
         /// </summary>
-        /// <param name="mode"> <see cref = "CanvasTransformer" />'s matrix mode. </param>
-        /// <returns> matrix </returns>
+        /// <param name="mode"> The matrix mode. </param>
+        /// <returns> The product matrix. </returns>
         public Matrix3x2 GetMatrix(MatrixTransformerMode mode = MatrixTransformerMode.CanvasToVirtualToControl)
         {
             switch (mode)
             {
                 case MatrixTransformerMode.CanvasToVirtualToControl:
-                    return this.Matrix;
+                    return this._matrix;
                 case MatrixTransformerMode.CanvasToVirtual:
-                    return this.CanvasToVirtualMatrix;
+                    return this._canvasToVirtualMatrix;
                 case MatrixTransformerMode.VirtualToControl:
-                    return this.VirtualToControlMatrix;
+                    return this._virtualToControlMatrix;
             }
-            return this.Matrix;
+            return this._matrix;
         }
 
         /// <summary>
         /// Gets <see cref = "CanvasTransformer" />'s inverse matrix.
         ///   Call the <see cref = "CanvasTransformer.ReloadMatrix" /> method before using.
         /// </summary>
-        /// <param name="mode"> <see cref = "CanvasTransformer" />'s inverse matrix mode. </param>
-        /// <returns> inverse matrix </returns>
+        /// <param name="mode"> The inverse matrix mode. </param>
+        /// <returns> The product inverse matrix. </returns>
         public Matrix3x2 GetInverseMatrix(InverseMatrixTransformerMode mode = InverseMatrixTransformerMode.ControlToVirtualToCanvas)
         {
             switch (mode)
             {
                 case InverseMatrixTransformerMode.ControlToVirtualToCanvas:
-                    return this.InverseMatrix;
+                    return this._inverseMatrix;
                 case InverseMatrixTransformerMode.ControlToVirtual:
-                    return this.ControlToVirtualInverseMatrix;
+                    return this._controlToVirtualInverseMatrix;
                 case InverseMatrixTransformerMode.VirtualToCanvas:
-                    return this.VirtualToCanvasInverseMatrix;
+                    return this._virtualToCanvasInverseMatrix;
             }
-            return this.InverseMatrix;
+            return this._inverseMatrix;
         }
 
 
@@ -166,14 +166,14 @@ namespace FanKit.Transformers
         public void ReloadMatrix()
         {
             //Matrix
-            this.VirtualToControlMatrix = Matrix3x2.CreateRotation(this.Radian) * Matrix3x2.CreateTranslation(this.Position);
-            this.CanvasToVirtualMatrix = Matrix3x2.CreateTranslation(-this.Width / 2, -this.Height / 2) * Matrix3x2.CreateScale(this.Scale);
-            this.Matrix = this.CanvasToVirtualMatrix * this.VirtualToControlMatrix;
+            this._virtualToControlMatrix = Matrix3x2.CreateRotation(this.Radian) * Matrix3x2.CreateTranslation(this.Position);
+            this._canvasToVirtualMatrix = Matrix3x2.CreateTranslation(-this.Width / 2, -this.Height / 2) * Matrix3x2.CreateScale(this.Scale);
+            this._matrix = this._canvasToVirtualMatrix * this._virtualToControlMatrix;
 
             //InverseMatrix
-            this.VirtualToCanvasInverseMatrix = Matrix3x2.CreateScale(1 / this.Scale) * Matrix3x2.CreateTranslation(this.Width / 2, this.Height / 2);
-            this.ControlToVirtualInverseMatrix = Matrix3x2.CreateTranslation(-this.Position) * Matrix3x2.CreateRotation(-this.Radian);
-            this.InverseMatrix = this.ControlToVirtualInverseMatrix * this.VirtualToCanvasInverseMatrix;
+            this._virtualToCanvasInverseMatrix = Matrix3x2.CreateScale(1 / this.Scale) * Matrix3x2.CreateTranslation(this.Width / 2, this.Height / 2);
+            this._controlToVirtualInverseMatrix = Matrix3x2.CreateTranslation(-this.Position) * Matrix3x2.CreateRotation(-this.Radian);
+            this._inverseMatrix = this._controlToVirtualInverseMatrix * this._virtualToCanvasInverseMatrix;
         }
 
     }

@@ -1,7 +1,7 @@
 ﻿namespace FanKit.Transformers
 {
     /// <summary>
-    /// <see cref = "CanvasTransformer" />'s matrix mode. 
+    /// The matrix mode of <see cref = "CanvasTransformer" />. 
     /// </summary>
     public enum MatrixTransformerMode
     {
