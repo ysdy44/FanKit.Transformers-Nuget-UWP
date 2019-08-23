@@ -94,7 +94,9 @@ namespace FanKit.Transformers.TestApp
         {
             this.startingPoint = point;
 
-            this.Layer.TransformerMatrix.OldDestination = this.Layer.TransformerMatrix.Destination;
+            //this.Layer.TransformerMatrix._oldDestination = this.Layer.TransformerMatrix.Destination;
+            this.Layer.TransformerMatrix.CacheTransform();
+
             this.TransformerMode = Transformer.ContainsNodeMode(point, this.Layer.TransformerMatrix.Destination);
 
             this.CanvasControl.Invalidate();
@@ -105,7 +107,7 @@ namespace FanKit.Transformers.TestApp
             bool isCenter = this.CenterButton.IsOn;
 
             //Controller
-            Transformer transformer = Transformer.Controller(this.TransformerMode, startingPoint, point, this.Layer.TransformerMatrix.OldDestination, isRatio, isCenter);
+            Transformer transformer = Transformer.Controller(this.TransformerMode, startingPoint, point, this.Layer.TransformerMatrix._oldDestination, isRatio, isCenter);
 
             this.Layer.TransformerMatrix.Destination = transformer;
 

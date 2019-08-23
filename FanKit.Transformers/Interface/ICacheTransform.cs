@@ -9,7 +9,7 @@ namespace FanKit.Transformers
     {
         /// <summary>
         ///  Cache the class's transformer.
-        ///  Ex: OldTransformer = Transformer.
+        ///  Ex: _oldTransformer = Transformer.
         /// </summary>
         void CacheTransform();
 

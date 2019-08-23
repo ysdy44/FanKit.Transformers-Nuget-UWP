@@ -12,9 +12,7 @@ namespace FanKit.Transformers
 
         /// <summary> The destination Transformer. </summary>
         public Transformer Destination;
-
-        /// <summary> <see cref = "TransformerMatrix.Destination" />'s old cache. </summary>
-        public Transformer OldDestination;
+        private Transformer _oldDestination;
 
         /// <summary> Is disable rotate radian? Defult **false**. </summary>
         public bool DisabledRadian;
@@ -32,7 +30,7 @@ namespace FanKit.Transformers
             //Destination
             this.Destination = transformer;
 
-            this.OldDestination = transformer;
+            this._oldDestination = transformer;
 
             this.DisabledRadian = false;
         }
@@ -51,7 +49,7 @@ namespace FanKit.Transformers
             //Destination
             this.Destination = transformer;
 
-            this.OldDestination = transformer;
+            this._oldDestination = transformer;
 
             this.DisabledRadian = false;
         }
@@ -71,7 +69,7 @@ namespace FanKit.Transformers
             //Destination
             this.Destination = transformer;
 
-            this.OldDestination = transformer;
+            this._oldDestination = transformer;
 
             this.DisabledRadian = false;
         }
@@ -88,17 +86,16 @@ namespace FanKit.Transformers
         /// <summary>
         ///  Cache the transformer-matrix's transformer.
         /// </summary>
-        public void CacheTransform() => this.OldDestination = this.Destination;
+        public void CacheTransform() => this._oldDestination = this.Destination;
         /// <summary>
         ///  Transforms the TransformerMatrix by the given matrix.
         /// </summary>
         /// <param name="matrix"> The resulting matrix. </param>
-        public void TransformMultiplies(Matrix3x2 matrix) => this.Destination = this.OldDestination * matrix;
-
+        public void TransformMultiplies(Matrix3x2 matrix) => this.Destination = this._oldDestination * matrix;
         /// <summary>
         ///  Transforms the TransformerMatrix by the given vector.
         /// </summary>
         /// <param name="vector"> The add value use to summed. </param>
-        public void TransformAdd(Vector2 vector) => this.Destination = this.OldDestination + vector;
+        public void TransformAdd(Vector2 vector) => this.Destination = this._oldDestination + vector;
     }
 }
