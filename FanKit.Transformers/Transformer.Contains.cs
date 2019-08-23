@@ -40,7 +40,7 @@ namespace FanKit.Transformers
         /// <param name="rightTop"> The right-top point. </param>
         /// <param name="rightBottom"> The right-bottom point. </param>
         /// <param name="leftBottom"> The left-bottom point. </param>
-        /// <returns></returns>
+        /// <returns> Return **true** if the point was contained in quadrangle, otherwise **false**. </returns>
         public static bool InQuadrangle(Vector2 point, Vector2 leftTop, Vector2 rightTop, Vector2 rightBottom, Vector2 leftBottom)
         {
             float a = (leftTop.X - leftBottom.X) * (point.Y - leftBottom.Y) - (leftTop.Y - leftBottom.Y) * (point.X - leftBottom.X);
@@ -54,13 +54,13 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="point"> The point. </param>
         /// <param name="transformer"> The source transformer. </param>
-        /// <returns> return **true** if the point inside the quadrangle. </returns>
+        /// <returns> Return **true** if the point inside the quadrangle, otherwise **false**. </returns>
         public static bool InQuadrangle(Vector2 point, Transformer transformer) => Transformer.InQuadrangle(point, transformer.LeftTop, transformer.RightTop, transformer.RightBottom, transformer.LeftBottom);
         /// <summary>
         /// Point inside the transformer's quadrangle.
         /// </summary>
         /// <param name="point"> The point. </param>
-        /// <returns> return **true** if the point inside the quadrangle. </returns>
+        /// <returns> Return **true** if the point inside the quadrangle, otherwise **false**. </returns>
         public bool InQuadrangle(Vector2 point) => Transformer.InQuadrangle(point, this.LeftTop, this.RightTop, this.RightBottom, this.LeftBottom);
 
 
@@ -72,7 +72,7 @@ namespace FanKit.Transformers
         /// <param name="top"> The destination rectangle's top. </param>
         /// <param name="right"> The destination rectangle's right. </param>
         /// <param name="bottom"> The destination rectangle's bottom. </param>
-        /// <returns> return **true** if the transformer was contained in rectangle. </returns>
+        /// <returns> Return **true** if the transformer was contained in rectangle, otherwise **false**. </returns>
         public bool Contained(float left, float top, float right, float bottom)
         {
             if (this.MinX < left) return false;
@@ -86,7 +86,7 @@ namespace FanKit.Transformers
         /// The transformer was contained in a rectangle.
         /// </summary>
         /// <param name="transformerRect"> The destination rectangle. </param>
-        /// <returns> return **true** if the transformer was contained in rectangle. </returns>
+        /// <returns> Return **true** if the transformer was contained in rectangle, otherwise **false**. </returns>
         public bool Contained(TransformerRect transformerRect) => this.Contained(transformerRect.Left, transformerRect.Top, transformerRect.Right, transformerRect.Bottom);
 
     }
