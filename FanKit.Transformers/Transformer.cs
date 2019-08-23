@@ -18,6 +18,32 @@ namespace FanKit.Transformers
         public Vector2 LeftBottom;
 
 
+        /// <summary> Gets the center vector. </summary>
+        public Vector2 Center => (this.LeftTop + this.RightTop + this.RightBottom + this.LeftBottom) / 4;
+
+        /// <summary> Gets the center left vector. </summary>
+        public Vector2 CenterLeft => (this.LeftTop + this.LeftBottom) / 2;
+        /// <summary> Gets the center top vector. </summary>
+        public Vector2 CenterTop => (this.LeftTop + this.RightTop) / 2;
+        /// <summary> Gets the center right vector. </summary>
+        public Vector2 CenterRight => (this.RightTop + this.RightBottom) / 2;
+        /// <summary> Gets the center bottom vector. </summary>
+        public Vector2 CenterBottom => (this.RightBottom + this.LeftBottom) / 2;
+
+        /// <summary> Gets the minimum value on the X-Axis. </summary>
+        public float MinX => Math.Min(Math.Min(this.LeftTop.X, this.RightTop.X), Math.Min(this.RightBottom.X, this.LeftBottom.X));
+        /// <summary> Gets the maximum  value on the X-Axis. </summary>
+        public float MaxX => Math.Max(Math.Max(this.LeftTop.X, this.RightTop.X), Math.Max(this.RightBottom.X, this.LeftBottom.X));
+        /// <summary> Gets the minimum value on the Y-Axis. </summary>
+        public float MinY => Math.Min(Math.Min(this.LeftTop.Y, this.RightTop.Y), Math.Min(this.RightBottom.Y, this.LeftBottom.Y));
+        /// <summary> Gets the maximum  value on the Y-Axis. </summary>
+        public float MaxY => Math.Max(Math.Max(this.LeftTop.Y, this.RightTop.Y), Math.Max(this.RightBottom.Y, this.LeftBottom.Y));
+
+        /// <summary> Gets horizontal vector. </summary>
+        public Vector2 Horizontal => (this.RightTop + this.RightBottom - this.LeftTop - this.LeftBottom) / 2;
+        /// <summary> Gets vertical vector. </summary>
+        public Vector2 Vertical => (this.RightBottom + this.LeftBottom - this.LeftTop - this.RightTop) / 2;
+
 
         //@Constructs
         /// <summary>
@@ -93,34 +119,6 @@ namespace FanKit.Transformers
         }
 
 
-
-        /// <summary> Gets the center vector. </summary>
-        public Vector2 Center => (this.LeftTop + this.RightTop + this.RightBottom + this.LeftBottom) / 4;
-
-        /// <summary> Gets the center left vector. </summary>
-        public Vector2 CenterLeft => (this.LeftTop + this.LeftBottom) / 2;
-        /// <summary> Gets the center top vector. </summary>
-        public Vector2 CenterTop => (this.LeftTop + this.RightTop) / 2;
-        /// <summary> Gets the center right vector. </summary>
-        public Vector2 CenterRight => (this.RightTop + this.RightBottom) / 2;
-        /// <summary> Gets the center bottom vector. </summary>
-        public Vector2 CenterBottom => (this.RightBottom + this.LeftBottom) / 2;
-
-        /// <summary> Gets the minimum value on the X-Axis. </summary>
-        public float MinX => Math.Min(Math.Min(this.LeftTop.X, this.RightTop.X), Math.Min(this.RightBottom.X, this.LeftBottom.X));
-        /// <summary> Gets the maximum  value on the X-Axis. </summary>
-        public float MaxX => Math.Max(Math.Max(this.LeftTop.X, this.RightTop.X), Math.Max(this.RightBottom.X, this.LeftBottom.X));
-        /// <summary> Gets the minimum value on the Y-Axis. </summary>
-        public float MinY => Math.Min(Math.Min(this.LeftTop.Y, this.RightTop.Y), Math.Min(this.RightBottom.Y, this.LeftBottom.Y));
-        /// <summary> Gets the maximum  value on the Y-Axis. </summary>
-        public float MaxY => Math.Max(Math.Max(this.LeftTop.Y, this.RightTop.Y), Math.Max(this.RightBottom.Y, this.LeftBottom.Y));
-
-        /// <summary> Gets horizontal vector. </summary>
-        public Vector2 Horizontal => (this.RightTop + this.RightBottom - this.LeftTop - this.LeftBottom) / 2;
-        /// <summary> Gets vertical vector. </summary>
-        public Vector2 Vertical => (this.RightBottom + this.LeftBottom - this.LeftTop - this.RightTop) / 2;
-
-
         //@Static
         /// <summary>
         /// Adds transformer and vector together.
@@ -151,7 +149,6 @@ namespace FanKit.Transformers
         };
 
 
-        //@Static
         /// <summary>
         /// Adds transformer and vector together.
         /// </summary>
@@ -168,6 +165,36 @@ namespace FanKit.Transformers
         /// <returns> The resulting transformer. </returns>
         public static Transformer operator *(Transformer value1, Matrix3x2 value2) => Transformer.Multiplies(value1, value2);
 
+
+        /// <summary>
+        /// Returns a boolean indicating whether the given Transformer is equal to this Transformer instance.
+        /// </summary>
+        /// <param name="other"> The Transformer to compare this instance to. </param>
+        /// <returns> Return **true** if the other Transformer is equal to this instance, otherwise **false**. </returns>
+        public bool Equals(Transformer other)
+        {
+            if (this.LeftTop != other.LeftTop) return false;
+            if (this.RightTop != other.RightTop) return false;
+            if (this.RightBottom != other.RightBottom) return false;
+            if (this.LeftBottom != other.LeftBottom) return false;
+            return true;
+        }
+
+        /// <summary>
+        /// Returns a value that indicates whether each pair of elements in two specified nodes is equal.
+        /// </summary>
+        /// <param name="left"> The first transformer to compare. </param>
+        /// <param name="right"> The second transformer to compare. </param>
+        /// <returns> Return **true** if left and right are equal, otherwise **false**. </returns>
+        public static bool operator ==(Transformer left, Transformer right) => left.Equals(right);
+
+        /// <summary>
+        /// Returns a boolean indicating whether the two given nodes are not equal.
+        /// </summary>
+        /// <param name="left"> The first transformer to compare. </param>
+        /// <param name="right"> The second transformer to compare. </param>
+        /// <returns> Return **true** if the nodes are not equal; False if they are equal. </returns>
+        public static bool operator !=(Transformer left, Transformer right) => !left.Equals(right);
 
     }
 }
