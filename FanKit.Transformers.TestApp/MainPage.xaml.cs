@@ -17,11 +17,11 @@ namespace FanKit.Transformers.TestApp
 
     public sealed partial class MainPage : Page
     {
+        public TransformerMode TransformerMode { get; private set; }
+        public Layer Layer { get; private set; }
 
-        TransformerMode TransformerMode;
-        Vector2 startingPoint;
-        Layer Layer;
-
+        Vector2 _startingPoint;
+        Transformer _oldTransformer;
 
         public MainPage()
         {
@@ -92,12 +92,13 @@ namespace FanKit.Transformers.TestApp
 
         private void CanvasOperator_Single_Start(Vector2 point)
         {
-            this.startingPoint = point;
+            Transformer transformer=this.Layer.TransformerMatrix.Destination;
 
-            //this.Layer.TransformerMatrix._oldDestination = this.Layer.TransformerMatrix.Destination;
+            this._startingPoint = point;
+            this._oldTransformer = transformer;
+
+            this.TransformerMode = Transformer.ContainsNodeMode(point, transformer);
             this.Layer.TransformerMatrix.CacheTransform();
-
-            this.TransformerMode = Transformer.ContainsNodeMode(point, this.Layer.TransformerMatrix.Destination);
 
             this.CanvasControl.Invalidate();
         }
@@ -106,10 +107,22 @@ namespace FanKit.Transformers.TestApp
             bool isRatio = this.RatioButton.IsOn;
             bool isCenter = this.CenterButton.IsOn;
 
-            //Controller
-            Transformer transformer = Transformer.Controller(this.TransformerMode, startingPoint, point, this.Layer.TransformerMatrix._oldDestination, isRatio, isCenter);
+            //Single layer.
+            if (true)
+            {
+                Transformer transformer = Transformer.Controller(this.TransformerMode, this._startingPoint, point, this._oldTransformer, isRatio, isCenter);
+                this.Layer.TransformerMatrix.Destination = transformer;
+            }
+            //Multiple layer.
+            else
+            {
+                Transformer transformer = Transformer.Controller(this.TransformerMode, this._startingPoint, point, this._oldTransformer, isRatio, isCenter);
+                Matrix3x2 matrix = Transformer.FindHomography(this._oldTransformer, transformer);
 
-            this.Layer.TransformerMatrix.Destination = transformer;
+                this.Layer.TransformerMatrix.TransformMultiplies(matrix);
+                //this.Layer2...
+                //this.Layer3...
+            }
 
             this.CanvasControl.Invalidate();
         }
