@@ -69,11 +69,11 @@ namespace FanKit.Transformers
             for (float Y = position.Y; Y > 0; Y -= space5) drawingSession.DrawLine(position.X, Y, position.X + axisThickLine, Y, axisThickLineColor);//top
 
             //Horizontal: Text-X
-            for (float X = position.X; X < controlWidth; X += space5) drawingSession.DrawText(((int)(Math.Round((X - position.X) / scale))).ToString(), X, position.Y + axisLine, textColor, textFormat);
-            for (float X = position.X; X > axisThickLine; X -= space5) drawingSession.DrawText(((int)(Math.Round((X - position.X) / scale))).ToString(), X, position.Y + axisLine, textColor, textFormat);
+            for (float X = position.X; X < controlWidth; X += space5) drawingSession.DrawText(((int)(System.Math.Round((X - position.X) / scale))).ToString(), X, position.Y + axisLine, textColor, textFormat);
+            for (float X = position.X; X > axisThickLine; X -= space5) drawingSession.DrawText(((int)(System.Math.Round((X - position.X) / scale))).ToString(), X, position.Y + axisLine, textColor, textFormat);
             //Vertical: Text-Y
-            for (float Y = position.Y; Y < controlHeight; Y += space5) drawingSession.DrawText(((int)(Math.Round((Y - position.Y) / scale))).ToString(), position.X - axisLine, Y, textColor, textFormat);
-            for (float Y = position.Y; Y > axisThickLine; Y -= space5) drawingSession.DrawText(((int)(Math.Round((Y - position.Y) / scale))).ToString(), position.X - axisLine, Y, textColor, textFormat);
+            for (float Y = position.Y; Y < controlHeight; Y += space5) drawingSession.DrawText(((int)(System.Math.Round((Y - position.Y) / scale))).ToString(), position.X - axisLine, Y, textColor, textFormat);
+            for (float Y = position.Y; Y > axisThickLine; Y -= space5) drawingSession.DrawText(((int)(System.Math.Round((Y - position.Y) / scale))).ToString(), position.X - axisLine, Y, textColor, textFormat);
         }
 
 
@@ -179,11 +179,11 @@ namespace FanKit.Transformers
             for (float Y = position.Y; Y > rulerWidth; Y -= spaceFive) drawingSession.DrawLine(thickLineEnd, Y, rulerWidth, Y, rulerThickLineColor);//top
 
             //Horizontal: Text-X
-            for (float X = position.X; X < controlWidth; X += spaceFive) drawingSession.DrawText(((int)(Math.Round((X - position.X) / scale))).ToString(), X, lineEnd, textColor, textFormat);
-            for (float X = position.X; X > rulerWidth; X -= spaceFive) drawingSession.DrawText(((int)(Math.Round((X - position.X) / scale))).ToString(), X, lineEnd, textColor, textFormat);
+            for (float X = position.X; X < controlWidth; X += spaceFive) drawingSession.DrawText(((int)(System.Math.Round((X - position.X) / scale))).ToString(), X, lineEnd, textColor, textFormat);
+            for (float X = position.X; X > rulerWidth; X -= spaceFive) drawingSession.DrawText(((int)(System.Math.Round((X - position.X) / scale))).ToString(), X, lineEnd, textColor, textFormat);
             //Vertical: Text-Y
-            for (float Y = position.Y; Y < controlHeight; Y += spaceFive) drawingSession.DrawText(((int)(Math.Round((Y - position.Y) / scale))).ToString(), lineEnd, Y, textColor, textFormat);
-            for (float Y = position.Y; Y > rulerWidth; Y -= spaceFive) drawingSession.DrawText(((int)(Math.Round((Y - position.Y) / scale))).ToString(), lineEnd, Y, textColor, textFormat);
+            for (float Y = position.Y; Y < controlHeight; Y += spaceFive) drawingSession.DrawText(((int)(System.Math.Round((Y - position.Y) / scale))).ToString(), lineEnd, Y, textColor, textFormat);
+            for (float Y = position.Y; Y > rulerWidth; Y -= spaceFive) drawingSession.DrawText(((int)(System.Math.Round((Y - position.Y) / scale))).ToString(), lineEnd, Y, textColor, textFormat);
         }
 
         /// <summary>

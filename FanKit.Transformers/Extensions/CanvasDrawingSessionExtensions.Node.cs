@@ -117,8 +117,6 @@ namespace FanKit.Transformers
         {
             drawingSession.FillCircle(point, 6, Windows.UI.Colors.DodgerBlue);
             drawingSession.FillCircle(point, 5, Windows.UI.Colors.White);
-
-
         }
         /// <summary>
         /// Draw a ◌.
@@ -130,7 +128,6 @@ namespace FanKit.Transformers
         {
             drawingSession.FillCircle(point, 6, accentColor);
             drawingSession.FillCircle(point, 5, Windows.UI.Colors.White);
-
         }
     }
 }

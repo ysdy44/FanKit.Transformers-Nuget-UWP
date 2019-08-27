@@ -8,30 +8,6 @@ namespace FanKit.Transformers
     /// </summary>
     public partial struct Transformer
     {
-        static Transformer()
-        {
-            Transformer._nodeRadiusSquare = Transformer.NodeRadius * Transformer.NodeRadius;
-
-            Transformer._nodeDistanceSquare = Transformer.NodeDistance * Transformer.NodeDistance;
-            Transformer._nodeDistanceDouble = Transformer.NodeDistance + Transformer.NodeDistance;
-        }
-
-        /// <summary> Radius of node'. Defult 12. </summary>
-        public const float NodeRadius = 12.0f;
-        private static float _nodeRadiusSquare;
-        /// <summary> Whether the distance exceeds [NodeRadius]. Defult: 144. </summary>
-        public static bool InNodeRadius(Vector2 node0, Vector2 node1) => (node0 - node1).LengthSquared() < Transformer._nodeRadiusSquare;
-
-        /// <summary> Minimum distance between two nodes. Defult 20. </summary>
-        public const float NodeDistance = 20.0f;
-        private static float _nodeDistanceSquare;
-        private static float _nodeDistanceDouble;
-        /// <summary> Whether the distance'LengthSquared exceeds [NodeDistance]. Defult: 400. </summary>
-        public static bool OutNodeDistance(Vector2 node0, Vector2 node1) => (node0 - node1).LengthSquared() > Transformer. _nodeDistanceSquare;
-     
-        /// <summary> Get outside node. </summary>
-        internal static Vector2 _outsideNode(Vector2 nearNode, Vector2 farNode) => nearNode - Vector2.Normalize(farNode - nearNode) * Transformer._nodeDistanceDouble;
-
         /// <summary>
         /// Point inside the Quadrangle
         /// </summary>

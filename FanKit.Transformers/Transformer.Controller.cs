@@ -115,10 +115,10 @@ namespace FanKit.Transformers
             Vector2 canvasStartingPoint = (startingPoint);
             Vector2 center = startingTransformer.Center;
 
-            float canvasRadian = TransformerMath.VectorToRadians(canvasPoint - center);
-            if (isStepFrequency) canvasRadian = TransformerMath.RadiansStepFrequency(canvasRadian);
+            float canvasRadian = Math.VectorToRadians(canvasPoint - center);
+            if (isStepFrequency) canvasRadian = Math.RadiansStepFrequency(canvasRadian);
 
-            float canvasStartingRadian = TransformerMath.VectorToRadians(canvasStartingPoint - center);
+            float canvasStartingRadian = Math.VectorToRadians(canvasStartingPoint - center);
             float radian = canvasRadian - canvasStartingRadian;
 
             Matrix3x2 rotationMatrix = Matrix3x2.CreateRotation(radian, center);
@@ -130,10 +130,10 @@ namespace FanKit.Transformers
             Vector2 canvasStartingPoint = Vector2.Transform(startingPoint, inverseMatrix);
             Vector2 center = startingTransformer.Center;
 
-            float canvasRadian = TransformerMath.VectorToRadians(canvasPoint - center);
-            if (isStepFrequency) canvasRadian = TransformerMath.RadiansStepFrequency(canvasRadian);
+            float canvasRadian = Math.VectorToRadians(canvasPoint - center);
+            if (isStepFrequency) canvasRadian = Math.RadiansStepFrequency(canvasRadian);
 
-            float canvasStartingRadian = TransformerMath.VectorToRadians(canvasStartingPoint - center);
+            float canvasStartingRadian = Math.VectorToRadians(canvasStartingPoint - center);
             float radian = canvasRadian - canvasStartingRadian;
 
             Matrix3x2 rotationMatrix = Matrix3x2.CreateRotation(radian, center);
@@ -145,8 +145,8 @@ namespace FanKit.Transformers
         //Skew
         private static Vector2 _skew(Vector2 startingPoint, Vector2 point, Vector2 linePoineA, Vector2 linePoineB)
         {
-            Vector2 canvasStartingSkewPoint = TransformerMath.FootPoint(startingPoint, linePoineA, linePoineB);
-            Vector2 canvasSkewPoint = TransformerMath.FootPoint(point, linePoineA, linePoineB);
+            Vector2 canvasStartingSkewPoint = Math.FootPoint(startingPoint, linePoineA, linePoineB);
+            Vector2 canvasSkewPoint = Math.FootPoint(point, linePoineA, linePoineB);
 
             Vector2 vector = canvasSkewPoint - canvasStartingSkewPoint;
             Vector2 halfVector = vector / 2;
@@ -229,7 +229,7 @@ namespace FanKit.Transformers
         private static Transformer _scaleAround(Vector2 point, Transformer startingTransformer, bool isRatio, bool isCenter, Vector2 linePoint, Vector2 lineDiagonalPoint, Func<Transformer, bool, Vector2, Transformer> _func)
         {
             Vector2 canvasPoint = (point);
-            Vector2 footPoint = TransformerMath.FootPoint(canvasPoint, linePoint, lineDiagonalPoint);
+            Vector2 footPoint = Math.FootPoint(canvasPoint, linePoint, lineDiagonalPoint);
 
             if (isRatio)
             {
@@ -249,7 +249,7 @@ namespace FanKit.Transformers
         private static Transformer _scaleAround(Vector2 point, Transformer startingTransformer, Matrix3x2 inverseMatrix, bool isRatio, bool isCenter, Vector2 linePoint, Vector2 lineDiagonalPoint, Func<Transformer, bool, Vector2, Transformer> _func)
         {
             Vector2 canvasPoint = Vector2.Transform(point, inverseMatrix);
-            Vector2 footPoint = TransformerMath.FootPoint(canvasPoint, linePoint, lineDiagonalPoint);
+            Vector2 footPoint = Math.FootPoint(canvasPoint, linePoint, lineDiagonalPoint);
 
             if (isRatio)
             {
@@ -390,7 +390,7 @@ namespace FanKit.Transformers
             if (isRatio)
             {
                 Vector2 center = isCenter ? startingTransformer.Center : lineDiagonalPoint;
-                Vector2 footPoint = TransformerMath.FootPoint(canvasPoint, linePoint, center);
+                Vector2 footPoint = Math.FootPoint(canvasPoint, linePoint, center);
 
                 LineDistance lineDistance = new LineDistance(footPoint, linePoint, center);
                 Matrix3x2 scaleMatrix = Matrix3x2.CreateScale(LineDistance.Scale(lineDistance), center);
@@ -405,8 +405,8 @@ namespace FanKit.Transformers
 
                 Vector2 returnPoint = canvasPoint;
                 Vector2 returnDiagonalPoint = center;
-                Vector2 returnHorizontalPoint = TransformerMath.IntersectionPoint(canvasPoint, (canvasPoint - horizontal), (center + vertical), center);
-                Vector2 returnVerticalPoint = TransformerMath.IntersectionPoint(canvasPoint, (canvasPoint - vertical), (center + horizontal), center);
+                Vector2 returnHorizontalPoint = Math.IntersectionPoint(canvasPoint, (canvasPoint - horizontal), (center + vertical), center);
+                Vector2 returnVerticalPoint = Math.IntersectionPoint(canvasPoint, (canvasPoint - vertical), (center + horizontal), center);
 
                 return _func(returnPoint, returnDiagonalPoint, returnHorizontalPoint, returnVerticalPoint);
             }
@@ -418,7 +418,7 @@ namespace FanKit.Transformers
             if (isRatio)
             {
                 Vector2 center = isCenter ? startingTransformer.Center : lineDiagonalPoint;
-                Vector2 footPoint = TransformerMath.FootPoint(canvasPoint, linePoint, center);
+                Vector2 footPoint = Math.FootPoint(canvasPoint, linePoint, center);
 
                 LineDistance lineDistance = new LineDistance(footPoint, linePoint, center);
                 Matrix3x2 scaleMatrix = Matrix3x2.CreateScale(LineDistance.Scale(lineDistance), center);
@@ -433,8 +433,8 @@ namespace FanKit.Transformers
 
                 Vector2 returnPoint = canvasPoint;
                 Vector2 returnDiagonalPoint = center;
-                Vector2 returnHorizontalPoint = TransformerMath.IntersectionPoint(canvasPoint, (canvasPoint - horizontal), (center + vertical), center);
-                Vector2 returnVerticalPoint = TransformerMath.IntersectionPoint(canvasPoint, (canvasPoint - vertical), (center + horizontal), center);
+                Vector2 returnHorizontalPoint = Math.IntersectionPoint(canvasPoint, (canvasPoint - horizontal), (center + vertical), center);
+                Vector2 returnVerticalPoint = Math.IntersectionPoint(canvasPoint, (canvasPoint - vertical), (center + horizontal), center);
 
                 return _func(returnPoint, returnDiagonalPoint, returnHorizontalPoint, returnVerticalPoint);
             }

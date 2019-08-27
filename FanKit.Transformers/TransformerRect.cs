@@ -35,10 +35,10 @@ namespace FanKit.Transformers
         /// <param name="pointB"> The second point of rectangle. </param>
         public TransformerRect(Vector2 pointA, Vector2 pointB)
         {
-            float left = Math.Min(pointA.X, pointB.X);
-            float top = Math.Min(pointA.Y, pointB.Y);
-            float right = Math.Max(pointA.X, pointB.X);
-            float bottom = Math.Max(pointA.Y, pointB.Y);
+            float left = System.Math.Min(pointA.X, pointB.X);
+            float top = System.Math.Min(pointA.Y, pointB.Y);
+            float right = System.Math.Max(pointA.X, pointB.X);
+            float bottom = System.Math.Max(pointA.Y, pointB.Y);
 
             this.Left = left;
             this.Top = top;
@@ -72,10 +72,10 @@ namespace FanKit.Transformers
                 pointA = pointA + pointA - pointB;
             }
 
-            float left = Math.Min(pointA.X, pointB.X);
-            float top = Math.Min(pointA.Y, pointB.Y);
-            float right = Math.Max(pointA.X, pointB.X);
-            float bottom = Math.Max(pointA.Y, pointB.Y);
+            float left = System.Math.Min(pointA.X, pointB.X);
+            float top = System.Math.Min(pointA.Y, pointB.Y);
+            float right = System.Math.Max(pointA.X, pointB.X);
+            float bottom = System.Math.Max(pointA.Y, pointB.Y);
 
             this.Left = left;
             this.Top = top;

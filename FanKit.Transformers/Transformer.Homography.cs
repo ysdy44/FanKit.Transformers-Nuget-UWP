@@ -57,7 +57,7 @@ namespace FanKit.Transformers
             MathNet.Numerics.LinearAlgebra.Factorization.Svd<double> svd = MathNet.Numerics.LinearAlgebra.Double.Factorization.UserSvd.Create(mmmm, true);
             MathNet.Numerics.LinearAlgebra.Matrix<double> w = svd.W;
             MathNet.Numerics.LinearAlgebra.Vector<double> s = svd.S;
-            double tolerance = 008 * svd.L2Norm * Math.Pow(2, -53);
+            double tolerance = 008 * svd.L2Norm * System.Math.Pow(2, -53);
 
             for (int i = 0; i < s.Count; i++)
             {

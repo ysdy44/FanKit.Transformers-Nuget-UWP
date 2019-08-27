@@ -11,10 +11,10 @@ namespace FanKit.Transformers
         private static TransformerMode _containsNodeMode(Vector2 point, Vector2 leftTop, Vector2 rightTop, Vector2 rightBottom, Vector2 leftBottom, bool disabledRadian)
         {
             //Scale2
-            if (Transformer.InNodeRadius(leftTop, point)) return TransformerMode.ScaleLeftTop;
-            if (Transformer.InNodeRadius(rightTop, point)) return TransformerMode.ScaleRightTop;
-            if (Transformer.InNodeRadius(rightBottom, point)) return TransformerMode.ScaleRightBottom;
-            if (Transformer.InNodeRadius(leftBottom, point)) return TransformerMode.ScaleLeftBottom;
+            if (Math.InNodeRadius(leftTop, point)) return TransformerMode.ScaleLeftTop;
+            if (Math.InNodeRadius(rightTop, point)) return TransformerMode.ScaleRightTop;
+            if (Math.InNodeRadius(rightBottom, point)) return TransformerMode.ScaleRightBottom;
+            if (Math.InNodeRadius(leftBottom, point)) return TransformerMode.ScaleLeftBottom;
 
             //Center
             Vector2 centerLeft = (leftTop + leftBottom) / 2;
@@ -23,28 +23,28 @@ namespace FanKit.Transformers
             Vector2 centerBottom = (leftBottom + rightBottom) / 2;
 
             //Scale1
-            if (Transformer.InNodeRadius(centerLeft, point)) return TransformerMode.ScaleLeft;
-            if (Transformer.InNodeRadius(centerTop, point)) return TransformerMode.ScaleTop;
-            if (Transformer.InNodeRadius(centerRight, point)) return TransformerMode.ScaleRight;
-            if (Transformer.InNodeRadius(centerBottom, point)) return TransformerMode.ScaleBottom;
+            if (Math.InNodeRadius(centerLeft, point)) return TransformerMode.ScaleLeft;
+            if (Math.InNodeRadius(centerTop, point)) return TransformerMode.ScaleTop;
+            if (Math.InNodeRadius(centerRight, point)) return TransformerMode.ScaleRight;
+            if (Math.InNodeRadius(centerBottom, point)) return TransformerMode.ScaleBottom;
 
             //Rotation
             if (disabledRadian == false)
             {
                 //Outside
-                Vector2 outsideLeft = Transformer._outsideNode(centerLeft, centerRight);
-                Vector2 outsideTop = Transformer._outsideNode(centerTop, centerBottom);
-                Vector2 outsideRight = Transformer._outsideNode(centerRight, centerLeft);
-                Vector2 outsideBottom = Transformer._outsideNode(centerBottom, centerTop);
+                Vector2 outsideLeft = Math.GetOutsidePointInTransformer(centerLeft, centerRight);
+                Vector2 outsideTop = Math.GetOutsidePointInTransformer(centerTop, centerBottom);
+                Vector2 outsideRight = Math.GetOutsidePointInTransformer(centerRight, centerLeft);
+                Vector2 outsideBottom = Math.GetOutsidePointInTransformer(centerBottom, centerTop);
 
                 //Rotation
-                if (Transformer.InNodeRadius(outsideTop, point)) return TransformerMode.Rotation;
+                if (Math.InNodeRadius(outsideTop, point)) return TransformerMode.Rotation;
 
                 //Skew
                 //if (Transformer.InNodeRadius(outsideLeft, point)) return TransformerMode.SkewLeft;
                 //if (Transformer.InNodeRadius(outsideTop, point)) return TransformerMode.SkewTop;
-                if (Transformer.InNodeRadius(outsideRight, point)) return TransformerMode.SkewRight;
-                if (Transformer.InNodeRadius(outsideBottom, point)) return TransformerMode.SkewBottom;
+                if (Math.InNodeRadius(outsideRight, point)) return TransformerMode.SkewRight;
+                if (Math.InNodeRadius(outsideBottom, point)) return TransformerMode.SkewBottom;
             }
 
             //Translation

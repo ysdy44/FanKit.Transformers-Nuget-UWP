@@ -211,7 +211,7 @@ namespace FanKit.Transformers
                 {
                     if (this._device != InputDevice.Double)
                     {
-                        if (Math.Abs(this._evenStartingPointer.X - this._evenPointer.X) > 2 || Math.Abs(this._evenStartingPointer.Y - this._evenPointer.Y) > 2 || Math.Abs(this._oddStartingPointer.X - this._oddPointer.X) > 2 || Math.Abs(this._oddStartingPointer.Y - this._oddPointer.Y) > 2)
+                        if (System.Math.Abs(this._evenStartingPointer.X - this._evenPointer.X) > 2 || System.Math.Abs(this._evenStartingPointer.Y - this._evenPointer.Y) > 2 || System.Math.Abs(this._oddStartingPointer.X - this._oddPointer.X) > 2 || System.Math.Abs(this._oddStartingPointer.Y - this._oddPointer.Y) > 2)
                         {
                             this._device = InputDevice.Double;
                             this.Double_Start?.Invoke((this._oddPointer + this._evenPointer) / 2, (this._oddPointer - this._evenPointer).Length());//Delegate

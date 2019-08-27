@@ -1,19 +1,18 @@
-﻿using System;
-using System.Numerics;
+﻿using System.Numerics;
 
-namespace FanKit.Transformers
+namespace FanKit
 {
     /// <summary>
     /// Provide constant and static methods for transformer.
     /// </summary>
-    public struct TransformerMath
+    public static class Math
     {
         /// <summary> 15 degress in angle system. </summary>
         public const float RadiansStep = 0.2617993833333333f;
         /// <summary> 7.5 degress in angle system. </summary>
         public const float RadiansStepHalf = 0.1308996916666667f;
         /// <summary> To find a multiple of the nearest 15. </summary>
-        public static float RadiansStepFrequency(float radian) => ((int)((radian + TransformerMath.RadiansStepHalf) / TransformerMath.RadiansStep)) * TransformerMath.RadiansStep;//Get step radians
+        public static float RadiansStepFrequency(float radian) => ((int)((radian + Math.RadiansStepHalf) / Math.RadiansStep)) * Math.RadiansStep;//Get step radians
 
 
         /// <summary> The number pi. </summary>
@@ -24,12 +23,56 @@ namespace FanKit.Transformers
         public const float PiOver4 = 0.78539816339744830961566084581987572104929234984378f;
 
 
+        /// <summary> Radius of node'. Defult 12. </summary>
+        public const float NodeRadius = 12.0f;
+        private static float _nodeRadiusSquare;
+
+        /// <summary> Minimum distance between two nodes. Defult 20. </summary>
+        public const float NodeDistance = 20.0f;
+        private static float _nodeDistanceSquare;
+        private static float _nodeDistanceDouble;
+
+
+        static Math()
+        {
+            Math._nodeRadiusSquare = Math.NodeRadius * Math.NodeRadius;
+
+            Math._nodeDistanceSquare = Math.NodeDistance * Math.NodeDistance;
+            Math._nodeDistanceDouble = Math.NodeDistance + Math.NodeDistance;
+        }
+
+
+        /// <summary>
+        /// Whether the distance exceeds [NodeRadius]. Defult: 144.
+        /// </summary>
+        /// <param name="point0"></param>
+        /// <param name="point1"></param>
+        /// <returns> Return **true** if the distance exceeds [NodeRadius], otherwise **false**. </returns>
+        public static bool InNodeRadius(Vector2 point0, Vector2 point1) => (point0 - point1).LengthSquared() < Math._nodeRadiusSquare;
+
+        /// <summary>
+        /// Whether the distance'LengthSquared exceeds [NodeDistance]. Defult: 400.
+        /// </summary>
+        /// <param name="point0"></param>
+        /// <param name="point1"></param>
+        /// <returns> Return **true** if the distance'LengthSquared exceeds [NodeDistance], otherwise **false**. </returns>
+        public static bool OutNodeDistance(Vector2 point0, Vector2 point1) => (point0 - point1).LengthSquared() > Math._nodeDistanceSquare;
+
+        /// <summary>
+        /// Get outside point in a line on a transformer.
+        /// </summary>
+        /// <param name="nearPoint"> The nearest point to outside point in a line on a transformer.. </param>
+        /// <param name="farPoint"> The farthest  point to outside point in a line on a transformer.. </param>
+        /// <returns> The product point. </returns>
+        public static Vector2 GetOutsidePointInTransformer(Vector2 nearPoint, Vector2 farPoint) => nearPoint - Vector2.Normalize(farPoint - nearPoint) * Math._nodeDistanceDouble;
+
+
         /// <summary>
         /// Get the [Foot Point] of point and LIne.
         /// </summary>
         /// <param name="point"> The point. </param>
-        /// <param name="lineA"> The first point. </param>
-        /// <param name="lineB"> The second point. </param>
+        /// <param name="lineA"> The line first point. </param>
+        /// <param name="lineB"> The line second point. </param>
         /// <returns> The product vector. </returns>
         public static Vector2 FootPoint(Vector2 point, Vector2 lineA, Vector2 lineB)
         {
@@ -53,12 +96,12 @@ namespace FanKit.Transformers
         {
             float a = 0, b = 0;
             int state = 0;
-            if (Math.Abs(line1A.X - line1B.X) > float.Epsilon)
+            if (System.Math.Abs(line1A.X - line1B.X) > float.Epsilon)
             {
                 a = (line1B.Y - line1A.Y) / (line1B.X - line1A.X);
                 state |= 1;
             }
-            if (Math.Abs(line2A.X - line2B.X) > float.Epsilon)
+            if (System.Math.Abs(line2A.X - line2B.X) > float.Epsilon)
             {
                 b = (line2B.Y - line2A.Y) / (line2B.X - line2A.X);
                 state |= 2;
@@ -66,7 +109,7 @@ namespace FanKit.Transformers
             switch (state)
             {
                 case 0:
-                    if (Math.Abs(line1A.X - line2A.X) < float.Epsilon) return Vector2.Zero;
+                    if (System.Math.Abs(line1A.X - line2A.X) < float.Epsilon) return Vector2.Zero;
                     else return Vector2.Zero;
                 case 1:
                     {
@@ -82,7 +125,7 @@ namespace FanKit.Transformers
                     }
                 case 3:
                     {
-                        if (Math.Abs(a - b) < float.Epsilon) return Vector2.Zero;
+                        if (System.Math.Abs(a - b) < float.Epsilon) return Vector2.Zero;
                         float x = (a * line1A.X - b * line2A.X - line1A.Y + line2A.Y) / (a - b);
                         float y = a * x - a * line1A.X + line1A.Y;
                         return new Vector2(x, y);
@@ -99,7 +142,7 @@ namespace FanKit.Transformers
         /// <param name="center"> The center of coordinate system. </param>
         /// <param name="length">The length of vector. </param>
         /// <returns> The product vector. </returns>
-        public static Vector2 RadiansToVector(float radians, Vector2 center, float length = 40.0f) => new Vector2((float)Math.Cos(radians) * length + center.X, (float)Math.Sin(radians) * length + center.Y);
+        public static Vector2 RadiansToVector(float radians, Vector2 center, float length = 40.0f) => new Vector2((float)System.Math.Cos(radians) * length + center.X, (float)System.Math.Sin(radians) * length + center.Y);
 
         /// <summary>
         /// Get radians of the vector in the coordinate system. 
@@ -108,16 +151,16 @@ namespace FanKit.Transformers
         /// <returns> The product radians. </returns>
         public static float VectorToRadians(Vector2 vector)
         {
-            float tan = (float)Math.Atan(Math.Abs(vector.Y / vector.X));
+            float tan = (float)System.Math.Atan(System.Math.Abs(vector.Y / vector.X));
 
             //First Quantity
             if (vector.X > 0 && vector.Y > 0) return tan;
             //Second Quadrant
             else if (vector.X > 0 && vector.Y < 0) return -tan;
             //Third Quadrant  
-            else if (vector.X < 0 && vector.Y > 0) return (float)Math.PI - tan;
+            else if (vector.X < 0 && vector.Y > 0) return (float)System.Math.PI - tan;
             //Fourth Quadrant  
-            else return tan - (float)Math.PI;
+            else return tan - (float)System.Math.PI;
         }
     }
 }

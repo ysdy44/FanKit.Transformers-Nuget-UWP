@@ -104,7 +104,7 @@ namespace FanKit.Transformers
                 if (e.NewSize == e.PreviousSize) return;
 
                 //Size
-                float size = (float)Math.Min(e.NewSize.Width, e.NewSize.Height);
+                float size = (float)System.Math.Min(e.NewSize.Width, e.NewSize.Height);
                 float square = size / 3 / 1.4142135623730950488016887242097f;//Root Number 2
                 float squareHalf = square / 2;
 

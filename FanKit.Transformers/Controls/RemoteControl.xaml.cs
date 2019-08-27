@@ -41,7 +41,7 @@ namespace FanKit.Transformers
                 Vector2 vector = value;
 
                 float length = value.Length() * 2;
-                float manipulationEdge = (float)Math.Sqrt((this._manipulationSize.Width - this.RemoteEllipse.Width) * (this._manipulationSize.Height - this.RemoteEllipse.Height));
+                float manipulationEdge = (float)System.Math.Sqrt((this._manipulationSize.Width - this.RemoteEllipse.Width) * (this._manipulationSize.Height - this.RemoteEllipse.Height));
 
                 // Exceeding the edge?
                 if (length > manipulationEdge)

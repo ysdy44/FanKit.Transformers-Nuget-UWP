@@ -77,7 +77,7 @@ namespace FanKit.Transformers
             float widthScale = this.ControlWidth / this.Width / 8.0f * 7.0f;
             float heightScale = this.ControlHeight / this.Height / 8.0f * 7.0f;
 
-            this.Scale = Math.Min(widthScale, heightScale);
+            this.Scale = System.Math.Min(widthScale, heightScale);
 
             this.Position.X = this.ControlWidth / 2.0f;
             this.Position.Y = this.ControlHeight / 2.0f;

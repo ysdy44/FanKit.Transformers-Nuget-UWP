@@ -75,10 +75,10 @@ namespace FanKit.Transformers
             if (disabledRadian == false)
             {
                 //Outside
-                Vector2 outsideLeft = Transformer._outsideNode(centerLeft, centerRight);
-                Vector2 outsideTop = Transformer._outsideNode(centerTop, centerBottom);
-                Vector2 outsideRight = Transformer._outsideNode(centerRight, centerLeft);
-                Vector2 outsideBottom = Transformer._outsideNode(centerBottom, centerTop);
+                Vector2 outsideLeft = Math.GetOutsidePointInTransformer(centerLeft, centerRight);
+                Vector2 outsideTop = Math.GetOutsidePointInTransformer(centerTop, centerBottom);
+                Vector2 outsideRight = Math.GetOutsidePointInTransformer(centerRight, centerLeft);
+                Vector2 outsideBottom = Math.GetOutsidePointInTransformer(centerBottom, centerTop);
 
                 //Radian
                 drawingSession.DrawThickLine(outsideTop, centerTop);
@@ -92,12 +92,12 @@ namespace FanKit.Transformers
             }
 
             //Scale1
-            if (Transformer.OutNodeDistance(centerLeft, centerRight))
+            if (Math.OutNodeDistance(centerLeft, centerRight))
             {
                 drawingSession.DrawNode2(centerTop);
                 drawingSession.DrawNode2(centerBottom);
             }
-            if (Transformer.OutNodeDistance(centerTop, centerBottom))
+            if (Math.OutNodeDistance(centerTop, centerBottom))
             {
                 drawingSession.DrawNode2(centerLeft);
                 drawingSession.DrawNode2(centerRight);

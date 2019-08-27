@@ -49,7 +49,7 @@ namespace FanKit.Transformers.TestApp
 
             float widthScale = width / bitmap.SizeInPixels.Width;
             float heightScale = height / bitmap.SizeInPixels.Width;
-            float scale = Math.Min(widthScale, heightScale);
+            float scale = System.Math.Min(widthScale, heightScale);
 
             float bitmapWidth = scale * bitmap.SizeInPixels.Width;
             float bitmapHeight = scale * bitmap.SizeInPixels.Height;
