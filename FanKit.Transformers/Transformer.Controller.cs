@@ -93,8 +93,8 @@ namespace FanKit.Transformers
         //Translation
         private static Transformer _translation(Vector2 startingPoint, Vector2 point, Transformer startingTransformer)
         {
-            Vector2 canvasStartingPoint = (startingPoint);
-            Vector2 canvasPoint = (point);
+            Vector2 canvasStartingPoint = startingPoint;
+            Vector2 canvasPoint = point;
 
             return Transformer.Add(startingTransformer, canvasPoint - canvasStartingPoint);
         }
@@ -111,8 +111,8 @@ namespace FanKit.Transformers
         //Rotation      
         private static Transformer _rotation(Vector2 startingPoint, Vector2 point, Transformer startingTransformer, bool isStepFrequency)
         {
-            Vector2 canvasPoint = (point);
-            Vector2 canvasStartingPoint = (startingPoint);
+            Vector2 canvasPoint = point;
+            Vector2 canvasStartingPoint = startingPoint;
             Vector2 center = startingTransformer.Center;
 
             float canvasRadian = Math.VectorToRadians(canvasPoint - center);
@@ -228,7 +228,7 @@ namespace FanKit.Transformers
         //ScaleAround
         private static Transformer _scaleAround(Vector2 point, Transformer startingTransformer, bool isRatio, bool isCenter, Vector2 linePoint, Vector2 lineDiagonalPoint, Func<Transformer, bool, Vector2, Transformer> _func)
         {
-            Vector2 canvasPoint = (point);
+            Vector2 canvasPoint = point;
             Vector2 footPoint = Math.FootPoint(canvasPoint, linePoint, lineDiagonalPoint);
 
             if (isRatio)
@@ -385,7 +385,7 @@ namespace FanKit.Transformers
         //ScaleCorner
         private static Transformer _scaleCorner(Vector2 point, Transformer startingTransformer, bool isRatio, bool isCenter, Vector2 linePoint, Vector2 lineDiagonalPoint, Func<Vector2, Vector2, Vector2, Vector2, Transformer> _func)
         {
-            Vector2 canvasPoint = (point);
+            Vector2 canvasPoint = point;
 
             if (isRatio)
             {

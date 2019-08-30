@@ -45,16 +45,16 @@ namespace FanKit
         /// <summary>
         /// Whether the distance exceeds [NodeRadius]. Defult: 144.
         /// </summary>
-        /// <param name="point0"></param>
-        /// <param name="point1"></param>
+        /// <param name="point0"> The first point. </param>
+        /// <param name="point1"> The second point. </param>
         /// <returns> Return **true** if the distance exceeds [NodeRadius], otherwise **false**. </returns>
         public static bool InNodeRadius(Vector2 point0, Vector2 point1) => (point0 - point1).LengthSquared() < Math._nodeRadiusSquare;
 
         /// <summary>
         /// Whether the distance'LengthSquared exceeds [NodeDistance]. Defult: 400.
         /// </summary>
-        /// <param name="point0"></param>
-        /// <param name="point1"></param>
+        /// <param name="point0"> The first point. </param>
+        /// <param name="point1"> The second point. </param>
         /// <returns> Return **true** if the distance'LengthSquared exceeds [NodeDistance], otherwise **false**. </returns>
         public static bool OutNodeDistance(Vector2 point0, Vector2 point1) => (point0 - point1).LengthSquared() > Math._nodeDistanceSquare;
 
@@ -62,9 +62,28 @@ namespace FanKit
         /// Get outside point in a line on a transformer.
         /// </summary>
         /// <param name="nearPoint"> The nearest point to outside point in a line on a transformer.. </param>
-        /// <param name="farPoint"> The farthest  point to outside point in a line on a transformer.. </param>
+        /// <param name="farPoint"> The farthest point to outside point in a line on a transformer.. </param>
         /// <returns> The product point. </returns>
         public static Vector2 GetOutsidePointInTransformer(Vector2 nearPoint, Vector2 farPoint) => nearPoint - Vector2.Normalize(farPoint - nearPoint) * Math._nodeDistanceDouble;
+
+
+        /// <summary>
+        /// Returns whether the quadrangle contains the specified point.
+        /// </summary>
+        /// <param name="point"> The point. </param>
+        /// <param name="leftTop"> The quadrangle's left-top point . </param>
+        /// <param name="rightTop"> The quadrangle's right-top point </param>
+        /// <param name="rightBottom"> The quadrangle's right-bottom point. </param>
+        /// <param name="leftBottom"> The quadrangle's left-bottom point. </param>
+        /// <returns> Return **true** if the quadrangle contains the specified point, otherwise **false**. </returns>
+        public static bool InQuadrangle(Vector2 point, Vector2 leftTop, Vector2 rightTop, Vector2 rightBottom, Vector2 leftBottom)
+        {
+            float a = (leftTop.X - leftBottom.X) * (point.Y - leftBottom.Y) - (leftTop.Y - leftBottom.Y) * (point.X - leftBottom.X);
+            float b = (rightTop.X - leftTop.X) * (point.Y - leftTop.Y) - (rightTop.Y - leftTop.Y) * (point.X - leftTop.X);
+            float c = (rightBottom.X - rightTop.X) * (point.Y - rightTop.Y) - (rightBottom.Y - rightTop.Y) * (point.X - rightTop.X);
+            float d = (leftBottom.X - rightBottom.X) * (point.Y - rightBottom.Y) - (leftBottom.Y - rightBottom.Y) * (point.X - rightBottom.X);
+            return (a > 0 && b > 0 && c > 0 && d > 0) || (a < 0 && b < 0 && c < 0 && d < 0);
+        }
 
 
         /// <summary>

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Numerics;
+﻿using System.Numerics;
 
 namespace FanKit.Transformers
 {
@@ -40,9 +39,9 @@ namespace FanKit.Transformers
                 u3, v3, u2, v2
             });
 
-            MathNet.Numerics.LinearAlgebra.Matrix<double> PseudoInverse = Transformer.PseudoInverse2(matrix);
+            MathNet.Numerics.LinearAlgebra.Matrix<double> PseudoInverse = Transformer._pseudoInverse2(matrix);
 
-            MathNet.Numerics.LinearAlgebra.Vector<double> ret = Transformer.Multiply2(PseudoInverse, vector);
+            MathNet.Numerics.LinearAlgebra.Vector<double> ret = Transformer._multiply2(PseudoInverse, vector);
 
             return new Matrix3x2
             (
@@ -52,9 +51,9 @@ namespace FanKit.Transformers
             );
         }
 
-        private static MathNet.Numerics.LinearAlgebra.Matrix<double> PseudoInverse2(MathNet.Numerics.LinearAlgebra.Double.Matrix mmmm)
+        private static MathNet.Numerics.LinearAlgebra.Matrix<double> _pseudoInverse2(MathNet.Numerics.LinearAlgebra.Double.Matrix matrix)
         {
-            MathNet.Numerics.LinearAlgebra.Factorization.Svd<double> svd = MathNet.Numerics.LinearAlgebra.Double.Factorization.UserSvd.Create(mmmm, true);
+            MathNet.Numerics.LinearAlgebra.Factorization.Svd<double> svd = MathNet.Numerics.LinearAlgebra.Double.Factorization.UserSvd.Create(matrix, true);
             MathNet.Numerics.LinearAlgebra.Matrix<double> w = svd.W;
             MathNet.Numerics.LinearAlgebra.Vector<double> s = svd.S;
             double tolerance = 008 * svd.L2Norm * System.Math.Pow(2, -53);
@@ -74,30 +73,30 @@ namespace FanKit.Transformers
             return ddd.Transpose();
         }
 
-        private static MathNet.Numerics.LinearAlgebra.Vector<double> Multiply2(MathNet.Numerics.LinearAlgebra.Matrix<double> mmmmmmmm, MathNet.Numerics.LinearAlgebra.Vector<double> rightSide)
+        private static MathNet.Numerics.LinearAlgebra.Vector<double> _multiply2(MathNet.Numerics.LinearAlgebra.Matrix<double> matrix, MathNet.Numerics.LinearAlgebra.Vector<double> rightSide)
         {
             MathNet.Numerics.LinearAlgebra.VectorBuilder<double> build = MathNet.Numerics.LinearAlgebra.Vector<double>.Build;
-            MathNet.Numerics.LinearAlgebra.Vector<double> ret = build.SameAs(mmmmmmmm, rightSide, mmmmmmmm.RowCount);
+            MathNet.Numerics.LinearAlgebra.Vector<double> ret = build.SameAs(matrix, rightSide, matrix.RowCount);
 
-            Transformer.DoMultiply(mmmmmmmm, rightSide, ret);
+            Transformer._doMultiply(matrix, rightSide, ret);
 
             return ret;
         }
 
-        private static MathNet.Numerics.LinearAlgebra.Matrix<double> DoMultiply(MathNet.Numerics.LinearAlgebra.Matrix<double> vvvvvvvvvvvv, MathNet.Numerics.LinearAlgebra.Vector<double> rightSide, MathNet.Numerics.LinearAlgebra.Vector<double> result)
+        private static MathNet.Numerics.LinearAlgebra.Matrix<double> _doMultiply(MathNet.Numerics.LinearAlgebra.Matrix<double> matrix, MathNet.Numerics.LinearAlgebra.Vector<double> rightSide, MathNet.Numerics.LinearAlgebra.Vector<double> result)
         {
-            for (var i = 0; i < vvvvvvvvvvvv.RowCount; i++)
+            for (var i = 0; i < matrix.RowCount; i++)
             {
                 double s = 0.0;
                 for (var j = 0; j < 008; j++)
                 {
-                    double ddd = vvvvvvvvvvvv.Storage.At(i, j);
+                    double ddd = matrix.Storage.At(i, j);
                     s += ddd * rightSide[j];
                 }
                 result[i] = s;
             }
 
-            return vvvvvvvvvvvv;
+            return matrix;
         }
 
 

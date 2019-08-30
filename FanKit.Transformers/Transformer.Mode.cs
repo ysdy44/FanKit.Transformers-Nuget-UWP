@@ -48,7 +48,7 @@ namespace FanKit.Transformers
             }
 
             //Translation
-            if (Transformer.InQuadrangle(point, leftTop, rightTop, rightBottom, leftBottom))
+            if (Math.InQuadrangle(point, leftTop, rightTop, rightBottom, leftBottom))
             {
                 return TransformerMode.Translation;
             }
@@ -57,12 +57,12 @@ namespace FanKit.Transformers
         }
 
         /// <summary>
-        /// Gets the radian area filled by the skew node contains the specified point. 
+        /// Gets the all nodes by the transformer contains the specified point. 
         /// </summary>
         /// <param name="point"> The input point. </param>
         /// <param name="transformer"> The source transformer. </param>
         /// <param name="disabledRadian"> The disabled radian. </param>
-        /// <returns> The selected mode. </returns>
+        /// <returns> The transformer-mode. </returns>
         public static TransformerMode ContainsNodeMode(Vector2 point, Transformer transformer, bool disabledRadian = false)
         {
             Vector2 leftTop = (transformer.LeftTop);
@@ -74,13 +74,13 @@ namespace FanKit.Transformers
         }
 
         /// <summary>
-        /// Gets the radian area filled by the skew node contains the specified point. 
+        /// Gets the all nodes by the transformer contains the specified point. 
         /// </summary>
         /// <param name="point"> The input point. </param>
         /// <param name="transformer"> The source transformer. </param>
         /// <param name="matrix"> The matrix. </param>
         /// <param name="disabledRadian"> The disabled radian. </param>
-        /// <returns> The selected mode. </returns>
+        /// <returns> The transformer-mode. </returns>
         public static TransformerMode ContainsNodeMode(Vector2 point, Transformer transformer, Matrix3x2 matrix, bool disabledRadian = false)
         {
             Vector2 leftTop = Vector2.Transform(transformer.LeftTop, matrix);

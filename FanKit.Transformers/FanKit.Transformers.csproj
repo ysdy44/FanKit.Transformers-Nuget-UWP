@@ -107,10 +107,22 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Enums\NodeCollectionMode.cs" />
+    <Compile Include="Enums\NodeMode.cs" />
     <Compile Include="Extensions\CanvasDrawingSessionExtensions.cs" />
     <Compile Include="Extensions\CanvasDrawingSessionExtensions.Node.cs" />
     <Compile Include="Extensions\CanvasDrawingSessionExtensions.Card.cs" />
+    <Compile Include="Extensions\CanvasDrawingSessionExtensions.NodeCollection.cs" />
     <Compile Include="Extensions\CanvasDrawingSessionExtensions.Ruler.cs" />
+    <Compile Include="Node.CacheTransform.cs" />
+    <Compile Include="Node.Controller.cs" />
+    <Compile Include="Node.Mode.cs" />
+    <Compile Include="Node.cs" />
+    <Compile Include="NodeCollection.CacheTransform.cs" />
+    <Compile Include="NodeCollection.IList.cs" />
+    <Compile Include="NodeCollection.cs" />
+    <Compile Include="NodeCollection.Mode.cs" />
+    <Compile Include="NodeCollection.Operation.cs" />
     <Compile Include="Others\CanvasOperator.cs" />
     <Compile Include="Others\CanvasTransformer.cs" />
     <Compile Include="Interface\ICacheTransform.cs" />
