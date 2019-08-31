@@ -32,14 +32,12 @@ namespace FanKit.Transformers
                         return NodeMode.RightControlPoint;
                     }
                 }
-                else
+
+                //When you click on a checked node point ...
+                Vector2 nodePoint = node.Point;
+                if (Math.InNodeRadius(point, nodePoint))
                 {
-                    //When you click on a checked node point ...
-                    Vector2 nodePoint = node.Point;
-                    if (Math.InNodeRadius(point, nodePoint))
-                    {
-                        return NodeMode.PointWithChecked;
-                    }
+                    return NodeMode.PointWithChecked;
                 }
             }
             else
@@ -80,14 +78,12 @@ namespace FanKit.Transformers
                         return NodeMode.RightControlPoint;
                     }
                 }
-                else
+
+                //When you click on a checked node point ...
+                Vector2 nodePoint = Vector2.Transform(node.Point, matrix);
+                if (Math.InNodeRadius(point, nodePoint))
                 {
-                    //When you click on a checked node point ...
-                    Vector2 nodePoint = Vector2.Transform(node.Point, matrix);
-                    if (Math.InNodeRadius(point, nodePoint))
-                    {
-                        return NodeMode.PointWithChecked;
-                    }
+                    return NodeMode.PointWithChecked;
                 }
             }
             else

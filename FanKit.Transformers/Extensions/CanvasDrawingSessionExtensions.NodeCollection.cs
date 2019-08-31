@@ -1,7 +1,7 @@
 ﻿using Microsoft.Graphics.Canvas;
 using System.Numerics;
 
-namespace FanKit.Transformers.Extensions
+namespace FanKit.Transformers
 {
     /// <summary>
     /// Extensions of <see cref = "CanvasDrawingSession" />.
