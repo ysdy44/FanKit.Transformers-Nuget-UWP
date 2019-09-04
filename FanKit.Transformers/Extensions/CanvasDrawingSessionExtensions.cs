@@ -1,6 +1,7 @@
 ﻿using Microsoft.Graphics.Canvas;
 using Microsoft.Graphics.Canvas.Geometry;
 using System.Numerics;
+using Windows.Foundation;
 
 namespace FanKit.Transformers
 {
@@ -32,8 +33,36 @@ namespace FanKit.Transformers
 
 
 
-        private static void _fillRectDodgerBlue(CanvasDrawingSession drawingSession, ICanvasResourceCreator resourceCreator, Vector2 leftTop, Vector2 rightTop, Vector2 rightBottom, Vector2 leftBottom)
+     
+
+
+        /// <summary>
+        /// Fill a Rectangular (color is <see cref="Windows.UI.Colors.DodgerBlue"/>).
+        /// </summary>
+        /// <param name="drawingSession"> The drawing-session. </param>
+        /// <param name="transformerRect"> The transformer-rect. </param>
+        public static void FillRectDodgerBlue(this CanvasDrawingSession drawingSession, TransformerRect transformerRect)
         {
+            Rect rect = transformerRect.ToRect();
+            drawingSession.FillRectangle(rect, Windows.UI.Color.FromArgb(90, 54, 135, 230));
+            drawingSession.DrawRectangle(rect, Windows.UI.Colors.DodgerBlue);
+        }
+
+        /// <summary>
+        /// Fill a Rectangular (color is <see cref="Windows.UI.Colors.DodgerBlue"/>).
+        /// </summary>
+        /// <param name="drawingSession"> The drawing-session. </param>
+        /// <param name="resourceCreator"> The resource-creator. </param>
+        /// <param name="transformerRect"> The transformer-rect. </param>
+        /// <param name="matrix"> The matrix. </param>
+        public static void FillRectDodgerBlue(this CanvasDrawingSession drawingSession, ICanvasResourceCreator resourceCreator, TransformerRect transformerRect, Matrix3x2 matrix)
+        {
+            //LTRB
+            Vector2 leftTop = Vector2.Transform(transformerRect.LeftTop, matrix);
+            Vector2 rightTop = Vector2.Transform(transformerRect.RightTop, matrix);
+            Vector2 rightBottom = Vector2.Transform(transformerRect.RightBottom, matrix);
+            Vector2 leftBottom = Vector2.Transform(transformerRect.LeftBottom, matrix);
+
             //Points
             Vector2[] points = new Vector2[]
             {
@@ -48,24 +77,6 @@ namespace FanKit.Transformers
             drawingSession.FillGeometry(canvasGeometry, Windows.UI.Color.FromArgb(90, 54, 135, 230));
             drawingSession.DrawGeometry(canvasGeometry, Windows.UI.Colors.DodgerBlue);
         }
-
-
-        /// <summary>
-        /// Fill a Rectangular (color is <see cref="Windows.UI.Colors.DodgerBlue"/>).
-        /// </summary>
-        /// <param name="drawingSession"> The drawing-session. </param>
-        /// <param name="resourceCreator"> The resource-creator. </param>
-        /// <param name="transformerRect"> The transformer-rect. </param>
-        public static void FillRectDodgerBlue(this CanvasDrawingSession drawingSession, ICanvasResourceCreator resourceCreator, TransformerRect transformerRect) => CanvasDrawingSessionExtensions._fillRectDodgerBlue(drawingSession, resourceCreator, transformerRect.LeftTop, transformerRect.RightTop, transformerRect.RightBottom, transformerRect.LeftBottom);
-
-        /// <summary>
-        /// Fill a Rectangular (color is <see cref="Windows.UI.Colors.DodgerBlue"/>).
-        /// </summary>
-        /// <param name="drawingSession"> The drawing-session. </param>
-        /// <param name="resourceCreator"> The resource-creator. </param>
-        /// <param name="transformerRect"> The transformer-rect. </param>
-        /// <param name="matrix"> The matrix. </param>
-        public static void FillRectDodgerBlue(this CanvasDrawingSession drawingSession, ICanvasResourceCreator resourceCreator, TransformerRect transformerRect, Matrix3x2 matrix) => CanvasDrawingSessionExtensions._fillRectDodgerBlue(drawingSession, resourceCreator, Vector2.Transform(transformerRect.LeftTop, matrix), Vector2.Transform(transformerRect.RightTop, matrix), Vector2.Transform(transformerRect.RightBottom, matrix), Vector2.Transform(transformerRect.LeftBottom, matrix));
 
     }
 }

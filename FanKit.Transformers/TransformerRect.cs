@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Numerics;
+using Windows.Foundation;
 
 namespace FanKit.Transformers
 {
@@ -17,6 +18,17 @@ namespace FanKit.Transformers
         public float Right { get; private set; }
         /// <summary> Gets rectangle's bottom. </summary>
         public float Bottom { get; private set; }
+
+        /// <summary> Gets rectangle's width. </summary>
+        public float Width { get; private set; }
+        /// <summary> Gets rectangle's height. </summary>
+        public float Height { get; private set; }
+        /// <summary> Gets rectangle's center point. </summary>
+        public Vector2 Center { get; private set; }
+        /// <summary> Gets rectangle's center of X. </summary>
+        public float CenterX { get; private set; }
+        /// <summary> Gets rectangle's center of Y. </summary>
+        public float CenterY { get; private set; }
 
         /// <summary> Gets rectangle's left-top point. </summary>
         public Vector2 LeftTop { get; private set; }
@@ -40,10 +52,21 @@ namespace FanKit.Transformers
             float right = System.Math.Max(pointA.X, pointB.X);
             float bottom = System.Math.Max(pointA.Y, pointB.Y);
 
+            float width = System.Math.Abs(pointA.X - pointB.X);
+            float height = System.Math.Abs(pointA.Y - pointB.Y);
+            float centerX = (pointA.X + pointB.X) / 2;
+            float centerY = (pointA.Y + pointB.Y) / 2;
+
             this.Left = left;
             this.Top = top;
             this.Right = right;
             this.Bottom = bottom;
+
+            this.Width = width;
+            this.Height = height;
+            this.Center = new Vector2(centerX, centerY);
+            this.CenterX = centerX;
+            this.CenterY = centerY;
 
             this.LeftTop = new Vector2(left, top);
             this.RightTop = new Vector2(right, top);
@@ -71,16 +94,27 @@ namespace FanKit.Transformers
             {
                 pointA = pointA + pointA - pointB;
             }
-
+            
             float left = System.Math.Min(pointA.X, pointB.X);
             float top = System.Math.Min(pointA.Y, pointB.Y);
             float right = System.Math.Max(pointA.X, pointB.X);
             float bottom = System.Math.Max(pointA.Y, pointB.Y);
 
+            float width = System.Math.Abs(pointA.X - pointB.X);
+            float height = System.Math.Abs(pointA.Y - pointB.Y);
+            float centerX = (pointA.X + pointB.X) / 2;
+            float centerY = (pointA.Y + pointB.Y) / 2;
+
             this.Left = left;
             this.Top = top;
             this.Right = right;
             this.Bottom = bottom;
+
+            this.Width = width;
+            this.Height = height;
+            this.Center = new Vector2(centerX, centerY);
+            this.CenterX = centerX;
+            this.CenterY = centerY;
 
             this.LeftTop = new Vector2(left, top);
             this.RightTop = new Vector2(right, top);
@@ -101,17 +135,31 @@ namespace FanKit.Transformers
             float top = postion.Y;
             float right = width + postion.X;
             float bottom = height+ postion.Y;
-            
+
+            float centerX = postion.X + width / 2;
+            float centerY = postion.Y + height / 2;
+
             this.Left = left;
             this.Top = top;
             this.Right = right;
             this.Bottom = bottom;
+
+            this.Width = width;
+            this.Height = height;
+            this.Center = new Vector2(centerX, centerY);
+            this.CenterX = centerX;
+            this.CenterY = centerY;
 
             this.LeftTop = new Vector2(left, top);
             this.RightTop = new Vector2(right, top);
             this.RightBottom = new Vector2(right, bottom);
             this.LeftBottom = new Vector2(left, bottom);
         }
+
+        /// <summary>
+        /// Turn to Rect.
+        /// </summary>
+        public Rect ToRect() => new Rect(this.Left, this.Top, this.Right - this.Left, this.Bottom - this.Top);
 
     }
 }

@@ -7,7 +7,8 @@
     xmlns:fanKitTransformers="using:FanKit.Transformers"
     xmlns:canvas="using:Microsoft.Graphics.Canvas.UI.Xaml"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    >
 
     <Page.Resources>
         <fanKitTransformers:CanvasOperator x:Name="CanvasOperator" DestinationControl="{x:Bind CanvasControl}" Single_Start="CanvasOperator_Single_Start" Single_Delta="CanvasOperator_Single_Delta" Single_Complete="CanvasOperator_Single_Complete"/>
