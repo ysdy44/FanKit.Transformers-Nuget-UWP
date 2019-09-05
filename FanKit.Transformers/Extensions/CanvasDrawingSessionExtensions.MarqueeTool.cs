@@ -26,22 +26,20 @@ namespace FanKit.Transformers
             switch (toolType)
             {
                 case MarqueeToolType.Rectangular:
-                    drawingSession.DrawMarqueeToolRectangular(resourceCreator, marqueeTool.TransformerRect, sourceRectangle, compositeMode);
+                    drawingSession._drawMarqueeToolRectangular(resourceCreator, marqueeTool.TransformerRect, sourceRectangle, compositeMode);
                     break;
                 case MarqueeToolType.Elliptical:
-                    drawingSession.DrawMarqueeToolEllipse(resourceCreator, marqueeTool.TransformerRect, sourceRectangle, compositeMode);
+                    drawingSession._drawMarqueeToolEllipse(resourceCreator, marqueeTool.TransformerRect, sourceRectangle, compositeMode);
                     break;
                 case MarqueeToolType.Polygonal:
                 case MarqueeToolType.FreeHand:
                     Vector2[] points = marqueeTool.Points.ToArray();
                     CanvasGeometry canvasGeometry = CanvasGeometry.CreatePolygon(resourceCreator, marqueeTool.Points.ToArray());
-                    drawingSession.DrawMarqueeToolGeometry(resourceCreator, canvasGeometry, sourceRectangle, compositeMode);
+                    drawingSession._drawMarqueeToolGeometry(resourceCreator, canvasGeometry, sourceRectangle, compositeMode);
                     break;
             }
         }
-
-
-        #region Draw
+                 
 
         /// <summary>
         /// Draw a marquee-tool.
@@ -58,13 +56,20 @@ namespace FanKit.Transformers
                 {
                     case MarqueeToolType.Rectangular:
                         {
-                            drawingSession.DrawThickRectangle(marqueeTool.TransformerRect);
+                            Rect rect = marqueeTool.TransformerRect.ToRect();
+
+                            drawingSession.DrawRectangle(rect, Windows.UI.Colors.Black, 2);
+                            drawingSession.FillRectangle(rect, Windows.UI.Colors.DodgerBlue);
                         }
                         break;
                     case MarqueeToolType.Elliptical:
                         {
-                            drawingSession.DrawThickRectangle(marqueeTool.TransformerRect);
+                            Vector2 centerPoint = marqueeTool.TransformerRect.Center;
+                            float width = marqueeTool.TransformerRect.Width / 2;
+                            float height = marqueeTool.TransformerRect.Height / 2;
 
+                            drawingSession.DrawEllipse(centerPoint, width, height, Windows.UI.Colors.Black, 2);
+                            drawingSession.FillEllipse(centerPoint, width, height, Windows.UI.Colors.DodgerBlue);
                         }
                         break;
                     case MarqueeToolType.Polygonal:
@@ -139,12 +144,8 @@ namespace FanKit.Transformers
                 }
             }
         }
-
-        #endregion
-
-
-        #region Geometry
-
+         
+                 
         private static CanvasCommandList _getMarqueeToolGeometry(CanvasDrawingSession drawingSession, ICanvasResourceCreator resourceCreator, CanvasGeometry canvasGeometry)
         {
             CanvasCommandList canvasCommandList = new CanvasCommandList(resourceCreator);
@@ -155,15 +156,7 @@ namespace FanKit.Transformers
             return canvasCommandList;
         }
 
-        /// <summary>
-        /// Draw a Geometry for marquee-tool (color is <see cref="Windows.UI.Colors.DodgerBlue"/>).
-        /// </summary>
-        /// <param name="drawingSession"> The drawing-session. </param>
-        /// <param name="resourceCreator"> The resource-creator. </param>
-        /// <param name="canvasGeometry"> The canvas-geometry. </param>
-        /// <param name="sourceRectangle"> The source rectangle. </param>
-        /// <param name="compositeMode"> The composite mode. </param>
-        public static void DrawMarqueeToolGeometry(this CanvasDrawingSession drawingSession, ICanvasResourceCreator resourceCreator, CanvasGeometry canvasGeometry, Rect sourceRectangle, MarqueeCompositeMode compositeMode = MarqueeCompositeMode.New)
+        private static void _drawMarqueeToolGeometry(this CanvasDrawingSession drawingSession, ICanvasResourceCreator resourceCreator, CanvasGeometry canvasGeometry, Rect sourceRectangle, MarqueeCompositeMode compositeMode = MarqueeCompositeMode.New)
         {
             switch (compositeMode)
             {
@@ -180,7 +173,7 @@ namespace FanKit.Transformers
                     break;
                 case MarqueeCompositeMode.Subtract:
                     {
-                        CanvasCommandList canvasCommandList = CanvasDrawingSessionExtensions._getMarqueeToolGeometry(drawingSession,resourceCreator, canvasGeometry);
+                        CanvasCommandList canvasCommandList = CanvasDrawingSessionExtensions._getMarqueeToolGeometry(drawingSession, resourceCreator, canvasGeometry);
                         CanvasComposite canvasComposite = CanvasComposite.DestinationOut;
                         drawingSession.DrawImage(canvasCommandList, 0, 0, sourceRectangle, 1, CanvasImageInterpolation.Linear, canvasComposite);
                     }
@@ -201,31 +194,20 @@ namespace FanKit.Transformers
                     break;
             }
         }
-        
-        #endregion
-
-
-        #region Rectangular
+         
 
         private static CanvasCommandList _getMarqueeToolRectangular(CanvasDrawingSession drawingSession, ICanvasResourceCreator resourceCreator, TransformerRect transformerRect)
         {
             CanvasCommandList canvasCommandList = new CanvasCommandList(resourceCreator);
             using (CanvasDrawingSession ds = canvasCommandList.CreateDrawingSession())
             {
-                ds.FillRectangleDodgerBlue(transformerRect);
+                Rect rect = transformerRect.ToRect();
+                ds.FillRectangle(rect, Windows.UI.Colors.DodgerBlue);
             }
             return canvasCommandList;
         }
 
-        /// <summary>
-        /// Draw a Rectangular for marquee-tool (color is <see cref="Windows.UI.Colors.DodgerBlue"/>).
-        /// </summary>
-        /// <param name="drawingSession"> The drawing-session. </param>
-        /// <param name="resourceCreator"> The resource-creator. </param>
-        /// <param name="transformerRect"> The transformer-rect. </param>
-        /// <param name="sourceRectangle"> The source rectangle. </param>
-        /// <param name="compositeMode"> The composite mode. </param>
-        public static void DrawMarqueeToolRectangular(this CanvasDrawingSession drawingSession, ICanvasResourceCreator resourceCreator, TransformerRect transformerRect, Rect sourceRectangle,MarqueeCompositeMode compositeMode = MarqueeCompositeMode.New)
+        private static void _drawMarqueeToolRectangular(this CanvasDrawingSession drawingSession, ICanvasResourceCreator resourceCreator, TransformerRect transformerRect, Rect sourceRectangle, MarqueeCompositeMode compositeMode = MarqueeCompositeMode.New)
         {
             switch (compositeMode)
             {
@@ -265,43 +247,44 @@ namespace FanKit.Transformers
                     break;
             }
         }
-
-        #endregion
-
-                 
-        #region Ellipse
-        
+         
+         
         private static CanvasCommandList _getMarqueeToolEllipse(CanvasDrawingSession drawingSession, ICanvasResourceCreator resourceCreator, TransformerRect transformerRect)
         {
             CanvasCommandList canvasCommandList = new CanvasCommandList(resourceCreator);
             using (CanvasDrawingSession ds = canvasCommandList.CreateDrawingSession())
             {
-                ds.FillEllipseDodgerBlue(transformerRect);
+                Vector2 centerPoint = transformerRect.Center;
+                float width = transformerRect.Width / 2;
+                float height = transformerRect.Height / 2;
+
+                drawingSession.FillEllipse(centerPoint, width, height, Windows.UI.Colors.DodgerBlue);
             }
             return canvasCommandList;
         }
 
-        /// <summary>
-        /// Draw a Ellipse for marquee-tool (color is <see cref="Windows.UI.Colors.DodgerBlue"/>).
-        /// </summary>
-        /// <param name="drawingSession"> The drawing-session. </param>
-        /// <param name="resourceCreator"> The resource-creator. </param>
-        /// <param name="transformerRect"> The transformer-rect. </param>
-        /// <param name="sourceRectangle"> The source rectangle. </param>
-        /// <param name="compositeMode"> The composite mode. </param>
-        public static void DrawMarqueeToolEllipse(this CanvasDrawingSession drawingSession, ICanvasResourceCreator resourceCreator, TransformerRect transformerRect,Rect sourceRectangle, MarqueeCompositeMode compositeMode = MarqueeCompositeMode.New)
+        private static void _drawMarqueeToolEllipse(this CanvasDrawingSession drawingSession, ICanvasResourceCreator resourceCreator, TransformerRect transformerRect, Rect sourceRectangle, MarqueeCompositeMode compositeMode = MarqueeCompositeMode.New)
         {
             switch (compositeMode)
             {
                 case MarqueeCompositeMode.New:
                     {
                         drawingSession.Clear(Windows.UI.Colors.Transparent);
-                        drawingSession.FillEllipseDodgerBlue(transformerRect);
+
+                        Vector2 centerPoint = transformerRect.Center;
+                        float width = transformerRect.Width / 2;
+                        float height = transformerRect.Height / 2;
+
+                        drawingSession.FillEllipse(centerPoint, width, height, Windows.UI.Colors.DodgerBlue);
                     }
                     break;
                 case MarqueeCompositeMode.Add:
                     {
-                        drawingSession.FillEllipseDodgerBlue(transformerRect);
+                        Vector2 centerPoint = transformerRect.Center;
+                        float width = transformerRect.Width / 2;
+                        float height = transformerRect.Height / 2;
+
+                        drawingSession.FillEllipse(centerPoint, width, height, Windows.UI.Colors.DodgerBlue);
                     }
                     break;
                 case MarqueeCompositeMode.Subtract:
@@ -327,8 +310,6 @@ namespace FanKit.Transformers
                     break;
             }
         }
-
-        #endregion
-
+         
     }
 }

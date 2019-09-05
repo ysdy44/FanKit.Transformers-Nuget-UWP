@@ -31,9 +31,9 @@ namespace FanKit.Transformers
         public float Scale = 1.0f;
 
         /// <summary> CanvasControl's width. </summary>
-        public float ControlWidth { get; private set; } = 1000.0f;
+        public float ControlWidth { get; set; } = 1000.0f;
         /// <summary> CanvasControl's height. </summary>
-        public float ControlHeight { get; private set; } = 1000.0f;
+        public float ControlHeight { get; set; } = 1000.0f;
         /// <summary> CanvasControl's center. </summary>
         public Vector2 ControlCenter => new Vector2(this.ControlWidth / 2, this.ControlHeight / 2);
 
@@ -62,8 +62,8 @@ namespace FanKit.Transformers
             get => this.size;
             set
             {
-                this.ControlWidth = size.Width < 100 ? 100.0f : (float)size.Width;
-                this.ControlHeight = size.Height < 100 ? 100.0f : (float)size.Height;
+                this.ControlWidth = (float)size.Width;
+                this.ControlHeight =  (float)size.Height;
                 this.size = value;
             }
         }

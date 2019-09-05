@@ -18,8 +18,8 @@ namespace FanKit.Transformers
         /// <param name="dottedLineImage"> The image. </param>
         /// <param name="width"> The width. </param>
         /// <param name="height"> The height. </param>
-        /// <param name="x"> The x. </param>
-        /// <param name="y"> The y. </param>
+        /// <param name="x"> The X-axis distance. </param>
+        /// <param name="y"> The Y-axis distance. </param>
         public static void DrawDottedLine(this CanvasDrawingSession drawingSession, ICanvasResourceCreator resourceCreator, DottedLineBrush dottedLineBrush, DottedLineImage dottedLineImage, float width, float height, float x = 0, float y = 0)
         {
             ICanvasImage image = dottedLineImage.Output;
