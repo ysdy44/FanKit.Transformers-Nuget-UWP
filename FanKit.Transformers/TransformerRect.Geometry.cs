@@ -11,7 +11,16 @@ namespace FanKit.Transformers
     {
 
         //@Static
-        private static CanvasGeometry _createRectangle(ICanvasResourceCreator resourceCreator, Vector2 leftTop, Vector2 rightTop, Vector2 rightBottom, Vector2 leftBottom)
+        /// <summary>
+        ///  Creates a new rectangle geometry object with the specified points.
+        /// </summary>
+        /// <param name="resourceCreator"> The resource-creator. </param>
+        /// <param name="leftTop"> The left-top point. </param>
+        /// <param name="rightTop"> The right-top point. </param>
+        /// <param name="rightBottom"> The right-bottom point. </param>
+        /// <param name="leftBottom"> The left-bottom point. </param>
+        /// <returns> The product geometry. </returns>
+        private static CanvasGeometry CreateRectangle(ICanvasResourceCreator resourceCreator, Vector2 leftTop, Vector2 rightTop, Vector2 rightBottom, Vector2 leftBottom)
         {
             //Points
             Vector2[] points = new Vector2[]
@@ -26,7 +35,7 @@ namespace FanKit.Transformers
             return CanvasGeometry.CreatePolygon(resourceCreator, points);
         }
 
-        /// <summary>
+            /// <summary>
         ///  Creates a new rectangle geometry object with the specified transformer-rect.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
@@ -40,7 +49,7 @@ namespace FanKit.Transformers
             Vector2 rightBottom = transformerRect.RightBottom;
             Vector2 leftBottom = transformerRect.LeftBottom;
 
-            return TransformerRect._createRectangle(resourceCreator, leftTop, rightTop, rightBottom, leftBottom);
+            return TransformerRect.CreateRectangle(resourceCreator, leftTop, rightTop, rightBottom, leftBottom);
         }
 
         /// <summary>
@@ -58,12 +67,20 @@ namespace FanKit.Transformers
             Vector2 rightBottom = Vector2.Transform(transformerRect.RightBottom, matrix);
             Vector2 leftBottom = Vector2.Transform(transformerRect.LeftBottom, matrix);
 
-            return TransformerRect._createRectangle(resourceCreator, leftTop, rightTop, rightBottom, leftBottom);
+            return TransformerRect.CreateRectangle(resourceCreator, leftTop, rightTop, rightBottom, leftBottom);
         }
 
-        
-        
-        private static CanvasGeometry _createEllipse(ICanvasResourceCreator resourceCreator, Vector2 left, Vector2 top, Vector2 right, Vector2 bottom)
+
+        /// <summary>
+        ///  Creates a new ellipse geometry object with the specified points.
+        /// </summary>
+        /// <param name="resourceCreator"> The resource-creator. </param>
+        /// <param name="left"> The left point. </param>
+        /// <param name="top"> The top point. </param>
+        /// <param name="right"> The right point. </param>
+        /// <param name="bottom"> The bottom point. </param>
+        /// <returns> The product geometry. </returns>
+        private static CanvasGeometry CreateEllipse(ICanvasResourceCreator resourceCreator, Vector2 left, Vector2 top, Vector2 right, Vector2 bottom)
         {
             /// <summary>
             /// A Ellipse has left, top, right, bottom four nodes.
@@ -116,7 +133,7 @@ namespace FanKit.Transformers
             Vector2 right = new Vector2(transformerRect.Right, transformerRect.CenterY);
             Vector2 bottom = new Vector2(transformerRect.CenterX, transformerRect.Bottom);
 
-            return TransformerRect._createEllipse(resourceCreator, left, top, right, bottom);
+            return TransformerRect.CreateEllipse(resourceCreator, left, top, right, bottom);
         }
 
         /// <summary>
@@ -134,7 +151,7 @@ namespace FanKit.Transformers
             Vector2 right = Vector2.Transform(new Vector2(transformerRect.Right, transformerRect.CenterY), matrix);
             Vector2 bottom = Vector2.Transform(new Vector2(transformerRect.CenterX, transformerRect.Bottom), matrix);
 
-            return TransformerRect._createEllipse(resourceCreator, left, top, right, bottom);
+            return TransformerRect.CreateEllipse(resourceCreator, left, top, right, bottom);
         }
         
     }

@@ -57,9 +57,7 @@ namespace FanKit.Transformers
                     case MarqueeToolType.Rectangular:
                         {
                             Rect rect = marqueeTool.TransformerRect.ToRect();
-
-                            drawingSession.DrawRectangle(rect, Windows.UI.Colors.Black, 2);
-                            drawingSession.FillRectangle(rect, Windows.UI.Colors.DodgerBlue);
+                            drawingSession.DrawThickRectangle(rect);
                         }
                         break;
                     case MarqueeToolType.Elliptical:
@@ -68,8 +66,7 @@ namespace FanKit.Transformers
                             float width = marqueeTool.TransformerRect.Width / 2;
                             float height = marqueeTool.TransformerRect.Height / 2;
 
-                            drawingSession.DrawEllipse(centerPoint, width, height, Windows.UI.Colors.Black, 2);
-                            drawingSession.FillEllipse(centerPoint, width, height, Windows.UI.Colors.DodgerBlue);
+                            drawingSession.DrawThickEllipse(centerPoint, width, height);
                         }
                         break;
                     case MarqueeToolType.Polygonal:
