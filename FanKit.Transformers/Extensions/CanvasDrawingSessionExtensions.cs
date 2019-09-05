@@ -2,6 +2,7 @@
 using Microsoft.Graphics.Canvas.Geometry;
 using System.Numerics;
 using Windows.Foundation;
+using Windows.UI;
 
 namespace FanKit.Transformers
 {
@@ -31,52 +32,17 @@ namespace FanKit.Transformers
             drawingSession.DrawLine(point0, point1, Windows.UI.Colors.White);
         }
 
-
-
-     
-
-
         /// <summary>
-        /// Fill a Rectangular (color is <see cref="Windows.UI.Colors.DodgerBlue"/>).
+        /// Draw a geometry.
         /// </summary>
         /// <param name="drawingSession"> The drawing-session. </param>
-        /// <param name="transformerRect"> The transformer-rect. </param>
-        public static void FillRectDodgerBlue(this CanvasDrawingSession drawingSession, TransformerRect transformerRect)
+        /// <param name="point0"> The canvas-geometry. </param>
+        public static void DrawThickGeometry(this CanvasDrawingSession drawingSession, CanvasGeometry canvasGeometry)
         {
-            Rect rect = transformerRect.ToRect();
-            drawingSession.FillRectangle(rect, Windows.UI.Color.FromArgb(90, 54, 135, 230));
-            drawingSession.DrawRectangle(rect, Windows.UI.Colors.DodgerBlue);
+            drawingSession.DrawGeometry(canvasGeometry, Windows.UI.Colors.Black, 2);
+            drawingSession.DrawGeometry(canvasGeometry, Windows.UI.Colors.White);
         }
 
-        /// <summary>
-        /// Fill a Rectangular (color is <see cref="Windows.UI.Colors.DodgerBlue"/>).
-        /// </summary>
-        /// <param name="drawingSession"> The drawing-session. </param>
-        /// <param name="resourceCreator"> The resource-creator. </param>
-        /// <param name="transformerRect"> The transformer-rect. </param>
-        /// <param name="matrix"> The matrix. </param>
-        public static void FillRectDodgerBlue(this CanvasDrawingSession drawingSession, ICanvasResourceCreator resourceCreator, TransformerRect transformerRect, Matrix3x2 matrix)
-        {
-            //LTRB
-            Vector2 leftTop = Vector2.Transform(transformerRect.LeftTop, matrix);
-            Vector2 rightTop = Vector2.Transform(transformerRect.RightTop, matrix);
-            Vector2 rightBottom = Vector2.Transform(transformerRect.RightBottom, matrix);
-            Vector2 leftBottom = Vector2.Transform(transformerRect.LeftBottom, matrix);
-
-            //Points
-            Vector2[] points = new Vector2[]
-            {
-                leftTop,
-                rightTop,
-                rightBottom,
-                leftBottom
-            };
-
-            //Geometry
-            CanvasGeometry canvasGeometry = CanvasGeometry.CreatePolygon(resourceCreator, points);
-            drawingSession.FillGeometry(canvasGeometry, Windows.UI.Color.FromArgb(90, 54, 135, 230));
-            drawingSession.DrawGeometry(canvasGeometry, Windows.UI.Colors.DodgerBlue);
-        }
-
+        
     }
 }

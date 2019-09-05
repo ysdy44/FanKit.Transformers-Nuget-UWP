@@ -35,7 +35,7 @@ namespace FanKit.Transformers
         /// <summary> CanvasControl's height. </summary>
         public float ControlHeight { get; private set; } = 1000.0f;
         /// <summary> CanvasControl's center. </summary>
-        public Vector2 ControlCenter { get; private set; } = new Vector2(500.0f, 500.0f);
+        public Vector2 ControlCenter => new Vector2(this.ControlWidth / 2, this.ControlHeight / 2);
 
         /// <summary> <see cref = "CanvasTransformer" />'s translation. </summary>
         public Vector2 Position = new Vector2(0.0f, 0.0f);
@@ -54,7 +54,7 @@ namespace FanKit.Transformers
 
 
         #region Size
-
+        
 
         /// <summary> <see cref = "CanvasTransformer.ControlWidth" /> and <see cref = "CanvasTransformer.ControlHeight" />'s setter. </summary>
         public Size Size
@@ -64,7 +64,6 @@ namespace FanKit.Transformers
             {
                 this.ControlWidth = size.Width < 100 ? 100.0f : (float)size.Width;
                 this.ControlHeight = size.Height < 100 ? 100.0f : (float)size.Height;
-                this.ControlCenter = new Vector2(this.ControlWidth / 2, this.ControlHeight / 2);
                 this.size = value;
             }
         }

@@ -49,6 +49,7 @@ namespace FanKit.Transformers
             float width = canvasTransformer.Width * canvasTransformer.Scale;
             float height = canvasTransformer.Height * canvasTransformer.Scale;
             Rect rect = new Rect(-width / 2, -height / 2, width, height);
+
             Matrix3x2 matrix = canvasTransformer.GetMatrix(MatrixTransformerMode.VirtualToControl);
             CanvasDrawingSessionExtensions._drawCrad(drawingSession, previousImage, rect, matrix, shadowColor, shadowBlurAmount, shadowOffset);
         }

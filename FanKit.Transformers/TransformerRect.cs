@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Graphics.Canvas;
+using Microsoft.Graphics.Canvas.Geometry;
 using System.Numerics;
 using Windows.Foundation;
 
@@ -7,37 +8,8 @@ namespace FanKit.Transformers
     /// <summary> 
     /// A structure encapsulating four range values (Left, Top, Right, Bottom). 
     /// </summary>
-    public struct TransformerRect
+    public partial struct TransformerRect
     {
-
-        /// <summary> Gets rectangle's left. </summary>
-        public float Left { get; private set; }
-        /// <summary> Gets rectangle's top. </summary>
-        public float Top { get; private set; }
-        /// <summary> Gets rectangle's right. </summary>
-        public float Right { get; private set; }
-        /// <summary> Gets rectangle's bottom. </summary>
-        public float Bottom { get; private set; }
-
-        /// <summary> Gets rectangle's width. </summary>
-        public float Width { get; private set; }
-        /// <summary> Gets rectangle's height. </summary>
-        public float Height { get; private set; }
-        /// <summary> Gets rectangle's center point. </summary>
-        public Vector2 Center { get; private set; }
-        /// <summary> Gets rectangle's center of X. </summary>
-        public float CenterX { get; private set; }
-        /// <summary> Gets rectangle's center of Y. </summary>
-        public float CenterY { get; private set; }
-
-        /// <summary> Gets rectangle's left-top point. </summary>
-        public Vector2 LeftTop { get; private set; }
-        /// <summary> Gets rectangle's right-top point. </summary>
-        public Vector2 RightTop { get; private set; }
-        /// <summary> Gets rectangle's right-bottom point. </summary>
-        public Vector2 RightBottom { get; private set; }
-        /// <summary> Gets rectangle's left-bottom point. </summary>
-        public Vector2 LeftBottom { get; private set; }
 
         //@Constructs
         /// <summary>
@@ -80,10 +52,10 @@ namespace FanKit.Transformers
         /// <param name="pointA"> The frist point of rectangle. </param>
         /// <param name="pointB"> The second point of rectangle. </param>
         /// <param name="isCenter"> Scaling around the center. </param>
-        /// <param name="isRatio"> Maintain a ratio when scaling. </param>
-        public TransformerRect(Vector2 pointA, Vector2 pointB, bool isCenter, bool isRatio)
+        /// <param name="isSquare"> Equal in width and height. </param>
+        public TransformerRect(Vector2 pointA, Vector2 pointB, bool isCenter, bool isSquare)
         {
-            if (isRatio)
+            if (isSquare)
             {
                 float square = Vector2.Distance(pointA, pointB) / 1.4142135623730950488016887242097f;
 
@@ -94,7 +66,7 @@ namespace FanKit.Transformers
             {
                 pointA = pointA + pointA - pointB;
             }
-            
+
             float left = System.Math.Min(pointA.X, pointB.X);
             float top = System.Math.Min(pointA.Y, pointB.Y);
             float right = System.Math.Max(pointA.X, pointB.X);
@@ -121,8 +93,7 @@ namespace FanKit.Transformers
             this.RightBottom = new Vector2(right, bottom);
             this.LeftBottom = new Vector2(left, bottom);
         }
-
-
+        
         /// <summary>
         /// Constructs a <see cref = "TransformerRect" />.
         /// </summary>
@@ -134,7 +105,7 @@ namespace FanKit.Transformers
             float left = postion.X;
             float top = postion.Y;
             float right = width + postion.X;
-            float bottom = height+ postion.Y;
+            float bottom = height + postion.Y;
 
             float centerX = postion.X + width / 2;
             float centerY = postion.Y + height / 2;
@@ -155,11 +126,44 @@ namespace FanKit.Transformers
             this.RightBottom = new Vector2(right, bottom);
             this.LeftBottom = new Vector2(left, bottom);
         }
+   
 
         /// <summary>
         /// Turn to Rect.
         /// </summary>
         public Rect ToRect() => new Rect(this.Left, this.Top, this.Right - this.Left, this.Bottom - this.Top);
 
+
+        /// <summary>
+        /// Turn to geometry.
+        /// </summary>
+        /// <param name="resourceCreator"> The resource-creator. </param>
+        /// <returns> The product geometry. </returns>
+        public CanvasGeometry ToRectangle(ICanvasResourceCreator resourceCreator) => TransformerRect.CreateRectangle(resourceCreator, this);
+
+        /// <summary>
+        /// Turn to geometry.
+        /// </summary>
+        /// <param name="resourceCreator"> The resource-creator. </param>
+        /// <param name="matrix"> The matrix. </param>
+        /// <returns> The product geometry. </returns>
+        public CanvasGeometry ToRectangle(ICanvasResourceCreator resourceCreator, Matrix3x2 matrix) => TransformerRect.CreateRectangle(resourceCreator, this, matrix);
+
+
+        /// <summary>
+        /// Turn to geometry.
+        /// </summary>
+        /// <param name="resourceCreator"> The resource-creator. </param>
+        /// <returns></returns>
+        public CanvasGeometry ToEllipse(ICanvasResourceCreator resourceCreator) => TransformerRect.CreateEllipse(resourceCreator, this);
+
+        /// <summary>
+        /// Turn to geometry.
+        /// </summary>
+        /// <param name="resourceCreator"> The resource-creator. </param>
+        /// <param name="matrix"> The matrix. </param>
+        /// <returns></returns>
+        public CanvasGeometry ToEllipse(ICanvasResourceCreator resourceCreator, Matrix3x2 matrix) => TransformerRect.CreateEllipse(resourceCreator, this, matrix);
+        
     }
 }

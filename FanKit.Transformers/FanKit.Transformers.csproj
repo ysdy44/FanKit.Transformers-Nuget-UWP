@@ -107,22 +107,30 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="DottedLines\DottedLineBrush.cs" />
+    <Compile Include="DottedLines\DottedLineImage.cs" />
+    <Compile Include="Enums\MarqueeCompositeMode.cs" />
+    <Compile Include="Enums\MarqueeToolType.cs" />
     <Compile Include="Enums\NodeCollectionMode.cs" />
     <Compile Include="Enums\NodeMode.cs" />
     <Compile Include="Extensions\CanvasDrawingSessionExtensions.cs" />
+    <Compile Include="Extensions\CanvasDrawingSessionExtensions.DottedLine.cs" />
     <Compile Include="Extensions\CanvasDrawingSessionExtensions.Node.cs" />
     <Compile Include="Extensions\CanvasDrawingSessionExtensions.Card.cs" />
     <Compile Include="Extensions\CanvasDrawingSessionExtensions.NodeCollection.cs" />
     <Compile Include="Extensions\CanvasDrawingSessionExtensions.Ruler.cs" />
-    <Compile Include="Node.CacheTransform.cs" />
-    <Compile Include="Node.Controller.cs" />
-    <Compile Include="Node.Mode.cs" />
-    <Compile Include="Node.cs" />
-    <Compile Include="NodeCollection.CacheTransform.cs" />
-    <Compile Include="NodeCollection.IList.cs" />
-    <Compile Include="NodeCollection.cs" />
-    <Compile Include="NodeCollection.Mode.cs" />
-    <Compile Include="NodeCollection.Operation.cs" />
+    <Compile Include="Extensions\CanvasDrawingSessionExtensions.MarqueeTool.cs" />
+    <Compile Include="Extensions\CanvasDrawingSessionExtensions.TransformerRect.cs" />
+    <Compile Include="MarqueeTool.cs" />
+    <Compile Include="Nodes\Node.CacheTransform.cs" />
+    <Compile Include="Nodes\Node.Controller.cs" />
+    <Compile Include="Nodes\Node.Mode.cs" />
+    <Compile Include="Nodes\Node.cs" />
+    <Compile Include="Nodes\NodeCollection.CacheTransform.cs" />
+    <Compile Include="Nodes\NodeCollection.IList.cs" />
+    <Compile Include="Nodes\NodeCollection.cs" />
+    <Compile Include="Nodes\NodeCollection.Mode.cs" />
+    <Compile Include="Nodes\NodeCollection.Operation.cs" />
     <Compile Include="Others\CanvasOperator.cs" />
     <Compile Include="Others\CanvasTransformer.cs" />
     <Compile Include="Interface\ICacheTransform.cs" />
@@ -151,6 +159,8 @@
     <Compile Include="TransformerMatrix.cs" />
     <Compile Include="Enums\TransformerMode.cs" />
     <Compile Include="TransformerRect.cs" />
+    <Compile Include="TransformerRect.Geometry.cs" />
+    <Compile Include="TransformerRect.Property.cs" />
     <EmbeddedResource Include="Properties\FanKit.Transformers.rd.xml" />
   </ItemGroup>
   <ItemGroup>
