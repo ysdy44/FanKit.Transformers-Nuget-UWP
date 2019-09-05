@@ -12,22 +12,27 @@ namespace FanKit.Transformers
     /// </summary>
     public class DottedLineImage : IDisposable
     {
-        CanvasRenderTarget _input;
+        /// <summary> The input images baked. </summary>
+        public CanvasRenderTarget Input { get; private set; }
 
         /// <summary> The input images baked. </summary>
         public ICanvasImage Output { get; private set; }
+
+        /// <summary> Gets the bounds of the bitmap, in device independent pixels(DIPs). </summary>
+        public Rect Bounds => this.Input.Bounds;
+
 
         /// <summary>
         /// Initializes a new instance of the DottedLineImage class.
         /// </summary>
         /// <param name="input"> The input image. </param>
-        public DottedLineImage(CanvasRenderTarget input) => this._input = input;
+        public DottedLineImage(CanvasRenderTarget input) => this.Input = input;
 
         /// <summary>
         /// Returns a new drawing session. The drawing session draws onto the CanvasRenderTarget.
         /// </summary>
         /// <returns> The drawing-session. </returns>
-        public CanvasDrawingSession CreateDrawingSession() => this._input.CreateDrawingSession();
+        public CanvasDrawingSession CreateDrawingSession() => this.Input.CreateDrawingSession();
 
         /// <summary>
         /// Turn the input image into an image edge line.
@@ -36,7 +41,7 @@ namespace FanKit.Transformers
         /// <param name="isCrop"> Whether to crop the edge. </param>
         public void Baking(ICanvasResourceCreator resourceCreator, bool isCrop = true)
         {
-            IGraphicsEffectSource crop = (isCrop == false) ? this._input : this._createCrop(resourceCreator, this._input);
+            IGraphicsEffectSource crop = (isCrop == false) ? this.Input : this._createCrop(resourceCreator, this.Input);
 
             this.Output = this._createLuminance(resourceCreator, crop);
         }
@@ -47,9 +52,9 @@ namespace FanKit.Transformers
         /// <param name="resourceCreator"> The resource-creator. </param>
         /// <param name="matrix"> The matrix. </param>
         /// <param name="isCrop"> Whether to crop the edge. </param>
-        public void Baking(ICanvasResourceCreator creator, Matrix3x2 matrix, bool isCrop = true)
+        public void Baking(ICanvasResourceCreator resourceCreator, Matrix3x2 matrix, bool isCrop = true)
         {
-            IGraphicsEffectSource crop = (isCrop == false) ? this._input : this._createCrop(creator, this._input);
+            IGraphicsEffectSource crop = (isCrop == false) ? this.Input : this._createCrop(resourceCreator, this.Input);
 
             Transform2DEffect transform = new Transform2DEffect//Transform
             {
@@ -57,7 +62,7 @@ namespace FanKit.Transformers
                 Source = crop
             };
 
-              this.Output = this._createLuminance(creator, transform);
+            this.Output = this._createLuminance(resourceCreator, transform);
         }
 
         private ICanvasImage _createLuminance(ICanvasResourceCreator resourceCreator, IGraphicsEffectSource image)
@@ -100,9 +105,9 @@ namespace FanKit.Transformers
                 this.Output = null;
             }
 
-            if (this._input != null)
+            if (this.Input != null)
             {
-                this._input.Dispose();
+                this.Input.Dispose();
             }
         }
     }
