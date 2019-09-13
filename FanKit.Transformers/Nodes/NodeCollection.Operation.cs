@@ -4,7 +4,7 @@ using System.Numerics;
 namespace FanKit.Transformers
 {
     /// <summary>
-    /// Represents an ordered collection of UIElement objects.
+    /// Represents an ordered collection of node objects.
     /// </summary>
     public sealed partial class NodeCollection : ICacheTransform, IList<Node>, IEnumerable<Node>
     {
