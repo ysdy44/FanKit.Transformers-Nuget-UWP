@@ -20,7 +20,7 @@ namespace FanKit.Transformers
         /// <param name="rightBottom"> The right-bottom point. </param>
         /// <param name="leftBottom"> The left-bottom point. </param>
         /// <returns> The product geometry. </returns>
-        private static CanvasGeometry CreateRectangle(ICanvasResourceCreator resourceCreator, Vector2 leftTop, Vector2 rightTop, Vector2 rightBottom, Vector2 leftBottom)
+        public static CanvasGeometry CreateRectangle(ICanvasResourceCreator resourceCreator, Vector2 leftTop, Vector2 rightTop, Vector2 rightBottom, Vector2 leftBottom)
         {
             //Points
             Vector2[] points = new Vector2[]
@@ -80,7 +80,7 @@ namespace FanKit.Transformers
         /// <param name="right"> The right point. </param>
         /// <param name="bottom"> The bottom point. </param>
         /// <returns> The product geometry. </returns>
-        private static CanvasGeometry CreateEllipse(ICanvasResourceCreator resourceCreator, Vector2 left, Vector2 top, Vector2 right, Vector2 bottom)
+        public static CanvasGeometry CreateEllipse(ICanvasResourceCreator resourceCreator, Vector2 left, Vector2 top, Vector2 right, Vector2 bottom)
         {
             /// <summary>
             /// A Ellipse has left, top, right, bottom four nodes.
