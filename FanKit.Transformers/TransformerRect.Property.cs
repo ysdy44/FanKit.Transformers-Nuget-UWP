@@ -1,7 +1,4 @@
-﻿using Microsoft.Graphics.Canvas;
-using Microsoft.Graphics.Canvas.Geometry;
-using System.Numerics;
-using Windows.Foundation;
+﻿using System.Numerics;
 
 namespace FanKit.Transformers
 {

@@ -4,12 +4,12 @@ using System.Numerics;
 
 namespace FanKit.Transformers
 {
-    /// <summary> 
-    /// A structure encapsulating four range values (Left, Top, Right, Bottom). 
+    /// <summary>
+    /// A structure encapsulating four vector values (LeftTop, RightTop, RightBottom, LeftBottom). 
     /// </summary>
-    public partial struct TransformerRect
+    public partial struct Transformer
     {
-        
+
         /// <summary>
         /// Turn to geometry.
         /// </summary>
@@ -42,8 +42,8 @@ namespace FanKit.Transformers
 
             return TransformerGeometry.CreateRectangle(resourceCreator, leftTop, rightTop, rightBottom, leftBottom);
         }
-
-
+            
+        
         /// <summary>
         /// Turn to geometry.
         /// </summary>

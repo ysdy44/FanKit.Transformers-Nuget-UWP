@@ -132,38 +132,6 @@ namespace FanKit.Transformers
         /// Turn to Rect.
         /// </summary>
         public Rect ToRect() => new Rect(this.Left, this.Top, this.Right - this.Left, this.Bottom - this.Top);
-
-
-        /// <summary>
-        /// Turn to geometry.
-        /// </summary>
-        /// <param name="resourceCreator"> The resource-creator. </param>
-        /// <returns> The product geometry. </returns>
-        public CanvasGeometry ToRectangle(ICanvasResourceCreator resourceCreator) => TransformerRect.CreateRectangle(resourceCreator, this);
-
-        /// <summary>
-        /// Turn to geometry.
-        /// </summary>
-        /// <param name="resourceCreator"> The resource-creator. </param>
-        /// <param name="matrix"> The matrix. </param>
-        /// <returns> The product geometry. </returns>
-        public CanvasGeometry ToRectangle(ICanvasResourceCreator resourceCreator, Matrix3x2 matrix) => TransformerRect.CreateRectangle(resourceCreator, this, matrix);
-
-
-        /// <summary>
-        /// Turn to geometry.
-        /// </summary>
-        /// <param name="resourceCreator"> The resource-creator. </param>
-        /// <returns></returns>
-        public CanvasGeometry ToEllipse(ICanvasResourceCreator resourceCreator) => TransformerRect.CreateEllipse(resourceCreator, this);
-
-        /// <summary>
-        /// Turn to geometry.
-        /// </summary>
-        /// <param name="resourceCreator"> The resource-creator. </param>
-        /// <param name="matrix"> The matrix. </param>
-        /// <returns></returns>
-        public CanvasGeometry ToEllipse(ICanvasResourceCreator resourceCreator, Matrix3x2 matrix) => TransformerRect.CreateEllipse(resourceCreator, this, matrix);
         
     }
 }

@@ -152,9 +152,11 @@
     <Compile Include="Transformer.Contains.cs" />
     <Compile Include="Transformer.Controller.cs" />
     <Compile Include="Transformer.cs" />
+    <Compile Include="Transformer.Geometry.cs" />
     <Compile Include="Transformer.Homography.cs" />
     <Compile Include="Transformer.Mode.cs" />
     <Compile Include="Math.cs" />
+    <Compile Include="TransformerGeometry.cs" />
     <Compile Include="TransformerMatrix.cs" />
     <Compile Include="Enums\TransformerMode.cs" />
     <Compile Include="TransformerRect.cs" />
