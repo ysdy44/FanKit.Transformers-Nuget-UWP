@@ -107,13 +107,15 @@ namespace FanKit.Transformers
                 {
                     case MarqueeToolType.Rectangular:
                         {
-                            CanvasGeometry canvasGeometry = TransformerRect.CreateRectangle(resourceCreator, marqueeTool.TransformerRect, matrix);
+                            TransformerRect transformerRect = marqueeTool.TransformerRect;
+                            CanvasGeometry canvasGeometry = transformerRect.ToRectangle(resourceCreator, matrix);
                             drawingSession.DrawThickGeometry(canvasGeometry);
                         }
                         break;
                     case MarqueeToolType.Elliptical:
                         {
-                            CanvasGeometry canvasGeometry = TransformerRect.CreateEllipse(resourceCreator, marqueeTool.TransformerRect, matrix);
+                            TransformerRect transformerRect = marqueeTool.TransformerRect;
+                            CanvasGeometry canvasGeometry = transformerRect.ToEllipse(resourceCreator, matrix);
                             drawingSession.DrawThickGeometry(canvasGeometry);
                         }
                         break;
