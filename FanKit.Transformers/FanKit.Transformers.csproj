@@ -151,6 +151,7 @@
       <DependentUpon>RemoteControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Handlers\RemoteVectorHandler.cs" />
+    <Compile Include="Transformer.AspectRatio.cs" />
     <Compile Include="Transformer.Property.cs" />
     <Compile Include="Transformer.Contains.cs" />
     <Compile Include="Transformer.Controller.cs" />
