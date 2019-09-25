@@ -5,7 +5,7 @@ namespace FanKit.Transformers
     /// <summary>
     /// A structure encapsulating four vector values (LeftTop, RightTop, RightBottom, LeftBottom). 
     /// </summary>
-    public partial struct Transformer
+    public partial struct Transformer : ITransformerLTRB, ITransformerGeometry
     {
         /// <summary>
         /// Find Homography.  
@@ -13,7 +13,7 @@ namespace FanKit.Transformers
         /// <param name="source"> The source Transformer. </param>
         /// <param name="destination"> The destination Transformer. </param>
         /// <returns> The homologous matrix. </returns>
-        public static Matrix3x2 FindHomography(Transformer source, Transformer destination)
+        public static Matrix3x2 FindHomography(ITransformerLTRB source, ITransformerLTRB destination)
         {
 
             float x0 = source.LeftTop.X, x1 = source.RightTop.X, x2 = source.LeftBottom.X, x3 = source.RightBottom.X;

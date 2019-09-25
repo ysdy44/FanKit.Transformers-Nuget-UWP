@@ -8,9 +8,8 @@ namespace FanKit.Transformers
     /// <summary> 
     /// A structure encapsulating four range values (Left, Top, Right, Bottom). 
     /// </summary>
-    public partial struct TransformerRect
+    public partial struct TransformerRect : ITransformerLTRB, ITransformerGeometry
     {
-
         //@Constructs
         /// <summary>
         /// Constructs a <see cref = "TransformerRect" />.
@@ -36,9 +35,15 @@ namespace FanKit.Transformers
 
             this.Width = width;
             this.Height = height;
-            this.Center = new Vector2(centerX, centerY);
+
             this.CenterX = centerX;
             this.CenterY = centerY;
+            this.Center = new Vector2(centerX, centerY);
+            
+            this.CenterLeft = new Vector2(left, centerY);
+            this.CenterTop = new Vector2(centerX, top);
+            this.CenterRight = new Vector2(right, centerY);
+            this.CenterBottom = new Vector2(centerX, bottom);
 
             this.LeftTop = new Vector2(left, top);
             this.RightTop = new Vector2(right, top);
@@ -84,9 +89,15 @@ namespace FanKit.Transformers
 
             this.Width = width;
             this.Height = height;
-            this.Center = new Vector2(centerX, centerY);
+
             this.CenterX = centerX;
             this.CenterY = centerY;
+            this.Center = new Vector2(centerX, centerY);
+
+            this.CenterLeft = new Vector2(left, centerY);
+            this.CenterTop = new Vector2(centerX, top);
+            this.CenterRight = new Vector2(right, centerY);
+            this.CenterBottom = new Vector2(centerX, bottom);
 
             this.LeftTop = new Vector2(left, top);
             this.RightTop = new Vector2(right, top);
@@ -117,9 +128,15 @@ namespace FanKit.Transformers
 
             this.Width = width;
             this.Height = height;
-            this.Center = new Vector2(centerX, centerY);
+
             this.CenterX = centerX;
             this.CenterY = centerY;
+            this.Center = new Vector2(centerX, centerY);
+
+            this.CenterLeft = new Vector2(left, centerY);
+            this.CenterTop = new Vector2(centerX, top);
+            this.CenterRight = new Vector2(right, centerY);
+            this.CenterBottom = new Vector2(centerX, bottom);
 
             this.LeftTop = new Vector2(left, top);
             this.RightTop = new Vector2(right, top);

@@ -120,6 +120,8 @@
     <Compile Include="Extensions\CanvasDrawingSessionExtensions.NodeCollection.cs" />
     <Compile Include="Extensions\CanvasDrawingSessionExtensions.Ruler.cs" />
     <Compile Include="Extensions\CanvasDrawingSessionExtensions.MarqueeTool.cs" />
+    <Compile Include="Interface\ITransformerGeometry.cs" />
+    <Compile Include="Interface\ITransformerLTRB.cs" />
     <Compile Include="MarqueeTool.cs" />
     <Compile Include="Nodes\Node.CacheTransform.cs" />
     <Compile Include="Nodes\Node.Controller.cs" />
@@ -149,6 +151,7 @@
       <DependentUpon>RemoteControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Handlers\RemoteVectorHandler.cs" />
+    <Compile Include="Transformer.Property.cs" />
     <Compile Include="Transformer.Contains.cs" />
     <Compile Include="Transformer.Controller.cs" />
     <Compile Include="Transformer.cs" />

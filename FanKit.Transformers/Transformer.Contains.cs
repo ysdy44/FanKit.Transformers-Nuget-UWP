@@ -5,7 +5,7 @@ namespace FanKit.Transformers
     /// <summary> 
     /// A structure encapsulating four vector values (LeftTop, RightTop, RightBottom, LeftBottom). 
     /// </summary>
-    public partial struct Transformer
+    public partial struct Transformer : ITransformerLTRB, ITransformerGeometry
     {
         /// <summary>
         /// Returns whether the area filled by the transformer contains the specified point.

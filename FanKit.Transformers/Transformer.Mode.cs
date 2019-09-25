@@ -5,7 +5,7 @@ namespace FanKit.Transformers
     /// <summary> 
     /// A structure encapsulating four vector values (LeftTop, RightTop, RightBottom, LeftBottom). 
     /// </summary>
-    public partial struct Transformer
+    public partial struct Transformer : ITransformerLTRB, ITransformerGeometry
     {
 
         private static TransformerMode _containsNodeMode(Vector2 point, Vector2 leftTop, Vector2 rightTop, Vector2 rightBottom, Vector2 leftBottom, bool disabledRadian)

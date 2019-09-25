@@ -5,7 +5,7 @@ namespace FanKit.Transformers
     /// <summary> 
     /// A structure encapsulating four range values (Left, Top, Right, Bottom). 
     /// </summary>
-    public partial struct TransformerRect
+    public partial struct TransformerRect : ITransformerLTRB, ITransformerGeometry
     {
 
         /// <summary> Gets rectangle's left. </summary>
@@ -21,12 +21,22 @@ namespace FanKit.Transformers
         public float Width { get; private set; }
         /// <summary> Gets rectangle's height. </summary>
         public float Height { get; private set; }
-        /// <summary> Gets rectangle's center point. </summary>
-        public Vector2 Center { get; private set; }
+
         /// <summary> Gets rectangle's center of X. </summary>
         public float CenterX { get; private set; }
         /// <summary> Gets rectangle's center of Y. </summary>
-        public float CenterY { get; private set; }
+        public float CenterY { get; private set; }        
+        /// <summary> Gets rectangle's center point. </summary>
+        public Vector2 Center { get; private set; }
+
+        /// <summary> Gets the center left vector. </summary>
+        public Vector2 CenterLeft { get; private set; }
+        /// <summary> Gets the center top vector. </summary>
+        public Vector2 CenterTop { get; private set; }
+        /// <summary> Gets the center right vector. </summary>
+        public Vector2 CenterRight { get; private set; }
+        /// <summary> Gets the center bottom vector. </summary>
+        public Vector2 CenterBottom { get; private set; }
 
         /// <summary> Gets rectangle's left-top point. </summary>
         public Vector2 LeftTop { get; private set; }
@@ -36,6 +46,5 @@ namespace FanKit.Transformers
         public Vector2 RightBottom { get; private set; }
         /// <summary> Gets rectangle's left-bottom point. </summary>
         public Vector2 LeftBottom { get; private set; }
-        
     }
 }

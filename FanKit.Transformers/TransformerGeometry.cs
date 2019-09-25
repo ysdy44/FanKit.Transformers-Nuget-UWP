@@ -7,11 +7,32 @@ namespace FanKit.Transformers
     /// <summary>
     /// Provides a static method for converting to geometry.
     /// </summary>
-    internal static class TransformerGeometry
+    public static class TransformerGeometry
     {
         //@Static
+        
+        #region Rectangle
+
+
         /// <summary>
-        ///  Creates a new rectangle geometry object with the specified points.
+        ///  Create a new rectangle geometry.
+        /// </summary>
+        /// <param name="resourceCreator"> The resource-creator. </param>
+        /// <param name="transformerLTRB"> The ITransformer-LTRB. </param>
+        /// <returns> The product geometry. </returns>
+        public static CanvasGeometry CreateRectangle(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformerLTRB) => TransformerGeometry._createRectangle(resourceCreator, transformerLTRB.LeftTop, transformerLTRB.RightTop, transformerLTRB.RightBottom, transformerLTRB.LeftBottom);
+
+        /// <summary>
+        ///  Create a new rectangle geometry.
+        /// </summary>
+        /// <param name="resourceCreator"> The resource-creator. </param>
+        /// <param name="transformerLTRB"> The ITransformer-LTRB. </param>
+        /// <param name="matrix"> The matrix. </param>
+        /// <returns> The product geometry. </returns>
+        public static CanvasGeometry CreateRectangle(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformerLTRB, Matrix3x2 matrix) => TransformerGeometry._createRectangle(resourceCreator, Vector2.Transform(transformerLTRB.LeftTop, matrix), Vector2.Transform(transformerLTRB.RightTop, matrix), Vector2.Transform(transformerLTRB.RightBottom, matrix), Vector2.Transform(transformerLTRB.LeftBottom, matrix));
+
+        /// <summary>
+        ///  Create a new rectangle geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
         /// <param name="leftTop"> The left-top point. </param>
@@ -19,7 +40,21 @@ namespace FanKit.Transformers
         /// <param name="rightBottom"> The right-bottom point. </param>
         /// <param name="leftBottom"> The left-bottom point. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreateRectangle(ICanvasResourceCreator resourceCreator, Vector2 leftTop, Vector2 rightTop, Vector2 rightBottom, Vector2 leftBottom)
+        public static CanvasGeometry CreateRectangle(ICanvasResourceCreator resourceCreator, Vector2 leftTop, Vector2 rightTop, Vector2 rightBottom, Vector2 leftBottom) => TransformerGeometry._createRectangle(resourceCreator, leftTop, rightTop, rightBottom, leftBottom);
+
+        /// <summary>
+        ///  Create a new rectangle geometry.
+        /// </summary>
+        /// <param name="resourceCreator"> The resource-creator. </param>
+        /// <param name="leftTop"> The left-top point. </param>
+        /// <param name="rightTop"> The right-top point. </param>
+        /// <param name="rightBottom"> The right-bottom point. </param>
+        /// <param name="leftBottom"> The left-bottom point. </param>
+        /// <param name="matrix"> The matrix. </param>
+        /// <returns> The product geometry. </returns>
+        public static CanvasGeometry CreateRectangle(ICanvasResourceCreator resourceCreator, Vector2 leftTop, Vector2 rightTop, Vector2 rightBottom, Vector2 leftBottom, Matrix3x2 matrix) => TransformerGeometry._createRectangle(resourceCreator, Vector2.Transform(leftTop, matrix), Vector2.Transform(rightTop, matrix), Vector2.Transform(rightBottom, matrix), Vector2.Transform(leftBottom, matrix));
+
+        private static CanvasGeometry _createRectangle(ICanvasResourceCreator resourceCreator, Vector2 leftTop, Vector2 rightTop, Vector2 rightBottom, Vector2 leftBottom)
         {
             //Points
             Vector2[] points = new Vector2[]
@@ -33,55 +68,93 @@ namespace FanKit.Transformers
             //Geometry
             return CanvasGeometry.CreatePolygon(resourceCreator, points);
         }
-        
+
+
+        #endregion
+
+
+        #region Ellipse
+
 
         /// <summary>
-        ///  Creates a new ellipse geometry object with the specified points.
+        ///  Create a new ellipse geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
-        /// <param name="left"> The left point. </param>
-        /// <param name="top"> The top point. </param>
-        /// <param name="right"> The right point. </param>
-        /// <param name="bottom"> The bottom point. </param>
+        /// <param name="transformerLTRB"> The ITransformer-LTRB. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreateEllipse(ICanvasResourceCreator resourceCreator, Vector2 left, Vector2 top, Vector2 right, Vector2 bottom)
+        public static CanvasGeometry CreateEllipse(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformerLTRB) => TransformerGeometry._createEllipse(resourceCreator, transformerLTRB.CenterLeft, transformerLTRB.CenterTop, transformerLTRB.CenterRight, transformerLTRB.CenterBottom);
+
+        /// <summary>
+        ///  Create a new ellipse geometry.
+        /// </summary>
+        /// <param name="resourceCreator"> The resource-creator. </param>
+        /// <param name="transformerLTRB"> The ITransformer-LTRB. </param>
+        /// <param name="matrix"> The matrix. </param>
+        /// <returns> The product geometry. </returns>
+        public static CanvasGeometry CreateEllipse(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformerLTRB, Matrix3x2 matrix) => TransformerGeometry._createEllipse(resourceCreator, Vector2.Transform(transformerLTRB.CenterLeft, matrix), Vector2.Transform(transformerLTRB.CenterTop, matrix), Vector2.Transform(transformerLTRB.CenterRight, matrix), Vector2.Transform(transformerLTRB.CenterBottom, matrix));
+
+        /// <summary>
+        ///  Create a new ellipse geometry.
+        /// </summary>
+        /// <param name="resourceCreator"> The resource-creator. </param>
+        /// <param name="centerLeft"> The left point. </param>
+        /// <param name="centerTop"> The top point. </param>
+        /// <param name="centerRight"> The right point. </param>
+        /// <param name="centerBottom"> The bottom point. </param>
+        /// <returns> The product geometry. </returns>
+        public static CanvasGeometry CreateEllipse(ICanvasResourceCreator resourceCreator, Vector2 centerLeft, Vector2 centerTop, Vector2 centerRight, Vector2 centerBottom) => TransformerGeometry._createEllipse(resourceCreator, centerLeft, centerTop, centerRight, centerBottom);
+
+        /// <summary>
+        ///  Create a new ellipse geometry.
+        /// </summary>
+        /// <param name="resourceCreator"> The resource-creator. </param>
+        /// <param name="centerLeft"> The left point. </param>
+        /// <param name="centerTop"> The top point. </param>
+        /// <param name="centerRight"> The right point. </param>
+        /// <param name="centerBottom"> The bottom point. </param>
+        /// <param name="matrix"> The matrix. </param>
+        /// <returns> The product geometry. </returns>
+        public static CanvasGeometry CreateEllipse(ICanvasResourceCreator resourceCreator,             Vector2 centerLeft, Vector2 centerTop, Vector2 centerRight, Vector2 centerBottom, Matrix3x2 matrix)             => TransformerGeometry._createEllipse(resourceCreator, Vector2.Transform(centerLeft, matrix), Vector2.Transform(centerTop, matrix), Vector2.Transform(centerRight, matrix), Vector2.Transform(centerBottom, matrix));
+
+        private static CanvasGeometry _createEllipse(ICanvasResourceCreator resourceCreator, Vector2 centerLeft, Vector2 centerTop, Vector2 centerRight, Vector2 centerBottom)
         {
-            /// <summary>
-            /// A Ellipse has left, top, right, bottom four nodes.
-            /// 
-            /// Control points on the left and right sides of the node.
-            /// 
-            /// The distance of the control point 
-            /// is 0.552f times
-            /// the length of the square edge.
-            /// <summary>
+            // A Ellipse has left, top, right, bottom four nodes.
+            // 
+            // Control points on the left and right sides of the node.
+            // 
+            // The distance of the control point 
+            // is 0.552f times
+            // the length of the square edge.
 
             //HV
-            Vector2 horizontal = (right - left) * 0.276f;// vector / 2 * 0.552f
-            Vector2 vertical = (bottom - top) * 0.276f;// vector / 2 * 0.552f
+            Vector2 horizontal = (centerRight - centerLeft) * 0.276f;// vector / 2 * 0.552f
+            Vector2 vertical = (centerBottom - centerTop) * 0.276f;// vector / 2 * 0.552f
 
             //Control
-            Vector2 left1 = left - vertical;
-            Vector2 left2 = left + vertical;
-            Vector2 top1 = top + horizontal;
-            Vector2 top2 = top - horizontal;
-            Vector2 right1 = right + vertical;
-            Vector2 right2 = right - vertical;
-            Vector2 bottom1 = bottom - horizontal;
-            Vector2 bottom2 = bottom + horizontal;
+            Vector2 left1 = centerLeft - vertical;
+            Vector2 left2 = centerLeft + vertical;
+            Vector2 top1 = centerTop + horizontal;
+            Vector2 top2 = centerTop - horizontal;
+            Vector2 right1 = centerRight + vertical;
+            Vector2 right2 = centerRight - vertical;
+            Vector2 bottom1 = centerBottom - horizontal;
+            Vector2 bottom2 = centerBottom + horizontal;
 
             //Path
             CanvasPathBuilder pathBuilder = new CanvasPathBuilder(resourceCreator);
-            pathBuilder.BeginFigure(bottom);
-            pathBuilder.AddCubicBezier(bottom1, left2, left);
-            pathBuilder.AddCubicBezier(left1, top2, top);
-            pathBuilder.AddCubicBezier(top1, right2, right);
-            pathBuilder.AddCubicBezier(right1, bottom2, bottom);
+            pathBuilder.BeginFigure(centerBottom);
+            pathBuilder.AddCubicBezier(bottom1, left2, centerLeft);
+            pathBuilder.AddCubicBezier(left1, top2, centerTop);
+            pathBuilder.AddCubicBezier(top1, right2, centerRight);
+            pathBuilder.AddCubicBezier(right1, bottom2, centerBottom);
             pathBuilder.EndFigure(CanvasFigureLoop.Closed);
 
             //Geometry
             return CanvasGeometry.CreatePath(pathBuilder);
         }
+
+
+        #endregion
 
     }
 }
