@@ -144,6 +144,9 @@
     <Compile Include="Enums\IndicatorMode.cs" />
     <Compile Include="Handlers\IndicatorModeHandler.cs" />
     <Compile Include="Enums\InverseMatrixTransformerMode.cs" />
+    <Compile Include="Others\CanvasTransformer.Matrix.cs" />
+    <Compile Include="Others\CanvasTransformer.Operator.cs" />
+    <Compile Include="Others\CanvasTransformer.Transition.cs" />
     <Compile Include="Others\LineDistance.cs" />
     <Compile Include="Enums\MatrixTransformerMode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -127,18 +127,21 @@ namespace FanKit.Transformers
             // the length of the square edge.
 
             //HV
-            Vector2 horizontal = (centerRight - centerLeft) * 0.276f;// vector / 2 * 0.552f
-            Vector2 vertical = (centerBottom - centerTop) * 0.276f;// vector / 2 * 0.552f
+            Vector2 horizontal = (centerRight - centerLeft);
+            Vector2 horizontal276 = horizontal * 0.276f;// vector * 0.552f / 2
+
+            Vector2 vertical = (centerBottom - centerTop) ;
+            Vector2 vertical276 = vertical * 0.276f;// vector * 0.552f / 2
 
             //Control
-            Vector2 left1 = centerLeft - vertical;
-            Vector2 left2 = centerLeft + vertical;
-            Vector2 top1 = centerTop + horizontal;
-            Vector2 top2 = centerTop - horizontal;
-            Vector2 right1 = centerRight + vertical;
-            Vector2 right2 = centerRight - vertical;
-            Vector2 bottom1 = centerBottom - horizontal;
-            Vector2 bottom2 = centerBottom + horizontal;
+            Vector2 left1 = centerLeft - vertical276;
+            Vector2 left2 = centerLeft + vertical276;
+            Vector2 top1 = centerTop + horizontal276;
+            Vector2 top2 = centerTop - horizontal276;
+            Vector2 right1 = centerRight + vertical276;
+            Vector2 right2 = centerRight - vertical276;
+            Vector2 bottom1 = centerBottom - horizontal276;
+            Vector2 bottom2 = centerBottom + horizontal276;
 
             //Path
             CanvasPathBuilder pathBuilder = new CanvasPathBuilder(resourceCreator);
