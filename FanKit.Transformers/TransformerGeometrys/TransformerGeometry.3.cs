@@ -161,7 +161,11 @@ namespace FanKit.Transformers
                 if (zeroInnerRadius)
                     return ellipse;
                 else
-                    return TransformerGeometry._createDount(ellipse, innerRadius, transformer.Center);
+                {
+                    Vector2 center = transformer.Center;
+
+                    return TransformerGeometry._createDount(ellipse, innerRadius, center);
+                }
             }
             else
             {
@@ -194,7 +198,11 @@ namespace FanKit.Transformers
                 if (zeroInnerRadius)
                     return ellipse;
                 else
-                    return TransformerGeometry._createDount(ellipse, innerRadius, transformer.Center);
+                {
+                    Vector2 center = Vector2.Transform(transformer.Center, matrix);
+
+                    return TransformerGeometry._createDount(ellipse, innerRadius, center);
+                }
             }
             else
             {
