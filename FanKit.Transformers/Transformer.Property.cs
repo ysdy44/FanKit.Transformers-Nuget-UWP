@@ -40,9 +40,9 @@ namespace FanKit.Transformers
         public float MaxY => System.Math.Max(System.Math.Max(this.LeftTop.Y, this.RightTop.Y), System.Math.Max(this.RightBottom.Y, this.LeftBottom.Y));
 
         /// <summary> Gets horizontal vector. </summary>
-        public Vector2 Horizontal => (this.RightTop + this.RightBottom - this.LeftTop - this.LeftBottom) / 2;
+        public Vector2 Horizontal => this.CenterRight - this.CenterLeft;
         /// <summary> Gets vertical vector. </summary>
-        public Vector2 Vertical => (this.RightBottom + this.LeftBottom - this.LeftTop - this.RightTop) / 2;
-        
+        public Vector2 Vertical => this.CenterBottom - this.CenterTop;
+
     }
 }

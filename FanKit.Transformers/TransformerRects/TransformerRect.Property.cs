@@ -46,5 +46,10 @@ namespace FanKit.Transformers
         public Vector2 RightBottom { get; private set; }
         /// <summary> Gets rectangle's left-bottom point. </summary>
         public Vector2 LeftBottom { get; private set; }
+
+        /// <summary> Gets horizontal vector. </summary>
+        public Vector2 Horizontal => this.CenterRight - this.CenterLeft;
+        /// <summary> Gets vertical vector. </summary>
+        public Vector2 Vertical => this.CenterBottom - this.CenterTop;
     }
 }

@@ -19,13 +19,13 @@ namespace FanKit.Transformers
     /// </summary>
     public partial class CanvasTransformer
     {
-
-
+        
         Vector2 _sourcePosition = new Vector2(100, 100);
         float _sourceScale = 0.2f;
 
         Vector2 _destinationPosition;
         float _destinationScale;
+
 
         /// <summary>
         /// Set the size of the source thumbnail.
@@ -40,43 +40,38 @@ namespace FanKit.Transformers
             float width = (float)actualWidth;
             float height = (float)actualHeight;
 
-            this._sourcePosition = new Vector2(left + width / 2.0f, top + height / 2.0f);
+            this._sourcePosition.X = left + width / 2.0f;
+            this._sourcePosition.Y = top + height / 2.0f;
             this._sourceScale = this._getTransitionScale(width, height);
-        }
-        private float _getTransitionScale(float width, float height)
-        {
-            float widthScale = width / this.Width;
-            float heightScale = height / this.Height;
-
-            float scale = (widthScale + heightScale) / 2;
-            return scale;
         }
 
         /// <summary>
         /// Set the size of the destination canvas.
         /// </summary>
-        public void TransitionDestination()
+        /// <param name="vector"> The offset vector. </param>
+        public void TransitionDestination(Vector2 offset, float controlWidth, float controlHeight)
         {
-            this._destinationPosition.X = this.ControlWidth / 2.0f;
-            this._destinationPosition.Y = this.ControlHeight / 2.0f;
-            this._destinationScale = this._getTransitionFitScale();
+            this._destinationPosition.X = offset.X + controlWidth / 2.0f;
+            this._destinationPosition.Y = offset.Y + controlHeight / 2.0f;
+            this._destinationScale = this._getTransitionScale(controlWidth, controlHeight);
         }
-        private float _getTransitionFitScale()
+
+        private float _getTransitionScale(float width, float height)
         {
-            float widthScale = this.ControlWidth / this.Width;
-            float heightScale = this.ControlHeight / this.Height;
+            float widthScale = width / this.Width;
+            float heightScale = height / this.Height;
 
             float scale = System.Math.Min(widthScale, heightScale);
             return scale;
         }
-
+        
         /// <summary>
         /// Make the matrix transition between source and destination.
         /// </summary>
         /// <param name="value"> That transition value (0.0f is source, 1.0f is destination). </param>
         public void Transition(float value)
         {
-            if (value==0.0f)
+            if (value == 0.0f)
             {
                 this.Position = this._sourcePosition;
                 this.Scale = this._sourceScale;
@@ -99,6 +94,7 @@ namespace FanKit.Transformers
 
             this.ReloadMatrix();
         }
+
 
     }
 }

@@ -141,6 +141,13 @@ namespace FanKit.Transformers
             pathBuilder.EndFigure(CanvasFigureLoop.Open);
             return CanvasGeometry.CreatePath(pathBuilder);
         }
-          
+
+
+        /// <summary>
+        /// Get NodeCollection own copy.
+        /// </summary>
+        /// <returns> The cloned NodeCollection. </returns>
+        public NodeCollection Clone() => new NodeCollection(from node in this._nodes select node);
+
     }
 }

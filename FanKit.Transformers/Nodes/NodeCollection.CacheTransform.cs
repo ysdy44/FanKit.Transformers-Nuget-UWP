@@ -71,7 +71,7 @@ namespace FanKit.Transformers
                 for (int i = 0; i < this.Count; i++)
                 {
                     Node node = this[i];
-                    if (this[i].IsChecked)
+                    if (node.IsChecked)
                     {
                         node.TransformAdd(vector);
                         this[i] = node;
@@ -92,7 +92,7 @@ namespace FanKit.Transformers
         /// <param name="matrix"> The resulting matrix. </param>  
         /// <param name="isOnlySelected"> Whether only the selected nodes. </param>
         public void TransformMultiplies(Matrix3x2 matrix, bool isOnlySelected) => this._transformMultiplies(matrix, isOnlySelected);
-        private void _transformMultiplies(Matrix3x2 matrix, bool isOnlySelected = false)
+        private void _transformMultiplies(Matrix3x2 matrix, bool isOnlySelected)
         {
             if (isOnlySelected == false)
             {
@@ -108,7 +108,7 @@ namespace FanKit.Transformers
                 for (int i = 0; i < this.Count; i++)
                 {
                     Node node = this[i];
-                    if (this[i].IsChecked)
+                    if (node.IsChecked)
                     {
                         node.TransformMultiplies(matrix);
                         this[i] = node;

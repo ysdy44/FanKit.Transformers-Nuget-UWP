@@ -27,5 +27,10 @@ namespace FanKit.Transformers
         Vector2 CenterRight { get; }
         /// <summary> Gets the center bottom vector. </summary>
         Vector2 CenterBottom { get; }
+
+        /// <summary> Gets horizontal vector. </summary>
+        Vector2 Horizontal { get; }
+        /// <summary> Gets vertical vector. </summary>
+        Vector2 Vertical { get; }
     }
 }

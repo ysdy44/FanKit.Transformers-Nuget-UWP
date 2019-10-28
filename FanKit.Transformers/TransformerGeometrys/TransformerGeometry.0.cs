@@ -7,10 +7,20 @@ namespace FanKit.Transformers
     /// <summary>
     /// Provides a static method for converting to geometry.
     /// </summary>
-    public static class TransformerGeometry
+    public static partial class TransformerGeometry
     {
-        //@Static
         
+        /// <summary> Gets top vector. </summary>
+        public const float StartingRotation = -FanKit.Math.Pi / 2.0f;
+
+        /// <summary>
+        /// Get unit vectors from an rotation.
+        /// </summary>
+        /// <param name="rotation"> The source rotation. </param>
+        /// <returns> The unit vector. </returns>
+        public static Vector2 GetRotationVector(float rotation) => new Vector2((float)System.Math.Cos(rotation), (float)System.Math.Sin(rotation));
+
+
         #region Rectangle
 
 
@@ -29,7 +39,7 @@ namespace FanKit.Transformers
         /// <param name="transformerLTRB"> The ITransformer-LTRB. </param>
         /// <param name="matrix"> The matrix. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreateRectangle(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformerLTRB, Matrix3x2 matrix) => TransformerGeometry._createRectangle(resourceCreator, Vector2.Transform(transformerLTRB.LeftTop, matrix), Vector2.Transform(transformerLTRB.RightTop, matrix), Vector2.Transform(transformerLTRB.RightBottom, matrix), Vector2.Transform(transformerLTRB.LeftBottom, matrix));
+        public static CanvasGeometry CreateRectangle(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformerLTRB, Matrix3x2 matrix) => TransformerGeometry.CreateRectangle(resourceCreator, transformerLTRB.LeftTop, transformerLTRB.RightTop, transformerLTRB.RightBottom, transformerLTRB.LeftBottom, matrix);
 
         /// <summary>
         ///  Create a new rectangle geometry.
@@ -91,7 +101,7 @@ namespace FanKit.Transformers
         /// <param name="transformerLTRB"> The ITransformer-LTRB. </param>
         /// <param name="matrix"> The matrix. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreateEllipse(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformerLTRB, Matrix3x2 matrix) => TransformerGeometry._createEllipse(resourceCreator, Vector2.Transform(transformerLTRB.CenterLeft, matrix), Vector2.Transform(transformerLTRB.CenterTop, matrix), Vector2.Transform(transformerLTRB.CenterRight, matrix), Vector2.Transform(transformerLTRB.CenterBottom, matrix));
+        public static CanvasGeometry CreateEllipse(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformerLTRB, Matrix3x2 matrix) => TransformerGeometry.CreateEllipse(resourceCreator, transformerLTRB.CenterLeft, transformerLTRB.CenterTop, transformerLTRB.CenterRight, transformerLTRB.CenterBottom, matrix);
 
         /// <summary>
         ///  Create a new ellipse geometry.
@@ -114,7 +124,7 @@ namespace FanKit.Transformers
         /// <param name="centerBottom"> The bottom point. </param>
         /// <param name="matrix"> The matrix. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreateEllipse(ICanvasResourceCreator resourceCreator,             Vector2 centerLeft, Vector2 centerTop, Vector2 centerRight, Vector2 centerBottom, Matrix3x2 matrix)             => TransformerGeometry._createEllipse(resourceCreator, Vector2.Transform(centerLeft, matrix), Vector2.Transform(centerTop, matrix), Vector2.Transform(centerRight, matrix), Vector2.Transform(centerBottom, matrix));
+        public static CanvasGeometry CreateEllipse(ICanvasResourceCreator resourceCreator, Vector2 centerLeft, Vector2 centerTop, Vector2 centerRight, Vector2 centerBottom, Matrix3x2 matrix) => TransformerGeometry._createEllipse(resourceCreator, Vector2.Transform(centerLeft, matrix), Vector2.Transform(centerTop, matrix), Vector2.Transform(centerRight, matrix), Vector2.Transform(centerBottom, matrix));
 
         private static CanvasGeometry _createEllipse(ICanvasResourceCreator resourceCreator, Vector2 centerLeft, Vector2 centerTop, Vector2 centerRight, Vector2 centerBottom)
         {
@@ -130,7 +140,7 @@ namespace FanKit.Transformers
             Vector2 horizontal = (centerRight - centerLeft);
             Vector2 horizontal276 = horizontal * 0.276f;// vector * 0.552f / 2
 
-            Vector2 vertical = (centerBottom - centerTop) ;
+            Vector2 vertical = (centerBottom - centerTop);
             Vector2 vertical276 = vertical * 0.276f;// vector * 0.552f / 2
 
             //Control

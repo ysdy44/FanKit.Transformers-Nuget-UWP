@@ -1,5 +1,4 @@
-﻿using System;
-using System.Numerics;
+﻿using System.Numerics;
 
 namespace FanKit.Transformers
 {
@@ -8,6 +7,19 @@ namespace FanKit.Transformers
     /// </summary>
     public partial struct Transformer : ITransformerLTRB, ITransformerGeometry
     {
+
+        //@Static
+        /// <summary>
+        /// Returns the transformer (-1,-1) (1,-1) (1,1) (-1,1).
+        /// </summary>
+        public static readonly Transformer One =new Transformer
+        {
+            LeftTop = new Vector2(-1f, -1f),
+            RightTop = new Vector2(1f, -1f),
+            RightBottom = new Vector2(1f, 1f),
+            LeftBottom = new Vector2(-1f, 1f),
+        };
+
         //@Constructs
         /// <summary>
         /// Constructs a transformer.

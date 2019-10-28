@@ -122,7 +122,7 @@
     <Compile Include="Extensions\CanvasDrawingSessionExtensions.MarqueeTool.cs" />
     <Compile Include="Interface\ITransformerGeometry.cs" />
     <Compile Include="Interface\ITransformerLTRB.cs" />
-    <Compile Include="MarqueeTool.cs" />
+    <Compile Include="Others\MarqueeTool.cs" />
     <Compile Include="Nodes\Node.CacheTransform.cs" />
     <Compile Include="Nodes\Node.Controller.cs" />
     <Compile Include="Nodes\Node.Mode.cs" />
@@ -163,17 +163,25 @@
     <Compile Include="Transformer.Homography.cs" />
     <Compile Include="Transformer.Mode.cs" />
     <Compile Include="Math.cs" />
-    <Compile Include="TransformerGeometry.cs" />
+    <Compile Include="TransformerGeometrys\TransformerGeometry.0.cs" />
+    <Compile Include="TransformerGeometrys\TransformerGeometry.1.cs" />
+    <Compile Include="TransformerGeometrys\TransformerGeometry.2.cs" />
+    <Compile Include="TransformerGeometrys\TransformerGeometry.3.cs" />
+    <Compile Include="TransformerGeometrys\TransformerGeometry.4.cs" />
     <Compile Include="TransformerMatrix.cs" />
     <Compile Include="Enums\TransformerMode.cs" />
-    <Compile Include="TransformerRect.cs" />
-    <Compile Include="TransformerRect.Geometry.cs" />
-    <Compile Include="TransformerRect.Property.cs" />
+    <Compile Include="TransformerRects\TransformerRect.cs" />
+    <Compile Include="TransformerRects\TransformerRect.Geometry.cs" />
+    <Compile Include="TransformerRects\TransformerRect.Property.cs" />
+    <Compile Include="XMLs\XML.Color.cs" />
+    <Compile Include="XMLs\XML.Node.cs" />
+    <Compile Include="XMLs\XML.Transformer.cs" />
+    <Compile Include="XMLs\XML.Vector2.cs" />
     <EmbeddedResource Include="Properties\FanKit.Transformers.rd.xml" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
-      <Version>6.1.7</Version>
+      <Version>6.1.5</Version>
     </PackageReference>
     <PackageReference Include="Win2D.uwp">
       <Version>1.23.0</Version>
