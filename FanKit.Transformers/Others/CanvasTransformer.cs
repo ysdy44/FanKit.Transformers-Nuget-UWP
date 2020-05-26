@@ -45,7 +45,7 @@ namespace FanKit.Transformers
 
         //@Construct
         /// <summary>
-        /// Constructs a <see cref = "CanvasTransformer" />.
+        /// Initialize a <see cref = "CanvasTransformer" />.
         /// </summary>
         public CanvasTransformer()
         {

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Numerics;
 
 namespace FanKit.Transformers
@@ -12,30 +13,20 @@ namespace FanKit.Transformers
         /// Remove all checked nodes.
         /// </summary>
         /// <param name="nodeCollection"> The source NodeCollection. </param>
-        public static void RemoveCheckedNodes(NodeCollection nodeCollection)
+        /// <return> If the count of nodes is less than 2, return **False**.. </param>
+        public static bool RemoveCheckedNodes(NodeCollection nodeCollection)
         {
-            int removeIndex = -1;
-
-            do
+            // Count all un checked nodes.
             {
-                if (removeIndex >= 0)
-                {
-                    if (nodeCollection[removeIndex].IsChecked)
-                    {
-                        nodeCollection.RemoveAt(removeIndex);
-                    }
-                }
-
-                removeIndex = -1;
-                for (int i = 0; i < nodeCollection.Count; i++)
-                {
-                    if (nodeCollection[i].IsChecked)
-                    {
-                        removeIndex = i;
-                    }
-                }
+                int count = nodeCollection._nodes.Count(node=> node.IsChecked == false);
+                if (count <= 2) return false;
             }
-            while (removeIndex >= 0);
+
+            IEnumerable<Node> checkedNodes = from node in nodeCollection._nodes where node.IsChecked select node;
+            nodeCollection._nodes.Clear();
+            nodeCollection._nodes.AddRange(checkedNodes);
+          
+            return true;
         }
 
         /// <summary>

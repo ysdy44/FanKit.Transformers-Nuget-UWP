@@ -119,7 +119,7 @@ namespace FanKit.Transformers
         /// <param name="shadowColor"> shadow color. </param>
         /// <param name="shadowBlurAmount"> shaodw blur amount. </param>
         /// <param name="shadowOffset"> shadow offset. </param>
-        public static void DrawCrad(this CanvasDrawingSession drawingSession, ICanvasImage previousImage, CanvasTransformer canvasTransformer, Windows.UI.Color shadowColor, float shadowBlurAmount = 4.0f, float shadowOffset = 5.0f) => CanvasDrawingSessionExtensions._drawCrad(drawingSession, previousImage, canvasTransformer, shadowColor, shadowBlurAmount, shadowOffset);
+        public static void DrawCard(this CanvasDrawingSession drawingSession, ICanvasImage previousImage, CanvasTransformer canvasTransformer, Windows.UI.Color shadowColor, float shadowBlurAmount = 4.0f, float shadowOffset = 5.0f) => CanvasDrawingSessionExtensions._drawCrad(drawingSession, previousImage, canvasTransformer, shadowColor, shadowBlurAmount, shadowOffset);
 
     }
 }

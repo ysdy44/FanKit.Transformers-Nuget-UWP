@@ -28,33 +28,41 @@ namespace FanKit.Transformers
 
 
         /// <summary>
-        /// Set the size of the source thumbnail.
+        /// Set the rect of the source.
         /// </summary>
         /// <param name="postion"> The postion of source. </param>
-        /// <param name="actualWidth"> The width of source. </param>
-        /// <param name="actualHeight"> The height of source. </param>
-        public void TransitionSource(Point postion, double actualWidth, double actualHeight)
+        /// <param name="width"> The width of source. </param>
+        /// <param name="height"> The height of source. </param>
+        public void TransitionSource(Vector2 postion, float width, float height)
         {
-            float left = (float)postion.X;
-            float top = (float)postion.Y;
-            float width = (float)actualWidth;
-            float height = (float)actualHeight;
-
-            this._sourcePosition.X = left + width / 2.0f;
-            this._sourcePosition.Y = top + height / 2.0f;
+            this._sourcePosition.X = postion.X + width / 2.0f;
+            this._sourcePosition.Y = postion.Y + height / 2.0f;
             this._sourceScale = this._getTransitionScale(width, height);
         }
+        /// <summary>
+        /// Set the rect of the source.
+        /// </summary>
+        public void TransitionSource(Rect rect) => this.TransitionSource(new Vector2((float)rect.X, (float)rect.Y), (float)rect.Width, (float)rect.Height);
+
 
         /// <summary>
-        /// Set the size of the destination canvas.
+        /// Set the rect of the destination.
         /// </summary>
-        /// <param name="vector"> The offset vector. </param>
-        public void TransitionDestination(Vector2 offset, float controlWidth, float controlHeight)
+        /// <param name="postion"> The postion of destination. </param>
+        /// <param name="width"> The width of destination. </param>
+        /// <param name="height"> The height of destination. </param>
+        public void TransitionDestination(Vector2 postion, float width, float height)
         {
-            this._destinationPosition.X = offset.X + controlWidth / 2.0f;
-            this._destinationPosition.Y = offset.Y + controlHeight / 2.0f;
-            this._destinationScale = this._getTransitionScale(controlWidth, controlHeight);
+            this._destinationPosition.X = postion.X + width / 2.0f;
+            this._destinationPosition.Y = postion.Y + height / 2.0f;
+            this._destinationScale = this._getTransitionScale(width, height);
         }
+        /// <summary>
+        /// Set the rect of the destination.
+        /// </summary>
+        public void TransitionDestination(Rect rect) => this.TransitionSource(new Vector2((float)rect.X, (float)rect.Y), (float)rect.Width, (float)rect.Height);
+
+
 
         private float _getTransitionScale(float width, float height)
         {

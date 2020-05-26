@@ -22,7 +22,7 @@ namespace FanKit.Transformers
 
         //@Constructs
         /// <summary>
-        /// Constructs a transformer.
+        /// Initialize a transformer.
         /// </summary>
         /// <param name="left"> The left. </param>
         /// <param name="top"> The top. </param>
@@ -36,7 +36,7 @@ namespace FanKit.Transformers
             this.LeftBottom = new Vector2(left, bottom);
         }
         /// <summary>
-        /// Constructs a transformer.
+        /// Initialize a transformer.
         /// </summary>
         /// <param name="transformerRect"> The initial rectangle. </param>
         public Transformer(TransformerRect transformerRect)
@@ -48,7 +48,7 @@ namespace FanKit.Transformers
         }
 
         /// <summary>
-        /// Constructs a transformer.
+        /// Initialize a transformer.
         /// </summary>
         /// <param name="pointA"> The frist point of transformer. </param>
         /// <param name="pointB"> The second point of transformer. </param>
@@ -63,7 +63,7 @@ namespace FanKit.Transformers
         }
 
         /// <summary>
-        /// Constructs a transformer.
+        /// Initialize a transformer.
         /// </summary>
         /// <param name="pointA"> The frist point of transformer. </param>
         /// <param name="pointB"> The second point of transformer. </param>
@@ -80,7 +80,7 @@ namespace FanKit.Transformers
         }
 
         /// <summary>
-        /// Constructs a transformer.
+        /// Initialize a transformer.
         /// </summary>
         /// <param name="width"> The width. </param>
         /// <param name="height"> The height. </param>

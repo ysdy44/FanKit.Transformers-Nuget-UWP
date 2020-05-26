@@ -7,8 +7,7 @@
     { 
         /// <summary> Normal. </summary>
         None,
-        /// <summary> Translation. </summary>
-        Translation,
+
         /// <summary> Rotation. </summary>
         Rotation,
 

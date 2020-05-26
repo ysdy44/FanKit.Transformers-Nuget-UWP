@@ -120,6 +120,8 @@
     <Compile Include="Extensions\CanvasDrawingSessionExtensions.NodeCollection.cs" />
     <Compile Include="Extensions\CanvasDrawingSessionExtensions.Ruler.cs" />
     <Compile Include="Extensions\CanvasDrawingSessionExtensions.MarqueeTool.cs" />
+    <Compile Include="Extensions\IndicatorModeExtensions.cs" />
+    <Compile Include="Interface\IGetActualTransformer.cs" />
     <Compile Include="Interface\ITransformerGeometry.cs" />
     <Compile Include="Interface\ITransformerLTRB.cs" />
     <Compile Include="Others\MarqueeTool.cs" />
@@ -154,6 +156,10 @@
       <DependentUpon>RemoteControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Handlers\RemoteVectorHandler.cs" />
+    <Compile Include="Snappings\2.BorderSnapBase.cs" />
+    <Compile Include="Snappings\3.VectorVectorSnap.cs" />
+    <Compile Include="Snappings\2.VectorSnapBase.cs" />
+    <Compile Include="Snappings\3.VectorBorderSnap.cs" />
     <Compile Include="Transformer.AspectRatio.cs" />
     <Compile Include="Transformer.Property.cs" />
     <Compile Include="Transformer.Contains.cs" />
@@ -163,10 +169,19 @@
     <Compile Include="Transformer.Homography.cs" />
     <Compile Include="Transformer.Mode.cs" />
     <Compile Include="Math.cs" />
+    <Compile Include="Snappings\1.SnapBase.cs" />
+    <Compile Include="Transformer.XYWHRS.cs" />
+    <Compile Include="TransformerBorders\TransformerBorder.cs" />
+    <Compile Include="TransformerBorders\TransformerBorder.Property.cs" />
+    <Compile Include="Snappings\3.BorderBorderSnap.cs" />
     <Compile Include="TransformerGeometrys\TransformerGeometry.0.cs" />
+    <Compile Include="TransformerGeometrys\TransformerGeometry.1.ConvertToCurves.cs" />
     <Compile Include="TransformerGeometrys\TransformerGeometry.1.cs" />
+    <Compile Include="TransformerGeometrys\TransformerGeometry.2.ConvertToCurves.cs" />
     <Compile Include="TransformerGeometrys\TransformerGeometry.2.cs" />
+    <Compile Include="TransformerGeometrys\TransformerGeometry.3.ConvertToCurves.cs" />
     <Compile Include="TransformerGeometrys\TransformerGeometry.3.cs" />
+    <Compile Include="TransformerGeometrys\TransformerGeometry.4.ConvertToCurves.cs" />
     <Compile Include="TransformerGeometrys\TransformerGeometry.4.cs" />
     <Compile Include="TransformerMatrix.cs" />
     <Compile Include="Enums\TransformerMode.cs" />
@@ -175,13 +190,14 @@
     <Compile Include="TransformerRects\TransformerRect.Property.cs" />
     <Compile Include="XMLs\XML.Color.cs" />
     <Compile Include="XMLs\XML.Node.cs" />
+    <Compile Include="XMLs\XML.NodeCollection.cs" />
     <Compile Include="XMLs\XML.Transformer.cs" />
     <Compile Include="XMLs\XML.Vector2.cs" />
     <EmbeddedResource Include="Properties\FanKit.Transformers.rd.xml" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
-      <Version>6.1.5</Version>
+      <Version>6.1.7</Version>
     </PackageReference>
     <PackageReference Include="Win2D.uwp">
       <Version>1.23.0</Version>
@@ -209,6 +225,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Extensions\CanvasDrawingSessionExtensions.Transformer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="TransformerGeometrys\TransformerGeometry.0.ConvertToCurves.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="XMLs\XML.GeometryArrowTailTypeFactory.cs" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

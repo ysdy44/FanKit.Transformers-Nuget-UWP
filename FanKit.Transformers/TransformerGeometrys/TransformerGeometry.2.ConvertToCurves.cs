@@ -1,5 +1,4 @@
-﻿using Microsoft.Graphics.Canvas;
-using Microsoft.Graphics.Canvas.Geometry;
+﻿using System.Collections.Generic;
 using System.Numerics;
 
 namespace FanKit.Transformers
@@ -9,44 +8,48 @@ namespace FanKit.Transformers
     /// </summary>
     public static partial class TransformerGeometry
     {
-
+               
         #region Pentagon
 
 
         /// <summary>
-        ///  Create a new pentagon geometry.
+        /// Convert to curves from pentagon.
         /// </summary>
-        /// <param name="resourceCreator"> The resource-creator. </param>
         /// <param name="points"> The points count. </param>
-        /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreatePentagon(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformer, int points)
+        /// <returns> The product curves. </returns>
+        public static IEnumerable<IEnumerable<Node>> ConvertToCurvesFromPentagon(ITransformerLTRB transformer, int points)
         {
             Matrix3x2 oneMatrix = Transformer.FindHomography(Transformer.One, transformer);
 
-            return TransformerGeometry._createPentagon(resourceCreator, points, oneMatrix);
+            return new List<IEnumerable<Node>>
+            {
+                TransformerGeometry._convertToCurveFromPentagon(points, oneMatrix)
+            };
         }
 
         /// <summary>
-        ///  Create a new pentagon geometry.
+        /// Convert to curves from pentagon.
         /// </summary>
-        /// <param name="resourceCreator"> The resource-creator. </param>
         /// <param name="transformer"> The source transformer. </param>
         /// <param name="points"> The points count. </param>
-        /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreatePentagon(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformer, Matrix3x2 matrix, int points)
+        /// <returns> The product curves. </returns>
+        public static IEnumerable<IEnumerable<Node>> ConvertToCurvesFromPentagon(ITransformerLTRB transformer, Matrix3x2 matrix, int points)
         {
             Matrix3x2 oneMatrix = Transformer.FindHomography(Transformer.One, transformer);
             Matrix3x2 oneMatrix2 = oneMatrix * matrix;
 
-            return TransformerGeometry._createPentagon(resourceCreator, points, oneMatrix2);
+            return new List<IEnumerable<Node>>
+            {
+                TransformerGeometry._convertToCurveFromPentagon(points, oneMatrix2)
+            };
         }
 
-        private static CanvasGeometry _createPentagon(ICanvasResourceCreator resourceCreator, int points, Matrix3x2 oneMatrix)
+        private static IEnumerable<Node> _convertToCurveFromPentagon(int points, Matrix3x2 oneMatrix)
         {
             float rotation = TransformerGeometry.StartingRotation;
             float angle = FanKit.Math.Pi * 2.0f / points;
 
-            Vector2[] array = new Vector2[points];
+            List<Node> nodes = new List<Node>();
             for (int i = 0; i < points; i++)
             {
                 int index = i;
@@ -54,11 +57,15 @@ namespace FanKit.Transformers
                 //Outer
                 Vector2 outer = TransformerGeometry.GetRotationVector(rotation);
                 Vector2 outerTransform = Vector2.Transform(outer, oneMatrix);
-                array[index] = outerTransform;
+                nodes.Add(new Node { Point = outerTransform });
                 rotation += angle;
             }
-
-            return CanvasGeometry.CreatePolygon(resourceCreator, array);
+            {
+                Vector2 outer = TransformerGeometry.GetRotationVector(TransformerGeometry.StartingRotation);
+                Vector2 outerTransform = Vector2.Transform(outer, oneMatrix);
+                nodes.Add(new Node { Point = outerTransform });
+            }
+            return nodes;
         }
 
 
@@ -69,41 +76,45 @@ namespace FanKit.Transformers
 
 
         /// <summary>
-        ///  Create a new star geometry.
+        /// Convert to curves from star.
         /// </summary>
-        /// <param name="resourceCreator"> The resource-creator. </param>
         /// <param name="points"> The point count. </param>
         /// <param name="innerRadius"> The inner-radius. </param>
-        /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreateStar(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformer, int points, float innerRadius)
+        /// <returns> The product curves. </returns>
+        public static IEnumerable<IEnumerable<Node>> ConvertToCurvesFromStar(ITransformerLTRB transformer, int points, float innerRadius)
         {
             Matrix3x2 oneMatrix = Transformer.FindHomography(Transformer.One, transformer);
-
-            return TransformerGeometry._createStar(resourceCreator, points, innerRadius, oneMatrix);
+            
+            return new List<IEnumerable<Node>>
+            {
+                 TransformerGeometry._convertToCurveFromStar(points, innerRadius, oneMatrix)
+            };
         }
-        
+
         /// <summary>
-        ///  Create a new star geometry.
+        /// Convert to curves from star.
         /// </summary>
-        /// <param name="resourceCreator"> The resource-creator. </param>
         /// <param name="transformer"> The source transformer. </param>
         /// <param name="points"> The point count. </param>
         /// <param name="innerRadius"> The inner-radius. </param>
-        /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreateStar(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformer, Matrix3x2 matrix, int points, float innerRadius)
+        /// <returns> The product curves. </returns>
+        public static IEnumerable<IEnumerable<Node>> ConvertToCurvesFromStar(ITransformerLTRB transformer, Matrix3x2 matrix, int points, float innerRadius)
         {
             Matrix3x2 oneMatrix = Transformer.FindHomography(Transformer.One, transformer);
             Matrix3x2 oneMatrix2 = oneMatrix * matrix;
 
-            return TransformerGeometry._createStar(resourceCreator, points, innerRadius, oneMatrix2);
+            return new List<IEnumerable<Node>>
+            {
+                TransformerGeometry._convertToCurveFromStar(points, innerRadius, oneMatrix2)
+            };
         }
 
-        private static CanvasGeometry _createStar(ICanvasResourceCreator resourceCreator, int points, float innerRadius, Matrix3x2 oneMatrix)
+        private static IEnumerable<Node> _convertToCurveFromStar(int points, float innerRadius, Matrix3x2 oneMatrix)
         {
             float rotation = TransformerGeometry.StartingRotation;
             float angle = FanKit.Math.Pi / points;
 
-            Vector2[] array = new Vector2[points * 2];
+            List<Node> nodes = new List<Node>();
             for (int i = 0; i < points; i++)
             {
                 int index = i * 2;
@@ -111,18 +122,22 @@ namespace FanKit.Transformers
                 //Outer
                 Vector2 outer = TransformerGeometry.GetRotationVector(rotation);
                 Vector2 outerTransform = Vector2.Transform(outer, oneMatrix);
-                array[index] = outerTransform;
+                nodes.Add(new Node { Point = outerTransform });
                 rotation += angle;
 
                 //Inner
                 Vector2 inner = TransformerGeometry.GetRotationVector(rotation);
                 Vector2 inner2 = inner * innerRadius;
                 Vector2 inner2Transform = Vector2.Transform(inner2, oneMatrix);
-                array[index + 1] = inner2Transform;
+                nodes.Add(new Node { Point = inner2Transform });
                 rotation += angle;
             }
-
-            return CanvasGeometry.CreatePolygon(resourceCreator, array);
+            {
+                Vector2 outer = TransformerGeometry.GetRotationVector(TransformerGeometry.StartingRotation);
+                Vector2 outerTransform = Vector2.Transform(outer, oneMatrix);
+                nodes.Add(new Node { Point = outerTransform });
+            }
+            return nodes;
         }
 
 
@@ -133,40 +148,44 @@ namespace FanKit.Transformers
 
 
         /// <summary>
-        ///  Create a new cog geometry.
+        /// Convert to curves from cog.
         /// </summary>
-        /// <param name="resourceCreator"> The resource-creator. </param>
         /// <param name="count"> The point count. </param>
         /// <param name="innerRadius"> The inner-radius. </param>
         /// <param name="tooth"> The tooth. </param>
         /// <param name="notch"> The notch. </param>
-        /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreateCog(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformer, int count, float innerRadius, float tooth, float notch)
+        /// <returns> The product curves. </returns>
+        public static IEnumerable<IEnumerable<Node>> ConvertToCurvesFromCog(ITransformerLTRB transformer, int count, float innerRadius, float tooth, float notch)
         {
             Matrix3x2 oneMatrix = Transformer.FindHomography(Transformer.One, transformer);
 
-            return TransformerGeometry._createCog(resourceCreator, count, innerRadius, tooth, notch, oneMatrix);
+            return new List<IEnumerable<Node>>
+            {
+                TransformerGeometry._convertToCurveFromCog(count, innerRadius, tooth, notch, oneMatrix)
+            };
         }
 
         /// <summary>
-        ///  Create a new cog geometry.
+        /// Convert to curves from cog.
         /// </summary>
-        /// <param name="resourceCreator"> The resource-creator. </param>
         /// <param name="transformer"> The source transformer. </param>
         /// <param name="count"> The point count. </param>
         /// <param name="innerRadius"> The inner-radius. </param>
         /// <param name="tooth"> The tooth. </param>
         /// <param name="notch"> The notch. </param>
-        /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreateCog(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformer, Matrix3x2 matrix, int count, float innerRadius, float tooth, float notch)
+        /// <returns> The product curves. </returns>
+        public static IEnumerable<IEnumerable<Node>> ConvertToCurvesFromCog(ITransformerLTRB transformer, Matrix3x2 matrix, int count, float innerRadius, float tooth, float notch)
         {
             Matrix3x2 oneMatrix = Transformer.FindHomography(Transformer.One, transformer);
             Matrix3x2 oneMatrix2 = oneMatrix * matrix;
 
-            return TransformerGeometry._createCog(resourceCreator, count, innerRadius, tooth, notch, oneMatrix2);
+            return new List<IEnumerable<Node>>
+            {
+                TransformerGeometry._convertToCurveFromCog(count, innerRadius, tooth, notch, oneMatrix2)
+            };
         }
 
-        private static CanvasGeometry _createCog(ICanvasResourceCreator resourceCreator, int count, float innerRadius, float tooth, float notch, Matrix3x2 oneMatrix)
+        private static IEnumerable<Node> _convertToCurveFromCog(int count, float innerRadius, float tooth, float notch, Matrix3x2 oneMatrix)
         {
             float angle = FanKit.Math.Pi * 2f / count;//angle
             float angleTooth = angle * tooth;//angle tooth
@@ -175,7 +194,7 @@ namespace FanKit.Transformers
 
             float rotation = 0;//Start angle is zero
             int countQuadra = count * 4;
-            Vector2[] points = new Vector2[countQuadra];
+            List<Node> nodes = new List<Node>();
 
             for (int i = 0; i < countQuadra; i++)
             {
@@ -187,7 +206,7 @@ namespace FanKit.Transformers
                     //Inner
                     Vector2 inner = vector * innerRadius;
                     Vector2 innerTransform = Vector2.Transform(inner, oneMatrix);
-                    points[i] = innerTransform;
+                    nodes.Add(new Node { Point = innerTransform });
                     rotation += angleDiffHalf;
                 }
                 else if (remainder == 1)//凸 left-top point
@@ -195,7 +214,7 @@ namespace FanKit.Transformers
                     //Outer
                     Vector2 outer = vector;
                     Vector2 outerTransform = Vector2.Transform(vector, oneMatrix);
-                    points[i] = outerTransform;
+                    nodes.Add(new Node { Point = outerTransform });
                     rotation += angleTooth;
                 }
                 else if (remainder == 2)//凸 right-top point
@@ -203,7 +222,7 @@ namespace FanKit.Transformers
                     //Outer
                     Vector2 outer = vector;
                     Vector2 outerTransform = Vector2.Transform(vector, oneMatrix);
-                    points[i] = outerTransform;
+                    nodes.Add(new Node { Point = outerTransform });
                     rotation += angleDiffHalf;
                 }
                 else if (remainder == 3)//凸 right-bottom point
@@ -211,16 +230,20 @@ namespace FanKit.Transformers
                     //Inner
                     Vector2 inner = vector * innerRadius;
                     Vector2 innerTransform = Vector2.Transform(inner, oneMatrix);
-                    points[i] = innerTransform;
+                    nodes.Add(new Node { Point = innerTransform });
                     rotation += angle - angleNotch;
                 }
             }
-
-            return CanvasGeometry.CreatePolygon(resourceCreator, points);
+            {
+                Vector2 inner = new Vector2(1, 0) * innerRadius;
+                Vector2 innerTransform = Vector2.Transform(inner, oneMatrix);
+                nodes.Add(new Node { Point = innerTransform });
+            }
+            return nodes;
         }
 
 
         #endregion
-
+        
     }
 }

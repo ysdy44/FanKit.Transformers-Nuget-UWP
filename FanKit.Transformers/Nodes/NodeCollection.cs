@@ -17,16 +17,16 @@ namespace FanKit.Transformers
 
         //@Constructs
         /// <summary>
-        /// Constructs a NodeCollection.
+        /// Initialize a NodeCollection.
         /// </summary>
         public NodeCollection() => this._nodes = new List<Node>();
         /// <summary>
-        /// Constructs a NodeCollection.
+        /// Initialize a NodeCollection.
         /// </summary>
         /// <param name="nodes"> The nodes. </param>
         public NodeCollection(IEnumerable<Node> nodes) => this._nodes = nodes.ToList();
         /// <summary>
-        /// Constructs a NodeCollection.
+        /// Initialize a NodeCollection.
         /// </summary>
         /// <param name="left"> The frist point. </param>
         /// <param name="right"> The second point. </param>
@@ -67,23 +67,57 @@ namespace FanKit.Transformers
                 //Check the selected node.
                 if (i == selectedIndex)
                 {
-                    Node node = this[selectedIndex];
+                    Node node = this[i];
                     node.IsChecked = true;
-                    this[selectedIndex] = node;
+                    this[i] = node;
                 }
                 //Unchecked others.
+                else this._unCheckNode(i);
+            }
+        }
+        /// <summary>
+        /// Select only one node.
+        /// </summary>
+        /// <param name="point"> The point. </param>
+        /// <param name="matrix"> The matrix. </param>
+        public void SelectionOnlyOne(Vector2 point, Matrix3x2 matrix)
+        {
+            bool hasIsSelected = false;
+
+            for (int i = 0; i < this.Count; i++)
+            {
+                //Unchecked others.
+                if (hasIsSelected) this._unCheckNode(i);
                 else
                 {
                     Node node = this[i];
-                    if (node.IsChecked)
+                    Vector2 point2 = Vector2.Transform(node.Point, matrix);
+                    bool isSelected = FanKit.Math.OutNodeDistance(point, point2);
+
+                    //Check the selected node.
+                    if (isSelected)
                     {
-                        node.IsChecked = false;
+                        hasIsSelected = true;
+
+                        node.IsChecked = true;
                         this[i] = node;
                     }
+                    //Unchecked others.
+                    else this._unCheckNode(i);
                 }
             }
         }
-               
+        private void _unCheckNode(int index)
+        {
+            Node node = this[index];
+
+            if (node.IsChecked)
+            {
+                node.IsChecked = false;
+                this[index] = node;
+            }
+        }
+
 
         /// <summary>
         /// Check node which in the rect.
@@ -144,7 +178,7 @@ namespace FanKit.Transformers
 
 
         /// <summary>
-        /// Get NodeCollection own copy.
+        /// Get own copy.
         /// </summary>
         /// <returns> The cloned NodeCollection. </returns>
         public NodeCollection Clone() => new NodeCollection(from node in this._nodes select node);

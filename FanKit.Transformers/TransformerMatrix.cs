@@ -12,15 +12,15 @@ namespace FanKit.Transformers
 
         /// <summary> The destination Transformer. </summary>
         public Transformer Destination;
-        private Transformer _oldDestination;
-
+        private Transformer startingDestination;
+        
         /// <summary> Is disable rotate radian? Defult **false**. </summary>
         public bool DisabledRadian;
 
 
         //@Constructs
         /// <summary> 
-        /// Constructs a <see cref = "TransformerMatrix" />. 
+        /// Initialize a <see cref = "TransformerMatrix" />. 
         /// </summary>
         public TransformerMatrix(Transformer transformer)
         {
@@ -30,12 +30,12 @@ namespace FanKit.Transformers
             //Destination
             this.Destination = transformer;
 
-            this._oldDestination = transformer;
+            this.startingDestination = transformer;
 
             this.DisabledRadian = false;
         }
         /// <summary>
-        /// Constructs a <see cref = "TransformerMatrix" />.
+        /// Initialize a <see cref = "TransformerMatrix" />.
         /// </summary>
         /// <param name="pointA"> The frist point of transformer matrix. </param>
         /// <param name="pointB"> The second point of transformer matrix. </param>
@@ -49,12 +49,12 @@ namespace FanKit.Transformers
             //Destination
             this.Destination = transformer;
 
-            this._oldDestination = transformer;
+            this.startingDestination = transformer;
 
             this.DisabledRadian = false;
         }
         /// <summary>
-        /// Constructs a <see cref = "TransformerMatrix" />. 
+        /// Initialize a <see cref = "TransformerMatrix" />. 
         /// </summary> 
         /// <param name="width"> The width. </param>
         /// <param name="height"> The height. </param>
@@ -69,7 +69,7 @@ namespace FanKit.Transformers
             //Destination
             this.Destination = transformer;
 
-            this._oldDestination = transformer;
+            this.startingDestination = transformer;
 
             this.DisabledRadian = false;
         }
@@ -86,16 +86,16 @@ namespace FanKit.Transformers
         /// <summary>
         ///  Cache the transformer-matrix's transformer.
         /// </summary>
-        public void CacheTransform() => this._oldDestination = this.Destination;
+        public void CacheTransform() => this.startingDestination = this.Destination;
         /// <summary>
         ///  Transforms the TransformerMatrix by the given matrix.
         /// </summary>
         /// <param name="matrix"> The resulting matrix. </param>
-        public void TransformMultiplies(Matrix3x2 matrix) => this.Destination = this._oldDestination * matrix;
+        public void TransformMultiplies(Matrix3x2 matrix) => this.Destination = this.startingDestination * matrix;
         /// <summary>
         ///  Transforms the TransformerMatrix by the given vector.
         /// </summary>
         /// <param name="vector"> The add value use to summed. </param>
-        public void TransformAdd(Vector2 vector) => this.Destination = this._oldDestination + vector;
+        public void TransformAdd(Vector2 vector) => this.Destination = this.startingDestination + vector;
     }
 }

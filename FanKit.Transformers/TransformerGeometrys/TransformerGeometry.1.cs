@@ -146,7 +146,7 @@ namespace FanKit.Transformers
 
 
         #endregion
-        
+
 
         #region Triangle
 
@@ -200,9 +200,9 @@ namespace FanKit.Transformers
             //Points
             Vector2[] points = new Vector2[]
             {
-                leftBottom,
                 center2,
                 rightBottom,
+                leftBottom,
             };
 
             //Geometry

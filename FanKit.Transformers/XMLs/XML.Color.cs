@@ -34,13 +34,14 @@ namespace FanKit.Transformers
         /// <returns> The loaded <see cref="Color"/>. </returns>
         public static Color LoadColor(XElement element)
         {
-            return new Color
-            {
-                A = (byte)(int)element.Attribute("A"),
-                R = (byte)(int)element.Attribute("R"),
-                G = (byte)(int)element.Attribute("G"),
-                B = (byte)(int)element.Attribute("B"),
-            };
+            Color color;
+
+            if (element.Attribute("A") is XAttribute a) color.A = (byte)(int)a;
+            if (element.Attribute("R") is XAttribute r) color.R = (byte)(int)r;
+            if (element.Attribute("G") is XAttribute g) color.G = (byte)(int)g;
+            if (element.Attribute("B") is XAttribute b) color.B = (byte)(int)b;
+
+            return color;
         }
 
     }

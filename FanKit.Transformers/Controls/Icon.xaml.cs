@@ -9,7 +9,7 @@ namespace FanKit.Transformers
     {
         //@Constructs
         /// <summary>
-        /// Constructs a <see cref="Icon"/>. 
+        /// Initialize a <see cref="Icon"/>. 
         /// </summary>
         public Icon()
         {

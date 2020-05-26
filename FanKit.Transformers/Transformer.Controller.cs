@@ -25,8 +25,6 @@ namespace FanKit.Transformers
             {
                 case TransformerMode.None: return startingTransformer;
 
-                case TransformerMode.Translation: return Transformer._translation(startingPoint, point, startingTransformer);
-
                 case TransformerMode.Rotation: return Transformer._rotation(startingPoint, point, startingTransformer, isStepFrequency);
 
                 case TransformerMode.SkewLeft: return Transformer._skewLeft(startingPoint, point, startingTransformer, isCenter);
@@ -65,8 +63,6 @@ namespace FanKit.Transformers
             {
                 case TransformerMode.None: return startingTransformer;
 
-                case TransformerMode.Translation: return Transformer._translation(startingPoint, point, startingTransformer, inverseMatrix);
-
                 case TransformerMode.Rotation: return Transformer._rotation(startingPoint, point, startingTransformer, inverseMatrix, isStepFrequency);
 
                 case TransformerMode.SkewLeft: return Transformer._skewLeft(startingPoint, point, startingTransformer, isCenter);
@@ -86,24 +82,6 @@ namespace FanKit.Transformers
             }
 
             return startingTransformer;
-        }
-
-
-
-        //Translation
-        private static Transformer _translation(Vector2 startingPoint, Vector2 point, Transformer startingTransformer)
-        {
-            Vector2 canvasStartingPoint = startingPoint;
-            Vector2 canvasPoint = point;
-
-            return Transformer.Add(startingTransformer, canvasPoint - canvasStartingPoint);
-        }
-        private static Transformer _translation(Vector2 startingPoint, Vector2 point, Transformer startingTransformer, Matrix3x2 inverseMatrix)
-        {
-            Vector2 canvasStartingPoint = Vector2.Transform(startingPoint, inverseMatrix);
-            Vector2 canvasPoint = Vector2.Transform(point, inverseMatrix);
-
-            return Transformer.Add(startingTransformer, canvasPoint - canvasStartingPoint);
         }
 
 

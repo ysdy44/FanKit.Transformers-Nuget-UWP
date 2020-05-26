@@ -211,6 +211,67 @@ namespace FanKit.Transformers
 
             //Scale2
             {
+                drawingSession.FillCircle(leftTop, 10, accentColor);
+                drawingSession.FillCircle(leftTop, 9, Windows.UI.Colors.White);
+
+                drawingSession.FillCircle(rightTop, 10, accentColor);
+                drawingSession.FillCircle(rightTop, 9, Windows.UI.Colors.White);
+
+                drawingSession.FillCircle(rightBottom, 10, accentColor);
+                drawingSession.FillCircle(rightBottom, 9, Windows.UI.Colors.White);
+
+                drawingSession.FillCircle(leftBottom, 10, accentColor);
+                drawingSession.FillCircle(leftBottom, 9, Windows.UI.Colors.White);
+            }
+
+            //Scale1
+            if (FanKit.Math.OutNodeDistance(centerLeft, centerRight))
+            {
+                drawingSession.FillCircle(centerTop, 10, accentColor);
+                drawingSession.FillCircle(centerTop, 9, Windows.UI.Colors.White);
+
+                drawingSession.FillCircle(centerBottom, 10, accentColor);
+                drawingSession.FillCircle(centerBottom, 9, Windows.UI.Colors.White);
+            }
+            if (FanKit.Math.OutNodeDistance(centerTop, centerBottom))
+            {
+                drawingSession.FillCircle(centerLeft, 10, accentColor);
+                drawingSession.FillCircle(centerLeft, 9, Windows.UI.Colors.White);
+
+                drawingSession.FillCircle(centerRight, 10, accentColor);
+                drawingSession.FillCircle(centerRight, 9, Windows.UI.Colors.White);
+            }
+        }
+
+
+        private static void _drawCrop2(CanvasDrawingSession drawingSession, Vector2 leftTop, Vector2 rightTop, Vector2 rightBottom, Vector2 leftBottom, Windows.UI.Color accentColor)
+        {
+            //Line
+            CanvasDrawingSessionExtensions._drawBound(drawingSession, leftTop, rightTop, rightBottom, leftBottom, accentColor);
+
+            //Center
+            Vector2 centerLeft = (leftTop + leftBottom) / 2;
+            Vector2 centerTop = (leftTop + rightTop) / 2;
+            Vector2 centerRight = (rightTop + rightBottom) / 2;
+            Vector2 centerBottom = (leftBottom + rightBottom) / 2;
+
+            //Vertical Horizontal
+            Vector2 vertical = centerBottom - centerTop;
+            Vector2 horizontal = centerRight - centerLeft;
+
+            Vector2 verticalUnit = vertical / vertical.Length();
+            Vector2 horizontalUnit = horizontal / horizontal.Length();
+
+            const float length = 10;
+            Vector2 verticalLength = verticalUnit * length;
+            Vector2 horizontalLength = horizontalUnit * length;
+
+            const float space = 2;
+            Vector2 verticalSpace = verticalUnit * space;
+            Vector2 horizontalSpace = horizontalUnit * space;
+
+            //Scale2
+            {
                 const float strokeWidth = 2;
                 Vector2 leftTopOutside = leftTop - verticalSpace - horizontalSpace;
                 Vector2 rightTopOutside = rightTop - verticalSpace + horizontalSpace;
@@ -248,7 +309,7 @@ namespace FanKit.Transformers
         }
 
 
-    #endregion
+        #endregion
 
     }
 }

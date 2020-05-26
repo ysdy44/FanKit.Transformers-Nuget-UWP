@@ -98,7 +98,7 @@ namespace FanKit.Transformers
 
         //@Constructs
         /// <summary>
-        /// Constructs a <see cref="RemoteControl"/>.
+        /// Initialize a <see cref="RemoteControl"/>.
         /// </summary>
         public RemoteControl()
         {
@@ -182,7 +182,6 @@ namespace FanKit.Transformers
                 this._isManipulation = false;
                 this.RemoteCenter = Vector2.Zero;
 
-                this._vector = e.Position.ToVector2();
                 this.ValueChangeCompleted?.Invoke(this, this._vector); //Delegate
             };
         }

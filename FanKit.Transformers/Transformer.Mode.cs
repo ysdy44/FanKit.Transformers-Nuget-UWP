@@ -47,12 +47,6 @@ namespace FanKit.Transformers
                 if (Math.InNodeRadius(outsideBottom, point)) return TransformerMode.SkewBottom;
             }
 
-            //Translation
-            if (Math.InQuadrangle(point, leftTop, rightTop, rightBottom, leftBottom))
-            {
-                return TransformerMode.Translation;
-            }
-
             return TransformerMode.None;
         }
 

@@ -33,13 +33,14 @@ namespace FanKit.Transformers
         /// <returns> The loaded <see cref="Transformer"/>. </returns>
         public static Transformer LoadTransformer(XElement element)
         {
-            return new Transformer
-            {
-                LeftTop= XML.LoadVector2(element.Element("LeftTop")),
-                RightTop = XML.LoadVector2(element.Element("RightTop")),
-                RightBottom = XML.LoadVector2(element.Element("RightBottom")),
-                LeftBottom = XML.LoadVector2(element.Element("LeftBottom")),
-            };
+            Transformer transformer = new Transformer();
+
+            if (element.Element("LeftTop") is XElement leftTop) transformer.LeftTop = XML.LoadVector2(leftTop);
+            if (element.Element("RightTop") is XElement rightTop) transformer.RightTop = XML.LoadVector2(rightTop);
+            if (element.Element("RightBottom") is XElement rightBottom) transformer.RightBottom = XML.LoadVector2(rightBottom);
+            if (element.Element("LeftBottom") is XElement leftBottom) transformer.LeftBottom = XML.LoadVector2(leftBottom);
+
+            return transformer;
         }
 
     }

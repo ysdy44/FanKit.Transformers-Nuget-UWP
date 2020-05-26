@@ -9,7 +9,12 @@ namespace FanKit.Transformers
     /// </summary>
     public static partial class TransformerGeometry
     {
-        
+
+        /// <summary> 0.27614f </summary>
+        const float _z276 = 0.276114f;
+        /// <summary> 0.55228f </summary>
+        const float _z552 = 0.55228f;
+
         /// <summary> Gets top vector. </summary>
         public const float StartingRotation = -FanKit.Math.Pi / 2.0f;
 
@@ -138,28 +143,28 @@ namespace FanKit.Transformers
 
             //HV
             Vector2 horizontal = (centerRight - centerLeft);
-            Vector2 horizontal276 = horizontal * 0.276f;// vector * 0.552f / 2
+            Vector2 horizontal276 = horizontal * _z276;// vector * _z552 / 2
 
             Vector2 vertical = (centerBottom - centerTop);
-            Vector2 vertical276 = vertical * 0.276f;// vector * 0.552f / 2
+            Vector2 vertical276 = vertical * _z276;// vector * _z552 / 2
 
             //Control
-            Vector2 left1 = centerLeft - vertical276;
-            Vector2 left2 = centerLeft + vertical276;
-            Vector2 top1 = centerTop + horizontal276;
-            Vector2 top2 = centerTop - horizontal276;
-            Vector2 right1 = centerRight + vertical276;
-            Vector2 right2 = centerRight - vertical276;
-            Vector2 bottom1 = centerBottom - horizontal276;
-            Vector2 bottom2 = centerBottom + horizontal276;
+            Vector2 left1 = centerLeft + vertical276;
+            Vector2 left2 = centerLeft - vertical276;
+            Vector2 top1 = centerTop - horizontal276;
+            Vector2 top2 = centerTop + horizontal276;
+            Vector2 right1 = centerRight - vertical276;
+            Vector2 right2 = centerRight + vertical276;
+            Vector2 bottom1 = centerBottom + horizontal276;
+            Vector2 bottom2 = centerBottom - horizontal276;
 
             //Path
             CanvasPathBuilder pathBuilder = new CanvasPathBuilder(resourceCreator);
             pathBuilder.BeginFigure(centerBottom);
-            pathBuilder.AddCubicBezier(bottom1, left2, centerLeft);
-            pathBuilder.AddCubicBezier(left1, top2, centerTop);
-            pathBuilder.AddCubicBezier(top1, right2, centerRight);
-            pathBuilder.AddCubicBezier(right1, bottom2, centerBottom);
+            pathBuilder.AddCubicBezier(bottom2, left1, centerLeft);
+            pathBuilder.AddCubicBezier(left2, top1, centerTop);
+            pathBuilder.AddCubicBezier(top2, right1, centerRight);
+            pathBuilder.AddCubicBezier(right2, bottom1, centerBottom);
             pathBuilder.EndFigure(CanvasFigureLoop.Closed);
 
             //Geometry

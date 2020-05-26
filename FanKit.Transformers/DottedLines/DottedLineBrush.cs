@@ -29,7 +29,7 @@ namespace FanKit.Transformers
 
         //@Constructs
         /// <summary>
-        /// Constructs a brush for drawing dotted-line.
+        /// Initialize a brush for drawing dotted-line.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
         /// <param name="distance"> The sistance between two gradient points. </param>

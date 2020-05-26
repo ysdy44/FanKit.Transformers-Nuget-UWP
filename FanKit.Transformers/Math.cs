@@ -15,6 +15,8 @@ namespace FanKit
         public static float RadiansStepFrequency(float radian) => ((int)((radian + Math.RadiansStepHalf) / Math.RadiansStep)) * Math.RadiansStep;//Get step radians
 
 
+        /// <summary> The number pi*2. </summary>
+        public const float PiTwice = 6.283185307179586476925286766559f;
         /// <summary> The number pi. </summary>
         public const float Pi = 3.1415926535897932384626433832795028841971693993751f;
         /// <summary> The number pi/2. </summary>
