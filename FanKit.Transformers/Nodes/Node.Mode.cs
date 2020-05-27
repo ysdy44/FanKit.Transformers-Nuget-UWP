@@ -64,15 +64,15 @@ namespace FanKit.Transformers
         {
             if (node.IsChecked)
             {
+                //When you click on a checked node point ...
+                Vector2 nodePoint = Vector2.Transform(node.Point, matrix);
+                if (Math.InNodeRadius(point, nodePoint))
+                {
+                    return NodeMode.PointWithChecked;
+                }
+
                 if (node.IsSmooth)
                 {
-                    //When you click on a checked node point ...
-                    Vector2 nodePoint = Vector2.Transform(node.Point, matrix);
-                    if (Math.InNodeRadius(point, nodePoint))
-                    {
-                        return NodeMode.PointWithChecked;
-                    }
-
                     Vector2 nodeLeftControlPoint = Vector2.Transform(node.LeftControlPoint, matrix);
                     Vector2 nodeRightControlPoint = Vector2.Transform(node.RightControlPoint, matrix);
 

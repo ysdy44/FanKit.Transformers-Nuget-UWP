@@ -109,6 +109,7 @@
   <ItemGroup>
     <Compile Include="DottedLines\DottedLineBrush.cs" />
     <Compile Include="DottedLines\DottedLineImage.cs" />
+    <Compile Include="Enums\BorderMode.cs" />
     <Compile Include="Enums\MarqueeCompositeMode.cs" />
     <Compile Include="Enums\MarqueeToolType.cs" />
     <Compile Include="Enums\NodeCollectionMode.cs" />

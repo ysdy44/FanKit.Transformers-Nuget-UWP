@@ -44,7 +44,7 @@ namespace FanKit.Transformers
         /// Initialize a <see cref = "Transformer" />.
         /// </summary>
         /// <param name="transformer"> The transformer. </param>
-        public TransformerBorder(Transformer transformer)
+        public TransformerBorder(ITransformerLTRB transformer)
         {
             float left = float.MaxValue;
             float top = float.MaxValue;

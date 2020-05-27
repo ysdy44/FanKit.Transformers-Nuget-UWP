@@ -106,5 +106,49 @@ namespace FanKit.Transformers
 
         #endregion
 
+
+        /// <summary>
+        /// Gets value by left, right, top, bottom.
+        /// </summary>
+        /// <param name="borderMode"> The border mode </param>
+        /// <returns> The produced value. </returns>
+        public float GetBorderValue(BorderMode borderMode)
+        {
+            switch (borderMode)
+            {
+                case BorderMode.MinX: return 0;
+                case BorderMode.CenterX: return this.Width / 2.0f;
+                case BorderMode.MaxX: return this.Width;
+
+                case BorderMode.MinY: return 0;
+                case BorderMode.CenterY: return this.Height / 2.0f;
+                case BorderMode.MaxY: return this.Height;
+            }
+            return 0;
+        }
+
+        /// <summary>
+        /// Gets vector by left, right, top, bottom.
+        /// </summary>
+        /// <param name="indicatorMode"> The indicator mode </param>
+        /// <returns> The produced vector. </returns>
+        public Vector2 GetIndicatorVector(IndicatorMode indicatorMode)
+        {
+            switch (indicatorMode)
+            {
+                case IndicatorMode.LeftTop: return new Vector2(0, 0);
+                case IndicatorMode.RightTop: return new Vector2(this.Width, 0);
+                case IndicatorMode.RightBottom: return new Vector2(this.Width, this.Height);
+                case IndicatorMode.LeftBottom: return new Vector2(0, this.Height);
+
+                case IndicatorMode.Left: return new Vector2(0, this.Height / 2.0f);
+                case IndicatorMode.Top: return new Vector2(this.Width / 2.0f, 0);
+                case IndicatorMode.Right: return new Vector2(this.Width, this.Height / 2.0f);
+                case IndicatorMode.Bottom: return new Vector2(this.Width / 2.0f, this.Height);
+
+                case IndicatorMode.Center: return new Vector2(this.Width / 2.0f, this.Height / 2.0f);
+            }
+            return new Vector2(0, 0);
+        }
     }
 }

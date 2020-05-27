@@ -17,18 +17,36 @@ namespace FanKit.Transformers
         public event IndicatorModeHandler ModeChanged;
 
 
+        //@VisualState
+        IndicatorMode _vsMode;
+        public VisualState VisualState
+        {
+            get
+            {
+                if (this._vsMode == IndicatorMode.None)
+                    return this.Normal;
+                else
+                    return this.Enable;
+            }
+            set => VisualStateManager.GoToState(this, value.Name, false);
+        }
+
         #region DependencyProperty
 
 
         /// <summary> Gets or sets <see cref = "IndicatorControl" />'s mode. </summary>
         public IndicatorMode Mode
         {
+            get => this._vsMode;
             set
             {
-                if (this.mode == value) return;
+                if (this._vsMode == value) return;
 
-                this.SetMode(value, this.mode);
-                this.mode = value;
+                this.IsHitTestVisible = (value != IndicatorMode.None);
+
+                this.SetMode(value, this._vsMode);
+                this._vsMode = value;
+                this.VisualState = this.VisualState;// VisualState
             }
         }
 
@@ -37,17 +55,16 @@ namespace FanKit.Transformers
         {
             set
             {
-                if (this.mode == value) return;
+                if (this._vsMode == value) return;
 
-                this.SetMode(value, this.mode);
-                this.mode = value;
+                this.SetMode(value, this._vsMode);
+                this._vsMode = value;
 
                 this.ModeChanged?.Invoke(this, value);//Delegate
             }
         }
 
 
-        IndicatorMode mode;
         private void SetMode(IndicatorMode value,IndicatorMode startingValue)
         {
             switch (startingValue)
@@ -132,21 +149,21 @@ namespace FanKit.Transformers
     public sealed partial class IndicatorControl : UserControl
     {
 
-        private void Show(UIElement element)
+        private void Show(Rectangle rectangle)
         {
             this.ShowStoryboard.Stop();
 
-            Storyboard.SetTarget(this.ShowDoubleAnimationX, element);
-            Storyboard.SetTarget(this.ShowDoubleAnimationY, element);
+            Storyboard.SetTarget(this.ShowDoubleAnimationX, rectangle);
+            Storyboard.SetTarget(this.ShowDoubleAnimationY, rectangle);
 
             this.ShowStoryboard.Begin();
         }
-        private void Fade(UIElement element)
+        private void Fade(Rectangle rectangle)
         {
             this.FadeStoryboard.Stop();
 
-            Storyboard.SetTarget(this.FadeDoubleAnimationX, element);
-            Storyboard.SetTarget(this.FadeDoubleAnimationY, element);
+            Storyboard.SetTarget(this.FadeDoubleAnimationX, rectangle);
+            Storyboard.SetTarget(this.FadeDoubleAnimationY, rectangle);
 
             this.FadeStoryboard.Begin();
         }

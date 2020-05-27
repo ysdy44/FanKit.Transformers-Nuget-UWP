@@ -53,6 +53,28 @@ namespace FanKit.Transformers
         /// Turn to transformer.
         /// </summary>
         public Transformer ToTransformer() => new Transformer(this.Left, this.Top, this.Right, this.Bottom);
-        
+               
+
+        /// <summary>
+        /// Gets value by left, right, top, bottom.
+        /// </summary>
+        /// <param name="borderMode"> The border mode </param>
+        /// <returns> The produced value. </returns>
+        public float GetBorderValue(BorderMode borderMode)
+        {
+            switch (borderMode)
+            {
+                case BorderMode.MinX: return this.Left;
+                case BorderMode.CenterX: return this.CenterX;
+                case BorderMode.MaxX: return this.Right;
+
+                case BorderMode.MinY: return this.Top;
+                case BorderMode.CenterY: return this.CenterY;
+                case BorderMode.MaxY: return this.Bottom;
+
+            }
+            return this.Left;
+        }
+
     }
 }

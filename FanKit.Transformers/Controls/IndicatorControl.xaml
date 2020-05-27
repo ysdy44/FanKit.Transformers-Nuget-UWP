@@ -46,6 +46,23 @@
             <RotateTransform x:Name="RotateTransform"/>
         </Canvas.RenderTransform>
 
+        <!--VisualState-->
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="CommonStates">
+
+                <VisualState x:Name="Normal"/>
+
+                <VisualState x:Name="Enable">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="LeftTopRectangle" Storyboard.TargetProperty="Fill">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlBackgroundAccentBrush}" />
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
 
         <!--Background-->
         <Line x:Name="BackLeftLine" IsHitTestVisible="False" StrokeThickness="4" Stroke="{x:Bind UserControl.BorderBrush,Mode=OneWay}"/>
@@ -56,34 +73,34 @@
 
         <!--Rectangle
         <Button x:Name="LeftTopButton" Padding="0" Background="Transparent" BorderThickness="0" >
-            <Ellipse x:Name="LeftTopRectangle" IsHitTestVisible="False" Width="16" Height="16" StrokeThickness="1" Stroke="{x:Bind UserControl.BorderBrush, Mode=OneWay}" Fill="{x:Bind UserControl.Background, Mode=OneWay}"/>
+            <Rectangle x:Name="LeftTopRectangle" IsHitTestVisible="False" Width="14" Height="14" StrokeThickness="1" Stroke="{x:Bind UserControl.BorderBrush, Mode=OneWay}" Fill="{x:Bind UserControl.Background, Mode=OneWay}"/>
         </Button>
         -->
         <Button x:Name="RightTopButton" Padding="0" Background="Transparent" BorderThickness="0" >
-            <Ellipse x:Name="RightTopRectangle" IsHitTestVisible="False" Width="16" Height="16" StrokeThickness="1" Stroke="{x:Bind UserControl.BorderBrush, Mode=OneWay}" Fill="{x:Bind UserControl.Background, Mode=OneWay}"/>
+            <Rectangle x:Name="RightTopRectangle" IsHitTestVisible="False" Width="14" Height="14" StrokeThickness="1" Stroke="{x:Bind UserControl.BorderBrush, Mode=OneWay}" Fill="{x:Bind UserControl.Background, Mode=OneWay}"/>
         </Button>
         <Button x:Name="RightBottomButton" Padding="0" Background="Transparent" BorderThickness="0" >
-            <Ellipse x:Name="RightBottomRectangle" IsHitTestVisible="False" Width="16" Height="16" StrokeThickness="1" Stroke="{x:Bind UserControl.BorderBrush, Mode=OneWay}" Fill="{x:Bind UserControl.Background, Mode=OneWay}"/>
+            <Rectangle x:Name="RightBottomRectangle" IsHitTestVisible="False" Width="14" Height="14" StrokeThickness="1" Stroke="{x:Bind UserControl.BorderBrush, Mode=OneWay}" Fill="{x:Bind UserControl.Background, Mode=OneWay}"/>
         </Button>
         <Button x:Name="LeftBottomButton" Padding="0" Background="Transparent" BorderThickness="0" >
-            <Ellipse x:Name="LeftBottomRectangle" IsHitTestVisible="False" Width="16" Height="16" StrokeThickness="1" Stroke="{x:Bind UserControl.BorderBrush, Mode=OneWay}" Fill="{x:Bind UserControl.Background, Mode=OneWay}"/>
+            <Rectangle x:Name="LeftBottomRectangle" IsHitTestVisible="False" Width="14" Height="14" StrokeThickness="1" Stroke="{x:Bind UserControl.BorderBrush, Mode=OneWay}" Fill="{x:Bind UserControl.Background, Mode=OneWay}"/>
         </Button>
 
         <Button x:Name="LeftButton" Padding="0" Background="Transparent" BorderThickness="0" >
-            <Ellipse x:Name="LeftRectangle" IsHitTestVisible="False" Width="16" Height="16" StrokeThickness="1" Stroke="{x:Bind UserControl.BorderBrush, Mode=OneWay}" Fill="{x:Bind UserControl.Background, Mode=OneWay}"/>
+            <Rectangle x:Name="LeftRectangle" IsHitTestVisible="False" Width="14" Height="14" StrokeThickness="1" Stroke="{x:Bind UserControl.BorderBrush, Mode=OneWay}" Fill="{x:Bind UserControl.Background, Mode=OneWay}"/>
         </Button>
         <Button x:Name="TopButton" Padding="0" Background="Transparent" BorderThickness="0" >
-            <Ellipse x:Name="TopRectangle" IsHitTestVisible="False" Width="16" Height="16" StrokeThickness="1" Stroke="{x:Bind UserControl.BorderBrush, Mode=OneWay}" Fill="{x:Bind UserControl.Background, Mode=OneWay}"/>
+            <Rectangle x:Name="TopRectangle" IsHitTestVisible="False" Width="14" Height="14" StrokeThickness="1" Stroke="{x:Bind UserControl.BorderBrush, Mode=OneWay}" Fill="{x:Bind UserControl.Background, Mode=OneWay}"/>
         </Button>
         <Button x:Name="RightButton" Padding="0" Background="Transparent" BorderThickness="0" >
-            <Ellipse x:Name="RightRectangle" IsHitTestVisible="False" Width="16" Height="16" StrokeThickness="1" Stroke="{x:Bind UserControl.BorderBrush, Mode=OneWay}" Fill="{x:Bind UserControl.Background, Mode=OneWay}"/>
+            <Rectangle x:Name="RightRectangle" IsHitTestVisible="False" Width="14" Height="14" StrokeThickness="1" Stroke="{x:Bind UserControl.BorderBrush, Mode=OneWay}" Fill="{x:Bind UserControl.Background, Mode=OneWay}"/>
         </Button>
         <Button x:Name="BottomButton" Padding="0" Background="Transparent" BorderThickness="0" >
-            <Ellipse x:Name="BottomRectangle" IsHitTestVisible="False" Width="16" Height="16" StrokeThickness="1" Stroke="{x:Bind UserControl.BorderBrush, Mode=OneWay}" Fill="{x:Bind UserControl.Background, Mode=OneWay}"/>
+            <Rectangle x:Name="BottomRectangle" IsHitTestVisible="False" Width="14" Height="14" StrokeThickness="1" Stroke="{x:Bind UserControl.BorderBrush, Mode=OneWay}" Fill="{x:Bind UserControl.Background, Mode=OneWay}"/>
         </Button>
 
         <Button x:Name="CenterButton" Padding="0" Background="Transparent" BorderThickness="0" >
-            <Ellipse x:Name="CenterRectangle" IsHitTestVisible="False" Width="16" Height="16" StrokeThickness="1" Stroke="{x:Bind UserControl.BorderBrush, Mode=OneWay}" Fill="{x:Bind UserControl.Background, Mode=OneWay}"/>
+            <Rectangle x:Name="CenterRectangle" IsHitTestVisible="False" Width="14" Height="14" StrokeThickness="1" Stroke="{x:Bind UserControl.BorderBrush, Mode=OneWay}" Fill="{x:Bind UserControl.Background, Mode=OneWay}"/>
         </Button>
 
 
@@ -96,7 +113,7 @@
 
         <!--LeftTop-->
         <Button x:Name="LeftTopButton" Padding="0" Background="Transparent" BorderThickness="0" >
-            <Ellipse x:Name="LeftTopRectangle" IsHitTestVisible="False" Width="16" Height="16" StrokeThickness="1" Stroke="{x:Bind UserControl.BorderBrush, Mode=OneWay}" Fill="{ThemeResource SystemControlBackgroundAccentBrush}"/>
+            <Rectangle x:Name="LeftTopRectangle" IsHitTestVisible="False" Width="16" Height="16" StrokeThickness="1" Stroke="{x:Bind UserControl.BorderBrush, Mode=OneWay}" Fill="{x:Bind UserControl.Background, Mode=OneWay}"/>
         </Button>
 
     </Canvas>

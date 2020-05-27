@@ -44,5 +44,50 @@ namespace FanKit.Transformers
         /// <summary> Gets vertical vector. </summary>
         public Vector2 Vertical => this.CenterBottom - this.CenterTop;
 
+
+        /// <summary>
+        /// Gets value by left, right, top, bottom.
+        /// </summary>
+        /// <param name="borderMode"> The border mode </param>
+        /// <returns> The produced value. </returns>
+        public float GetBorderValue(BorderMode borderMode)
+        {
+            switch (borderMode)
+            {
+                case BorderMode.MinX: return this.MinX;
+                case BorderMode.CenterX: return this.Center.X;
+                case BorderMode.MaxX: return this.MaxX;
+
+                case BorderMode.MinY: return this.MinY;
+                case BorderMode.CenterY: return this.Center.Y;
+                case BorderMode.MaxY: return this.MaxY;
+
+            }
+            return this.MinX;
+        }
+
+        /// <summary>
+        /// Gets vector by left, right, top, bottom.
+        /// </summary>
+        /// <param name="indicatorMode"> The indicator mode </param>
+        /// <returns> The produced vector. </returns>
+        public Vector2 GetIndicatorVector(IndicatorMode indicatorMode)
+        {
+            switch (indicatorMode)
+            {
+                case IndicatorMode.LeftTop: return this.LeftTop;
+                case IndicatorMode.RightTop: return this.RightTop;
+                case IndicatorMode.RightBottom: return this.RightBottom;
+                case IndicatorMode.LeftBottom: return this.LeftBottom;
+
+                case IndicatorMode.Left: return this.CenterLeft;
+                case IndicatorMode.Top: return this.CenterTop;
+                case IndicatorMode.Right: return this.CenterRight;
+                case IndicatorMode.Bottom: return this.CenterBottom;
+
+                case IndicatorMode.Center: return this.Center;
+            }
+            return this.LeftTop;
+        }
     }
 }

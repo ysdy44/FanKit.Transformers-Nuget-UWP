@@ -29,7 +29,7 @@ namespace FanKit.Transformers
 
 
         /// <summary>
-        /// 
+        /// X
         /// </summary>
         /// <param name="value"> The destination value.</param>
         /// <param name="indicatorMode"> The indicator mode </param>
@@ -44,7 +44,7 @@ namespace FanKit.Transformers
         }
 
         /// <summary>
-        /// 
+        /// Y
         /// </summary>
         /// <param name="value"> The destination value.</param>
         /// <param name="indicatorMode"> The indicator mode </param>
@@ -60,7 +60,7 @@ namespace FanKit.Transformers
 
 
         /// <summary>
-        /// 
+        /// Width
         /// </summary>
         /// <param name="value"> The destination value.</param>
         /// <param name="indicatorMode"> The indicator mode </param>
@@ -82,7 +82,7 @@ namespace FanKit.Transformers
         }
 
         /// <summary>
-        /// 
+        /// Height
         /// </summary>
         /// <param name="value"> The destination value.</param>
         /// <param name="indicatorMode"> The indicator mode </param>
@@ -105,7 +105,7 @@ namespace FanKit.Transformers
 
 
         /// <summary>
-        /// 
+        /// Rotate
         /// </summary>
         /// <param name="value"> The destination value.</param>
         /// <param name="indicatorMode"> The indicator mode </param>
@@ -122,7 +122,7 @@ namespace FanKit.Transformers
         }
 
         /// <summary>
-        /// 
+        /// Skew
         /// </summary>
         /// <param name="value"> The destination value.</param>
         /// <param name="indicatorMode"> The indicator mode </param>
@@ -175,31 +175,6 @@ namespace FanKit.Transformers
           
 
             return Transformer.FindHomography(transformer, this);
-        }
-
-
-        /// <summary>
-        /// Gets vector by left, right, top, bottom.
-        /// </summary>
-        /// <param name="indicatorMode"> The indicator mode </param>
-        /// <returns> The produced vector. </returns>
-        public Vector2 GetIndicatorVector(IndicatorMode indicatorMode)
-        {
-            switch (indicatorMode)
-            {
-                case IndicatorMode.LeftTop: return this.LeftTop;
-                case IndicatorMode.RightTop: return this.RightTop;
-                case IndicatorMode.RightBottom: return this.RightBottom;
-                case IndicatorMode.LeftBottom: return this.LeftBottom;
-
-                case IndicatorMode.Left: return this.CenterLeft;
-                case IndicatorMode.Top: return this.CenterTop;
-                case IndicatorMode.Right: return this.CenterRight;
-                case IndicatorMode.Bottom: return this.CenterBottom;
-
-                case IndicatorMode.Center: return this.Center;
-            }
-            return this.LeftTop;
         }
 
 
