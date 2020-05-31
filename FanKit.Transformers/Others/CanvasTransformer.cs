@@ -1,6 +1,7 @@
 ﻿ using System;
 using System.Numerics;
 using Windows.Foundation;
+using Windows.Graphics.Imaging;
 using Windows.UI.Xaml.Controls;
 
 namespace FanKit.Transformers
@@ -54,20 +55,37 @@ namespace FanKit.Transformers
 
 
         #region Size
-        
+
 
         /// <summary> <see cref = "CanvasTransformer.ControlWidth" /> and <see cref = "CanvasTransformer.ControlHeight" />'s setter. </summary>
         public Size Size
         {
-            get => this.size;
             set
             {
-                this.ControlWidth = (float)size.Width;
-                this.ControlHeight =  (float)size.Height;
-                this.size = value;
+                this.ControlWidth = (float)value.Width;
+                this.ControlHeight =  (float)value.Height;
             }
         }
-        private Size size;
+        /// <summary> <see cref = "CanvasTransformer.Width" /> and <see cref = "CanvasTransformer.Height" />'s setter. </summary>
+        public BitmapSize BitmapSize
+        {
+            set
+            {
+                int width = (int)value.Width;
+                int height = (int)value.Height;
+
+                this.Width = width;
+                this.Height = height;
+            }
+        }
+
+        /// <summary>
+        /// Get the scale.
+        /// </summary>
+        /// <param name="bitmapSize"> The bitmap size.</param>
+        /// <returns> The produced vector. </returns>
+        public Vector2 GetScale(BitmapSize bitmapSize) => new Vector2((float)bitmapSize.Width / (float)this.Width, (float)bitmapSize.Height / (float)this.Height);
+
 
         /// <summary> 
         /// Fit to the screen. 
@@ -150,5 +168,37 @@ namespace FanKit.Transformers
             }
             return new Vector2(0, 0);
         }
+
+
+        /// <summary>
+        /// Returns a boolean indicating whether the given BitmapSize is equal to this CanvasTransformer instance.
+        /// </summary>
+        /// <param name="other"> The BitmapSize to compare this instance to. </param>
+        /// <returns> Return **true** if the other BitmapSize is equal to this instance, otherwise **false**. </returns>
+        public bool Equals(BitmapSize other)
+        {
+            int width = (int)other.Width;
+            int height = (int)other.Height;
+            if (this.Width != width) return false;
+            if (this.Height != height) return false;
+            return true;
+        }
+
+        /// <summary>
+        /// Returns a value that indicates whether each pair of elements in two specified size is equal.
+        /// </summary>
+        /// <param name="left"> The first CanvasTransformer to compare. </param>
+        /// <param name="right"> The second BitmapSize to compare. </param>
+        /// <returns> Return **true** if left and right are equal, otherwise **false**. </returns>
+        public static bool operator ==(CanvasTransformer left, BitmapSize right) => left.Equals(right);
+
+        /// <summary>
+        /// Returns a boolean indicating whether the two given size are not equal.
+        /// </summary>
+        /// <param name="left"> The first CanvasTransformer to compare. </param>
+        /// <param name="right"> The second BitmapSize to compare. </param>
+        /// <returns> Return **true** if the nodes are not equal; False if they are equal. </returns>
+        public static bool operator !=(CanvasTransformer left, BitmapSize right) => !left.Equals(right);
+
     }
 }

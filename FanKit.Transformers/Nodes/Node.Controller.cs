@@ -41,13 +41,29 @@ namespace FanKit.Transformers
         /// <summary> Fixe angle. </summary>
         Fixed,
     }
-    
+
     /// <summary>  
     /// Nodes of the Bezier Curve.
     /// </summary>
-    public partial struct Node : ICacheTransform
+    public partial class Node : ICacheTransform
     {
+
         //@Static
+        /// <summary>
+        /// Move
+        /// </summary>
+        /// <param name="point"> The point. </param>
+        /// <param name="node"> The node. </param>
+        public static void Move(Vector2 point, Node node)
+        {
+            Vector2 move = point - node.StartingPoint;
+
+            node.Point = point;
+            node.LeftControlPoint = node.StartingLeftControlPoint + move;
+            node.RightControlPoint = node.StartingRightControlPoint + move;
+        }
+        
+
         /// <summary>
         /// It controls the transformation of node contol point.
         /// </summary>
@@ -55,29 +71,23 @@ namespace FanKit.Transformers
         /// <param name="lengthMode"> The length mode. </param>
         /// <param name="angleMode"> The angle mode. </param>
         /// <param name="point"> The point. </param>
-        /// <param name="startingNode"> The starting node. </param>
+        /// <param name="startingNoder"> The starting node. </param>
         /// <param name="isLeftControlPoint"> <see cref="Node.LeftControlPoint"/> or <see cref="Node.RightControlPoint"/>. </param>
         /// <returns> The controlled node. </returns>
-        public static Node Controller(SelfControlPointMode mode, EachControlPointLengthMode lengthMode, EachControlPointAngleMode angleMode, Vector2 point, Node startingNode, bool isLeftControlPoint = true)
+        public static void Controller(SelfControlPointMode mode, EachControlPointLengthMode lengthMode, EachControlPointAngleMode angleMode, Vector2 point, Node node, bool isLeftControlPoint = true)
         {
-            Vector2 startingPoint = startingNode.Point;
+            Vector2 startingPoint = node.StartingPoint;
 
-            Vector2 startingSelfControlPoint = isLeftControlPoint ? startingNode.LeftControlPoint : startingNode.RightControlPoint;
-            Vector2 startingEachControlPoint = isLeftControlPoint ? startingNode.RightControlPoint : startingNode.LeftControlPoint;
+            Vector2 startingSelfControlPoint = isLeftControlPoint ? node.StartingLeftControlPoint : node.StartingRightControlPoint;
+            Vector2 startingEachControlPoint = isLeftControlPoint ? node.StartingRightControlPoint : node.StartingLeftControlPoint;
 
             Vector2 selfControlPoint = Node._getSelfControlPoint(mode, point, startingPoint, startingSelfControlPoint);
             Vector2 eachControlPoint = Node._getEachControlPoint(lengthMode, angleMode, startingPoint, selfControlPoint - startingPoint, startingSelfControlPoint - startingPoint, startingEachControlPoint - startingPoint);
 
-            return new Node
-            {
-                Point = startingNode.Point,
-                LeftControlPoint = isLeftControlPoint ? selfControlPoint : eachControlPoint,
-                RightControlPoint = isLeftControlPoint ? eachControlPoint : selfControlPoint,
-                IsChecked = startingNode.IsChecked,
-                IsSmooth = startingNode.IsSmooth
-            };
+            node.LeftControlPoint = isLeftControlPoint ? selfControlPoint : eachControlPoint;
+            node.RightControlPoint = isLeftControlPoint ? eachControlPoint : selfControlPoint;
         }
-        
+
         //Self
         private static Vector2 _getSelfControlPoint(SelfControlPointMode mode, Vector2 point, Vector2 startingPoint, Vector2 startingSelfControlPoint)
         {
@@ -91,10 +101,10 @@ namespace FanKit.Transformers
                     }
                 case SelfControlPointMode.Length:
                     {
-                        Vector2 startingSelfVector  = startingSelfControlPoint - startingPoint;
+                        Vector2 startingSelfVector = startingSelfControlPoint - startingPoint;
                         Vector2 selfVector = point - startingPoint;
 
-                        float startingSelfLength = startingSelfVector .Length();
+                        float startingSelfLength = startingSelfVector.Length();
                         float selfLength = selfVector.Length();
 
                         //Vector2 startingSelfUnit = startingSelfVector  / startingSelfLength;
@@ -106,7 +116,7 @@ namespace FanKit.Transformers
             }
             return point;
         }
-        
+
         //Each
         private static Vector2 _getEachControlPoint(EachControlPointLengthMode lengthMode, EachControlPointAngleMode angleMode, Vector2 startingPoint, Vector2 selfVector, Vector2 startingSelfVector, Vector2 startingEachVector)
         {
@@ -148,6 +158,6 @@ namespace FanKit.Transformers
             }
             return Vector2.Zero;
         }
-        
+
     }
 }

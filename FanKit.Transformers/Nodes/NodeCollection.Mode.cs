@@ -27,7 +27,7 @@ namespace FanKit.Transformers
 
                 switch (nodeMode)
                 {
-                    case NodeMode.None: break;
+                    case NodeMode.None: continue;
                     case NodeMode.PointWithChecked:
                         {
                             nodeCollection.Index = i;

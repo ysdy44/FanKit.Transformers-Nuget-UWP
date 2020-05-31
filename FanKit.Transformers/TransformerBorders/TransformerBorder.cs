@@ -176,6 +176,41 @@ namespace FanKit.Transformers
             this.CenterY = (Top + bottom) / 2;
         }
 
+        /// <summary>
+        /// Initialize a <see cref = "TransformerBorder" />.
+        /// </summary>
+        /// <param name="nodess"> The NodeCollectionCollection. </param>
+        public TransformerBorder(IList<NodeCollection> nodess)
+        {
+            float left = float.MaxValue;
+            float top = float.MaxValue;
+            float right = float.MinValue;
+            float bottom = float.MinValue;
+
+            void aaa(Vector2 vector)
+            {
+                if (left > vector.X) left = vector.X;
+                if (top > vector.Y) top = vector.Y;
+                if (right < vector.X) right = vector.X;
+                if (bottom < vector.Y) bottom = vector.Y;
+            }
+
+            foreach (NodeCollection nodes in nodess)
+            {
+                foreach (Node node in nodes)
+                {
+                    aaa(node.Point);
+                }
+            }
+
+            this.Left = left;
+            this.Top = top;
+            this.Right = right;
+            this.Bottom = bottom;
+            this.CenterX = (left + right) / 2;
+            this.CenterY = (Top + bottom) / 2;
+        }
+
 
 
         //@Static

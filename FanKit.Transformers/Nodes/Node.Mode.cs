@@ -5,7 +5,7 @@ namespace FanKit.Transformers
     /// <summary>  
     /// Nodes of the Bezier Curve.
     /// </summary>
-    public partial struct Node : ICacheTransform
+    public partial class Node : ICacheTransform
     {
 
         /// <summary>
@@ -18,6 +18,13 @@ namespace FanKit.Transformers
         {
             if (node.IsChecked)
             {
+                //When you click on a checked node point ...
+                Vector2 nodePoint = node.Point;
+                if (Math.InNodeRadius(point, nodePoint))
+                {
+                    return NodeMode.PointWithChecked;
+                }
+
                 if (node.IsSmooth)
                 {
                     Vector2 nodeLeftControlPoint = node.LeftControlPoint;
@@ -31,13 +38,6 @@ namespace FanKit.Transformers
                     {
                         return NodeMode.RightControlPoint;
                     }
-                }
-
-                //When you click on a checked node point ...
-                Vector2 nodePoint = node.Point;
-                if (Math.InNodeRadius(point, nodePoint))
-                {
-                    return NodeMode.PointWithChecked;
                 }
             }
             else

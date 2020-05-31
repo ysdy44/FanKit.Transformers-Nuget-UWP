@@ -113,6 +113,7 @@
     <Compile Include="Enums\MarqueeCompositeMode.cs" />
     <Compile Include="Enums\MarqueeToolType.cs" />
     <Compile Include="Enums\NodeCollectionMode.cs" />
+    <Compile Include="Enums\NodeRemoveMode.cs" />
     <Compile Include="Enums\NodeMode.cs" />
     <Compile Include="Extensions\CanvasDrawingSessionExtensions.cs" />
     <Compile Include="Extensions\CanvasDrawingSessionExtensions.DottedLine.cs" />
@@ -125,10 +126,18 @@
     <Compile Include="Interface\IGetActualTransformer.cs" />
     <Compile Include="Interface\ITransformerGeometry.cs" />
     <Compile Include="Interface\ITransformerLTRB.cs" />
-    <Compile Include="Others\MarqueeTool.cs" />
-    <Compile Include="Nodes\Node.CacheTransform.cs" />
-    <Compile Include="Nodes\Node.Controller.cs" />
+    <Compile Include="Nodes\Node.Operation.cs" />
+    <Compile Include="Nodes\NodeCollection.Selection.cs" />
+    <Compile Include="Nodes\NodeCollectionCollection.CacheTransform.cs" />
+    <Compile Include="Nodes\NodeCollectionCollection.cs" />
+    <Compile Include="Nodes\NodeCollectionCollection.IList.cs" />
+    <Compile Include="Nodes\NodeCollectionCollection.Mode.cs" />
+    <Compile Include="Nodes\NodeCollectionCollection.Operation.cs" />
+    <Compile Include="Nodes\Node.Contained.cs" />
     <Compile Include="Nodes\Node.Mode.cs" />
+    <Compile Include="Nodes\Node.Controller.cs" />
+    <Compile Include="Nodes\NodeCollectionCollection.Selection.cs" />
+    <Compile Include="Others\MarqueeTool.cs" />
     <Compile Include="Nodes\Node.cs" />
     <Compile Include="Nodes\NodeCollection.CacheTransform.cs" />
     <Compile Include="Nodes\NodeCollection.IList.cs" />
@@ -191,6 +200,7 @@
     <Compile Include="TransformerRects\TransformerRect.Property.cs" />
     <Compile Include="XMLs\XML.Color.cs" />
     <Compile Include="XMLs\XML.Node.cs" />
+    <Compile Include="XMLs\XML.NodeCollectionCollection.cs" />
     <Compile Include="XMLs\XML.NodeCollection.cs" />
     <Compile Include="XMLs\XML.Transformer.cs" />
     <Compile Include="XMLs\XML.Vector2.cs" />

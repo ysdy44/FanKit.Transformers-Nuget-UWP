@@ -1,7 +1,7 @@
 ﻿namespace FanKit.Transformers
 {
     /// <summary>
-    /// State of <see cref="Node"/>. 
+    /// Mode of <see cref="Node"/>. 
     /// </summary>
     public enum NodeMode
     {

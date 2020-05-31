@@ -98,5 +98,80 @@ namespace FanKit.Transformers
             }
         }
 
+        /// <summary>
+        /// Draw bezier-curve by NodeCollection.
+        /// </summary>
+        /// <param name="drawingSession"> The drawing-session. </param>
+        /// <param name="nodeCollection"> The NodeCollection. </param>
+        /// <param name="matrix"> The matrix. </param>
+        /// <param name="accentColor"> The accent color. </param>
+        public static void DrawNodeCollection(this CanvasDrawingSession drawingSession, NodeCollection nodeCollection, Matrix3x2 matrix, Windows.UI.Color accentColor)
+        {
+            foreach (Node node in nodeCollection)
+            {
+                Vector2 vector = Vector2.Transform(node.Point, matrix);
+
+                if (node.IsChecked == false)
+                {
+                    if (node.IsSmooth == false) drawingSession.DrawNode3(vector, accentColor);
+                    else drawingSession.DrawNode(vector, accentColor);
+                }
+                else
+                {
+                    if (node.IsSmooth == false) drawingSession.DrawNode4(vector, accentColor);
+                    else
+                    {
+                        Vector2 rightControlPoint = Vector2.Transform(node.RightControlPoint, matrix);
+                        drawingSession.DrawLine(vector, rightControlPoint, accentColor);
+                        drawingSession.DrawNode5(rightControlPoint, accentColor);
+
+                        Vector2 leftControlPoint = Vector2.Transform(node.LeftControlPoint, matrix);
+                        drawingSession.DrawLine(vector, leftControlPoint, accentColor);
+                        drawingSession.DrawNode5(leftControlPoint, accentColor);
+
+                        drawingSession.DrawNode2(vector, accentColor);
+                    }
+                }
+            }
+
+            /*
+            for (int i = 0; i < nodeCollection.Count; i++)
+            {
+                Node node = nodeCollection[i];
+                Vector2 vector = Vector2.Transform(node.Point, matrix);
+
+                if (node.IsChecked == false)
+                {
+                    if (node.IsSmooth == false) drawingSession.DrawNode3(vector, accentColor);
+                    else drawingSession.DrawNode(vector, accentColor);
+                }
+                else
+                {
+                    if (node.IsSmooth == false) drawingSession.DrawNode4(vector, accentColor);
+                    else
+                    {
+                        //Ignoring the right-control-point of the first point.
+                        if (i != 0)
+                        {
+                            Vector2 rightControlPoint = Vector2.Transform(node.RightControlPoint, matrix);
+                            drawingSession.DrawLine(vector, rightControlPoint, accentColor);
+                            drawingSession.DrawNode5(rightControlPoint, accentColor);
+                        }
+
+                        //Ignoring the left-control-point of the last point.
+                        if (i != nodeCollection.Count - 1)
+                        {
+                            Vector2 leftControlPoint = Vector2.Transform(node.LeftControlPoint, matrix);
+                            drawingSession.DrawLine(vector, leftControlPoint, accentColor);
+                            drawingSession.DrawNode5(leftControlPoint, accentColor);
+                        }
+
+                        drawingSession.DrawNode2(vector, accentColor);
+                    }
+                }
+            }
+             */
+        }
+
     }
 }

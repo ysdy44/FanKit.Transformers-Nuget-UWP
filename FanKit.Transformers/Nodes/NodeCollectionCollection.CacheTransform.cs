@@ -3,10 +3,10 @@ using System.Numerics;
 
 namespace FanKit.Transformers
 {
-    /// <summary>  
-    /// Nodes of the Bezier Curve.
+    /// <summary>
+    /// Represents an ordered collection of node collection.
     /// </summary>
-    public sealed partial class NodeCollection : ICacheTransform, IList<Node>, IEnumerable<Node>
+    public sealed partial class NodeCollectionCollection : ICacheTransform, IList<NodeCollection>, IEnumerable<NodeCollection>
     {
 
         /// <summary>
@@ -14,9 +14,9 @@ namespace FanKit.Transformers
         /// </summary>
         public void CacheTransform()
         {
-            foreach (Node node in this)
+            foreach (NodeCollection nodes in this)
             {
-                node.CacheTransform();
+                nodes.CacheTransform();
             }
         }
         /// <summary>
@@ -24,12 +24,9 @@ namespace FanKit.Transformers
         /// </summary>
         public void CacheTransformOnlySelected()
         {
-            foreach (Node node in this)
+            foreach (NodeCollection nodes in this)
             {
-                if (node.IsChecked)
-                {
-                    node.CacheTransform();
-                }
+                nodes.CacheTransformOnlySelected();
             }
         }
 
@@ -40,9 +37,9 @@ namespace FanKit.Transformers
         /// <param name="vector"> The add value use to summed. </param>
         public void TransformAdd(Vector2 vector)
         {
-            foreach (Node node in this)
+            foreach (NodeCollection nodes in this)
             {
-                node.TransformAdd(vector);
+                nodes.TransformAdd(vector);
             }
         }
         /// <summary>
@@ -51,12 +48,9 @@ namespace FanKit.Transformers
         /// <param name="vector"> The add value use to summed. </param>
         public void TransformAddOnlySelected(Vector2 vector)
         {
-            foreach (Node node in this)
+            foreach (NodeCollection nodes in this)
             {
-                if (node.IsChecked)
-                {
-                    node.TransformAdd(vector);
-                }
+                nodes.TransformAddOnlySelected(vector);
             }
         }
 
@@ -67,9 +61,9 @@ namespace FanKit.Transformers
         /// <param name="matrix"> The resulting matrix. </param>
         public void TransformMultiplies(Matrix3x2 matrix)
         {
-            foreach (Node node in this)
+            foreach (NodeCollection nodes in this)
             {
-                node.TransformMultiplies(matrix);
+                nodes.TransformMultiplies(matrix);
             }
         }
         /// <summary>
@@ -78,12 +72,9 @@ namespace FanKit.Transformers
         /// <param name="matrix"> The resulting matrix. </param>  
         public void TransformMultipliesOnlySelected(Matrix3x2 matrix)
         {
-            foreach (Node node in this)
+            foreach (NodeCollection nodes in this)
             {
-                if (node.IsChecked)
-                {
-                    node.TransformMultiplies(matrix);
-                }
+                nodes.TransformMultipliesOnlySelected(matrix);
             }
         }
 
