@@ -19,17 +19,6 @@ namespace FanKit.Transformers
             switch (node.Type)
             {
                 case NodeType.BeginFigure:
-                    {
-                        Vector2 startPoint = node.Point;
-
-                        if (Math.InNodeRadius(point, startPoint))
-                        {
-                            if (node.IsChecked) return NodeMode.PointWithChecked;
-                            else return NodeMode.PointWithoutChecked;
-                        }
-                    }
-                    break;
-
                 case NodeType.Node:
                     {
                         if (node.IsChecked)
@@ -87,17 +76,6 @@ namespace FanKit.Transformers
             switch (node.Type)
             {
                 case NodeType.BeginFigure:
-                    {
-                        Vector2 startPoint = Vector2.Transform(node.Point, matrix);
-
-                        if (Math.InNodeRadius(point, startPoint))
-                        {
-                            if (node.IsChecked) return NodeMode.PointWithChecked;
-                            else return NodeMode.PointWithoutChecked;
-                        }
-                    }
-                    break;
-
                 case NodeType.Node:
                     {
                         if (node.IsChecked)

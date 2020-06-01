@@ -24,8 +24,29 @@ namespace FanKit.Transformers
                         {
                             Vector2 vector = node.Point;
 
-                            if (node.IsChecked == false) drawingSession.DrawNode3(vector, Windows.UI.Colors.Gold);
-                            else drawingSession.DrawNode4(vector, Windows.UI.Colors.Gold);
+                            if (node.IsChecked == false)
+                            {
+                                if (node.IsSmooth == false) drawingSession.DrawNode3(vector, Windows.UI.Colors.Gold);
+                                else drawingSession.DrawNode(vector, Windows.UI.Colors.Gold);
+                            }
+                            else
+                            {
+                                if (node.IsSmooth == false) drawingSession.DrawNode4(vector, Windows.UI.Colors.Gold);
+                                else
+                                {
+                                    //Right
+                                    Vector2 rightControlPoint = node.RightControlPoint;
+                                    drawingSession.DrawLineDodgerBlue(vector, rightControlPoint);
+                                    drawingSession.DrawNode5(rightControlPoint, Windows.UI.Colors.Gold);
+
+                                    //Left
+                                    Vector2 leftControlPoint = node.LeftControlPoint;
+                                    drawingSession.DrawLineDodgerBlue(vector, leftControlPoint);
+                                    drawingSession.DrawNode5(leftControlPoint, Windows.UI.Colors.Gold);
+
+                                    drawingSession.DrawNode2(vector, Windows.UI.Colors.Gold);
+                                }
+                            }
                         }
                         break;
                     case NodeType.Node:
@@ -61,8 +82,6 @@ namespace FanKit.Transformers
                         break;
                 }
             }
-
-            drawingSession.DrawText(nodeCollection.StringBuilder.ToString(),new Vector2(), Windows.UI.Colors.Red);
         }
 
         /// <summary>
@@ -79,10 +98,31 @@ namespace FanKit.Transformers
                 {
                     case NodeType.BeginFigure:
                         {
-                            Vector2 vector = Vector2.Transform(node.Point, matrix);
+                            Vector2 vector = node.Point;
 
-                            if (node.IsChecked == false) drawingSession.DrawNode3(vector, Windows.UI.Colors.Gold);
-                            else drawingSession.DrawNode4(vector, Windows.UI.Colors.Gold);
+                            if (node.IsChecked == false)
+                            {
+                                if (node.IsSmooth == false) drawingSession.DrawNode3(vector, Windows.UI.Colors.Gold);
+                                else drawingSession.DrawNode(vector, Windows.UI.Colors.Gold);
+                            }
+                            else
+                            {
+                                if (node.IsSmooth == false) drawingSession.DrawNode4(vector, Windows.UI.Colors.Gold);
+                                else
+                                {
+                                    //Right
+                                    Vector2 rightControlPoint = node.RightControlPoint;
+                                    drawingSession.DrawLineDodgerBlue(vector, rightControlPoint);
+                                    drawingSession.DrawNode5(rightControlPoint, Windows.UI.Colors.Gold);
+
+                                    //Left
+                                    Vector2 leftControlPoint = node.LeftControlPoint;
+                                    drawingSession.DrawLineDodgerBlue(vector, leftControlPoint);
+                                    drawingSession.DrawNode5(leftControlPoint, Windows.UI.Colors.Gold);
+
+                                    drawingSession.DrawNode2(vector, Windows.UI.Colors.Gold);
+                                }
+                            }
                         }
                         break;
                     case NodeType.Node:
@@ -118,8 +158,6 @@ namespace FanKit.Transformers
                         break;
                 }
             }
-
-            drawingSession.DrawText(nodeCollection.StringBuilder.ToString(), new Vector2(), Windows.UI.Colors.Red);
         }
 
         /// <summary>
@@ -139,8 +177,29 @@ namespace FanKit.Transformers
                         {
                             Vector2 vector = Vector2.Transform(node.Point, matrix);
 
-                            if (node.IsChecked == false) drawingSession.DrawNode3(vector, Windows.UI.Colors.Gold);
-                            else drawingSession.DrawNode4(vector, Windows.UI.Colors.Gold);
+                            if (node.IsChecked == false)
+                            {
+                                if (node.IsSmooth == false) drawingSession.DrawNode3(vector, Windows.UI.Colors.Gold);
+                                else drawingSession.DrawNode(vector, Windows.UI.Colors.Gold);
+                            }
+                            else
+                            {
+                                if (node.IsSmooth == false) drawingSession.DrawNode4(vector, Windows.UI.Colors.Gold);
+                                else
+                                {
+                                    //Right
+                                    Vector2 rightControlPoint = Vector2.Transform(node.RightControlPoint, matrix);
+                                    drawingSession.DrawLine(vector, rightControlPoint, accentColor);
+                                    drawingSession.DrawNode5(rightControlPoint, Windows.UI.Colors.Gold);
+
+                                    //Left
+                                    Vector2 leftControlPoint = Vector2.Transform(node.LeftControlPoint, matrix);
+                                    drawingSession.DrawLine(vector, leftControlPoint, accentColor);
+                                    drawingSession.DrawNode5(leftControlPoint, Windows.UI.Colors.Gold);
+
+                                    drawingSession.DrawNode2(vector, Windows.UI.Colors.Gold);
+                                }
+                            }
                         }
                         break;
                     case NodeType.Node:
@@ -176,8 +235,6 @@ namespace FanKit.Transformers
                         break;
                 }
             }
-
-            drawingSession.DrawText(nodeCollection.StringBuilder.ToString(), new Vector2(), Windows.UI.Colors.Red);
         }
 
     }

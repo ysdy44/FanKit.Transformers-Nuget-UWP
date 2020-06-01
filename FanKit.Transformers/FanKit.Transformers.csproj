@@ -107,11 +107,24 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="CanvasTransformers\CanvasTransformer.cs" />
+    <Compile Include="CanvasTransformers\CanvasTransformer.Matrix.cs" />
+    <Compile Include="CanvasTransformers\CanvasTransformer.Operator.cs" />
+    <Compile Include="CanvasTransformers\CanvasTransformer.Transition.cs" />
     <Compile Include="DottedLines\DottedLineBrush.cs" />
     <Compile Include="DottedLines\DottedLineImage.cs" />
     <Compile Include="Enums\BorderMode.cs" />
     <Compile Include="Enums\MarqueeCompositeMode.cs" />
     <Compile Include="Enums\MarqueeToolType.cs" />
+    <Compile Include="NodeBorders\NodeBorder.cs" />
+    <Compile Include="NodeBorders\NodeBorderCollection.cs" />
+    <Compile Include="NodeCollections\NodeCollection.CacheTransform.cs" />
+    <Compile Include="NodeCollections\NodeCollection.cs" />
+    <Compile Include="NodeCollections\NodeCollection.IList.cs" />
+    <Compile Include="NodeCollections\NodeCollection.Mode.cs" />
+    <Compile Include="NodeCollections\NodeCollection.Operation.cs" />
+    <Compile Include="NodeCollections\NodeCollection.PathReceiver.cs" />
+    <Compile Include="NodeCollections\NodeCollection.Selection.cs" />
     <Compile Include="Enums\NodeCollectionMode.cs" />
     <Compile Include="Enums\NodeRemoveMode.cs" />
     <Compile Include="Enums\NodeMode.cs" />
@@ -128,20 +141,12 @@
     <Compile Include="Interface\ITransformerGeometry.cs" />
     <Compile Include="Interface\ITransformerLTRB.cs" />
     <Compile Include="Nodes\Node.Operation.cs" />
-    <Compile Include="Nodes\NodeCollection.PathReceiver.cs" />
-    <Compile Include="Nodes\NodeCollection.Selection.cs" />
     <Compile Include="Nodes\Node.Contained.cs" />
     <Compile Include="Nodes\Node.Mode.cs" />
     <Compile Include="Nodes\Node.Controller.cs" />
     <Compile Include="Others\MarqueeTool.cs" />
     <Compile Include="Nodes\Node.cs" />
-    <Compile Include="Nodes\NodeCollection.CacheTransform.cs" />
-    <Compile Include="Nodes\NodeCollection.IList.cs" />
-    <Compile Include="Nodes\NodeCollection.cs" />
-    <Compile Include="Nodes\NodeCollection.Mode.cs" />
-    <Compile Include="Nodes\NodeCollection.Operation.cs" />
     <Compile Include="Others\CanvasOperator.cs" />
-    <Compile Include="Others\CanvasTransformer.cs" />
     <Compile Include="Interface\ICacheTransform.cs" />
     <Compile Include="Controls\Icon.xaml.cs">
       <DependentUpon>Icon.xaml</DependentUpon>
@@ -152,9 +157,6 @@
     <Compile Include="Enums\IndicatorMode.cs" />
     <Compile Include="Handlers\IndicatorModeHandler.cs" />
     <Compile Include="Enums\InverseMatrixTransformerMode.cs" />
-    <Compile Include="Others\CanvasTransformer.Matrix.cs" />
-    <Compile Include="Others\CanvasTransformer.Operator.cs" />
-    <Compile Include="Others\CanvasTransformer.Transition.cs" />
     <Compile Include="Others\LineDistance.cs" />
     <Compile Include="Enums\MatrixTransformerMode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -73,6 +73,7 @@ namespace FanKit.Transformers
         {
             this._nodes = new List<Node>();
             geometry.SendPathTo(this);
+            NodeCollection.ArrangeNodes(this._nodes);
         }
 
         /// <summary> Gets the selected item. </summary>
@@ -93,7 +94,6 @@ namespace FanKit.Transformers
             pathBuilder.SetFilledRegionDetermination(this.FilledRegionDetermination);
             pathBuilder.SetSegmentOptions(this.FigureSegmentOptions);
 
-            Node preview = null; //this.Last(node => node.Type == NodeType.Node);
             bool isBegin = false;
             for (int i = 0; i < this.Count; i++)
             {
@@ -108,21 +108,12 @@ namespace FanKit.Transformers
                     case NodeType.Node:
                         if (isBegin)
                         {
-                            if (preview == null)
-                            {
+                            Node previous = this[i - 1];
+
+                            if (current.IsSmooth == false && previous.IsSmooth == false)
                                 pathBuilder.AddLine(current.Point);
-                            }
                             else
-                            {
-                                if (current.IsSmooth && preview.IsSmooth)
-                                    pathBuilder.AddCubicBezier(preview.RightControlPoint, current.LeftControlPoint, current.Point);
-                                else if (current.IsSmooth && preview.IsSmooth == false)
-                                    pathBuilder.AddCubicBezier(preview.Point, current.LeftControlPoint, current.Point);
-                                else if (current.IsSmooth == false && preview.IsSmooth)
-                                    pathBuilder.AddCubicBezier(preview.RightControlPoint, current.Point, current.Point);
-                                else
-                                    pathBuilder.AddLine(current.Point);
-                            }
+                                pathBuilder.AddCubicBezier(previous.RightControlPoint, current.LeftControlPoint, current.Point);
                         }
                         break;
                     case NodeType.EndFigure:
@@ -130,8 +121,6 @@ namespace FanKit.Transformers
                         isBegin = false;
                         break;
                 }
-                               
-                preview = current;
             }
 
             return CanvasGeometry.CreatePath(pathBuilder);

@@ -43,19 +43,20 @@ namespace FanKit.Transformers
             this._nodes.Add(last);
 
             return true;
-
-
-            for (int i = this.Count; i >0; i--)
-            {
-                Node node = this[i];
-                if (node.Type == NodeType.EndFigure)
-                {
-                    this.Insert(i - 1, item);
-                    return true;
-                }
-            }
-            return false;
         }
+
+        public bool NodesReplace(IEnumerable<Node> nodes)
+        {
+            if (nodes.Count() < 3) return false;
+
+            this._nodes.Clear();
+            foreach (Node node in nodes)
+            {
+                this._nodes.Add(node);
+            }
+            return true;
+        }
+        
 
     }
 }
