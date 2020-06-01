@@ -1,4 +1,5 @@
-﻿using System.Numerics;
+﻿using Microsoft.Graphics.Canvas.Geometry;
+using System.Numerics;
 
 namespace FanKit.Transformers
 {
@@ -7,6 +8,13 @@ namespace FanKit.Transformers
     /// </summary>
     public partial class Node : ICacheTransform
     {
+        /// <summary> Gets or sets the type. </summary>
+        public NodeType Type { get; set; } = NodeType.Node;
+        /// <summary> Gets or sets the figure fill. </summary>
+        public CanvasFigureFill FigureFill { get; set; }
+        /// <summary> Gets or sets the figure loop. </summary>
+        public CanvasFigureLoop FigureLoop { get;  set; }
+
 
         /// <summary> Point. </summary>
         public Vector2 Point;
@@ -43,6 +51,11 @@ namespace FanKit.Transformers
         {
             return new Node
             {
+                Type = this.Type,
+                FigureFill = this.FigureFill,
+                FigureLoop = this.FigureLoop,
+
+
                 Point = this.Point,
                 StartingPoint = this.StartingPoint,
 

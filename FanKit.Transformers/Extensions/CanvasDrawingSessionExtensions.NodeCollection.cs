@@ -16,41 +16,53 @@ namespace FanKit.Transformers
         /// <param name="nodeCollection"> The NodeCollection. </param>
         public static void DrawNodeCollection(this CanvasDrawingSession drawingSession, NodeCollection nodeCollection)
         {
-            for (int i = 0; i < nodeCollection.Count; i++)
+            foreach (Node node in nodeCollection)
             {
-                Node node = nodeCollection[i];
-                Vector2 vector = node.Point;
-
-                if (node.IsChecked == false)
+                switch (node.Type)
                 {
-                    if (node.IsSmooth == false) drawingSession.DrawNode3(vector);
-                    else drawingSession.DrawNode(vector);
-                }
-                else
-                {
-                    if (node.IsSmooth == false) drawingSession.DrawNode4(vector);
-                    else
-                    {
-                        //Ignoring the right-control-point of the first point.
-                        if (i != 0)
+                    case NodeType.BeginFigure:
                         {
-                            Vector2 rightControlPoint = node.RightControlPoint;
-                            drawingSession.DrawLineDodgerBlue(vector, rightControlPoint);
-                            drawingSession.DrawNode5(rightControlPoint);
-                        }
+                            Vector2 vector = node.Point;
 
-                        //Ignoring the left-control-point of the last point.
-                        if (i != nodeCollection.Count - 1)
+                            if (node.IsChecked == false) drawingSession.DrawNode3(vector, Windows.UI.Colors.Gold);
+                            else drawingSession.DrawNode4(vector, Windows.UI.Colors.Gold);
+                        }
+                        break;
+                    case NodeType.Node:
                         {
-                            Vector2 leftControlPoint = node.LeftControlPoint;
-                            drawingSession.DrawLineDodgerBlue(vector, leftControlPoint);
-                            drawingSession.DrawNode5(leftControlPoint);
-                        }
+                            Vector2 vector = node.Point;
 
-                        drawingSession.DrawNode2(vector);
-                    }
+                            if (node.IsChecked == false)
+                            {
+                                if (node.IsSmooth == false) drawingSession.DrawNode3(vector);
+                                else drawingSession.DrawNode(vector);
+                            }
+                            else
+                            {
+                                if (node.IsSmooth == false) drawingSession.DrawNode4(vector);
+                                else
+                                {
+                                    //Right
+                                    Vector2 rightControlPoint = node.RightControlPoint;
+                                    drawingSession.DrawLineDodgerBlue(vector, rightControlPoint);
+                                    drawingSession.DrawNode5(rightControlPoint);
+
+                                    //Left
+                                    Vector2 leftControlPoint = node.LeftControlPoint;
+                                    drawingSession.DrawLineDodgerBlue(vector, leftControlPoint);
+                                    drawingSession.DrawNode5(leftControlPoint);
+
+                                    drawingSession.DrawNode2(vector);
+                                }
+                            }
+                        }
+                        break;
+                    case NodeType.EndFigure:
+                        break;
                 }
             }
+
+            drawingSession.DrawText(nodeCollection.StringBuilder.ToString(),new Vector2(), Windows.UI.Colors.Red);
         }
 
         /// <summary>
@@ -61,41 +73,53 @@ namespace FanKit.Transformers
         /// <param name="matrix"> The matrix. </param>
         public static void DrawNodeCollection(this CanvasDrawingSession drawingSession, NodeCollection nodeCollection, Matrix3x2 matrix)
         {
-            for (int i = 0; i < nodeCollection.Count; i++)
+            foreach (Node node in nodeCollection)
             {
-                Node node = nodeCollection[i];
-                Vector2 vector = Vector2.Transform(node.Point, matrix);
-
-                if (node.IsChecked == false)
+                switch (node.Type)
                 {
-                    if (node.IsSmooth == false) drawingSession.DrawNode3(vector);
-                    else drawingSession.DrawNode(vector);
-                }
-                else
-                {
-                    if (node.IsSmooth == false) drawingSession.DrawNode4(vector);
-                    else
-                    {
-                        //Ignoring the right-control-point of the first point.
-                        if (i != 0)
+                    case NodeType.BeginFigure:
                         {
-                            Vector2 rightControlPoint = Vector2.Transform(node.RightControlPoint, matrix);
-                            drawingSession.DrawLineDodgerBlue(vector, rightControlPoint);
-                            drawingSession.DrawNode5(rightControlPoint);
-                        }
+                            Vector2 vector = Vector2.Transform(node.Point, matrix);
 
-                        //Ignoring the left-control-point of the last point.
-                        if (i != nodeCollection.Count - 1)
+                            if (node.IsChecked == false) drawingSession.DrawNode3(vector, Windows.UI.Colors.Gold);
+                            else drawingSession.DrawNode4(vector, Windows.UI.Colors.Gold);
+                        }
+                        break;
+                    case NodeType.Node:
                         {
-                            Vector2 leftControlPoint = Vector2.Transform(node.LeftControlPoint, matrix);
-                            drawingSession.DrawLineDodgerBlue(vector, leftControlPoint);
-                            drawingSession.DrawNode5(leftControlPoint);
-                        }
+                            Vector2 vector = Vector2.Transform(node.Point, matrix);
 
-                        drawingSession.DrawNode2(vector);
-                    }
+                            if (node.IsChecked == false)
+                            {
+                                if (node.IsSmooth == false) drawingSession.DrawNode3(vector);
+                                else drawingSession.DrawNode(vector);
+                            }
+                            else
+                            {
+                                if (node.IsSmooth == false) drawingSession.DrawNode4(vector);
+                                else
+                                {
+                                    //Right
+                                    Vector2 rightControlPoint = Vector2.Transform(node.RightControlPoint, matrix);
+                                    drawingSession.DrawLineDodgerBlue(vector, rightControlPoint);
+                                    drawingSession.DrawNode5(rightControlPoint);
+
+                                    //Left
+                                    Vector2 leftControlPoint = Vector2.Transform(node.LeftControlPoint, matrix);
+                                    drawingSession.DrawLineDodgerBlue(vector, leftControlPoint);
+                                    drawingSession.DrawNode5(leftControlPoint);
+
+                                    drawingSession.DrawNode2(vector);
+                                }
+                            }
+                        }
+                        break;
+                    case NodeType.EndFigure:
+                        break;
                 }
             }
+
+            drawingSession.DrawText(nodeCollection.StringBuilder.ToString(), new Vector2(), Windows.UI.Colors.Red);
         }
 
         /// <summary>
@@ -109,68 +133,51 @@ namespace FanKit.Transformers
         {
             foreach (Node node in nodeCollection)
             {
-                Vector2 vector = Vector2.Transform(node.Point, matrix);
-
-                if (node.IsChecked == false)
+                switch (node.Type)
                 {
-                    if (node.IsSmooth == false) drawingSession.DrawNode3(vector, accentColor);
-                    else drawingSession.DrawNode(vector, accentColor);
-                }
-                else
-                {
-                    if (node.IsSmooth == false) drawingSession.DrawNode4(vector, accentColor);
-                    else
-                    {
-                        Vector2 rightControlPoint = Vector2.Transform(node.RightControlPoint, matrix);
-                        drawingSession.DrawLine(vector, rightControlPoint, accentColor);
-                        drawingSession.DrawNode5(rightControlPoint, accentColor);
+                    case NodeType.BeginFigure:
+                        {
+                            Vector2 vector = Vector2.Transform(node.Point, matrix);
 
-                        Vector2 leftControlPoint = Vector2.Transform(node.LeftControlPoint, matrix);
-                        drawingSession.DrawLine(vector, leftControlPoint, accentColor);
-                        drawingSession.DrawNode5(leftControlPoint, accentColor);
+                            if (node.IsChecked == false) drawingSession.DrawNode3(vector, Windows.UI.Colors.Gold);
+                            else drawingSession.DrawNode4(vector, Windows.UI.Colors.Gold);
+                        }
+                        break;
+                    case NodeType.Node:
+                        {
+                            Vector2 vector = Vector2.Transform(node.Point, matrix);
 
-                        drawingSession.DrawNode2(vector, accentColor);
-                    }
+                            if (node.IsChecked == false)
+                            {
+                                if (node.IsSmooth == false) drawingSession.DrawNode3(vector, accentColor);
+                                else drawingSession.DrawNode(vector, accentColor);
+                            }
+                            else
+                            {
+                                if (node.IsSmooth == false) drawingSession.DrawNode4(vector, accentColor);
+                                else
+                                {
+                                    //Right
+                                    Vector2 rightControlPoint = Vector2.Transform(node.RightControlPoint, matrix);
+                                    drawingSession.DrawLine(vector, rightControlPoint, accentColor);
+                                    drawingSession.DrawNode5(rightControlPoint, accentColor);
+
+                                    //Left
+                                    Vector2 leftControlPoint = Vector2.Transform(node.LeftControlPoint, matrix);
+                                    drawingSession.DrawLine(vector, leftControlPoint, accentColor);
+                                    drawingSession.DrawNode5(leftControlPoint, accentColor);
+
+                                    drawingSession.DrawNode2(vector, accentColor);
+                                }
+                            }
+                        }
+                        break;
+                    case NodeType.EndFigure:
+                        break;
                 }
             }
 
-            /*
-            for (int i = 0; i < nodeCollection.Count; i++)
-            {
-                Node node = nodeCollection[i];
-                Vector2 vector = Vector2.Transform(node.Point, matrix);
-
-                if (node.IsChecked == false)
-                {
-                    if (node.IsSmooth == false) drawingSession.DrawNode3(vector, accentColor);
-                    else drawingSession.DrawNode(vector, accentColor);
-                }
-                else
-                {
-                    if (node.IsSmooth == false) drawingSession.DrawNode4(vector, accentColor);
-                    else
-                    {
-                        //Ignoring the right-control-point of the first point.
-                        if (i != 0)
-                        {
-                            Vector2 rightControlPoint = Vector2.Transform(node.RightControlPoint, matrix);
-                            drawingSession.DrawLine(vector, rightControlPoint, accentColor);
-                            drawingSession.DrawNode5(rightControlPoint, accentColor);
-                        }
-
-                        //Ignoring the left-control-point of the last point.
-                        if (i != nodeCollection.Count - 1)
-                        {
-                            Vector2 leftControlPoint = Vector2.Transform(node.LeftControlPoint, matrix);
-                            drawingSession.DrawLine(vector, leftControlPoint, accentColor);
-                            drawingSession.DrawNode5(leftControlPoint, accentColor);
-                        }
-
-                        drawingSession.DrawNode2(vector, accentColor);
-                    }
-                }
-            }
-             */
+            drawingSession.DrawText(nodeCollection.StringBuilder.ToString(), new Vector2(), Windows.UI.Colors.Red);
         }
 
     }

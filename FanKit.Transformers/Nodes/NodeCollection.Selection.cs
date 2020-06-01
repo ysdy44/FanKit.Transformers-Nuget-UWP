@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Microsoft.Graphics.Canvas.Geometry;
+using System.Collections.Generic;
 using System.Numerics;
 
 namespace FanKit.Transformers
@@ -6,7 +7,7 @@ namespace FanKit.Transformers
     /// <summary>
     /// Represents an ordered collection of node objects.
     /// </summary>
-    public sealed partial class NodeCollection : ICacheTransform, IList<Node>, IEnumerable<Node>
+    public sealed partial class NodeCollection : ICanvasPathReceiver, ICacheTransform, IList<Node>, IEnumerable<Node>
     {
 
         /// <summary>
@@ -24,17 +25,25 @@ namespace FanKit.Transformers
                 if (hasIsSelected) node.IsChecked = false;
                 else
                 {
-                    Vector2 point2 = Vector2.Transform(node.Point, matrix);
-                    bool isSelected = FanKit.Math.InNodeRadius(point, point2);
-
-                    //Check the selected node.
-                    if (isSelected)
+                    switch (node.Type)
                     {
-                        hasIsSelected = true;
-                        node.IsChecked = true;
+                        case NodeType.BeginFigure:
+                        case NodeType.Node:
+                            {
+                                Vector2 point2 = Vector2.Transform(node.Point, matrix);
+                                bool isSelected = FanKit.Math.InNodeRadius(point, point2);
+
+                                //Check the selected node.
+                                if (isSelected)
+                                {
+                                    hasIsSelected = true;
+                                    node.IsChecked = true;
+                                }
+                                //Unchecked others.
+                                else node.IsChecked = false;
+                            }
+                            break;
                     }
-                    //Unchecked others.
-                    else node.IsChecked = false;
                 }
             }
 
@@ -46,7 +55,13 @@ namespace FanKit.Transformers
         {
             foreach (Node node in this)
             {
-                node.IsChecked = false;
+                switch (node.Type)
+                {
+                    case NodeType.BeginFigure:
+                    case NodeType.Node:
+                        node.IsChecked = false;
+                        break;
+                }
             }
         }
 
@@ -62,10 +77,18 @@ namespace FanKit.Transformers
         {
             foreach (Node node in this)
             {
-                bool isContained = node.Contained(left, top, right, bottom);
-                if (node.IsChecked != isContained)
+                switch (node.Type)
                 {
-                    node.IsChecked = isContained;
+                    case NodeType.BeginFigure:
+                    case NodeType.Node:
+                        {
+                            bool isContained = node.Contained(left, top, right, bottom);
+                            if (node.IsChecked != isContained)
+                            {
+                                node.IsChecked = isContained;
+                            }
+                        }
+                        break;
                 }
             }
         }

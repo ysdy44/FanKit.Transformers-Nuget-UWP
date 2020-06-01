@@ -165,7 +165,13 @@ namespace FanKit.Transformers
 
             foreach (Node node in nodes)
             {
-                aaa(node.Point);
+                switch (node.Type)
+                {
+                    case NodeType.BeginFigure:
+                    case NodeType.Node:
+                        aaa(node.Point);
+                        break;
+                }
             }
 
             this.Left = left;
@@ -199,7 +205,13 @@ namespace FanKit.Transformers
             {
                 foreach (Node node in nodes)
                 {
-                    aaa(node.Point);
+                    switch (node.Type)
+                    {
+                        case NodeType.BeginFigure:
+                        case NodeType.Node:
+                            aaa(node.Point);
+                            break;
+                    }
                 }
             }
 

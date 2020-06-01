@@ -115,6 +115,7 @@
     <Compile Include="Enums\NodeCollectionMode.cs" />
     <Compile Include="Enums\NodeRemoveMode.cs" />
     <Compile Include="Enums\NodeMode.cs" />
+    <Compile Include="Enums\NodeType.cs" />
     <Compile Include="Extensions\CanvasDrawingSessionExtensions.cs" />
     <Compile Include="Extensions\CanvasDrawingSessionExtensions.DottedLine.cs" />
     <Compile Include="Extensions\CanvasDrawingSessionExtensions.Node.cs" />
@@ -127,16 +128,11 @@
     <Compile Include="Interface\ITransformerGeometry.cs" />
     <Compile Include="Interface\ITransformerLTRB.cs" />
     <Compile Include="Nodes\Node.Operation.cs" />
+    <Compile Include="Nodes\NodeCollection.PathReceiver.cs" />
     <Compile Include="Nodes\NodeCollection.Selection.cs" />
-    <Compile Include="Nodes\NodeCollectionCollection.CacheTransform.cs" />
-    <Compile Include="Nodes\NodeCollectionCollection.cs" />
-    <Compile Include="Nodes\NodeCollectionCollection.IList.cs" />
-    <Compile Include="Nodes\NodeCollectionCollection.Mode.cs" />
-    <Compile Include="Nodes\NodeCollectionCollection.Operation.cs" />
     <Compile Include="Nodes\Node.Contained.cs" />
     <Compile Include="Nodes\Node.Mode.cs" />
     <Compile Include="Nodes\Node.Controller.cs" />
-    <Compile Include="Nodes\NodeCollectionCollection.Selection.cs" />
     <Compile Include="Others\MarqueeTool.cs" />
     <Compile Include="Nodes\Node.cs" />
     <Compile Include="Nodes\NodeCollection.CacheTransform.cs" />
@@ -185,13 +181,9 @@
     <Compile Include="TransformerBorders\TransformerBorder.Property.cs" />
     <Compile Include="Snappings\3.BorderBorderSnap.cs" />
     <Compile Include="TransformerGeometrys\TransformerGeometry.0.cs" />
-    <Compile Include="TransformerGeometrys\TransformerGeometry.1.ConvertToCurves.cs" />
     <Compile Include="TransformerGeometrys\TransformerGeometry.1.cs" />
-    <Compile Include="TransformerGeometrys\TransformerGeometry.2.ConvertToCurves.cs" />
     <Compile Include="TransformerGeometrys\TransformerGeometry.2.cs" />
-    <Compile Include="TransformerGeometrys\TransformerGeometry.3.ConvertToCurves.cs" />
     <Compile Include="TransformerGeometrys\TransformerGeometry.3.cs" />
-    <Compile Include="TransformerGeometrys\TransformerGeometry.4.ConvertToCurves.cs" />
     <Compile Include="TransformerGeometrys\TransformerGeometry.4.cs" />
     <Compile Include="TransformerMatrix.cs" />
     <Compile Include="Enums\TransformerMode.cs" />
@@ -200,10 +192,10 @@
     <Compile Include="TransformerRects\TransformerRect.Property.cs" />
     <Compile Include="XMLs\XML.Color.cs" />
     <Compile Include="XMLs\XML.Node.cs" />
-    <Compile Include="XMLs\XML.NodeCollectionCollection.cs" />
     <Compile Include="XMLs\XML.NodeCollection.cs" />
     <Compile Include="XMLs\XML.Transformer.cs" />
     <Compile Include="XMLs\XML.Vector2.cs" />
+    <Compile Include="XMLs\XML.NodeTypeFactory.cs" />
     <EmbeddedResource Include="Properties\FanKit.Transformers.rd.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -236,9 +228,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Extensions\CanvasDrawingSessionExtensions.Transformer.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="TransformerGeometrys\TransformerGeometry.0.ConvertToCurves.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="XMLs\XML.GeometryArrowTailTypeFactory.cs" />

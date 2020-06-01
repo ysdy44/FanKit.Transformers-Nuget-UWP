@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Microsoft.Graphics.Canvas.Geometry;
+using System.Collections.Generic;
 using System.Numerics;
 
 namespace FanKit.Transformers
@@ -6,7 +7,7 @@ namespace FanKit.Transformers
     /// <summary>  
     /// Nodes of the Bezier Curve.
     /// </summary>
-    public sealed partial class NodeCollection : ICacheTransform, IList<Node>, IEnumerable<Node>
+    public sealed partial class NodeCollection : ICanvasPathReceiver, ICacheTransform, IList<Node>, IEnumerable<Node>
     {
 
         /// <summary>

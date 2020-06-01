@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Microsoft.Graphics.Canvas.Geometry;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -7,7 +8,7 @@ namespace FanKit.Transformers
     /// <summary>
     /// Represents an ordered collection of node objects.
     /// </summary>
-    public sealed partial class NodeCollection : ICacheTransform, IList<Node>, IEnumerable<Node>
+    public sealed partial class NodeCollection : ICanvasPathReceiver, ICacheTransform, IList<Node>, IEnumerable<Node>
     {
         public Node this[int index]
         {
@@ -31,5 +32,30 @@ namespace FanKit.Transformers
         public void RemoveAt(int index) => this._nodes.RemoveAt(index);
 
         IEnumerator IEnumerable.GetEnumerator() => this._nodes.GetEnumerator();
+
+
+        public bool PenAdd(Node item)
+        {
+            Node last = this.Last(n => n.Type == NodeType.EndFigure);
+            this._nodes.Remove(last);
+
+            this._nodes.Add(item);
+            this._nodes.Add(last);
+
+            return true;
+
+
+            for (int i = this.Count; i >0; i--)
+            {
+                Node node = this[i];
+                if (node.Type == NodeType.EndFigure)
+                {
+                    this.Insert(i - 1, item);
+                    return true;
+                }
+            }
+            return false;
+        }
+
     }
 }

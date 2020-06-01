@@ -9,7 +9,7 @@ namespace FanKit.Transformers
     /// <summary>
     /// Represents an ordered collection of node objects.
     /// </summary>
-    public sealed partial class NodeCollection : ICacheTransform, IList<Node>, IEnumerable<Node>
+    public sealed partial class NodeCollection : ICanvasPathReceiver, ICacheTransform, IList<Node>, IEnumerable<Node>
     {
 
         List<Node> _nodes;
@@ -36,6 +36,7 @@ namespace FanKit.Transformers
         {
              new Node
              {
+                 Type = NodeType.BeginFigure,
                  Point = left,
                  LeftControlPoint = left,
                  RightControlPoint = left,
@@ -45,14 +46,34 @@ namespace FanKit.Transformers
              },
              new Node
              {
+                 Type = NodeType.Node,
                  Point = right,
                  LeftControlPoint = right,
                  RightControlPoint = right,
 
                  IsChecked = false,
                  IsSmooth = false,
+             },
+             new Node
+             {
+                 Type = NodeType.EndFigure,
+                 Point = left,
+                 LeftControlPoint = left,
+                 RightControlPoint = left,
+
+                 IsChecked = false,
+                 IsSmooth = false,
              }
         };
+        /// <summary>
+        /// Initialize a NodeCollection.
+        /// </summary>
+        /// <param name="geometry"> The geometry. </param>
+        public NodeCollection(CanvasGeometry geometry)
+        {
+            this._nodes = new List<Node>();
+            geometry.SendPathTo(this);
+        }
 
         /// <summary> Gets the selected item. </summary>
         public Node SelectedItem => this[this.Index];
@@ -67,56 +88,53 @@ namespace FanKit.Transformers
         /// <returns> The created geometry. </returns>
         public CanvasGeometry CreateGeometry(ICanvasResourceCreator resourceCreator)
         {
-
             //Counterclockwise
+            CanvasPathBuilder pathBuilder = new CanvasPathBuilder(resourceCreator);
+            pathBuilder.SetFilledRegionDetermination(this.FilledRegionDetermination);
+            pathBuilder.SetSegmentOptions(this.FigureSegmentOptions);
+
+            Node preview = null; //this.Last(node => node.Type == NodeType.Node);
+            bool isBegin = false;
+            for (int i = 0; i < this.Count; i++)
             {
-                CanvasPathBuilder pathBuilder = new CanvasPathBuilder(resourceCreator);
-                pathBuilder.BeginFigure(this.Last().Point);
+                Node current = this[i];
 
-                for (int i = this.Count - 1; i > 0; i--)
+                switch (current.Type)
                 {
-                    Node current = this[i];
-                    Node preview = this[i - 1];
-
-                    if (current.IsSmooth && preview.IsSmooth)
-                        pathBuilder.AddCubicBezier(current.RightControlPoint, preview.LeftControlPoint, preview.Point);
-                    else if (current.IsSmooth && preview.IsSmooth == false)
-                        pathBuilder.AddCubicBezier(current.RightControlPoint, preview.Point, preview.Point);
-                    else if (current.IsSmooth == false && preview.IsSmooth)
-                        pathBuilder.AddCubicBezier(current.Point, preview.LeftControlPoint, preview.Point);
-                    else
-                        pathBuilder.AddLine(preview.Point);
+                    case NodeType.BeginFigure:
+                        pathBuilder.BeginFigure(current.Point, current.FigureFill);
+                        isBegin = true;
+                        break;
+                    case NodeType.Node:
+                        if (isBegin)
+                        {
+                            if (preview == null)
+                            {
+                                pathBuilder.AddLine(current.Point);
+                            }
+                            else
+                            {
+                                if (current.IsSmooth && preview.IsSmooth)
+                                    pathBuilder.AddCubicBezier(preview.RightControlPoint, current.LeftControlPoint, current.Point);
+                                else if (current.IsSmooth && preview.IsSmooth == false)
+                                    pathBuilder.AddCubicBezier(preview.Point, current.LeftControlPoint, current.Point);
+                                else if (current.IsSmooth == false && preview.IsSmooth)
+                                    pathBuilder.AddCubicBezier(preview.RightControlPoint, current.Point, current.Point);
+                                else
+                                    pathBuilder.AddLine(current.Point);
+                            }
+                        }
+                        break;
+                    case NodeType.EndFigure:
+                        pathBuilder.EndFigure(current.FigureLoop);
+                        isBegin = false;
+                        break;
                 }
-
-                pathBuilder.EndFigure(CanvasFigureLoop.Open);
-                return CanvasGeometry.CreatePath(pathBuilder);
+                               
+                preview = current;
             }
 
-            //Clockwise
-            /*
-            {
-                CanvasPathBuilder pathBuilder = new CanvasPathBuilder(resourceCreator);
-                pathBuilder.BeginFigure(this.First().Point);
-
-                for (int i = 0; i < this.Count - 1; i++)
-                {
-                    Node current = this[i];
-                    Node preview = this[i + 1];
-
-                    if (current.IsSmooth && preview.IsSmooth)
-                        pathBuilder.AddCubicBezier(current.LeftControlPoint, preview.RightControlPoint, preview.Point);
-                    else if (current.IsSmooth && preview.IsSmooth == false)
-                        pathBuilder.AddCubicBezier(current.LeftControlPoint, preview.Point, preview.Point);
-                    else if (current.IsSmooth == false && preview.IsSmooth)
-                        pathBuilder.AddCubicBezier(current.Point, preview.RightControlPoint, preview.Point);
-                    else
-                        pathBuilder.AddLine(preview.Point);
-                }
-
-                pathBuilder.EndFigure(CanvasFigureLoop.Open);
-                return CanvasGeometry.CreatePath(pathBuilder);
-            }
-             */
+            return CanvasGeometry.CreatePath(pathBuilder);
         }
 
 

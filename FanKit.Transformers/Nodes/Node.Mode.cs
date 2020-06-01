@@ -16,38 +16,60 @@ namespace FanKit.Transformers
         /// <returns> The node-mode. </returns>
         public static NodeMode ContainsNodeMode(Vector2 point, Node node)
         {
-            if (node.IsChecked)
+            switch (node.Type)
             {
-                //When you click on a checked node point ...
-                Vector2 nodePoint = node.Point;
-                if (Math.InNodeRadius(point, nodePoint))
-                {
-                    return NodeMode.PointWithChecked;
-                }
-
-                if (node.IsSmooth)
-                {
-                    Vector2 nodeLeftControlPoint = node.LeftControlPoint;
-                    Vector2 nodeRightControlPoint = node.RightControlPoint;
-
-                    if (Math.InNodeRadius(point, nodeLeftControlPoint))
+                case NodeType.BeginFigure:
                     {
-                        return NodeMode.LeftControlPoint;
+                        Vector2 startPoint = node.Point;
+
+                        if (Math.InNodeRadius(point, startPoint))
+                        {
+                            if (node.IsChecked) return NodeMode.PointWithChecked;
+                            else return NodeMode.PointWithoutChecked;
+                        }
                     }
-                    else if (Math.InNodeRadius(point, nodeRightControlPoint))
+                    break;
+
+                case NodeType.Node:
                     {
-                        return NodeMode.RightControlPoint;
+                        if (node.IsChecked)
+                        {
+                            //When you click on a checked node point ...
+                            Vector2 point2 = node.Point;
+                            if (Math.InNodeRadius(point, point2))
+                            {
+                                return NodeMode.PointWithChecked;
+                            }
+
+                            if (node.IsSmooth)
+                            {
+                                Vector2 leftControlPoint = node.LeftControlPoint;
+                                Vector2 rightControlPoint = node.RightControlPoint;
+
+                                if (Math.InNodeRadius(point, leftControlPoint))
+                                {
+                                    return NodeMode.LeftControlPoint;
+                                }
+                                else if (Math.InNodeRadius(point, rightControlPoint))
+                                {
+                                    return NodeMode.RightControlPoint;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            //When you click on a unchecked node point ...      
+                            Vector2 point2 = node.Point;
+                            if (Math.InNodeRadius(point, point2))
+                            {
+                                return NodeMode.PointWithoutChecked;
+                            }
+                        }
                     }
-                }
-            }
-            else
-            {
-                //When you click on a unchecked node point ...      
-                Vector2 nodePoint = node.Point;
-                if (Math.InNodeRadius(point, nodePoint))
-                {
-                    return NodeMode.PointWithoutChecked;
-                }
+                    break;
+
+                default:
+                    return NodeMode.None;
             }
 
             return NodeMode.None;
@@ -62,38 +84,60 @@ namespace FanKit.Transformers
         /// <returns> The node-mode. </returns>
         public static NodeMode ContainsNodeMode(Vector2 point, Node node, Matrix3x2 matrix)
         {
-            if (node.IsChecked)
+            switch (node.Type)
             {
-                //When you click on a checked node point ...
-                Vector2 nodePoint = Vector2.Transform(node.Point, matrix);
-                if (Math.InNodeRadius(point, nodePoint))
-                {
-                    return NodeMode.PointWithChecked;
-                }
-
-                if (node.IsSmooth)
-                {
-                    Vector2 nodeLeftControlPoint = Vector2.Transform(node.LeftControlPoint, matrix);
-                    Vector2 nodeRightControlPoint = Vector2.Transform(node.RightControlPoint, matrix);
-
-                    if (Math.InNodeRadius(point, nodeLeftControlPoint))
+                case NodeType.BeginFigure:
                     {
-                        return NodeMode.LeftControlPoint;
+                        Vector2 startPoint = Vector2.Transform(node.Point, matrix);
+
+                        if (Math.InNodeRadius(point, startPoint))
+                        {
+                            if (node.IsChecked) return NodeMode.PointWithChecked;
+                            else return NodeMode.PointWithoutChecked;
+                        }
                     }
-                    else if (Math.InNodeRadius(point, nodeRightControlPoint))
+                    break;
+
+                case NodeType.Node:
                     {
-                        return NodeMode.RightControlPoint;
+                        if (node.IsChecked)
+                        {
+                            //When you click on a checked node point ...
+                            Vector2 point2 = Vector2.Transform(node.Point, matrix);
+                            if (Math.InNodeRadius(point, point2))
+                            {
+                                return NodeMode.PointWithChecked;
+                            }
+
+                            if (node.IsSmooth)
+                            {
+                                Vector2 leftControlPoint = Vector2.Transform(node.LeftControlPoint, matrix);
+                                Vector2 rightControlPoint = Vector2.Transform(node.RightControlPoint, matrix);
+
+                                if (Math.InNodeRadius(point, leftControlPoint))
+                                {
+                                    return NodeMode.LeftControlPoint;
+                                }
+                                else if (Math.InNodeRadius(point, rightControlPoint))
+                                {
+                                    return NodeMode.RightControlPoint;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            //When you click on a unchecked node point ...      
+                            Vector2 point2 = Vector2.Transform(node.Point, matrix);
+                            if (Math.InNodeRadius(point, point2))
+                            {
+                                return NodeMode.PointWithoutChecked;
+                            }
+                        }
                     }
-                }
-            }
-            else
-            {
-                //When you click on a unchecked node point ...      
-                Vector2 nodePoint = Vector2.Transform(node.Point, matrix);
-                if (Math.InNodeRadius(point, nodePoint))
-                {
-                    return NodeMode.PointWithoutChecked;
-                }
+                    break;
+
+                default:
+                    return NodeMode.None;
             }
 
             return NodeMode.None;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Graphics.Canvas.Geometry;
+using System;
 using System.Collections.Generic;
 using System.Numerics;
 
@@ -7,7 +8,7 @@ namespace FanKit.Transformers
     /// <summary>
     /// Represents an ordered collection of node objects.
     /// </summary>
-    public sealed partial class NodeCollection : ICacheTransform, IList<Node>, IEnumerable<Node>
+    public sealed partial class NodeCollection : ICanvasPathReceiver, ICacheTransform, IList<Node>, IEnumerable<Node>
     {
 
         /// <summary>

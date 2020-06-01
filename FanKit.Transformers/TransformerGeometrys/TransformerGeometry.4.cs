@@ -231,6 +231,21 @@ namespace FanKit.Transformers
         }
 
 
+        private static Vector2 _getArrowFocusVector(float verticalLength, float horizontalLength, Vector2 horizontal)
+        {
+            if (verticalLength < horizontalLength)
+                return 0.5f * (verticalLength / horizontalLength) * horizontal;
+            else
+                return 0.5f * horizontal;
+        }
+
+        private static Vector2 _getArrowWidthVector(bool isAbsolute, float width2, float value, Vector2 vertical, float verticalLength)
+        {
+            float width = isAbsolute ? width2 : value * verticalLength;
+            return vertical * (width / verticalLength) / 2;
+        }
+
+
         #endregion
 
 

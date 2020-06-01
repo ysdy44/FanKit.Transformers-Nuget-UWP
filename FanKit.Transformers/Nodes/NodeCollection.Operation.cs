@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Microsoft.Graphics.Canvas.Geometry;
+using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
 
@@ -7,9 +8,9 @@ namespace FanKit.Transformers
     /// <summary>
     /// Represents an ordered collection of node objects.
     /// </summary>
-    public sealed partial class NodeCollection : ICacheTransform, IList<Node>, IEnumerable<Node>
+    public sealed partial class NodeCollection : ICanvasPathReceiver, ICacheTransform, IList<Node>, IEnumerable<Node>
     {
-        
+
         /// <summary>
         /// Remove all checked nodes.
         /// </summary>
@@ -17,24 +18,34 @@ namespace FanKit.Transformers
         public static NodeRemoveMode RemoveCheckedNodes(NodeCollection nodeCollection)
         {
             {
-                int checkCount = nodeCollection._nodes.Count(node => node.IsChecked);
+                int checkCount = nodeCollection._nodes.Count(node => node.Type == NodeType.Node && node.IsChecked);
                 if (checkCount == 0) return NodeRemoveMode.None;
             }
 
             List<Node> unCheckedNodes = new List<Node>();
             foreach (Node node in nodeCollection)
             {
-                if (node.IsChecked == false)
+                switch (node.Type)
                 {
-                    unCheckedNodes.Add(node);
+                    case NodeType.BeginFigure:
+                        unCheckedNodes.Add(node);
+                        break;
+                    case NodeType.Node:
+                        if (node.IsChecked == false)
+                        {
+                            unCheckedNodes.Add(node);
+                        }
+                        break;
+                    case NodeType.EndFigure:
+                        unCheckedNodes.Add(node);
+                        break;
                 }
             }
 
             // Count all un checked nodes.
             {
                 int count = unCheckedNodes.Count();
-                if (count <= 2) return NodeRemoveMode.RemoveCurve
-;
+                if (count < 3) return NodeRemoveMode.RemoveCurve;
             }
 
             nodeCollection._nodes = unCheckedNodes;
