@@ -133,5 +133,29 @@ namespace FanKit.Transformers
         /// <returns> The cloned NodeCollection. </returns>
         public NodeCollection Clone() => new NodeCollection(from node in this._nodes select node.Clone());
 
+        /// <summary>
+        /// Get own copy.
+        /// </summary>
+        /// <returns> The cloned ndoes. </returns>
+        public IEnumerable<Node> NodesClone() => from node in this._nodes select node.Clone();
+        /// <summary>
+        /// Get own starting copy (ex: <see cref="Node.StartingIsChecked"/>).
+        /// </summary>
+        /// <returns> The cloned ndoes. </returns>
+        public IEnumerable<Node> NodesStartingClone() => from node in this._nodes
+                                                         select new Node
+                                                         {
+                                                             Type = node.Type,
+                                                             FigureFill = node.FigureFill,
+                                                             FigureLoop = node.FigureLoop,
+
+                                                             Point = node.StartingPoint,
+                                                             LeftControlPoint = node.StartingLeftControlPoint,
+                                                             RightControlPoint = node.RightControlPoint,
+
+                                                             IsChecked = node.StartingIsChecked,
+                                                             IsSmooth = node.StartingIsSmooth,
+                                                         };
+
     }
 }

@@ -60,23 +60,23 @@ namespace FanKit.Transformers
             return TransformerGeometry._createArrow
             (
                 resourceCreator,
-                (widthVector + transformer.Center) - center,
+                widthVector + transformer.Center - center,
 
                 //Left
                 centerLeft,
                 transformer.LeftBottom,
 
                 transformer.LeftTop,
-                (leftFocusTransform - centerLeft),
+                leftFocusTransform - centerLeft,
                 leftFocusTransform,
 
                 //Right
                 centerRight,
                 transformer.RightBottom,
 
-                rightFocusTransform,
-                (rightFocusTransform - centerRight),
                 transformer.RightTop,
+                rightFocusTransform - centerRight,
+                rightFocusTransform,
 
                 leftTail, rightTail
              );

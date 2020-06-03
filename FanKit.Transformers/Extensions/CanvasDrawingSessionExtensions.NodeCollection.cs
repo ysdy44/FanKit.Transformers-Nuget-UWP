@@ -98,7 +98,7 @@ namespace FanKit.Transformers
                 {
                     case NodeType.BeginFigure:
                         {
-                            Vector2 vector = node.Point;
+                            Vector2 vector = Vector2.Transform(node.Point, matrix);
 
                             if (node.IsChecked == false)
                             {

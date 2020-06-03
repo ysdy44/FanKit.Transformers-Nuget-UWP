@@ -14,7 +14,7 @@ namespace FanKit.Transformers
         /// Arrange all node righyt control point.
         /// </summary>
         /// <param name="nodes"> The nodes. </param>
-        public static void ArrangeNodes(IList<Node> nodes)
+        private static void ArrangeNodes(IList<Node> nodes)
         {
             for (int i = 0; i < nodes.Count-1; i++)
             {

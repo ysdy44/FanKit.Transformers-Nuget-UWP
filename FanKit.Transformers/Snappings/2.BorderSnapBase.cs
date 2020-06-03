@@ -2,17 +2,28 @@
 
 namespace FanKit.Transformers
 {
+    /// <summary>
+    /// Snapping tool for <see cref="TransformerBorder"/>.
+    /// </summary>
+    /// <typeparam name="D"> The destination type. </typeparam>
     public abstract class BorderSnapBase<D> : SnapBase<TransformerBorder, D>
     {
         //Source Destination
+        /// <summary> The cache of <see cref="SnapBase{S, D}.Source"/>. </summary>
         public TransformerBorder StartingSource { get; set; }
 
         //X
+        /// <summary> X-axis gap. </summary>
         protected float XGap = 0;
         //Y
+        /// <summary> Y-axis gap. </summary>
         protected float YGap = 0;
 
-
+        /// <summary>
+        /// Snapping
+        /// </summary>
+        /// <param name="move"> The move vector. </param>
+        /// <returns> The product vector. </returns>
         public Vector2 Snap(Vector2 move)
         {
             this.SetSnapMove(move);
@@ -21,8 +32,11 @@ namespace FanKit.Transformers
            return move - snapMove;
         }
 
-
-        public void SetSnapMove(Vector2 canvasMove)
+        /// <summary>
+        /// Sets <see cref="SnapBase{S, D}.XSnap"/> and <see cref="SnapBase{S, D}.XSnap"/>.
+        /// </summary>
+        /// <param name="move"> The move vector. </param>
+        public void SetSnapMove(Vector2 move)
         {
             if (this.Destinations == null) return;
 
@@ -33,7 +47,7 @@ namespace FanKit.Transformers
             {
                 this.XDestination = destination;
 
-                this.IsXSnap = this.SetXSnapMove(canvasMove.X, destination);
+                this.IsXSnap = this.SetXSnapMove(move.X, destination);
                 if (this.IsXSnap) break;
             }
 
@@ -44,10 +58,14 @@ namespace FanKit.Transformers
             {
                 this.YDestination = destination;
 
-                this.IsYSnap = this.SetYSnapMove(canvasMove.Y, destination);
+                this.IsYSnap = this.SetYSnapMove(move.Y, destination);
                 if (this.IsYSnap) break;
             }
         }
+        /// <summary>
+        /// Gets <see cref="SnapBase{S, D}.XSnap"/> and <see cref="SnapBase{S, D}.XSnap"/>.
+        /// </summary>
+        /// <returns> The product vector. </returns>
         public Vector2 GetSnapMove()
         {
             if (this.IsXSnap && this.IsYSnap)
@@ -62,9 +80,20 @@ namespace FanKit.Transformers
             return Vector2.Zero;
         }
 
-
-        protected abstract bool SetXSnapMove(float canvasMoveX, D destination);
-        protected abstract bool SetYSnapMove(float canvasMoveY, D destination);
+        /// <summary>
+        /// Sets <see cref="SnapBase{S, D}.XSnap"/>.
+        /// </summary>
+        /// <param name="moveX"> The move X. </param>
+        /// <param name="destination"> The destination. </param>
+        /// <returns> The <see cref="SnapBase{S, D}.IsXSnap"/></returns>
+        protected abstract bool SetXSnapMove(float moveX, D destination);
+        /// <summary>
+        /// Sets <see cref="SnapBase{S, D}.YSnap"/>.
+        /// </summary>
+        /// <param name="moveY"> The move Y. </param>
+        /// <param name="destination"> The destination. </param>
+        /// <returns> The <see cref="SnapBase{S, D}.IsYSnap"/></returns>
+        protected abstract bool SetYSnapMove(float moveY, D destination);
 
     }
 }
