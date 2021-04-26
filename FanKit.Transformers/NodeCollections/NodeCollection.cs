@@ -151,7 +151,7 @@ namespace FanKit.Transformers
 
                                                              Point = node.StartingPoint,
                                                              LeftControlPoint = node.StartingLeftControlPoint,
-                                                             RightControlPoint = node.RightControlPoint,
+                                                             RightControlPoint = node.StartingRightControlPoint,
 
                                                              IsChecked = node.StartingIsChecked,
                                                              IsSmooth = node.StartingIsSmooth,
