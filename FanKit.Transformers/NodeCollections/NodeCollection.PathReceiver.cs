@@ -4,9 +4,6 @@ using System.Numerics;
 
 namespace FanKit.Transformers
 {
-    /// <summary>
-    /// Represents an ordered collection of node objects.
-    /// </summary>
     public sealed partial class NodeCollection : ICanvasPathReceiver, ICacheTransform, IList<Node>, IEnumerable<Node>
     {
 
@@ -16,10 +13,10 @@ namespace FanKit.Transformers
         /// <param name="nodes"> The nodes. </param>
         private static void ArrangeNodes(IList<Node> nodes)
         {
-            for (int i = 0; i < nodes.Count-1; i++)
+            for (int i = 0; i < nodes.Count - 1; i++)
             {
                 Node node = nodes[i];
-                Node next = nodes[i+1];
+                Node next = nodes[i + 1];
 
                 switch (node.Type)
                 {
@@ -53,24 +50,24 @@ namespace FanKit.Transformers
         /// Specifies the method used to determine which points are inside the geometry described
         /// by this path builder, and which points are outside.
         /// </summary>
-        /// <param name="filledRegionDetermination"></param>
+        /// <param name="filledRegionDetermination"> The determination for filled region.</param>
         public void SetFilledRegionDetermination(CanvasFilledRegionDetermination filledRegionDetermination)
         {
             this.FilledRegionDetermination = filledRegionDetermination;
         }
         CanvasFilledRegionDetermination FilledRegionDetermination;
-        
+
         /// <summary>
         /// Specifies the method used to determine which points are inside the geometry described
         /// by this path builder, and which points are outside.
         /// </summary>
-        /// <param name="figureSegmentOptions"></param>
+        /// <param name="figureSegmentOptions"> The options for figure segment.</param>
         public void SetSegmentOptions(CanvasFigureSegmentOptions figureSegmentOptions)
         {
             this.FigureSegmentOptions = figureSegmentOptions;
         }
         CanvasFigureSegmentOptions FigureSegmentOptions;
-        
+
 
 
         /// <summary>
@@ -93,11 +90,11 @@ namespace FanKit.Transformers
                 IsSmooth = true,
             });
         }
-               
+
         /// <summary>
         /// Ends the current figure; optionally, closes it.
         /// </summary>
-        /// <param name="figureLoop"></param>
+        /// <param name="figureLoop"> The figure-loop. </param>
         public void EndFigure(CanvasFigureLoop figureLoop)
         {
             this.Add(new Node
@@ -111,7 +108,7 @@ namespace FanKit.Transformers
         /// <summary>
         /// Adds a line segment to the path, with the specified end point.
         /// </summary>
-        /// <param name="endPoint"></param>
+        /// <param name="endPoint"> The end-point. </param>
         public void AddLine(Vector2 endPoint)
         {
             Vector2 point = endPoint;
@@ -131,8 +128,8 @@ namespace FanKit.Transformers
         /// Adds a quadratic bezier to the path. The bezier starts where the path left off,
         /// and has the specified control point and end point.
         /// </summary>
-        /// <param name="controlPoint"></param>
-        /// <param name="endPoint"></param>
+        /// <param name="controlPoint"> The control-point. </param>
+        /// <param name="endPoint"> The end-point. </param>
         public void AddQuadraticBezier(Vector2 controlPoint, Vector2 endPoint)
         {
         }
@@ -142,21 +139,21 @@ namespace FanKit.Transformers
         /// Adds a single arc to the path, specified by start and end points through which
         /// an ellipse will be fitted.
         /// </summary>
-        /// <param name="endPoint"></param>
-        /// <param name="radiusX"></param>
-        /// <param name="radiusY"></param>
-        /// <param name="rotationAngle"></param>
-        /// <param name="sweepDirection"></param>
-        /// <param name="arcSize"></param>
+        /// <param name="endPoint"> The end-point. </param>
+        /// <param name="radiusX"> The radius X. </param>
+        /// <param name="radiusY"> The radius Y. </param>
+        /// <param name="rotationAngle"> The angle of rotation. </param>
+        /// <param name="sweepDirection"> The direction for sweep. </param>
+        /// <param name="arcSize"> The size of arc. </param>
         public void AddArc(Vector2 endPoint, float radiusX, float radiusY, float rotationAngle, CanvasSweepDirection sweepDirection, CanvasArcSize arcSize) { }
 
         /// <summary>
         /// Adds a cubic bezier to the path. The bezier starts where the path left off, and
         /// has the specified control points and end point.
         /// </summary>
-        /// <param name="controlPoint1"></param>
-        /// <param name="controlPoint2"></param>
-        /// <param name="endPoint"></param>
+        /// <param name="controlPoint1"> The first control-point. </param>
+        /// <param name="controlPoint2"> The sencond control-point. </param>
+        /// <param name="endPoint"> The end-point. </param>
         public void AddCubicBezier(Vector2 controlPoint1, Vector2 controlPoint2, Vector2 endPoint)
         {
             Vector2 point = endPoint;

@@ -1,14 +1,14 @@
 ﻿namespace FanKit.Transformers
 {
     /// <summary>
-    /// State of <see cref="Noder"/>. 
+    /// State of <see cref="Node"/>. 
     /// </summary>
     public enum NodeRemoveMode
     {
         /// <summary> Normal. </summary>
         None,
 
-        /// <summary> Removed all checked nodes. </summary>
+        /// <summary> Remove all checked nodes. </summary>
         RemovedNodes,
 
         /// <summary> Remove the curve. </summary>

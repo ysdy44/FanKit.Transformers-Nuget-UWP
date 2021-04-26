@@ -25,11 +25,11 @@ namespace FanKit
         public const float PiOver4 = 0.78539816339744830961566084581987572104929234984378f;
 
 
-        /// <summary> Radius of node'. Defult 12. </summary>
+        /// <summary> Radius of node'. Default 12. </summary>
         public const float NodeRadius = 12.0f;
         private static float _nodeRadiusSquare;
 
-        /// <summary> Minimum distance between two nodes. Defult 20. </summary>
+        /// <summary> Minimum distance between two nodes. Default 20. </summary>
         public const float NodeDistance = 20.0f;
         private static float _nodeDistanceSquare;
         private static float _nodeDistanceDouble;
@@ -45,7 +45,7 @@ namespace FanKit
 
 
         /// <summary>
-        /// Whether the distance exceeds [NodeRadius]. Defult: 144.
+        /// Whether the distance exceeds [NodeRadius]. Default: 144.
         /// </summary>
         /// <param name="point0"> The first point. </param>
         /// <param name="point1"> The second point. </param>
@@ -53,11 +53,11 @@ namespace FanKit
         public static bool InNodeRadius(Vector2 point0, Vector2 point1) => (point0 - point1).LengthSquared() < Math._nodeRadiusSquare;
 
         /// <summary>
-        /// Whether the distance'LengthSquared exceeds [NodeDistance]. Defult: 400.
+        /// Whether the distance's LengthSquared exceeds [NodeDistance]. Default: 400.
         /// </summary>
         /// <param name="point0"> The first point. </param>
         /// <param name="point1"> The second point. </param>
-        /// <returns> Return **true** if the distance'LengthSquared exceeds [NodeDistance], otherwise **false**. </returns>
+        /// <returns> Return **true** if the distance's LengthSquared exceeds [NodeDistance], otherwise **false**. </returns>
         public static bool OutNodeDistance(Vector2 point0, Vector2 point1) => (point0 - point1).LengthSquared() > Math._nodeDistanceSquare;
 
         /// <summary>

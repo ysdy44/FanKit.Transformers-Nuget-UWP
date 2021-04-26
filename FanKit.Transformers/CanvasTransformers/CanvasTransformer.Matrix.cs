@@ -1,24 +1,7 @@
-﻿using System;
-using System.Numerics;
-using Windows.Foundation;
-using Windows.UI.Xaml.Controls;
+﻿using System.Numerics;
 
 namespace FanKit.Transformers
 {
-    /// <summary>
-    /// Transformer: 
-    /// Provide matrix by Position、Scale、Radians.
-    /// 
-    /// 
-    /// TODO:
-    /// Canvas Layer:
-    ///    The original size of the layer.
-    /// Virtual Layer:
-    ///    Render all layers together and make their center points coincide with the origin (0,0) and then zoom;
-    /// Control Layer:
-    ///    Rotate around the origin first, then shift. (The canvas has a rotation angle)
-    ///    
-    /// </summary>
     public partial class CanvasTransformer
     {
         

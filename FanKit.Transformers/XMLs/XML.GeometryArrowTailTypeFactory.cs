@@ -1,8 +1,5 @@
 ﻿namespace FanKit.Transformers
 {
-    /// <summary>
-    /// Provide constant and static methods for XElement.
-    /// </summary>
     public static partial class XML
     {
 

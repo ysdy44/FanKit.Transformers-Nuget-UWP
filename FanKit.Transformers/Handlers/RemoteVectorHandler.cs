@@ -4,7 +4,7 @@ namespace FanKit.Transformers
 {
     //@Delegate
     /// <summary>
-    /// Method that represents the handling of the ValueChange event.
+    /// Method that represents the handling of the ValueChanged event.
     /// </summary>
     /// <param name="sender"> The object to which the event handler is attached. </param>
     /// <param name="value"> Event data. </param>

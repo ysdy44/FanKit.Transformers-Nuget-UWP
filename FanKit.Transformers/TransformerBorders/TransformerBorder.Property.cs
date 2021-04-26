@@ -2,10 +2,6 @@
 
 namespace FanKit.Transformers
 {
-    /// <summary>
-    /// Represents a maximum boundary in a plane right-angle coordinate system,
-    /// including the left right top bottom and center.
-    /// </summary>
     public partial struct TransformerBorder : ITransformerLTRB
     {
 

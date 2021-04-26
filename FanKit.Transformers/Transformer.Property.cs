@@ -1,11 +1,7 @@
-﻿using System;
-using System.Numerics;
+﻿using System.Numerics;
 
 namespace FanKit.Transformers
 {
-    /// <summary> 
-    /// A structure encapsulating four vector values (LeftTop, RightTop, RightBottom, LeftBottom). 
-    /// </summary>
     public partial struct Transformer : ITransformerLTRB, ITransformerGeometry
     {
         /// <summary> Vector in LeftTop. </summary>
@@ -36,7 +32,7 @@ namespace FanKit.Transformers
         public float MaxX => System.Math.Max(System.Math.Max(this.LeftTop.X, this.RightTop.X), System.Math.Max(this.RightBottom.X, this.LeftBottom.X));
         /// <summary> Gets the minimum value on the Y-Axis. </summary>
         public float MinY => System.Math.Min(System.Math.Min(this.LeftTop.Y, this.RightTop.Y), System.Math.Min(this.RightBottom.Y, this.LeftBottom.Y));
-        /// <summary> Gets the maximum  value on the Y-Axis. </summary>
+        /// <summary> Gets the maximum value on the Y-Axis. </summary>
         public float MaxY => System.Math.Max(System.Math.Max(this.LeftTop.Y, this.RightTop.Y), System.Math.Max(this.RightBottom.Y, this.LeftBottom.Y));
 
         /// <summary> Gets horizontal vector. </summary>

@@ -14,7 +14,7 @@ namespace FanKit.Transformers
         public Transformer Destination;
         private Transformer startingDestination;
         
-        /// <summary> Is disable rotate radian? Defult **false**. </summary>
+        /// <summary> Is disable rotate radian? Default **false**. </summary>
         public bool DisabledRadian;
 
 
@@ -76,7 +76,7 @@ namespace FanKit.Transformers
 
 
         /// <summary>
-        /// Gets transformer-matrix>'s resulting matrix.
+        /// Gets transformer-matrix's resulting matrix.
         /// </summary>
         /// <returns> The product matrix. </returns>
         public Matrix3x2 GetMatrix() => Transformer.FindHomography(this.Source, this.Destination);

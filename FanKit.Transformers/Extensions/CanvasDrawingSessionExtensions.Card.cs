@@ -5,9 +5,6 @@ using Windows.Foundation;
 
 namespace FanKit.Transformers
 {
-    /// <summary>
-    /// Extensions of <see cref = "CanvasDrawingSession" />.
-    /// </summary>
     public static partial class CanvasDrawingSessionExtensions
     {
 
@@ -71,7 +68,7 @@ namespace FanKit.Transformers
         /// <param name="previousImage"> The previous image. </param>
         /// <param name="cropRect"> The image crop rectangle. </param>
         /// <param name="shadowColor"> The shadow color. </param>
-        /// <param name="shadowBlurAmount"> sThe haodw blur amount. </param>
+        /// <param name="shadowBlurAmount"> The shaodw blur amount. </param>
         /// <param name="shadowOffset"> The shadow offset. </param>
         public static void DrawCrad(this CanvasDrawingSession drawingSession, ICanvasImage previousImage, Rect cropRect, Windows.UI.Color shadowColor, float shadowBlurAmount = 4.0f, float shadowOffset = 5.0f) => CanvasDrawingSessionExtensions._drawCrad(drawingSession, previousImage, cropRect, shadowColor, shadowBlurAmount, shadowOffset);
 

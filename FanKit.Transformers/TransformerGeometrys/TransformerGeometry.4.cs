@@ -18,9 +18,6 @@ namespace FanKit.Transformers
         // Round,
     }
 
-    /// <summary>
-    /// Provides a static method for converting to geometry.
-    /// </summary>
     public static partial class TransformerGeometry
     {
 
@@ -38,7 +35,7 @@ namespace FanKit.Transformers
         /// <param name="leftTail"> The left - tail. </param>
         /// <param name="rightTail"> The right - tail. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreateArrow(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformer, bool isAbsolute = false, float width2 = 10, float value = 0.5f, GeometryArrowTailType leftTail = GeometryArrowTailType.None, GeometryArrowTailType rightTail = GeometryArrowTailType.Arrow)
+        public static CanvasGeometry CreateArrow(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformer, bool isAbsolute = false, float width = 10, float value = 0.5f, GeometryArrowTailType leftTail = GeometryArrowTailType.None, GeometryArrowTailType rightTail = GeometryArrowTailType.Arrow)
         {
             Vector2 center = transformer.Center;
             Vector2 centerLeft = transformer.CenterLeft;
@@ -51,7 +48,7 @@ namespace FanKit.Transformers
             Vector2 vertical = transformer.Vertical;
             float verticalLength = vertical.Length();
 
-            Vector2 widthVector = TransformerGeometry._getArrowWidthVector(isAbsolute, width2, value, vertical, verticalLength);
+            Vector2 widthVector = TransformerGeometry._getArrowWidthVector(isAbsolute, width, value, vertical, verticalLength);
 
             Vector2 focusVector = TransformerGeometry._getArrowFocusVector(verticalLength, horizontalLength, horizontal);
             Vector2 leftFocusTransform = (transformer.CenterLeft + focusVector);

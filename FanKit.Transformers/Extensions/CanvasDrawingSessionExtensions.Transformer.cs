@@ -3,9 +3,6 @@ using System.Numerics;
 
 namespace FanKit.Transformers
 {
-    /// <summary>
-    /// Extensions of <see cref = "CanvasDrawingSession" />.
-    /// </summary>
     public static partial class CanvasDrawingSessionExtensions
     {
 

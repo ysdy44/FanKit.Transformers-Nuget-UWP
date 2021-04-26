@@ -2,9 +2,6 @@
 
 namespace FanKit.Transformers
 {
-    /// <summary>  
-    /// Nodes of the Bezier Curve.
-    /// </summary>
     public partial class Node : ICacheTransform
     {
 

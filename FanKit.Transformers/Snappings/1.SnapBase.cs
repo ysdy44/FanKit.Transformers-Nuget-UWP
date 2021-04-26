@@ -13,7 +13,7 @@ namespace FanKit.Transformers
     public abstract class SnapBase<S, D>
     {
         //NodeRadius
-        /// <summary> Radius of node'. Defult 12. </summary>
+        /// <summary> Radius of node. Default 12. </summary>
         public float NodeRadius { get; set; } = FanKit.Math.NodeRadius;
 
         //Source Destination

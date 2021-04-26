@@ -6,9 +6,6 @@ using System.Numerics;
 
 namespace FanKit.Transformers
 {
-    /// <summary>
-    /// Represents an ordered collection of node objects.
-    /// </summary>
     public sealed partial class NodeCollection : ICanvasPathReceiver, ICacheTransform, IList<Node>, IEnumerable<Node>
     {
         

@@ -4,9 +4,6 @@ using System.Numerics;
 
 namespace FanKit.Transformers
 {
-    /// <summary>
-    /// Provides a static method for converting to geometry.
-    /// </summary>
     public static partial class TransformerGeometry
     {
         

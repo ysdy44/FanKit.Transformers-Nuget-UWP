@@ -1,8 +1,6 @@
-﻿ using System;
-using System.Numerics;
+﻿using System.Numerics;
 using Windows.Foundation;
 using Windows.Graphics.Imaging;
-using Windows.UI.Xaml.Controls;
 
 namespace FanKit.Transformers
 {
