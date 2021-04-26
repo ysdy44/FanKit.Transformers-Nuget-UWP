@@ -17,15 +17,15 @@ namespace FanKit.Transformers
         /// <param name="startingTransformer"> The starting transformer. </param>
         /// <param name="isRatio"> Maintain a ratio when scaling. </param>
         /// <param name="isCenter"> Scaling around the center. </param>
-        /// <param name="isStepFrequency"> Step Frequency when spinning. </param>
+        /// <param name="isSnapToTick"> Snap to tick when spinning. </param>
         /// <returns> The controlled transformer. </returns>
-        public static Transformer Controller(TransformerMode mode, Vector2 startingPoint, Vector2 point, Transformer startingTransformer, bool isRatio = false, bool isCenter = false, bool isStepFrequency = false)
+        public static Transformer Controller(TransformerMode mode, Vector2 startingPoint, Vector2 point, Transformer startingTransformer, bool isRatio = false, bool isCenter = false, bool isSnapToTick = false)
         {
             switch (mode)
             {
                 case TransformerMode.None: return startingTransformer;
 
-                case TransformerMode.Rotation: return Transformer._rotation(startingPoint, point, startingTransformer, isStepFrequency);
+                case TransformerMode.Rotation: return Transformer._rotation(startingPoint, point, startingTransformer, isSnapToTick);
 
                 case TransformerMode.SkewLeft: return Transformer._skewLeft(startingPoint, point, startingTransformer, isCenter);
                 case TransformerMode.SkewTop: return Transformer._skewTop(startingPoint, point, startingTransformer, isCenter);
@@ -55,15 +55,15 @@ namespace FanKit.Transformers
         /// <param name="inverseMatrix"> The inverse matrix. </param>
         /// <param name="isRatio"> Maintain a ratio when scaling. </param>
         /// <param name="isCenter"> Scaling around the center. </param>
-        /// <param name="isStepFrequency"> Step Frequency when spinning. </param>
+        /// <param name="isSnapToTick"> Snap to tick when spinning. </param>
         /// <returns> The controlled transformer. </returns>
-        public static Transformer Controller(TransformerMode mode, Vector2 startingPoint, Vector2 point, Transformer startingTransformer, Matrix3x2 inverseMatrix, bool isRatio = false, bool isCenter = false, bool isStepFrequency = false)
+        public static Transformer Controller(TransformerMode mode, Vector2 startingPoint, Vector2 point, Transformer startingTransformer, Matrix3x2 inverseMatrix, bool isRatio = false, bool isCenter = false, bool isSnapToTick = false)
         {
             switch (mode)
             {
                 case TransformerMode.None: return startingTransformer;
 
-                case TransformerMode.Rotation: return Transformer._rotation(startingPoint, point, startingTransformer, inverseMatrix, isStepFrequency);
+                case TransformerMode.Rotation: return Transformer._rotation(startingPoint, point, startingTransformer, inverseMatrix, isSnapToTick);
 
                 case TransformerMode.SkewLeft: return Transformer._skewLeft(startingPoint, point, startingTransformer, isCenter);
                 case TransformerMode.SkewTop: return Transformer._skewTop(startingPoint, point, startingTransformer, isCenter);
@@ -87,14 +87,14 @@ namespace FanKit.Transformers
 
 
         //Rotation      
-        private static Transformer _rotation(Vector2 startingPoint, Vector2 point, Transformer startingTransformer, bool isStepFrequency)
+        private static Transformer _rotation(Vector2 startingPoint, Vector2 point, Transformer startingTransformer, bool isSnapToTick)
         {
             Vector2 canvasPoint = point;
             Vector2 canvasStartingPoint = startingPoint;
             Vector2 center = startingTransformer.Center;
 
             float canvasRadian = Math.VectorToRadians(canvasPoint - center);
-            if (isStepFrequency) canvasRadian = Math.RadiansStepFrequency(canvasRadian);
+            if (isSnapToTick) canvasRadian = Math.RadiansStepFrequency(canvasRadian);
 
             float canvasStartingRadian = Math.VectorToRadians(canvasStartingPoint - center);
             float radian = canvasRadian - canvasStartingRadian;
@@ -102,14 +102,14 @@ namespace FanKit.Transformers
             Matrix3x2 rotationMatrix = Matrix3x2.CreateRotation(radian, center);
             return Transformer.Multiplies(startingTransformer, rotationMatrix);
         }
-        private static Transformer _rotation(Vector2 startingPoint, Vector2 point, Transformer startingTransformer, Matrix3x2 inverseMatrix, bool isStepFrequency)
+        private static Transformer _rotation(Vector2 startingPoint, Vector2 point, Transformer startingTransformer, Matrix3x2 inverseMatrix, bool isSnapToTick)
         {
             Vector2 canvasPoint = Vector2.Transform(point, inverseMatrix);
             Vector2 canvasStartingPoint = Vector2.Transform(startingPoint, inverseMatrix);
             Vector2 center = startingTransformer.Center;
 
             float canvasRadian = Math.VectorToRadians(canvasPoint - center);
-            if (isStepFrequency) canvasRadian = Math.RadiansStepFrequency(canvasRadian);
+            if (isSnapToTick) canvasRadian = Math.RadiansStepFrequency(canvasRadian);
 
             float canvasStartingRadian = Math.VectorToRadians(canvasStartingPoint - center);
             float radian = canvasRadian - canvasStartingRadian;
