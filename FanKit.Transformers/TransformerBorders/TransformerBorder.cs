@@ -90,7 +90,7 @@ namespace FanKit.Transformers
                 if (right < vector.X) right = vector.X;
                 if (bottom < vector.Y) bottom = vector.Y;
             }
-            
+
             foreach (Transformer transformer in transformers)
             {
                 aaa(transformer.LeftTop);
@@ -111,7 +111,7 @@ namespace FanKit.Transformers
         /// Initialize a <see cref = "TransformerBorder" />.
         /// </summary>
         /// <param name="getActualTransformers"> The IGetActualTransformer. </param>
-        public TransformerBorder(IEnumerable<IGetActualTransformer>  getActualTransformers)
+        public TransformerBorder(IEnumerable<IGetActualTransformer> getActualTransformers)
         {
             float left = float.MaxValue;
             float top = float.MaxValue;
@@ -126,7 +126,7 @@ namespace FanKit.Transformers
                 if (bottom < vector.Y) bottom = vector.Y;
             }
 
-            foreach (IGetActualTransformer  getActualTransformer in getActualTransformers)
+            foreach (IGetActualTransformer getActualTransformer in getActualTransformers)
             {
                 Transformer transformer = getActualTransformer.GetActualTransformer();
 

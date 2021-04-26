@@ -19,14 +19,13 @@ namespace FanKit.Transformers
         public static Transformer CreateWithAspectRatio(Vector2 startingPoint, Vector2 point, float sizeWidth, float sizeHeight)
         {
             float lengthSquared = Vector2.DistanceSquared(startingPoint, point);
-            const float root2 = 1.4142135623730950488016887242097f;
+            float diagonalSquared = sizeWidth * sizeWidth + sizeHeight * sizeHeight;
+            float scale = (float)System.Math.Sqrt(lengthSquared / diagonalSquared);
 
             //Height not less than 10
             if (sizeWidth > sizeHeight)
             {
-                float heightSquared = lengthSquared / (1 + (sizeWidth * sizeWidth) / (sizeHeight * sizeHeight));
-                float height = (float)System.Math.Sqrt(heightSquared) / root2;
-
+                float height = scale * sizeHeight;
                 if (height < 10) height = 10;
                 float width = height * sizeWidth / sizeHeight;
 
@@ -35,9 +34,7 @@ namespace FanKit.Transformers
             //Width not less than 10
             else if (sizeWidth < sizeHeight)
             {
-                float widthSquared = lengthSquared / (1 + (sizeHeight * sizeHeight) / (sizeWidth * sizeWidth));
-                float width = (float)System.Math.Sqrt(widthSquared) / root2;
-
+                float width = scale * sizeWidth;
                 if (width < 10) width = 10;
                 float height = width * sizeHeight / sizeWidth;
 
@@ -46,7 +43,7 @@ namespace FanKit.Transformers
             //Width equals height
             else
             {
-                float spare = (float)System.Math.Sqrt(lengthSquared) / root2;
+                float spare = scale * sizeWidth;
 
                 return Transformer._getRectangleInQuadrant(startingPoint, point, spare, spare);
             }
