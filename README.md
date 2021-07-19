@@ -2,7 +2,7 @@
 
  Drag and drop nodes and manipulate transformer libraries. 
 
-![](https://github.com/ysdy44/FanKit.Transformers-Nuget-UWP/blob/master/ScreenShot/ScreenShot001.jpg)
+![](ScreenShot/ScreenShot001.jpg)
 
 
 ## Getting Started
@@ -14,12 +14,12 @@
 |Programing language|C#|
 |Display language|English|
 
-  ![](https://github.com/ysdy44/FanKit.Transformers-Nuget-UWP/blob/master/ScreenShot/logo.png)
+  ![](ScreenShot/logo.png)
 
 
 Search 'FanKit.Transformers
 ' in Nuget and download it.  
-  ![](https://github.com/ysdy44/FanKit.Transformers-Nuget-UWP/blob/master/ScreenShot/Thumbnails000.jpg)
+  ![](ScreenShot/Thumbnails000.jpg)
 
 
 ### Example
@@ -60,10 +60,10 @@ You can learn more from the demo application in windows 10 store:<br/>
 
 
 1.Click on item "Transformers" in the top bar.  
-![](https://github.com/ysdy44/FanKit.Transformers-Nuget-UWP/blob/master/ScreenShot/Thumbnails001.jpg)
+![](ScreenShot/Thumbnails001.jpg)
 
 2.Look for simple examples.  
-![](https://github.com/ysdy44/FanKit.Transformers-Nuget-UWP/blob/master/ScreenShot/Thumbnails002.jpg)
+![](ScreenShot/Thumbnails002.jpg)
 
 
 Enjoy it..
