@@ -1,30 +1,31 @@
 # FanKit.Transformers
 
- Drag and drop nodes and manipulate transformer libraries. 
+拖放节点，并操作变换的类库。
 
 ![](ScreenShot/ScreenShot001.jpg)
 
 
-## Development environment
+## 开发环境
 
 |Key|Value|
 |:-|:-|
-|System requirements| Windows10 Creators Update or upper|
-|Development tool|Visual Studio 2017|
-|Programing language|C#|
-|Display language|English|
+|系统要求| Windows10 Creators Update 或更高|
+|开发工具|Visual Studio 2017|
+|编程语言|C#|
+|显示语言|English|
+|评论语言|中文|
 
   ![](ScreenShot/logo.png)
 
 
-Search 'FanKit.Transformers
-' in Nuget and download it.  
+在 Nuget 里搜索 'FanKit.Transformers
+' 并下载。
   ![](ScreenShot/Thumbnails000.jpg)
 
 
-### Example
+### 示例
 
-Run the "TestApp".
+运行 "TestApp".
 
 ```xaml
     xmlns:transformers="using:FanKit.Transformers"
@@ -52,17 +53,17 @@ using System.Numerics;
 ```
 
 
-## Learn More
+## 了解更多
 
-You can learn more from the demo application in windows 10 store:<br/>
+您可以从 Windows 10 商店中的演示应用程序中了解更多信息:<br/>
 [FanKit](https://www.microsoft.com/store/productId/9PD2JJZQF524)
 
 
-1.Click on item "Transformers" in the top bar.  
+1.点击顶部栏中的“Transformers” 项。
 ![](ScreenShot/Thumbnails001.jpg)
 
-2.Look for simple examples.  
+2.寻找简易示例。
 ![](ScreenShot/Thumbnails002.jpg)
 
 
-Enjoy it..
+玩的开心...
