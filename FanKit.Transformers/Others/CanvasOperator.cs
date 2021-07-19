@@ -30,6 +30,18 @@ namespace FanKit.Transformers
         {
             CanvasOperator con = (CanvasOperator)sender;
 
+            if (e.OldValue is Control oldValue)
+            {
+                oldValue.PointerEntered -= con.Control_PointerEntered;
+                oldValue.PointerExited -= con.Control_PointerExited;
+
+                oldValue.PointerPressed -= con.Control_PointerPressed;
+                oldValue.PointerReleased -= con.Control_PointerReleased;
+
+                oldValue.PointerMoved -= con.Control_PointerMoved;
+                oldValue.PointerWheelChanged -= con.Control_PointerWheelChanged;
+            }
+
             if (e.NewValue is Control value)
             {
                 value.PointerEntered += con.Control_PointerEntered;
@@ -123,7 +135,6 @@ namespace FanKit.Transformers
         //Pointer Exited
         private void Control_PointerExited(object sender, PointerRoutedEventArgs e)
         {
-            this.Control_PointerReleased(sender, e);
         }
 
 
@@ -131,6 +142,7 @@ namespace FanKit.Transformers
         private void Control_PointerPressed(object sender, PointerRoutedEventArgs e)
         {
             Vector2 point = CanvasOperator.PointerPosition(this.DestinationControl, e);
+            this.DestinationControl?.CapturePointer(e.Pointer);
 
             if (CanvasOperator.PointerIsTouch(this.DestinationControl, e))
             {
@@ -176,6 +188,7 @@ namespace FanKit.Transformers
         private void Control_PointerReleased(object sender, PointerRoutedEventArgs e)
         {
             Vector2 point = CanvasOperator.PointerPosition(this.DestinationControl, e);
+            this.DestinationControl?.ReleasePointerCapture(e.Pointer);
 
             if (this._device == InputDevice.Right)
             {
