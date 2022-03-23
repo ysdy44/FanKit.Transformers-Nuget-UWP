@@ -22,12 +22,12 @@ namespace FanKit.Transformers
     {
 
         /// <summary> <see cref = "CanvasTransformer" />'s width. </summary>
-        public int Width = 1000;
+        public int Width { get; set; } = 1000;
         /// <summary> <see cref = "CanvasTransformer" />'s height. </summary>
-        public int Height = 1000;
+        public int Height { get; set; } = 1000;
 
         /// <summary> <see cref = "CanvasTransformer" />'s scale. </summary>
-        public float Scale = 1.0f;
+        public float Scale { get; set; } = 1.0f;
 
         /// <summary> CanvasControl's width. </summary>
         public float ControlWidth { get; set; } = 1000.0f;
@@ -37,9 +37,9 @@ namespace FanKit.Transformers
         public Vector2 ControlCenter => new Vector2(this.ControlWidth / 2, this.ControlHeight / 2);
 
         /// <summary> <see cref = "CanvasTransformer" />'s translation. </summary>
-        public Vector2 Position = new Vector2(0.0f, 0.0f);
+        public Vector2 Position { get; set; } = new Vector2(0.0f, 0.0f);
         /// <summary> <see cref = "CanvasTransformer" />'s rotation. </summary>
-        public float Radian = 0.0f;
+        public float Radian { get; set; } = 0.0f;
 
 
         //@Construct
@@ -61,7 +61,7 @@ namespace FanKit.Transformers
             set
             {
                 this.ControlWidth = (float)value.Width;
-                this.ControlHeight =  (float)value.Height;
+                this.ControlHeight = (float)value.Height;
             }
         }
         /// <summary> <see cref = "CanvasTransformer.Width" /> and <see cref = "CanvasTransformer.Height" />'s setter. </summary>
@@ -95,8 +95,7 @@ namespace FanKit.Transformers
 
             this.Scale = System.Math.Min(widthScale, heightScale);
 
-            this.Position.X = this.ControlWidth / 2.0f;
-            this.Position.Y = this.ControlHeight / 2.0f;
+            this.Position = new Vector2(this.ControlWidth / 2.0f, this.ControlHeight / 2.0f);
 
             this.Radian = 0.0f;
 
@@ -111,8 +110,7 @@ namespace FanKit.Transformers
         {
             this.Scale = scale;
 
-            this.Position.X = this.ControlWidth / 2.0f;
-            this.Position.Y = this.ControlHeight / 2.0f;
+            this.Position = new Vector2(this.ControlWidth / 2.0f, this.ControlHeight / 2.0f);
 
             this.Radian = 0.0f;
 
