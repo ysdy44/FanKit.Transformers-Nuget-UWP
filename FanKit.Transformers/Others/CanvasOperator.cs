@@ -20,38 +20,38 @@ namespace FanKit.Transformers
         /// <summary>
         /// <see cref = "CanvasOperator" />'s destination control.
         /// </summary>
-        public Control DestinationControl
+        public UIElement DestinationControl
         {
-            get { return (Control)GetValue(DestinationControlProperty); }
-            set { SetValue(DestinationControlProperty, value); }
+            get => (UIElement)base.GetValue(DestinationControlProperty);
+            set => base.SetValue(DestinationControlProperty, value);
         }
         /// <summary> Identifies the <see cref = "CanvasOperator.DestinationControl" /> dependency property. </summary>
-        public static DependencyProperty DestinationControlProperty = DependencyProperty.Register(nameof(DestinationControl), typeof(Windows.UI.Xaml.Controls.Control), typeof(CanvasOperator), new PropertyMetadata(null, (sender, e) =>
+        public static DependencyProperty DestinationControlProperty = DependencyProperty.Register(nameof(DestinationControl), typeof(UIElement), typeof(CanvasOperator), new PropertyMetadata(null, (sender, e) =>
         {
-            CanvasOperator con = (CanvasOperator)sender;
+            CanvasOperator control = (CanvasOperator)sender;
 
-            if (e.OldValue is Control oldValue)
+            if (e.OldValue is UIElement oldValue)
             {
-                oldValue.PointerEntered -= con.Control_PointerEntered;
-                oldValue.PointerExited -= con.Control_PointerExited;
+                oldValue.PointerEntered -= control.Control_PointerEntered;
+                oldValue.PointerExited -= control.Control_PointerExited;
 
-                oldValue.PointerPressed -= con.Control_PointerPressed;
-                oldValue.PointerReleased -= con.Control_PointerReleased;
+                oldValue.PointerPressed -= control.Control_PointerPressed;
+                oldValue.PointerReleased -= control.Control_PointerReleased;
 
-                oldValue.PointerMoved -= con.Control_PointerMoved;
-                oldValue.PointerWheelChanged -= con.Control_PointerWheelChanged;
+                oldValue.PointerMoved -= control.Control_PointerMoved;
+                oldValue.PointerWheelChanged -= control.Control_PointerWheelChanged;
             }
 
-            if (e.NewValue is Control value)
+            if (e.NewValue is UIElement value)
             {
-                value.PointerEntered += con.Control_PointerEntered;
-                value.PointerExited += con.Control_PointerExited;
+                value.PointerEntered += control.Control_PointerEntered;
+                value.PointerExited += control.Control_PointerExited;
 
-                value.PointerPressed += con.Control_PointerPressed;
-                value.PointerReleased += con.Control_PointerReleased;
+                value.PointerPressed += control.Control_PointerPressed;
+                value.PointerReleased += control.Control_PointerReleased;
 
-                value.PointerMoved += con.Control_PointerMoved;
-                value.PointerWheelChanged += con.Control_PointerWheelChanged;
+                value.PointerMoved += control.Control_PointerMoved;
+                value.PointerWheelChanged += control.Control_PointerWheelChanged;
             }
         }));
 
