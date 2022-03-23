@@ -17,22 +17,22 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="indicatorMode"> The indicato rmode. </param>
         /// <returns> The produced alignment. </returns>
-        public static HorizontalAlignment ToHorizontalAlignment(this IndicatorMode  indicatorMode)
+        public static HorizontalAlignment ToHorizontalAlignment(this IndicatorMode indicatorMode)
         {
             switch (indicatorMode)
             {
                 case IndicatorMode.LeftTop:
-                case IndicatorMode.Left: 
+                case IndicatorMode.Left:
                 case IndicatorMode.LeftBottom:
                     return HorizontalAlignment.Left;
 
                 case IndicatorMode.Top:
-                case IndicatorMode.Center: 
+                case IndicatorMode.Center:
                 case IndicatorMode.Bottom:
                     return HorizontalAlignment.Center;
 
-                case IndicatorMode.RightTop: 
-                case IndicatorMode.Right: 
+                case IndicatorMode.RightTop:
+                case IndicatorMode.Right:
                 case IndicatorMode.RightBottom:
                     return HorizontalAlignment.Right;
 
@@ -50,18 +50,18 @@ namespace FanKit.Transformers
         {
             switch (indicatorMode)
             {
-                case IndicatorMode.LeftTop: 
-                case IndicatorMode.RightTop: 
+                case IndicatorMode.LeftTop:
+                case IndicatorMode.RightTop:
                 case IndicatorMode.Top:
                     return VerticalAlignment.Top;
 
-                case IndicatorMode.Center: 
-                case IndicatorMode.Left: 
+                case IndicatorMode.Center:
+                case IndicatorMode.Left:
                 case IndicatorMode.Right:
                     return VerticalAlignment.Center;
 
                 case IndicatorMode.RightBottom:
-                case IndicatorMode.LeftBottom: 
+                case IndicatorMode.LeftBottom:
                 case IndicatorMode.Bottom:
                     return VerticalAlignment.Bottom;
 

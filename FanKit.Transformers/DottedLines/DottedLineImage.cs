@@ -41,9 +41,9 @@ namespace FanKit.Transformers
         /// <param name="isCrop"> Whether to crop the edge. </param>
         public void Baking(ICanvasResourceCreator resourceCreator, bool isCrop = true)
         {
-            IGraphicsEffectSource crop = (isCrop == false) ? this.Input : this._createCrop(resourceCreator, this.Input);
+            IGraphicsEffectSource crop = (isCrop == false) ? this.Input : this.CreateCrop(resourceCreator, this.Input);
 
-            this.Output = this._createLuminance(resourceCreator, crop);
+            this.Output = this.CreateLuminance(crop);
         }
 
         /// <summary>
@@ -54,7 +54,7 @@ namespace FanKit.Transformers
         /// <param name="isCrop"> Whether to crop the edge. </param>
         public void Baking(ICanvasResourceCreator resourceCreator, Matrix3x2 matrix, bool isCrop = true)
         {
-            IGraphicsEffectSource crop = (isCrop == false) ? this.Input : this._createCrop(resourceCreator, this.Input);
+            IGraphicsEffectSource crop = (isCrop == false) ? this.Input : this.CreateCrop(resourceCreator, this.Input);
 
             Transform2DEffect transform = new Transform2DEffect//Transform
             {
@@ -62,10 +62,10 @@ namespace FanKit.Transformers
                 Source = crop
             };
 
-            this.Output = this._createLuminance(resourceCreator, transform);
+            this.Output = this.CreateLuminance(transform);
         }
 
-        private ICanvasImage _createLuminance(ICanvasResourceCreator resourceCreator, IGraphicsEffectSource image)
+        private ICanvasImage CreateLuminance(IGraphicsEffectSource image)
         {
             return new LuminanceToAlphaEffect//Alpha
             {
@@ -76,7 +76,7 @@ namespace FanKit.Transformers
                 }
             };
         }
-        private IGraphicsEffectSource _createCrop(ICanvasResourceCreator resourceCreator, CanvasRenderTarget canvasRenderTarget)
+        private IGraphicsEffectSource CreateCrop(ICanvasResourceCreator resourceCreator, CanvasRenderTarget canvasRenderTarget)
         {
             Rect cropRectangle = new Rect(2, 2, canvasRenderTarget.SizeInPixels.Width - 4, canvasRenderTarget.SizeInPixels.Height - 4);
 

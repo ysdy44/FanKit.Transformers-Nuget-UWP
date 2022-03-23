@@ -23,16 +23,16 @@ namespace FanKit.Transformers
             switch (toolType)
             {
                 case MarqueeToolType.Rectangular:
-                    drawingSession._drawMarqueeToolRectangular(resourceCreator, marqueeTool.TransformerRect, sourceRectangle, compositeMode);
+                    drawingSession.DrawMarqueeToolRectangular(resourceCreator, marqueeTool.TransformerRect, sourceRectangle, compositeMode);
                     break;
                 case MarqueeToolType.Elliptical:
-                    drawingSession._drawMarqueeToolEllipse(resourceCreator, marqueeTool.TransformerRect, sourceRectangle, compositeMode);
+                    drawingSession.DrawMarqueeToolEllipse(resourceCreator, marqueeTool.TransformerRect, sourceRectangle, compositeMode);
                     break;
                 case MarqueeToolType.Polygonal:
                 case MarqueeToolType.FreeHand:
                     Vector2[] points = marqueeTool.Points.ToArray();
                     CanvasGeometry canvasGeometry = CanvasGeometry.CreatePolygon(resourceCreator, marqueeTool.Points.ToArray());
-                    drawingSession._drawMarqueeToolGeometry(resourceCreator, canvasGeometry, sourceRectangle, compositeMode);
+                    drawingSession.DrawMarqueeToolGeometry(resourceCreator, canvasGeometry, sourceRectangle, compositeMode);
                     break;
             }
         }
@@ -142,7 +142,7 @@ namespace FanKit.Transformers
         }
          
                  
-        private static CanvasCommandList _getMarqueeToolGeometry(CanvasDrawingSession drawingSession, ICanvasResourceCreator resourceCreator, CanvasGeometry canvasGeometry)
+        private static CanvasCommandList GetMarqueeToolGeometry(CanvasDrawingSession drawingSession, ICanvasResourceCreator resourceCreator, CanvasGeometry canvasGeometry)
         {
             CanvasCommandList canvasCommandList = new CanvasCommandList(resourceCreator);
             using (CanvasDrawingSession ds = canvasCommandList.CreateDrawingSession())
@@ -152,7 +152,7 @@ namespace FanKit.Transformers
             return canvasCommandList;
         }
 
-        private static void _drawMarqueeToolGeometry(this CanvasDrawingSession drawingSession, ICanvasResourceCreator resourceCreator, CanvasGeometry canvasGeometry, Rect sourceRectangle, MarqueeCompositeMode compositeMode = MarqueeCompositeMode.New)
+        private static void DrawMarqueeToolGeometry(this CanvasDrawingSession drawingSession, ICanvasResourceCreator resourceCreator, CanvasGeometry canvasGeometry, Rect sourceRectangle, MarqueeCompositeMode compositeMode = MarqueeCompositeMode.New)
         {
             switch (compositeMode)
             {
@@ -169,21 +169,21 @@ namespace FanKit.Transformers
                     break;
                 case MarqueeCompositeMode.Subtract:
                     {
-                        CanvasCommandList canvasCommandList = CanvasDrawingSessionExtensions._getMarqueeToolGeometry(drawingSession, resourceCreator, canvasGeometry);
+                        CanvasCommandList canvasCommandList = CanvasDrawingSessionExtensions.GetMarqueeToolGeometry(drawingSession, resourceCreator, canvasGeometry);
                         CanvasComposite canvasComposite = CanvasComposite.DestinationOut;
                         drawingSession.DrawImage(canvasCommandList, 0, 0, sourceRectangle, 1, CanvasImageInterpolation.Linear, canvasComposite);
                     }
                     break;
                 case MarqueeCompositeMode.Intersect:
                     {
-                        CanvasCommandList canvasCommandList = CanvasDrawingSessionExtensions._getMarqueeToolGeometry(drawingSession, resourceCreator, canvasGeometry);
+                        CanvasCommandList canvasCommandList = CanvasDrawingSessionExtensions.GetMarqueeToolGeometry(drawingSession, resourceCreator, canvasGeometry);
                         CanvasComposite canvasComposite = CanvasComposite.DestinationIn;
                         drawingSession.DrawImage(canvasCommandList, 0, 0, sourceRectangle, 1, CanvasImageInterpolation.Linear, canvasComposite);
                     }
                     break;
                 case MarqueeCompositeMode.Xor:
                     {
-                        CanvasCommandList canvasCommandList = CanvasDrawingSessionExtensions._getMarqueeToolGeometry(drawingSession, resourceCreator, canvasGeometry);
+                        CanvasCommandList canvasCommandList = CanvasDrawingSessionExtensions.GetMarqueeToolGeometry(drawingSession, resourceCreator, canvasGeometry);
                         CanvasComposite canvasComposite = CanvasComposite.Xor;
                         drawingSession.DrawImage(canvasCommandList, 0, 0, sourceRectangle, 1, CanvasImageInterpolation.Linear, canvasComposite);
                     }
@@ -192,7 +192,7 @@ namespace FanKit.Transformers
         }
          
 
-        private static CanvasCommandList _getMarqueeToolRectangular(CanvasDrawingSession drawingSession, ICanvasResourceCreator resourceCreator, TransformerRect transformerRect)
+        private static CanvasCommandList GetMarqueeToolRectangular(CanvasDrawingSession drawingSession, ICanvasResourceCreator resourceCreator, TransformerRect transformerRect)
         {
             CanvasCommandList canvasCommandList = new CanvasCommandList(resourceCreator);
             using (CanvasDrawingSession ds = canvasCommandList.CreateDrawingSession())
@@ -203,7 +203,7 @@ namespace FanKit.Transformers
             return canvasCommandList;
         }
 
-        private static void _drawMarqueeToolRectangular(this CanvasDrawingSession drawingSession, ICanvasResourceCreator resourceCreator, TransformerRect transformerRect, Rect sourceRectangle, MarqueeCompositeMode compositeMode = MarqueeCompositeMode.New)
+        private static void DrawMarqueeToolRectangular(this CanvasDrawingSession drawingSession, ICanvasResourceCreator resourceCreator, TransformerRect transformerRect, Rect sourceRectangle, MarqueeCompositeMode compositeMode = MarqueeCompositeMode.New)
         {
             switch (compositeMode)
             {
@@ -222,21 +222,21 @@ namespace FanKit.Transformers
                     break;
                 case MarqueeCompositeMode.Subtract:
                     {
-                        CanvasCommandList canvasCommandList = CanvasDrawingSessionExtensions._getMarqueeToolRectangular(drawingSession, resourceCreator, transformerRect);
+                        CanvasCommandList canvasCommandList = CanvasDrawingSessionExtensions.GetMarqueeToolRectangular(drawingSession, resourceCreator, transformerRect);
                         CanvasComposite canvasComposite = CanvasComposite.DestinationOut;
                         drawingSession.DrawImage(canvasCommandList, 0, 0, sourceRectangle, 1, CanvasImageInterpolation.Linear, canvasComposite);
                     }
                     break;
                 case MarqueeCompositeMode.Intersect:
                     {
-                        CanvasCommandList canvasCommandList = CanvasDrawingSessionExtensions._getMarqueeToolRectangular(drawingSession, resourceCreator, transformerRect);
+                        CanvasCommandList canvasCommandList = CanvasDrawingSessionExtensions.GetMarqueeToolRectangular(drawingSession, resourceCreator, transformerRect);
                         CanvasComposite canvasComposite = CanvasComposite.DestinationIn;
                         drawingSession.DrawImage(canvasCommandList, 0, 0, sourceRectangle, 1, CanvasImageInterpolation.Linear, canvasComposite);
                     }
                     break;
                 case MarqueeCompositeMode.Xor:
                     {
-                        CanvasCommandList canvasCommandList = CanvasDrawingSessionExtensions._getMarqueeToolRectangular(drawingSession, resourceCreator, transformerRect);
+                        CanvasCommandList canvasCommandList = CanvasDrawingSessionExtensions.GetMarqueeToolRectangular(drawingSession, resourceCreator, transformerRect);
                         CanvasComposite canvasComposite = CanvasComposite.Xor;
                         drawingSession.DrawImage(canvasCommandList, 0, 0, sourceRectangle, 1, CanvasImageInterpolation.Linear, canvasComposite);
                     }
@@ -245,7 +245,7 @@ namespace FanKit.Transformers
         }
          
          
-        private static CanvasCommandList _getMarqueeToolEllipse(CanvasDrawingSession drawingSession, ICanvasResourceCreator resourceCreator, TransformerRect transformerRect)
+        private static CanvasCommandList GetMarqueeToolEllipse(CanvasDrawingSession drawingSession, ICanvasResourceCreator resourceCreator, TransformerRect transformerRect)
         {
             CanvasCommandList canvasCommandList = new CanvasCommandList(resourceCreator);
             using (CanvasDrawingSession ds = canvasCommandList.CreateDrawingSession())
@@ -259,7 +259,7 @@ namespace FanKit.Transformers
             return canvasCommandList;
         }
 
-        private static void _drawMarqueeToolEllipse(this CanvasDrawingSession drawingSession, ICanvasResourceCreator resourceCreator, TransformerRect transformerRect, Rect sourceRectangle, MarqueeCompositeMode compositeMode = MarqueeCompositeMode.New)
+        private static void DrawMarqueeToolEllipse(this CanvasDrawingSession drawingSession, ICanvasResourceCreator resourceCreator, TransformerRect transformerRect, Rect sourceRectangle, MarqueeCompositeMode compositeMode = MarqueeCompositeMode.New)
         {
             switch (compositeMode)
             {
@@ -285,21 +285,21 @@ namespace FanKit.Transformers
                     break;
                 case MarqueeCompositeMode.Subtract:
                     {
-                        CanvasCommandList canvasCommandList = CanvasDrawingSessionExtensions._getMarqueeToolEllipse(drawingSession, resourceCreator, transformerRect);
+                        CanvasCommandList canvasCommandList = CanvasDrawingSessionExtensions.GetMarqueeToolEllipse(drawingSession, resourceCreator, transformerRect);
                         CanvasComposite canvasComposite = CanvasComposite.DestinationOut;
                         drawingSession.DrawImage(canvasCommandList, 0, 0, sourceRectangle, 1, CanvasImageInterpolation.Linear, canvasComposite);
                     }
                     break;
                 case MarqueeCompositeMode.Intersect:
                     {
-                        CanvasCommandList canvasCommandList = CanvasDrawingSessionExtensions._getMarqueeToolEllipse(drawingSession, resourceCreator, transformerRect);
+                        CanvasCommandList canvasCommandList = CanvasDrawingSessionExtensions.GetMarqueeToolEllipse(drawingSession, resourceCreator, transformerRect);
                         CanvasComposite canvasComposite = CanvasComposite.DestinationIn;
                         drawingSession.DrawImage(canvasCommandList, 0, 0, sourceRectangle, 1, CanvasImageInterpolation.Linear, canvasComposite);
                     }
                     break;
                 case MarqueeCompositeMode.Xor:
                     {
-                        CanvasCommandList canvasCommandList = CanvasDrawingSessionExtensions._getMarqueeToolEllipse(drawingSession, resourceCreator, transformerRect);
+                        CanvasCommandList canvasCommandList = CanvasDrawingSessionExtensions.GetMarqueeToolEllipse(drawingSession, resourceCreator, transformerRect);
                         CanvasComposite canvasComposite = CanvasComposite.Xor;
                         drawingSession.DrawImage(canvasCommandList, 0, 0, sourceRectangle, 1, CanvasImageInterpolation.Linear, canvasComposite);
                     }

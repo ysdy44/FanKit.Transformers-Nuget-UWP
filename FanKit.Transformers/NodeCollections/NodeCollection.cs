@@ -11,8 +11,7 @@ namespace FanKit.Transformers
     /// </summary>
     public sealed partial class NodeCollection : ICanvasPathReceiver, ICacheTransform, IList<Node>, IEnumerable<Node>
     {
-
-        List<Node> _nodes;
+        readonly List<Node> Nodes;
 
         /// <summary> Gets or sets the index of the selected item. </summary>
         public int Index { get; set; } = 0;
@@ -21,18 +20,18 @@ namespace FanKit.Transformers
         /// <summary>
         /// Initialize a NodeCollection.
         /// </summary>
-        public NodeCollection() => this._nodes = new List<Node>();
+        public NodeCollection() => this.Nodes = new List<Node>();
         /// <summary>
         /// Initialize a NodeCollection.
         /// </summary>
         /// <param name="nodes"> The nodes. </param>
-        public NodeCollection(IEnumerable<Node> nodes) => this._nodes = nodes.ToList();
+        public NodeCollection(IEnumerable<Node> nodes) => this.Nodes = nodes.ToList();
         /// <summary>
         /// Initialize a NodeCollection.
         /// </summary>
         /// <param name="left"> The frist point. </param>
         /// <param name="right"> The second point. </param>
-        public NodeCollection(Vector2 left, Vector2 right) => this._nodes = new List<Node>
+        public NodeCollection(Vector2 left, Vector2 right) => this.Nodes = new List<Node>
         {
              new Node
              {
@@ -71,9 +70,9 @@ namespace FanKit.Transformers
         /// <param name="geometry"> The geometry. </param>
         public NodeCollection(CanvasGeometry geometry)
         {
-            this._nodes = new List<Node>();
+            this.Nodes = new List<Node>();
             geometry.SendPathTo(this);
-            NodeCollection.ArrangeNodes(this._nodes);
+            NodeCollection.ArrangeNodes(this.Nodes);
         }
 
         /// <summary> Gets the selected item. </summary>
@@ -131,18 +130,18 @@ namespace FanKit.Transformers
         /// Get own copy.
         /// </summary>
         /// <returns> The cloned NodeCollection. </returns>
-        public NodeCollection Clone() => new NodeCollection(from node in this._nodes select node.Clone());
+        public NodeCollection Clone() => new NodeCollection(from node in this.Nodes select node.Clone());
 
         /// <summary>
         /// Get own copy.
         /// </summary>
         /// <returns> The cloned ndoes. </returns>
-        public IEnumerable<Node> NodesClone() => from node in this._nodes select node.Clone();
+        public IEnumerable<Node> NodesClone() => from node in this.Nodes select node.Clone();
         /// <summary>
         /// Get own starting copy (ex: <see cref="Node.StartingIsChecked"/>).
         /// </summary>
         /// <returns> The cloned ndoes. </returns>
-        public IEnumerable<Node> NodesStartingClone() => from node in this._nodes
+        public IEnumerable<Node> NodesStartingClone() => from node in this.Nodes
                                                          select new Node
                                                          {
                                                              Type = node.Type,

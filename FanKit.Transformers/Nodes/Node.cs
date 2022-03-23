@@ -75,7 +75,7 @@ namespace FanKit.Transformers
         }
 
         /// <summary>
-        ///  Cache the node's transformer.
+        /// Cache the node's transformer.
         /// </summary>
         public void CacheTransform()
         {
@@ -87,7 +87,7 @@ namespace FanKit.Transformers
             this.StartingIsSmooth = this.IsSmooth;
         }
         /// <summary>
-        ///  Transforms the node by the given vector.
+        /// Transforms the node by the given vector.
         /// </summary>
         /// <param name="vector"> The add value use to summed. </param>
         public void TransformAdd(Vector2 vector)
@@ -97,7 +97,7 @@ namespace FanKit.Transformers
             this.RightControlPoint = this.StartingRightControlPoint + vector;
         }
         /// <summary>
-        ///  Transforms the node by the given matrix.
+        /// Transforms the node by the given matrix.
         /// </summary>
         /// <param name="matrix"> The resulting matrix. </param>
         public void TransformMultiplies(Matrix3x2 matrix)

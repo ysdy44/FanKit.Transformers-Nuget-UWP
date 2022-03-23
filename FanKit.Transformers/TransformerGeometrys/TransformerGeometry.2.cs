@@ -11,23 +11,25 @@ namespace FanKit.Transformers
 
 
         /// <summary>
-        ///  Create a new pentagon geometry.
+        /// Create a new pentagon geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
+        /// <param name="transformer"> The source transformer. </param>
         /// <param name="points"> The points count. </param>
         /// <returns> The product geometry. </returns>
         public static CanvasGeometry CreatePentagon(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformer, int points)
         {
             Matrix3x2 oneMatrix = Transformer.FindHomography(Transformer.One, transformer);
 
-            return TransformerGeometry._createPentagon(resourceCreator, points, oneMatrix);
+            return TransformerGeometry.CreatePentagonCore(resourceCreator, points, oneMatrix);
         }
 
         /// <summary>
-        ///  Create a new pentagon geometry.
+        /// Create a new pentagon geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
         /// <param name="transformer"> The source transformer. </param>
+        /// <param name="matrix"> The matrix. </param>
         /// <param name="points"> The points count. </param>
         /// <returns> The product geometry. </returns>
         public static CanvasGeometry CreatePentagon(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformer, Matrix3x2 matrix, int points)
@@ -35,10 +37,10 @@ namespace FanKit.Transformers
             Matrix3x2 oneMatrix = Transformer.FindHomography(Transformer.One, transformer);
             Matrix3x2 oneMatrix2 = oneMatrix * matrix;
 
-            return TransformerGeometry._createPentagon(resourceCreator, points, oneMatrix2);
+            return TransformerGeometry.CreatePentagonCore(resourceCreator, points, oneMatrix2);
         }
 
-        private static CanvasGeometry _createPentagon(ICanvasResourceCreator resourceCreator, int points, Matrix3x2 oneMatrix)
+        private static CanvasGeometry CreatePentagonCore(ICanvasResourceCreator resourceCreator, int points, Matrix3x2 oneMatrix)
         {
             float rotation = TransformerGeometry.StartingRotation;
             float angle = FanKit.Math.Pi * 2.0f / points;
@@ -48,7 +50,7 @@ namespace FanKit.Transformers
             {
                 int index = i;
 
-                //Outer
+                // Outer
                 Vector2 outer = TransformerGeometry.GetRotationVector(rotation);
                 Vector2 outerTransform = Vector2.Transform(outer, oneMatrix);
                 array[index] = outerTransform;
@@ -66,7 +68,7 @@ namespace FanKit.Transformers
 
 
         /// <summary>
-        ///  Create a new star geometry.
+        /// Create a new star geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
         /// <param name="points"> The point count. </param>
@@ -76,11 +78,11 @@ namespace FanKit.Transformers
         {
             Matrix3x2 oneMatrix = Transformer.FindHomography(Transformer.One, transformer);
 
-            return TransformerGeometry._createStar(resourceCreator, points, innerRadius, oneMatrix);
+            return TransformerGeometry.CreateStarCore(resourceCreator, points, innerRadius, oneMatrix);
         }
-        
+
         /// <summary>
-        ///  Create a new star geometry.
+        /// Create a new star geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
         /// <param name="transformer"> The source transformer. </param>
@@ -92,10 +94,10 @@ namespace FanKit.Transformers
             Matrix3x2 oneMatrix = Transformer.FindHomography(Transformer.One, transformer);
             Matrix3x2 oneMatrix2 = oneMatrix * matrix;
 
-            return TransformerGeometry._createStar(resourceCreator, points, innerRadius, oneMatrix2);
+            return TransformerGeometry.CreateStarCore(resourceCreator, points, innerRadius, oneMatrix2);
         }
 
-        private static CanvasGeometry _createStar(ICanvasResourceCreator resourceCreator, int points, float innerRadius, Matrix3x2 oneMatrix)
+        private static CanvasGeometry CreateStarCore(ICanvasResourceCreator resourceCreator, int points, float innerRadius, Matrix3x2 oneMatrix)
         {
             float rotation = TransformerGeometry.StartingRotation;
             float angle = FanKit.Math.Pi / points;
@@ -105,13 +107,13 @@ namespace FanKit.Transformers
             {
                 int index = i * 2;
 
-                //Outer
+                // Outer
                 Vector2 outer = TransformerGeometry.GetRotationVector(rotation);
                 Vector2 outerTransform = Vector2.Transform(outer, oneMatrix);
                 array[index] = outerTransform;
                 rotation += angle;
 
-                //Inner
+                // Inner
                 Vector2 inner = TransformerGeometry.GetRotationVector(rotation);
                 Vector2 inner2 = inner * innerRadius;
                 Vector2 inner2Transform = Vector2.Transform(inner2, oneMatrix);
@@ -130,7 +132,7 @@ namespace FanKit.Transformers
 
 
         /// <summary>
-        ///  Create a new cog geometry.
+        /// Create a new cog geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
         /// <param name="count"> The point count. </param>
@@ -142,11 +144,11 @@ namespace FanKit.Transformers
         {
             Matrix3x2 oneMatrix = Transformer.FindHomography(Transformer.One, transformer);
 
-            return TransformerGeometry._createCog(resourceCreator, count, innerRadius, tooth, notch, oneMatrix);
+            return TransformerGeometry.CreateCogCore(resourceCreator, count, innerRadius, tooth, notch, oneMatrix);
         }
 
         /// <summary>
-        ///  Create a new cog geometry.
+        /// Create a new cog geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
         /// <param name="transformer"> The source transformer. </param>
@@ -160,52 +162,52 @@ namespace FanKit.Transformers
             Matrix3x2 oneMatrix = Transformer.FindHomography(Transformer.One, transformer);
             Matrix3x2 oneMatrix2 = oneMatrix * matrix;
 
-            return TransformerGeometry._createCog(resourceCreator, count, innerRadius, tooth, notch, oneMatrix2);
+            return TransformerGeometry.CreateCogCore(resourceCreator, count, innerRadius, tooth, notch, oneMatrix2);
         }
 
-        private static CanvasGeometry _createCog(ICanvasResourceCreator resourceCreator, int count, float innerRadius, float tooth, float notch, Matrix3x2 oneMatrix)
+        private static CanvasGeometry CreateCogCore(ICanvasResourceCreator resourceCreator, int count, float innerRadius, float tooth, float notch, Matrix3x2 oneMatrix)
         {
-            float angle = FanKit.Math.Pi * 2f / count;//angle
-            float angleTooth = angle * tooth;//angle tooth
-            float angleNotch = angle * notch;//angle notch
-            float angleDiffHalf = (angleNotch - angleTooth) / 2;//Half the angle difference between the tooth and the notch
+            float angle = FanKit.Math.Pi * 2f / count; // angle
+            float angleTooth = angle * tooth; // angle tooth
+            float angleNotch = angle * notch; // angle notch
+            float angleDiffHalf = (angleNotch - angleTooth) / 2; // Half the angle difference between the tooth and the notch
 
-            float rotation = 0;//Start angle is zero
+            float rotation = 0; // Start angle is zero
             int countQuadra = count * 4;
             Vector2[] points = new Vector2[countQuadra];
 
             for (int i = 0; i < countQuadra; i++)
             {
                 Vector2 vector = new Vector2((float)System.Math.Cos(rotation), (float)System.Math.Sin(rotation));
-                int remainder = i % 4;//remainder
+                int remainder = i % 4; // remainder
 
-                if (remainder == 0)//凸 left-bottom point
+                if (remainder == 0) // 凸 left-bottom point
                 {
-                    //Inner
+                    // Inner
                     Vector2 inner = vector * innerRadius;
                     Vector2 innerTransform = Vector2.Transform(inner, oneMatrix);
                     points[i] = innerTransform;
                     rotation += angleDiffHalf;
                 }
-                else if (remainder == 1)//凸 left-top point
+                else if (remainder == 1) // 凸 left-top point
                 {
-                    //Outer
+                    // Outer
                     Vector2 outer = vector;
                     Vector2 outerTransform = Vector2.Transform(vector, oneMatrix);
                     points[i] = outerTransform;
                     rotation += angleTooth;
                 }
-                else if (remainder == 2)//凸 right-top point
+                else if (remainder == 2) // 凸 right-top point
                 {
-                    //Outer
+                    // Outer
                     Vector2 outer = vector;
                     Vector2 outerTransform = Vector2.Transform(vector, oneMatrix);
                     points[i] = outerTransform;
                     rotation += angleDiffHalf;
                 }
-                else if (remainder == 3)//凸 right-bottom point
+                else if (remainder == 3) // 凸 right-bottom point
                 {
-                    //Inner
+                    // Inner
                     Vector2 inner = vector * innerRadius;
                     Vector2 innerTransform = Vector2.Transform(inner, oneMatrix);
                     points[i] = innerTransform;

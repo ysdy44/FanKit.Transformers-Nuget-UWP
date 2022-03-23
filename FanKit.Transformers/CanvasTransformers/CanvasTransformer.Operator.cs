@@ -5,14 +5,14 @@ namespace FanKit.Transformers
     public partial class CanvasTransformer
     {
 
-        //Move
-        Vector2 _moveStartPoint;
-        Vector2 _moveStartPosition;
+        // Move
+        Vector2 MoveStartPoint;
+        Vector2 MoveStartPosition;
 
-        //Pinch
-        Vector2 _pinchStartCenter;
-        float _pinchStartScale;
-        float _pinchStartSpace;
+        // Pinch
+        Vector2 PinchStartCenter;
+        float PinchStartScale;
+        float PinchStartSpace;
 
 
         #region Move
@@ -24,8 +24,8 @@ namespace FanKit.Transformers
         /// <param name="point"> The point. </param>
         public void CacheMove(Vector2 point)
         {
-            this._moveStartPoint = point;
-            this._moveStartPosition = this.Position;
+            this.MoveStartPoint = point;
+            this.MoveStartPosition = this.Position;
         }
 
         /// <summary>
@@ -34,7 +34,7 @@ namespace FanKit.Transformers
         /// <param name="point"> The point. </param>
         public void Move(Vector2 point)
         {
-            this.Position = this._moveStartPosition - this._moveStartPoint + point;
+            this.Position = this.MoveStartPosition - this.MoveStartPoint + point;
             this.ReloadMatrix();
         }
 
@@ -52,10 +52,10 @@ namespace FanKit.Transformers
         /// <param name="space"> The space between fingers. </param>
         public void CachePinch(Vector2 centerPoint, float space)
         {
-            this._pinchStartCenter = (centerPoint - this.Position) / this.Scale + this.ControlCenter;
+            this.PinchStartCenter = (centerPoint - this.Position) / this.Scale + this.ControlCenter;
 
-            this._pinchStartSpace = space;
-            this._pinchStartScale = this.Scale;
+            this.PinchStartSpace = space;
+            this.PinchStartScale = this.Scale;
         }
 
         /// <summary>
@@ -65,8 +65,8 @@ namespace FanKit.Transformers
         /// <param name="space"> The space between fingers. </param>
         public void Pinch(Vector2 centerPoint, float space)
         {
-            this.Scale = this._pinchStartScale / this._pinchStartSpace * space;
-            this.Position = centerPoint - (this._pinchStartCenter - this.ControlCenter) * this.Scale;
+            this.Scale = this.PinchStartScale / this.PinchStartSpace * space;
+            this.Position = centerPoint - (this.PinchStartCenter - this.ControlCenter) * this.Scale;
             this.ReloadMatrix();
         }
 

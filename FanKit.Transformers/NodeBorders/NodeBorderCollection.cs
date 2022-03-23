@@ -13,7 +13,7 @@ namespace FanKit.Transformers
 
         //@Constructs
         /// <summary>
-        ///  Initialize a NodeBorderCollection.
+        /// Initialize a NodeBorderCollection.
         /// </summary>
         /// <param name="nodeCollection"> The NodeCollection. </param>
         public NodeBorderCollection(NodeCollection nodeCollection)

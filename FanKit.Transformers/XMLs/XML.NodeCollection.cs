@@ -25,7 +25,7 @@ namespace FanKit.Transformers
         }
 
         /// <summary>
-        ///  Loads a <see cref="NodeCollection"/> from an XElement.
+        /// Loads a <see cref="NodeCollection"/> from an XElement.
         /// </summary>
         /// <param name="element"> The source XElement. </param>
         /// <returns> The loaded <see cref="NodeCollection"/>. </returns>

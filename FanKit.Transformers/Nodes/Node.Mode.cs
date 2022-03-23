@@ -20,7 +20,7 @@ namespace FanKit.Transformers
                     {
                         if (node.IsChecked)
                         {
-                            //When you click on a checked node point ...
+                            // When you click on a checked node point ...
                             Vector2 point2 = node.Point;
                             if (Math.InNodeRadius(point, point2))
                             {
@@ -44,7 +44,7 @@ namespace FanKit.Transformers
                         }
                         else
                         {
-                            //When you click on a unchecked node point ...      
+                            // When you click on a unchecked node point ...      
                             Vector2 point2 = node.Point;
                             if (Math.InNodeRadius(point, point2))
                             {
@@ -77,7 +77,7 @@ namespace FanKit.Transformers
                     {
                         if (node.IsChecked)
                         {
-                            //When you click on a checked node point ...
+                            // When you click on a checked node point ...
                             Vector2 point2 = Vector2.Transform(node.Point, matrix);
                             if (Math.InNodeRadius(point, point2))
                             {
@@ -101,7 +101,7 @@ namespace FanKit.Transformers
                         }
                         else
                         {
-                            //When you click on a unchecked node point ...      
+                            // When you click on a unchecked node point ...      
                             Vector2 point2 = Vector2.Transform(node.Point, matrix);
                             if (Math.InNodeRadius(point, point2))
                             {

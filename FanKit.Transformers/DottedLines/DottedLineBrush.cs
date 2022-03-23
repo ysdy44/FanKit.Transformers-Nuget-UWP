@@ -11,7 +11,7 @@ namespace FanKit.Transformers
     public class DottedLineBrush : IDisposable
     {
 
-        CanvasGradientStop[] _stops = new CanvasGradientStop[2]
+        CanvasGradientStop[] Stops = new CanvasGradientStop[2]
         {
             new CanvasGradientStop
             {
@@ -35,7 +35,7 @@ namespace FanKit.Transformers
         /// <param name="distance"> The sistance between two gradient points. </param>
         public DottedLineBrush(ICanvasResourceCreator resourceCreator, float distance = 6)
         {
-            this.Brush = new CanvasLinearGradientBrush(resourceCreator, _stops, CanvasEdgeBehavior.Mirror, CanvasAlphaMode.Premultiplied)
+            this.Brush = new CanvasLinearGradientBrush(resourceCreator, Stops, CanvasEdgeBehavior.Mirror, CanvasAlphaMode.Premultiplied)
             {
                 StartPoint = new Vector2(0, 0),
                 EndPoint = new Vector2(distance, distance)
@@ -60,7 +60,7 @@ namespace FanKit.Transformers
         {
             this.Brush.Dispose();
             this.Brush = null;
-            this._stops = null;
+            this.Stops = null;
         }
     }
 }

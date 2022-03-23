@@ -12,7 +12,7 @@ namespace FanKit
         /// <summary> 7.5 degress in angle system. </summary>
         public const float RadiansStepHalf = 0.1308996916666667f;
         /// <summary> To find a multiple of the nearest 15. </summary>
-        public static float RadiansStepFrequency(float radian) => ((int)((radian + Math.RadiansStepHalf) / Math.RadiansStep)) * Math.RadiansStep;//Get step radians
+        public static float RadiansStepFrequency(float radian) => ((int)((radian + Math.RadiansStepHalf) / Math.RadiansStep)) * Math.RadiansStep; // Get step radians
 
 
         /// <summary> The number pi*2. </summary>
@@ -27,20 +27,20 @@ namespace FanKit
 
         /// <summary> Radius of node'. Default 12. </summary>
         public const float NodeRadius = 12.0f;
-        private static float _nodeRadiusSquare;
+        private static float NodeRadiusSquare;
 
         /// <summary> Minimum distance between two nodes. Default 20. </summary>
         public const float NodeDistance = 20.0f;
-        private static float _nodeDistanceSquare;
-        private static float _nodeDistanceDouble;
+        private static readonly float NodeDistanceSquare;
+        private static readonly float NodeDistanceDouble;
 
 
         static Math()
         {
-            Math._nodeRadiusSquare = Math.NodeRadius * Math.NodeRadius;
+            Math.NodeRadiusSquare = Math.NodeRadius * Math.NodeRadius;
 
-            Math._nodeDistanceSquare = Math.NodeDistance * Math.NodeDistance;
-            Math._nodeDistanceDouble = Math.NodeDistance + Math.NodeDistance;
+            Math.NodeDistanceSquare = Math.NodeDistance * Math.NodeDistance;
+            Math.NodeDistanceDouble = Math.NodeDistance + Math.NodeDistance;
         }
 
 
@@ -50,7 +50,7 @@ namespace FanKit
         /// <param name="point0"> The first point. </param>
         /// <param name="point1"> The second point. </param>
         /// <returns> Return **true** if the distance exceeds [NodeRadius], otherwise **false**. </returns>
-        public static bool InNodeRadius(Vector2 point0, Vector2 point1) => (point0 - point1).LengthSquared() < Math._nodeRadiusSquare;
+        public static bool InNodeRadius(Vector2 point0, Vector2 point1) => (point0 - point1).LengthSquared() < Math.NodeRadiusSquare;
 
         /// <summary>
         /// Whether the distance's LengthSquared exceeds [NodeDistance]. Default: 400.
@@ -58,7 +58,7 @@ namespace FanKit
         /// <param name="point0"> The first point. </param>
         /// <param name="point1"> The second point. </param>
         /// <returns> Return **true** if the distance's LengthSquared exceeds [NodeDistance], otherwise **false**. </returns>
-        public static bool OutNodeDistance(Vector2 point0, Vector2 point1) => (point0 - point1).LengthSquared() > Math._nodeDistanceSquare;
+        public static bool OutNodeDistance(Vector2 point0, Vector2 point1) => (point0 - point1).LengthSquared() > Math.NodeDistanceSquare;
 
         /// <summary>
         /// Get outside point in a line on a transformer.
@@ -66,7 +66,7 @@ namespace FanKit
         /// <param name="nearPoint"> The nearest point to outside point in a line on a transformer.. </param>
         /// <param name="farPoint"> The farthest point to outside point in a line on a transformer.. </param>
         /// <returns> The product point. </returns>
-        public static Vector2 GetOutsidePointInTransformer(Vector2 nearPoint, Vector2 farPoint) => nearPoint - Vector2.Normalize(farPoint - nearPoint) * Math._nodeDistanceDouble;
+        public static Vector2 GetOutsidePointInTransformer(Vector2 nearPoint, Vector2 farPoint) => nearPoint - Vector2.Normalize(farPoint - nearPoint) * Math.NodeDistanceDouble;
 
 
         /// <summary>
@@ -174,13 +174,13 @@ namespace FanKit
         {
             float tan = (float)System.Math.Atan(System.Math.Abs(vector.Y / vector.X));
 
-            //First Quantity
+            // First Quantity
             if (vector.X > 0 && vector.Y > 0) return tan;
-            //Second Quadrant
+            // Second Quadrant
             else if (vector.X > 0 && vector.Y < 0) return -tan;
-            //Third Quadrant  
+            // Third Quadrant  
             else if (vector.X < 0 && vector.Y > 0) return (float)System.Math.PI - tan;
-            //Fourth Quadrant  
+            // Fourth Quadrant  
             else return tan - (float)System.Math.PI;
         }
     }

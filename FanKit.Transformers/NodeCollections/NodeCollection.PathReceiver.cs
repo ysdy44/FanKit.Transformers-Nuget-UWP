@@ -71,7 +71,7 @@ namespace FanKit.Transformers
 
 
         /// <summary>
-        ///  Starts a new figure at the specified point, with the specified figure fill option.
+        /// Starts a new figure at the specified point, with the specified figure fill option.
         /// </summary>
         /// <param name="startPoint"> The start-point. </param>
         /// <param name="figureFill"> The figure-fill. </param>

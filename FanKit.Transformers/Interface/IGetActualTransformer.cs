@@ -8,7 +8,7 @@ namespace FanKit.Transformers
     public interface IGetActualTransformer
     {
         /// <summary>
-        ///  Get the actual transformer.
+        /// Get the actual transformer.
         /// </summary>
         Transformer GetActualTransformer();
     }

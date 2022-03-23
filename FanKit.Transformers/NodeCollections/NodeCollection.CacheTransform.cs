@@ -8,7 +8,7 @@ namespace FanKit.Transformers
     {
 
         /// <summary>
-        ///  Cache the NodeCollection's transformer.
+        /// Cache the NodeCollection's transformer.
         /// </summary>
         public void CacheTransform()
         {
@@ -18,7 +18,7 @@ namespace FanKit.Transformers
             }
         }
         /// <summary>
-        ///  Cache the NodeCollection's transformer.
+        /// Cache the NodeCollection's transformer.
         /// </summary>
         public void CacheTransformOnlySelected()
         {
@@ -33,7 +33,7 @@ namespace FanKit.Transformers
 
 
         /// <summary>
-        ///  Transforms the node by the given vector.
+        /// Transforms the node by the given vector.
         /// </summary>
         /// <param name="vector"> The add value use to summed. </param>
         public void TransformAdd(Vector2 vector)
@@ -44,7 +44,7 @@ namespace FanKit.Transformers
             }
         }
         /// <summary>
-        ///  Transforms the node by the given vector.
+        /// Transforms the node by the given vector.
         /// </summary>
         /// <param name="vector"> The add value use to summed. </param>
         public void TransformAddOnlySelected(Vector2 vector)
@@ -60,7 +60,7 @@ namespace FanKit.Transformers
 
 
         /// <summary>
-        ///  Transforms the node by the given matrix.
+        /// Transforms the node by the given matrix.
         /// </summary>
         /// <param name="matrix"> The resulting matrix. </param>
         public void TransformMultiplies(Matrix3x2 matrix)
@@ -71,7 +71,7 @@ namespace FanKit.Transformers
             }
         }
         /// <summary>
-        ///  Transforms the node by the given matrix.
+        /// Transforms the node by the given matrix.
         /// </summary>
         /// <param name="matrix"> The resulting matrix. </param>  
         public void TransformMultipliesOnlySelected(Matrix3x2 matrix)

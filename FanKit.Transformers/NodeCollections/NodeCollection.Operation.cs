@@ -19,20 +19,20 @@ namespace FanKit.Transformers
 
             IList<int> list = new List<int>();
 
-            //Find adjacent two selected nodes.
+            // Find adjacent two selected nodes.
             for (int i = 0; i < nodeCollection.Count-1; i++)
             {
                 Node node = nodeCollection[i];
                 if (node.IsChecked)
                 {
-                    //Add
+                    // Add
                     if (hasIsSelectd)
                     {
                         hasIsSelectd = false;
                         list.Add(i);
                     }
 
-                    //hasIsSelectd
+                    // hasIsSelectd
                     Node next = nodeCollection[i + 1];
                     if (next.Type != NodeType.EndFigure)
                     {
@@ -92,7 +92,7 @@ namespace FanKit.Transformers
             bool hasIsSelectd = false;
 
 
-            //First node
+            // First node
             Node first = nodeCollection.First();
             if (first.IsChecked)
             {
@@ -103,7 +103,7 @@ namespace FanKit.Transformers
             }
 
 
-            //Nodes
+            // Nodes
             for (int i = 1; i < nodeCollection.Count - 1; i++)
             {
                 Node node = nodeCollection[i];

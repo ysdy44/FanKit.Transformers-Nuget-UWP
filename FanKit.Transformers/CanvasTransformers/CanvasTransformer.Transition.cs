@@ -6,11 +6,11 @@ namespace FanKit.Transformers
     public partial class CanvasTransformer
     {
         
-        Vector2 _sourcePosition = new Vector2(100, 100);
-        float _sourceScale = 0.2f;
+        Vector2 SourcePosition = new Vector2(100, 100);
+        float SourceScale = 0.2f;
 
-        Vector2 _destinationPosition;
-        float _destinationScale;
+        Vector2 DestinationPosition;
+        float DestinationScale;
 
 
         /// <summary>
@@ -21,9 +21,9 @@ namespace FanKit.Transformers
         /// <param name="height"> The height of source. </param>
         public void TransitionSource(Vector2 postion, float width, float height)
         {
-            this._sourcePosition.X = postion.X + width / 2.0f;
-            this._sourcePosition.Y = postion.Y + height / 2.0f;
-            this._sourceScale = this._getTransitionScale(width, height);
+            this.SourcePosition.X = postion.X + width / 2.0f;
+            this.SourcePosition.Y = postion.Y + height / 2.0f;
+            this.SourceScale = this.GetTransitionScale(width, height);
         }
         /// <summary>
         /// Set the rect of the source.
@@ -39,9 +39,9 @@ namespace FanKit.Transformers
         /// <param name="height"> The height of destination. </param>
         public void TransitionDestination(Vector2 postion, float width, float height)
         {
-            this._destinationPosition.X = postion.X + width / 2.0f;
-            this._destinationPosition.Y = postion.Y + height / 2.0f;
-            this._destinationScale = this._getTransitionScale(width, height);
+            this.DestinationPosition.X = postion.X + width / 2.0f;
+            this.DestinationPosition.Y = postion.Y + height / 2.0f;
+            this.DestinationScale = this.GetTransitionScale(width, height);
         }
         /// <summary>
         /// Set the rect of the destination.
@@ -50,7 +50,7 @@ namespace FanKit.Transformers
 
 
 
-        private float _getTransitionScale(float width, float height)
+        private float GetTransitionScale(float width, float height)
         {
             float widthScale = width / this.Width;
             float heightScale = height / this.Height;
@@ -67,22 +67,22 @@ namespace FanKit.Transformers
         {
             if (value == 0.0f)
             {
-                this.Position = this._sourcePosition;
-                this.Scale = this._sourceScale;
+                this.Position = this.SourcePosition;
+                this.Scale = this.SourceScale;
             }
             else if (value == 1.0f)
             {
-                this.Position = this._destinationPosition;
-                this.Scale = this._destinationScale;
+                this.Position = this.DestinationPosition;
+                this.Scale = this.DestinationScale;
             }
             else
             {
                 float minusValue = 1.0f - value;
 
-                Vector2 position = this._sourcePosition * minusValue + this._destinationPosition * value;
+                Vector2 position = this.SourcePosition * minusValue + this.DestinationPosition * value;
                 this.Position = position;
 
-                float scale = this._sourceScale * minusValue + this._destinationScale * value;
+                float scale = this.SourceScale * minusValue + this.DestinationScale * value;
                 this.Scale = scale;
             }
 

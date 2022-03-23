@@ -18,12 +18,12 @@ namespace FanKit.Transformers
 
 
         //@VisualState
-        IndicatorMode _vsMode;
+        IndicatorMode vsMode;
         public VisualState VisualState
         {
             get
             {
-                if (this._vsMode == IndicatorMode.None)
+                if (this.vsMode == IndicatorMode.None)
                     return this.Normal;
                 else
                     return this.Enable;
@@ -37,30 +37,30 @@ namespace FanKit.Transformers
         /// <summary> Gets or sets <see cref = "IndicatorControl" />'s mode. </summary>
         public IndicatorMode Mode
         {
-            get => this._vsMode;
+            get => this.vsMode;
             set
             {
-                if (this._vsMode == value) return;
+                if (this.vsMode == value) return;
 
                 this.IsHitTestVisible = (value != IndicatorMode.None);
 
-                this.SetMode(value, this._vsMode);
-                this._vsMode = value;
-                this.VisualState = this.VisualState;// VisualState
+                this.SetMode(value, this.vsMode);
+                this.vsMode = value;
+                this.VisualState = this.VisualState; // VisualState
             }
         }
 
 
-        public IndicatorMode _Mode
+        public IndicatorMode ModeCore
         {
             set
             {
-                if (this._vsMode == value) return;
+                if (this.vsMode == value) return;
 
-                this.SetMode(value, this._vsMode);
-                this._vsMode = value;
+                this.SetMode(value, this.vsMode);
+                this.vsMode = value;
 
-                this.ModeChanged?.Invoke(this, value);//Delegate
+                this.ModeChanged?.Invoke(this, value); // Delegate
             }
         }
 
@@ -117,26 +117,25 @@ namespace FanKit.Transformers
         {
             this.InitializeComponent();
 
+            // Button
+            this.LeftTopButton.Click += (s, e) => this.ModeCore = IndicatorMode.LeftTop;
+            this.RightTopButton.Click += (s, e) => this.ModeCore = IndicatorMode.RightTop;
+            this.RightBottomButton.Click += (s, e) => this.ModeCore = IndicatorMode.RightBottom;
+            this.LeftBottomButton.Click += (s, e) => this.ModeCore = IndicatorMode.LeftBottom;
 
-            //Button
-            this.LeftTopButton.Click += (s, e) => this._Mode = IndicatorMode.LeftTop;
-            this.RightTopButton.Click += (s, e) => this._Mode = IndicatorMode.RightTop;
-            this.RightBottomButton.Click += (s, e) => this._Mode = IndicatorMode.RightBottom;
-            this.LeftBottomButton.Click += (s, e) => this._Mode = IndicatorMode.LeftBottom;
+            this.LeftButton.Click += (s, e) => this.ModeCore = IndicatorMode.Left;
+            this.TopButton.Click += (s, e) => this.ModeCore = IndicatorMode.Top;
+            this.RightButton.Click += (s, e) => this.ModeCore = IndicatorMode.Right;
+            this.BottomButton.Click += (s, e) => this.ModeCore = IndicatorMode.Bottom;
 
-            this.LeftButton.Click += (s, e) => this._Mode = IndicatorMode.Left;
-            this.TopButton.Click += (s, e) => this._Mode = IndicatorMode.Top;
-            this.RightButton.Click += (s, e) => this._Mode = IndicatorMode.Right;
-            this.BottomButton.Click += (s, e) => this._Mode = IndicatorMode.Bottom;
-
-            this.CenterButton.Click += (s, e) => this._Mode = IndicatorMode.Center;
+            this.CenterButton.Click += (s, e) => this.ModeCore = IndicatorMode.Center;
 
 
             this.SizeChanged += (s, e) =>
             {
                 if (e.NewSize == e.PreviousSize) return;
 
-                //Size
+                // Size
                 float size = (float)System.Math.Min(e.NewSize.Width, e.NewSize.Height);
                 this.Size(size);
             };
@@ -170,15 +169,15 @@ namespace FanKit.Transformers
 
         private void Size(float size)
         {
-            float square = size / 3 / 1.4142135623730950488016887242097f;//Root Number 2
+            float square = size / 3 / 1.4142135623730950488016887242097f; // Root Number 2
             float squareHalf = square / 2;
 
 
-            //Control
+            // Control
             this.RootGrid.Width = this.RootGrid.Height = size;
 
 
-            //Rectangle
+            // Rectangle
             this.LeftTopButton.Width = this.LeftTopButton.Height =
             this.RightTopButton.Width = this.RightTopButton.Height =
             this.RightBottomButton.Width = this.RightBottomButton.Height =
@@ -192,7 +191,7 @@ namespace FanKit.Transformers
             this.CenterButton.Width = this.CenterButton.Height = square;
 
 
-            //Vector
+            // Vector
             Vector2 center = new Vector2(size / 2);
 
             Vector2 leftTop = new Vector2(-square, -square) + center;
@@ -206,7 +205,7 @@ namespace FanKit.Transformers
             Vector2 bottom = new Vector2(0, square) + center;
 
 
-            //Rectangle
+            // Rectangle
             Canvas.SetLeft(this.CenterButton, center.X - squareHalf); Canvas.SetTop(this.CenterButton, center.Y - squareHalf);
 
             Canvas.SetLeft(this.LeftTopButton, leftTop.X - squareHalf); Canvas.SetTop(this.LeftTopButton, leftTop.Y - squareHalf);
@@ -220,7 +219,7 @@ namespace FanKit.Transformers
             Canvas.SetLeft(this.BottomButton, bottom.X - squareHalf); Canvas.SetTop(this.BottomButton, bottom.Y - squareHalf);
 
 
-            //Line
+            // Line
             this.ForeTopLine.X1 = this.ForeLeftLine.X2 = this.BackTopLine.X1 = this.BackLeftLine.X2 = leftTop.X;
             this.ForeTopLine.Y1 = this.ForeLeftLine.Y2 = this.BackTopLine.Y1 = this.BackLeftLine.Y2 = leftTop.Y;
 

@@ -10,7 +10,7 @@ namespace FanKit.Transformers
         /// <param name="point"> The point. </param>
         /// <returns> Return **true** if the area filled by the transformer contains the specified point, otherwise **false**. </returns>
         public bool FillContainsPoint(Vector2 point) => Math.InQuadrangle(point, this.LeftTop, this.RightTop, this.RightBottom, this.LeftBottom);
-        
+
         /// <summary>
         /// Returns whether the transformer was contained in the rectangle.
         /// </summary>

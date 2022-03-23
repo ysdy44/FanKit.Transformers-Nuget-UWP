@@ -29,6 +29,7 @@ namespace FanKit.Transformers
         /// <summary> Ratio length. </summary>
         Ratio,
     }
+
     /// <summary>
     /// Mode of angle by each control point.
     /// </summary>
@@ -78,15 +79,15 @@ namespace FanKit.Transformers
             Vector2 startingSelfControlPoint = isLeftControlPoint ? node.StartingLeftControlPoint : node.StartingRightControlPoint;
             Vector2 startingEachControlPoint = isLeftControlPoint ? node.StartingRightControlPoint : node.StartingLeftControlPoint;
 
-            Vector2 selfControlPoint = Node._getSelfControlPoint(mode, point, startingPoint, startingSelfControlPoint);
-            Vector2 eachControlPoint = Node._getEachControlPoint(lengthMode, angleMode, startingPoint, selfControlPoint - startingPoint, startingSelfControlPoint - startingPoint, startingEachControlPoint - startingPoint);
+            Vector2 selfControlPoint = Node.GetSelfControlPoint(mode, point, startingPoint, startingSelfControlPoint);
+            Vector2 eachControlPoint = Node.GetEachControlPoint(lengthMode, angleMode, startingPoint, selfControlPoint - startingPoint, startingSelfControlPoint - startingPoint, startingEachControlPoint - startingPoint);
 
             node.LeftControlPoint = isLeftControlPoint ? selfControlPoint : eachControlPoint;
             node.RightControlPoint = isLeftControlPoint ? eachControlPoint : selfControlPoint;
         }
 
-        //Self
-        private static Vector2 _getSelfControlPoint(SelfControlPointMode mode, Vector2 point, Vector2 startingPoint, Vector2 startingSelfControlPoint)
+        // Self
+        private static Vector2 GetSelfControlPoint(SelfControlPointMode mode, Vector2 point, Vector2 startingPoint, Vector2 startingSelfControlPoint)
         {
             switch (mode)
             {
@@ -104,7 +105,7 @@ namespace FanKit.Transformers
                         float startingSelfLength = startingSelfVector.Length();
                         float selfLength = selfVector.Length();
 
-                        //Vector2 startingSelfUnit = startingSelfVector  / startingSelfLength;
+                        // Vector2 startingSelfUnit = startingSelfVector  / startingSelfLength;
                         Vector2 selfUnit = selfVector / selfLength;
 
                         Vector2 selfControlPoint = startingPoint + startingSelfLength * selfUnit;
@@ -114,20 +115,20 @@ namespace FanKit.Transformers
             return point;
         }
 
-        //Each
-        private static Vector2 _getEachControlPoint(EachControlPointLengthMode lengthMode, EachControlPointAngleMode angleMode, Vector2 startingPoint, Vector2 selfVector, Vector2 startingSelfVector, Vector2 startingEachVector)
+        // Each
+        private static Vector2 GetEachControlPoint(EachControlPointLengthMode lengthMode, EachControlPointAngleMode angleMode, Vector2 startingPoint, Vector2 selfVector, Vector2 startingSelfVector, Vector2 startingEachVector)
         {
             float selfLength = selfVector.Length();
             float startingSelfLength = startingSelfVector.Length();
             float startingEachLength = startingEachVector.Length();
 
-            float eachLength = Node._getEachLength(lengthMode, selfLength, startingSelfLength, startingEachLength);
-            Vector2 eachUnit = Node._getEachUnit(angleMode, selfVector / selfLength, startingSelfVector / selfLength, startingEachVector / startingEachLength);
+            float eachLength = Node.GetEachLength(lengthMode, selfLength, startingSelfLength, startingEachLength);
+            Vector2 eachUnit = Node.GetEachUnit(angleMode, selfVector / selfLength, startingSelfVector / selfLength, startingEachVector / startingEachLength);
 
             Vector2 eachControlPoint = startingPoint + eachLength * eachUnit;
             return eachControlPoint;
         }
-        private static float _getEachLength(EachControlPointLengthMode lengthMode, float selfLength, float startingSelfLength, float startingEachLength)
+        private static float GetEachLength(EachControlPointLengthMode lengthMode, float selfLength, float startingSelfLength, float startingEachLength)
         {
             switch (lengthMode)
             {
@@ -137,7 +138,7 @@ namespace FanKit.Transformers
             }
             return 0;
         }
-        private static Vector2 _getEachUnit(EachControlPointAngleMode angleMode, Vector2 selfUnit, Vector2 startingSelfUnit, Vector2 startingEachUnit)
+        private static Vector2 GetEachUnit(EachControlPointAngleMode angleMode, Vector2 selfUnit, Vector2 startingSelfUnit, Vector2 startingEachUnit)
         {
             switch (angleMode)
             {

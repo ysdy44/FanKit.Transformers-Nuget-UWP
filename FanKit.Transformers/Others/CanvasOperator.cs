@@ -115,30 +115,30 @@ namespace FanKit.Transformers
         #region Point
 
 
-        InputDevice _device = InputDevice.None;
+        InputDevice Device = InputDevice.None;
 
-        readonly HashSet<uint> _pointers = new HashSet<uint>();
+        readonly HashSet<uint> Pointers = new HashSet<uint>();
 
-        Vector2 _evenPointer; //it's ID%2==0
-        Vector2 _oddPointer;//it's ID%2==1
+        Vector2 EvenPointer; // it's ID%2==0
+        Vector2 OddPointer; // it's ID%2==1
 
-        Vector2 _evenStartingPointer;
-        Vector2 _oddStartingPointer;
+        Vector2 EvenStartingPointer;
+        Vector2 OddStartingPointer;
 
-        Vector2 _startingPointer;
+        Vector2 StartingPointer;
 
 
-        //Pointer Entered
+        // Pointer Entered
         private void Control_PointerEntered(object sender, PointerRoutedEventArgs e)
         {
         }
-        //Pointer Exited
+        // Pointer Exited
         private void Control_PointerExited(object sender, PointerRoutedEventArgs e)
         {
         }
 
 
-        //Pointer Pressed
+        // Pointer Pressed
         private void Control_PointerPressed(object sender, PointerRoutedEventArgs e)
         {
             Vector2 point = CanvasOperator.PointerPosition(this.DestinationControl, e);
@@ -146,115 +146,115 @@ namespace FanKit.Transformers
 
             if (CanvasOperator.PointerIsTouch(this.DestinationControl, e))
             {
-                this._pointers.Add(e.Pointer.PointerId);
-                if (e.Pointer.PointerId % 2 == 0) this._evenPointer = point;
-                if (e.Pointer.PointerId % 2 == 1) this._oddPointer = point;
+                this.Pointers.Add(e.Pointer.PointerId);
+                if (e.Pointer.PointerId % 2 == 0) this.EvenPointer = point;
+                if (e.Pointer.PointerId % 2 == 1) this.OddPointer = point;
 
-                if (this._pointers.Count > 1)
+                if (this.Pointers.Count > 1)
                 {
-                    if (this._device != InputDevice.Double)
+                    if (this.Device != InputDevice.Double)
                     {
-                        this._evenStartingPointer = this._evenPointer;
-                        this._oddStartingPointer = this._oddPointer;
+                        this.EvenStartingPointer = this.EvenPointer;
+                        this.OddStartingPointer = this.OddPointer;
                     }
                 }
                 else
                 {
-                    if (this._device != InputDevice.Single)
-                        this._startingPointer = point;
+                    if (this.Device != InputDevice.Single)
+                        this.StartingPointer = point;
                 }
             }
             else
             {
                 if (CanvasOperator.PointerIsRight(this.DestinationControl, e))
                 {
-                    if (this._device != InputDevice.Right)
+                    if (this.Device != InputDevice.Right)
                     {
-                        this._device = InputDevice.Right;
+                        this.Device = InputDevice.Right;
                         this.Right_Start?.Invoke(point);//Delegate
                     }
                 }
                 if (CanvasOperator.PointerIsLeft(this.DestinationControl, e) || CanvasOperator.PointerIsPen(this.DestinationControl, e))
                 {
-                    if (this._device != InputDevice.Single)
+                    if (this.Device != InputDevice.Single)
                     {
-                        this._device = InputDevice.Single;
+                        this.Device = InputDevice.Single;
                         this.Single_Start?.Invoke(point);//Delegate
                     }
                 }
             }
         }
-        //Pointer Released
+        // Pointer Released
         private void Control_PointerReleased(object sender, PointerRoutedEventArgs e)
         {
             Vector2 point = CanvasOperator.PointerPosition(this.DestinationControl, e);
             this.DestinationControl?.ReleasePointerCapture(e.Pointer);
 
-            if (this._device == InputDevice.Right)
+            if (this.Device == InputDevice.Right)
             {
-                this._device = InputDevice.None;
+                this.Device = InputDevice.None;
                 this.Right_Complete?.Invoke(point);//Delegate
             }
-            else if (this._device == InputDevice.Double)
+            else if (this.Device == InputDevice.Double)
             {
-                this._device = InputDevice.None;
-                this.Double_Complete?.Invoke(point, (this._oddPointer - this._evenPointer).Length());//Delegate
+                this.Device = InputDevice.None;
+                this.Double_Complete?.Invoke(point, (this.OddPointer - this.EvenPointer).Length());//Delegate
             }
-            else if (this._device == InputDevice.Single)
+            else if (this.Device == InputDevice.Single)
             {
-                this._device = InputDevice.None;
+                this.Device = InputDevice.None;
                 this.Single_Complete?.Invoke(point);//Delegate
             }
 
-            this._pointers.Clear();
+            this.Pointers.Clear();
         }
 
 
-        //Pointer Moved
+        // Pointer Moved
         private void Control_PointerMoved(object sender, PointerRoutedEventArgs e)
         {
             Vector2 point = CanvasOperator.PointerPosition(this.DestinationControl, e);
 
             if (CanvasOperator.PointerIsTouch(this.DestinationControl, e))
             {
-                if (e.Pointer.PointerId % 2 == 0) this._evenPointer = point;
-                if (e.Pointer.PointerId % 2 == 1) this._oddPointer = point;
+                if (e.Pointer.PointerId % 2 == 0) this.EvenPointer = point;
+                if (e.Pointer.PointerId % 2 == 1) this.OddPointer = point;
 
-                if (this._pointers.Count > 1)
+                if (this.Pointers.Count > 1)
                 {
-                    if (this._device != InputDevice.Double)
+                    if (this.Device != InputDevice.Double)
                     {
-                        if (System.Math.Abs(this._evenStartingPointer.X - this._evenPointer.X) > 2 || System.Math.Abs(this._evenStartingPointer.Y - this._evenPointer.Y) > 2 || System.Math.Abs(this._oddStartingPointer.X - this._oddPointer.X) > 2 || System.Math.Abs(this._oddStartingPointer.Y - this._oddPointer.Y) > 2)
+                        if (System.Math.Abs(this.EvenStartingPointer.X - this.EvenPointer.X) > 2 || System.Math.Abs(this.EvenStartingPointer.Y - this.EvenPointer.Y) > 2 || System.Math.Abs(this.OddStartingPointer.X - this.OddPointer.X) > 2 || System.Math.Abs(this.OddStartingPointer.Y - this.OddPointer.Y) > 2)
                         {
-                            this._device = InputDevice.Double;
-                            this.Double_Start?.Invoke((this._oddPointer + this._evenPointer) / 2, (this._oddPointer - this._evenPointer).Length());//Delegate
+                            this.Device = InputDevice.Double;
+                            this.Double_Start?.Invoke((this.OddPointer + this.EvenPointer) / 2, (this.OddPointer - this.EvenPointer).Length());//Delegate
                         }
                     }
-                    else if (this._device == InputDevice.Double) this.Double_Delta?.Invoke((this._oddPointer + this._evenPointer) / 2, (this._oddPointer - this._evenPointer).Length());//Delegate
+                    else if (this.Device == InputDevice.Double) this.Double_Delta?.Invoke((this.OddPointer + this.EvenPointer) / 2, (this.OddPointer - this.EvenPointer).Length());//Delegate
                 }
                 else
                 {
-                    if (this._device != InputDevice.Single)
+                    if (this.Device != InputDevice.Single)
                     {
-                        double length = (this._startingPointer - point).Length();
+                        double length = (this.StartingPointer - point).Length();
 
                         if (length > 2 && length < 12)
                         {
-                            this._device = InputDevice.Single;
+                            this.Device = InputDevice.Single;
                             this.Single_Start?.Invoke(point);//Delegate
                         }
                     }
-                    else if (this._device == InputDevice.Single) this.Single_Delta?.Invoke(point);//Delegate
+                    else if (this.Device == InputDevice.Single) this.Single_Delta?.Invoke(point);//Delegate
                 }
             }
             else
             {
-                if (this._device == InputDevice.Right) this.Right_Delta?.Invoke(point);//Delegate
+                if (this.Device == InputDevice.Right) this.Right_Delta?.Invoke(point);//Delegate
 
-                if (this._device == InputDevice.Single) this.Single_Delta?.Invoke(point);//Delegate
+                if (this.Device == InputDevice.Single) this.Single_Delta?.Invoke(point);//Delegate
             }
         }
-        //Wheel Changed
+        // Wheel Changed
         private void Control_PointerWheelChanged(object sender, PointerRoutedEventArgs e)
         {
             Vector2 point = CanvasOperator.PointerPosition(this.DestinationControl, e);

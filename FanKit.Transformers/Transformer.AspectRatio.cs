@@ -19,40 +19,40 @@ namespace FanKit.Transformers
             float diagonalSquared = sizeWidth * sizeWidth + sizeHeight * sizeHeight;
             float scale = (float)System.Math.Sqrt(lengthSquared / diagonalSquared);
 
-            //Height not less than 10
+            // Height not less than 10
             if (sizeWidth > sizeHeight)
             {
                 float height = scale * sizeHeight;
                 if (height < 10) height = 10;
                 float width = height * sizeWidth / sizeHeight;
 
-                return Transformer._getRectangleInQuadrant(startingPoint, point, width, height);
+                return Transformer.GetRectangleInQuadrant(startingPoint, point, width, height);
             }
-            //Width not less than 10
+            // Width not less than 10
             else if (sizeWidth < sizeHeight)
             {
                 float width = scale * sizeWidth;
                 if (width < 10) width = 10;
                 float height = width * sizeHeight / sizeWidth;
 
-                return Transformer._getRectangleInQuadrant(startingPoint, point, width, height);
+                return Transformer.GetRectangleInQuadrant(startingPoint, point, width, height);
             }
-            //Width equals height
+            // Width equals height
             else
             {
                 float spare = scale * sizeWidth;
 
-                return Transformer._getRectangleInQuadrant(startingPoint, point, spare, spare);
+                return Transformer.GetRectangleInQuadrant(startingPoint, point, spare, spare);
             }
         }
 
         // Get a rectangle corresponding to the 1, 2, 3 or 4 quadrant.
-        private static Transformer _getRectangleInQuadrant(Vector2 startingPoint, Vector2 point, float width, float height)
+        private static Transformer GetRectangleInQuadrant(Vector2 startingPoint, Vector2 point, float width, float height)
         {
             bool xAxis = (point.X >= startingPoint.X);
             bool yAxis = (point.Y >= startingPoint.Y);
 
-            //Fourth Quadrant  
+            // Fourth Quadrant  
             if (xAxis && yAxis)
             {
                 return new Transformer
@@ -64,7 +64,7 @@ namespace FanKit.Transformers
                 };
             }
 
-            //Third Quadrant  
+            // Third Quadrant  
             else if (xAxis == false && yAxis)
             {
                 return new Transformer
@@ -76,7 +76,7 @@ namespace FanKit.Transformers
                 };
             }
 
-            //First Quantity
+            // First Quantity
             else if (xAxis && yAxis == false)
             {
                 return new Transformer
@@ -88,7 +88,7 @@ namespace FanKit.Transformers
                 };
             }
 
-            //Second Quadrant
+            // Second Quadrant
             else
             {
                 return new Transformer

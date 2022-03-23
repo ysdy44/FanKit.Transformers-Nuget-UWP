@@ -6,36 +6,38 @@ namespace FanKit.Transformers
 {
     public static partial class TransformerGeometry
     {
-        
+
         #region Dount
 
 
         /// <summary>
-        ///  Create a new dount geometry.
+        /// Create a new dount geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
+        /// <param name="transformer"> The source transformer. </param>
         /// <param name="holeRadius"> The hole-radius. </param>
         /// <returns> The product geometry. </returns>
         public static CanvasGeometry CreateDount(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformer, float holeRadius)
         {
             bool zeroHoleRadius = holeRadius == 0;
             CanvasGeometry outter = TransformerGeometry.CreateEllipse(resourceCreator, transformer);
-
+       
             if (zeroHoleRadius)
                 return outter;
             else
             {
                 Vector2 center = transformer.Center;
 
-                return TransformerGeometry._createDount(outter, holeRadius, center);
+                return TransformerGeometry.CreateDountCore(outter, holeRadius, center);
             }
         }
 
         /// <summary>
-        ///  Create a new dount geometry.
+        /// Create a new dount geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
         /// <param name="transformer"> The source transformer. </param>
+        /// <param name="matrix"> The matrix. </param>
         /// <param name="holeRadius"> The hole-radius. </param>
         /// <returns> The product geometry. </returns>
         public static CanvasGeometry CreateDount(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformer, Matrix3x2 matrix, float holeRadius)
@@ -49,13 +51,13 @@ namespace FanKit.Transformers
             {
                 Vector2 center = Vector2.Transform(transformer.Center, matrix);
 
-                return TransformerGeometry._createDount(outter, holeRadius, center);
+                return TransformerGeometry.CreateDountCore(outter, holeRadius, center);
             }
         }
 
-        private static CanvasGeometry _createDount(CanvasGeometry outter, float holeRadius, Vector2 center)
+        private static CanvasGeometry CreateDountCore(CanvasGeometry outter, float holeRadius, Vector2 center)
         {
-            //Donut
+            // Donut
             Matrix3x2 holeMatrix = Matrix3x2.CreateTranslation(-center) * Matrix3x2.CreateScale(holeRadius) * Matrix3x2.CreateTranslation(center);
             return outter.CombineWith(outter, holeMatrix, CanvasGeometryCombine.Exclude);
         }
@@ -68,7 +70,7 @@ namespace FanKit.Transformers
 
 
         /// <summary>
-        ///  Create a new pie geometry.
+        /// Create a new pie geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
         /// <param name="sweepAngle"> The sweep-angle. </param>
@@ -83,12 +85,12 @@ namespace FanKit.Transformers
             {
                 Matrix3x2 oneMatrix = Transformer.FindHomography(Transformer.One, transformer);
 
-                return TransformerGeometry._createPie(resourceCreator, oneMatrix, sweepAngle);
+                return TransformerGeometry.CreatePieCore(resourceCreator, oneMatrix, sweepAngle);
             }
         }
 
         /// <summary>
-        ///  Create a new pie geometry.
+        /// Create a new pie geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
         /// <param name="transformer"> The source transformer. </param>
@@ -105,15 +107,15 @@ namespace FanKit.Transformers
                 Matrix3x2 oneMatrix = Transformer.FindHomography(Transformer.One, transformer);
                 Matrix3x2 oneMatrix2 = oneMatrix * matrix;
 
-                return TransformerGeometry._createPie(resourceCreator, oneMatrix2, sweepAngle);
+                return TransformerGeometry.CreatePieCore(resourceCreator, oneMatrix2, sweepAngle);
             }
         }
 
-        private static CanvasGeometry _createPie(ICanvasResourceCreator resourceCreator, Matrix3x2 oneMatrix, float sweepAngle)
+        private static CanvasGeometry CreatePieCore(ICanvasResourceCreator resourceCreator, Matrix3x2 oneMatrix, float sweepAngle)
         {
-            //start tooth
+            // start tooth
             Vector2 startTooth = new Vector2(1, 0);
-            //end tooth
+            // end tooth
             Vector2 endTooth = TransformerGeometry.GetRotationVector(sweepAngle);
 
             CanvasPathBuilder pathBuilder = new CanvasPathBuilder(resourceCreator);
@@ -121,10 +123,10 @@ namespace FanKit.Transformers
             {
                 pathBuilder.BeginFigure(Vector2.Zero);
 
-                //end notch point
+                // end notch point
                 pathBuilder.AddLine(endTooth);
 
-                //end tooth point
+                // end tooth point
                 pathBuilder.AddArc(startTooth, 1, 1, sweepAngle, CanvasSweepDirection.Clockwise, canvasArcSize);
 
                 pathBuilder.EndFigure(CanvasFigureLoop.Closed);
@@ -140,7 +142,7 @@ namespace FanKit.Transformers
 
 
         /// <summary>
-        ///  Create a new cookie geometry.
+        /// Create a new cookie geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
         /// <param name="innerRadius"> The inner-radius. </param>
@@ -161,7 +163,7 @@ namespace FanKit.Transformers
                 {
                     Vector2 center = transformer.Center;
 
-                    return TransformerGeometry._createDount(ellipse, innerRadius, center);
+                    return TransformerGeometry.CreateDountCore(ellipse, innerRadius, center);
                 }
             }
             else
@@ -169,14 +171,14 @@ namespace FanKit.Transformers
                 Matrix3x2 oneMatrix = Transformer.FindHomography(Transformer.One, transformer);
 
                 if (zeroInnerRadius)
-                    return TransformerGeometry._createPie(resourceCreator, oneMatrix, sweepAngle);
+                    return TransformerGeometry.CreatePieCore(resourceCreator, oneMatrix, sweepAngle);
                 else
-                    return TransformerGeometry._createCookie(resourceCreator, oneMatrix, innerRadius, sweepAngle);
+                    return TransformerGeometry.CreateCookieCore(resourceCreator, oneMatrix, innerRadius, sweepAngle);
             }
         }
 
         /// <summary>
-        ///  Create a new cookie geometry.
+        /// Create a new cookie geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
         /// <param name="transformer"> The source transformer. </param>
@@ -198,7 +200,7 @@ namespace FanKit.Transformers
                 {
                     Vector2 center = Vector2.Transform(transformer.Center, matrix);
 
-                    return TransformerGeometry._createDount(ellipse, innerRadius, center);
+                    return TransformerGeometry.CreateDountCore(ellipse, innerRadius, center);
                 }
             }
             else
@@ -207,38 +209,38 @@ namespace FanKit.Transformers
                 Matrix3x2 oneMatrix2 = oneMatrix * matrix;
 
                 if (zeroInnerRadius)
-                    return TransformerGeometry._createPie(resourceCreator, oneMatrix2, sweepAngle);
+                    return TransformerGeometry.CreatePieCore(resourceCreator, oneMatrix2, sweepAngle);
                 else
-                    return TransformerGeometry._createCookie(resourceCreator, oneMatrix2, innerRadius, sweepAngle);
+                    return TransformerGeometry.CreateCookieCore(resourceCreator, oneMatrix2, innerRadius, sweepAngle);
             }
         }
 
-        private static CanvasGeometry _createCookie(ICanvasResourceCreator resourceCreator, Matrix3x2 oneMatrix, float innerRadius, float sweepAngle)
+        private static CanvasGeometry CreateCookieCore(ICanvasResourceCreator resourceCreator, Matrix3x2 oneMatrix, float innerRadius, float sweepAngle)
         {
-            //start tooth
+            // start tooth
             Vector2 startTooth = new Vector2(1, 0);
-            //end tooth
+            // end tooth
             Vector2 endTooth = TransformerGeometry.GetRotationVector(sweepAngle);
 
             CanvasPathBuilder pathBuilder = new CanvasPathBuilder(resourceCreator);
             CanvasArcSize canvasArcSize = (sweepAngle < System.Math.PI) ? CanvasArcSize.Large : CanvasArcSize.Small;
             {
-                //DonutAndCookie
-                //start notch
+                // DonutAndCookie
+                // start notch
                 Vector2 startNotch = startTooth * innerRadius;
-                //end notch
+                // end notch
                 Vector2 endNotch = endTooth * innerRadius;
 
-                //start tooth point
+                // start tooth point
                 pathBuilder.BeginFigure(startNotch);
-                //start notch point
+                // start notch point
                 pathBuilder.AddArc(endNotch, innerRadius, innerRadius, sweepAngle, CanvasSweepDirection.CounterClockwise, canvasArcSize);
             }
 
-            //end notch point
+            // end notch point
             pathBuilder.AddLine(endTooth);
 
-            //end tooth point
+            // end tooth point
             pathBuilder.AddArc(startTooth, 1, 1, sweepAngle, CanvasSweepDirection.Clockwise, canvasArcSize);
 
             pathBuilder.EndFigure(CanvasFigureLoop.Closed);
@@ -248,6 +250,6 @@ namespace FanKit.Transformers
 
 
         #endregion
-        
+
     }
 }

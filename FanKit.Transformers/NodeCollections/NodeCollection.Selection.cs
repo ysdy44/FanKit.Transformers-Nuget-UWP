@@ -18,7 +18,7 @@ namespace FanKit.Transformers
 
             foreach (Node node in this)
             {
-                //Unchecked others.
+                // Unchecked others.
                 if (hasIsSelected) node.IsChecked = false;
                 else
                 {
@@ -46,6 +46,8 @@ namespace FanKit.Transformers
 
             return hasIsSelected;
         }
+
+        /// <summary>
         /// Select deselect.
         /// </summary>
         public void SelectionDeselect()

@@ -28,7 +28,7 @@ namespace FanKit.Transformers
         }
 
         /// <summary>
-        ///  Loads a <see cref="Color"/> from an XElement.
+        /// Loads a <see cref="Color"/> from an XElement.
         /// </summary>
         /// <param name="element"> The source XElement. </param>
         /// <returns> The loaded <see cref="Color"/>. </returns>
