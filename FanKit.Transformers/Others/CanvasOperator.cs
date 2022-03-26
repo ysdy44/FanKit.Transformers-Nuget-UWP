@@ -3,11 +3,30 @@ using System.Collections.Generic;
 using System.Numerics;
 using Windows.Devices.Input;
 using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
+using Windows.UI.Input;
 using Windows.UI.Xaml.Input;
 
 namespace FanKit.Transformers
 {
+    //@Delegate
+    /// <summary>
+    /// Method that represents the handling of the Single_Start, Single_Delta, Single_Complete event.
+    /// </summary>
+    /// <param name="point"> The position of the touch point. </param>
+    /// <param name="properties"> The properties of the touch point. </param>
+    public delegate void SingleHandler(Vector2 point, PointerPointProperties properties);
+    /// <summary>
+    /// Method that represents the handling of the Right_Start, Right_Delta, Right_Complete event.
+    /// <param name="point"> The position of the mouse point. </param>
+    /// </summary>>
+    public delegate void RightHandler(Vector2 point);
+    /// <summary>
+    /// Method that represents the handling of the Double_Start, Double_Delta, Double_Complete event.
+    /// </summary>
+    /// <param name="center"> The center of the two finger. </param>
+    /// <param name="space"> The space between two fingers. </param>
+    public delegate void DoubleHandler(Vector2 center, float space);
+
     /// <summary> 
     /// Provides single-finger, double-finger, mobile events to pointer events for canvas controls.
     /// </summary>
@@ -63,11 +82,6 @@ namespace FanKit.Transformers
 
 
         //@Delegate
-        /// <summary>
-        /// Method that represents the handling of the Single_Start, Single_Delta, Single_Complete event.
-        /// </summary>
-        /// <param name="point"> The position of the touch point. </param>
-        public delegate void SingleHandler(Vector2 point);
         /// <summary> Occurs when the one-finger | mouse-left-button | pen event starts. </summary>
         public event SingleHandler Single_Start = null;
         /// <summary> Occurs when one-finger | mouse-left-button | pen event change. </summary>
@@ -76,11 +90,6 @@ namespace FanKit.Transformers
         public event SingleHandler Single_Complete = null;
 
 
-        /// <summary>
-        /// Method that represents the handling of the Right_Start, Right_Delta, Right_Complete event.
-        /// <param name="point"> The position of the mouse point. </param>
-        /// </summary>>
-        public delegate void RightHandler(Vector2 point);
         /// <summary> Occurs when the mouse-right-button event starts. </summary>
         public event RightHandler Right_Start = null;
         /// <summary> Occurs when mouse-right-button event change. </summary>
@@ -89,12 +98,6 @@ namespace FanKit.Transformers
         public event RightHandler Right_Complete = null;
 
 
-        /// <summary>
-        /// Method that represents the handling of the Double_Start, Double_Delta, Double_Complete event.
-        /// </summary>
-        /// <param name="center"> The center of the two finger. </param>
-        /// <param name="space"> The space between two fingers. </param>
-        public delegate void DoubleHandler(Vector2 center, float space);
         /// <summary> Occurs when the double-finger event starts. </summary>
         public event DoubleHandler Double_Start = null;
         /// <summary> Occurs when double-finger event change. </summary>
@@ -141,7 +144,8 @@ namespace FanKit.Transformers
         // Pointer Pressed
         private void Control_PointerPressed(object sender, PointerRoutedEventArgs e)
         {
-            Vector2 point = CanvasOperator.PointerPosition(this.DestinationControl, e);
+            PointerPoint pointerPoint = e.GetCurrentPoint(this.DestinationControl);
+            Vector2 point = pointerPoint.Position.ToVector2();
             this.DestinationControl?.CapturePointer(e.Pointer);
 
             if (CanvasOperator.PointerIsTouch(this.DestinationControl, e))
@@ -179,7 +183,7 @@ namespace FanKit.Transformers
                     if (this.Device != InputDevice.Single)
                     {
                         this.Device = InputDevice.Single;
-                        this.Single_Start?.Invoke(point);//Delegate
+                        this.Single_Start?.Invoke(point, pointerPoint.Properties);//Delegate
                     }
                 }
             }
@@ -187,7 +191,8 @@ namespace FanKit.Transformers
         // Pointer Released
         private void Control_PointerReleased(object sender, PointerRoutedEventArgs e)
         {
-            Vector2 point = CanvasOperator.PointerPosition(this.DestinationControl, e);
+            PointerPoint pointerPoint = e.GetCurrentPoint(this.DestinationControl);
+            Vector2 point = pointerPoint.Position.ToVector2();
             this.DestinationControl?.ReleasePointerCapture(e.Pointer);
 
             if (this.Device == InputDevice.Right)
@@ -203,7 +208,7 @@ namespace FanKit.Transformers
             else if (this.Device == InputDevice.Single)
             {
                 this.Device = InputDevice.None;
-                this.Single_Complete?.Invoke(point);//Delegate
+                this.Single_Complete?.Invoke(point, pointerPoint.Properties);//Delegate
             }
 
             this.Pointers.Clear();
@@ -213,7 +218,8 @@ namespace FanKit.Transformers
         // Pointer Moved
         private void Control_PointerMoved(object sender, PointerRoutedEventArgs e)
         {
-            Vector2 point = CanvasOperator.PointerPosition(this.DestinationControl, e);
+            PointerPoint pointerPoint = e.GetCurrentPoint(this.DestinationControl);
+            Vector2 point = pointerPoint.Position.ToVector2();
 
             if (CanvasOperator.PointerIsTouch(this.DestinationControl, e))
             {
@@ -241,17 +247,17 @@ namespace FanKit.Transformers
                         if (length > 2 && length < 12)
                         {
                             this.Device = InputDevice.Single;
-                            this.Single_Start?.Invoke(point);//Delegate
+                            this.Single_Start?.Invoke(point, pointerPoint.Properties);//Delegate
                         }
                     }
-                    else if (this.Device == InputDevice.Single) this.Single_Delta?.Invoke(point);//Delegate
+                    else if (this.Device == InputDevice.Single) this.Single_Delta?.Invoke(point, pointerPoint.Properties);//Delegate
                 }
             }
             else
             {
                 if (this.Device == InputDevice.Right) this.Right_Delta?.Invoke(point);//Delegate
 
-                if (this.Device == InputDevice.Single) this.Single_Delta?.Invoke(point);//Delegate
+                if (this.Device == InputDevice.Single) this.Single_Delta?.Invoke(point, pointerPoint.Properties);//Delegate
             }
         }
         // Wheel Changed
