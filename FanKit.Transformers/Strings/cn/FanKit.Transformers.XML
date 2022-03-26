@@ -1594,6 +1594,7 @@
         表示对 Single_Start，Single_Delta，Single_Complete 事件的处理的方法。
       </summary>
       <param name="point">接触点的位置。 </param>
+      <param name="properties">接触点的属性。 </param>
     </member>
     <member name="E:FanKit.Transformers.CanvasOperator.Single_Start">
       <summary>发生在单指|鼠标左键|笔事件开始。 </summary>

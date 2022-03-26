@@ -1566,6 +1566,7 @@
             Method that represents the handling of the Single_Start, Single_Delta, Single_Complete event.
             </summary>
             <param name="point"> The position of the touch point. </param>
+            <param name="properties"> The properties of the touch point. </param>
         </member>
         <member name="E:FanKit.Transformers.CanvasOperator.Single_Start">
             <summary> Occurs when the one-finger | mouse-left-button | pen event starts. </summary>
