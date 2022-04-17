@@ -5,6 +5,7 @@ using Microsoft.Graphics.Canvas.UI.Xaml;
 using System;
 using System.Numerics;
 using System.Threading.Tasks;
+using Windows.UI.Input;
 using Windows.UI.Xaml.Controls;
 
 namespace FanKit.Transformers.TestApp
@@ -90,9 +91,9 @@ namespace FanKit.Transformers.TestApp
 
 
 
-        private void CanvasOperator_Single_Start(Vector2 point)
+        private void CanvasOperator_Single_Start(Vector2 point, PointerPointProperties properties)
         {
-            Transformer transformer=this.Layer.TransformerMatrix.Destination;
+            Transformer transformer = this.Layer.TransformerMatrix.Destination;
 
             this._startingPoint = point;
             this._oldTransformer = transformer;
@@ -102,7 +103,7 @@ namespace FanKit.Transformers.TestApp
 
             this.CanvasControl.Invalidate();
         }
-        private void CanvasOperator_Single_Delta(Vector2 point)
+        private void CanvasOperator_Single_Delta(Vector2 point, PointerPointProperties properties)
         {
             bool isRatio = this.RatioButton.IsOn;
             bool isCenter = this.CenterButton.IsOn;
@@ -126,7 +127,7 @@ namespace FanKit.Transformers.TestApp
 
             this.CanvasControl.Invalidate();
         }
-        private void CanvasOperator_Single_Complete(Vector2 point)
+        private void CanvasOperator_Single_Complete(Vector2 point, PointerPointProperties properties)
         {
             this.CanvasControl.Invalidate();
         }
