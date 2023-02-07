@@ -2914,7 +2914,7 @@
         </member>
         <member name="M:FanKit.Transformers.TransformerGeometry.CreateDount(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Single)">
             <summary>
-             Create a new dount geometry.
+             Create a new donut geometry.
             </summary>
             <param name="resourceCreator"> The resource-creator. </param>
             <param name="holeRadius"> The hole-radius. </param>
@@ -2922,7 +2922,7 @@
         </member>
         <member name="M:FanKit.Transformers.TransformerGeometry.CreateDount(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Single)">
             <summary>
-             Create a new dount geometry.
+             Create a new donut geometry.
             </summary>
             <param name="resourceCreator"> The resource-creator. </param>
             <param name="transformer"> The source transformer. </param>

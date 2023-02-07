@@ -2968,7 +2968,7 @@
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateDount(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Single)">
       <summary>
-        创建一个新的dount几何体。
+        创建一个新的donut几何体。
       </summary>
       <param name="resourceCreator">资源创建者。 </param>
       <param name="holeRadius">孔半径。 </param>
@@ -2976,7 +2976,7 @@
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateDount(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Single)">
       <summary>
-        创建一个新的dount几何体。
+        创建一个新的donut几何体。
       </summary>
       <param name="resourceCreator">资源创建者。 </param>
       <param name="transformer">源变换者。 </param>

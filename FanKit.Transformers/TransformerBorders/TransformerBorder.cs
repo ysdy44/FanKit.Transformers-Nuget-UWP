@@ -13,8 +13,10 @@ namespace FanKit.Transformers
         /// <summary>
         /// Initialize a <see cref = "TransformerBorder" />.
         /// </summary>
-        /// <param name="width"> The width. </param>
-        /// <param name="height"> The height. </param>
+        /// <param name="left"> The left. </param>
+        /// <param name="top"> The top. </param>
+        /// <param name="right"> The right. </param>
+        /// <param name="bottom"> The bottom. </param>
         public TransformerBorder(float left, float top, float right, float bottom)
         {
             this.Left = left;

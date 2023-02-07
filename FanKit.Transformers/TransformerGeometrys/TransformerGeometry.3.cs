@@ -7,11 +7,11 @@ namespace FanKit.Transformers
     public static partial class TransformerGeometry
     {
 
-        #region Dount
+        #region Donut
 
 
         /// <summary>
-        /// Create a new dount geometry.
+        /// Create a new donut geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
         /// <param name="transformer"> The source transformer. </param>
@@ -33,7 +33,7 @@ namespace FanKit.Transformers
         }
 
         /// <summary>
-        /// Create a new dount geometry.
+        /// Create a new donut geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
         /// <param name="transformer"> The source transformer. </param>
