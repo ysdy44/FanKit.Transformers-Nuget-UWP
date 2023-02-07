@@ -37,6 +37,18 @@ namespace FanKit.Transformers
 
 
         /// <summary>
+        /// Gets the current input device type.
+        /// </summary>
+        public InputDevice Device { get; private set; }
+
+
+        /// <summary>
+        /// Gets or sets the touch mode.
+        /// </summary>
+        public TouchMode TouchMode { get; set; } = TouchMode.SingleFinger;
+
+
+        /// <summary>
         /// <see cref = "CanvasOperator" />'s destination control.
         /// </summary>
         public UIElement DestinationControl
@@ -118,8 +130,6 @@ namespace FanKit.Transformers
         #region Point
 
 
-        InputDevice Device = InputDevice.None;
-
         readonly HashSet<uint> Pointers = new HashSet<uint>();
 
         Vector2 EvenPointer; // it's ID%2==0
@@ -156,7 +166,7 @@ namespace FanKit.Transformers
 
                 if (this.Pointers.Count > 1)
                 {
-                    if (this.Device != InputDevice.Double)
+                    if (this.Device != InputDevice.DoubleFinger)
                     {
                         this.EvenStartingPointer = this.EvenPointer;
                         this.OddStartingPointer = this.OddPointer;
@@ -164,7 +174,7 @@ namespace FanKit.Transformers
                 }
                 else
                 {
-                    if (this.Device != InputDevice.Single)
+                    if (this.Device != InputDevice.SingleFinger)
                         this.StartingPointer = point;
                 }
             }
@@ -172,17 +182,17 @@ namespace FanKit.Transformers
             {
                 if (CanvasOperator.PointerIsRight(this.DestinationControl, e))
                 {
-                    if (this.Device != InputDevice.Right)
+                    if (this.Device != InputDevice.RightButton)
                     {
-                        this.Device = InputDevice.Right;
+                        this.Device = InputDevice.RightButton;
                         this.Right_Start?.Invoke(point);//Delegate
                     }
                 }
                 if (CanvasOperator.PointerIsLeft(this.DestinationControl, e) || CanvasOperator.PointerIsPen(this.DestinationControl, e))
                 {
-                    if (this.Device != InputDevice.Single)
+                    if (this.Device != InputDevice.SingleFinger)
                     {
-                        this.Device = InputDevice.Single;
+                        this.Device = InputDevice.SingleFinger;
                         this.Single_Start?.Invoke(point, pointerPoint.Properties);//Delegate
                     }
                 }
@@ -195,17 +205,17 @@ namespace FanKit.Transformers
             Vector2 point = pointerPoint.Position.ToVector2();
             this.DestinationControl?.ReleasePointerCapture(e.Pointer);
 
-            if (this.Device == InputDevice.Right)
+            if (this.Device == InputDevice.RightButton)
             {
                 this.Device = InputDevice.None;
                 this.Right_Complete?.Invoke(point);//Delegate
             }
-            else if (this.Device == InputDevice.Double)
+            else if (this.Device == InputDevice.DoubleFinger)
             {
                 this.Device = InputDevice.None;
                 this.Double_Complete?.Invoke(point, (this.OddPointer - this.EvenPointer).Length());//Delegate
             }
-            else if (this.Device == InputDevice.Single)
+            else if (this.Device == InputDevice.SingleFinger)
             {
                 this.Device = InputDevice.None;
                 this.Single_Complete?.Invoke(point, pointerPoint.Properties);//Delegate
@@ -228,36 +238,36 @@ namespace FanKit.Transformers
 
                 if (this.Pointers.Count > 1)
                 {
-                    if (this.Device != InputDevice.Double)
+                    if (this.Device != InputDevice.DoubleFinger)
                     {
                         if (System.Math.Abs(this.EvenStartingPointer.X - this.EvenPointer.X) > 2 || System.Math.Abs(this.EvenStartingPointer.Y - this.EvenPointer.Y) > 2 || System.Math.Abs(this.OddStartingPointer.X - this.OddPointer.X) > 2 || System.Math.Abs(this.OddStartingPointer.Y - this.OddPointer.Y) > 2)
                         {
-                            this.Device = InputDevice.Double;
+                            this.Device = InputDevice.DoubleFinger;
                             this.Double_Start?.Invoke((this.OddPointer + this.EvenPointer) / 2, (this.OddPointer - this.EvenPointer).Length());//Delegate
                         }
                     }
-                    else if (this.Device == InputDevice.Double) this.Double_Delta?.Invoke((this.OddPointer + this.EvenPointer) / 2, (this.OddPointer - this.EvenPointer).Length());//Delegate
+                    else if (this.Device == InputDevice.DoubleFinger) this.Double_Delta?.Invoke((this.OddPointer + this.EvenPointer) / 2, (this.OddPointer - this.EvenPointer).Length());//Delegate
                 }
                 else
                 {
-                    if (this.Device != InputDevice.Single)
+                    if (this.Device != InputDevice.SingleFinger)
                     {
                         double length = (this.StartingPointer - point).Length();
 
                         if (length > 2 && length < 12)
                         {
-                            this.Device = InputDevice.Single;
+                            this.Device = InputDevice.SingleFinger;
                             this.Single_Start?.Invoke(point, pointerPoint.Properties);//Delegate
                         }
                     }
-                    else if (this.Device == InputDevice.Single) this.Single_Delta?.Invoke(point, pointerPoint.Properties);//Delegate
+                    else if (this.Device == InputDevice.SingleFinger) this.Single_Delta?.Invoke(point, pointerPoint.Properties);//Delegate
                 }
             }
             else
             {
-                if (this.Device == InputDevice.Right) this.Right_Delta?.Invoke(point);//Delegate
+                if (this.Device == InputDevice.RightButton) this.Right_Delta?.Invoke(point);//Delegate
 
-                if (this.Device == InputDevice.Single) this.Single_Delta?.Invoke(point, pointerPoint.Properties);//Delegate
+                if (this.Device == InputDevice.SingleFinger) this.Single_Delta?.Invoke(point, pointerPoint.Properties);//Delegate
             }
         }
         // Wheel Changed
@@ -348,20 +358,43 @@ namespace FanKit.Transformers
     }
 
     /// <summary>
+    /// The touch mode of <see cref = "CanvasOperator" />.
+    /// </summary>
+    public enum TouchMode
+    {
+        /// <summary> Disabled. </summary>
+        Disable,
+        /// <summary> <see cref="InputDevice.SingleFinger"/>. </summary>
+        SingleFinger,
+        /// <summary> <see cref="InputDevice.RightButton"/>. </summary>
+        RightButton,
+    }
+
+    /// <summary>
     /// The input device type of <see cref = "CanvasOperator" />.
     /// </summary>
     public enum InputDevice
     {
         /// <summary> Normal. </summary>
         None,
+        /// <summary> Indeterminacy. </summary>
+        Indeterminacy,
 
-        /// <summary> One-finger | Mouse-Left-Button | Pen. </summary>
-        Single,
-
+        /// <summary>Holding. </summary>
+        Holding,
+        /// <summary> One Finger. </summary>
+        SingleFinger,
         /// <summary> Two Fingers. </summary>
-        Double,
+        DoubleFinger,
 
+        /// <summary> Pen. </summary>
+        Pen,
+        /// <summary> Eraser. </summary>
+        Eraser,
+
+        /// <summary> Mouse-Left-Button. </summary>
+        LeftButton,
         /// <summary> Mouse-Right-Button. </summary>
-        Right,
+        RightButton,
     }
 }
