@@ -17,7 +17,7 @@ namespace FanKit.Transformers
         /// <param name="transformer"> The source transformer. </param>
         /// <param name="holeRadius"> The hole-radius. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreateDount(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformer, float holeRadius)
+        public static CanvasGeometry CreateDonut(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformer, float holeRadius)
         {
             bool zeroHoleRadius = holeRadius == 0;
             CanvasGeometry outter = TransformerGeometry.CreateEllipse(resourceCreator, transformer);
@@ -28,7 +28,7 @@ namespace FanKit.Transformers
             {
                 Vector2 center = transformer.Center;
 
-                return TransformerGeometry.CreateDountCore(outter, holeRadius, center);
+                return TransformerGeometry.CreateDonutCore(outter, holeRadius, center);
             }
         }
 
@@ -40,7 +40,7 @@ namespace FanKit.Transformers
         /// <param name="matrix"> The matrix. </param>
         /// <param name="holeRadius"> The hole-radius. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreateDount(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformer, Matrix3x2 matrix, float holeRadius)
+        public static CanvasGeometry CreateDonut(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformer, Matrix3x2 matrix, float holeRadius)
         {
             bool zeroHoleRadius = holeRadius == 0;
             CanvasGeometry outter = TransformerGeometry.CreateEllipse(resourceCreator, transformer, matrix);
@@ -51,11 +51,11 @@ namespace FanKit.Transformers
             {
                 Vector2 center = Vector2.Transform(transformer.Center, matrix);
 
-                return TransformerGeometry.CreateDountCore(outter, holeRadius, center);
+                return TransformerGeometry.CreateDonutCore(outter, holeRadius, center);
             }
         }
 
-        private static CanvasGeometry CreateDountCore(CanvasGeometry outter, float holeRadius, Vector2 center)
+        private static CanvasGeometry CreateDonutCore(CanvasGeometry outter, float holeRadius, Vector2 center)
         {
             // Donut
             Matrix3x2 holeMatrix = Matrix3x2.CreateTranslation(-center) * Matrix3x2.CreateScale(holeRadius) * Matrix3x2.CreateTranslation(center);
@@ -163,7 +163,7 @@ namespace FanKit.Transformers
                 {
                     Vector2 center = transformer.Center;
 
-                    return TransformerGeometry.CreateDountCore(ellipse, innerRadius, center);
+                    return TransformerGeometry.CreateDonutCore(ellipse, innerRadius, center);
                 }
             }
             else
@@ -200,7 +200,7 @@ namespace FanKit.Transformers
                 {
                     Vector2 center = Vector2.Transform(transformer.Center, matrix);
 
-                    return TransformerGeometry.CreateDountCore(ellipse, innerRadius, center);
+                    return TransformerGeometry.CreateDonutCore(ellipse, innerRadius, center);
                 }
             }
             else

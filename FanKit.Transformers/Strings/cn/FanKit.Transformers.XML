@@ -20,17 +20,17 @@
 
       </summary>
     </member>
-    <member name="F:FanKit.Transformers.CanvasTransformer.Width">
+    <member name="P:FanKit.Transformers.CanvasTransformer.Width">
       <summary>
         <see cref = "T:FanKit.Transformers.CanvasTransformer" />的宽度。
       </summary>
     </member>
-    <member name="F:FanKit.Transformers.CanvasTransformer.Height">
+    <member name="P:FanKit.Transformers.CanvasTransformer.Height">
       <summary>
         <see cref = "T:FanKit.Transformers.CanvasTransformer" />的高度。
       </summary>
     </member>
-    <member name="F:FanKit.Transformers.CanvasTransformer.Scale">
+    <member name="P:FanKit.Transformers.CanvasTransformer.Scale">
       <summary>
         <see cref = "T:FanKit.Transformers.CanvasTransformer" />的比例尺。
       </summary>
@@ -44,12 +44,12 @@
     <member name="P:FanKit.Transformers.CanvasTransformer.ControlCenter">
       <summary> 画布控件的中心。 </summary>
     </member>
-    <member name="F:FanKit.Transformers.CanvasTransformer.Position">
+    <member name="P:FanKit.Transformers.CanvasTransformer.Position">
       <summary>
         <see cref = "T:FanKit.Transformers.CanvasTransformer" />的翻译。
       </summary>
     </member>
-    <member name="F:FanKit.Transformers.CanvasTransformer.Radian">
+    <member name="P:FanKit.Transformers.CanvasTransformer.Radian">
       <summary>
         <see cref = "T:FanKit.Transformers.CanvasTransformer" />的旋转。
       </summary>

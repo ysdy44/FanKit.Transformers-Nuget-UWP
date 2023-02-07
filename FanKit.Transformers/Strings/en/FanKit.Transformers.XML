@@ -20,13 +20,13 @@
                
             </summary>
         </member>
-        <member name="F:FanKit.Transformers.CanvasTransformer.Width">
+        <member name="P:FanKit.Transformers.CanvasTransformer.Width">
             <summary> <see cref = "T:FanKit.Transformers.CanvasTransformer" />'s width. </summary>
         </member>
-        <member name="F:FanKit.Transformers.CanvasTransformer.Height">
+        <member name="P:FanKit.Transformers.CanvasTransformer.Height">
             <summary> <see cref = "T:FanKit.Transformers.CanvasTransformer" />'s height. </summary>
         </member>
-        <member name="F:FanKit.Transformers.CanvasTransformer.Scale">
+        <member name="P:FanKit.Transformers.CanvasTransformer.Scale">
             <summary> <see cref = "T:FanKit.Transformers.CanvasTransformer" />'s scale. </summary>
         </member>
         <member name="P:FanKit.Transformers.CanvasTransformer.ControlWidth">
@@ -38,10 +38,10 @@
         <member name="P:FanKit.Transformers.CanvasTransformer.ControlCenter">
             <summary> CanvasControl's center. </summary>
         </member>
-        <member name="F:FanKit.Transformers.CanvasTransformer.Position">
+        <member name="P:FanKit.Transformers.CanvasTransformer.Position">
             <summary> <see cref = "T:FanKit.Transformers.CanvasTransformer" />'s translation. </summary>
         </member>
-        <member name="F:FanKit.Transformers.CanvasTransformer.Radian">
+        <member name="P:FanKit.Transformers.CanvasTransformer.Radian">
             <summary> <see cref = "T:FanKit.Transformers.CanvasTransformer" />'s rotation. </summary>
         </member>
         <member name="M:FanKit.Transformers.CanvasTransformer.#ctor">
@@ -53,7 +53,7 @@
             <summary> <see cref = "P:FanKit.Transformers.CanvasTransformer.ControlWidth" /> and <see cref = "P:FanKit.Transformers.CanvasTransformer.ControlHeight" />'s setter. </summary>
         </member>
         <member name="P:FanKit.Transformers.CanvasTransformer.BitmapSize">
-            <summary> <see cref = "F:FanKit.Transformers.CanvasTransformer.Width" /> and <see cref = "F:FanKit.Transformers.CanvasTransformer.Height" />'s setter. </summary>
+            <summary> <see cref = "P:FanKit.Transformers.CanvasTransformer.Width" /> and <see cref = "P:FanKit.Transformers.CanvasTransformer.Height" />'s setter. </summary>
         </member>
         <member name="M:FanKit.Transformers.CanvasTransformer.GetScale(Windows.Graphics.Imaging.BitmapSize)">
             <summary>
@@ -128,14 +128,14 @@
         <member name="M:FanKit.Transformers.CanvasTransformer.GetInverseMatrix">
             <summary>
             Gets <see cref = "T:FanKit.Transformers.CanvasTransformer" />'s inverse matrix.
-              Call the <see cref = "M:FanKit.Transformers.CanvasTransformer.ReloadMatrix" /> method before using.
+            Call the <see cref = "M:FanKit.Transformers.CanvasTransformer.ReloadMatrix" /> method before using.
             </summary>
             <returns> The product inverse matrix. </returns>
         </member>
         <member name="M:FanKit.Transformers.CanvasTransformer.GetInverseMatrix(FanKit.Transformers.InverseMatrixTransformerMode)">
             <summary>
             Gets <see cref = "T:FanKit.Transformers.CanvasTransformer" />'s inverse matrix.
-              Call the <see cref = "M:FanKit.Transformers.CanvasTransformer.ReloadMatrix" /> method before using.
+            Call the <see cref = "M:FanKit.Transformers.CanvasTransformer.ReloadMatrix" /> method before using.
             </summary>
             <param name="mode"> The inverse matrix mode. </param>
             <returns> The product inverse matrix. </returns>
@@ -392,7 +392,7 @@
         </member>
         <member name="M:FanKit.Transformers.NodeBorderCollection.#ctor(FanKit.Transformers.NodeCollection)">
             <summary>
-             Initialize a NodeBorderCollection.
+            Initialize a NodeBorderCollection.
             </summary>
             <param name="nodeCollection"> The NodeCollection. </param>
         </member>
@@ -420,35 +420,35 @@
         </member>
         <member name="M:FanKit.Transformers.NodeCollection.CacheTransform">
             <summary>
-             Cache the NodeCollection's transformer.
+            Cache the NodeCollection's transformer.
             </summary>
         </member>
         <member name="M:FanKit.Transformers.NodeCollection.CacheTransformOnlySelected">
             <summary>
-             Cache the NodeCollection's transformer.
+            Cache the NodeCollection's transformer.
             </summary>
         </member>
         <member name="M:FanKit.Transformers.NodeCollection.TransformAdd(System.Numerics.Vector2)">
             <summary>
-             Transforms the node by the given vector.
+            Transforms the node by the given vector.
             </summary>
             <param name="vector"> The add value use to summed. </param>
         </member>
         <member name="M:FanKit.Transformers.NodeCollection.TransformAddOnlySelected(System.Numerics.Vector2)">
             <summary>
-             Transforms the node by the given vector.
+            Transforms the node by the given vector.
             </summary>
             <param name="vector"> The add value use to summed. </param>
         </member>
         <member name="M:FanKit.Transformers.NodeCollection.TransformMultiplies(System.Numerics.Matrix3x2)">
             <summary>
-             Transforms the node by the given matrix.
+            Transforms the node by the given matrix.
             </summary>
             <param name="matrix"> The resulting matrix. </param>
         </member>
         <member name="M:FanKit.Transformers.NodeCollection.TransformMultipliesOnlySelected(System.Numerics.Matrix3x2)">
             <summary>
-             Transforms the node by the given matrix.
+            Transforms the node by the given matrix.
             </summary>
             <param name="matrix"> The resulting matrix. </param>  
         </member>
@@ -567,7 +567,7 @@
         </member>
         <member name="M:FanKit.Transformers.NodeCollection.BeginFigure(System.Numerics.Vector2,Microsoft.Graphics.Canvas.Geometry.CanvasFigureFill)">
             <summary>
-             Starts a new figure at the specified point, with the specified figure fill option.
+            Starts a new figure at the specified point, with the specified figure fill option.
             </summary>
             <param name="startPoint"> The start-point. </param>
             <param name="figureFill"> The figure-fill. </param>
@@ -620,7 +620,11 @@
             <param name="point"> The point. </param>
             <param name="matrix"> The matrix. </param>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:FanKit.Transformers.NodeCollection.SelectionDeselect" -->
+        <member name="M:FanKit.Transformers.NodeCollection.SelectionDeselect">
+            <summary>
+            Select deselect.
+            </summary>
+        </member>
         <member name="M:FanKit.Transformers.NodeCollection.RectChoose(System.Single,System.Single,System.Single,System.Single)">
             <summary>
             Check node which in the rect.
@@ -1085,7 +1089,7 @@
             <param name="textColor"> The color of the text. </param>
             <param name="textFormat"> The format of the text. </param>
         </member>
-        <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.FillMarqueeMaskl(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.MarqueeToolType,FanKit.Transformers.MarqueeTool,Windows.Foundation.Rect,FanKit.Transformers.MarqueeCompositeMode)">
+        <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.FillMarqueeMask(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.MarqueeToolType,FanKit.Transformers.MarqueeTool,Windows.Foundation.Rect,FanKit.Transformers.MarqueeCompositeMode)">
             <summary>
             Fill a marquee mask with a marquee-tool.
             </summary>
@@ -1241,7 +1245,7 @@
         </member>
         <member name="M:FanKit.Transformers.IGetActualTransformer.GetActualTransformer">
             <summary>
-             Get the actual transformer.
+            Get the actual transformer.
             </summary>
         </member>
         <member name="T:FanKit.Transformers.ITransformerGeometry">
@@ -1432,18 +1436,18 @@
         </member>
         <member name="M:FanKit.Transformers.Node.CacheTransform">
             <summary>
-             Cache the node's transformer.
+            Cache the node's transformer.
             </summary>
         </member>
         <member name="M:FanKit.Transformers.Node.TransformAdd(System.Numerics.Vector2)">
             <summary>
-             Transforms the node by the given vector.
+            Transforms the node by the given vector.
             </summary>
             <param name="vector"> The add value use to summed. </param>
         </member>
         <member name="M:FanKit.Transformers.Node.TransformMultiplies(System.Numerics.Matrix3x2)">
             <summary>
-             Transforms the node by the given matrix.
+            Transforms the node by the given matrix.
             </summary>
             <param name="matrix"> The resulting matrix. </param>
         </member>
@@ -1548,9 +1552,41 @@
             <param name="isSquare"></param>
             <returns> Return **true** if the marquee mask need to redraw, otherwise **false**. </returns>
         </member>
+        <member name="T:FanKit.Transformers.SingleHandler">
+            <summary>
+            Method that represents the handling of the <see cref="E:FanKit.Transformers.CanvasOperator.Single_Start"/>, <see cref="E:FanKit.Transformers.CanvasOperator.Single_Delta"/>, <see cref="E:FanKit.Transformers.CanvasOperator.Single_Complete"/> event.
+            </summary>
+            <param name="point"> The position of the touch point. </param>
+            <param name="device"> The current input device. </param>
+            <param name="properties"> The properties of the touch point. </param>
+        </member>
+        <member name="T:FanKit.Transformers.RightHandler">
+            <summary>
+            Method that represents the handling of the <see cref="E:FanKit.Transformers.CanvasOperator.Right_Start"/>, <see cref="E:FanKit.Transformers.CanvasOperator.Right_Delta"/>, <see cref="E:FanKit.Transformers.CanvasOperator.Right_Complete"/> event.
+            </summary>
+            <param name="point"> The position of the mouse point. </param>
+            <param name="isHolding"> <see cref="E:Windows.UI.Xaml.UIElement.Holding"/>. </param>
+        </member>
+        <member name="T:FanKit.Transformers.DoubleHandler">
+            <summary>
+            Method that represents the handling of the <see cref="E:FanKit.Transformers.CanvasOperator.Double_Start"/>, <see cref="E:FanKit.Transformers.CanvasOperator.Double_Delta"/>, <see cref="E:FanKit.Transformers.CanvasOperator.Double_Complete"/> event.
+            </summary>
+            <param name="center"> The center of the two finger. </param>
+            <param name="space"> The space between two fingers. </param>
+        </member>
         <member name="T:FanKit.Transformers.CanvasOperator">
             <summary> 
             Provides single-finger, double-finger, mobile events to pointer events for canvas controls.
+            </summary>
+        </member>
+        <member name="P:FanKit.Transformers.CanvasOperator.Device">
+            <summary>
+            Gets the current input device type.
+            </summary>
+        </member>
+        <member name="P:FanKit.Transformers.CanvasOperator.TouchMode">
+            <summary>
+            Gets or sets the touch mode.
             </summary>
         </member>
         <member name="P:FanKit.Transformers.CanvasOperator.DestinationControl">
@@ -1561,13 +1597,6 @@
         <member name="F:FanKit.Transformers.CanvasOperator.DestinationControlProperty">
             <summary> Identifies the <see cref = "P:FanKit.Transformers.CanvasOperator.DestinationControl" /> dependency property. </summary>
         </member>
-        <member name="T:FanKit.Transformers.CanvasOperator.SingleHandler">
-            <summary>
-            Method that represents the handling of the Single_Start, Single_Delta, Single_Complete event.
-            </summary>
-            <param name="point"> The position of the touch point. </param>
-            <param name="properties"> The properties of the touch point. </param>
-        </member>
         <member name="E:FanKit.Transformers.CanvasOperator.Single_Start">
             <summary> Occurs when the one-finger | mouse-left-button | pen event starts. </summary>
         </member>
@@ -1577,27 +1606,14 @@
         <member name="E:FanKit.Transformers.CanvasOperator.Single_Complete">
             <summary> Occurs when the one-finger | mouse-left-button | pen event is complete. </summary>
         </member>
-        <member name="T:FanKit.Transformers.CanvasOperator.RightHandler">
-            <summary>
-            Method that represents the handling of the Right_Start, Right_Delta, Right_Complete event.
-            <param name="point"> The position of the mouse point. </param>
-            </summary>>
-        </member>
         <member name="E:FanKit.Transformers.CanvasOperator.Right_Start">
-            <summary> Occurs when the mouse-right-button event starts. </summary>
+            <summary> Occurs when the mouse-right-button | one-finger-holding event starts. </summary>
         </member>
         <member name="E:FanKit.Transformers.CanvasOperator.Right_Delta">
-            <summary> Occurs when mouse-right-button event change. </summary>
+            <summary> Occurs when mouse-right-button | one-finger-holding event change. </summary>
         </member>
         <member name="E:FanKit.Transformers.CanvasOperator.Right_Complete">
-            <summary> Occurs when the mouse-right-button event is complete. </summary>
-        </member>
-        <member name="T:FanKit.Transformers.CanvasOperator.DoubleHandler">
-            <summary>
-            Method that represents the handling of the Double_Start, Double_Delta, Double_Complete event.
-            </summary>
-            <param name="center"> The center of the two finger. </param>
-            <param name="space"> The space between two fingers. </param>
+            <summary> Occurs when the mouse-right-button | one-finger-holding event is complete. </summary>
         </member>
         <member name="E:FanKit.Transformers.CanvasOperator.Double_Start">
             <summary> Occurs when the double-finger event starts. </summary>
@@ -1613,77 +1629,19 @@
             Occurs when the incremental value of the pointer wheel changes.
             </summary>
         </member>
-        <member name="M:FanKit.Transformers.CanvasOperator.PointerPosition(Windows.UI.Xaml.UIElement,Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+        <member name="T:FanKit.Transformers.TouchMode">
             <summary>
-            Gets the position of touch point
+            The touch mode of <see cref = "T:FanKit.Transformers.CanvasOperator" />.
             </summary>
-            <param name="relativeTo"> Any UIElement derived objects connected to the same object tree. </param>
-            <param name="e"> Event data for events. </param>
-            <returns> The position of touch point.</returns>
         </member>
-        <member name="M:FanKit.Transformers.CanvasOperator.PointerPressure(Windows.UI.Xaml.UIElement,Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
-            <summary>
-            Gets the pressure of touch point
-            </summary>
-            <param name="relativeTo"> Any UIElement derived objects connected to the same object tree. </param>
-            <param name="e"> Event data for events. </param>
-            <returns> The pressure of touch point.</returns>
+        <member name="F:FanKit.Transformers.TouchMode.Disable">
+            <summary> Disabled. </summary>
         </member>
-        <member name="M:FanKit.Transformers.CanvasOperator.PointerWheelDelta(Windows.UI.Xaml.UIElement,Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
-            <summary>
-            Gets the value entered by the wheel button.
-            </summary>
-            <param name="relativeTo"> Any UIElement derived objects connected to the same object tree. </param>
-            <param name="e"> Event data for events. </param>
-            <returns> The value entered by the wheel button. </returns>
+        <member name="F:FanKit.Transformers.TouchMode.SingleFinger">
+            <summary> <see cref="F:FanKit.Transformers.InputDevice.SingleFinger"/>. </summary>
         </member>
-        <member name="M:FanKit.Transformers.CanvasOperator.PointerIsTouch(Windows.UI.Xaml.UIElement,Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
-            <summary>
-            Judging the action.
-            </summary>
-            <param name="relativeTo"> Any UIElement derived objects connected to the same object tree. </param>
-            <param name="e"> Event data for events. </param>
-            <returns> If the action is triggered by a touch, return **true**. </returns>
-        </member>
-        <member name="M:FanKit.Transformers.CanvasOperator.PointerIsPen(Windows.UI.Xaml.UIElement,Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
-            <summary>
-            Judging the action.
-            </summary>
-            <param name="relativeTo"> Any UIElement derived objects connected to the same object tree. </param>
-            <param name="e"> Event data for events. </param>
-            <returns> If the action is triggered by a pen, return **true**. </returns>
-        </member>
-        <member name="M:FanKit.Transformers.CanvasOperator.PointerIsBarrel(Windows.UI.Xaml.UIElement,Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
-            <summary>
-            Judging the action.
-            </summary>
-            <param name="relativeTo"> Any UIElement derived objects connected to the same object tree. </param>
-            <param name="e"> Event data for events. </param>
-            <returns> If the action is triggered by a barrel, return **true**. </returns>
-        </member>
-        <member name="M:FanKit.Transformers.CanvasOperator.PointerIsMouse(Windows.UI.Xaml.UIElement,Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
-            <summary>
-            Judging the action.
-            </summary>
-            <param name="relativeTo"> Any UIElement derived objects connected to the same object tree. </param>
-            <param name="e"> Event data for events. </param>
-            <returns> If the action is triggered by a mouse, return **true**. </returns>
-        </member>
-        <member name="M:FanKit.Transformers.CanvasOperator.PointerIsLeft(Windows.UI.Xaml.UIElement,Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
-            <summary>
-            Judging the action.
-            </summary>
-            <param name="relativeTo"> Any UIElement derived objects connected to the same object tree. </param>
-            <param name="e"> Event data for events. </param>
-            <returns> If the action is triggered by a mouse-left-button, return **true**. </returns>
-        </member>
-        <member name="M:FanKit.Transformers.CanvasOperator.PointerIsRight(Windows.UI.Xaml.UIElement,Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
-            <summary>
-            Judging the action.
-            </summary>
-            <param name="relativeTo"> Any UIElement derived objects connected to the same object tree. </param>
-            <param name="e"> Event data for events. </param>
-            <returns> If the action is triggered by a mouse-right-button, return **true**. </returns>
+        <member name="F:FanKit.Transformers.TouchMode.RightButton">
+            <summary> <see cref="F:FanKit.Transformers.InputDevice.RightButton"/>. </summary>
         </member>
         <member name="T:FanKit.Transformers.InputDevice">
             <summary>
@@ -1693,13 +1651,28 @@
         <member name="F:FanKit.Transformers.InputDevice.None">
             <summary> Normal. </summary>
         </member>
-        <member name="F:FanKit.Transformers.InputDevice.Single">
-            <summary> One-finger | Mouse-Left-Button | Pen. </summary>
+        <member name="F:FanKit.Transformers.InputDevice.Indeterminacy">
+            <summary> Indeterminacy. </summary>
         </member>
-        <member name="F:FanKit.Transformers.InputDevice.Double">
+        <member name="F:FanKit.Transformers.InputDevice.Holding">
+            <summary>Holding. </summary>
+        </member>
+        <member name="F:FanKit.Transformers.InputDevice.SingleFinger">
+            <summary> One Finger. </summary>
+        </member>
+        <member name="F:FanKit.Transformers.InputDevice.DoubleFinger">
             <summary> Two Fingers. </summary>
         </member>
-        <member name="F:FanKit.Transformers.InputDevice.Right">
+        <member name="F:FanKit.Transformers.InputDevice.Pen">
+            <summary> Pen. </summary>
+        </member>
+        <member name="F:FanKit.Transformers.InputDevice.Eraser">
+            <summary> Eraser. </summary>
+        </member>
+        <member name="F:FanKit.Transformers.InputDevice.LeftButton">
+            <summary> Mouse-Left-Button. </summary>
+        </member>
+        <member name="F:FanKit.Transformers.InputDevice.RightButton">
             <summary> Mouse-Right-Button. </summary>
         </member>
         <member name="T:FanKit.Transformers.ICacheTransform">
@@ -1709,21 +1682,21 @@
         </member>
         <member name="M:FanKit.Transformers.ICacheTransform.CacheTransform">
             <summary>
-             Cache the class's transformer.
-             Ex: _oldTransformer = Transformer.
+            Cache the class's transformer.
+            Ex: OldTransformer = Transformer.
             </summary>
         </member>
         <member name="M:FanKit.Transformers.ICacheTransform.TransformMultiplies(System.Numerics.Matrix3x2)">
             <summary>
-             Transforms the class by the given matrix.
-             Ex: Transformer.Multiplies()
+            Transforms the class by the given matrix.
+            Ex: Transformer.Multiplies()
             </summary>
             <param name="matrix"> The resulting matrix. </param>
         </member>
         <member name="M:FanKit.Transformers.ICacheTransform.TransformAdd(System.Numerics.Vector2)">
             <summary>
-             Transforms the class by the given vector.
-             Ex: Transformer.Add()
+            Transforms the class by the given vector.
+            Ex: Transformer.Add()
             </summary>
             <param name="vector"> The add value use to summed. </param>
         </member>
@@ -2349,6 +2322,20 @@
             <param name="matrix"> The matrix. </param>
             <returns></returns>
         </member>
+        <member name="M:FanKit.Transformers.Transformer.FindHomography(FanKit.Transformers.ITransformerLTRB,FanKit.Transformers.ITransformerLTRB,System.Numerics.Vector2@)">
+            <summary>
+            Find Homography.  
+            </summary>
+            <param name="source"> The source Transformer. </param>
+            <param name="destination"> The destination Transformer. </param>
+            <param name="distance">
+            <para>If the source/destination is not a parallelogram:</para>
+            <para>Vector2 point = ?</para>
+            <para>Matrix3x2 matrix = Transformer.FindHomography(source, destination, out Vector2 distance);</para>
+            <para>Vector2 position = Vector2.Transform(point, matrix) / (1 + Vector2.Dot(point, distance));</para>
+            </param>
+            <returns> The homologous matrix. </returns>
+        </member>
         <member name="M:FanKit.Transformers.Transformer.FindHomography(FanKit.Transformers.ITransformerLTRB,FanKit.Transformers.ITransformerLTRB)">
             <summary>
             Find Homography.  
@@ -2500,8 +2487,10 @@
             <summary>
             Initialize a <see cref = "T:FanKit.Transformers.TransformerBorder" />.
             </summary>
-            <param name="width"> The width. </param>
-            <param name="height"> The height. </param>
+            <param name="left"> The left. </param>
+            <param name="top"> The top. </param>
+            <param name="right"> The right. </param>
+            <param name="bottom"> The bottom. </param>
         </member>
         <member name="M:FanKit.Transformers.TransformerBorder.#ctor(System.Single,System.Single)">
             <summary>
@@ -2680,10 +2669,10 @@
             Provides a static method for converting to geometry.
             </summary>
         </member>
-        <member name="F:FanKit.Transformers.TransformerGeometry._z276">
+        <member name="F:FanKit.Transformers.TransformerGeometry.Z276">
             <summary> 0.27614f </summary>
         </member>
-        <member name="F:FanKit.Transformers.TransformerGeometry._z552">
+        <member name="F:FanKit.Transformers.TransformerGeometry.Z552">
             <summary> 0.55228f </summary>
         </member>
         <member name="F:FanKit.Transformers.TransformerGeometry.StartingRotation">
@@ -2698,7 +2687,7 @@
         </member>
         <member name="M:FanKit.Transformers.TransformerGeometry.CreateRectangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB)">
             <summary>
-             Create a new rectangle geometry.
+            Create a new rectangle geometry.
             </summary>
             <param name="resourceCreator"> The resource-creator. </param>
             <param name="transformerLTRB"> The ITransformer-LTRB. </param>
@@ -2706,7 +2695,7 @@
         </member>
         <member name="M:FanKit.Transformers.TransformerGeometry.CreateRectangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2)">
             <summary>
-             Create a new rectangle geometry.
+            Create a new rectangle geometry.
             </summary>
             <param name="resourceCreator"> The resource-creator. </param>
             <param name="transformerLTRB"> The ITransformer-LTRB. </param>
@@ -2715,7 +2704,7 @@
         </member>
         <member name="M:FanKit.Transformers.TransformerGeometry.CreateRectangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2)">
             <summary>
-             Create a new rectangle geometry.
+            Create a new rectangle geometry.
             </summary>
             <param name="resourceCreator"> The resource-creator. </param>
             <param name="leftTop"> The left-top point. </param>
@@ -2726,7 +2715,7 @@
         </member>
         <member name="M:FanKit.Transformers.TransformerGeometry.CreateRectangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Matrix3x2)">
             <summary>
-             Create a new rectangle geometry.
+            Create a new rectangle geometry.
             </summary>
             <param name="resourceCreator"> The resource-creator. </param>
             <param name="leftTop"> The left-top point. </param>
@@ -2738,7 +2727,7 @@
         </member>
         <member name="M:FanKit.Transformers.TransformerGeometry.CreateEllipse(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB)">
             <summary>
-             Create a new ellipse geometry.
+            Create a new ellipse geometry.
             </summary>
             <param name="resourceCreator"> The resource-creator. </param>
             <param name="transformerLTRB"> The ITransformer-LTRB. </param>
@@ -2746,7 +2735,7 @@
         </member>
         <member name="M:FanKit.Transformers.TransformerGeometry.CreateEllipse(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2)">
             <summary>
-             Create a new ellipse geometry.
+            Create a new ellipse geometry.
             </summary>
             <param name="resourceCreator"> The resource-creator. </param>
             <param name="transformerLTRB"> The ITransformer-LTRB. </param>
@@ -2755,7 +2744,7 @@
         </member>
         <member name="M:FanKit.Transformers.TransformerGeometry.CreateEllipse(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2)">
             <summary>
-             Create a new ellipse geometry.
+            Create a new ellipse geometry.
             </summary>
             <param name="resourceCreator"> The resource-creator. </param>
             <param name="centerLeft"> The left point. </param>
@@ -2766,7 +2755,7 @@
         </member>
         <member name="M:FanKit.Transformers.TransformerGeometry.CreateEllipse(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Matrix3x2)">
             <summary>
-             Create a new ellipse geometry.
+            Create a new ellipse geometry.
             </summary>
             <param name="resourceCreator"> The resource-creator. </param>
             <param name="centerLeft"> The left point. </param>
@@ -2778,7 +2767,7 @@
         </member>
         <member name="M:FanKit.Transformers.TransformerGeometry.CreateRoundRect(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Single)">
             <summary>
-             Create a new round rect geometry.
+            Create a new round rect geometry.
             </summary>
             <param name="resourceCreator"> The resource-creator. </param>
             <param name="transformer"> The source transformer. </param>
@@ -2787,7 +2776,7 @@
         </member>
         <member name="M:FanKit.Transformers.TransformerGeometry.CreateRoundRect(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Single)">
             <summary>
-             Create a new round rect geometry.
+            Create a new round rect geometry.
             </summary>
             <param name="resourceCreator"> The resource-creator. </param>
             <param name="transformer"> The source transformer. </param>
@@ -2797,7 +2786,7 @@
         </member>
         <member name="M:FanKit.Transformers.TransformerGeometry.CreateTriangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Single)">
             <summary>
-             Create a new triangle geometry.
+            Create a new triangle geometry.
             </summary>
             <param name="resourceCreator"> The resource-creator. </param>
             <param name="transformerLTRB"> The ITransformer-LTRB. </param>
@@ -2805,7 +2794,7 @@
         </member>
         <member name="M:FanKit.Transformers.TransformerGeometry.CreateTriangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Single)">
             <summary>
-             Create a new triangle geometry.
+            Create a new triangle geometry.
             </summary>
             <param name="resourceCreator"> The resource-creator. </param>
             <param name="transformerLTRB"> The ITransformer-LTRB. </param>
@@ -2814,7 +2803,7 @@
         </member>
         <member name="M:FanKit.Transformers.TransformerGeometry.CreateTriangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Single)">
             <summary>
-             Create a new triangle geometry.
+            Create a new triangle geometry.
             </summary>
             <param name="resourceCreator"> The resource-creator. </param>
             <param name="leftTop"> The left-top point. </param>
@@ -2825,7 +2814,7 @@
         </member>
         <member name="M:FanKit.Transformers.TransformerGeometry.CreateTriangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Matrix3x2,System.Single)">
             <summary>
-             Create a new triangle geometry.
+            Create a new triangle geometry.
             </summary>
             <param name="resourceCreator"> The resource-creator. </param>
             <param name="leftTop"> The left-top point. </param>
@@ -2838,7 +2827,7 @@
         </member>
         <member name="M:FanKit.Transformers.TransformerGeometry.CreateDiamond(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Single)">
             <summary>
-             Create a new diamond geometry.
+            Create a new diamond geometry.
             </summary>
             <param name="resourceCreator"> The resource-creator. </param>
             <param name="mid"> The mid value. </param>
@@ -2846,7 +2835,7 @@
         </member>
         <member name="M:FanKit.Transformers.TransformerGeometry.CreateDiamond(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Single)">
             <summary>
-             Create a new diamond geometry.
+            Create a new diamond geometry.
             </summary>
             <param name="resourceCreator"> The resource-creator. </param>
             <param name="transformer"> The source transformer. </param>
@@ -2855,24 +2844,26 @@
         </member>
         <member name="M:FanKit.Transformers.TransformerGeometry.CreatePentagon(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Int32)">
             <summary>
-             Create a new pentagon geometry.
-            </summary>
-            <param name="resourceCreator"> The resource-creator. </param>
-            <param name="points"> The points count. </param>
-            <returns> The product geometry. </returns>
-        </member>
-        <member name="M:FanKit.Transformers.TransformerGeometry.CreatePentagon(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Int32)">
-            <summary>
-             Create a new pentagon geometry.
+            Create a new pentagon geometry.
             </summary>
             <param name="resourceCreator"> The resource-creator. </param>
             <param name="transformer"> The source transformer. </param>
             <param name="points"> The points count. </param>
             <returns> The product geometry. </returns>
         </member>
+        <member name="M:FanKit.Transformers.TransformerGeometry.CreatePentagon(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Int32)">
+            <summary>
+            Create a new pentagon geometry.
+            </summary>
+            <param name="resourceCreator"> The resource-creator. </param>
+            <param name="transformer"> The source transformer. </param>
+            <param name="matrix"> The matrix. </param>
+            <param name="points"> The points count. </param>
+            <returns> The product geometry. </returns>
+        </member>
         <member name="M:FanKit.Transformers.TransformerGeometry.CreateStar(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Int32,System.Single)">
             <summary>
-             Create a new star geometry.
+            Create a new star geometry.
             </summary>
             <param name="resourceCreator"> The resource-creator. </param>
             <param name="points"> The point count. </param>
@@ -2881,7 +2872,7 @@
         </member>
         <member name="M:FanKit.Transformers.TransformerGeometry.CreateStar(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Int32,System.Single)">
             <summary>
-             Create a new star geometry.
+            Create a new star geometry.
             </summary>
             <param name="resourceCreator"> The resource-creator. </param>
             <param name="transformer"> The source transformer. </param>
@@ -2891,7 +2882,7 @@
         </member>
         <member name="M:FanKit.Transformers.TransformerGeometry.CreateCog(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Int32,System.Single,System.Single,System.Single)">
             <summary>
-             Create a new cog geometry.
+            Create a new cog geometry.
             </summary>
             <param name="resourceCreator"> The resource-creator. </param>
             <param name="count"> The point count. </param>
@@ -2902,7 +2893,7 @@
         </member>
         <member name="M:FanKit.Transformers.TransformerGeometry.CreateCog(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Int32,System.Single,System.Single,System.Single)">
             <summary>
-             Create a new cog geometry.
+            Create a new cog geometry.
             </summary>
             <param name="resourceCreator"> The resource-creator. </param>
             <param name="transformer"> The source transformer. </param>
@@ -2912,26 +2903,28 @@
             <param name="notch"> The notch. </param>
             <returns> The product geometry. </returns>
         </member>
-        <member name="M:FanKit.Transformers.TransformerGeometry.CreateDount(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Single)">
+        <member name="M:FanKit.Transformers.TransformerGeometry.CreateDonut(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Single)">
             <summary>
-             Create a new donut geometry.
-            </summary>
-            <param name="resourceCreator"> The resource-creator. </param>
-            <param name="holeRadius"> The hole-radius. </param>
-            <returns> The product geometry. </returns>
-        </member>
-        <member name="M:FanKit.Transformers.TransformerGeometry.CreateDount(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Single)">
-            <summary>
-             Create a new donut geometry.
+            Create a new donut geometry.
             </summary>
             <param name="resourceCreator"> The resource-creator. </param>
             <param name="transformer"> The source transformer. </param>
             <param name="holeRadius"> The hole-radius. </param>
             <returns> The product geometry. </returns>
         </member>
+        <member name="M:FanKit.Transformers.TransformerGeometry.CreateDonut(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Single)">
+            <summary>
+            Create a new donut geometry.
+            </summary>
+            <param name="resourceCreator"> The resource-creator. </param>
+            <param name="transformer"> The source transformer. </param>
+            <param name="matrix"> The matrix. </param>
+            <param name="holeRadius"> The hole-radius. </param>
+            <returns> The product geometry. </returns>
+        </member>
         <member name="M:FanKit.Transformers.TransformerGeometry.CreatePie(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Single)">
             <summary>
-             Create a new pie geometry.
+            Create a new pie geometry.
             </summary>
             <param name="resourceCreator"> The resource-creator. </param>
             <param name="sweepAngle"> The sweep-angle. </param>
@@ -2939,7 +2932,7 @@
         </member>
         <member name="M:FanKit.Transformers.TransformerGeometry.CreatePie(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Single)">
             <summary>
-             Create a new pie geometry.
+            Create a new pie geometry.
             </summary>
             <param name="resourceCreator"> The resource-creator. </param>
             <param name="transformer"> The source transformer. </param>
@@ -2948,7 +2941,7 @@
         </member>
         <member name="M:FanKit.Transformers.TransformerGeometry.CreateCookie(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Single,System.Single)">
             <summary>
-             Create a new cookie geometry.
+            Create a new cookie geometry.
             </summary>
             <param name="resourceCreator"> The resource-creator. </param>
             <param name="innerRadius"> The inner-radius. </param>
@@ -2957,7 +2950,7 @@
         </member>
         <member name="M:FanKit.Transformers.TransformerGeometry.CreateCookie(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Single,System.Single)">
             <summary>
-             Create a new cookie geometry.
+            Create a new cookie geometry.
             </summary>
             <param name="resourceCreator"> The resource-creator. </param>
             <param name="transformer"> The source transformer. </param>
@@ -2967,7 +2960,7 @@
         </member>
         <member name="M:FanKit.Transformers.TransformerGeometry.CreateArrow(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Boolean,System.Single,System.Single,FanKit.Transformers.GeometryArrowTailType,FanKit.Transformers.GeometryArrowTailType)">
             <summary>
-             Create a new arrow geometry.
+            Create a new arrow geometry.
             </summary>
             <param name="resourceCreator"> The resource - creator. </param>
             <param name="transformer"> The source transformer. </param>
@@ -2980,7 +2973,7 @@
         </member>
         <member name="M:FanKit.Transformers.TransformerGeometry.CreateArrow(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Boolean,System.Single,System.Single,FanKit.Transformers.GeometryArrowTailType,FanKit.Transformers.GeometryArrowTailType)">
             <summary>
-             Create a new arrow geometry.
+            Create a new arrow geometry.
             </summary>
             <param name="resourceCreator"> The resource - creator. </param>
             <param name="transformer"> The source transformer. </param>
@@ -2994,15 +2987,15 @@
         </member>
         <member name="M:FanKit.Transformers.TransformerGeometry.CreateCapsule(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB)">
             <summary>
-             Create a new capsule geometry.
+            Create a new capsule geometry.
             </summary>
             <param name="resourceCreator"> The resource - creator. </param>
-            <param name="transformerLTRB"> The ITransformer - LTRB. </param>
+            <param name="transformer"> The ITransformer - LTRB. </param>
             <returns> The product geometry. </returns>
         </member>
         <member name="M:FanKit.Transformers.TransformerGeometry.CreateCapsule(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2)">
             <summary>
-             Create a new capsule geometry.
+            Create a new capsule geometry.
             </summary>
             <param name="resourceCreator"> The resource - creator. </param>
             <param name="transformerLTRB"> The ITransformer - LTRB. </param>
@@ -3011,7 +3004,7 @@
         </member>
         <member name="M:FanKit.Transformers.TransformerGeometry.CreateHeart(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Single)">
             <summary>
-             Create a new heart geometry.
+            Create a new heart geometry.
             </summary>
             <param name="resourceCreator"> The resource - creator. </param>
             <param name="spread"> The spread. </param>
@@ -3019,7 +3012,7 @@
         </member>
         <member name="M:FanKit.Transformers.TransformerGeometry.CreateHeart(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Single)">
             <summary>
-             Create a new heart geometry.
+            Create a new heart geometry.
             </summary>
             <param name="resourceCreator"> The resource - creator. </param>
             <param name="transformer"> The source transformer. </param>
@@ -3277,7 +3270,7 @@
         </member>
         <member name="M:FanKit.Transformers.XML.LoadColor(System.Xml.Linq.XElement)">
             <summary>
-             Loads a <see cref="T:Windows.UI.Color"/> from an XElement.
+            Loads a <see cref="T:Windows.UI.Color"/> from an XElement.
             </summary>
             <param name="element"> The source XElement. </param>
             <returns> The loaded <see cref="T:Windows.UI.Color"/>. </returns>
@@ -3307,7 +3300,7 @@
         </member>
         <member name="M:FanKit.Transformers.XML.LoadNodeCollection(System.Xml.Linq.XElement)">
             <summary>
-             Loads a <see cref="T:FanKit.Transformers.NodeCollection"/> from an XElement.
+            Loads a <see cref="T:FanKit.Transformers.NodeCollection"/> from an XElement.
             </summary>
             <param name="element"> The source XElement. </param>
             <returns> The loaded <see cref="T:FanKit.Transformers.NodeCollection"/>. </returns>
