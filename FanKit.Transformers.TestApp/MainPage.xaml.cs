@@ -91,7 +91,7 @@ namespace FanKit.Transformers.TestApp
 
 
 
-        private void CanvasOperator_Single_Start(Vector2 point, PointerPointProperties properties)
+        private void CanvasOperator_Single_Start(Vector2 point, InputDevice device, PointerPointProperties properties)
         {
             Transformer transformer = this.Layer.TransformerMatrix.Destination;
 
@@ -103,7 +103,7 @@ namespace FanKit.Transformers.TestApp
 
             this.CanvasControl.Invalidate();
         }
-        private void CanvasOperator_Single_Delta(Vector2 point, PointerPointProperties properties)
+        private void CanvasOperator_Single_Delta(Vector2 point, InputDevice device, PointerPointProperties properties)
         {
             bool isRatio = this.RatioButton.IsOn;
             bool isCenter = this.CenterButton.IsOn;
@@ -127,7 +127,7 @@ namespace FanKit.Transformers.TestApp
 
             this.CanvasControl.Invalidate();
         }
-        private void CanvasOperator_Single_Complete(Vector2 point, PointerPointProperties properties)
+        private void CanvasOperator_Single_Complete(Vector2 point, InputDevice device, PointerPointProperties properties)
         {
             this.CanvasControl.Invalidate();
         }

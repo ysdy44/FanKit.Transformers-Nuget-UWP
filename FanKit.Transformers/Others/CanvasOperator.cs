@@ -1,27 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Numerics;
+﻿using System.Numerics;
 using Windows.Devices.Input;
-using Windows.UI.Xaml;
 using Windows.UI.Input;
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Input;
 
 namespace FanKit.Transformers
 {
     //@Delegate
     /// <summary>
-    /// Method that represents the handling of the Single_Start, Single_Delta, Single_Complete event.
+    /// Method that represents the handling of the <see cref="CanvasOperator.Single_Start"/>, <see cref="CanvasOperator.Single_Delta"/>, <see cref="CanvasOperator.Single_Complete"/> event.
     /// </summary>
     /// <param name="point"> The position of the touch point. </param>
+    /// <param name="device"> The current input device. </param>
     /// <param name="properties"> The properties of the touch point. </param>
-    public delegate void SingleHandler(Vector2 point, PointerPointProperties properties);
+    public delegate void SingleHandler(Vector2 point, InputDevice device, PointerPointProperties properties);
     /// <summary>
-    /// Method that represents the handling of the Right_Start, Right_Delta, Right_Complete event.
+    /// Method that represents the handling of the <see cref="CanvasOperator.Right_Start"/>, <see cref="CanvasOperator.Right_Delta"/>, <see cref="CanvasOperator.Right_Complete"/> event.
+    /// </summary>
     /// <param name="point"> The position of the mouse point. </param>
-    /// </summary>>
-    public delegate void RightHandler(Vector2 point);
+    /// <param name="isHolding"> <see cref="UIElement.Holding"/>. </param>
+    public delegate void RightHandler(Vector2 point, bool isHolding);
     /// <summary>
-    /// Method that represents the handling of the Double_Start, Double_Delta, Double_Complete event.
+    /// Method that represents the handling of the <see cref="CanvasOperator.Double_Start"/>, <see cref="CanvasOperator.Double_Delta"/>, <see cref="CanvasOperator.Double_Complete"/> event.
     /// </summary>
     /// <param name="center"> The center of the two finger. </param>
     /// <param name="space"> The space between two fingers. </param>
@@ -179,14 +179,14 @@ namespace FanKit.Transformers
                         {
                             this.Device = InputDevice.Eraser;
                             this.DestinationControl.CapturePointer(e.Pointer);
-                            this.Single_Start?.Invoke(point, pointerPoint.Properties); // Delegate
+                            this.Single_Start?.Invoke(point, InputDevice.Eraser, pointerPoint.Properties); // Delegate
                             return;
                         }
                         else
                         {
                             this.Device = InputDevice.Pen;
                             this.DestinationControl.CapturePointer(e.Pointer);
-                            this.Single_Start?.Invoke(point, pointerPoint.Properties); // Delegate
+                            this.Single_Start?.Invoke(point, InputDevice.Pen, pointerPoint.Properties); // Delegate
                             return;
                         }
                     }
@@ -207,14 +207,14 @@ namespace FanKit.Transformers
                         {
                             this.Device = InputDevice.RightButton;
                             this.DestinationControl.CapturePointer(e.Pointer);
-                            this.Right_Start?.Invoke(point); // Delegate
+                            this.Right_Start?.Invoke(point, false); // Delegate
                             return;
                         }
                         else
                         {
                             this.Device = InputDevice.LeftButton;
                             this.DestinationControl.CapturePointer(e.Pointer);
-                            this.Single_Start?.Invoke(point, pointerPoint.Properties); // Delegate
+                            this.Single_Start?.Invoke(point, InputDevice.LeftButton, pointerPoint.Properties); // Delegate
                             return;
                         }
                     }
@@ -244,25 +244,25 @@ namespace FanKit.Transformers
             switch (this.Device)
             {
                 case InputDevice.Holding:
-                    this.Right_Complete?.Invoke(point); // Delegate
+                    this.Right_Complete?.Invoke(point, true); // Delegate
                     break;
                 case InputDevice.SingleFinger:
-                    this.Single_Complete?.Invoke(point, pointerPoint.Properties); // Delegate
+                    this.Single_Complete?.Invoke(point, InputDevice.SingleFinger, pointerPoint.Properties); // Delegate
                     break;
                 case InputDevice.DoubleFinger:
                     this.Double_Complete?.Invoke((this.OddPoint + this.EvenPoint) / 2, Vector2.Distance(this.OddPoint, this.EvenPoint)); // Delegate
                     break;
                 case InputDevice.Pen:
-                    this.Single_Complete?.Invoke(point, pointerPoint.Properties); // Delegate
+                    this.Single_Complete?.Invoke(point, InputDevice.Pen, pointerPoint.Properties); // Delegate
                     break;
                 case InputDevice.Eraser:
-                    this.Single_Complete?.Invoke(point, pointerPoint.Properties); // Delegate
+                    this.Single_Complete?.Invoke(point, InputDevice.Eraser, pointerPoint.Properties); // Delegate
                     break;
                 case InputDevice.LeftButton:
-                    this.Single_Complete?.Invoke(point, pointerPoint.Properties); // Delegate
+                    this.Single_Complete?.Invoke(point, InputDevice.LeftButton, pointerPoint.Properties); // Delegate
                     break;
                 case InputDevice.RightButton:
-                    this.Right_Complete?.Invoke(point); // Delegate
+                    this.Right_Complete?.Invoke(point, false); // Delegate
                     break;
                 default:
                     break;
@@ -294,12 +294,12 @@ namespace FanKit.Transformers
                                             case TouchMode.SingleFinger:
                                                 this.Device = InputDevice.SingleFinger;
                                                 this.DestinationControl.CapturePointer(e.Pointer);
-                                                this.Single_Start?.Invoke(this.StartingEvenPoint, pointerPoint.Properties); // Delegate
+                                                this.Single_Start?.Invoke(this.StartingEvenPoint, InputDevice.SingleFinger, pointerPoint.Properties); // Delegate
                                                 break;
                                             case TouchMode.RightButton:
                                                 this.Device = InputDevice.RightButton;
                                                 this.DestinationControl.CapturePointer(e.Pointer);
-                                                this.Right_Start?.Invoke(this.StartingEvenPoint); // Delegate
+                                                this.Right_Start?.Invoke(this.StartingEvenPoint, false); // Delegate
                                                 break;
                                             default:
                                                 this.Device = InputDevice.None;
@@ -314,7 +314,7 @@ namespace FanKit.Transformers
                                 PointerPoint pointerPoint = e.GetCurrentPoint(this.DestinationControl);
                                 Vector2 point = pointerPoint.Position.ToVector2();
 
-                                this.Right_Delta?.Invoke(point); // Delegate
+                                this.Right_Delta?.Invoke(point, true); // Delegate
                                 return;
                             }
                         case InputDevice.SingleFinger:
@@ -326,7 +326,7 @@ namespace FanKit.Transformers
                                     this.EvenPoint = pointerPoint.Position.ToVector2();
                                 }
 
-                                this.Single_Delta?.Invoke(this.EvenPoint, pointerPoint.Properties); // Delegate
+                                this.Single_Delta?.Invoke(this.EvenPoint, InputDevice.SingleFinger, pointerPoint.Properties); // Delegate
                                 return;
                             }
                         case InputDevice.DoubleFinger:
@@ -352,7 +352,7 @@ namespace FanKit.Transformers
                                     PointerPoint pointerPoint = e.GetCurrentPoint(this.DestinationControl);
                                     Vector2 point = pointerPoint.Position.ToVector2();
 
-                                    this.Right_Delta?.Invoke(point); // Delegate
+                                    this.Right_Delta?.Invoke(point, false); // Delegate
                                     break;
                                 default:
                                     break;
@@ -372,7 +372,7 @@ namespace FanKit.Transformers
                                     PointerPoint pointerPoint = e.GetCurrentPoint(this.DestinationControl);
                                     Vector2 point = pointerPoint.Position.ToVector2();
 
-                                    this.Single_Delta?.Invoke(point, pointerPoint.Properties); // Delegate
+                                    this.Single_Delta?.Invoke(point, InputDevice.Pen, pointerPoint.Properties); // Delegate
                                 }
                             }
                             return;
@@ -384,7 +384,7 @@ namespace FanKit.Transformers
                                     PointerPoint pointerPoint = e.GetCurrentPoint(this.DestinationControl);
                                     Vector2 point = pointerPoint.Position.ToVector2();
 
-                                    this.Single_Delta?.Invoke(point, pointerPoint.Properties); // Delegate
+                                    this.Single_Delta?.Invoke(point, InputDevice.Eraser, pointerPoint.Properties); // Delegate
                                 }
                             }
                             return;
@@ -402,7 +402,7 @@ namespace FanKit.Transformers
                                     PointerPoint pointerPoint = e.GetCurrentPoint(this.DestinationControl);
                                     Vector2 point = pointerPoint.Position.ToVector2();
 
-                                    this.Single_Delta?.Invoke(point, pointerPoint.Properties); // Delegate
+                                    this.Single_Delta?.Invoke(point, InputDevice.LeftButton, pointerPoint.Properties); // Delegate
                                 }
                             }
                             return;
@@ -414,7 +414,7 @@ namespace FanKit.Transformers
                                     PointerPoint pointerPoint = e.GetCurrentPoint(this.DestinationControl);
                                     Vector2 point = pointerPoint.Position.ToVector2();
 
-                                    this.Right_Delta?.Invoke(point); // Delegate
+                                    this.Right_Delta?.Invoke(point, false); // Delegate
                                 }
                             }
                             return;
@@ -445,7 +445,7 @@ namespace FanKit.Transformers
             if (this.Device is InputDevice.Indeterminacy)
             {
                 this.Device = InputDevice.Holding;
-                this.Right_Start?.Invoke(this.StartingEvenPoint); // Delegate
+                this.Right_Start?.Invoke(this.StartingEvenPoint, true); // Delegate
             }
         }
 
