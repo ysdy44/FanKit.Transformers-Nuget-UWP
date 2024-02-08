@@ -83,7 +83,7 @@ namespace FanKit.Transformers
                 return TransformerGeometry.CreateEllipse(resourceCreator, transformer);
             else
             {
-                Matrix3x2 oneMatrix = Transformer.FindHomography(Transformer.One, transformer);
+                Matrix3x2 oneMatrix = Transformer.FindHomographyFromIdentity(transformer);
 
                 return TransformerGeometry.CreatePieCore(resourceCreator, oneMatrix, sweepAngle);
             }
@@ -104,7 +104,7 @@ namespace FanKit.Transformers
                 return TransformerGeometry.CreateEllipse(resourceCreator, transformer, matrix);
             else
             {
-                Matrix3x2 oneMatrix = Transformer.FindHomography(Transformer.One, transformer);
+                Matrix3x2 oneMatrix = Transformer.FindHomographyFromIdentity(transformer);
                 Matrix3x2 oneMatrix2 = oneMatrix * matrix;
 
                 return TransformerGeometry.CreatePieCore(resourceCreator, oneMatrix2, sweepAngle);
@@ -168,7 +168,7 @@ namespace FanKit.Transformers
             }
             else
             {
-                Matrix3x2 oneMatrix = Transformer.FindHomography(Transformer.One, transformer);
+                Matrix3x2 oneMatrix = Transformer.FindHomographyFromIdentity(transformer);
 
                 if (zeroInnerRadius)
                     return TransformerGeometry.CreatePieCore(resourceCreator, oneMatrix, sweepAngle);
@@ -205,7 +205,7 @@ namespace FanKit.Transformers
             }
             else
             {
-                Matrix3x2 oneMatrix = Transformer.FindHomography(Transformer.One, transformer);
+                Matrix3x2 oneMatrix = Transformer.FindHomographyFromIdentity(transformer);
                 Matrix3x2 oneMatrix2 = oneMatrix * matrix;
 
                 if (zeroInnerRadius)

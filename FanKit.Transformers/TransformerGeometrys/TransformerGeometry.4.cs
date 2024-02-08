@@ -407,7 +407,7 @@ namespace FanKit.Transformers
         /// <returns> The product geometry. </returns>
         public static CanvasGeometry CreateHeart(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformer, float spread)
         {
-            Matrix3x2 oneMatrix = Transformer.FindHomography(Transformer.One, transformer);
+            Matrix3x2 oneMatrix = Transformer.FindHomographyFromIdentity(transformer);
 
             return TransformerGeometry.CreateHeartCore(resourceCreator, spread, oneMatrix);
         }
@@ -421,7 +421,7 @@ namespace FanKit.Transformers
         /// <returns> The product geometry. </returns>
         public static CanvasGeometry CreateHeart(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformer, Matrix3x2 matrix, float spread)
         {
-            Matrix3x2 oneMatrix = Transformer.FindHomography(Transformer.One, transformer);
+            Matrix3x2 oneMatrix = Transformer.FindHomographyFromIdentity(transformer);
             Matrix3x2 oneMatrix2 = oneMatrix * matrix;
 
             return TransformerGeometry.CreateHeartCore(resourceCreator, spread, oneMatrix2);

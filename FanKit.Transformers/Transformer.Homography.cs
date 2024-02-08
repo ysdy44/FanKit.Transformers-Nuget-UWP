@@ -5,6 +5,25 @@ namespace FanKit.Transformers
     partial struct Transformer
     {
 
+        internal static Matrix3x2 FindHomographyFromIdentity(ITransformerLTRB destination) => new Matrix3x2(
+                destination.RightTop.X - destination.LeftTop.X, // ScaleX
+                destination.RightTop.Y - destination.LeftTop.Y, // SkewY
+                destination.LeftBottom.X - destination.LeftTop.X, // SkewX
+                destination.LeftBottom.Y - destination.LeftTop.Y, // ScaleY 
+                destination.LeftTop.X, // TransX
+                destination.LeftTop.Y); // TransY
+
+        internal static Matrix3x2 FindHomographyFromIdentity(float x, float y, float width, float height) => new Matrix3x2(
+                width, // ScaleX
+                0, // SkewY
+                0, // SkewX
+                height, // ScaleY 
+                x, // TransX
+                y); // TransY
+
+        internal static Matrix3x2 FindHomography(float sourceWidth, float sourceHeight, ITransformerLTRB destination) =>
+            Matrix3x2.CreateScale(1f / sourceWidth, 1f / sourceHeight) * FindHomographyFromIdentity(destination);
+
         /// <summary>
         /// Find Homography.  
         /// </summary>
