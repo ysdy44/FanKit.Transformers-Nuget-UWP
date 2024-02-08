@@ -2,7 +2,7 @@
 
 namespace FanKit.Transformers
 {
-    public partial class Node : ICacheTransform
+    partial class Node
     {
 
         /// <summary>

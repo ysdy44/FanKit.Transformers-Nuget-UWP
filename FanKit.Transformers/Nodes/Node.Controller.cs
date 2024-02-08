@@ -43,7 +43,7 @@ namespace FanKit.Transformers
         Fixed,
     }
 
-    public partial class Node : ICacheTransform
+    partial class Node
     {
 
         //@Static

@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace FanKit.Transformers
 {
-    public sealed partial class NodeCollection : ICanvasPathReceiver, ICacheTransform, IList<Node>, IEnumerable<Node>
+    partial class NodeCollection
     {
         public Node this[int index]
         {

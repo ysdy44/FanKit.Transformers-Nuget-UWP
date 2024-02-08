@@ -4,7 +4,7 @@ using System.Numerics;
 
 namespace FanKit.Transformers
 {
-    public sealed partial class NodeCollection : ICanvasPathReceiver, ICacheTransform, IList<Node>, IEnumerable<Node>
+    partial class NodeCollection
     {
 
         /// <summary>
