@@ -5,7 +5,7 @@ using Windows.Foundation;
 
 namespace FanKit.Transformers
 {
-    public static partial class CanvasDrawingSessionExtensions
+    partial class CanvasDrawingSessionExtensions
     {
 
         // Card

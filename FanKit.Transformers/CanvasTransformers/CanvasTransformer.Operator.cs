@@ -2,7 +2,7 @@
 
 namespace FanKit.Transformers
 {
-    public partial class CanvasTransformer
+    partial class CanvasTransformer
     {
 
         // Move

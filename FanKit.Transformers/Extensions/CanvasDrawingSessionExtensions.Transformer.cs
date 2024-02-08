@@ -3,7 +3,7 @@ using System.Numerics;
 
 namespace FanKit.Transformers
 {
-    public static partial class CanvasDrawingSessionExtensions
+    partial class CanvasDrawingSessionExtensions
     {
 
         #region DrawBound

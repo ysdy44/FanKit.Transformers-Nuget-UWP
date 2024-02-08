@@ -3,7 +3,7 @@ using Windows.Foundation;
 
 namespace FanKit.Transformers
 {
-    public partial class CanvasTransformer
+    partial class CanvasTransformer
     {
         
         Vector2 SourcePosition = new Vector2(100, 100);

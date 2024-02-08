@@ -5,7 +5,7 @@ using System.Numerics;
 
 namespace FanKit.Transformers
 {
-    public static partial class CanvasDrawingSessionExtensions
+    partial class CanvasDrawingSessionExtensions
     {
         // Text
         /// <summary> The color of the text. Default (A255 R127 G127 B127).</summary>
