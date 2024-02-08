@@ -2966,17 +2966,17 @@
       <param name="notch">缺口。 </param>
       <returns>产出的的几何形状。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.TransformerGeometry.CreateDount(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Single)">
+    <member name="M:FanKit.Transformers.TransformerGeometry.CreateDonut(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Single)">
       <summary>
-        创建一个新的donut几何。
+        创建一个新的甜甜圈几何。
       </summary>
       <param name="resourceCreator">资源创建者。 </param>
       <param name="holeRadius">孔半径。 </param>
       <returns>产出的的几何形状。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.TransformerGeometry.CreateDount(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Single)">
+    <member name="M:FanKit.Transformers.TransformerGeometry.CreateDonut(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Single)">
       <summary>
-        创建一个新的donut几何。
+        创建一个新的甜甜圈几何。
       </summary>
       <param name="resourceCreator">资源创建者。 </param>
       <param name="transformer">源变换者。 </param>
@@ -3002,7 +3002,7 @@
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateCookie(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Single,System.Single)">
       <summary>
-        创建一个新的cookie几何。
+        创建一个新的曲奇饼几何。
       </summary>
       <param name="resourceCreator">资源创建者。 </param>
       <param name="innerRadius">内部半径。 </param>
@@ -3011,7 +3011,7 @@
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateCookie(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Single,System.Single)">
       <summary>
-        创建一个新的cookie几何。
+        创建一个新的曲奇饼几何。
       </summary>
       <param name="resourceCreator">资源创建者。 </param>
       <param name="transformer">源变换者。 </param>
