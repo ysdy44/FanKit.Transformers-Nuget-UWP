@@ -4,7 +4,7 @@ using System.Numerics;
 
 namespace FanKit.Transformers
 {
-    public static partial class TransformerGeometry
+    partial class TransformerGeometry
     {
 
         #region Donut

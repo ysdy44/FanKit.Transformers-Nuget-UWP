@@ -2,7 +2,7 @@
 
 namespace FanKit.Transformers
 {
-    public partial struct TransformerBorder : ITransformerLTRB
+    partial struct TransformerBorder
     {
 
         /// <summary> Gets border's left. </summary>
@@ -38,7 +38,7 @@ namespace FanKit.Transformers
         public Vector2 RightBottom => new Vector2(this.Right, this.Bottom);
         /// <summary> Gets border's left-bottom point. </summary>
         public Vector2 LeftBottom => new Vector2(this.Left, this.Bottom);
-        
+
         /// <summary> Gets horizontal vector. </summary>
         public Vector2 Horizontal => this.CenterRight - this.CenterLeft;
         /// <summary> Gets vertical vector. </summary>
@@ -49,7 +49,7 @@ namespace FanKit.Transformers
         /// Turn to transformer.
         /// </summary>
         public Transformer ToTransformer() => new Transformer(this.Left, this.Top, this.Right, this.Bottom);
-               
+
 
         /// <summary>
         /// Gets value by left, right, top, bottom.

@@ -18,7 +18,7 @@ namespace FanKit.Transformers
         // Round,
     }
 
-    public static partial class TransformerGeometry
+    partial class TransformerGeometry
     {
 
         #region Arrow

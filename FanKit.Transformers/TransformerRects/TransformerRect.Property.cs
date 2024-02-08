@@ -2,7 +2,7 @@
 
 namespace FanKit.Transformers
 {
-    public partial struct TransformerRect : ITransformerLTRB, ITransformerGeometry
+    partial struct TransformerRect
     {
 
         /// <summary> Gets rectangle's left. </summary>
