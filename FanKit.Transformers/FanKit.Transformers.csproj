@@ -144,6 +144,9 @@
     <Compile Include="Nodes\Node.Contained.cs" />
     <Compile Include="Nodes\Node.Mode.cs" />
     <Compile Include="Nodes\Node.Controller.cs" />
+    <Compile Include="Numerics\Matrix.cs" />
+    <Compile Include="Numerics\Precision.cs" />
+    <Compile Include="Numerics\UserSvd.cs" />
     <Compile Include="Others\MarqueeTool.cs" />
     <Compile Include="Nodes\Node.cs" />
     <Compile Include="Others\CanvasOperator.cs" />
