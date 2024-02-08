@@ -4,7 +4,7 @@ using System.Xml.Linq;
 
 namespace FanKit.Transformers
 {
-    public static partial class XML
+    partial class XML
     {
 
         /// <summary>
