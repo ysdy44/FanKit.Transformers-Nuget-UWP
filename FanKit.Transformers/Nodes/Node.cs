@@ -13,7 +13,7 @@ namespace FanKit.Transformers
         /// <summary> Gets or sets the figure fill. </summary>
         public CanvasFigureFill FigureFill { get; set; }
         /// <summary> Gets or sets the figure loop. </summary>
-        public CanvasFigureLoop FigureLoop { get;  set; }
+        public CanvasFigureLoop FigureLoop { get; set; }
 
 
         /// <summary> Point. </summary>

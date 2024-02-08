@@ -29,7 +29,7 @@ namespace FanKit.Transformers
         /// <returns> The loaded <see cref="Vector2"/>. </returns>
         public static Vector2 LoadVector2(XElement element)
         {
-            Vector2 vector=new Vector2();
+            Vector2 vector = new Vector2();
 
             if (element.Attribute("X") is XAttribute x) vector.X = (float)x;
             if (element.Attribute("Y") is XAttribute y) vector.Y = (float)y;

@@ -5,7 +5,7 @@ namespace FanKit.Transformers
     /// <summary>
     /// A structure encapsulating two transformer values  (Source and Destination). 
     /// </summary>
-    public struct TransformerMatrix: ICacheTransform
+    public struct TransformerMatrix : ICacheTransform
     {
         /// <summary> The source Transformer. </summary>
         public Transformer Source;
@@ -13,7 +13,7 @@ namespace FanKit.Transformers
         /// <summary> The destination Transformer. </summary>
         public Transformer Destination;
         private Transformer startingDestination;
-        
+
         /// <summary> Is disable rotate radian? Default **false**. </summary>
         public bool DisabledRadian;
 
@@ -61,7 +61,7 @@ namespace FanKit.Transformers
         /// <param name="postion"> The postion. </param>
         public TransformerMatrix(float width, float height, Vector2 postion)
         {
-            Transformer transformer = new Transformer(width, height,postion);
+            Transformer transformer = new Transformer(width, height, postion);
 
             //Source
             this.Source = transformer;

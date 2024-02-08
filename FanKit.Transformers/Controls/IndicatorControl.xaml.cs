@@ -1,5 +1,4 @@
-﻿using System;
-using System.Numerics;
+﻿using System.Numerics;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Animation;
@@ -65,7 +64,7 @@ namespace FanKit.Transformers
         }
 
 
-        private void SetMode(IndicatorMode value,IndicatorMode startingValue)
+        private void SetMode(IndicatorMode value, IndicatorMode startingValue)
         {
             switch (startingValue)
             {

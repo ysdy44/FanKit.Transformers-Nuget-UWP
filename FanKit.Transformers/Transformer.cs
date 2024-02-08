@@ -12,7 +12,7 @@ namespace FanKit.Transformers
         /// <summary>
         /// Returns the transformer (-1,-1) (1,-1) (1,1) (-1,1).
         /// </summary>
-        public static readonly Transformer One =new Transformer
+        public static readonly Transformer One = new Transformer
         {
             LeftTop = new Vector2(-1f, -1f),
             RightTop = new Vector2(1f, -1f),

@@ -1,6 +1,4 @@
-﻿using Microsoft.Graphics.Canvas.Geometry;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
 
@@ -8,7 +6,7 @@ namespace FanKit.Transformers
 {
     partial class NodeCollection
     {
-        
+
         /// <summary>
         /// Insert a new point between checked points
         /// </summary>
@@ -20,7 +18,7 @@ namespace FanKit.Transformers
             IList<int> list = new List<int>();
 
             // Find adjacent two selected nodes.
-            for (int i = 0; i < nodeCollection.Count-1; i++)
+            for (int i = 0; i < nodeCollection.Count - 1; i++)
             {
                 Node node = nodeCollection[i];
                 if (node.IsChecked)
@@ -42,11 +40,11 @@ namespace FanKit.Transformers
             }
 
             if (list.Count == 0) return false;
-            
+
             // Interpolation
             for (int i = 0; i < list.Count; i++)
             {
-                int index = list[i] + i;               
+                int index = list[i] + i;
                 Vector2 point = (nodeCollection[index - 1].Point + nodeCollection[index].Point) / 2;
 
                 Node node = new Node
