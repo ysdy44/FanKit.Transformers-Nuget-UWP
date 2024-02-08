@@ -2,7 +2,7 @@
 
 namespace FanKit.Transformers
 {
-    public partial struct Transformer : ITransformerLTRB, ITransformerGeometry
+    partial struct Transformer
     {
         /// <summary>
         /// Returns whether the area filled by the transformer contains the specified point.

@@ -2,7 +2,7 @@
 
 namespace FanKit.Transformers
 {
-    public partial struct Transformer : ITransformerLTRB, ITransformerGeometry
+    partial struct Transformer
     {
 
         private static TransformerMode ContainsNodeMode(Vector2 point, Vector2 leftTop, Vector2 rightTop, Vector2 rightBottom, Vector2 leftBottom, bool disabledRadian)

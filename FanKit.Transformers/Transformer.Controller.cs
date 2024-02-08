@@ -3,7 +3,7 @@ using System.Numerics;
 
 namespace FanKit.Transformers
 {
-    public partial struct Transformer : ITransformerLTRB, ITransformerGeometry
+    partial struct Transformer
     {
         /// <summary>
         /// It controls the transformation of transformer.

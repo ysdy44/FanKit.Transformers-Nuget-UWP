@@ -2,7 +2,7 @@
 
 namespace FanKit.Transformers
 {
-    public partial struct Transformer : ITransformerLTRB, ITransformerGeometry
+    partial struct Transformer
     {
         /// <summary> Vector in LeftTop. </summary>
         public Vector2 LeftTop { get; set; }
