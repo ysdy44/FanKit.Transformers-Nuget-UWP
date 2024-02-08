@@ -140,10 +140,6 @@
       <Project>{a98a4671-07f5-46c7-bad2-9fa0242d2855}</Project>
       <Name>FanKit.Transformers</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Numerics\Numerics.csproj">
-      <Project>{3839cf31-b693-412c-b9aa-0e5b58f3f4a9}</Project>
-      <Name>Numerics</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

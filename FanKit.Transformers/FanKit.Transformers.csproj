@@ -226,12 +226,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Numerics\Numerics.csproj">
-      <Project>{3839cf31-b693-412c-b9aa-0e5b58f3f4a9}</Project>
-      <Name>Numerics</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Extensions\CanvasDrawingSessionExtensions.Transformer.cs" />
   </ItemGroup>
   <ItemGroup>
