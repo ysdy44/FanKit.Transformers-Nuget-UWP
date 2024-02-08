@@ -151,7 +151,7 @@ namespace FanKit.Transformers
         public static Matrix3x2 FindHomography(ITransformerLTRB source, ITransformerLTRB destination)
         {
             Matrix3x2 m = FindHomographyFromIdentity(source);
-            return Matrix3x2.Invert(m, out m) ? FindHomographyFromIdentity(destination) * m : FindHomographyFromIdentity(destination);
+            return Matrix3x2.Invert(m, out m) ? m*FindHomographyFromIdentity(destination)  : FindHomographyFromIdentity(destination);
         }
     }
 }
