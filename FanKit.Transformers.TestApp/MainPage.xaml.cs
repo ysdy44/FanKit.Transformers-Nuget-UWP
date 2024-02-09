@@ -37,12 +37,20 @@ namespace FanKit.Transformers.TestApp
         }
         private async Task CreateResourcesAsync(CanvasControl sender)
         {
-            //Bitmap
             CanvasBitmap bitmap = await CanvasBitmap.LoadAsync(sender, "Icon/Avatar.jpg");
             Transformer transformer = new Transformer(new TransformerRect(bitmap.SizeInPixels.Width, bitmap.SizeInPixels.Height, new Vector2()));
-            TransformerMatrix transformerMatrix = new TransformerMatrix(transformer);
+            this.Layer = new Layer
+            {
+                Image = bitmap,
+                TransformerMatrix = new TransformerMatrix(transformer)
+                {
+                    Destination = this.AlignCenter(bitmap)
+                }
+            };
+        }
 
-
+        private Transformer AlignCenter(CanvasBitmap bitmap)
+        {
             //Transformer
             Vector2 center = new Vector2((float)this.ActualWidth, (float)this.ActualHeight) / 2;
             float width = center.X;
@@ -58,35 +66,28 @@ namespace FanKit.Transformers.TestApp
             float bitmapWidthOver2 = 1.0f / 2.0f * bitmapWidth;
             float bitmapHeightOver2 = 1.0f / 2.0f * bitmapHeight;
 
-            Transformer destination = new Transformer
+            return new Transformer
             {
                 LeftTop = center + new Vector2(-bitmapWidthOver2, -bitmapHeightOver2),
                 RightTop = center + new Vector2(+bitmapWidthOver2, -bitmapHeightOver2),
                 RightBottom = center + new Vector2(+bitmapWidthOver2, +bitmapHeightOver2),
                 LeftBottom = center + new Vector2(-bitmapWidthOver2, +bitmapHeightOver2),
             };
-            transformerMatrix.Destination = destination;
-
-
-            //Layer
-            Layer layer = new Layer
-            {
-                TransformerMatrix = transformerMatrix,
-                Image = bitmap,
-            };
-            this.Layer = layer;
         }
+
 
         private void CanvasControl_Draw(CanvasControl sender, CanvasDrawEventArgs args)
         {
-            Transformer transformer = this.Layer.TransformerMatrix.Destination;
-
-            args.DrawingSession.DrawImage(new Transform2DEffect
             {
-                Source = this.Layer.Image,
-                TransformMatrix = this.Layer.TransformerMatrix.GetMatrix(),
-            });
-            args.DrawingSession.DrawBoundNodes(transformer);
+                Transformer transformer = this.Layer.TransformerMatrix.Destination;
+
+                args.DrawingSession.DrawImage(new Transform2DEffect
+                {
+                    Source = this.Layer.Image,
+                    TransformMatrix = this.Layer.TransformerMatrix.GetMatrix(),
+                });
+                args.DrawingSession.DrawBoundNodes(transformer);
+            }
         }
 
 
@@ -105,18 +106,23 @@ namespace FanKit.Transformers.TestApp
         }
         private void CanvasOperator_Single_Delta(Vector2 point, InputDevice device, PointerPointProperties properties)
         {
-            bool isRatio = this.RatioButton.IsOn;
-            bool isCenter = this.CenterButton.IsOn;
+            this._startingPoint = point;
 
             //Single layer.
             if (true)
             {
+                bool isRatio = this.RatioButton.IsOn;
+                bool isCenter = this.CenterButton.IsOn;
+
                 Transformer transformer = Transformer.Controller(this.TransformerMode, this._startingPoint, point, this._oldTransformer, isRatio, isCenter);
                 this.Layer.TransformerMatrix.Destination = transformer;
             }
             //Multiple layer.
             else
             {
+                bool isRatio = this.RatioButton.IsOn;
+                bool isCenter = this.CenterButton.IsOn;
+
                 Transformer transformer = Transformer.Controller(this.TransformerMode, this._startingPoint, point, this._oldTransformer, isRatio, isCenter);
                 Matrix3x2 matrix = Transformer.FindHomography(this._oldTransformer, transformer);
 
