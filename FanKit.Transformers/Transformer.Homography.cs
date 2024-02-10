@@ -5,13 +5,15 @@ namespace FanKit.Transformers
     partial struct Transformer
     {
 
-        internal static Matrix3x2 FindHomographyFromIdentity(ITransformerLTRB destination) => new Matrix3x2(
-                destination.RightTop.X - destination.LeftTop.X, // ScaleX
-                destination.RightTop.Y - destination.LeftTop.Y, // SkewY
-                destination.LeftBottom.X - destination.LeftTop.X, // SkewX
-                destination.LeftBottom.Y - destination.LeftTop.Y, // ScaleY 
-                destination.LeftTop.X, // TransX
-                destination.LeftTop.Y); // TransY
+        internal static Matrix3x2 FindHomographyFromIdentity(ITransformerLTRB transformer) => new Matrix3x2
+        {
+            M11 = transformer.RightTop.X - transformer.LeftTop.X,
+            M12 = transformer.RightTop.Y - transformer.LeftTop.Y,
+            M21 = transformer.LeftBottom.X - transformer.LeftTop.X,
+            M22 = transformer.LeftBottom.Y - transformer.LeftTop.Y,
+            M31 = transformer.LeftTop.X,
+            M32 = transformer.LeftTop.Y,
+        };
 
         internal static Matrix3x2 FindHomographyFromIdentity(float x, float y, float width, float height) => new Matrix3x2(
                 width, // ScaleX
@@ -151,7 +153,7 @@ namespace FanKit.Transformers
         public static Matrix3x2 FindHomography(ITransformerLTRB source, ITransformerLTRB destination)
         {
             Matrix3x2 m = FindHomographyFromIdentity(source);
-            return Matrix3x2.Invert(m, out m) ? m*FindHomographyFromIdentity(destination)  : FindHomographyFromIdentity(destination);
+            return Matrix3x2.Invert(m, out m) ? m * FindHomographyFromIdentity(destination) : FindHomographyFromIdentity(destination);
         }
     }
 }
