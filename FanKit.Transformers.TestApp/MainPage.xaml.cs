@@ -10,10 +10,45 @@ using Windows.UI.Xaml.Controls;
 
 namespace FanKit.Transformers.TestApp
 {
-    public class Layer
+    public class Layer : ICacheTransform
     {
         public CanvasBitmap Image;
-        public TransformerMatrix TransformerMatrix;
+        public TransformerRect Source;
+        public Transformer Destination;
+        public Transformer StartingDestination;
+
+        public void Resize(float windowWidth, float windowHeight)
+        {
+            CanvasBitmap bitmap = this.Image;
+            float width = bitmap.SizeInPixels.Width;
+            float height = bitmap.SizeInPixels.Height;
+
+            Vector2 center = new Vector2(windowWidth, windowHeight) / 2;
+            float widthScale = center.X / width;
+            float heightScale = center.Y / height;
+            float scale = System.Math.Min(widthScale, heightScale);
+
+            float bitmapWidth = scale * width;
+            float bitmapHeight = scale * height;
+
+            float bitmapWidthOver2 = 1.0f / 2.0f * bitmapWidth;
+            float bitmapHeightOver2 = 1.0f / 2.0f * bitmapHeight;
+
+            this.Source = new TransformerRect(width, height, Vector2.Zero);
+            this.StartingDestination = this.Destination = new Transformer
+            {
+                LeftTop = center + new Vector2(-bitmapWidthOver2, -bitmapHeightOver2),
+                RightTop = center + new Vector2(+bitmapWidthOver2, -bitmapHeightOver2),
+                RightBottom = center + new Vector2(+bitmapWidthOver2, +bitmapHeightOver2),
+                LeftBottom = center + new Vector2(-bitmapWidthOver2, +bitmapHeightOver2),
+            };
+        }
+
+        public Matrix3x2 GetMatrix() => Transformer.FindHomography(this.Source, this.Destination);
+
+        public void CacheTransform() => this.StartingDestination = this.Destination;
+        public void TransformMultiplies(Matrix3x2 matrix) => this.Destination = this.StartingDestination * matrix;
+        public void TransformAdd(Vector2 vector) => this.Destination = this.StartingDestination + vector;
     }
 
     public sealed partial class MainPage : Page
@@ -38,17 +73,14 @@ namespace FanKit.Transformers.TestApp
         private async Task CreateResourcesAsync(CanvasControl sender)
         {
             CanvasBitmap bitmap = await CanvasBitmap.LoadAsync(sender, "Icon/Avatar.jpg");
-            Transformer transformer = new Transformer(new TransformerRect(bitmap.SizeInPixels.Width, bitmap.SizeInPixels.Height, new Vector2()));
             this.Layer = new Layer
             {
-                Image = bitmap,
-                TransformerMatrix = new TransformerMatrix(transformer)
-                {
-                    Destination = this.AlignCenter(bitmap)
-                }
+                Image = bitmap
             };
+            this.Layer.Resize((float)base.ActualWidth, (float)base.ActualHeight);
         }
 
+        /*
         private Transformer AlignCenter(CanvasBitmap bitmap)
         {
             //Transformer
@@ -74,19 +106,19 @@ namespace FanKit.Transformers.TestApp
                 LeftBottom = center + new Vector2(-bitmapWidthOver2, +bitmapHeightOver2),
             };
         }
-
+         */
 
         private void CanvasControl_Draw(CanvasControl sender, CanvasDrawEventArgs args)
         {
             {
-                Transformer transformer = this.Layer.TransformerMatrix.Destination;
+                Matrix3x2 matrix = this.Layer.GetMatrix();
 
                 args.DrawingSession.DrawImage(new Transform2DEffect
                 {
                     Source = this.Layer.Image,
-                    TransformMatrix = this.Layer.TransformerMatrix.GetMatrix(),
+                    TransformMatrix = matrix,
                 });
-                args.DrawingSession.DrawBoundNodes(transformer);
+                args.DrawingSession.DrawBoundNodes(this.Layer.Destination);
             }
         }
 
@@ -94,13 +126,13 @@ namespace FanKit.Transformers.TestApp
 
         private void CanvasOperator_Single_Start(Vector2 point, InputDevice device, PointerPointProperties properties)
         {
-            Transformer transformer = this.Layer.TransformerMatrix.Destination;
+            Transformer transformer = this.Layer.Destination;
 
             this._startingPoint = point;
             this._oldTransformer = transformer;
 
-            this.TransformerMode = Transformer.ContainsNodeMode(point, transformer);
-            this.Layer.TransformerMatrix.CacheTransform();
+            this.TransformerMode = Transformer.ContainsNodeMode(point, transformer, false);
+            this.Layer.CacheTransform();
 
             this.CanvasControl.Invalidate();
         }
@@ -115,7 +147,7 @@ namespace FanKit.Transformers.TestApp
                 bool isCenter = this.CenterButton.IsOn;
 
                 Transformer transformer = Transformer.Controller(this.TransformerMode, this._startingPoint, point, this._oldTransformer, isRatio, isCenter);
-                this.Layer.TransformerMatrix.Destination = transformer;
+                this.Layer.Destination = transformer;
             }
             //Multiple layer.
             else
@@ -126,7 +158,7 @@ namespace FanKit.Transformers.TestApp
                 Transformer transformer = Transformer.Controller(this.TransformerMode, this._startingPoint, point, this._oldTransformer, isRatio, isCenter);
                 Matrix3x2 matrix = Transformer.FindHomography(this._oldTransformer, transformer);
 
-                this.Layer.TransformerMatrix.TransformMultiplies(matrix);
+                this.Layer.TransformMultiplies(matrix);
                 //this.Layer2...
                 //this.Layer3...
             }
