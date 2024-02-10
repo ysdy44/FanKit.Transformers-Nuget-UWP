@@ -10,15 +10,60 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     >
 
-    <Page.Resources>
-        <fanKitTransformers:CanvasOperator x:Name="CanvasOperator" DestinationControl="{x:Bind CanvasControl}" Single_Start="CanvasOperator_Single_Start" Single_Delta="CanvasOperator_Single_Delta" Single_Complete="CanvasOperator_Single_Complete"/>
-    </Page.Resources>
-
     <Grid>
-
-        <canvas:CanvasControl x:Name="CanvasControl" Draw="CanvasControl_Draw" CreateResources="CanvasControl_CreateResources"/>
+        <canvas:CanvasControl x:Name="CanvasControl" Draw="CanvasControl_Draw" CreateResources="CanvasControl_CreateResources">
+            <FrameworkElement.Tag>
+                <fanKitTransformers:CanvasOperator DestinationControl="{x:Bind CanvasControl}" Single_Start="CanvasOperator_Single_Start" Single_Delta="CanvasOperator_Single_Delta" Single_Complete="CanvasOperator_Single_Complete"/>
+            </FrameworkElement.Tag>
+        </canvas:CanvasControl>
 
         <StackPanel Padding="6" HorizontalAlignment="Left" VerticalAlignment="Top" Background="{ThemeResource SystemControlBackgroundAltMediumLowBrush}">
+            <ComboBox x:Name="ComboBox" SelectedIndex="0" SelectionChanged="ListView_SelectionChanged">
+                <FrameworkElement.Style>
+                    <Style TargetType="ComboBox">
+                        <!--BaseTextBlockStyle-->
+                        <Setter Property="FontFamily" Value="XamlAutoFontFamily" />
+                        <Setter Property="FontWeight" Value="SemiBold" />
+                        <Setter Property="FontSize" Value="14" />
+                        <!--SubtitleTextBlockStyle-->
+                        <Setter Property="FontWeight" Value="Normal" />
+                        <Setter Property="FontSize" Value="20" />
+                    </Style>
+                </FrameworkElement.Style>
+                <ItemsControl.ItemContainerStyle>
+                    <Style TargetType="ComboBoxItem">
+                        <!--BaseTextBlockStyle-->
+                        <Setter Property="FontFamily" Value="XamlAutoFontFamily" />
+                        <Setter Property="FontWeight" Value="SemiBold" />
+                        <Setter Property="FontSize" Value="14" />
+                        <!--SubtitleTextBlockStyle-->
+                        <Setter Property="FontWeight" Value="Normal" />
+                        <Setter Property="FontSize" Value="20" />
+                    </Style>
+                </ItemsControl.ItemContainerStyle>
+                <ComboBoxItem>
+                    <FrameworkElement.Tag>
+                        <PointCollection>
+                            60,0
+                            140,00
+                            110,70
+                            30,70
+                        </PointCollection>
+                    </FrameworkElement.Tag>
+                    Affine Transform
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <FrameworkElement.Tag>
+                        <PointCollection>
+                            40,0
+                            80,30
+                            110,100
+                            30,100
+                        </PointCollection>
+                    </FrameworkElement.Tag>
+                    Non-Affine Transform
+                </ComboBoxItem>
+            </ComboBox>
             <TextBlock Text="Ratio"/>
             <ToggleSwitch x:Name="RatioButton"/>
             <TextBlock Text="Center"/>
@@ -26,8 +71,8 @@
         </StackPanel>
 
         <StackPanel Padding="6" HorizontalAlignment="Left" VerticalAlignment="Bottom" Background="{ThemeResource SystemControlBackgroundAltMediumLowBrush}">
-            <TextBlock Text="Learn More" FontSize="22"/>
-            <TextBlock Text="You can learn more from the demo application:"/>
+            <TextBlock IsHitTestVisible="False" Text="Learn More" FontSize="22"/>
+            <TextBlock IsHitTestVisible="False" Text="You can learn more from the demo application:"/>
             <HyperlinkButton Content="https://www.microsoft.com/store/productId/9PD2JJZQF524" NavigateUri="https://www.microsoft.com/store/productId/9PD2JJZQF524"/>
         </StackPanel>
 

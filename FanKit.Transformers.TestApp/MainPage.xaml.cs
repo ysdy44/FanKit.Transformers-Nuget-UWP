@@ -45,6 +45,7 @@ namespace FanKit.Transformers.TestApp
         }
 
         public Matrix3x2 GetMatrix() => Transformer.FindHomography(this.Source, this.Destination);
+        public Matrix4x4 GetMatrix3D() => Transformer.FindHomography3D(this.Source, this.Destination);
 
         public void CacheTransform() => this.StartingDestination = this.Destination;
         public void TransformMultiplies(Matrix3x2 matrix) => this.Destination = this.StartingDestination * matrix;
@@ -53,6 +54,8 @@ namespace FanKit.Transformers.TestApp
 
     public sealed partial class MainPage : Page
     {
+        bool Is3D => this.ComboBox.SelectedIndex != 0;
+
         public TransformerMode TransformerMode { get; private set; }
         public Layer Layer { get; private set; }
 
@@ -64,7 +67,15 @@ namespace FanKit.Transformers.TestApp
             this.InitializeComponent();
         }
 
-
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (this.CanvasControl.ReadyToDraw)
+            {
+                this.RatioButton.IsEnabled = this.CenterButton.IsEnabled = this.ComboBox.SelectedIndex == 0;
+                this.Layer.Resize((float)base.ActualWidth, (float)base.ActualHeight);
+                this.CanvasControl.Invalidate();
+            }
+        }
 
         private void CanvasControl_CreateResources(CanvasControl sender, CanvasCreateResourcesEventArgs args)
         {
@@ -110,9 +121,26 @@ namespace FanKit.Transformers.TestApp
 
         private void CanvasControl_Draw(CanvasControl sender, CanvasDrawEventArgs args)
         {
+            if (Is3D)
+            {
+                Matrix4x4 matrix = this.Layer.GetMatrix3D();
+         
+                args.DrawingSession.DrawImage(new Transform3DEffect
+                {
+                    Source = this.Layer.Image,
+                    TransformMatrix = matrix
+                });
+
+                args.DrawingSession.DrawBound(this.Layer.Destination);
+                args.DrawingSession.DrawNode2(this.Layer.Destination.LeftTop);
+                args.DrawingSession.DrawNode2(this.Layer.Destination.RightTop);
+                args.DrawingSession.DrawNode2(this.Layer.Destination.RightBottom);
+                args.DrawingSession.DrawNode2(this.Layer.Destination.LeftBottom);
+            }
+            else
             {
                 Matrix3x2 matrix = this.Layer.GetMatrix();
-
+           
                 args.DrawingSession.DrawImage(new Transform2DEffect
                 {
                     Source = this.Layer.Image,
@@ -140,13 +168,24 @@ namespace FanKit.Transformers.TestApp
         {
             this._startingPoint = point;
 
+            if (Is3D)
+            {
+                switch (this.TransformerMode)
+                {
+                    case TransformerMode.ScaleLeftTop: this.Layer.Destination.LeftTop = point; break;
+                    case TransformerMode.ScaleRightTop: this.Layer.Destination.RightTop = point; break;
+                    case TransformerMode.ScaleRightBottom: this.Layer.Destination.RightBottom = point; break;
+                    case TransformerMode.ScaleLeftBottom: this.Layer.Destination.LeftBottom = point; break;
+                    default: break;
+                }
+            }
             //Single layer.
-            if (true)
+            else if (true)
             {
                 bool isRatio = this.RatioButton.IsOn;
                 bool isCenter = this.CenterButton.IsOn;
 
-                Transformer transformer = Transformer.Controller(this.TransformerMode, this._startingPoint, point, this._oldTransformer, isRatio, isCenter);
+                Transformer transformer = Transformer.Controller(this.TransformerMode, this._startingPoint, point, this.Layer.StartingDestination, isRatio, isCenter);
                 this.Layer.Destination = transformer;
             }
             //Multiple layer.
