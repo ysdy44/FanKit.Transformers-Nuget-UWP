@@ -60,7 +60,6 @@ namespace FanKit.Transformers.TestApp
         public Layer Layer { get; private set; }
 
         Vector2 _startingPoint;
-        Transformer _oldTransformer;
 
         public MainPage()
         {
@@ -124,7 +123,10 @@ namespace FanKit.Transformers.TestApp
             if (Is3D)
             {
                 Matrix4x4 matrix = this.Layer.GetMatrix3D();
-         
+                this.M11.Text = $"{matrix.M11}"; this.M12.Text = $"{matrix.M12}"; this.M13.Text = $"{matrix.M14}";
+                this.M21.Text = $"{matrix.M21}"; this.M22.Text = $"{matrix.M22}"; this.M23.Text = $"{matrix.M24}";
+                this.M31.Text = $"{matrix.M41}"; this.M32.Text = $"{matrix.M42}";
+
                 args.DrawingSession.DrawImage(new Transform3DEffect
                 {
                     Source = this.Layer.Image,
@@ -140,7 +142,10 @@ namespace FanKit.Transformers.TestApp
             else
             {
                 Matrix3x2 matrix = this.Layer.GetMatrix();
-           
+                this.M11.Text = $"{matrix.M11}"; this.M12.Text = $"{matrix.M12}"; this.M13.Text = "0";
+                this.M21.Text = $"{matrix.M21}"; this.M22.Text = $"{matrix.M22}"; this.M23.Text = "0";
+                this.M31.Text = $"{matrix.M31}"; this.M32.Text = $"{matrix.M32}";
+
                 args.DrawingSession.DrawImage(new Transform2DEffect
                 {
                     Source = this.Layer.Image,
@@ -157,17 +162,14 @@ namespace FanKit.Transformers.TestApp
             Transformer transformer = this.Layer.Destination;
 
             this._startingPoint = point;
-            this._oldTransformer = transformer;
 
-            this.TransformerMode = Transformer.ContainsNodeMode(point, transformer, false);
+            this.TransformerMode = Transformer.ContainsNodeMode(point, transformer, Is3D);
             this.Layer.CacheTransform();
 
             this.CanvasControl.Invalidate();
         }
         private void CanvasOperator_Single_Delta(Vector2 point, InputDevice device, PointerPointProperties properties)
         {
-            this._startingPoint = point;
-
             if (Is3D)
             {
                 switch (this.TransformerMode)
@@ -194,8 +196,8 @@ namespace FanKit.Transformers.TestApp
                 bool isRatio = this.RatioButton.IsOn;
                 bool isCenter = this.CenterButton.IsOn;
 
-                Transformer transformer = Transformer.Controller(this.TransformerMode, this._startingPoint, point, this._oldTransformer, isRatio, isCenter);
-                Matrix3x2 matrix = Transformer.FindHomography(this._oldTransformer, transformer);
+                Transformer transformer = Transformer.Controller(this.TransformerMode, this._startingPoint, point, this.Layer.StartingDestination, isRatio, isCenter);
+                Matrix3x2 matrix = Transformer.FindHomography(this.Layer.StartingDestination, transformer);
 
                 this.Layer.TransformMultiplies(matrix);
                 //this.Layer2...

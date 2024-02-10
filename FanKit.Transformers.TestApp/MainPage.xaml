@@ -76,5 +76,43 @@
             <HyperlinkButton Content="https://www.microsoft.com/store/productId/9PD2JJZQF524" NavigateUri="https://www.microsoft.com/store/productId/9PD2JJZQF524"/>
         </StackPanel>
 
+        <Grid IsHitTestVisible="False" Margin="4,8" BorderThickness="2,0" BorderBrush="{ThemeResource SystemColorControlAccentBrush}" HorizontalAlignment="Right" VerticalAlignment="Bottom" >
+            <FrameworkElement.Resources>
+                <!--Style-->
+                <Style TargetType="TextBlock">
+                    <Setter Property="FontWeight" Value="Bold"/>
+                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                </Style>
+            </FrameworkElement.Resources>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="96"/>
+                <ColumnDefinition Width="96"/>
+                <ColumnDefinition Width="96"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock x:Name="M11" Grid.Column="0" Grid.Row="0">1</TextBlock>
+            <TextBlock x:Name="M12" Grid.Column="1" Grid.Row="0">0</TextBlock>
+            <TextBlock x:Name="M13" Grid.Column="2" Grid.Row="0">0</TextBlock>
+
+            <TextBlock x:Name="M21" Grid.Column="0" Grid.Row="1">0</TextBlock>
+            <TextBlock x:Name="M22" Grid.Column="1" Grid.Row="1">1</TextBlock>
+            <TextBlock x:Name="M23" Grid.Column="2" Grid.Row="1">0</TextBlock>
+
+            <TextBlock x:Name="M31" Grid.Column="0" Grid.Row="2">0</TextBlock>
+            <TextBlock x:Name="M32" Grid.Column="1" Grid.Row="2">0</TextBlock>
+            <TextBlock Grid.Column="2" Grid.Row="2">1</TextBlock>
+
+        </Grid>
+
+        <Border IsHitTestVisible="False" Margin="4,8" Width="200" Height="140" HorizontalAlignment="Right" VerticalAlignment="Top">
+            <Polygon Points="{Binding ElementName=ComboBox, Path=SelectedItem.Tag, Mode=OneWay}" HorizontalAlignment="Center" VerticalAlignment="Center" StrokeThickness="2" Stroke="{ThemeResource SystemColorControlAccentBrush}"/>
+        </Border>
+
     </Grid>
 </Page>
