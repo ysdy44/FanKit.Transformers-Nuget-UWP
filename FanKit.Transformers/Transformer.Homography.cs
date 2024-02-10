@@ -23,8 +23,32 @@ namespace FanKit.Transformers
                 x, // TransX
                 y); // TransY
 
-        internal static Matrix3x2 FindHomography(float sourceWidth, float sourceHeight, ITransformerLTRB destination) =>
-            Matrix3x2.CreateScale(1f / sourceWidth, 1f / sourceHeight) * FindHomographyFromIdentity(destination);
+        /// <summary>
+        /// Find Homography.  
+        /// </summary>
+        /// <param name="sourceWidth"> The width of source rectangle. </param>
+        /// <param name="sourceHeight"> The height of source rectangle. </param>
+        /// <param name="destination"> The destination Transformer. </param>
+        /// <returns> The homologous matrix. </returns>
+        public static Matrix3x2 FindHomography(float sourceWidth, float sourceHeight, ITransformerLTRB destination) =>
+          Matrix3x2.CreateScale(1f / sourceWidth, 1f / sourceHeight) * FindHomographyFromIdentity(destination);
+
+        /// <summary>
+        /// Find Homography.  
+        /// </summary>
+        /// <param name="sourceX"> The x of source rectangle. </param>
+        /// <param name="sourceY"> The y of source rectangle. </param>
+        /// <param name="sourceWidth"> The width of source rectangle. </param>
+        /// <param name="sourceHeight"> The height of source rectangle. </param>
+        /// <param name="destination"> The destination Transformer. </param>
+        /// <returns> The homologous matrix. </returns>
+        public static Matrix3x2 FindHomography(float sourceX, float sourceY, float sourceWidth, float sourceHeight, ITransformerLTRB destination) => new Matrix3x2
+        {
+            M11 = 1f / sourceWidth,
+            M22 = 1f / sourceHeight,
+            M31 = -sourceX / sourceWidth,
+            M32 = -sourceY / sourceHeight,
+        } * FindHomographyFromIdentity(destination);
 
         /// <summary>
         /// Find Homography.  
