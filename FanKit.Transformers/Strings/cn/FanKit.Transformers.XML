@@ -2405,7 +2405,7 @@
       </summary>
       <param name="source">源变换者。 </param>
       <param name="destination">目标变换者。 </param>
-      <returns>同源矩阵。 </returns>
+      <returns>单应性矩阵。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.ContainsNodeMode(System.Numerics.Vector2,FanKit.Transformers.Transformer,System.Boolean)">
       <summary>
