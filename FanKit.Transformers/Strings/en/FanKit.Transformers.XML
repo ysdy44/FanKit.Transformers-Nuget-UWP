@@ -1273,7 +1273,7 @@
             Turn to geometry.
             </summary>
             <param name="resourceCreator"> The resource-creator. </param>
-            <returns></returns>
+          <returns> The product geometry. </returns>
         </member>
         <member name="M:FanKit.Transformers.ITransformerGeometry.ToEllipse(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Matrix3x2)">
             <summary>
@@ -1281,7 +1281,7 @@
             </summary>
             <param name="resourceCreator"> The resource-creator. </param>
             <param name="matrix"> The matrix. </param>
-            <returns></returns>
+          <returns> The product geometry. </returns>
         </member>
         <member name="T:FanKit.Transformers.ITransformerLTRB">
             <summary>
@@ -2312,7 +2312,7 @@
             Turn to geometry.
             </summary>
             <param name="resourceCreator"> The resource-creator. </param>
-            <returns></returns>
+          <returns> The product geometry. </returns>
         </member>
         <member name="M:FanKit.Transformers.Transformer.ToEllipse(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Matrix3x2)">
             <summary>
@@ -2320,24 +2320,24 @@
             </summary>
             <param name="resourceCreator"> The resource-creator. </param>
             <param name="matrix"> The matrix. </param>
-            <returns></returns>
+          <returns> The product geometry. </returns>
         </member>
-        <member name="M:FanKit.Transformers.Transformer.FindHomography(FanKit.Transformers.ITransformerLTRB,FanKit.Transformers.ITransformerLTRB,System.Numerics.Vector2@)">
-            <summary>
-            Find Homography.  
-            </summary>
-            <param name="source"> The source Transformer. </param>
-            <param name="destination"> The destination Transformer. </param>
-            <param name="distance">
-            <para>If the source/destination is not a parallelogram:</para>
-            <para>Vector2 point = ?</para>
-            <para>Matrix3x2 matrix = Transformer.FindHomography(source, destination, out Vector2 distance);</para>
-            <para>Vector2 position = Vector2.Transform(point, matrix) / (1 + Vector2.Dot(point, distance));</para>
-            </param>
-            <returns> The homologous matrix. </returns>
-        </member>
-        <member name="M:FanKit.Transformers.Transformer.FindHomography(FanKit.Transformers.ITransformerLTRB,FanKit.Transformers.ITransformerLTRB)">
-            <summary>
+      <member name="M:FanKit.Transformers.Transformer.FindHomography(FanKit.Transformers.ITransformerLTRB,FanKit.Transformers.ITransformerLTRB,System.Numerics.Vector2@)">
+        <summary>
+          Find Homography.
+        </summary>
+        <param name="source"> The source Transformer. </param>
+        <param name="destination"> The destination Transformer. </param>
+        <param name="distance">
+          <para>If the source/destination is not a parallelogram:</para>
+          <para>Vector2 point = ?</para>
+          <para>Matrix3x2 matrix = Transformer.FindHomography(source, destination, out Vector2 distance);</para>
+          <para>Vector2 position = Vector2.Transform(point, matrix) / (1 + Vector2.Dot(point, distance));</para>
+        </param>
+        <returns> The homologous matrix. </returns>
+      </member>
+      <member name="M:FanKit.Transformers.Transformer.FindHomography(FanKit.Transformers.ITransformerLTRB,FanKit.Transformers.ITransformerLTRB)">
+        <summary>
             Find Homography.  
             </summary>
             <param name="source"> The source Transformer. </param>
@@ -3188,7 +3188,7 @@
             Turn to geometry.
             </summary>
             <param name="resourceCreator"> The resource-creator. </param>
-            <returns></returns>
+          <returns> The product geometry. </returns>
         </member>
         <member name="M:FanKit.Transformers.TransformerRect.ToEllipse(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Matrix3x2)">
             <summary>
@@ -3196,7 +3196,7 @@
             </summary>
             <param name="resourceCreator"> The resource-creator. </param>
             <param name="matrix"> The matrix. </param>
-            <returns></returns>
+          <returns> The product geometry. </returns>
         </member>
         <member name="P:FanKit.Transformers.TransformerRect.Left">
             <summary> Gets rectangle's left. </summary>
