@@ -28,7 +28,7 @@ namespace FanKit.Transformers
         /// Turn to geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
-        /// <returns></returns>
+        /// <returns> The product geometry. </returns>
         public CanvasGeometry ToEllipse(ICanvasResourceCreator resourceCreator) => TransformerGeometry.CreateEllipse(resourceCreator, this);
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
         /// <param name="matrix"> The matrix. </param>
-        /// <returns></returns>
+        /// <returns> The product geometry. </returns>
         public CanvasGeometry ToEllipse(ICanvasResourceCreator resourceCreator, Matrix3x2 matrix) => TransformerGeometry.CreateEllipse(resourceCreator, this, matrix);
 
     }

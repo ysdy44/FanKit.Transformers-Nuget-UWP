@@ -14,7 +14,7 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
         /// <returns> The product geometry. </returns>
-         CanvasGeometry ToRectangle(ICanvasResourceCreator resourceCreator);
+        CanvasGeometry ToRectangle(ICanvasResourceCreator resourceCreator);
 
         /// <summary>
         /// Turn to geometry.
@@ -22,23 +22,23 @@ namespace FanKit.Transformers
         /// <param name="resourceCreator"> The resource-creator. </param>
         /// <param name="matrix"> The matrix. </param>
         /// <returns> The product geometry. </returns>
-         CanvasGeometry ToRectangle(ICanvasResourceCreator resourceCreator, Matrix3x2 matrix);
+        CanvasGeometry ToRectangle(ICanvasResourceCreator resourceCreator, Matrix3x2 matrix);
 
 
         /// <summary>
         /// Turn to geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
-        /// <returns></returns>
-         CanvasGeometry ToEllipse(ICanvasResourceCreator resourceCreator);
+        /// <returns> The product geometry. </returns>
+        CanvasGeometry ToEllipse(ICanvasResourceCreator resourceCreator);
 
         /// <summary>
         /// Turn to geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
         /// <param name="matrix"> The matrix. </param>
-        /// <returns></returns>
-         CanvasGeometry ToEllipse(ICanvasResourceCreator resourceCreator, Matrix3x2 matrix);
+        /// <returns> The product geometry. </returns>
+        CanvasGeometry ToEllipse(ICanvasResourceCreator resourceCreator, Matrix3x2 matrix);
 
     }
 }
