@@ -2322,22 +2322,56 @@
             <param name="matrix"> The matrix. </param>
           <returns> The product geometry. </returns>
         </member>
-      <member name="M:FanKit.Transformers.Transformer.FindHomography(FanKit.Transformers.ITransformerLTRB,FanKit.Transformers.ITransformerLTRB,System.Numerics.Vector2@)">
-        <summary>
-          Find Homography.
-        </summary>
-        <param name="source"> The source Transformer. </param>
-        <param name="destination"> The destination Transformer. </param>
-        <param name="distance">
-          <para>If the source/destination is not a parallelogram:</para>
-          <para>Vector2 point = ?</para>
-          <para>Matrix3x2 matrix = Transformer.FindHomography(source, destination, out Vector2 distance);</para>
-          <para>Vector2 position = Vector2.Transform(point, matrix) / (1 + Vector2.Dot(point, distance));</para>
-        </param>
-        <returns> The homologous matrix. </returns>
-      </member>
-      <member name="M:FanKit.Transformers.Transformer.FindHomography(FanKit.Transformers.ITransformerLTRB,FanKit.Transformers.ITransformerLTRB)">
-        <summary>
+        <member name="M:FanKit.Transformers.Transformer.FindHomography(System.Single,System.Single,FanKit.Transformers.ITransformerLTRB)">
+            <summary>
+            Find Homography.  
+            </summary>
+            <param name="sourceWidth"> The width of source rectangle. </param>
+            <param name="sourceHeight"> The height of source rectangle. </param>
+            <param name="destination"></param>
+          <returns> The homologous matrix. </returns>
+        </member>
+        <member name="M:FanKit.Transformers.Transformer.FindHomography3D(System.Single,System.Single,FanKit.Transformers.ITransformerLTRB)">
+            <summary>
+            Find Homography.  
+            </summary>
+            <param name="sourceWidth"> The width of source rectangle. </param>
+            <param name="sourceHeight"> The height of source rectangle. </param>
+            <param name="destination"> The destination Transformer. </param>
+            <returns> The homologous matrix. </returns>
+        </member>
+        <member name="M:FanKit.Transformers.Transformer.FindHomography(System.Single,System.Single,System.Single,System.Single,FanKit.Transformers.ITransformerLTRB)">
+            <summary>
+            Find Homography.  
+            </summary>
+            <param name="sourceX"> The x of source rectangle. </param>
+            <param name="sourceY"> The y of source rectangle. </param>
+            <param name="sourceWidth"> The width of source rectangle. </param>
+            <param name="sourceHeight"> The height of source rectangle. </param>
+            <param name="destination"> The destination Transformer. </param>
+            <returns> The homologous matrix. </returns>
+        </member>
+        <member name="M:FanKit.Transformers.Transformer.FindHomography3D(System.Single,System.Single,System.Single,System.Single,FanKit.Transformers.ITransformerLTRB)">
+            <summary>
+            Find Homography.  
+            </summary>
+            <param name="sourceX"> The x of source rectangle. </param>
+            <param name="sourceY"> The y of source rectangle. </param>
+            <param name="sourceWidth"> The width of source rectangle. </param>
+            <param name="sourceHeight"> The height of source rectangle. </param>
+            <param name="destination"> The destination Transformer. </param>
+            <returns> The homologous matrix. </returns>
+        </member>
+        <member name="M:FanKit.Transformers.Transformer.FindHomography(FanKit.Transformers.ITransformerLTRB,FanKit.Transformers.ITransformerLTRB)">
+            <summary>
+            Find Homography.  
+            </summary>
+            <param name="source"> The source Transformer. </param>
+            <param name="destination"> The destination Transformer. </param>
+            <returns> The homologous matrix. </returns>
+        </member>
+        <member name="M:FanKit.Transformers.Transformer.FindHomography3D(FanKit.Transformers.TransformerRect,FanKit.Transformers.ITransformerLTRB)">
+            <summary>
             Find Homography.  
             </summary>
             <param name="source"> The source Transformer. </param>

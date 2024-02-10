@@ -2399,6 +2399,47 @@
       <param name="matrix">矩阵。 </param>
       <returns>产生的的几何形状。 </returns>
     </member>
+
+    <member name="M:FanKit.Transformers.Transformer.FindHomography(System.Single,System.Single,FanKit.Transformers.ITransformerLTRB)">
+      <summary>
+        查找单应性。
+      </summary>
+      <param name="sourceWidth">源矩形的宽度</param>
+      <param name="sourceHeight">源矩形的高度</param>
+      <param name="destination">目标变换者。</param>
+      <returns>单应性矩阵。 </returns>
+    </member>
+    <member name="M:FanKit.Transformers.Transformer.FindHomography3D(System.Single,System.Single,FanKit.Transformers.ITransformerLTRB)">
+      <summary>
+        查找单应性。
+      </summary>
+      <param name="sourceWidth">源矩形的宽度</param>
+      <param name="sourceHeight">源矩形的高度</param>
+      <param name="destination">目标变换者。</param>
+      <returns>单应性矩阵。 </returns>
+    </member>
+    <member name="M:FanKit.Transformers.Transformer.FindHomography(System.Single,System.Single,System.Single,System.Single,FanKit.Transformers.ITransformerLTRB)">
+      <summary>
+        查找单应性。
+      </summary>
+      <param name="sourceX">源矩形的 X</param>
+      <param name="sourceY">源矩形的 Y</param>
+      <param name="sourceWidth">源矩形的宽度</param>
+      <param name="sourceHeight">源矩形的高度</param>
+      <param name="destination">目标变换者。</param>
+      <returns>单应性矩阵。 </returns>
+    </member>
+    <member name="M:FanKit.Transformers.Transformer.FindHomography3D(System.Single,System.Single,System.Single,System.Single,FanKit.Transformers.ITransformerLTRB)">
+      <summary>
+        查找单应性。
+      </summary>
+      <param name="sourceX">源矩形的 X</param>
+      <param name="sourceY">源矩形的 Y</param>
+      <param name="sourceWidth">源矩形的宽度</param>
+      <param name="sourceHeight">源矩形的高度</param>
+      <param name="destination">目标变换者。</param>
+      <returns>单应性矩阵。 </returns>
+    </member>
     <member name="M:FanKit.Transformers.Transformer.FindHomography(FanKit.Transformers.ITransformerLTRB,FanKit.Transformers.ITransformerLTRB)">
       <summary>
         查找单应性。
