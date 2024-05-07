@@ -27,22 +27,12 @@ namespace FanKit
 
         /// <summary> Radius of node'. Default 12. </summary>
         public const float NodeRadius = 12.0f;
-        private static float NodeRadiusSquare;
+        private const float NodeRadiusSquare = Math.NodeRadius * Math.NodeRadius;
 
         /// <summary> Minimum distance between two nodes. Default 20. </summary>
         public const float NodeDistance = 20.0f;
-        private static readonly float NodeDistanceSquare;
-        private static readonly float NodeDistanceDouble;
-
-
-        static Math()
-        {
-            Math.NodeRadiusSquare = Math.NodeRadius * Math.NodeRadius;
-
-            Math.NodeDistanceSquare = Math.NodeDistance * Math.NodeDistance;
-            Math.NodeDistanceDouble = Math.NodeDistance + Math.NodeDistance;
-        }
-
+        private const float NodeDistanceSquare = Math.NodeDistance * Math.NodeDistance;
+        private const float NodeDistanceDouble = Math.NodeDistance + Math.NodeDistance;
 
         /// <summary>
         /// Whether the distance exceeds [NodeRadius]. Default: 144.
