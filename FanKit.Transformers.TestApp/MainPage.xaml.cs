@@ -132,11 +132,17 @@ namespace FanKit.Transformers.TestApp
                     TransformMatrix = matrix
                 });
 
+                Vector2 center = Transform3D(this.Layer.Source.Center, matrix);
                 args.DrawingSession.DrawBound(this.Layer.Destination);
+                args.DrawingSession.DrawLineDodgerBlue(this.Layer.Destination.LeftTop, center);
+                args.DrawingSession.DrawLineDodgerBlue(this.Layer.Destination.RightTop, center);
+                args.DrawingSession.DrawLineDodgerBlue(this.Layer.Destination.RightBottom, center);
+                args.DrawingSession.DrawLineDodgerBlue(this.Layer.Destination.LeftBottom, center);
                 args.DrawingSession.DrawNode2(this.Layer.Destination.LeftTop);
                 args.DrawingSession.DrawNode2(this.Layer.Destination.RightTop);
                 args.DrawingSession.DrawNode2(this.Layer.Destination.RightBottom);
                 args.DrawingSession.DrawNode2(this.Layer.Destination.LeftBottom);
+                args.DrawingSession.DrawNode4(center);
             }
             else
             {
@@ -150,7 +156,14 @@ namespace FanKit.Transformers.TestApp
                     Source = this.Layer.Image,
                     TransformMatrix = matrix,
                 });
+
+                Vector2 center = Vector2.Transform(this.Layer.Source.Center, matrix);
+                args.DrawingSession.DrawLineDodgerBlue(this.Layer.Destination.LeftTop, center);
+                args.DrawingSession.DrawLineDodgerBlue(this.Layer.Destination.RightTop, center);
+                args.DrawingSession.DrawLineDodgerBlue(this.Layer.Destination.RightBottom, center);
+                args.DrawingSession.DrawLineDodgerBlue(this.Layer.Destination.LeftBottom, center);
                 args.DrawingSession.DrawBoundNodes(this.Layer.Destination);
+                args.DrawingSession.DrawNode4(center);
             }
         }
 
@@ -224,6 +237,25 @@ namespace FanKit.Transformers.TestApp
         private void CanvasOperator_Single_Complete(Vector2 point, InputDevice device, PointerPointProperties properties)
         {
             this.CanvasControl.Invalidate();
+        }
+
+        private static Vector3 Transform3D(Vector3 p, Matrix4x4 m)
+        {
+            //return Vector3.Transform(p, m);
+            float x = m.M11 * p.X + m.M21 * p.Y + m.M41 * p.Z;
+            float y = m.M12 * p.X + m.M22 * p.Y + m.M42 * p.Z;
+            float z = m.M14 * p.X + m.M24 * p.Y + m.M44 * p.Z;
+            return new Vector3(x, y, z);
+        }
+
+        private static Vector2 Transform3D(Vector2 p, Matrix4x4 m)
+        {
+            //Vector3 v = Vector3.Transform(new Vector3(p, 1), m);
+            //return new Vector2(v.X / v.Z, v.Y / v.Z);
+            float x = m.M11 * p.X + m.M21 * p.Y + m.M41;
+            float y = m.M12 * p.X + m.M22 * p.Y + m.M42;
+            float z = m.M14 * p.X + m.M24 * p.Y + m.M44;
+            return new Vector2(x / z, y / z);
         }
 
         private static Vector2 MovePointOnConvexQuadrilateral(Vector2 point, Vector2 leftTop, Vector2 rightTop, Vector2 rightBottom, Vector2 leftBottom, int limitFactor = 8)
