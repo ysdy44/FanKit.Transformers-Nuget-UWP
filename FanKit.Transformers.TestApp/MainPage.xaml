@@ -18,7 +18,7 @@
         </canvas:CanvasControl>
 
         <StackPanel Padding="6" HorizontalAlignment="Left" VerticalAlignment="Top" Background="{ThemeResource SystemControlBackgroundAltMediumLowBrush}">
-            <ComboBox x:Name="ComboBox" SelectedIndex="0" SelectionChanged="ListView_SelectionChanged">
+            <ComboBox x:Name="ComboBox" SelectedIndex="0" SelectionChanged="ComboBox_SelectionChanged">
                 <FrameworkElement.Style>
                     <Style TargetType="ComboBox">
                         <!--BaseTextBlockStyle-->
@@ -41,7 +41,7 @@
                         <Setter Property="FontSize" Value="20" />
                     </Style>
                 </ItemsControl.ItemContainerStyle>
-                <ComboBoxItem>
+                <ComboBoxItem x:Name="AffineItem">
                     <FrameworkElement.Tag>
                         <PointCollection>
                             60,0
@@ -52,7 +52,7 @@
                     </FrameworkElement.Tag>
                     Affine Transform
                 </ComboBoxItem>
-                <ComboBoxItem>
+                <ComboBoxItem x:Name="NonAffineItem">
                     <FrameworkElement.Tag>
                         <PointCollection>
                             40,0
@@ -64,10 +64,16 @@
                     Non-Affine Transform
                 </ComboBoxItem>
             </ComboBox>
-            <TextBlock Text="Ratio"/>
-            <ToggleSwitch x:Name="RatioButton"/>
-            <TextBlock Text="Center"/>
-            <ToggleSwitch x:Name="CenterButton"/>
+            <StackPanel Visibility="{x:Bind AffineItem.IsSelected, Mode=OneWay}">
+                <TextBlock Text="Ratio"/>
+                <ToggleSwitch x:Name="RatioButton"/>
+                <TextBlock Text="Center"/>
+                <ToggleSwitch x:Name="CenterButton"/>
+            </StackPanel>
+            <StackPanel Visibility="{x:Bind NonAffineItem.IsSelected, Mode=OneWay}">
+                <TextBlock Text="Convex Quadrilateral"/>
+                <ToggleSwitch x:Name="ConvexQuadrilateralButton" IsOn="True"/>
+            </StackPanel>
         </StackPanel>
 
         <StackPanel Padding="6" HorizontalAlignment="Left" VerticalAlignment="Bottom" Background="{ThemeResource SystemControlBackgroundAltMediumLowBrush}">

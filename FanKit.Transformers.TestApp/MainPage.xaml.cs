@@ -66,11 +66,10 @@ namespace FanKit.Transformers.TestApp
             this.InitializeComponent();
         }
 
-        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (this.CanvasControl.ReadyToDraw)
             {
-                this.RatioButton.IsEnabled = this.CenterButton.IsEnabled = this.ComboBox.SelectedIndex == 0;
                 this.Layer.Resize((float)base.ActualWidth, (float)base.ActualHeight);
                 this.CanvasControl.Invalidate();
             }
@@ -172,13 +171,15 @@ namespace FanKit.Transformers.TestApp
         {
             if (Is3D)
             {
-                switch (this.TransformerMode)
                 {
-                    case TransformerMode.ScaleLeftTop: this.Layer.Destination.LeftTop = point; break;
-                    case TransformerMode.ScaleRightTop: this.Layer.Destination.RightTop = point; break;
-                    case TransformerMode.ScaleRightBottom: this.Layer.Destination.RightBottom = point; break;
-                    case TransformerMode.ScaleLeftBottom: this.Layer.Destination.LeftBottom = point; break;
-                    default: break;
+                    switch (this.TransformerMode)
+                    {
+                        case TransformerMode.ScaleLeftTop: this.Layer.Destination.LeftTop = point; break;
+                        case TransformerMode.ScaleRightTop: this.Layer.Destination.RightTop = point; break;
+                        case TransformerMode.ScaleRightBottom: this.Layer.Destination.RightBottom = point; break;
+                        case TransformerMode.ScaleLeftBottom: this.Layer.Destination.LeftBottom = point; break;
+                        default: break;
+                    }
                 }
             }
             //Single layer.
