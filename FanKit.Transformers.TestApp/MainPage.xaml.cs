@@ -171,6 +171,20 @@ namespace FanKit.Transformers.TestApp
         {
             if (Is3D)
             {
+                bool isConvexQuadrilateral = this.ConvexQuadrilateralButton.IsOn;
+                if (isConvexQuadrilateral)
+                {
+                    Transformer t = this.Layer.StartingDestination;
+                    switch (this.TransformerMode)
+                    {
+                        case TransformerMode.ScaleLeftTop: this.Layer.Destination.LeftTop = MovePointOnConvexQuadrilateral(point, t.LeftTop, t.RightTop, t.RightBottom, t.LeftBottom, 8); break;
+                        case TransformerMode.ScaleRightTop: this.Layer.Destination.RightTop = MovePointOnConvexQuadrilateral(point, t.RightTop, t.RightBottom, t.LeftBottom, t.LeftTop, 8); break;
+                        case TransformerMode.ScaleRightBottom: this.Layer.Destination.RightBottom = MovePointOnConvexQuadrilateral(point, t.RightBottom, t.LeftBottom, t.LeftTop, t.RightTop, 8); break;
+                        case TransformerMode.ScaleLeftBottom: this.Layer.Destination.LeftBottom = MovePointOnConvexQuadrilateral(point, t.LeftBottom, t.LeftTop, t.RightTop, t.RightBottom, 8); break;
+                        default: break;
+                    }
+                }
+                else
                 {
                     switch (this.TransformerMode)
                     {
@@ -210,6 +224,58 @@ namespace FanKit.Transformers.TestApp
         private void CanvasOperator_Single_Complete(Vector2 point, InputDevice device, PointerPointProperties properties)
         {
             this.CanvasControl.Invalidate();
+        }
+
+        private static Vector2 MovePointOnConvexQuadrilateral(Vector2 point, Vector2 leftTop, Vector2 rightTop, Vector2 rightBottom, Vector2 leftBottom, int limitFactor = 8)
+        {
+            Vector2 limit1 = 2 * limitFactor * Vector2.Normalize(leftTop - rightBottom);
+            Vector2 limit2 = limitFactor * Vector2.Normalize(leftBottom - rightTop);
+            Vector2 left = limit1 + limit2 + rightTop;
+            Vector2 right = limit1 - limit2 + leftBottom;
+            Vector2 tag = rightBottom;
+
+            Vector2 foot = point;
+            int i = 0;
+
+            do
+            {
+                Vector2 lineA;
+                Vector2 lineB;
+                switch (i)
+                {
+                    case 1:
+                        lineA = tag;
+                        lineB = right;
+                        break;
+                    case 2:
+                        lineA = left;
+                        lineB = tag;
+                        break;
+                    default:
+                        lineA = left;
+                        lineB = right;
+                        break;
+                }
+
+                float bx = lineA.X - lineB.X;
+                float by = lineA.Y - lineB.Y;
+                float px = lineA.X - foot.X;
+                float py = lineA.Y - foot.Y;
+
+                if (bx * py - by * px < 0f)
+                {
+                    float s = bx * bx + by * by;
+                    float p = py * by + px * bx;
+                    foot = new Vector2
+                    {
+                        X = lineA.X - bx * p / s,
+                        Y = lineA.Y - by * p / s
+                    };
+                }
+                i++;
+            } while (i < 4);
+
+            return foot;
         }
 
     }
