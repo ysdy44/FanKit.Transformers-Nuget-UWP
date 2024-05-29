@@ -81,9 +81,18 @@
         </StackPanel>
 
         <StackPanel Padding="6" HorizontalAlignment="Left" VerticalAlignment="Bottom" Background="{ThemeResource SystemControlBackgroundAltMediumLowBrush}">
-            <TextBlock IsHitTestVisible="False" Text="Learn More" FontSize="22"/>
-            <TextBlock IsHitTestVisible="False" Text="You can learn more from the demo application:"/>
-            <HyperlinkButton Content="https://www.microsoft.com/store/productId/9PD2JJZQF524" NavigateUri="https://www.microsoft.com/store/productId/9PD2JJZQF524"/>
+            <TextBlock IsHitTestVisible="False" FontSize="22">
+                Learn More
+            </TextBlock>
+            <TextBlock IsHitTestVisible="False">
+                You can learn more from the demo application:
+            </TextBlock>
+            <HyperlinkButton>
+                <HyperlinkButton.NavigateUri>
+                    https://www.microsoft.com/store/productId/9PD2JJZQF524
+                </HyperlinkButton.NavigateUri>
+                https://www.microsoft.com/store/productId/9PD2JJZQF524
+            </HyperlinkButton>
         </StackPanel>
 
         <Grid IsHitTestVisible="False" Margin="4,8" BorderThickness="2,0" BorderBrush="{ThemeResource SystemColorControlAccentBrush}" HorizontalAlignment="Right" VerticalAlignment="Bottom" >

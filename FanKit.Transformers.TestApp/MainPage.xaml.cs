@@ -41,7 +41,7 @@ namespace FanKit.Transformers.TestApp
         readonly Layer1 Layer1 = new Layer1();
         readonly Layer2 Layer2 = new Layer2();
 
-        Vector2 _startingPoint;
+        Vector2 StartingPoint;
 
         public MainPage()
         {
@@ -52,10 +52,9 @@ namespace FanKit.Transformers.TestApp
         {
             if (this.IsLoaded)
             {
-                bool is3D = this.SelectedIndex == 1;
-                this.RatioButton.IsEnabled = is3D is false;
-                this.CenterButton.IsEnabled = is3D is false;
-                this.ConvexQuadrilateralButton.IsEnabled = is3D;
+                this.RatioButton.IsEnabled = this.SelectedIndex != 1;
+                this.CenterButton.IsEnabled = this.SelectedIndex != 1;
+                this.ConvexQuadrilateralButton.IsEnabled = this.SelectedIndex == 1;
             }
 
             if (this.CanvasControl.ReadyToDraw)
@@ -194,7 +193,7 @@ namespace FanKit.Transformers.TestApp
                     {
                         Transformer transformer = this.Layer1.Destination;
 
-                        this._startingPoint = point;
+                        this.StartingPoint = point;
 
                         this.TransformerMode = Transformer.ContainsNodeMode(point, transformer, disabledRadian: false);
                         this.Layer1.CacheTransform();
@@ -226,7 +225,7 @@ namespace FanKit.Transformers.TestApp
                         bool isRatio = this.RatioButton.IsOn;
                         bool isCenter = this.CenterButton.IsOn;
 
-                        Transformer transformer = Transformer.Controller(this.TransformerMode, this._startingPoint, point, this.Layer1.StartingDestination, isRatio, isCenter);
+                        Transformer transformer = Transformer.Controller(this.TransformerMode, this.StartingPoint, point, this.Layer1.StartingDestination, isRatio, isCenter);
                         this.Layer1.Destination = transformer;
                     }
                     //Multiple layer.
@@ -235,7 +234,7 @@ namespace FanKit.Transformers.TestApp
                         bool isRatio = this.RatioButton.IsOn;
                         bool isCenter = this.CenterButton.IsOn;
 
-                        Transformer transformer = Transformer.Controller(this.TransformerMode, this._startingPoint, point, this.Layer1.StartingDestination, isRatio, isCenter);
+                        Transformer transformer = Transformer.Controller(this.TransformerMode, this.StartingPoint, point, this.Layer1.StartingDestination, isRatio, isCenter);
                         Matrix3x2 matrix = Transformer.FindHomography(this.Layer1.StartingDestination, transformer);
 
                         this.Layer1.TransformMultiplies(matrix);
