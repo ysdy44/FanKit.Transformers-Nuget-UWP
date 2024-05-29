@@ -121,6 +121,28 @@ namespace FanKit.Transformers.TestApp
         {
             switch (this.SelectedIndex)
             {
+                case 0:
+                    {
+                        Matrix3x2 matrix = this.Layer.GetMatrix();
+                        this.M11.Text = $"{matrix.M11}"; this.M12.Text = $"{matrix.M12}"; this.M13.Text = "0";
+                        this.M21.Text = $"{matrix.M21}"; this.M22.Text = $"{matrix.M22}"; this.M23.Text = "0";
+                        this.M31.Text = $"{matrix.M31}"; this.M32.Text = $"{matrix.M32}";
+
+                        args.DrawingSession.DrawImage(new Transform2DEffect
+                        {
+                            Source = this.Image,
+                            TransformMatrix = matrix,
+                        });
+
+                        Vector2 center = Vector2.Transform(this.Layer.Source.Center, matrix);
+                        args.DrawingSession.DrawLineDodgerBlue(this.Layer.Destination.LeftTop, center);
+                        args.DrawingSession.DrawLineDodgerBlue(this.Layer.Destination.RightTop, center);
+                        args.DrawingSession.DrawLineDodgerBlue(this.Layer.Destination.RightBottom, center);
+                        args.DrawingSession.DrawLineDodgerBlue(this.Layer.Destination.LeftBottom, center);
+                        args.DrawingSession.DrawBoundNodes(this.Layer.Destination);
+                        args.DrawingSession.DrawNode4(center);
+                    }
+                    break;
                 case 1:
                     {
                         Matrix4x4 matrix = this.Layer.GetMatrix3D();
@@ -147,28 +169,6 @@ namespace FanKit.Transformers.TestApp
                         args.DrawingSession.DrawNode4(center);
                     }
                     break;
-                case 0:
-                    {
-                        Matrix3x2 matrix = this.Layer.GetMatrix();
-                        this.M11.Text = $"{matrix.M11}"; this.M12.Text = $"{matrix.M12}"; this.M13.Text = "0";
-                        this.M21.Text = $"{matrix.M21}"; this.M22.Text = $"{matrix.M22}"; this.M23.Text = "0";
-                        this.M31.Text = $"{matrix.M31}"; this.M32.Text = $"{matrix.M32}";
-
-                        args.DrawingSession.DrawImage(new Transform2DEffect
-                        {
-                            Source = this.Image,
-                            TransformMatrix = matrix,
-                        });
-
-                        Vector2 center = Vector2.Transform(this.Layer.Source.Center, matrix);
-                        args.DrawingSession.DrawLineDodgerBlue(this.Layer.Destination.LeftTop, center);
-                        args.DrawingSession.DrawLineDodgerBlue(this.Layer.Destination.RightTop, center);
-                        args.DrawingSession.DrawLineDodgerBlue(this.Layer.Destination.RightBottom, center);
-                        args.DrawingSession.DrawLineDodgerBlue(this.Layer.Destination.LeftBottom, center);
-                        args.DrawingSession.DrawBoundNodes(this.Layer.Destination);
-                        args.DrawingSession.DrawNode4(center);
-                    }
-                    break;
                 default:
                     break;
             }
@@ -180,15 +180,6 @@ namespace FanKit.Transformers.TestApp
         {
             switch (this.SelectedIndex)
             {
-                case 1:
-                    {
-                        Transformer transformer = this.Layer.Destination;
-
-                        this.TransformerMode = Transformer.ContainsNodeMode(point, transformer, disabledRadian: true);
-
-                        this.CanvasControl.Invalidate();
-                    }
-                    break;
                 case 0:
                     {
                         Transformer transformer = this.Layer.Destination;
@@ -201,6 +192,15 @@ namespace FanKit.Transformers.TestApp
                         this.CanvasControl.Invalidate();
                     }
                     break;
+                case 1:
+                    {
+                        Transformer transformer = this.Layer.Destination;
+
+                        this.TransformerMode = Transformer.ContainsNodeMode(point, transformer, disabledRadian: true);
+
+                        this.CanvasControl.Invalidate();
+                    }
+                    break;
                 default:
                     break;
             }
@@ -209,6 +209,30 @@ namespace FanKit.Transformers.TestApp
         {
             switch (this.SelectedIndex)
             {
+                case 0:
+                    //Single layer.
+                    if (true)
+                    {
+                        bool isRatio = this.RatioButton.IsOn;
+                        bool isCenter = this.CenterButton.IsOn;
+
+                        Transformer transformer = Transformer.Controller(this.TransformerMode, this._startingPoint, point, this.Layer.StartingDestination, isRatio, isCenter);
+                        this.Layer.Destination = transformer;
+                    }
+                    //Multiple layer.
+                    else
+                    {
+                        bool isRatio = this.RatioButton.IsOn;
+                        bool isCenter = this.CenterButton.IsOn;
+
+                        Transformer transformer = Transformer.Controller(this.TransformerMode, this._startingPoint, point, this.Layer.StartingDestination, isRatio, isCenter);
+                        Matrix3x2 matrix = Transformer.FindHomography(this.Layer.StartingDestination, transformer);
+
+                        this.Layer.TransformMultiplies(matrix);
+                        //this.Layer2...
+                        //this.Layer3...
+                    }
+                    break;
                 case 1:
                     {
                         bool isConvexQuadrilateral = this.ConvexQuadrilateralButton.IsOn;
@@ -235,30 +259,6 @@ namespace FanKit.Transformers.TestApp
                                 default: break;
                             }
                         }
-                    }
-                    break;
-                case 0:
-                    //Single layer.
-                    if (true)
-                    {
-                        bool isRatio = this.RatioButton.IsOn;
-                        bool isCenter = this.CenterButton.IsOn;
-
-                        Transformer transformer = Transformer.Controller(this.TransformerMode, this._startingPoint, point, this.Layer.StartingDestination, isRatio, isCenter);
-                        this.Layer.Destination = transformer;
-                    }
-                    //Multiple layer.
-                    else
-                    {
-                        bool isRatio = this.RatioButton.IsOn;
-                        bool isCenter = this.CenterButton.IsOn;
-
-                        Transformer transformer = Transformer.Controller(this.TransformerMode, this._startingPoint, point, this.Layer.StartingDestination, isRatio, isCenter);
-                        Matrix3x2 matrix = Transformer.FindHomography(this.Layer.StartingDestination, transformer);
-
-                        this.Layer.TransformMultiplies(matrix);
-                        //this.Layer2...
-                        //this.Layer3...
                     }
                     break;
                 default:
