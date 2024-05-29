@@ -26,7 +26,7 @@ namespace FanKit.Transformers.TestApp
 
     public sealed partial class MainPage : Page
     {
-        bool Is3D => this.ComboBox.SelectedIndex != 0;
+        int SelectedIndex => this.ComboBox.SelectedIndex;
 
         private TransformerMode TransformerMode;
         private CanvasBitmap Image;
@@ -44,7 +44,7 @@ namespace FanKit.Transformers.TestApp
         {
             if (this.IsLoaded)
             {
-                bool is3D = this.Is3D;
+                bool is3D = this.SelectedIndex == 1;
                 this.RatioButton.IsEnabled = is3D is false;
                 this.CenterButton.IsEnabled = is3D is false;
                 this.ConvexQuadrilateralButton.IsEnabled = is3D;
@@ -119,51 +119,58 @@ namespace FanKit.Transformers.TestApp
 
         private void CanvasControl_Draw(CanvasControl sender, CanvasDrawEventArgs args)
         {
-            if (Is3D)
+            switch (this.SelectedIndex)
             {
-                Matrix4x4 matrix = this.Layer.GetMatrix3D();
-                this.M11.Text = $"{matrix.M11}"; this.M12.Text = $"{matrix.M12}"; this.M13.Text = $"{matrix.M14}";
-                this.M21.Text = $"{matrix.M21}"; this.M22.Text = $"{matrix.M22}"; this.M23.Text = $"{matrix.M24}";
-                this.M31.Text = $"{matrix.M41}"; this.M32.Text = $"{matrix.M42}";
+                case 1:
+                    {
+                        Matrix4x4 matrix = this.Layer.GetMatrix3D();
+                        this.M11.Text = $"{matrix.M11}"; this.M12.Text = $"{matrix.M12}"; this.M13.Text = $"{matrix.M14}";
+                        this.M21.Text = $"{matrix.M21}"; this.M22.Text = $"{matrix.M22}"; this.M23.Text = $"{matrix.M24}";
+                        this.M31.Text = $"{matrix.M41}"; this.M32.Text = $"{matrix.M42}";
 
-                args.DrawingSession.DrawImage(new Transform3DEffect
-                {
-                    Source = this.Image,
-                    TransformMatrix = matrix
-                });
+                        args.DrawingSession.DrawImage(new Transform3DEffect
+                        {
+                            Source = this.Image,
+                            TransformMatrix = matrix
+                        });
 
-                Vector2 center = Transform3D(this.Layer.Source.Center, matrix);
-                args.DrawingSession.DrawBound(this.Layer.Destination);
-                args.DrawingSession.DrawLineDodgerBlue(this.Layer.Destination.LeftTop, center);
-                args.DrawingSession.DrawLineDodgerBlue(this.Layer.Destination.RightTop, center);
-                args.DrawingSession.DrawLineDodgerBlue(this.Layer.Destination.RightBottom, center);
-                args.DrawingSession.DrawLineDodgerBlue(this.Layer.Destination.LeftBottom, center);
-                args.DrawingSession.DrawNode2(this.Layer.Destination.LeftTop);
-                args.DrawingSession.DrawNode2(this.Layer.Destination.RightTop);
-                args.DrawingSession.DrawNode2(this.Layer.Destination.RightBottom);
-                args.DrawingSession.DrawNode2(this.Layer.Destination.LeftBottom);
-                args.DrawingSession.DrawNode4(center);
-            }
-            else
-            {
-                Matrix3x2 matrix = this.Layer.GetMatrix();
-                this.M11.Text = $"{matrix.M11}"; this.M12.Text = $"{matrix.M12}"; this.M13.Text = "0";
-                this.M21.Text = $"{matrix.M21}"; this.M22.Text = $"{matrix.M22}"; this.M23.Text = "0";
-                this.M31.Text = $"{matrix.M31}"; this.M32.Text = $"{matrix.M32}";
+                        Vector2 center = Transform3D(this.Layer.Source.Center, matrix);
+                        args.DrawingSession.DrawBound(this.Layer.Destination);
+                        args.DrawingSession.DrawLineDodgerBlue(this.Layer.Destination.LeftTop, center);
+                        args.DrawingSession.DrawLineDodgerBlue(this.Layer.Destination.RightTop, center);
+                        args.DrawingSession.DrawLineDodgerBlue(this.Layer.Destination.RightBottom, center);
+                        args.DrawingSession.DrawLineDodgerBlue(this.Layer.Destination.LeftBottom, center);
+                        args.DrawingSession.DrawNode2(this.Layer.Destination.LeftTop);
+                        args.DrawingSession.DrawNode2(this.Layer.Destination.RightTop);
+                        args.DrawingSession.DrawNode2(this.Layer.Destination.RightBottom);
+                        args.DrawingSession.DrawNode2(this.Layer.Destination.LeftBottom);
+                        args.DrawingSession.DrawNode4(center);
+                    }
+                    break;
+                case 0:
+                    {
+                        Matrix3x2 matrix = this.Layer.GetMatrix();
+                        this.M11.Text = $"{matrix.M11}"; this.M12.Text = $"{matrix.M12}"; this.M13.Text = "0";
+                        this.M21.Text = $"{matrix.M21}"; this.M22.Text = $"{matrix.M22}"; this.M23.Text = "0";
+                        this.M31.Text = $"{matrix.M31}"; this.M32.Text = $"{matrix.M32}";
 
-                args.DrawingSession.DrawImage(new Transform2DEffect
-                {
-                    Source = this.Image,
-                    TransformMatrix = matrix,
-                });
+                        args.DrawingSession.DrawImage(new Transform2DEffect
+                        {
+                            Source = this.Image,
+                            TransformMatrix = matrix,
+                        });
 
-                Vector2 center = Vector2.Transform(this.Layer.Source.Center, matrix);
-                args.DrawingSession.DrawLineDodgerBlue(this.Layer.Destination.LeftTop, center);
-                args.DrawingSession.DrawLineDodgerBlue(this.Layer.Destination.RightTop, center);
-                args.DrawingSession.DrawLineDodgerBlue(this.Layer.Destination.RightBottom, center);
-                args.DrawingSession.DrawLineDodgerBlue(this.Layer.Destination.LeftBottom, center);
-                args.DrawingSession.DrawBoundNodes(this.Layer.Destination);
-                args.DrawingSession.DrawNode4(center);
+                        Vector2 center = Vector2.Transform(this.Layer.Source.Center, matrix);
+                        args.DrawingSession.DrawLineDodgerBlue(this.Layer.Destination.LeftTop, center);
+                        args.DrawingSession.DrawLineDodgerBlue(this.Layer.Destination.RightTop, center);
+                        args.DrawingSession.DrawLineDodgerBlue(this.Layer.Destination.RightBottom, center);
+                        args.DrawingSession.DrawLineDodgerBlue(this.Layer.Destination.LeftBottom, center);
+                        args.DrawingSession.DrawBoundNodes(this.Layer.Destination);
+                        args.DrawingSession.DrawNode4(center);
+                    }
+                    break;
+                default:
+                    break;
             }
         }
 
@@ -171,65 +178,91 @@ namespace FanKit.Transformers.TestApp
 
         private void CanvasOperator_Single_Start(Vector2 point, InputDevice device, PointerPointProperties properties)
         {
-            Transformer transformer = this.Layer.Destination;
+            switch (this.SelectedIndex)
+            {
+                case 1:
+                    {
+                        Transformer transformer = this.Layer.Destination;
 
-            this._startingPoint = point;
+                        this.TransformerMode = Transformer.ContainsNodeMode(point, transformer, disabledRadian: true);
 
-            this.TransformerMode = Transformer.ContainsNodeMode(point, transformer, Is3D);
-            this.Layer.CacheTransform();
+                        this.CanvasControl.Invalidate();
+                    }
+                    break;
+                case 0:
+                    {
+                        Transformer transformer = this.Layer.Destination;
 
-            this.CanvasControl.Invalidate();
+                        this._startingPoint = point;
+
+                        this.TransformerMode = Transformer.ContainsNodeMode(point, transformer, disabledRadian: false);
+                        this.Layer.CacheTransform();
+
+                        this.CanvasControl.Invalidate();
+                    }
+                    break;
+                default:
+                    break;
+            }
         }
         private void CanvasOperator_Single_Delta(Vector2 point, InputDevice device, PointerPointProperties properties)
         {
-            if (Is3D)
+            switch (this.SelectedIndex)
             {
-                bool isConvexQuadrilateral = this.ConvexQuadrilateralButton.IsOn;
-                if (isConvexQuadrilateral)
-                {
-                    Transformer t = this.Layer.StartingDestination;
-                    switch (this.TransformerMode)
+                case 1:
                     {
-                        case TransformerMode.ScaleLeftTop: this.Layer.Destination.LeftTop = MovePointOnConvexQuadrilateral(point, t.LeftTop, t.RightTop, t.RightBottom, t.LeftBottom, 8); break;
-                        case TransformerMode.ScaleRightTop: this.Layer.Destination.RightTop = MovePointOnConvexQuadrilateral(point, t.RightTop, t.RightBottom, t.LeftBottom, t.LeftTop, 8); break;
-                        case TransformerMode.ScaleRightBottom: this.Layer.Destination.RightBottom = MovePointOnConvexQuadrilateral(point, t.RightBottom, t.LeftBottom, t.LeftTop, t.RightTop, 8); break;
-                        case TransformerMode.ScaleLeftBottom: this.Layer.Destination.LeftBottom = MovePointOnConvexQuadrilateral(point, t.LeftBottom, t.LeftTop, t.RightTop, t.RightBottom, 8); break;
-                        default: break;
+                        bool isConvexQuadrilateral = this.ConvexQuadrilateralButton.IsOn;
+                        if (isConvexQuadrilateral)
+                        {
+                            Transformer t = this.Layer.StartingDestination;
+                            switch (this.TransformerMode)
+                            {
+                                case TransformerMode.ScaleLeftTop: this.Layer.Destination.LeftTop = MovePointOnConvexQuadrilateral(point, t.LeftTop, t.RightTop, t.RightBottom, t.LeftBottom, 8); break;
+                                case TransformerMode.ScaleRightTop: this.Layer.Destination.RightTop = MovePointOnConvexQuadrilateral(point, t.RightTop, t.RightBottom, t.LeftBottom, t.LeftTop, 8); break;
+                                case TransformerMode.ScaleRightBottom: this.Layer.Destination.RightBottom = MovePointOnConvexQuadrilateral(point, t.RightBottom, t.LeftBottom, t.LeftTop, t.RightTop, 8); break;
+                                case TransformerMode.ScaleLeftBottom: this.Layer.Destination.LeftBottom = MovePointOnConvexQuadrilateral(point, t.LeftBottom, t.LeftTop, t.RightTop, t.RightBottom, 8); break;
+                                default: break;
+                            }
+                        }
+                        else
+                        {
+                            switch (this.TransformerMode)
+                            {
+                                case TransformerMode.ScaleLeftTop: this.Layer.Destination.LeftTop = point; break;
+                                case TransformerMode.ScaleRightTop: this.Layer.Destination.RightTop = point; break;
+                                case TransformerMode.ScaleRightBottom: this.Layer.Destination.RightBottom = point; break;
+                                case TransformerMode.ScaleLeftBottom: this.Layer.Destination.LeftBottom = point; break;
+                                default: break;
+                            }
+                        }
                     }
-                }
-                else
-                {
-                    switch (this.TransformerMode)
+                    break;
+                case 0:
+                    //Single layer.
+                    if (true)
                     {
-                        case TransformerMode.ScaleLeftTop: this.Layer.Destination.LeftTop = point; break;
-                        case TransformerMode.ScaleRightTop: this.Layer.Destination.RightTop = point; break;
-                        case TransformerMode.ScaleRightBottom: this.Layer.Destination.RightBottom = point; break;
-                        case TransformerMode.ScaleLeftBottom: this.Layer.Destination.LeftBottom = point; break;
-                        default: break;
+                        bool isRatio = this.RatioButton.IsOn;
+                        bool isCenter = this.CenterButton.IsOn;
+
+                        Transformer transformer = Transformer.Controller(this.TransformerMode, this._startingPoint, point, this.Layer.StartingDestination, isRatio, isCenter);
+                        this.Layer.Destination = transformer;
                     }
-                }
-            }
-            //Single layer.
-            else if (true)
-            {
-                bool isRatio = this.RatioButton.IsOn;
-                bool isCenter = this.CenterButton.IsOn;
+                    //Multiple layer.
+                    else
+                    {
+                        bool isRatio = this.RatioButton.IsOn;
+                        bool isCenter = this.CenterButton.IsOn;
 
-                Transformer transformer = Transformer.Controller(this.TransformerMode, this._startingPoint, point, this.Layer.StartingDestination, isRatio, isCenter);
-                this.Layer.Destination = transformer;
-            }
-            //Multiple layer.
-            else
-            {
-                bool isRatio = this.RatioButton.IsOn;
-                bool isCenter = this.CenterButton.IsOn;
+                        Transformer transformer = Transformer.Controller(this.TransformerMode, this._startingPoint, point, this.Layer.StartingDestination, isRatio, isCenter);
+                        Matrix3x2 matrix = Transformer.FindHomography(this.Layer.StartingDestination, transformer);
 
-                Transformer transformer = Transformer.Controller(this.TransformerMode, this._startingPoint, point, this.Layer.StartingDestination, isRatio, isCenter);
-                Matrix3x2 matrix = Transformer.FindHomography(this.Layer.StartingDestination, transformer);
-
-                this.Layer.TransformMultiplies(matrix);
-                //this.Layer2...
-                //this.Layer3...
+                        this.Layer.TransformMultiplies(matrix);
+                        //this.Layer2...
+                        //this.Layer3...
+                    }
+                    break;
+                default:
+                    break;
             }
 
             this.CanvasControl.Invalidate();
