@@ -140,10 +140,14 @@
     <Compile Include="Interface\IGetActualTransformer.cs" />
     <Compile Include="Interface\ITransformerGeometry.cs" />
     <Compile Include="Interface\ITransformerLTRB.cs" />
+    <Compile Include="Nodes\EachControlPointAngleMode.cs" />
+    <Compile Include="Nodes\EachControlPointLengthMode.cs" />
     <Compile Include="Nodes\Node.Operation.cs" />
     <Compile Include="Nodes\Node.Contained.cs" />
     <Compile Include="Nodes\Node.Mode.cs" />
     <Compile Include="Nodes\Node.Controller.cs" />
+    <Compile Include="Nodes\SelfControlPointMode.cs" />
+    <Compile Include="Others\InputDevice.cs" />
     <Compile Include="Others\MarqueeTool.cs" />
     <Compile Include="Nodes\Node.cs" />
     <Compile Include="Others\CanvasOperator.cs" />
@@ -159,6 +163,7 @@
     <Compile Include="Enums\InverseMatrixTransformerMode.cs" />
     <Compile Include="Others\LineDistance.cs" />
     <Compile Include="Enums\MatrixTransformerMode.cs" />
+    <Compile Include="Others\TouchMode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controls\RemoteControl.xaml.cs">
       <DependentUpon>RemoteControl.xaml</DependentUpon>
@@ -175,13 +180,13 @@
     <Compile Include="Transformer.cs" />
     <Compile Include="Transformer.Geometry.cs" />
     <Compile Include="Transformer.Homography.cs" />
-    <Compile Include="Transformer.Mode.cs" />
     <Compile Include="Math.cs" />
     <Compile Include="Snappings\1.SnapBase.cs" />
     <Compile Include="Transformer.XYWHRS.cs" />
     <Compile Include="TransformerBorders\TransformerBorder.cs" />
     <Compile Include="TransformerBorders\TransformerBorder.Property.cs" />
     <Compile Include="Snappings\3.BorderBorderSnap.cs" />
+    <Compile Include="TransformerGeometrys\GeometryArrowTailType.cs" />
     <Compile Include="TransformerGeometrys\TransformerGeometry.0.cs" />
     <Compile Include="TransformerGeometrys\TransformerGeometry.1.cs" />
     <Compile Include="TransformerGeometrys\TransformerGeometry.2.cs" />

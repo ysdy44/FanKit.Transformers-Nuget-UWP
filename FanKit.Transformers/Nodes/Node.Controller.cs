@@ -2,47 +2,6 @@
 
 namespace FanKit.Transformers
 {
-    /// <summary>
-    /// Mode of restriction by self control point.
-    /// </summary>
-    public enum SelfControlPointMode
-    {
-        /// <summary> Normal. </summary>
-        None,
-        /// <summary> No change the angle. </summary>
-        Angle,
-        /// <summary> No change the length. </summary>
-        Length,
-        /// <summary> Disable control point. </summary>
-        Disable,
-    }
-
-    /// <summary>
-    /// Mode of length by each control point.
-    /// </summary>
-    public enum EachControlPointLengthMode
-    {
-        /// <summary> Normal. </summary>
-        None,
-        /// <summary> Equal length. </summary>
-        Equal,
-        /// <summary> Ratio length. </summary>
-        Ratio,
-    }
-
-    /// <summary>
-    /// Mode of angle by each control point.
-    /// </summary>
-    public enum EachControlPointAngleMode
-    {
-        /// <summary> Normal. </summary>
-        None,
-        /// <summary> Origin symmetry. </summary>
-        Asymmetric,
-        /// <summary> Fixe angle. </summary>
-        Fixed,
-    }
-
     partial class Node
     {
 
