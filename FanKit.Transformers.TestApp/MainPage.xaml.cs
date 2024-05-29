@@ -68,6 +68,14 @@ namespace FanKit.Transformers.TestApp
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            if (this.IsLoaded)
+            {
+                bool is3D = this.Is3D;
+                this.RatioButton.IsEnabled = is3D is false;
+                this.CenterButton.IsEnabled = is3D is false;
+                this.ConvexQuadrilateralButton.IsEnabled = is3D;
+            }
+
             if (this.CanvasControl.ReadyToDraw)
             {
                 this.Layer.Resize((float)base.ActualWidth, (float)base.ActualHeight);

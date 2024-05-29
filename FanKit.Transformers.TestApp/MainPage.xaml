@@ -41,7 +41,7 @@
                         <Setter Property="FontSize" Value="20" />
                     </Style>
                 </ItemsControl.ItemContainerStyle>
-                <ComboBoxItem x:Name="AffineItem">
+                <ComboBoxItem>
                     <FrameworkElement.Tag>
                         <PointCollection>
                             60,0
@@ -52,7 +52,7 @@
                     </FrameworkElement.Tag>
                     Affine Transform
                 </ComboBoxItem>
-                <ComboBoxItem x:Name="NonAffineItem">
+                <ComboBoxItem>
                     <FrameworkElement.Tag>
                         <PointCollection>
                             40,0
@@ -64,15 +64,19 @@
                     Non-Affine Transform
                 </ComboBoxItem>
             </ComboBox>
-            <StackPanel Visibility="{x:Bind AffineItem.IsSelected, Mode=OneWay}">
-                <TextBlock Text="Ratio"/>
+            <StackPanel>
+                <TextBlock>
+                    Ratio
+                </TextBlock>
                 <ToggleSwitch x:Name="RatioButton"/>
-                <TextBlock Text="Center"/>
+                <TextBlock>
+                    Center
+                </TextBlock>
                 <ToggleSwitch x:Name="CenterButton"/>
-            </StackPanel>
-            <StackPanel Visibility="{x:Bind NonAffineItem.IsSelected, Mode=OneWay}">
-                <TextBlock Text="Convex Quadrilateral"/>
-                <ToggleSwitch x:Name="ConvexQuadrilateralButton" IsOn="True"/>
+                <TextBlock>
+                    Convex Quadrilateral
+                </TextBlock>
+                <ToggleSwitch x:Name="ConvexQuadrilateralButton" IsEnabled="False" IsOn="True"/>
             </StackPanel>
         </StackPanel>
 
