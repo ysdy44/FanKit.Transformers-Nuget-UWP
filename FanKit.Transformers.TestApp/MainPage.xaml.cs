@@ -10,18 +10,25 @@ using Windows.UI.Xaml.Controls;
 
 namespace FanKit.Transformers.TestApp
 {
-    public class Layer : ICacheTransform
+    public class Layer1 : ICacheTransform
     {
         public TransformerRect Source;
         public Transformer Destination;
         public Transformer StartingDestination;
 
         public Matrix3x2 GetMatrix() => Transformer.FindHomography(this.Source, this.Destination);
-        public Matrix4x4 GetMatrix3D() => Transformer.FindHomography3D(this.Source, this.Destination);
 
         public void CacheTransform() => this.StartingDestination = this.Destination;
         public void TransformMultiplies(Matrix3x2 matrix) => this.Destination = this.StartingDestination * matrix;
         public void TransformAdd(Vector2 vector) => this.Destination = this.StartingDestination + vector;
+    }
+
+    public class Layer2
+    {
+        public TransformerRect Source;
+        public Transformer Destination;
+
+        public Matrix4x4 GetMatrix3D() => Transformer.FindHomography3D(this.Source, this.Destination);
     }
 
     public sealed partial class MainPage : Page
@@ -31,7 +38,8 @@ namespace FanKit.Transformers.TestApp
         private TransformerMode TransformerMode;
         private CanvasBitmap Image;
 
-        readonly Layer Layer = new Layer();
+        readonly Layer1 Layer1 = new Layer1();
+        readonly Layer2 Layer2 = new Layer2();
 
         Vector2 _startingPoint;
 
@@ -82,11 +90,13 @@ namespace FanKit.Transformers.TestApp
                 LeftBottom = new Vector2(centerX - bitmapWidthOver2, centerY + bitmapHeightOver2),
             };
 
-            this.Layer.Source = rect;
+            this.Layer1.Source = rect;
+            this.Layer2.Source = rect;
 
-            this.Layer.StartingDestination = transformer;
+            this.Layer1.StartingDestination = transformer;
 
-            this.Layer.Destination = transformer;
+            this.Layer1.Destination = transformer;
+            this.Layer2.Destination = transformer;
         }
 
         /*
@@ -123,7 +133,7 @@ namespace FanKit.Transformers.TestApp
             {
                 case 0:
                     {
-                        Matrix3x2 matrix = this.Layer.GetMatrix();
+                        Matrix3x2 matrix = this.Layer1.GetMatrix();
                         this.M11.Text = $"{matrix.M11}"; this.M12.Text = $"{matrix.M12}"; this.M13.Text = "0";
                         this.M21.Text = $"{matrix.M21}"; this.M22.Text = $"{matrix.M22}"; this.M23.Text = "0";
                         this.M31.Text = $"{matrix.M31}"; this.M32.Text = $"{matrix.M32}";
@@ -134,18 +144,18 @@ namespace FanKit.Transformers.TestApp
                             TransformMatrix = matrix,
                         });
 
-                        Vector2 center = Vector2.Transform(this.Layer.Source.Center, matrix);
-                        args.DrawingSession.DrawLineDodgerBlue(this.Layer.Destination.LeftTop, center);
-                        args.DrawingSession.DrawLineDodgerBlue(this.Layer.Destination.RightTop, center);
-                        args.DrawingSession.DrawLineDodgerBlue(this.Layer.Destination.RightBottom, center);
-                        args.DrawingSession.DrawLineDodgerBlue(this.Layer.Destination.LeftBottom, center);
-                        args.DrawingSession.DrawBoundNodes(this.Layer.Destination);
+                        Vector2 center = Vector2.Transform(this.Layer1.Source.Center, matrix);
+                        args.DrawingSession.DrawLineDodgerBlue(this.Layer1.Destination.LeftTop, center);
+                        args.DrawingSession.DrawLineDodgerBlue(this.Layer1.Destination.RightTop, center);
+                        args.DrawingSession.DrawLineDodgerBlue(this.Layer1.Destination.RightBottom, center);
+                        args.DrawingSession.DrawLineDodgerBlue(this.Layer1.Destination.LeftBottom, center);
+                        args.DrawingSession.DrawBoundNodes(this.Layer1.Destination);
                         args.DrawingSession.DrawNode4(center);
                     }
                     break;
                 case 1:
                     {
-                        Matrix4x4 matrix = this.Layer.GetMatrix3D();
+                        Matrix4x4 matrix = this.Layer2.GetMatrix3D();
                         this.M11.Text = $"{matrix.M11}"; this.M12.Text = $"{matrix.M12}"; this.M13.Text = $"{matrix.M14}";
                         this.M21.Text = $"{matrix.M21}"; this.M22.Text = $"{matrix.M22}"; this.M23.Text = $"{matrix.M24}";
                         this.M31.Text = $"{matrix.M41}"; this.M32.Text = $"{matrix.M42}";
@@ -156,16 +166,16 @@ namespace FanKit.Transformers.TestApp
                             TransformMatrix = matrix
                         });
 
-                        Vector2 center = Transform3D(this.Layer.Source.Center, matrix);
-                        args.DrawingSession.DrawBound(this.Layer.Destination);
-                        args.DrawingSession.DrawLineDodgerBlue(this.Layer.Destination.LeftTop, center);
-                        args.DrawingSession.DrawLineDodgerBlue(this.Layer.Destination.RightTop, center);
-                        args.DrawingSession.DrawLineDodgerBlue(this.Layer.Destination.RightBottom, center);
-                        args.DrawingSession.DrawLineDodgerBlue(this.Layer.Destination.LeftBottom, center);
-                        args.DrawingSession.DrawNode2(this.Layer.Destination.LeftTop);
-                        args.DrawingSession.DrawNode2(this.Layer.Destination.RightTop);
-                        args.DrawingSession.DrawNode2(this.Layer.Destination.RightBottom);
-                        args.DrawingSession.DrawNode2(this.Layer.Destination.LeftBottom);
+                        Vector2 center = Transform3D(this.Layer2.Source.Center, matrix);
+                        args.DrawingSession.DrawBound(this.Layer2.Destination);
+                        args.DrawingSession.DrawLineDodgerBlue(this.Layer2.Destination.LeftTop, center);
+                        args.DrawingSession.DrawLineDodgerBlue(this.Layer2.Destination.RightTop, center);
+                        args.DrawingSession.DrawLineDodgerBlue(this.Layer2.Destination.RightBottom, center);
+                        args.DrawingSession.DrawLineDodgerBlue(this.Layer2.Destination.LeftBottom, center);
+                        args.DrawingSession.DrawNode2(this.Layer2.Destination.LeftTop);
+                        args.DrawingSession.DrawNode2(this.Layer2.Destination.RightTop);
+                        args.DrawingSession.DrawNode2(this.Layer2.Destination.RightBottom);
+                        args.DrawingSession.DrawNode2(this.Layer2.Destination.LeftBottom);
                         args.DrawingSession.DrawNode4(center);
                     }
                     break;
@@ -182,19 +192,19 @@ namespace FanKit.Transformers.TestApp
             {
                 case 0:
                     {
-                        Transformer transformer = this.Layer.Destination;
+                        Transformer transformer = this.Layer1.Destination;
 
                         this._startingPoint = point;
 
                         this.TransformerMode = Transformer.ContainsNodeMode(point, transformer, disabledRadian: false);
-                        this.Layer.CacheTransform();
+                        this.Layer1.CacheTransform();
 
                         this.CanvasControl.Invalidate();
                     }
                     break;
                 case 1:
                     {
-                        Transformer transformer = this.Layer.Destination;
+                        Transformer transformer = this.Layer2.Destination;
 
                         this.TransformerMode = Transformer.ContainsNodeMode(point, transformer, disabledRadian: true);
 
@@ -216,8 +226,8 @@ namespace FanKit.Transformers.TestApp
                         bool isRatio = this.RatioButton.IsOn;
                         bool isCenter = this.CenterButton.IsOn;
 
-                        Transformer transformer = Transformer.Controller(this.TransformerMode, this._startingPoint, point, this.Layer.StartingDestination, isRatio, isCenter);
-                        this.Layer.Destination = transformer;
+                        Transformer transformer = Transformer.Controller(this.TransformerMode, this._startingPoint, point, this.Layer1.StartingDestination, isRatio, isCenter);
+                        this.Layer1.Destination = transformer;
                     }
                     //Multiple layer.
                     else
@@ -225,10 +235,10 @@ namespace FanKit.Transformers.TestApp
                         bool isRatio = this.RatioButton.IsOn;
                         bool isCenter = this.CenterButton.IsOn;
 
-                        Transformer transformer = Transformer.Controller(this.TransformerMode, this._startingPoint, point, this.Layer.StartingDestination, isRatio, isCenter);
-                        Matrix3x2 matrix = Transformer.FindHomography(this.Layer.StartingDestination, transformer);
+                        Transformer transformer = Transformer.Controller(this.TransformerMode, this._startingPoint, point, this.Layer1.StartingDestination, isRatio, isCenter);
+                        Matrix3x2 matrix = Transformer.FindHomography(this.Layer1.StartingDestination, transformer);
 
-                        this.Layer.TransformMultiplies(matrix);
+                        this.Layer1.TransformMultiplies(matrix);
                         //this.Layer2...
                         //this.Layer3...
                     }
@@ -238,13 +248,13 @@ namespace FanKit.Transformers.TestApp
                         bool isConvexQuadrilateral = this.ConvexQuadrilateralButton.IsOn;
                         if (isConvexQuadrilateral)
                         {
-                            Transformer t = this.Layer.StartingDestination;
+                            Transformer t = this.Layer2.Destination;
                             switch (this.TransformerMode)
                             {
-                                case TransformerMode.ScaleLeftTop: this.Layer.Destination.LeftTop = MovePointOnConvexQuadrilateral(point, t.LeftTop, t.RightTop, t.RightBottom, t.LeftBottom, 8); break;
-                                case TransformerMode.ScaleRightTop: this.Layer.Destination.RightTop = MovePointOnConvexQuadrilateral(point, t.RightTop, t.RightBottom, t.LeftBottom, t.LeftTop, 8); break;
-                                case TransformerMode.ScaleRightBottom: this.Layer.Destination.RightBottom = MovePointOnConvexQuadrilateral(point, t.RightBottom, t.LeftBottom, t.LeftTop, t.RightTop, 8); break;
-                                case TransformerMode.ScaleLeftBottom: this.Layer.Destination.LeftBottom = MovePointOnConvexQuadrilateral(point, t.LeftBottom, t.LeftTop, t.RightTop, t.RightBottom, 8); break;
+                                case TransformerMode.ScaleLeftTop: this.Layer2.Destination.LeftTop = MovePointOnConvexQuadrilateral(point, t.LeftTop, t.RightTop, t.RightBottom, t.LeftBottom, 8); break;
+                                case TransformerMode.ScaleRightTop: this.Layer2.Destination.RightTop = MovePointOnConvexQuadrilateral(point, t.RightTop, t.RightBottom, t.LeftBottom, t.LeftTop, 8); break;
+                                case TransformerMode.ScaleRightBottom: this.Layer2.Destination.RightBottom = MovePointOnConvexQuadrilateral(point, t.RightBottom, t.LeftBottom, t.LeftTop, t.RightTop, 8); break;
+                                case TransformerMode.ScaleLeftBottom: this.Layer2.Destination.LeftBottom = MovePointOnConvexQuadrilateral(point, t.LeftBottom, t.LeftTop, t.RightTop, t.RightBottom, 8); break;
                                 default: break;
                             }
                         }
@@ -252,10 +262,10 @@ namespace FanKit.Transformers.TestApp
                         {
                             switch (this.TransformerMode)
                             {
-                                case TransformerMode.ScaleLeftTop: this.Layer.Destination.LeftTop = point; break;
-                                case TransformerMode.ScaleRightTop: this.Layer.Destination.RightTop = point; break;
-                                case TransformerMode.ScaleRightBottom: this.Layer.Destination.RightBottom = point; break;
-                                case TransformerMode.ScaleLeftBottom: this.Layer.Destination.LeftBottom = point; break;
+                                case TransformerMode.ScaleLeftTop: this.Layer2.Destination.LeftTop = point; break;
+                                case TransformerMode.ScaleRightTop: this.Layer2.Destination.RightTop = point; break;
+                                case TransformerMode.ScaleRightBottom: this.Layer2.Destination.RightBottom = point; break;
+                                case TransformerMode.ScaleLeftBottom: this.Layer2.Destination.LeftBottom = point; break;
                                 default: break;
                             }
                         }
