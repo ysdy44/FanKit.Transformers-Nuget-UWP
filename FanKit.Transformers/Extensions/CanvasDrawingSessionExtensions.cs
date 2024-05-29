@@ -103,6 +103,6 @@ namespace FanKit.Transformers
             drawingSession.DrawGeometry(canvasGeometry, Windows.UI.Colors.White);
         }
 
-        
+
     }
 }

@@ -4,7 +4,7 @@
     /// Mode of <see cref = "Transformer" />. 
     /// </summary>
     public enum TransformerMode
-    { 
+    {
         /// <summary> Normal. </summary>
         None,
 

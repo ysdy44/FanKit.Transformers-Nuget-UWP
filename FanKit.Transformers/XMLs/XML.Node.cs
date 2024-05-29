@@ -57,7 +57,7 @@ namespace FanKit.Transformers
         public static Node LoadNode(XElement element)
         {
             Node node = new Node();
-            
+
             if (element.Attribute("Type") is XAttribute type) node.Type = XML.CreateNodeType(type.Value);
 
             switch (node.Type)
@@ -69,11 +69,11 @@ namespace FanKit.Transformers
                         if (element.Attribute("IsSmooth") is XAttribute isSmooth) node.IsSmooth = (bool)isSmooth;
 
                         if (element.Element("Point") is XElement point)
-                            node.Point =           
-                                node.LeftControlPoint =                  
+                            node.Point =
+                                node.LeftControlPoint =
                                 node.RightControlPoint =
                                 XML.LoadVector2(point);
-                        
+
                         if (node.IsSmooth)
                         {
                             if (element.Element("LeftControlPoint") is XElement left) node.LeftControlPoint = XML.LoadVector2(left);

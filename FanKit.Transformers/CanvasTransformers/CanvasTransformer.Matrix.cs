@@ -4,7 +4,7 @@ namespace FanKit.Transformers
 {
     partial class CanvasTransformer
     {
-        
+
         // Matrix
         Matrix3x2 Matrix;
         Matrix3x2 CanvasToVirtualMatrix;

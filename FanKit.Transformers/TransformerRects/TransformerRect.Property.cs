@@ -22,7 +22,7 @@ namespace FanKit.Transformers
         /// <summary> Gets rectangle's center of X. </summary>
         public float CenterX { get; private set; }
         /// <summary> Gets rectangle's center of Y. </summary>
-        public float CenterY { get; private set; }        
+        public float CenterY { get; private set; }
         /// <summary> Gets rectangle's center point. </summary>
         public Vector2 Center { get; private set; }
 

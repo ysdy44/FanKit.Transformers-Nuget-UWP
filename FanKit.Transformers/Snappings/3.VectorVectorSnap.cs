@@ -55,6 +55,6 @@ namespace FanKit.Transformers
         protected override float YLeft() => System.Math.Min(base.Source.X, base.YDestination.X);
         /// <summary> Y-axis right. </summary>
         protected override float YRight() => System.Math.Max(base.Source.X, base.YDestination.X);
-                     
+
     }
 }

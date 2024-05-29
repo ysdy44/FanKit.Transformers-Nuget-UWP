@@ -19,7 +19,7 @@ namespace FanKit.Transformers
             // X Snap
             float gapLeft = pointX - destination.Left;
             if (System.Math.Abs(gapLeft) < base.NodeRadius)
-            {                
+            {
                 base.XSnap = destination.Left;
                 return true;
             }
@@ -28,7 +28,7 @@ namespace FanKit.Transformers
             // X Snap: Center
             float gapCenter = pointX - destination.CenterX;
             if (System.Math.Abs(gapCenter) < base.NodeRadius)
-            {                
+            {
                 base.XSnap = destination.CenterX;
                 return true;
             }
@@ -37,7 +37,7 @@ namespace FanKit.Transformers
             // X Snap: Right
             float gapRight = pointX - destination.Right;
             if (System.Math.Abs(gapRight) < base.NodeRadius)
-            {                
+            {
                 base.XSnap = destination.Right;
                 return true;
             }
@@ -91,6 +91,6 @@ namespace FanKit.Transformers
         protected override float YLeft() => System.Math.Min(base.Source.X, base.YDestination.Left);
         /// <summary> Y-axis right. </summary>
         protected override float YRight() => System.Math.Max(base.Source.X, base.YDestination.Right);
-        
+
     }
 }

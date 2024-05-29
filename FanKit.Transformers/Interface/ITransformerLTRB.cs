@@ -8,7 +8,7 @@ namespace FanKit.Transformers
     public interface ITransformerLTRB
     {
         /// <summary> Vector in LeftTop. </summary>
-         Vector2 LeftTop { get; }
+        Vector2 LeftTop { get; }
         /// <summary> Vector in RightTop. </summary>
         Vector2 RightTop { get; }
         /// <summary> Vector in RightBottom. </summary>

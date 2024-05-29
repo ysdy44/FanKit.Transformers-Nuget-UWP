@@ -39,7 +39,7 @@ namespace FanKit.Transformers
             this.CenterX = centerX;
             this.CenterY = centerY;
             this.Center = new Vector2(centerX, centerY);
-            
+
             this.CenterLeft = new Vector2(left, centerY);
             this.CenterTop = new Vector2(centerX, top);
             this.CenterRight = new Vector2(right, centerY);
@@ -104,7 +104,7 @@ namespace FanKit.Transformers
             this.RightBottom = new Vector2(right, bottom);
             this.LeftBottom = new Vector2(left, bottom);
         }
-        
+
         /// <summary>
         /// Initialize a <see cref = "TransformerRect" />.
         /// </summary>
@@ -143,12 +143,12 @@ namespace FanKit.Transformers
             this.RightBottom = new Vector2(right, bottom);
             this.LeftBottom = new Vector2(left, bottom);
         }
-   
+
 
         /// <summary>
         /// Turn to Rect.
         /// </summary>
         public Rect ToRect() => new Rect(this.Left, this.Top, this.Right - this.Left, this.Bottom - this.Top);
-        
+
     }
 }

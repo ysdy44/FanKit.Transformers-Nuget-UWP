@@ -169,7 +169,7 @@ namespace FanKit.Transformers
             Transformer zeroTransformer = new Transformer(horizontalHalf * 2, verticalHalf * 2, postion);
 
             Transformer transformer = Transformer.Multiplies(zeroTransformer, skewMatrix);
-          
+
 
             return Transformer.FindHomography(transformer, this);
         }

@@ -21,7 +21,7 @@ namespace FanKit.Transformers
         {
             bool zeroHoleRadius = holeRadius == 0;
             CanvasGeometry outter = TransformerGeometry.CreateEllipse(resourceCreator, transformer);
-       
+
             if (zeroHoleRadius)
                 return outter;
             else

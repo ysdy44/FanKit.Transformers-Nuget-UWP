@@ -60,7 +60,7 @@ namespace FanKit.Transformers
             node.LeftControlPoint = node.StartingLeftControlPoint + move;
             node.RightControlPoint = node.StartingRightControlPoint + move;
         }
-        
+
 
         /// <summary>
         /// It controls the transformation of node contol point.

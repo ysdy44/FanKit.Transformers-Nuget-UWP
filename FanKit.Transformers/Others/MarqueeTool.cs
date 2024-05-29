@@ -168,7 +168,7 @@ namespace FanKit.Transformers
             }
             return false;
         }
-                    
-          
+
+
     }
 }

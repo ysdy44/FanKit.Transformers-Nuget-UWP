@@ -29,7 +29,7 @@ namespace FanKit.Transformers
             this.SetSnapMove(move);
 
             Vector2 snapMove = this.GetSnapMove();
-           return move - snapMove;
+            return move - snapMove;
         }
 
         /// <summary>

@@ -103,7 +103,7 @@ namespace FanKit.Transformers
             }
             else if (base.IsYSnap)
             {
-                drawingSession.DrawNode2(Vector2.Transform(base.Source, matrix), Colors.LimeGreen); 
+                drawingSession.DrawNode2(Vector2.Transform(base.Source, matrix), Colors.LimeGreen);
             }
         }
 

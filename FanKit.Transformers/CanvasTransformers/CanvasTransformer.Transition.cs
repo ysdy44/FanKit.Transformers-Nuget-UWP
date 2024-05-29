@@ -5,7 +5,7 @@ namespace FanKit.Transformers
 {
     partial class CanvasTransformer
     {
-        
+
         Vector2 SourcePosition = new Vector2(100, 100);
         float SourceScale = 0.2f;
 
@@ -58,7 +58,7 @@ namespace FanKit.Transformers
             float scale = System.Math.Min(widthScale, heightScale);
             return scale;
         }
-        
+
         /// <summary>
         /// Make the matrix transition between source and destination.
         /// </summary>

@@ -80,7 +80,7 @@ namespace FanKit.Transformers
         /// <summary> Gets the selected items. </summary>
         public IEnumerable<Node> SelectedItems => from node in this where node.IsChecked select node;
 
-        
+
         /// <summary>
         /// Creates a new geometry.
         /// </summary>
