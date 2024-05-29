@@ -55,6 +55,9 @@ namespace FanKit.Transformers.TestApp
                 this.RatioButton.IsEnabled = this.SelectedIndex != 1;
                 this.CenterButton.IsEnabled = this.SelectedIndex != 1;
                 this.ConvexQuadrilateralButton.IsEnabled = this.SelectedIndex == 1;
+
+                this.M23.Opacity = this.SelectedIndex > 0 ? 1d : 0.5d;
+                this.M13.Opacity = this.SelectedIndex > 0 ? 1d : 0.5d;
             }
 
             if (this.CanvasControl.ReadyToDraw)

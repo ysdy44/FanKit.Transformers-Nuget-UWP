@@ -42,6 +42,9 @@
                     </Style>
                 </ItemsControl.ItemContainerStyle>
                 <ComboBoxItem>
+                    <UIElement.AccessKey>
+                        Matrix3x2
+                    </UIElement.AccessKey>
                     <FrameworkElement.Tag>
                         <PointCollection>
                             60,0
@@ -53,6 +56,9 @@
                     Affine Transform
                 </ComboBoxItem>
                 <ComboBoxItem>
+                    <UIElement.AccessKey>
+                        Matrix3x3
+                    </UIElement.AccessKey>
                     <FrameworkElement.Tag>
                         <PointCollection>
                             40,0
@@ -95,6 +101,9 @@
             </HyperlinkButton>
         </StackPanel>
 
+        <Border IsHitTestVisible="False" Margin="4,8,4,120" Width="292" Height="40" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+            <TextBlock IsHitTestVisible="False" FontSize="22" Text="{Binding ElementName=ComboBox, Path=SelectedItem.AccessKey, Mode=OneWay}"/>
+        </Border>
         <Grid IsHitTestVisible="False" Margin="4,8" BorderThickness="2,0" BorderBrush="{ThemeResource SystemColorControlAccentBrush}" HorizontalAlignment="Right" VerticalAlignment="Bottom" >
             <FrameworkElement.Resources>
                 <!--Style-->
@@ -117,15 +126,15 @@
 
             <TextBlock x:Name="M11" Grid.Column="0" Grid.Row="0">1</TextBlock>
             <TextBlock x:Name="M12" Grid.Column="1" Grid.Row="0">0</TextBlock>
-            <TextBlock x:Name="M13" Grid.Column="2" Grid.Row="0">0</TextBlock>
+            <TextBlock x:Name="M13" Opacity="0.5" Grid.Column="2" Grid.Row="0">0</TextBlock>
 
             <TextBlock x:Name="M21" Grid.Column="0" Grid.Row="1">0</TextBlock>
             <TextBlock x:Name="M22" Grid.Column="1" Grid.Row="1">1</TextBlock>
-            <TextBlock x:Name="M23" Grid.Column="2" Grid.Row="1">0</TextBlock>
+            <TextBlock x:Name="M23" Opacity="0.5" Grid.Column="2" Grid.Row="1">0</TextBlock>
 
             <TextBlock x:Name="M31" Grid.Column="0" Grid.Row="2">0</TextBlock>
             <TextBlock x:Name="M32" Grid.Column="1" Grid.Row="2">0</TextBlock>
-            <TextBlock Grid.Column="2" Grid.Row="2">1</TextBlock>
+            <TextBlock Opacity="0.5" Grid.Column="2" Grid.Row="2">1</TextBlock>
 
         </Grid>
 
