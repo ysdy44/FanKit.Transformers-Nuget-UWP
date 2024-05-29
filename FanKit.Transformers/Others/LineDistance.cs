@@ -26,7 +26,7 @@ namespace FanKit.Transformers
         //              D                                                          C                                                           P
         public LineDistance(Vector2 footPoint, Vector2 point, Vector2 center)
         {
-            var diagonal = center + center - point;
+            Vector2 diagonal = center + center - point;
 
             this.FC = Vector2.Distance(footPoint, center);
             this.FP = Vector2.Distance(footPoint, point);

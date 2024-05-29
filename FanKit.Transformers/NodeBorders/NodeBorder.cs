@@ -24,7 +24,7 @@ namespace FanKit.Transformers
         /// <returns> The product mode. </returns>
         public NodeRemoveMode GetRemoveMode()
         {
-            var mode = this.GetRemoveModeCore();
+            NodeRemoveMode mode = this.GetRemoveModeCore();
             this.Mode = mode;
             return mode;
         }

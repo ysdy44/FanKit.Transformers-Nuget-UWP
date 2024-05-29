@@ -59,7 +59,7 @@ namespace FanKit.Transformers
         /// <param name="nodeCollection"> The source NodeCollection. </param>
         /// <param name="matrix"> The matrix. </param>
         /// <returns> The NodeCollection mode. </returns>
-        public static NodeCollectionMode ContainsNodeCollectionMode(Vector2 point, NodeCollection nodeCollection,  Matrix3x2 matrix)
+        public static NodeCollectionMode ContainsNodeCollectionMode(Vector2 point, NodeCollection nodeCollection, Matrix3x2 matrix)
         {
             if (nodeCollection == null) throw new NullReferenceException("NodeCollection is null.");
 
