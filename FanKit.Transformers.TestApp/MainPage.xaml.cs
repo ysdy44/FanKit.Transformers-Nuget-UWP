@@ -12,37 +12,9 @@ namespace FanKit.Transformers.TestApp
 {
     public class Layer : ICacheTransform
     {
-        public CanvasBitmap Image;
         public TransformerRect Source;
         public Transformer Destination;
         public Transformer StartingDestination;
-
-        public void Resize(float windowWidth, float windowHeight)
-        {
-            CanvasBitmap bitmap = this.Image;
-            float width = bitmap.SizeInPixels.Width;
-            float height = bitmap.SizeInPixels.Height;
-
-            Vector2 center = new Vector2(windowWidth, windowHeight) / 2;
-            float widthScale = center.X / width;
-            float heightScale = center.Y / height;
-            float scale = System.Math.Min(widthScale, heightScale);
-
-            float bitmapWidth = scale * width;
-            float bitmapHeight = scale * height;
-
-            float bitmapWidthOver2 = 1.0f / 2.0f * bitmapWidth;
-            float bitmapHeightOver2 = 1.0f / 2.0f * bitmapHeight;
-
-            this.Source = new TransformerRect(width, height, Vector2.Zero);
-            this.StartingDestination = this.Destination = new Transformer
-            {
-                LeftTop = center + new Vector2(-bitmapWidthOver2, -bitmapHeightOver2),
-                RightTop = center + new Vector2(+bitmapWidthOver2, -bitmapHeightOver2),
-                RightBottom = center + new Vector2(+bitmapWidthOver2, +bitmapHeightOver2),
-                LeftBottom = center + new Vector2(-bitmapWidthOver2, +bitmapHeightOver2),
-            };
-        }
 
         public Matrix3x2 GetMatrix() => Transformer.FindHomography(this.Source, this.Destination);
         public Matrix4x4 GetMatrix3D() => Transformer.FindHomography3D(this.Source, this.Destination);
@@ -56,8 +28,10 @@ namespace FanKit.Transformers.TestApp
     {
         bool Is3D => this.ComboBox.SelectedIndex != 0;
 
-        public TransformerMode TransformerMode { get; private set; }
-        public Layer Layer { get; private set; }
+        private TransformerMode TransformerMode;
+        private CanvasBitmap Image;
+
+        readonly Layer Layer = new Layer();
 
         Vector2 _startingPoint;
 
@@ -78,7 +52,6 @@ namespace FanKit.Transformers.TestApp
 
             if (this.CanvasControl.ReadyToDraw)
             {
-                this.Layer.Resize((float)base.ActualWidth, (float)base.ActualHeight);
                 this.CanvasControl.Invalidate();
             }
         }
@@ -89,12 +62,31 @@ namespace FanKit.Transformers.TestApp
         }
         private async Task CreateResourcesAsync(CanvasControl sender)
         {
-            CanvasBitmap bitmap = await CanvasBitmap.LoadAsync(sender, "Icon/Avatar.jpg");
-            this.Layer = new Layer
+            this.Image = await CanvasBitmap.LoadAsync(sender, "Icon/Avatar.jpg");
+            float width = this.Image.SizeInPixels.Width;
+            float height = this.Image.SizeInPixels.Height;
+
+            float centerX = (float)base.ActualWidth / 2;
+            float centerY = (float)base.ActualHeight / 2;
+            float scale = System.Math.Min(centerX / width, centerY / height);
+
+            float bitmapWidthOver2 = scale * width / 2;
+            float bitmapHeightOver2 = scale * height / 2;
+
+            TransformerRect rect = new TransformerRect(width, height, Vector2.Zero);
+            Transformer transformer = new Transformer
             {
-                Image = bitmap
+                LeftTop = new Vector2(centerX - bitmapWidthOver2, centerY - bitmapHeightOver2),
+                RightTop = new Vector2(centerX + bitmapWidthOver2, centerY - bitmapHeightOver2),
+                RightBottom = new Vector2(centerX + bitmapWidthOver2, centerY + bitmapHeightOver2),
+                LeftBottom = new Vector2(centerX - bitmapWidthOver2, centerY + bitmapHeightOver2),
             };
-            this.Layer.Resize((float)base.ActualWidth, (float)base.ActualHeight);
+
+            this.Layer.Source = rect;
+
+            this.Layer.StartingDestination = transformer;
+
+            this.Layer.Destination = transformer;
         }
 
         /*
@@ -136,7 +128,7 @@ namespace FanKit.Transformers.TestApp
 
                 args.DrawingSession.DrawImage(new Transform3DEffect
                 {
-                    Source = this.Layer.Image,
+                    Source = this.Image,
                     TransformMatrix = matrix
                 });
 
@@ -161,7 +153,7 @@ namespace FanKit.Transformers.TestApp
 
                 args.DrawingSession.DrawImage(new Transform2DEffect
                 {
-                    Source = this.Layer.Image,
+                    Source = this.Image,
                     TransformMatrix = matrix,
                 });
 
