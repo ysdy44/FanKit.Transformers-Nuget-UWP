@@ -234,8 +234,8 @@
     <Compile Include="XMLs\XML.GeometryArrowTailTypeFactory.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Strings\cn\FanKit.Transformers.XML" />
-    <Content Include="Strings\en\FanKit.Transformers.XML" />
+    <Content Include="Strings\en-US\FanKit.Transformers.XML" />
+    <Content Include="Strings\zh-Hans\FanKit.Transformers.XML" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
