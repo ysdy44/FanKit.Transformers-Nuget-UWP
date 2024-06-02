@@ -1522,6 +1522,38 @@
     <member name="F:FanKit.Transformers.SelfControlPointMode.Disable">
       <summary> Disable control point. </summary>
     </member>
+    <member name="T:FanKit.Transformers.InputDevice">
+      <summary>
+        The input device type of <see cref="T:FanKit.Transformers.CanvasOperator"/>.
+      </summary>
+    </member>
+    <member name="F:FanKit.Transformers.InputDevice.None">
+      <summary> Normal. </summary>
+    </member>
+    <member name="F:FanKit.Transformers.InputDevice.Indeterminacy">
+      <summary> Indeterminacy. </summary>
+    </member>
+    <member name="F:FanKit.Transformers.InputDevice.Holding">
+      <summary> Holding. </summary>
+    </member>
+    <member name="F:FanKit.Transformers.InputDevice.SingleFinger">
+      <summary> One Finger. </summary>
+    </member>
+    <member name="F:FanKit.Transformers.InputDevice.DoubleFinger">
+      <summary> Two Fingers. </summary>
+    </member>
+    <member name="F:FanKit.Transformers.InputDevice.Pen">
+      <summary> Pen. </summary>
+    </member>
+    <member name="F:FanKit.Transformers.InputDevice.Eraser">
+      <summary> Eraser. </summary>
+    </member>
+    <member name="F:FanKit.Transformers.InputDevice.LeftButton">
+      <summary> Mouse-Left-Button. </summary>
+    </member>
+    <member name="F:FanKit.Transformers.InputDevice.RightButton">
+      <summary> Mouse-Right-Button. </summary>
+    </member>
     <member name="T:FanKit.Transformers.MarqueeTool">
       <summary>
         The marquee-tool that can make selections that are  rectangular and elliptical.
@@ -1658,38 +1690,6 @@
       <summary>
         Occurs when the incremental value of the pointer wheel changes.
       </summary>
-    </member>
-    <member name="T:FanKit.Transformers.InputDevice">
-      <summary>
-        The input device type of <see cref="T:FanKit.Transformers.CanvasOperator"/>.
-      </summary>
-    </member>
-    <member name="F:FanKit.Transformers.InputDevice.None">
-      <summary> Normal. </summary>
-    </member>
-    <member name="F:FanKit.Transformers.InputDevice.Indeterminacy">
-      <summary> Indeterminacy. </summary>
-    </member>
-    <member name="F:FanKit.Transformers.InputDevice.Holding">
-      <summary> Holding. </summary>
-    </member>
-    <member name="F:FanKit.Transformers.InputDevice.SingleFinger">
-      <summary> One Finger. </summary>
-    </member>
-    <member name="F:FanKit.Transformers.InputDevice.DoubleFinger">
-      <summary> Two Fingers. </summary>
-    </member>
-    <member name="F:FanKit.Transformers.InputDevice.Pen">
-      <summary> Pen. </summary>
-    </member>
-    <member name="F:FanKit.Transformers.InputDevice.Eraser">
-      <summary> Eraser. </summary>
-    </member>
-    <member name="F:FanKit.Transformers.InputDevice.LeftButton">
-      <summary> Mouse-Left-Button. </summary>
-    </member>
-    <member name="F:FanKit.Transformers.InputDevice.RightButton">
-      <summary> Mouse-Right-Button. </summary>
     </member>
     <member name="T:FanKit.Transformers.ICacheTransform">
       <summary>
