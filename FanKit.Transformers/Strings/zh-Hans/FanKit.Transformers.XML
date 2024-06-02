@@ -1610,20 +1610,24 @@
       <param name="isSquare"> </param>
       <returns> 如果选框蒙版需要重绘，则返回**true**，否则她的**false**。 </returns>
     </member>
-    <member name="T:FanKit.Transformers.CanvasOperator.SingleHandler">
+    <member name="T:FanKit.Transformers.SingleHandler">
       <summary>
         表示对 Single_Start，Single_Delta，Single_Complete 事件的处理的方法。
       </summary>
       <param name="point"> 接触点的位置。 </param>
+      <param name="device"> 当前输入设备。 </param>
       <param name="properties"> 接触点的属性。 </param>
     </member>
-    <member name="T:FanKit.Transformers.CanvasOperator.RightHandler">
+    <member name="T:FanKit.Transformers.RightHandler">
       <summary>
         表示处理 Right_Start，Right_Delta，Right_Complete 事件的方法。
-        <param name="point"> 鼠标指针的位置。 </param>
       </summary>
+      <param name="point"> 鼠标指针的位置。 </param>
+      <param name="isHolding">
+        <see cref="E:Windows.UI.Xaml.UIElement.Holding"/>。
+      </param>
     </member>
-    <member name="T:FanKit.Transformers.CanvasOperator.DoubleHandler">
+    <member name="T:FanKit.Transformers.DoubleHandler">
       <summary>
         表示处理Double_Start，Double_Delta，Double_Complete事件的方法。
       </summary>
