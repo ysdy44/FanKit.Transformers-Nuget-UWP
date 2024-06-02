@@ -108,7 +108,7 @@
       <param name="other">与此实例进行比较的 BitmapSize。 </param>
       <returns>如果另一个 BitmapSize 等于此实例，则返回**true**，否则返回**false**。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.CanvasTransformer.op_Equality(FanKit.Transformers.CanvasTransformer，W​​indows.Graphics.Imaging.BitmapSize)">
+    <member name="M:FanKit.Transformers.CanvasTransformer.op_Equality(FanKit.Transformers.CanvasTransformer,Windows.Graphics.Imaging.BitmapSize)">
       <summary>
         返回一个指示两个指定大小的每对元素是否相等的值。
       </summary>
@@ -116,7 +116,7 @@
       <param name="right">要比较的第二个 BitmapSize。 </param>
       <returns>如果左右相等则返回**true**，否则返回**false**。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.CanvasTransformer.op_Inequality(FanKit.Transformers.CanvasTransformer，W​​indows.Graphics.Imaging.BitmapSize)">
+    <member name="M:FanKit.Transformers.CanvasTransformer.op_Inequality(FanKit.Transformers.CanvasTransformer,Windows.Graphics.Imaging.BitmapSize)">
       <summary>
         返回一个布尔值，指示两个给定的大小是否相等。
       </summary>
@@ -474,7 +474,7 @@
         初始化节点集合。
       </summary>
     </member>
-    <member name="M:FanKit.Transformers.NodeCollection.#ctor(System.Collections.Generic.IEnumerable {FanKit.Transformers.Node})">
+    <member name="M:FanKit.Transformers.NodeCollection.#ctor(System.Collections.Generic.IEnumerable{FanKit.Transformers.Node})">
       <summary>
         初始化节点集合。
       </summary>
@@ -559,7 +559,7 @@
       </summary>
       <param name="nodeCollection">源节点集合。 </param>
     </member>
-    <member name="M:FanKit.Transformers.NodeCollection.ArrangeNodes(System.Collections.Generic.IList {FanKit.Transformers.Node})">
+    <member name="M:FanKit.Transformers.NodeCollection.ArrangeNodes(System.Collections.Generic.IList{FanKit.Transformers.Node})">
       <summary>
         排列所有卡住点的右控制点。
       </summary>
@@ -760,14 +760,14 @@
       <param name="radiusX">半径X。</param>
       <param name="radiusY">半径Y。</param>
     </member>
-    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawRectangleDodgerBlue(Microsoft.Graphics.Canvas.CanvasDrawingSession，Windows.Foundation.Rect)">
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawRectangleDodgerBlue(Microsoft.Graphics.Canvas.CanvasDrawingSession,Windows.Foundation.Rect)">
       <summary>
         画一个矩形带着兰色颜色。
       </summary>
       <param name="drawingSession">绘制会话。 </param>
       <param name="rect">矩形。 </param>
     </member>
-    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawThickRectangle(Microsoft.Graphics.Canvas.CanvasDrawingSession，Windows.Foundation.Rect)">
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawThickRectangle(Microsoft.Graphics.Canvas.CanvasDrawingSession,Windows.Foundation.Rect)">
       <summary>
         画一个粗矩形。
       </summary>
@@ -788,7 +788,7 @@
       <param name="drawingSession">绘制会话。 </param>
       <param name="canvasGeometry">画布几何形状。 </param>
     </member>
-    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawDottedLine(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers。 ,System.Single,System.Single)">
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawDottedLine(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.DottedLineBrush,FanKit.Transformers.DottedLineImage,System.Single,System.Single,System.Single,System.Single)">
       <summary>
         画虚线。
       </summary>
@@ -808,7 +808,7 @@
       <param name="drawingSession">绘制会话。 </param>
       <param name="point">点。 </param>
     </member>
-    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2，Windows.UI.Color)">
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2,Windows.UI.Color)">
       <summary>
         画一个⊙。
       </summary>
@@ -823,7 +823,7 @@
       <param name="drawingSession">绘制会话。 </param>
       <param name="point">点。 </param>
     </member>
-    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode2(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2，Windows.UI.Color)">
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode2(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2,Windows.UI.Color)">
       <summary>
         画一个◉。
       </summary>
@@ -838,7 +838,7 @@
       <param name="drawingSession">绘制会话。 </param>
       <param name="point">点。 </param>
     </member>
-    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode3(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2，Windows.UI.Color)">
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode3(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2,Windows.UI.Color)">
       <summary>
         画一个◻。
       </summary>
@@ -853,7 +853,7 @@
       <param name="drawingSession">绘制会话。 </param>
       <param name="point">点。 </param>
     </member>
-    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode4(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2，Windows.UI.Color)">
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode4(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2,Windows.UI.Color)">
       <summary>
         画一个◼。
       </summary>
@@ -868,7 +868,7 @@
       <param name="drawingSession">绘制会话。 </param>
       <param name="point">点。 </param>
     </member>
-    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode5(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2，Windows.UI.Color)">
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode5(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2,Windows.UI.Color)">
       <summary>
         画一个◌。
       </summary>
@@ -879,7 +879,7 @@
     <member name="F:FanKit.Transformers.CanvasDrawingSessionExtensions.ShadowColor">
       <summary>投影的颜色。默认值（A64 R0 G0 B0）。</summary>
     </member>
-    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrad(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasImage，Windows.Foundation.Rect,System.Single,System.Single)">
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrad(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasImage,Windows.Foundation.Rect,System.Single,System.Single)">
       <summary>
         画一张牌。
       </summary>
@@ -889,7 +889,7 @@
       <param name="shadowBlurAmount"> 投影模糊量。 </param>
       <param name="shadowOffset">阴影偏移量。 </param>
     </member>
-    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrad(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasImage，Windows.Foundation.Rect，Windows.UI.Color,System.Single,System.Single )">
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrad(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasImage,Windows.Foundation.Rect,Windows.UI.Color,System.Single,System.Single)">
       <summary>
         画一张牌。
       </summary>
@@ -900,7 +900,7 @@
       <param name="shadowBlurAmount"> 投影模糊量。 </param>
       <param name="shadowOffset">阴影偏移量。 </param>
     </member>
-    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrad(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasImage，Windows.Foundation.Rect,System.Numerics.Matrix3x2,System.Single,System.Single )">
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrad(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasImage,Windows.Foundation.Rect,System.Numerics.Matrix3x2,System.Single,System.Single)">
       <summary>
         画一张牌。
       </summary>
@@ -911,7 +911,7 @@
       <param name="shadowBlurAmount"> 投影模糊量。 </param>
       <param name="shadowOffset">阴影偏移量。 </param>
     </member>
-    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrad(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasImage，Windows.Foundation.Rect,System.Numerics.Matrix3x2，Windows.UI.Color,System .Single,System.Single)">
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrad(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasImage,Windows.Foundation.Rect,System.Numerics.Matrix3x2,Windows.UI.Color,System.Single,System.Single)">
       <summary>
         画一张牌。
       </summary>
@@ -933,7 +933,7 @@
       <param name="shadowBlurAmount"> 投影模糊量。 </param>
       <param name="shadowOffset">阴影偏移量</param>
     </member>
-    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCard(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasImage,FanKit.Transformers.CanvasTransformer，W​​indows.UI.Color,System.Single,System.Single )">
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCard(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasImage,FanKit.Transformers.CanvasTransformer,Windows.UI.Color,System.Single,System.Single)">
       <summary>
         画一张牌。
       </summary>
@@ -959,7 +959,7 @@
       <param name="nodeCollection"> 节点集合。 </param>
       <param name="matrix">矩阵。 </param>
     </member>
-    <member name="M:FanKit.Transformers。CanvasDrawingSessionExtensions.DrawNodeCollection(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.NodeCollection,System.Numerics.Matrix3x2，Windows.UI.Color)">
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNodeCollection(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.NodeCollection,System.Numerics.Matrix3x2,Windows.UI.Color)">
       <summary>
         通过节点集合绘制贝塞尔曲线。
       </summary>
@@ -1005,7 +1005,7 @@
       <param name="axisLine">两条线之间的距离。 </param>
       <param name="axisThickLine">两条粗线之间的距离。 </param>
     </member>
-    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawAxis(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.CanvasTransformer,System.Single,System.Single，Windows.UI.Color，Windows.UI.Color，Windows .UI.Color)">
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawAxis(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.CanvasTransformer,System.Single,System.Single,Windows.UI.Color,Windows.UI.Color,Windows.UI.Color)">
       <summary>
         绘制一个XY 轴。
       </summary>
@@ -1017,7 +1017,7 @@
       <param name="axisLineColor">轴线的颜色。 </param>
       <param name="axisThickLineColor">轴粗线的颜色。 </param>
     </member>
-    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawAxis(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.CanvasTransformer,System.Single,System.Single，Windows.UI.Color，Windows.UI.Color，Windows .UI.Color，Windows.UI.Color,Microsoft.Graphics.Canvas.Text.CanvasTextFormat)">
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawAxis(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.CanvasTransformer,System.Single,System.Single,Windows.UI.Color,Windows.UI.Color,Windows.UI.Color,Windows.UI.Color,Microsoft.Graphics.Canvas.Text.CanvasTextFormat)">
       <summary>
         绘制一个XY 轴。
       </summary>
@@ -1069,7 +1069,7 @@
       <param name="rulerLine">两条线之间的距离。 </param>
       <param name="rulerThickLine">两条粗线之间的距离。 </param>
     </member>
-    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawRuler(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.CanvasTransformer,System.Single,System.Single,System.Single，Windows.UI.Color，Windows.UI .Color，Windows.UI.Color，Windows.UI.Color)">
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawRuler(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.CanvasTransformer,System.Single,System.Single,System.Single,Windows.UI.Color,Windows.UI.Color,Windows.UI.Color,Windows.UI.Color)">
       <summary>
         画一把尺子。
       </summary>
@@ -1083,7 +1083,7 @@
       <param name="rulerLineColor">标尺线的颜色。 </param>
       <param name="rulerThickLineColor">标尺粗线的颜色。 </param>
     </member>
-    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawRuler(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.CanvasTransformer,System.Single,System.Single,System.Single，Windows.UI.Color，Windows.UI .Color，Windows.UI.Color，Windows.UI.Color，Windows.UI.Color,Microsoft.Graphics.Canvas.Text.CanvasTextFormat)">
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawRuler(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.CanvasTransformer,System.Single,System.Single,System.Single,Windows.UI.Color,Windows.UI.Color,Windows.UI.Color,Windows.UI.Color,Windows.UI.Color,Microsoft.Graphics.Canvas.Text.CanvasTextFormat)">
       <summary>
         画一把尺子。
       </summary>
@@ -1099,7 +1099,7 @@
       <param name="textColor">文本的颜色。 </param>
       <param name="textFormat">文本的格式。 </param>
     </member>
-    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.FillMarqueeMaskl(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.MarqueeToolType,FanKit.Transformers.MarqueeTool，Windows.Foundation.Rect,FanKit.Transformers.MarqueeCompositeMode)">
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.FillMarqueeMaskl(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.MarqueeToolType,FanKit.Transformers.MarqueeTool,Windows.Foundation.Rect,FanKit.Transformers.MarqueeCompositeMode)">
       <summary>
         用选框工具填充选框面具。
       </summary>
@@ -1144,7 +1144,7 @@
       <param name="transformer">变换者。 </param>
       <param name="matrix">矩阵。 </param>
     </member>
-    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawBound(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.Transformer，W​​indows.UI.Color)">
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawBound(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.Transformer,Windows.UI.Color)">
       <summary>
         在边界上画线。
       </summary>
@@ -1152,7 +1152,7 @@
       <param name="transformer">变换者</param>
       <param name="accentColor">强调色。 </param>
     </member>
-    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawBound(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.Transformer,System.Numerics.Matrix3x2，Windows.UI.Color)">
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawBound(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.Transformer,System.Numerics.Matrix3x2,Windows.UI.Color)">
       <summary>
         在边界上画线。
       </summary>
@@ -1178,7 +1178,7 @@
       <param name="matrix">矩阵。 </param>
       <param name="disabledRadian">禁用腐烂角。 </param>
     </member>
-    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawBoundNodes(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.Transformer，W​​indows.UI.Color,System.Boolean)">
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawBoundNodes(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.Transformer,Windows.UI.Color,System.Boolean)">
       <summary>
         在边界上绘制节点和线，就像【由】一样。
       </summary>
@@ -1187,7 +1187,7 @@
       <param name="accentColor">强调色。 </param>
       <param name="disabledRadian">禁用旋转角度。 </param>
     </member>
-    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawBoundNodes(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.Transformer,System.Numerics.Matrix3x2，Windows.UI.Color,System.Boolean)">
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawBoundNodes(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.Transformer,System.Numerics.Matrix3x2,Windows.UI.Color,System.Boolean)">
       <summary>
         在边界上绘制节点和线，就像【由】一样。
       </summary>
@@ -1212,7 +1212,7 @@
       <param name="transformer">变换者。 </param>
       <param name="matrix">矩阵。 </param>
     </member>
-    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrop(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.Transformer，W​​indows.UI.Color)">
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrop(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.Transformer,Windows.UI.Color)">
       <summary>
         在边框上画框和线，就像🔳。
       </summary>
@@ -1220,7 +1220,7 @@
       <param name="transformer">变换者。 </param>
       <param name="accentColor">强调色。 </param>
     </member>
-    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrop(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.Transformer,System.Numerics.Matrix3x2，Windows.UI.Color,System.Boolean)">
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrop(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.Transformer,System.Numerics.Matrix3x2,Windows.UI.Color,System.Boolean)">
       <summary>
         在边框上画框和线，就像🔳。
       </summary>
@@ -1387,7 +1387,7 @@
       <param name="point">点。 </param>
       <param name="node">节点。 </param>
     </member>
-    <member name="M:FanKit.Transformers.Node.Controller(FanKit.Transformers.SelfControlPointMode,FanKit.Transformers.EachControlPointLengthMode,FanKit.Transformers.EachControlPointAngleMode,System.Numerics.Vector2,FanKit.Transformers.Node,System.Boolean）">
+    <member name="M:FanKit.Transformers.Node.Controller(FanKit.Transformers.SelfControlPointMode,FanKit.Transformers.EachControlPointLengthMode,FanKit.Transformers.EachControlPointAngleMode,System.Numerics.Vector2,FanKit.Transformers.Node,System.Boolean)">
       <summary>
         这个可以控制节点控制点的转换。
       </summary>
@@ -1609,7 +1609,7 @@
       <summary>
         表示处理 Right_Start，Right_Delta，Right_Complete 事件的方法。
         <param name="point">鼠标指针的位置。 </param>
-      </summary>>
+      </summary>
     </member>
     <member name="E:FanKit.Transformers.CanvasOperator.Right_Start">
       <summary>在鼠标右键事件开始时发生。 </summary>
@@ -1641,7 +1641,7 @@
         当指针轮的增量值更改时发生。
       </summary>
     </member>
-    <member name="M:FanKit.Transformers.CanvasOperator.PointerPosition(Windows.UI.Xaml.UIElement，Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+    <member name="M:FanKit.Transformers.CanvasOperator.PointerPosition(Windows.UI.Xaml.UIElement,Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
       <summary>
         获取接触点的位置
       </summary>
@@ -1649,7 +1649,7 @@
       <param name="e">事件的事件数据。 </param>
       <returns>触摸点的位置。</returns>
     </member>
-    <member name="M:FanKit.Transformers.CanvasOperator.PointerPressure(Windows.UI.Xaml.UIElement，Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+    <member name="M:FanKit.Transformers.CanvasOperator.PointerPressure(Windows.UI.Xaml.UIElement,Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
       <summary>
         获取接触点的压力
       </summary>
@@ -1657,7 +1657,7 @@
       <param name="e">事件的事件数据。 </param>
       <returns>接触点的压力。</returns>
     </member>
-    <member name="M:FanKit.Transformers.CanvasOperator.PointerWheelDelta(Windows.UI.Xaml.UIElement，Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+    <member name="M:FanKit.Transformers.CanvasOperator.PointerWheelDelta(Windows.UI.Xaml.UIElement,Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
       <summary>
         获取通过滚轮按钮输入的值。
       </summary>
@@ -1665,7 +1665,7 @@
       <param name="e">的事件数据事件。 </param>
       <returns>滚轮按钮输入的值。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.CanvasOperator.PointerIsTouch(Windows.UI.Xaml.UIElement，Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+    <member name="M:FanKit.Transformers.CanvasOperator.PointerIsTouch(Windows.UI.Xaml.UIElement,Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
       <summary>
         判断动作。
       </summary>
@@ -1673,7 +1673,7 @@
       <param name="e">事件的事件数据。 </param>
       <returns>如果该动作是通过触摸触发的，则返回**true**。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.CanvasOperator.PointerIsPen(Windows.UI.Xaml.UIElement，Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+    <member name="M:FanKit.Transformers.CanvasOperator.PointerIsPen(Windows.UI.Xaml.UIElement,Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
       <summary>
         判断动作。
       </summary>
@@ -1681,7 +1681,7 @@
       <param name="e">事件的事件数据。 </param>
       <returns>如果该动作是由笔触发的，则返回**true**。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.CanvasOperator.PointerIsBarrel(Windows.UI.Xaml.UIElement，Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+    <member name="M:FanKit.Transformers.CanvasOperator.PointerIsBarrel(Windows.UI.Xaml.UIElement,Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
       <summary>
         判断动作。
       </summary>
@@ -1689,7 +1689,7 @@
       <param name="e">事件的事件数据。 </param>
       <returns>如果该动作是由发条盒触发的，则返回**true**。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.CanvasOperator.PointerIsMouse(Windows.UI.Xaml.UIElement，Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+    <member name="M:FanKit.Transformers.CanvasOperator.PointerIsMouse(Windows.UI.Xaml.UIElement,Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
       <summary>
         判断动作。
       </summary>
@@ -1697,7 +1697,7 @@
       <param name="e">事件的事件数据。 </param>
       <returns>如果该动作是由鼠标触发的，则返回**true**。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.CanvasOperator.PointerIsLeft(Windows.UI.Xaml.UIElement，Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+    <member name="M:FanKit.Transformers.CanvasOperator.PointerIsLeft(Windows.UI.Xaml.UIElement,Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
       <summary>
         判断动作。
       </summary>
@@ -1705,7 +1705,7 @@
       <param name="e">事件的事件数据。 </param>
       <returns>如果该动作是由鼠标左键触发的，则返回**true**。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.CanvasOperator.PointerIsRight(Windows.UI.Xaml.UIElement，Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+    <member name="M:FanKit.Transformers.CanvasOperator.PointerIsRight(Windows.UI.Xaml.UIElement,Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
       <summary>
         判断动作。
       </summary>
@@ -1999,7 +1999,7 @@
       </summary>
       <returns>乘积向量。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.BorderSnapBase`1.SetXSnapMove(System.Single，`0)">
+    <member name="M:FanKit.Transformers.BorderSnapBase`1.SetXSnapMove(System.Single,`0)">
       <summary>
         设置<see cref="F:FanKit.Transformers.SnapBase`2.XSnap"/>。
       </summary>
@@ -2009,7 +2009,7 @@
         <see cref="F:FanKit.Transformers.SnapBase`2.IsXSnap"/>
       </returns>
     </member>
-    <member name="M:FanKit.Transformers.BorderSnapBase`1.SetYSnapMove(System.Single，`0)">
+    <member name="M:FanKit.Transformers.BorderSnapBase`1.SetYSnapMove(System.Single,`0)">
       <summary>
         设置<see cref="F:FanKit.Transformers.SnapBase`2.YSnap"/>。
       </summary>
@@ -2081,7 +2081,7 @@
       </summary>
       <returns>乘积向量。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.VectorSnapBase`1.SetXSnap(System.Single，`0)">
+    <member name="M:FanKit.Transformers.VectorSnapBase`1.SetXSnap(System.Single,`0)">
       <summary>
         设置<see cref="F:FanKit.Transformers.SnapBase`2.XSnap"/>。
       </summary>
@@ -2091,7 +2091,7 @@
         <see cref="F:FanKit.Transformers.SnapBase`2.IsXSnap"/>
       </returns>
     </member>
-    <member name="M:FanKit.Transformers.VectorSnapBase`1.SetYSnap(System.Single，`0)">
+    <member name="M:FanKit.Transformers.VectorSnapBase`1.SetYSnap(System.Single,`0)">
       <summary>
         设置<see cref="F:FanKit.Transformers.SnapBase`2.YSnap"/>。
       </summary>
@@ -2243,7 +2243,7 @@
       <param name="transformerRect">目标矩形。 </param>
       <returns>如果变换者包含在矩形中，则返回**true**，否则返回**false**。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.Transformer.Controller(FanKit.Transformers.TransformerMode,System.Numerics.Vector2,System.Numerics.Vector2,FanKit.Transformers.Transformer,System.Boolean,System.Boolean,System.Boolean )">
+    <member name="M:FanKit.Transformers.Transformer.Controller(FanKit.Transformers.TransformerMode,System.Numerics.Vector2,System.Numerics.Vector2,FanKit.Transformers.Transformer,System.Boolean,System.Boolean,System.Boolean)">
       <summary>
         它控制变换者的转换。
       </summary>
@@ -2256,7 +2256,7 @@
       <param name="isSnapToTick">是否旋转时捕捉。 </param>
       <returns>受控制的变换者。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.Transformer.Controller(FanKit.Transformers.TransformerMode,System.Numerics.Vector2,System.Numerics.Vector2,FanKit.Transformers.Transformer,System.Numerics.Matrix3x2,System.Boolean,System .Boolean,System.Boolean)">
+    <member name="M:FanKit.Transformers.Transformer.Controller(FanKit.Transformers.TransformerMode,System.Numerics.Vector2,System.Numerics.Vector2,FanKit.Transformers.Transformer,System.Numerics.Matrix3x2,System.Boolean,System.Boolean,System.Boolean)">
       <summary>
         这个可以控制变换者的转换。
       </summary>
@@ -2607,25 +2607,25 @@
       </summary>
       <param name="transformer">变换者。 </param>
     </member>
-    <member name="M:FanKit.Transformers.TransformerBorder.#ctor(System.Collections.Generic.IEnumerable {FanKit.Transformers.Transformer})">
+    <member name="M:FanKit.Transformers.TransformerBorder.#ctor(System.Collections.Generic.IEnumerable{FanKit.Transformers.Transformer})">
       <summary>
         初始化<see cref="T:FanKit.Transformers.TransformerBorder"/>。
       </summary>
       <param name="transformers">变换者。 </param>
     </member>
-    <member name="M:FanKit.Transformers.TransformerBorder.#ctor(System.Collections.Generic.IEnumerable {FanKit.Transformers.IGetActualTransformer})">
+    <member name="M:FanKit.Transformers.TransformerBorder.#ctor(System.Collections.Generic.IEnumerable{FanKit.Transformers.IGetActualTransformer})">
       <summary>
         初始化<see cref="T:FanKit.Transformers.TransformerBorder"/>。
       </summary>
       <param name="getActualTransformers"> IGetActualTransformer。 </param>
     </member>
-    <member name="M:FanKit.Transformers.TransformerBorder.#ctor(System.Collections.Generic.IEnumerable {FanKit.Transformers.Node})">
+    <member name="M:FanKit.Transformers.TransformerBorder.#ctor(System.Collections.Generic.IEnumerable{FanKit.Transformers.Node})">
       <summary>
         初始化<see cref="T:FanKit.Transformers.TransformerBorder"/>。
       </summary>
       <param name="nodes">节点。 </param>
     </member>
-    <member name="M:FanKit.Transformers.TransformerBorder.#ctor(System.Collections.Generic.IList {FanKit.Transformers.NodeCollection})">
+    <member name="M:FanKit.Transformers.TransformerBorder.#ctor(System.Collections.Generic.IList{FanKit.Transformers.NodeCollection})">
       <summary>
         初始化<see cref="T:FanKit.Transformers.TransformerBorder"/>。
       </summary>
@@ -2819,7 +2819,7 @@
       <param name="leftBottom">左下角。 </param>
       <returns>产生的的几何形状。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.TransformerGeometry.CreateRectangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics .Matrix3x2)">
+    <member name="M:FanKit.Transformers.TransformerGeometry.CreateRectangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Matrix3x2)">
       <summary>
         创建一个新的矩形几何。
       </summary>
@@ -2859,7 +2859,7 @@
       <param name="centerBottom">最低点。 </param>
       <returns>产生的的几何形状。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.TransformerGeometry.CreateEllipse(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics .Matrix3x2)">
+    <member name="M:FanKit.Transformers.TransformerGeometry.CreateEllipse(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Matrix3x2)">
       <summary>
         创建一个新的椭圆几何。
       </summary>
@@ -2907,7 +2907,7 @@
       <param name="matrix">矩阵。 </param>
       <returns>产生的的几何形状。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.TransformerGeometry.CreateTriangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Single )">
+    <member name="M:FanKit.Transformers.TransformerGeometry.CreateTriangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Single)">
       <summary>
         创建一个新的三角形几何。
       </summary>
@@ -2918,7 +2918,7 @@
       <param name="leftBottom">左下角。 </param>
       <returns>产生的的几何形状。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.TransformerGeometry.CreateTriangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics .Matrix3x2,System.Single)">
+    <member name="M:FanKit.Transformers.TransformerGeometry.CreateTriangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Matrix3x2,System.Single)">
       <summary>
         创建一个新的三角形几何。
       </summary>
@@ -2995,7 +2995,7 @@
       <param name="notch">缺口。 </param>
       <returns>产生的的几何形状。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.TransformerGeometry.CreateCog(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Int32,System.Single,System.Single,System.Single )">
+    <member name="M:FanKit.Transformers.TransformerGeometry.CreateCog(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Int32,System.Single,System.Single,System.Single)">
       <summary>
         创建一个新的齿轮几何。
       </summary>
@@ -3060,7 +3060,7 @@
       <param name="sweepAngle">扫角。 </param>
       <returns>产生的的几何形状。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.TransformerGeometry.CreateArrow(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Boolean,System.Single,System.Single,FanKit.Transformers.GeometryArrowTailType,FanKit.Transformers .GeometryArrowTailType)">
+    <member name="M:FanKit.Transformers.TransformerGeometry.CreateArrow(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Boolean,System.Single,System.Single,FanKit.Transformers.GeometryArrowTailType,FanKit.Transformers.GeometryArrowTailType)">
       <summary>
         创建一个新的箭头几何。
       </summary>
@@ -3073,7 +3073,7 @@
       <param name="rightTail">右侧-尾巴。 </param>
       <returns>产生的的几何形状。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.TransformerGeometry.CreateArrow(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Boolean,System.Single,System.Single,FanKit.Transformers .GeometryArrowTailType,FanKit.Transformers.GeometryArrowTailType)">
+    <member name="M:FanKit.Transformers.TransformerGeometry.CreateArrow(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Boolean,System.Single,System.Single,FanKit.Transformers.GeometryArrowTailType,FanKit.Transformers.GeometryArrowTailType)">
       <summary>
         创建一个新的箭头几何。
       </summary>
