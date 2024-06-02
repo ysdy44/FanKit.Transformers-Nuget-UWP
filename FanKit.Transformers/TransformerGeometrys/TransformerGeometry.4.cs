@@ -13,7 +13,7 @@ namespace FanKit.Transformers
         /// <summary>
         /// Create a new arrow geometry.
         /// </summary>
-        /// <param name="resourceCreator"> The resource - creator. </param>
+        /// <param name="resourceCreator"> The resource-creator. </param>
         /// <param name="transformer"> The source transformer. </param>
         /// <param name="isAbsolute"> Is absolute? </param>
         /// <param name="width"> The absolute width. </param>
@@ -69,7 +69,7 @@ namespace FanKit.Transformers
         /// <summary>
         /// Create a new arrow geometry.
         /// </summary>
-        /// <param name="resourceCreator"> The resource - creator. </param>
+        /// <param name="resourceCreator"> The resource-creator. </param>
         /// <param name="transformer"> The source transformer. </param>
         /// <param name="matrix"> The matrix. </param>
         /// <param name="isAbsolute"> Is absolute? </param>
@@ -238,7 +238,7 @@ namespace FanKit.Transformers
         /// <summary>
         /// Create a new capsule geometry.
         /// </summary>
-        /// <param name="resourceCreator"> The resource - creator. </param>
+        /// <param name="resourceCreator"> The resource-creator. </param>
         /// <param name="transformer"> The ITransformer - LTRB. </param>
         /// <returns> The product geometry. </returns>
         public static CanvasGeometry CreateCapsule(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformer)
@@ -277,7 +277,7 @@ namespace FanKit.Transformers
         /// <summary>
         /// Create a new capsule geometry.
         /// </summary>
-        /// <param name="resourceCreator"> The resource - creator. </param>
+        /// <param name="resourceCreator"> The resource-creator. </param>
         /// <param name="transformerLTRB"> The ITransformer - LTRB. </param>
         /// <param name="matrix"> The matrix. </param>
         /// <returns> The product geometry. </returns>
@@ -388,7 +388,7 @@ namespace FanKit.Transformers
         /// <summary>
         /// Create a new heart geometry.
         /// </summary>
-        /// <param name="resourceCreator"> The resource - creator. </param>
+        /// <param name="resourceCreator"> The resource-creator. </param>
         /// <param name="spread"> The spread. </param>
         /// <returns> The product geometry. </returns>
         public static CanvasGeometry CreateHeart(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformer, float spread)
@@ -401,7 +401,7 @@ namespace FanKit.Transformers
         /// <summary>
         /// Create a new heart geometry.
         /// </summary>
-        /// <param name="resourceCreator"> The resource - creator. </param>
+        /// <param name="resourceCreator"> The resource-creator. </param>
         /// <param name="transformer"> The source transformer. </param>
         /// <param name="spread"> The spread. </param>
         /// <returns> The product geometry. </returns>

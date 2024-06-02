@@ -3075,7 +3075,7 @@
       <summary>
         Create a new arrow geometry.
       </summary>
-      <param name="resourceCreator"> The resource - creator. </param>
+      <param name="resourceCreator"> The resource-creator. </param>
       <param name="transformer"> The source transformer. </param>
       <param name="matrix"> The matrix. </param>
       <param name="isAbsolute"> Is absolute? </param>
@@ -3089,7 +3089,7 @@
       <summary>
         Create a new capsule geometry.
       </summary>
-      <param name="resourceCreator"> The resource - creator. </param>
+      <param name="resourceCreator"> The resource-creator. </param>
       <param name="transformer"> The ITransformer - LTRB. </param>
       <returns> The product geometry. </returns>
     </member>
@@ -3097,7 +3097,7 @@
       <summary>
         Create a new capsule geometry.
       </summary>
-      <param name="resourceCreator"> The resource - creator. </param>
+      <param name="resourceCreator"> The resource-creator. </param>
       <param name="transformerLTRB"> The ITransformer - LTRB. </param>
       <param name="matrix"> The matrix. </param>
       <returns> The product geometry. </returns>
@@ -3106,7 +3106,7 @@
       <summary>
         Create a new heart geometry.
       </summary>
-      <param name="resourceCreator"> The resource - creator. </param>
+      <param name="resourceCreator"> The resource-creator. </param>
       <param name="spread"> The spread. </param>
       <returns> The product geometry. </returns>
     </member>
@@ -3114,7 +3114,7 @@
       <summary>
         Create a new heart geometry.
       </summary>
-      <param name="resourceCreator"> The resource - creator. </param>
+      <param name="resourceCreator"> The resource-creator. </param>
       <param name="transformer"> The source transformer. </param>
       <param name="spread"> The spread. </param>
       <returns> The product geometry. </returns>
