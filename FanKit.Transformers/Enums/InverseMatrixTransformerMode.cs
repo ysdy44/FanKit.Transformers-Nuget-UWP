@@ -1,7 +1,7 @@
 ﻿namespace FanKit.Transformers
 {
     /// <summary> 
-    /// The inverse matrix mode of <see cref = "CanvasTransformer" />. 
+    /// The inverse matrix mode of <see cref="CanvasTransformer"/>. 
     /// </summary>
     public enum InverseMatrixTransformerMode
     {

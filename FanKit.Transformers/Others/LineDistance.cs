@@ -34,9 +34,9 @@ namespace FanKit.Transformers
             this.PC = Vector2.Distance(point, center);
         }
 
-        /// <summary> Scale of [Foot Point] betwwen [Center Point] / scale of [Point] betwwen [Center Point] (may be negative)</summary>
+        /// <summary> Scale of [Foot Point] betwwen [Center Point] / scale of [Point] betwwen [Center Point] (may be negative) </summary>
         /// <param name="distance"> The distance </param>
-        /// <returns>Scale</returns>
+        /// <returns> Scale </returns>
         public static float Scale(LineDistance distance)
         {
             float scale = distance.FC / distance.PC;

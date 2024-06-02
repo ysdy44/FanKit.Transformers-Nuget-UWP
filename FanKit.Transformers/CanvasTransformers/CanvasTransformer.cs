@@ -21,12 +21,12 @@ namespace FanKit.Transformers
     public partial class CanvasTransformer
     {
 
-        /// <summary> <see cref = "CanvasTransformer" />'s width. </summary>
+        /// <summary> <see cref="CanvasTransformer"/>'s width. </summary>
         public int Width { get; set; } = 1000;
-        /// <summary> <see cref = "CanvasTransformer" />'s height. </summary>
+        /// <summary> <see cref="CanvasTransformer"/>'s height. </summary>
         public int Height { get; set; } = 1000;
 
-        /// <summary> <see cref = "CanvasTransformer" />'s scale. </summary>
+        /// <summary> <see cref="CanvasTransformer"/>'s scale. </summary>
         public float Scale { get; set; } = 1.0f;
 
         /// <summary> CanvasControl's width. </summary>
@@ -36,15 +36,15 @@ namespace FanKit.Transformers
         /// <summary> CanvasControl's center. </summary>
         public Vector2 ControlCenter => new Vector2(this.ControlWidth / 2, this.ControlHeight / 2);
 
-        /// <summary> <see cref = "CanvasTransformer" />'s translation. </summary>
+        /// <summary> <see cref="CanvasTransformer"/>'s translation. </summary>
         public Vector2 Position { get; set; } = new Vector2(0.0f, 0.0f);
-        /// <summary> <see cref = "CanvasTransformer" />'s rotation. </summary>
+        /// <summary> <see cref="CanvasTransformer"/>'s rotation. </summary>
         public float Radian { get; set; } = 0.0f;
 
 
         //@Construct
         /// <summary>
-        /// Initialize a <see cref = "CanvasTransformer" />.
+        /// Initialize a <see cref="CanvasTransformer"/>.
         /// </summary>
         public CanvasTransformer()
         {
@@ -55,7 +55,7 @@ namespace FanKit.Transformers
         #region Size
 
 
-        /// <summary> <see cref = "CanvasTransformer.ControlWidth" /> and <see cref = "CanvasTransformer.ControlHeight" />'s setter. </summary>
+        /// <summary> <see cref="CanvasTransformer.ControlWidth"/> and <see cref="CanvasTransformer.ControlHeight"/>'s setter. </summary>
         public Size Size
         {
             set
@@ -64,7 +64,7 @@ namespace FanKit.Transformers
                 this.ControlHeight = (float)value.Height;
             }
         }
-        /// <summary> <see cref = "CanvasTransformer.Width" /> and <see cref = "CanvasTransformer.Height" />'s setter. </summary>
+        /// <summary> <see cref="CanvasTransformer.Width"/> and <see cref="CanvasTransformer.Height"/>'s setter. </summary>
         public BitmapSize BitmapSize
         {
             set
@@ -80,7 +80,7 @@ namespace FanKit.Transformers
         /// <summary>
         /// Get the scale.
         /// </summary>
-        /// <param name="bitmapSize"> The bitmap size.</param>
+        /// <param name="bitmapSize"> The bitmap size. </param>
         /// <returns> The produced vector. </returns>
         public Vector2 GetScale(BitmapSize bitmapSize) => new Vector2((float)bitmapSize.Width / (float)this.Width, (float)bitmapSize.Height / (float)this.Height);
 

@@ -12,7 +12,7 @@ namespace FanKit.Transformers
     {
         //@Constructs
         /// <summary>
-        /// Initialize a <see cref = "TransformerRect" />.
+        /// Initialize a <see cref="TransformerRect"/>.
         /// </summary>
         /// <param name="pointA"> The frist point of rectangle. </param>
         /// <param name="pointB"> The second point of rectangle. </param>
@@ -52,7 +52,7 @@ namespace FanKit.Transformers
         }
 
         /// <summary>
-        /// Initialize a <see cref = "TransformerRect" />.
+        /// Initialize a <see cref="TransformerRect"/>.
         /// </summary>
         /// <param name="pointA"> The frist point of rectangle. </param>
         /// <param name="pointB"> The second point of rectangle. </param>
@@ -106,7 +106,7 @@ namespace FanKit.Transformers
         }
 
         /// <summary>
-        /// Initialize a <see cref = "TransformerRect" />.
+        /// Initialize a <see cref="TransformerRect"/>.
         /// </summary>
         /// <param name="width"> The width. </param>
         /// <param name="height"> The height. </param>

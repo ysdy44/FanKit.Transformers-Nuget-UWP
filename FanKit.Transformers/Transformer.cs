@@ -131,11 +131,11 @@ namespace FanKit.Transformers
         /// <param name="value2"> The source vector. </param>
         /// <returns> The summed transformer. </returns>
         public static Transformer operator +(Transformer value1, Vector2 value2) => Transformer.Add(value1, value2);
-
+        
         /// <summary>
         /// Multiplies transformer and vector  and returns the resulting transformer.
         /// </summary>
-        /// <param name="value1">  The source transformer. </param>
+        /// <param name="value1"> The source transformer. </param>
         /// <param name="value2"> The scaling value to use. </param>
         /// <returns> The resulting transformer. </returns>
         public static Transformer operator *(Transformer value1, Matrix3x2 value2) => Transformer.Multiplies(value1, value2);

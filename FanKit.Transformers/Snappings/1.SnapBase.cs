@@ -23,14 +23,14 @@ namespace FanKit.Transformers
         public IEnumerable<D> Destinations { get; set; }
 
         //X
-        /// <summary> Whether to snap to the X-axis.  </summary>
+        /// <summary> Whether to snap to the X-axis. </summary>
         public bool IsXSnap;
         /// <summary> X-axis position. </summary>
         public float XSnap = 0;
         /// <summary> X-axis destination. </summary>
         protected D XDestination;
         //Y
-        /// <summary> Whether to snap to the Y-axis.  </summary>
+        /// <summary> Whether to snap to the Y-axis. </summary>
         public bool IsYSnap;
         /// <summary> Y-axis position. </summary>
         public float YSnap = 0;

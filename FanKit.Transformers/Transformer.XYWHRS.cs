@@ -28,7 +28,7 @@ namespace FanKit.Transformers
         /// <summary>
         /// X
         /// </summary>
-        /// <param name="value"> The destination value.</param>
+        /// <param name="value"> The destination value. </param>
         /// <param name="indicatorMode"> The indicator mode </param>
         /// <returns> The produced vector. </returns>
         public Vector2 TransformX(float value, IndicatorMode indicatorMode = IndicatorMode.LeftTop)
@@ -43,7 +43,7 @@ namespace FanKit.Transformers
         /// <summary>
         /// Y
         /// </summary>
-        /// <param name="value"> The destination value.</param>
+        /// <param name="value"> The destination value. </param>
         /// <param name="indicatorMode"> The indicator mode </param>
         /// <returns> The produced vector. </returns>
         public Vector2 TransformY(float value, IndicatorMode indicatorMode = IndicatorMode.LeftTop)

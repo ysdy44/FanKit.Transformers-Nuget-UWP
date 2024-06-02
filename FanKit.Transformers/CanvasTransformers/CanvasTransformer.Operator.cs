@@ -82,7 +82,7 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="centerPoint"> The center point. </param>
         /// <param name="zoomInScale"> The scale. </param>
-        /// <param name="maximum">The maximum scale. </param>
+        /// <param name="maximum"> The maximum scale. </param>
         public void ZoomIn(Vector2 centerPoint, float zoomInScale = 1.1f, float maximum = 10f)
         {
             if (this.Scale < maximum)
@@ -98,7 +98,7 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="centerPoint"> The center point. </param>
         /// <param name="zoomOutScale"> The scale. </param>
-        /// <param name="minimum">The minimum scale. </param>
+        /// <param name="minimum"> The minimum scale. </param>
         public void ZoomOut(Vector2 centerPoint, float zoomOutScale = 1.1f, float minimum = 0.1f)
         {
             if (this.Scale > minimum)

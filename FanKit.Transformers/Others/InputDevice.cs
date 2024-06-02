@@ -1,7 +1,7 @@
 ﻿namespace FanKit.Transformers
 {
     /// <summary>
-    /// The input device type of <see cref = "CanvasOperator" />.
+    /// The input device type of <see cref="CanvasOperator"/>.
     /// </summary>
     public enum InputDevice
     {
@@ -10,7 +10,7 @@
         /// <summary> Indeterminacy. </summary>
         Indeterminacy,
 
-        /// <summary>Holding. </summary>
+        /// <summary> Holding. </summary>
         Holding,
         /// <summary> One Finger. </summary>
         SingleFinger,

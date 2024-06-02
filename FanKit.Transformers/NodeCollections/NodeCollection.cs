@@ -138,7 +138,7 @@ namespace FanKit.Transformers
         /// <returns> The cloned ndoes. </returns>
         public IEnumerable<Node> NodesClone() => from node in this.Nodes select node.Clone();
         /// <summary>
-        /// Get own starting copy (ex: <see cref="Node.StartingIsChecked"/>).
+        /// Get own starting copy (ex: <see cref="Node.StartingIsChecked"/> ).
         /// </summary>
         /// <returns> The cloned ndoes. </returns>
         public IEnumerable<Node> NodesStartingClone() => from node in this.Nodes

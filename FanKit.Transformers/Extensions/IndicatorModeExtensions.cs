@@ -7,7 +7,7 @@ using Windows.UI.Xaml;
 namespace FanKit.Transformers
 {
     /// <summary>
-    /// Extensions of <see cref = "IndicatorMode" />.
+    /// Extensions of <see cref="IndicatorMode"/>.
     /// </summary>
     public static partial class IndicatorModeExtensions
     {

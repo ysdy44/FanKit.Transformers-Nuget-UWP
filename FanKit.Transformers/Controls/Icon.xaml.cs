@@ -3,7 +3,7 @@
 namespace FanKit.Transformers
 {
     /// <summary>
-    /// Icon of <see cref = "FanKit.Transformers" />. 
+    /// Icon of <see cref="FanKit.Transformers"/>. 
     /// </summary>
     public sealed partial class Icon : UserControl
     {

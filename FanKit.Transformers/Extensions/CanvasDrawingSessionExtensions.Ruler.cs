@@ -8,7 +8,7 @@ namespace FanKit.Transformers
     partial class CanvasDrawingSessionExtensions
     {
         // Text
-        /// <summary> The color of the text. Default (A255 R127 G127 B127).</summary>
+        /// <summary> The color of the text. Default (A255 R127 G127 B127). </summary>
         public static readonly Windows.UI.Color TextColor = Windows.UI.Color.FromArgb(255, 127, 127, 127);
         /// <summary> The format of the text. </summary>
         public static readonly CanvasTextFormat TextFormat = new CanvasTextFormat()
@@ -21,15 +21,15 @@ namespace FanKit.Transformers
 
 
         // Axis
-        /// <summary> The distance between two lines. Default 12.</summary>
+        /// <summary> The distance between two lines. Default 12. </summary>
         public const float AxisLine = 12;
-        /// <summary> The distance between two thick lines. Default 20.</summary>
+        /// <summary> The distance between two thick lines. Default 20. </summary>
         public const float AxisThickLine = 20;
-        /// <summary> The color of the axis. Default (A255 R127 G127 B127).</summary>
+        /// <summary> The color of the axis. Default (A255 R127 G127 B127). </summary>
         public static readonly Windows.UI.Color AxisColor = Windows.UI.Color.FromArgb(255, 127, 127, 127);
-        /// <summary> The color of the axis line. Default (A127 R127 G127 B127).</summary>
+        /// <summary> The color of the axis line. Default (A127 R127 G127 B127). </summary>
         public static readonly Windows.UI.Color AxisLineColor = Windows.UI.Color.FromArgb(127, 127, 127, 127);
-        /// <summary> The color of the axis thick line. Default (A127 R127 G127 B127).</summary>
+        /// <summary> The color of the axis thick line. Default (A127 R127 G127 B127). </summary>
         public static readonly Windows.UI.Color AxisThickLineColor = Windows.UI.Color.FromArgb(127, 127, 127, 127);
 
         private static void DrawAxisCore(CanvasDrawingSession drawingSession, CanvasTransformer canvasTransformer, float axisLine, float axisThickLine, Windows.UI.Color axisColor, Windows.UI.Color axisLineColor, Windows.UI.Color axisThickLineColor, Windows.UI.Color textColor, CanvasTextFormat textFormat)
@@ -120,20 +120,20 @@ namespace FanKit.Transformers
 
 
         // Ruler
-        /// <summary> The width of the ruler. Default 20.</summary>
+        /// <summary> The width of the ruler. Default 20. </summary>
         public const float RulerWidth = 20;
-        /// <summary> The distance between two lines. Default 8.</summary>
+        /// <summary> The distance between two lines. Default 8. </summary>
         public const float RulerLine = 8;
-        /// <summary> The distance between two thick lines. Default 12.</summary>
+        /// <summary> The distance between two thick lines. Default 12. </summary>
         public const float RulerThickLine = 12;
 
-        /// <summary> The color of the ruler background color. Default (A64 R127 G127 B127).</summary>
+        /// <summary> The color of the ruler background color. Default (A64 R127 G127 B127). </summary>
         public static readonly Windows.UI.Color RulerBackgroundColor = Windows.UI.Color.FromArgb(64, 127, 127, 127);
-        /// <summary> The color of the ruler. Default (A255 R127 G127 B127).</summary>
+        /// <summary> The color of the ruler. Default (A255 R127 G127 B127). </summary>
         public static readonly Windows.UI.Color RulerColor = Windows.UI.Color.FromArgb(255, 127, 127, 127);
-        /// <summary> The color of the ruler line. Default (A127 R127 G127 B127).</summary>
+        /// <summary> The color of the ruler line. Default (A127 R127 G127 B127). </summary>
         public static readonly Windows.UI.Color RulerLineColor = Windows.UI.Color.FromArgb(127, 127, 127, 127);
-        /// <summary> The color of the ruler thick line. Default (A127 R127 G127 B127).</summary>
+        /// <summary> The color of the ruler thick line. Default (A127 R127 G127 B127). </summary>
         public static readonly Windows.UI.Color RulerThickLineColor = Windows.UI.Color.FromArgb(127, 127, 127, 127);
 
         private static void DrawRulerCore(CanvasDrawingSession drawingSession, CanvasTransformer canvasTransformer, float rulerWidth, float rulerLine, float rulerThickLine, Windows.UI.Color rulerBackgroundColor, Windows.UI.Color rulerColor, Windows.UI.Color rulerLineColor, Windows.UI.Color rulerThickLineColor, Windows.UI.Color textColor, CanvasTextFormat textFormat)

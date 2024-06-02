@@ -49,14 +49,14 @@ namespace FanKit.Transformers
 
 
         /// <summary>
-        /// <see cref = "CanvasOperator" />'s destination control.
+        /// <see cref="CanvasOperator"/>'s destination control.
         /// </summary>
         public UIElement DestinationControl
         {
             get => (UIElement)base.GetValue(DestinationControlProperty);
             set => base.SetValue(DestinationControlProperty, value);
         }
-        /// <summary> Identifies the <see cref = "CanvasOperator.DestinationControl" /> dependency property. </summary>
+        /// <summary> Identifies the <see cref="CanvasOperator.DestinationControl"/> dependency property. </summary>
         public static DependencyProperty DestinationControlProperty = DependencyProperty.Register(nameof(DestinationControl), typeof(UIElement), typeof(CanvasOperator), new PropertyMetadata(null, (sender, e) =>
         {
             CanvasOperator control = (CanvasOperator)sender;

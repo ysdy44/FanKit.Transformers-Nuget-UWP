@@ -9,7 +9,7 @@ namespace FanKit.Transformers
     {
 
         // Card
-        /// <summary> The color of the drop shadow. Default (A64 R0 G0 B0).</summary>
+        /// <summary> The color of the drop shadow. Default (A64 R0 G0 B0). </summary>
         public static Windows.UI.Color ShadowColor = Windows.UI.Color.FromArgb(64, 0, 0, 0);
 
         private static void DrawShadowCore(CanvasDrawingSession drawingSession, ICanvasImage image, Windows.UI.Color shadowColor, float shadowBlurAmount, float shadowOffset)

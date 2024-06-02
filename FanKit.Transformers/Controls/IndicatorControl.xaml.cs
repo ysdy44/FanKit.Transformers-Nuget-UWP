@@ -33,7 +33,7 @@ namespace FanKit.Transformers
         #region DependencyProperty
 
 
-        /// <summary> Gets or sets <see cref = "IndicatorControl" />'s mode. </summary>
+        /// <summary> Gets or sets <see cref="IndicatorControl"/>'s mode. </summary>
         public IndicatorMode Mode
         {
             get => this.vsMode;
@@ -110,7 +110,7 @@ namespace FanKit.Transformers
 
         //@Constructs
         /// <summary>
-        /// Initialize a <see cref = "IndicatorControl" />.
+        /// Initialize a <see cref="IndicatorControl"/>.
         /// </summary>
         public IndicatorControl()
         {

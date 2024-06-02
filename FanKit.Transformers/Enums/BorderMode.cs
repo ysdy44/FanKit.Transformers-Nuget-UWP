@@ -1,7 +1,7 @@
 ﻿namespace FanKit.Transformers
 {
     /// <summary>
-    /// Mode of <see cref = "TransformerBorder" />. 
+    /// Mode of <see cref="TransformerBorder"/>. 
     /// </summary>
     public enum BorderMode
     {

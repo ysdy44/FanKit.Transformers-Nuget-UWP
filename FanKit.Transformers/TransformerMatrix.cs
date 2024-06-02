@@ -20,7 +20,7 @@ namespace FanKit.Transformers
 
         //@Constructs
         /// <summary> 
-        /// Initialize a <see cref = "TransformerMatrix" />. 
+        /// Initialize a <see cref="TransformerMatrix"/>. 
         /// </summary>
         public TransformerMatrix(Transformer transformer)
         {
@@ -35,7 +35,7 @@ namespace FanKit.Transformers
             this.DisabledRadian = false;
         }
         /// <summary>
-        /// Initialize a <see cref = "TransformerMatrix" />.
+        /// Initialize a <see cref="TransformerMatrix"/>.
         /// </summary>
         /// <param name="pointA"> The frist point of transformer matrix. </param>
         /// <param name="pointB"> The second point of transformer matrix. </param>
@@ -54,7 +54,7 @@ namespace FanKit.Transformers
             this.DisabledRadian = false;
         }
         /// <summary>
-        /// Initialize a <see cref = "TransformerMatrix" />. 
+        /// Initialize a <see cref="TransformerMatrix"/>. 
         /// </summary> 
         /// <param name="width"> The width. </param>
         /// <param name="height"> The height. </param>

@@ -50,7 +50,7 @@ namespace FanKit.Transformers
         /// Specifies the method used to determine which points are inside the geometry described
         /// by this path builder, and which points are outside.
         /// </summary>
-        /// <param name="filledRegionDetermination"> The determination for filled region.</param>
+        /// <param name="filledRegionDetermination"> The determination for filled region. </param>
         public void SetFilledRegionDetermination(CanvasFilledRegionDetermination filledRegionDetermination)
         {
             this.FilledRegionDetermination = filledRegionDetermination;
@@ -61,7 +61,7 @@ namespace FanKit.Transformers
         /// Specifies the method used to determine which points are inside the geometry described
         /// by this path builder, and which points are outside.
         /// </summary>
-        /// <param name="figureSegmentOptions"> The options for figure segment.</param>
+        /// <param name="figureSegmentOptions"> The options for figure segment. </param>
         public void SetSegmentOptions(CanvasFigureSegmentOptions figureSegmentOptions)
         {
             this.FigureSegmentOptions = figureSegmentOptions;

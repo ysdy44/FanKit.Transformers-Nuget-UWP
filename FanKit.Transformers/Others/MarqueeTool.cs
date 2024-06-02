@@ -22,7 +22,7 @@ namespace FanKit.Transformers
         /// Started using marquee-tool.
         /// </summary>
         /// <param name="point"> The point. </param>
-        /// <param name="toolType"> The tool type.</param>
+        /// <param name="toolType"> The tool type. </param>
         /// <param name="isCenter"> Scaling around the center. </param>
         /// <param name="isSquare"> Equal in width and height. </param>
         public void Start(Vector2 point, MarqueeToolType toolType, bool isCenter, bool isSquare)
@@ -59,7 +59,7 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="startingPoint"> The starting point. </param>
         /// <param name="point"> The point. </param>
-        /// <param name="toolType"> The tool type.</param>
+        /// <param name="toolType"> The tool type. </param>
         /// <param name="isCenter"> Scaling around the center. </param>
         /// <param name="isSquare"> Equal in width and height. </param>
         public void Delta(Vector2 startingPoint, Vector2 point, MarqueeToolType toolType, bool isCenter, bool isSquare)

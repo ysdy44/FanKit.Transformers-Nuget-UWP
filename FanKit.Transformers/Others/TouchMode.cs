@@ -1,7 +1,7 @@
 ﻿namespace FanKit.Transformers
 {
     /// <summary>
-    /// The touch mode of <see cref = "CanvasOperator" />.
+    /// The touch mode of <see cref="CanvasOperator"/>.
     /// </summary>
     public enum TouchMode
     {

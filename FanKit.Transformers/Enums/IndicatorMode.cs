@@ -1,7 +1,7 @@
 ﻿namespace FanKit.Transformers
 {
     /// <summary>
-    /// Mode of <see cref = "IndicatorControl" />. 
+    /// Mode of <see cref="IndicatorControl"/>. 
     /// </summary>
     public enum IndicatorMode
     {

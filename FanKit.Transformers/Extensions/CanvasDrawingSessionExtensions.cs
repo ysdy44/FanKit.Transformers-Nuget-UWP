@@ -6,11 +6,11 @@ using Windows.Foundation;
 namespace FanKit.Transformers
 {
     /// <summary>
-    /// Extensions of <see cref = "CanvasDrawingSession" />.
+    /// Extensions of <see cref="CanvasDrawingSession"/>.
     /// </summary>
     public static partial class CanvasDrawingSessionExtensions
     {
-        /// <summary> The translucent color of the DodgerBlue. Default (A90 R54 G135 B230).</summary>
+        /// <summary> The translucent color of the DodgerBlue. Default (A90 R54 G135 B230). </summary>
         public static readonly Windows.UI.Color TranslucentDodgerBlue = Windows.UI.Color.FromArgb(90, 54, 135, 230);
 
 

@@ -11,7 +11,7 @@ namespace FanKit.Transformers
     {
         //@Constructs
         /// <summary>
-        /// Initialize a <see cref = "TransformerBorder" />.
+        /// Initialize a <see cref="TransformerBorder"/>.
         /// </summary>
         /// <param name="left"> The left. </param>
         /// <param name="top"> The top. </param>
@@ -28,7 +28,7 @@ namespace FanKit.Transformers
         }
 
         /// <summary>
-        /// Initialize a <see cref = "TransformerBorder" />.
+        /// Initialize a <see cref="TransformerBorder"/>.
         /// </summary>
         /// <param name="width"> The width. </param>
         /// <param name="height"> The height. </param>
@@ -43,7 +43,7 @@ namespace FanKit.Transformers
         }
 
         /// <summary>
-        /// Initialize a <see cref = "Transformer" />.
+        /// Initialize a <see cref="Transformer"/>.
         /// </summary>
         /// <param name="transformer"> The transformer. </param>
         public TransformerBorder(ITransformerLTRB transformer)
@@ -75,7 +75,7 @@ namespace FanKit.Transformers
         }
 
         /// <summary>
-        /// Initialize a <see cref = "TransformerBorder" />.
+        /// Initialize a <see cref="TransformerBorder"/>.
         /// </summary>
         /// <param name="transformers"> The transformers. </param>
         public TransformerBorder(IEnumerable<Transformer> transformers)
@@ -110,7 +110,7 @@ namespace FanKit.Transformers
         }
 
         /// <summary>
-        /// Initialize a <see cref = "TransformerBorder" />.
+        /// Initialize a <see cref="TransformerBorder"/>.
         /// </summary>
         /// <param name="getActualTransformers"> The IGetActualTransformer. </param>
         public TransformerBorder(IEnumerable<IGetActualTransformer> getActualTransformers)
@@ -147,7 +147,7 @@ namespace FanKit.Transformers
         }
 
         /// <summary>
-        /// Initialize a <see cref = "TransformerBorder" />.
+        /// Initialize a <see cref="TransformerBorder"/>.
         /// </summary>
         /// <param name="nodes"> The nodes. </param>
         public TransformerBorder(IEnumerable<Node> nodes)
@@ -185,7 +185,7 @@ namespace FanKit.Transformers
         }
 
         /// <summary>
-        /// Initialize a <see cref = "TransformerBorder" />.
+        /// Initialize a <see cref="TransformerBorder"/>.
         /// </summary>
         /// <param name="nodess"> The NodeCollectionCollection. </param>
         public TransformerBorder(IList<NodeCollection> nodess)

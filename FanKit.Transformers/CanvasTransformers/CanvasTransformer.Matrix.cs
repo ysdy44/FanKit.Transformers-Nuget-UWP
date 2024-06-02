@@ -19,14 +19,14 @@ namespace FanKit.Transformers
 
 
         /// <summary>
-        /// Gets <see cref = "CanvasTransformer" />'s matrix.
-        /// Call the <see cref = "CanvasTransformer.ReloadMatrix" /> method before using.
+        /// Gets <see cref="CanvasTransformer"/>'s matrix.
+        /// Call the <see cref="CanvasTransformer.ReloadMatrix"/> method before using.
         /// </summary>
         /// <returns> The product matrix. </returns>
         public Matrix3x2 GetMatrix() => this.Matrix;
         /// <summary>
-        /// Gets <see cref = "CanvasTransformer" />'s matrix.
-        /// Call the <see cref = "CanvasTransformer.ReloadMatrix" /> method before using.
+        /// Gets <see cref="CanvasTransformer"/>'s matrix.
+        /// Call the <see cref="CanvasTransformer.ReloadMatrix"/> method before using.
         /// </summary>
         /// <param name="mode"> The matrix mode. </param>
         /// <returns> The product matrix. </returns>
@@ -45,14 +45,14 @@ namespace FanKit.Transformers
         }
 
         /// <summary>
-        /// Gets <see cref = "CanvasTransformer" />'s inverse matrix.
-        /// Call the <see cref = "CanvasTransformer.ReloadMatrix" /> method before using.
+        /// Gets <see cref="CanvasTransformer"/>'s inverse matrix.
+        /// Call the <see cref="CanvasTransformer.ReloadMatrix"/> method before using.
         /// </summary>
         /// <returns> The product inverse matrix. </returns>
         public Matrix3x2 GetInverseMatrix() => this.InverseMatrix;
         /// <summary>
-        /// Gets <see cref = "CanvasTransformer" />'s inverse matrix.
-        /// Call the <see cref = "CanvasTransformer.ReloadMatrix" /> method before using.
+        /// Gets <see cref="CanvasTransformer"/>'s inverse matrix.
+        /// Call the <see cref="CanvasTransformer.ReloadMatrix"/> method before using.
         /// </summary>
         /// <param name="mode"> The inverse matrix mode. </param>
         /// <returns> The product inverse matrix. </returns>
@@ -72,7 +72,7 @@ namespace FanKit.Transformers
 
 
         /// <summary>
-        /// Reload <see cref = "CanvasTransformer" />'s all matrix.
+        /// Reload <see cref="CanvasTransformer"/>'s all matrix.
         ///   If the width, height, scale, position or radian change, call this method to update the matrix
         /// </summary>
         public void ReloadMatrix()
