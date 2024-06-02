@@ -1331,6 +1331,35 @@
     <member name="P:FanKit.Transformers.ITransformerLTRB.Vertical">
       <summary> 获取垂直向量。 </summary>
     </member>
+
+    <member name="T:FanKit.Transformers.EachControlPointAngleMode">
+      <summary>
+        每个控制点的角度模式。
+      </summary>
+    </member>
+    <member name="F:FanKit.Transformers.EachControlPointAngleMode.None">
+      <summary> 正常。 </summary>
+    </member>
+    <member name="F:FanKit.Transformers.EachControlPointAngleMode.Asymmetric">
+      <summary> 原点对称。 </summary>
+    </member>
+    <member name="F:FanKit.Transformers.EachControlPointAngleMode.Fixed">
+      <summary> 固定角度。 </summary>
+    </member>
+    <member name="T:FanKit.Transformers.EachControlPointLengthMode">
+      <summary>
+        每个控制点的长度模式。
+      </summary>
+    </member>
+    <member name="F:FanKit.Transformers.EachControlPointLengthMode.None">
+      <summary> 正常。 </summary>
+    </member>
+    <member name="F:FanKit.Transformers.EachControlPointLengthMode.Equal">
+      <summary> 长度相等。 </summary>
+    </member>
+    <member name="F:FanKit.Transformers.EachControlPointLengthMode.Ratio">
+      <summary> 比率长度。 </summary>
+    </member>
     <member name="T:FanKit.Transformers.Node">
       <summary>
         贝塞尔曲线的节点。
@@ -1490,34 +1519,6 @@
     <member name="F:FanKit.Transformers.SelfControlPointMode.Disable">
       <summary> 禁用控制点。 </summary>
     </member>
-    <member name="T:FanKit.Transformers.EachControlPointLengthMode">
-      <summary>
-        每个控制点的长度模式。
-      </summary>
-    </member>
-    <member name="F:FanKit.Transformers.EachControlPointLengthMode.None">
-      <summary> 正常。 </summary>
-    </member>
-    <member name="F:FanKit.Transformers.EachControlPointLengthMode.Equal">
-      <summary> 长度相等。 </summary>
-    </member>
-    <member name="F:FanKit.Transformers.EachControlPointLengthMode.Ratio">
-      <summary> 比率长度。 </summary>
-    </member>
-    <member name="T:FanKit.Transformers.EachControlPointAngleMode">
-      <summary>
-        每个控制点的角度模式。
-      </summary>
-    </member>
-    <member name="F:FanKit.Transformers.EachControlPointAngleMode.None">
-      <summary> 正常。 </summary>
-    </member>
-    <member name="F:FanKit.Transformers.EachControlPointAngleMode.Asymmetric">
-      <summary> 原点对称。 </summary>
-    </member>
-    <member name="F:FanKit.Transformers.EachControlPointAngleMode.Fixed">
-      <summary> 固定角度。 </summary>
-    </member>
     <member name="T:FanKit.Transformers.MarqueeTool">
       <summary>
         可以选择矩形和椭圆形的选框工具。
@@ -1574,6 +1575,26 @@
       <param name="isSquare"> </param>
       <returns> 如果选框蒙版需要重绘，则返回**true**，否则她的**false**。 </returns>
     </member>
+    <member name="T:FanKit.Transformers.CanvasOperator.SingleHandler">
+      <summary>
+        表示对 Single_Start，Single_Delta，Single_Complete 事件的处理的方法。
+      </summary>
+      <param name="point"> 接触点的位置。 </param>
+      <param name="properties"> 接触点的属性。 </param>
+    </member>
+    <member name="T:FanKit.Transformers.CanvasOperator.RightHandler">
+      <summary>
+        表示处理 Right_Start，Right_Delta，Right_Complete 事件的方法。
+        <param name="point"> 鼠标指针的位置。 </param>
+      </summary>
+    </member>
+    <member name="T:FanKit.Transformers.CanvasOperator.DoubleHandler">
+      <summary>
+        表示处理Double_Start，Double_Delta，Double_Complete事件的方法。
+      </summary>
+      <param name="center"> 两只手指的中心。 </param>
+      <param name="space"> 两个手指之间的间距。 </param>
+    </member>
     <member name="T:FanKit.Transformers.CanvasOperator">
       <summary>
         提供单指，双指移动事件到画布控件的指针事件。
@@ -1589,13 +1610,6 @@
         Identifies the <see cref="P:FanKit.Transformers.CanvasOperator.DestinationControl"/> dependency property.
       </summary>
     </member>
-    <member name="T:FanKit.Transformers.CanvasOperator.SingleHandler">
-      <summary>
-        表示对 Single_Start，Single_Delta，Single_Complete 事件的处理的方法。
-      </summary>
-      <param name="point"> 接触点的位置。 </param>
-      <param name="properties"> 接触点的属性。 </param>
-    </member>
     <member name="E:FanKit.Transformers.CanvasOperator.Single_Start">
       <summary> 发生在单指|鼠标左键|笔事件开始。 </summary>
     </member>
@@ -1605,12 +1619,6 @@
     <member name="E:FanKit.Transformers.CanvasOperator.Single_Complete">
       <summary> 发生在单指|鼠标左键|笔事件已完成。 </summary>
     </member>
-    <member name="T:FanKit.Transformers.CanvasOperator.RightHandler">
-      <summary>
-        表示处理 Right_Start，Right_Delta，Right_Complete 事件的方法。
-        <param name="point"> 鼠标指针的位置。 </param>
-      </summary>
-    </member>
     <member name="E:FanKit.Transformers.CanvasOperator.Right_Start">
       <summary> 在鼠标右键事件开始时发生。 </summary>
     </member>
@@ -1619,13 +1627,6 @@
     </member>
     <member name="E:FanKit.Transformers.CanvasOperator.Right_Complete">
       <summary> 当鼠标右键事件完成时发生。 </summary>
-    </member>
-    <member name="T:FanKit.Transformers.CanvasOperator.DoubleHandler">
-      <summary>
-        表示处理Double_Start，Double_Delta，Double_Complete事件的方法。
-      </summary>
-      <param name="center"> 两只手指的中心。 </param>
-      <param name="space"> 两个手指之间的间距。 </param>
     </member>
     <member name="E:FanKit.Transformers.CanvasOperator.Double_Start">
       <summary> 在双指事件开始时发生。 </summary>
@@ -2219,6 +2220,25 @@
       <param name="indicatorMode"> 指示器模式 </param>
       <returns> 产生的向量。 </returns>
     </member>
+    <member name="M:FanKit.Transformers.Transformer.ContainsNodeMode(System.Numerics.Vector2,FanKit.Transformers.Transformer,System.Boolean)">
+      <summary>
+        通过包含指定点的变换者获取所有节点。
+      </summary>
+      <param name="point"> 输入点。 </param>
+      <param name="transformer"> 源变换者。 </param>
+      <param name="disabledRadian"> 是否禁用弧度。 </param>
+      <returns> 变换者模式。 </returns>
+    </member>
+    <member name="M:FanKit.Transformers.Transformer.ContainsNodeMode(System.Numerics.Vector2,FanKit.Transformers.Transformer,System.Numerics.Matrix3x2,System.Boolean)">
+      <summary>
+        通过包含指定点的变换者获取所有节点。
+      </summary>
+      <param name="point"> 输入点。 </param>
+      <param name="transformer"> 源变换者。 </param>
+      <param name="matrix"> 矩阵。 </param>
+      <param name="disabledRadian"> 是否禁用弧度。 </param>
+      <returns> 变换者模式。 </returns>
+    </member>
     <member name="M:FanKit.Transformers.Transformer.FillContainsPoint(System.Numerics.Vector2)">
       <summary>
         返回由变换者填充的区域是否包含指定的点。
@@ -2447,25 +2467,6 @@
       <param name="source"> 源变换者。 </param>
       <param name="destination"> 目标变换者。 </param>
       <returns> 单应性矩阵。 </returns>
-    </member>
-    <member name="M:FanKit.Transformers.Transformer.ContainsNodeMode(System.Numerics.Vector2,FanKit.Transformers.Transformer,System.Boolean)">
-      <summary>
-        通过包含指定点的变换者获取所有节点。
-      </summary>
-      <param name="point"> 输入点。 </param>
-      <param name="transformer"> 源变换者。 </param>
-      <param name="disabledRadian"> 是否禁用弧度。 </param>
-      <returns> 变换者模式。 </returns>
-    </member>
-    <member name="M:FanKit.Transformers.Transformer.ContainsNodeMode(System.Numerics.Vector2,FanKit.Transformers.Transformer,System.Numerics.Matrix3x2,System.Boolean)">
-      <summary>
-        通过包含指定点的变换者获取所有节点。
-      </summary>
-      <param name="point"> 输入点。 </param>
-      <param name="transformer"> 源变换者。 </param>
-      <param name="matrix"> 矩阵。 </param>
-      <param name="disabledRadian"> 是否禁用弧度。 </param>
-      <returns> 变换者模式。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.TransformX(System.Single,FanKit.Transformers.IndicatorMode)">
       <summary>
@@ -2769,6 +2770,17 @@
     </member>
     <member name="M:FanKit.Transformers.BorderBorderSnap.YRight">
       <summary> Y 轴向右。 </summary>
+    </member>
+    <member name="T:FanKit.Transformers.GeometryArrowTailType">
+      <summary>
+        箭尾的类型。
+      </summary>
+    </member>
+    <member name="F:FanKit.Transformers.GeometryArrowTailType.None">
+      <summary> 正常。 </summary>
+    </member>
+    <member name="F:FanKit.Transformers.GeometryArrowTailType.Arrow">
+      <summary> 箭头。 </summary>
     </member>
     <member name="T:FanKit.Transformers.TransformerGeometry">
       <summary>
@@ -3120,17 +3132,6 @@
       <param name="transformer"> 源变换者。 </param>
       <param name="spread"> 价差。 </param>
       <returns> 产生的的几何形状。 </returns>
-    </member>
-    <member name="T:FanKit.Transformers.GeometryArrowTailType">
-      <summary>
-        箭尾的类型。
-      </summary>
-    </member>
-    <member name="F:FanKit.Transformers.GeometryArrowTailType.None">
-      <summary> 正常。 </summary>
-    </member>
-    <member name="F:FanKit.Transformers.GeometryArrowTailType.Arrow">
-      <summary> 箭头。 </summary>
     </member>
     <member name="T:FanKit.Transformers.TransformerMatrix">
       <summary>
