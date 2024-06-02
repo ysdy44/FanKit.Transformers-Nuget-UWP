@@ -636,7 +636,7 @@
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.SelectionDeselect">
       <summary>
-        Select deselect.
+        Deselect.
       </summary>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.RectChoose(System.Single,System.Single,System.Single,System.Single)">

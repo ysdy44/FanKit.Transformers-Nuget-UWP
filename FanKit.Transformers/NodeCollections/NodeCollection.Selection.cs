@@ -48,7 +48,7 @@ namespace FanKit.Transformers
         }
 
         /// <summary>
-        /// Select deselect.
+        /// Deselect.
         /// </summary>
         public void SelectionDeselect()
         {
