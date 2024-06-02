@@ -88,11 +88,11 @@ namespace FanKit.Transformers
         /// <summary>
         /// End up using the marquee-tool.
         /// </summary>
-        /// <param name="startingPoint"></param>
-        /// <param name="point"></param>
-        /// <param name="toolType"></param>
-        /// <param name="isCenter"></param>
-        /// <param name="isSquare"></param>
+        /// <param name="startingPoint"> The starting point. </param>
+        /// <param name="point"> The point. </param>
+        /// <param name="toolType"> The tool type.</param>
+        /// <param name="isCenter"> Scaling around the center. </param>
+        /// <param name="isSquare"> Equal in width and height. </param>
         /// <returns> Return **true** if the marquee mask need to redraw, otherwise **false**. </returns>
         public bool Complete(Vector2 startingPoint, Vector2 point, MarqueeToolType toolType, bool isCenter = false, bool isSquare = false)
         {
@@ -129,12 +129,12 @@ namespace FanKit.Transformers
         /// <summary>
         /// End up using the marquee-tool.
         /// </summary>
-        /// <param name="startingPoint"></param>
-        /// <param name="point"></param>
-        /// <param name="toolType"></param>
-        /// <param name="matrix"></param>
-        /// <param name="isCenter"></param>
-        /// <param name="isSquare"></param>
+        /// <param name="startingPoint"> The starting point. </param>
+        /// <param name="point"> The point. </param>
+        /// <param name="toolType"> The tool type.</param>
+        /// <param name="matrix"> The matrix. </param>
+        /// <param name="isCenter"> Scaling around the center. </param>
+        /// <param name="isSquare"> Equal in width and height. </param>
         /// <returns> Return **true** if the marquee mask need to redraw, otherwise **false**. </returns>
         public bool Complete(Vector2 startingPoint, Vector2 point, MarqueeToolType toolType, Matrix3x2 matrix, bool isCenter = false, bool isSquare = false)
         {

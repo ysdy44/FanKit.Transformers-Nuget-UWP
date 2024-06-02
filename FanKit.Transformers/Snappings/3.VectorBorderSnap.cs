@@ -3,7 +3,7 @@
 namespace FanKit.Transformers
 {
     /// <summary>
-    /// Snapping tool for <see cref="Vector2"/><see cref="TransformerBorder"/>.
+    /// Snapping tool for <see cref="Vector2"/> and <see cref="TransformerBorder"/>.
     /// </summary>
     public class VectorBorderSnap : VectorSnapBase<TransformerBorder>
     {

@@ -935,18 +935,18 @@
       <param name="previousImage"> The previous image </param>
       <param name="canvasTransformer"> The canvas-transformer. </param>
       <param name="shadowBlurAmount"> The shaodw blur amount. </param>
-      <param name="shadowOffset"> The shadow offset </param>
+      <param name="shadowOffset"> The shadow offset. </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCard(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasImage,FanKit.Transformers.CanvasTransformer,Windows.UI.Color,System.Single,System.Single)">
       <summary>
         Draw a card.
       </summary>
       <param name="drawingSession"> The drawing-session. </param>
-      <param name="previousImage"> previous image. </param>
+      <param name="previousImage"> The previous image </param>
       <param name="canvasTransformer"> The canvas-transformer. </param>
-      <param name="shadowColor"> shadow color. </param>
-      <param name="shadowBlurAmount"> shaodw blur amount. </param>
-      <param name="shadowOffset"> shadow offset. </param>
+      <param name="shadowColor"> The shadow color. </param>
+      <param name="shadowBlurAmount"> The shaodw blur amount. </param>
+      <param name="shadowOffset"> The shadow offset. </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNodeCollection(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.NodeCollection)">
       <summary>
@@ -1153,7 +1153,7 @@
         Draw lines on bound.
       </summary>
       <param name="drawingSession"> The drawing-session. </param>
-      <param name="transformer"> transformer </param>
+      <param name="transformer"> The transformer. </param>
       <param name="accentColor"> The accent color. </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawBound(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.Transformer,System.Numerics.Matrix3x2,Windows.UI.Color)">
@@ -1591,23 +1591,23 @@
       <summary>
         End up using the marquee-tool.
       </summary>
-      <param name="startingPoint"> </param>
-      <param name="point"> </param>
-      <param name="toolType"> </param>
-      <param name="isCenter"> </param>
-      <param name="isSquare"> </param>
+      <param name="startingPoint"> The starting point. </param>
+      <param name="point"> The point. </param>
+      <param name="toolType"> The tool type. </param>
+      <param name="isCenter"> Scaling around the center. </param>
+      <param name="isSquare"> Equal in width and height. </param>
       <returns> Return **true** if the marquee mask need to redraw, otherwise **false**. </returns>
     </member>
     <member name="M:FanKit.Transformers.MarqueeTool.Complete(System.Numerics.Vector2,System.Numerics.Vector2,FanKit.Transformers.MarqueeToolType,System.Numerics.Matrix3x2,System.Boolean,System.Boolean)">
       <summary>
         End up using the marquee-tool.
       </summary>
-      <param name="startingPoint"> </param>
-      <param name="point"> </param>
-      <param name="toolType"> </param>
-      <param name="matrix"> </param>
-      <param name="isCenter"> </param>
-      <param name="isSquare"> </param>
+      <param name="startingPoint"> The starting point. </param>
+      <param name="point"> The point. </param>
+      <param name="toolType"> The tool type. </param>
+      <param name="matrix"> The matrix. </param>
+      <param name="isCenter"> Scaling around the center. </param>
+      <param name="isSquare"> Equal in width and height. </param>
       <returns> Return **true** if the marquee mask need to redraw, otherwise **false**. </returns>
     </member>
     <member name="T:FanKit.Transformers.SingleHandler">
@@ -2084,7 +2084,7 @@
     </member>
     <member name="T:FanKit.Transformers.VectorBorderSnap">
       <summary>
-        Snapping tool for <see cref="T:System.Numerics.Vector2"/> <see cref="T:FanKit.Transformers.TransformerBorder"/>.
+        Snapping tool for <see cref="T:System.Numerics.Vector2"/> and <see cref="T:FanKit.Transformers.TransformerBorder"/>.
       </summary>
     </member>
     <member name="M:FanKit.Transformers.VectorBorderSnap.SetXSnap(System.Single,FanKit.Transformers.TransformerBorder)">
@@ -2398,7 +2398,7 @@
       </summary>
       <param name="sourceWidth"> The width of source rectangle. </param>
       <param name="sourceHeight"> The height of source rectangle. </param>
-      <param name="destination"> </param>
+      <param name="destination"> The destination Transformer. </param>
       <returns> The homologous matrix. </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.FindHomography3D(System.Single,System.Single,FanKit.Transformers.ITransformerLTRB)">
@@ -2436,7 +2436,7 @@
       <summary>
         Find Homography.
       </summary>
-      <param name="source"> The source Transformer. </param>
+      <param name="source"> The source transformer. </param>
       <param name="destination"> The destination Transformer. </param>
       <returns> The homologous matrix. </returns>
     </member>
@@ -2444,7 +2444,7 @@
       <summary>
         Find Homography.
       </summary>
-      <param name="source"> The source Transformer. </param>
+      <param name="source"> The source transformer. </param>
       <param name="destination"> The destination Transformer. </param>
       <returns> The homologous matrix. </returns>
     </member>
@@ -3090,7 +3090,7 @@
         Create a new capsule geometry.
       </summary>
       <param name="resourceCreator"> The resource-creator. </param>
-      <param name="transformer"> The ITransformer - LTRB. </param>
+      <param name="transformer"> The ITransformer-LTRB. </param>
       <returns> The product geometry. </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateCapsule(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2)">
@@ -3125,7 +3125,7 @@
       </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerMatrix.Source">
-      <summary> The source Transformer. </summary>
+      <summary> The source transformer. </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerMatrix.Destination">
       <summary> The destination Transformer. </summary>

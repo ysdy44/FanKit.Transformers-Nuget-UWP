@@ -28,7 +28,7 @@ namespace FanKit.Transformers
         /// Draw lines on bound.
         /// </summary>
         /// <param name="drawingSession"> The drawing-session. </param>
-        /// <param name="transformer"> transformer </param>
+        /// <param name="transformer"> The transformer. </param>
         /// <param name="accentColor"> The accent color. </param>
         public static void DrawBound(this CanvasDrawingSession drawingSession, Transformer transformer, Windows.UI.Color accentColor) => CanvasDrawingSessionExtensions.DrawBoundCore(drawingSession, transformer.LeftTop, transformer.RightTop, transformer.RightBottom, transformer.LeftBottom, accentColor);
 

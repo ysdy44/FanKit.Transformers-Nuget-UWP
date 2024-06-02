@@ -105,17 +105,17 @@ namespace FanKit.Transformers
         /// <param name="previousImage"> The previous image </param>
         /// <param name="canvasTransformer"> The canvas-transformer. </param>
         /// <param name="shadowBlurAmount"> The shaodw blur amount. </param>
-        /// <param name="shadowOffset"> The shadow offset</param>
+        /// <param name="shadowOffset"> The shadow offset. </param>
         public static void DrawCrad(this CanvasDrawingSession drawingSession, ICanvasImage previousImage, CanvasTransformer canvasTransformer, float shadowBlurAmount = 4.0f, float shadowOffset = 5.0f) => CanvasDrawingSessionExtensions.DrawCradCore(drawingSession, previousImage, canvasTransformer, CanvasDrawingSessionExtensions.ShadowColor, shadowBlurAmount, shadowOffset);
         /// <summary>
         /// Draw a card.
         /// </summary>
         /// <param name="drawingSession"> The drawing-session. </param>
-        /// <param name="previousImage"> previous image. </param>
+        /// <param name="previousImage"> The previous image </param>
         /// <param name="canvasTransformer"> The canvas-transformer. </param>
-        /// <param name="shadowColor"> shadow color. </param>
-        /// <param name="shadowBlurAmount"> shaodw blur amount. </param>
-        /// <param name="shadowOffset"> shadow offset. </param>
+        /// <param name="shadowColor"> The shadow color. </param>
+        /// <param name="shadowBlurAmount"> The shaodw blur amount. </param>
+        /// <param name="shadowOffset"> The shadow offset. </param>
         public static void DrawCard(this CanvasDrawingSession drawingSession, ICanvasImage previousImage, CanvasTransformer canvasTransformer, Windows.UI.Color shadowColor, float shadowBlurAmount = 4.0f, float shadowOffset = 5.0f) => CanvasDrawingSessionExtensions.DrawCradCore(drawingSession, previousImage, canvasTransformer, shadowColor, shadowBlurAmount, shadowOffset);
 
     }
