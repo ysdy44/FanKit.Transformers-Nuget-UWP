@@ -634,7 +634,11 @@
       <param name="point"> 点。 </param>
       <param name="matrix"> 矩阵。 </param>
     </member>
-    <!-- Badly formed XML comment ignored for member "M:FanKit.Transformers.NodeCollection.SelectionDeselect" -->
+    <member name="M:FanKit.Transformers.NodeCollection.SelectionDeselect">
+      <summary>
+        取消选择。
+      </summary>
+    </member>
     <member name="M:FanKit.Transformers.NodeCollection.RectChoose(System.Single,System.Single,System.Single,System.Single)">
       <summary>
         卡住在矩形中的节点。
@@ -1099,7 +1103,7 @@
       <param name="textColor"> 文本的颜色。 </param>
       <param name="textFormat"> 文本的格式。 </param>
     </member>
-    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.FillMarqueeMaskl(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.MarqueeToolType,FanKit.Transformers.MarqueeTool,Windows.Foundation.Rect,FanKit.Transformers.MarqueeCompositeMode)">
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.FillMarqueeMask(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.MarqueeToolType,FanKit.Transformers.MarqueeTool,Windows.Foundation.Rect,FanKit.Transformers.MarqueeCompositeMode)">
       <summary>
         用选框工具填充选框面具。
       </summary>
@@ -1331,7 +1335,6 @@
     <member name="P:FanKit.Transformers.ITransformerLTRB.Vertical">
       <summary> 获取垂直向量。 </summary>
     </member>
-
     <member name="T:FanKit.Transformers.EachControlPointAngleMode">
       <summary>
         每个控制点的角度模式。
@@ -1519,6 +1522,38 @@
     <member name="F:FanKit.Transformers.SelfControlPointMode.Disable">
       <summary> 禁用控制点。 </summary>
     </member>
+    <member name="T:FanKit.Transformers.InputDevice">
+      <summary>
+        <see cref="T:FanKit.Transformers.CanvasOperator"/> 的输入设备类型。
+      </summary>
+    </member>
+    <member name="F:FanKit.Transformers.InputDevice.None">
+      <summary> 正常。 </summary>
+    </member>
+    <member name="F:FanKit.Transformers.InputDevice.Indeterminacy">
+      <summary> 不确定。 </summary>
+    </member>
+    <member name="F:FanKit.Transformers.InputDevice.Holding">
+      <summary> 长按。 </summary>
+    </member>
+    <member name="F:FanKit.Transformers.InputDevice.SingleFinger">
+      <summary> 单指。 </summary>
+    </member>
+    <member name="F:FanKit.Transformers.InputDevice.DoubleFinger">
+      <summary> 两个手指。 </summary>
+    </member>
+    <member name="F:FanKit.Transformers.InputDevice.Pen">
+      <summary> 钢笔。 </summary>
+    </member>
+    <member name="F:FanKit.Transformers.InputDevice.Eraser">
+      <summary> 橡皮。 </summary>
+    </member>
+    <member name="F:FanKit.Transformers.InputDevice.LeftButton">
+      <summary> 鼠标右键。 </summary>
+    </member>
+    <member name="F:FanKit.Transformers.InputDevice.RightButton">
+      <summary> 鼠标右键。 </summary>
+    </member>
     <member name="T:FanKit.Transformers.MarqueeTool">
       <summary>
         可以选择矩形和椭圆形的选框工具。
@@ -1600,6 +1635,16 @@
         提供单指，双指移动事件到画布控件的指针事件。
       </summary>
     </member>
+    <member name="P:FanKit.Transformers.CanvasOperator.Device">
+      <summary>
+        获取当前设备类型。
+      </summary>
+    </member>
+    <member name="P:FanKit.Transformers.CanvasOperator.TouchMode">
+      <summary>
+        获取或设置触摸模式。
+      </summary>
+    </member>
     <member name="P:FanKit.Transformers.CanvasOperator.DestinationControl">
       <summary>
         <see cref="T:FanKit.Transformers.CanvasOperator"/> 的目标控件。
@@ -1641,97 +1686,6 @@
       <summary>
         当指针轮的增量值更改时发生。
       </summary>
-    </member>
-    <member name="M:FanKit.Transformers.CanvasOperator.PointerPosition(Windows.UI.Xaml.UIElement,Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
-      <summary>
-        获取接触点的位置
-      </summary>
-      <param name="relativeTo"> 连接到同一对象树的任何UI元素派生对象。 </param>
-      <param name="e"> 事件的事件数据。 </param>
-      <returns> 触摸点的位置。 </returns>
-    </member>
-    <member name="M:FanKit.Transformers.CanvasOperator.PointerPressure(Windows.UI.Xaml.UIElement,Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
-      <summary>
-        获取接触点的压力
-      </summary>
-      <param name="relativeTo"> 连接到同一对象树的任何UI元素派生对象。 </param>
-      <param name="e"> 事件的事件数据。 </param>
-      <returns> 接触点的压力。 </returns>
-    </member>
-    <member name="M:FanKit.Transformers.CanvasOperator.PointerWheelDelta(Windows.UI.Xaml.UIElement,Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
-      <summary>
-        获取通过滚轮按钮输入的值。
-      </summary>
-      <param name="relativeTo"> 连接到同一对象树的任何UI元素派生对象。 </param>
-      <param name="e"> 的事件数据事件。 </param>
-      <returns> 滚轮按钮输入的值。 </returns>
-    </member>
-    <member name="M:FanKit.Transformers.CanvasOperator.PointerIsTouch(Windows.UI.Xaml.UIElement,Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
-      <summary>
-        判断动作。
-      </summary>
-      <param name="relativeTo"> 连接到同一对象树的任何UI元素派生对象。 </param>
-      <param name="e"> 事件的事件数据。 </param>
-      <returns> 如果该动作是通过触摸触发的，则返回**true**。 </returns>
-    </member>
-    <member name="M:FanKit.Transformers.CanvasOperator.PointerIsPen(Windows.UI.Xaml.UIElement,Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
-      <summary>
-        判断动作。
-      </summary>
-      <param name="relativeTo"> 连接到同一对象树的任何UI元素派生对象。 </param>
-      <param name="e"> 事件的事件数据。 </param>
-      <returns> 如果该动作是由笔触发的，则返回**true**。 </returns>
-    </member>
-    <member name="M:FanKit.Transformers.CanvasOperator.PointerIsBarrel(Windows.UI.Xaml.UIElement,Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
-      <summary>
-        判断动作。
-      </summary>
-      <param name="relativeTo"> 连接到同一对象树的任何UI元素派生对象。 </param>
-      <param name="e"> 事件的事件数据。 </param>
-      <returns> 如果该动作是由发条盒触发的，则返回**true**。 </returns>
-    </member>
-    <member name="M:FanKit.Transformers.CanvasOperator.PointerIsMouse(Windows.UI.Xaml.UIElement,Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
-      <summary>
-        判断动作。
-      </summary>
-      <param name="relativeTo"> 连接到同一对象树的任何UI元素派生对象。 </param>
-      <param name="e"> 事件的事件数据。 </param>
-      <returns> 如果该动作是由鼠标触发的，则返回**true**。 </returns>
-    </member>
-    <member name="M:FanKit.Transformers.CanvasOperator.PointerIsLeft(Windows.UI.Xaml.UIElement,Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
-      <summary>
-        判断动作。
-      </summary>
-      <param name="relativeTo"> 连接到同一对象树的任何UI元素派生对象。 </param>
-      <param name="e"> 事件的事件数据。 </param>
-      <returns> 如果该动作是由鼠标左键触发的，则返回**true**。 </returns>
-    </member>
-    <member name="M:FanKit.Transformers.CanvasOperator.PointerIsRight(Windows.UI.Xaml.UIElement,Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
-      <summary>
-        判断动作。
-      </summary>
-      <param name="relativeTo"> 连接到同一对象树的任何UI元素派生对象。 </param>
-      <param name="e"> 事件的事件数据。 </param>
-      <returns> 如果该动作是由鼠标右键触发的，则返回**true**。 </returns>
-    </member>
-    <member name="T:FanKit.Transformers.InputDevice">
-      <summary>
-        <see cref="T:FanKit.Transformers.CanvasOperator"/> 的输入设备类型。
-      </summary>
-    </member>
-    <member name="F:FanKit.Transformers.InputDevice.None">
-      <summary> 正常。 </summary>
-    </member>
-    <member name="F:FanKit.Transformers.InputDevice.Single">
-      <summary>
-        单指|鼠标左键|钢笔。
-      </summary>
-    </member>
-    <member name="F:FanKit.Transformers.InputDevice.Double">
-      <summary> 两个手指。 </summary>
-    </member>
-    <member name="F:FanKit.Transformers.InputDevice.Right">
-      <summary> 鼠标右键。 </summary>
     </member>
     <member name="T:FanKit.Transformers.ICacheTransform">
       <summary>
@@ -1784,9 +1738,6 @@
       </summary>
     </member>
     <member name="T:FanKit.Transformers.IndicatorControl">
-      <summary>
-        变换后的指标控件。
-      </summary>
       <summary>
         变换后的指标控件。
       </summary>
@@ -1914,6 +1865,24 @@
     </member>
     <member name="F:FanKit.Transformers.MatrixTransformerMode.VirtualToControl">
       <summary> 虚拟>控制。 </summary>
+    </member>
+    <member name="T:FanKit.Transformers.TouchMode">
+      <summary>
+        <see cref="T:FanKit.Transformers.CanvasOperator"/> 的触摸模式。
+      </summary>
+    </member>
+    <member name="F:FanKit.Transformers.TouchMode.Disable">
+      <summary> 禁用。 </summary>
+    </member>
+    <member name="F:FanKit.Transformers.TouchMode.SingleFinger">
+      <summary>
+        <see cref="F:FanKit.Transformers.InputDevice.SingleFinger"/>。
+      </summary>
+    </member>
+    <member name="F:FanKit.Transformers.TouchMode.RightButton">
+      <summary>
+        <see cref="F:FanKit.Transformers.InputDevice.RightButton"/>。
+      </summary>
     </member>
     <member name="T:FanKit.Transformers.RemoteControl">
       <summary>
@@ -2419,7 +2388,6 @@
       <param name="matrix"> 矩阵。 </param>
       <returns> 产生的的几何形状。 </returns>
     </member>
-
     <member name="M:FanKit.Transformers.Transformer.FindHomography(System.Single,System.Single,FanKit.Transformers.ITransformerLTRB)">
       <summary>
         查找单应性。
@@ -2461,6 +2429,14 @@
       <returns> 单应性矩阵。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.FindHomography(FanKit.Transformers.ITransformerLTRB,FanKit.Transformers.ITransformerLTRB)">
+      <summary>
+        查找单应性。
+      </summary>
+      <param name="source"> 源变换者。 </param>
+      <param name="destination"> 目标变换者。 </param>
+      <returns> 单应性矩阵。 </returns>
+    </member>
+    <member name="M:FanKit.Transformers.Transformer.FindHomography3D(FanKit.Transformers.TransformerRect,FanKit.Transformers.ITransformerLTRB)">
       <summary>
         查找单应性。
       </summary>
@@ -2592,8 +2568,10 @@
       <summary>
         初始化 <see cref="T:FanKit.Transformers.TransformerBorder"/>。
       </summary>
-      <param name="width"> 宽度。 </param>
-      <param name="height"> 高度。 </param>
+      <param name="left"> 左侧。 </param>
+      <param name="top"> 顶部。 </param>
+      <param name="right"> 右边。 </param>
+      <param name="bottom"> 底部。 </param>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.#ctor(System.Single,System.Single)">
       <summary>
@@ -2787,10 +2765,10 @@
         提供用于转换为几何的静态方法。
       </summary>
     </member>
-    <member name="F:FanKit.Transformers.TransformerGeometry._z276">
+    <member name="F:FanKit.Transformers.TransformerGeometry.Z276">
       <summary> 0.27614f </summary>
     </member>
-    <member name="F:FanKit.Transformers.TransformerGeometry._z552">
+    <member name="F:FanKit.Transformers.TransformerGeometry.Z552">
       <summary> 0.55228f </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerGeometry.StartingRotation">
@@ -2965,6 +2943,7 @@
         创建一个新的五边形几何。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="transformer"> 源变换者。 </param>
       <param name="points"> 点数。 </param>
       <returns> 产生的的几何形状。 </returns>
     </member>
@@ -2974,6 +2953,7 @@
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
       <param name="transformer"> 源变换者。 </param>
+      <param name="matrix"> 矩阵。 </param>
       <param name="points"> 点数。 </param>
       <returns> 产生的的几何形状。 </returns>
     </member>
@@ -3024,6 +3004,7 @@
         创建一个新的甜甜圈几何。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="transformer"> 源变换者。 </param>
       <param name="holeRadius"> 孔半径。 </param>
       <returns> 产生的的几何形状。 </returns>
     </member>
@@ -3033,6 +3014,7 @@
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
       <param name="transformer"> 源变换者。 </param>
+      <param name="matrix"> 矩阵。 </param>
       <param name="holeRadius"> 孔半径。 </param>
       <returns> 产生的的几何形状。 </returns>
     </member>
@@ -3104,7 +3086,7 @@
         创建一个新的胶囊几何。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
-      <param name="transformerLTRB"> 变换者LTRB。 </param>
+      <param name="transformer"> 变换者LTRB。 </param>
       <returns> 产生的的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateCapsule(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2)">

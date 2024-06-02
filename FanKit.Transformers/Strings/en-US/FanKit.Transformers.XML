@@ -1745,9 +1745,6 @@
       <summary>
         Transformed indicator control.
       </summary>
-      <summary>
-        Transformed indicator control.
-      </summary>
     </member>
     <member name="E:FanKit.Transformers.IndicatorControl.ModeChanged">
       <summary> Click on different small squares to trigger **ModeChanged** event. </summary>
