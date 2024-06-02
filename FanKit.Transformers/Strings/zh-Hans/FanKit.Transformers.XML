@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <doc>
   <assembly>
-    <name>FanKit.Transformers</name>
+    <name> FanKit.Transformers </name>
   </assembly>
   <members>
     <member name="T:FanKit.Transformers.CanvasTransformer">
@@ -22,17 +22,17 @@
     </member>
     <member name="P:FanKit.Transformers.CanvasTransformer.Width">
       <summary>
-        <see cref = "T:FanKit.Transformers.CanvasTransformer" />的宽度。
+        <see cref="T:FanKit.Transformers.CanvasTransformer"/> 的宽度。
       </summary>
     </member>
     <member name="P:FanKit.Transformers.CanvasTransformer.Height">
       <summary>
-        <see cref = "T:FanKit.Transformers.CanvasTransformer" />的高度。
+        <see cref="T:FanKit.Transformers.CanvasTransformer"/> 的高度。
       </summary>
     </member>
     <member name="P:FanKit.Transformers.CanvasTransformer.Scale">
       <summary>
-        <see cref = "T:FanKit.Transformers.CanvasTransformer" />的比例尺。
+        <see cref="T:FanKit.Transformers.CanvasTransformer"/> 的比例尺。
       </summary>
     </member>
     <member name="P:FanKit.Transformers.CanvasTransformer.ControlWidth">
@@ -46,35 +46,35 @@
     </member>
     <member name="P:FanKit.Transformers.CanvasTransformer.Position">
       <summary>
-        <see cref = "T:FanKit.Transformers.CanvasTransformer" />的翻译。
+        <see cref="T:FanKit.Transformers.CanvasTransformer"/> 的翻译。
       </summary>
     </member>
     <member name="P:FanKit.Transformers.CanvasTransformer.Radian">
       <summary>
-        <see cref = "T:FanKit.Transformers.CanvasTransformer" />的旋转。
+        <see cref="T:FanKit.Transformers.CanvasTransformer"/> 的旋转。
       </summary>
     </member>
     <member name="M:FanKit.Transformers.CanvasTransformer.#ctor">
       <summary>
-        初始化<see cref = "T:FanKit.Transformers.CanvasTransformer" />。
+        初始化 <see cref="T:FanKit.Transformers.CanvasTransformer"/>。
       </summary>
     </member>
     <member name="P:FanKit.Transformers.CanvasTransformer.Size">
       <summary>
-        <see cref = "P:FanKit.Transformers.CanvasTransformer.ControlWidth" />和<see cref="P:FanKit.Transformers.CanvasTransformer.ControlHeight"/>的设置方法。
+        <see cref="P:FanKit.Transformers.CanvasTransformer.ControlWidth"/> 和 <see cref="P:FanKit.Transformers.CanvasTransformer.ControlHeight"/> 的设置方法。
       </summary>
     </member>
     <member name="P:FanKit.Transformers.CanvasTransformer.BitmapSize">
       <summary>
-        <see cref = "F:FanKit.Transformers.CanvasTransformer.Width"/>和<see cref="F:FanKit.Transformers.CanvasTransformer.Height"/>的设置方法。
+        <see cref="F:FanKit.Transformers.CanvasTransformer.Width"/> 和 <see cref="F:FanKit.Transformers.CanvasTransformer.Height"/> 的设置方法。
       </summary>
     </member>
     <member name="M:FanKit.Transformers.CanvasTransformer.GetScale(Windows.Graphics.Imaging.BitmapSize)">
       <summary>
         得到缩放。
       </summary>
-      <param name="bitmapSize">位图大小。</param>
-      <returns>产生的向量。 </returns>
+      <param name="bitmapSize"> 位图大小。 </param>
+      <returns> 产生的向量。 </returns>
     </member>
     <member name="M:FanKit.Transformers.CanvasTransformer.Fit">
       <summary>
@@ -85,78 +85,78 @@
       <summary>
         缩放到适合屏幕的尺寸。
       </summary>
-      <param name="scale">缩放值。 </param>
+      <param name="scale"> 缩放值。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasTransformer.GetBorderValue(FanKit.Transformers.BorderMode)">
       <summary>
         通过左，右，上，下获取值。
       </summary>
-      <param name="borderMode">边框模式</param>
-      <returns>产生的值。 </returns>
+      <param name="borderMode"> 边框模式 </param>
+      <returns> 产生的值。 </returns>
     </member>
     <member name="M:FanKit.Transformers.CanvasTransformer.GetIndicatorVector(FanKit.Transformers.IndicatorMode)">
       <summary>
         按左，右，上，下获取向量。
       </summary>
-      <param name="indicatorMode">指示器模式</param>
-      <returns>产生的向量。 </returns>
+      <param name="indicatorMode"> 指示器模式 </param>
+      <returns> 产生的向量。 </returns>
     </member>
     <member name="M:FanKit.Transformers.CanvasTransformer.Equals(Windows.Graphics.Imaging.BitmapSize)">
       <summary>
         返回一个布尔值，指示给定的 BitmapSize 是否等于此画布变换者实例。
       </summary>
-      <param name="other">与此实例进行比较的 BitmapSize。 </param>
-      <returns>如果另一个 BitmapSize 等于此实例，则返回**true**，否则返回**false**。 </returns>
+      <param name="other"> 与此实例进行比较的 BitmapSize。 </param>
+      <returns> 如果另一个 BitmapSize 等于此实例，则返回**true**，否则返回**false**。 </returns>
     </member>
     <member name="M:FanKit.Transformers.CanvasTransformer.op_Equality(FanKit.Transformers.CanvasTransformer,Windows.Graphics.Imaging.BitmapSize)">
       <summary>
         返回一个指示两个指定大小的每对元素是否相等的值。
       </summary>
-      <param name="left">第一个要比较的画布变换者。 </param>
-      <param name="right">要比较的第二个 BitmapSize。 </param>
-      <returns>如果左右相等则返回**true**，否则返回**false**。 </returns>
+      <param name="left"> 第一个要比较的画布变换者。 </param>
+      <param name="right"> 要比较的第二个 BitmapSize。 </param>
+      <returns> 如果左右相等则返回**true**，否则返回**false**。 </returns>
     </member>
     <member name="M:FanKit.Transformers.CanvasTransformer.op_Inequality(FanKit.Transformers.CanvasTransformer,Windows.Graphics.Imaging.BitmapSize)">
       <summary>
         返回一个布尔值，指示两个给定的大小是否相等。
       </summary>
-      <param name="left">第一个要比较的画布变换者。 </param>
-      <param name="right">要比较的第二个 BitmapSize。 </param>
-      <returns>如果节点不相等，则返回**true**；如果它们相等，则为假。 </returns>
+      <param name="left"> 第一个要比较的画布变换者。 </param>
+      <param name="right"> 要比较的第二个 BitmapSize。 </param>
+      <returns> 如果节点不相等，则返回**true**；如果它们相等，则为假。 </returns>
     </member>
     <member name="M:FanKit.Transformers.CanvasTransformer.GetMatrix">
       <summary>
-        获取<see cref="T:FanKit.Transformers.CanvasTransformer"/>的矩阵。
-        在使用之前，请调用<see cref="M:FanKit.Transformers.CanvasTransformer.ReloadMatrix"/>方法。
+        获取 <see cref="T:FanKit.Transformers.CanvasTransformer"/> 的矩阵。
+        在使用之前，请调用 <see cref="M:FanKit.Transformers.CanvasTransformer.ReloadMatrix"/> 方法。
       </summary>
-      <returns>乘积矩阵。 </returns>
+      <returns> 乘积矩阵。 </returns>
     </member>
     <member name="M:FanKit.Transformers.CanvasTransformer.GetMatrix(FanKit.Transformers.MatrixTransformerMode)">
       <summary>
-        获取<see cref="T:FanKit.Transformers.CanvasTransformer"/>的矩阵。
-        在使用之前，请调用<see cref="M:FanKit.Transformers.CanvasTransformer.ReloadMatrix"/>方法。
+        获取 <see cref="T:FanKit.Transformers.CanvasTransformer"/> 的矩阵。
+        在使用之前，请调用 <see cref="M:FanKit.Transformers.CanvasTransformer.ReloadMatrix"/> 方法。
       </summary>
-      <param name="mode">矩阵模式。 </param>
-      <returns>乘积矩阵。 </returns>
+      <param name="mode"> 矩阵模式。 </param>
+      <returns> 乘积矩阵。 </returns>
     </member>
     <member name="M:FanKit.Transformers.CanvasTransformer.GetInverseMatrix">
       <summary>
-        获取<see cref="T:FanKit.Transformers.CanvasTransformer"/>的逆矩阵。
-        在使用之前，请调用<see cref="M:FanKit.Transformers.CanvasTransformer.ReloadMatrix"/>方法。
+        获取 <see cref="T:FanKit.Transformers.CanvasTransformer"/> 的逆矩阵。
+        在使用之前，请调用 <see cref="M:FanKit.Transformers.CanvasTransformer.ReloadMatrix"/> 方法。
       </summary>
-      <returns>乘积逆矩阵。 </returns>
+      <returns> 乘积逆矩阵。 </returns>
     </member>
     <member name="M:FanKit.Transformers.CanvasTransformer.GetInverseMatrix(FanKit.Transformers.InverseMatrixTransformerMode)">
       <summary>
-        获取<see cref="T:FanKit.Transformers.CanvasTransformer"/>的逆矩阵。
-        在使用之前，请调用<see cref="M:FanKit.Transformers.CanvasTransformer.ReloadMatrix"/>方法。
+        获取 <see cref="T:FanKit.Transformers.CanvasTransformer"/> 的逆矩阵。
+        在使用之前，请调用 <see cref="M:FanKit.Transformers.CanvasTransformer.ReloadMatrix"/> 方法。
       </summary>
-      <param name="mode">逆矩阵模式。 </param>
-      <returns>乘积逆矩阵。 </returns>
+      <param name="mode"> 逆矩阵模式。 </param>
+      <returns> 乘积逆矩阵。 </returns>
     </member>
     <member name="M:FanKit.Transformers.CanvasTransformer.ReloadMatrix">
       <summary>
-        重新加载<see cref="T:FanKit.Transformers.CanvasTransformer"/>的所有矩阵。
+        重新加载 <see cref="T:FanKit.Transformers.CanvasTransformer"/> 的所有矩阵。
         如果宽度，高度，比例，位置或弧度发生变化，请调用此方法以更新矩阵
       </summary>
     </member>
@@ -164,51 +164,51 @@
       <summary>
         缓存Move事件的数据。
       </summary>
-      <param name="point">点。 </param>
+      <param name="point"> 点。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasTransformer.Move(System.Numerics.Vector2)">
       <summary>
         移动位置（首先发生缓存移动事件）。
       </summary>
-      <param name="point">点。 </param>
+      <param name="point"> 点。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasTransformer.CachePinch(System.Numerics.Vector2,System.Single)">
       <summary>
         缓存捏合事件的数据。
       </summary>
-      <param name="centerPoint">中心点。 </param>
-      <param name="space">手指之间的间距。 </param>
+      <param name="centerPoint"> 中心点。 </param>
+      <param name="space"> 手指之间的间距。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasTransformer.Pinch(System.Numerics.Vector2,System.Single)">
       <summary>
         捏住屏幕以更改位置和比例（缓存捏合事件首先发生）。
       </summary>
-      <param name="centerPoint">中心点。 </param>
-      <param name="space">手指之间的间距。 </param>
+      <param name="centerPoint"> 中心点。 </param>
+      <param name="space"> 手指之间的间距。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasTransformer.ZoomIn(System.Numerics.Vector2,System.Single,System.Single)">
       <summary>
         操纵显示以缩小图像。
       </summary>
-      <param name="centerPoint">中心点。 </param>
-      <param name="zoomInScale">比例尺。 </param>
-      <param name="maximum">最大比例。 </param>
+      <param name="centerPoint"> 中心点。 </param>
+      <param name="zoomInScale"> 比例尺。 </param>
+      <param name="maximum"> 最大比例。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasTransformer.ZoomOut(System.Numerics.Vector2,System.Single,System.Single)">
       <summary>
         操纵显示以使图像更大。
       </summary>
-      <param name="centerPoint">中心点。 </param>
-      <param name="zoomOutScale">比例尺。 </param>
-      <param name="minimum">最小比例尺。 </param>
+      <param name="centerPoint"> 中心点。 </param>
+      <param name="zoomOutScale"> 比例尺。 </param>
+      <param name="minimum"> 最小比例尺。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasTransformer.TransitionSource(System.Numerics.Vector2,System.Single,System.Single)">
       <summary>
         设置源矩形。
       </summary>
-      <param name="postion">源位置。 </param>
-      <param name="width">源的宽度。 </param>
-      <param name="height">源高度。 </param>
+      <param name="postion"> 源位置。 </param>
+      <param name="width"> 源的宽度。 </param>
+      <param name="height"> 源高度。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasTransformer.TransitionSource(Windows.Foundation.Rect)">
       <summary>
@@ -219,9 +219,9 @@
       <summary>
         设置目标区域。
       </summary>
-      <param name="postion">目标位置。 </param>
-      <param name="width">目标的宽度。 </param>
-      <param name="height">目的地的高度。 </param>
+      <param name="postion"> 目标位置。 </param>
+      <param name="width"> 目标的宽度。 </param>
+      <param name="height"> 目的地的高度。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasTransformer.TransitionDestination(Windows.Foundation.Rect)">
       <summary>
@@ -232,7 +232,7 @@
       <summary>
         使矩阵在源和目标之间转换。
       </summary>
-      <param name="value">转换值（0.0f 是源，1.0f 是目标）。 </param>
+      <param name="value"> 转换值（0.0f 是源，1.0f 是目标）。 </param>
     </member>
     <member name="T:FanKit.Transformers.DottedLineBrush">
       <summary>
@@ -240,20 +240,20 @@
       </summary>
     </member>
     <member name="P:FanKit.Transformers.DottedLineBrush.Brush">
-      <summary>获取线性渐变画笔。 </summary>
+      <summary> 获取线性渐变画笔。 </summary>
     </member>
     <member name="M:FanKit.Transformers.DottedLineBrush.#ctor(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Single)">
       <summary>
         初始化用于绘制虚线的画笔。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="distance">两个渐变点之间的距离。 </param>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="distance"> 两个渐变点之间的距离。 </param>
     </member>
     <member name="M:FanKit.Transformers.DottedLineBrush.Update(System.Single)">
       <summary>
         更新画笔的位移
       </summary>
-      <param name="space">位移的变化。 </param>
+      <param name="space"> 位移的变化。 </param>
     </member>
     <member name="M:FanKit.Transformers.DottedLineBrush.Dispose">
       <summary>
@@ -266,40 +266,40 @@
       </summary>
     </member>
     <member name="P:FanKit.Transformers.DottedLineImage.Input">
-      <summary>烘焙了输入图像。 </summary>
+      <summary> 烘焙了输入图像。 </summary>
     </member>
     <member name="P:FanKit.Transformers.DottedLineImage.Output">
-      <summary>烘焙了输入图像。 </summary>
+      <summary> 烘焙了输入图像。 </summary>
     </member>
     <member name="P:FanKit.Transformers.DottedLineImage.Bounds">
-      <summary>获取位图的范围，以设备独立像素（DIP）为单位。 </summary>
+      <summary> 获取位图的范围，以设备独立像素（DIP）为单位。 </summary>
     </member>
     <member name="M:FanKit.Transformers.DottedLineImage.#ctor(Microsoft.Graphics.Canvas.CanvasRenderTarget)">
       <summary>
         初始化虚线图像类的新实例。
       </summary>
-      <param name="input">输入图像。 </param>
+      <param name="input"> 输入图像。 </param>
     </member>
     <member name="M:FanKit.Transformers.DottedLineImage.CreateDrawingSession">
       <summary>
         返回一个新的绘图会话。绘制会话绘制到 CanvasRenderTarget 上。
       </summary>
-      <returns>绘制会话。 </returns>
+      <returns> 绘制会话。 </returns>
     </member>
     <member name="M:FanKit.Transformers.DottedLineImage.Baking(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Boolean)">
       <summary>
         将输入图像变成图像边缘线。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="isCrop">是否修剪边缘。 </param>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="isCrop"> 是否修剪边缘。 </param>
     </member>
     <member name="M:FanKit.Transformers.DottedLineImage.Baking(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Matrix3x2,System.Boolean)">
       <summary>
         将输入图像变成图像边缘线。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="matrix">矩阵。 </param>
-      <param name="isCrop">是否修剪边缘。 </param>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="matrix"> 矩阵。 </param>
+      <param name="isCrop"> 是否修剪边缘。 </param>
     </member>
     <member name="M:FanKit.Transformers.DottedLineImage.Dispose">
       <summary>
@@ -308,29 +308,29 @@
     </member>
     <member name="T:FanKit.Transformers.BorderMode">
       <summary>
-        <see cref="T:FanKit.Transformers.TransformerBorder"/>的模式。
+        <see cref="T:FanKit.Transformers.TransformerBorder"/> 的模式。
       </summary>
     </member>
     <member name="F:FanKit.Transformers.BorderMode.None">
-      <summary>正常。 </summary>
+      <summary> 正常。 </summary>
     </member>
     <member name="F:FanKit.Transformers.BorderMode.MinX">
-      <summary>最小。 </summary>
+      <summary> 最小。 </summary>
     </member>
     <member name="F:FanKit.Transformers.BorderMode.CenterX">
-      <summary>中心。 </summary>
+      <summary> 中心。 </summary>
     </member>
     <member name="F:FanKit.Transformers.BorderMode.MaxX">
-      <summary>最大值</summary>
+      <summary> 最大值 </summary>
     </member>
     <member name="F:FanKit.Transformers.BorderMode.MinY">
-      <summary>最小。 </summary>
+      <summary> 最小。 </summary>
     </member>
     <member name="F:FanKit.Transformers.BorderMode.CenterY">
-      <summary>中心。 </summary>
+      <summary> 中心。 </summary>
     </member>
     <member name="F:FanKit.Transformers.BorderMode.MaxY">
-      <summary>最大值</summary>
+      <summary> 最大值 </summary>
     </member>
     <member name="T:FanKit.Transformers.MarqueeCompositeMode">
       <summary>
@@ -338,19 +338,19 @@
       </summary>
     </member>
     <member name="F:FanKit.Transformers.MarqueeCompositeMode.New">
-      <summary>新的位图。 </summary>
+      <summary> 新的位图。 </summary>
     </member>
     <member name="F:FanKit.Transformers.MarqueeCompositeMode.Add">
-      <summary>源位图和目标位图的并集。 </summary>
+      <summary> 源位图和目标位图的并集。 </summary>
     </member>
     <member name="F:FanKit.Transformers.MarqueeCompositeMode.Subtract">
-      <summary>源位图的区域。 </summary>
+      <summary> 源位图的区域。 </summary>
     </member>
     <member name="F:FanKit.Transformers.MarqueeCompositeMode.Intersect">
-      <summary>源位图和目标位图的交集。</summary>
+      <summary> 源位图和目标位图的交集。 </summary>
     </member>
     <member name="F:FanKit.Transformers.MarqueeCompositeMode.Xor">
-      <summary>具有异或功能的源位图和目标位图的并集，用于重叠的像素。 </summary>
+      <summary> 具有异或功能的源位图和目标位图的并集，用于重叠的像素。 </summary>
     </member>
     <member name="T:FanKit.Transformers.MarqueeToolType">
       <summary>
@@ -358,19 +358,19 @@
       </summary>
     </member>
     <member name="F:FanKit.Transformers.MarqueeToolType.None">
-      <summary>正常。 </summary>
+      <summary> 正常。 </summary>
     </member>
     <member name="F:FanKit.Transformers.MarqueeToolType.Rectangular">
-      <summary>□</summary>
+      <summary> □ </summary>
     </member>
     <member name="F:FanKit.Transformers.MarqueeToolType.Elliptical">
-      <summary>◯</summary>
+      <summary> ◯ </summary>
     </member>
     <member name="F:FanKit.Transformers.MarqueeToolType.Polygonal">
-      <summary>🗨</summary>
+      <summary> 🗨 </summary>
     </member>
     <member name="F:FanKit.Transformers.MarqueeToolType.FreeHand">
-      <summary>🗯</summary>
+      <summary> 🗯 </summary>
     </member>
     <member name="T:FanKit.Transformers.NodeBorder">
       <summary>
@@ -384,15 +384,15 @@
     </member>
     <member name="M:FanKit.Transformers.NodeBorder.GetRemoveMode">
       <summary>
-        获取删除模式，设置<see cref="P:FanKit.Transformers.NodeBorder.Mode"/>。
+        获取删除模式，设置 <see cref="P:FanKit.Transformers.NodeBorder.Mode"/>。
       </summary>
-      <returns>产生的模式。 </returns>
+      <returns> 产生的模式。 </returns>
     </member>
     <member name="M:FanKit.Transformers.NodeBorder.GetUnCheckedNodes">
       <summary>
         获取所有未卡住的节点。
       </summary>
-      <returns>产生的节点。 </returns>
+      <returns> 产生的节点。 </returns>
     </member>
     <member name="M:FanKit.Transformers.NodeBorder.Dispose">
       <summary>
@@ -414,13 +414,13 @@
       <summary>
         获取删除模式。
       </summary>
-      <returns>产生的模式。 </returns>
+      <returns> 产生的模式。 </returns>
     </member>
     <member name="M:FanKit.Transformers.NodeBorderCollection.GetUnCheckedNodes">
       <summary>
         获取所有未卡住的节点。
       </summary>
-      <returns>产生的节点。 </returns>
+      <returns> 产生的节点。 </returns>
     </member>
     <member name="M:FanKit.Transformers.NodeBorderCollection.Dispose">
       <summary>
@@ -446,28 +446,28 @@
       <summary>
         通过给定的向量变换节点。
       </summary>
-      <param name="vector">用于相加的加值。 </param>
+      <param name="vector"> 用于相加的加值。 </param>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.TransformAddOnlySelected(System.Numerics.Vector2)">
       <summary>
         通过给定的向量变换节点。
       </summary>
-      <param name="vector">用于相加的加值。 </param>
+      <param name="vector"> 用于相加的加值。 </param>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.TransformMultiplies(System.Numerics.Matrix3x2)">
       <summary>
         通过给定的矩阵变换节点。
       </summary>
-      <param name="matrix">结果矩阵。 </param>
+      <param name="matrix"> 结果矩阵。 </param>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.TransformMultipliesOnlySelected(System.Numerics.Matrix3x2)">
       <summary>
         通过给定的矩阵转换节点。
       </summary>
-      <param name="matrix">结果矩阵。 </param>
+      <param name="matrix"> 结果矩阵。 </param>
     </member>
     <member name="P:FanKit.Transformers.NodeCollection.Index">
-      <summary>获取或设置所选项目的索引。 </summary>
+      <summary> 获取或设置所选项目的索引。 </summary>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.#ctor">
       <summary>
@@ -478,326 +478,326 @@
       <summary>
         初始化节点集合。
       </summary>
-      <param name="nodes">节点。 </param>
+      <param name="nodes"> 节点。 </param>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.#ctor(System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>
         初始化节点集合。
       </summary>
-      <param name="left">第一个要点。 </param>
-      <param name="right">第二点。 </param>
+      <param name="left"> 第一个要点。 </param>
+      <param name="right"> 第二点。 </param>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.#ctor(Microsoft.Graphics.Canvas.Geometry.CanvasGeometry)">
       <summary>
         初始化节点集合。
       </summary>
-      <param name="geometry">几何。 </param>
+      <param name="geometry"> 几何。 </param>
     </member>
     <member name="P:FanKit.Transformers.NodeCollection.SelectedItem">
-      <summary>获取所选项目。 </summary>
+      <summary> 获取所选项目。 </summary>
     </member>
     <member name="P:FanKit.Transformers.NodeCollection.SelectedItems">
-      <summary>获取选定的项目。 </summary>
+      <summary> 获取选定的项目。 </summary>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.CreateGeometry(Microsoft.Graphics.Canvas.ICanvasResourceCreator)">
       <summary>
         创建一个新的几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <returns>创建的几何。 </returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <returns> 创建的几何。 </returns>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.Clone">
       <summary>
         获取自己的副本。
       </summary>
-      <returns>克隆的节点集合。 </returns>
+      <returns> 克隆的节点集合。 </returns>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.NodesClone">
       <summary>
         获取自己的副本。
       </summary>
-      <returns>克隆的节点。 </returns>
+      <returns> 克隆的节点。 </returns>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.NodesStartingClone">
       <summary>
-        获取自己的起始副本（例如：<see cref="P:FanKit.Transformers.Node.StartingIsChecked"/>）。
+        获取自己的起始副本（例如： <see cref="P:FanKit.Transformers.Node.StartingIsChecked"/> ）。
       </summary>
-      <returns>克隆的节点。 </returns>
+      <returns> 克隆的节点。 </returns>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.ContainsNodeCollectionMode(System.Numerics.Vector2,FanKit.Transformers.NodeCollection)">
       <summary>
         通过节点集合获取包含指定点的所有点。
       </summary>
-      <param name="point">输入点。 </param>
-      <param name="nodeCollection">源节点集合。 </param>
-      <returns>节点集合模式。 </returns>
+      <param name="point"> 输入点。 </param>
+      <param name="nodeCollection"> 源节点集合。 </param>
+      <returns> 节点集合模式。 </returns>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.ContainsNodeCollectionMode(System.Numerics.Vector2,FanKit.Transformers.NodeCollection,System.Numerics.Matrix3x2)">
       <summary>
         通过节点集合获取包含指定点的所有点。
       </summary>
-      <param name="point">输入点。 </param>
-      <param name="nodeCollection">源节点集合。 </param>
-      <param name="matrix">矩阵。 </param>
+      <param name="point"> 输入点。 </param>
+      <param name="nodeCollection"> 源节点集合。 </param>
+      <param name="matrix"> 矩阵。 </param>
       <returns> 节点集合模式。 </returns>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.InterpolationCheckedNodes(FanKit.Transformers.NodeCollection)">
       <summary>
         在卡住点之间插入新点
       </summary>
-      <param name="nodeCollection">源节点集合。 </param>
+      <param name="nodeCollection"> 源节点集合。 </param>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.SharpCheckedNodes(FanKit.Transformers.NodeCollection)">
       <summary>
         锐化所有选中的节点。
       </summary>
-      <param name="nodeCollection">源节点集合。 </param>
+      <param name="nodeCollection"> 源节点集合。 </param>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.SmoothCheckedNodes(FanKit.Transformers.NodeCollection)">
       <summary>
         平滑地所有卡住的节点。
       </summary>
-      <param name="nodeCollection">源节点集合。 </param>
+      <param name="nodeCollection"> 源节点集合。 </param>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.ArrangeNodes(System.Collections.Generic.IList{FanKit.Transformers.Node})">
       <summary>
         排列所有卡住点的右控制点。
       </summary>
-      <param name="nodes">节点。 </param>
+      <param name="nodes"> 节点。 </param>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.SetFilledRegionDetermination(Microsoft.Graphics.Canvas.Geometry.CanvasFilledRegionDetermination)">
       <summary>
         指定用于确定哪些点在所描述的几何图形内的方法
         通过此路径构建器，以及哪些点在外面。
       </summary>
-      <param name="filledRegionDetermination">填充区域判定。</param>
+      <param name="filledRegionDetermination"> 填充区域判定。 </param>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.SetSegmentOptions(Microsoft.Graphics.Canvas.Geometry.CanvasFigureSegmentOptions)">
       <summary>
         指定用于确定哪些点在所描述的几何图形内的方法
         通过此路径构建器，以及哪些点在外面。
       </summary>
-      <param name="figureSegmentOptions">图段选项。</param>
+      <param name="figureSegmentOptions"> 图段选项。 </param>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.BeginFigure(System.Numerics.Vector2,Microsoft.Graphics.Canvas.Geometry.CanvasFigureFill)">
       <summary>
         使用指定的图形填充选项在指定的点开始一个新图形。
       </summary>
-      <param name="startPoint">起点。 </param>
-      <param name="figureFill">图形填充。 </param>
+      <param name="startPoint"> 起点。 </param>
+      <param name="figureFill"> 图形填充。 </param>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.EndFigure(Microsoft.Graphics.Canvas.Geometry.CanvasFigureLoop)">
       <summary>
         结束当前图形； (可选）关闭它。
       </summary>
-      <param name="figureLoop">图形循环。</param>
+      <param name="figureLoop"> 图形循环。 </param>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.AddLine(System.Numerics.Vector2)">
       <summary>
         将线段添加到具有指定终点的路径。
       </summary>
-      <param name="endPoint">结束点。</param>
+      <param name="endPoint"> 结束点。 </param>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.AddQuadraticBezier(System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>
         将二次贝塞尔曲线添加到路径。贝塞尔曲线从路径中断处开始，
         并具有指定的控制点和终点。
       </summary>
-      <param name="controlPoint">控制点。</param>
-      <param name="endPoint">结束点。</param>
+      <param name="controlPoint"> 控制点。 </param>
+      <param name="endPoint"> 结束点。 </param>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.AddArc(System.Numerics.Vector2,System.Single,System.Single,System.Single,Microsoft.Graphics.Canvas.Geometry.CanvasSweepDirection,Microsoft.Graphics.Canvas.Geometry.CanvasArcSize)">
       <summary>
         向路径添加一个圆弧，该圆弧由起点和终点指定，通过该起点和终点
         椭圆将被容纳。
       </summary>
-      <param name="endPoint">结束点。</param>
-      <param name="radiusX"> Y半径。</param>
-      <param name="radiusY"> X半径。</param>
-      <param name="rotationAngle">旋转角度</param>
-      <param name="sweepDirection">扫描判定。</param>
-      <param name="arcSize">面积尺寸。</param>
+      <param name="endPoint"> 结束点。 </param>
+      <param name="radiusX"> Y半径。 </param>
+      <param name="radiusY"> X半径。 </param>
+      <param name="rotationAngle"> 旋转角度 </param>
+      <param name="sweepDirection"> 扫描判定。 </param>
+      <param name="arcSize"> 面积尺寸。 </param>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.AddCubicBezier(System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>
         向该路径添加一个三次方贝塞尔曲线。贝塞尔曲线从路径中断处开始，然后
         具有指定的控制点和终点。
       </summary>
-      <param name="controlPoint1">第一控制点。</param>
-      <param name="controlPoint2">第二控制点。</param>
-      <param name="endPoint">结束点。</param>
+      <param name="controlPoint1"> 第一控制点。 </param>
+      <param name="controlPoint2"> 第二控制点。 </param>
+      <param name="endPoint"> 结束点。 </param>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.SelectionOnlyOne(System.Numerics.Vector2,System.Numerics.Matrix3x2)">
       <summary>
         仅选择一个节点。
       </summary>
-      <param name="point">点。 </param>
-      <param name="matrix">矩阵。 </param>
+      <param name="point"> 点。 </param>
+      <param name="matrix"> 矩阵。 </param>
     </member>
     <!-- Badly formed XML comment ignored for member "M:FanKit.Transformers.NodeCollection.SelectionDeselect" -->
     <member name="M:FanKit.Transformers.NodeCollection.RectChoose(System.Single,System.Single,System.Single,System.Single)">
       <summary>
         卡住在矩形中的节点。
       </summary>
-      <param name="left">目标矩形的左侧。 </param>
-      <param name="top">目标矩形的顶部。 </param>
-      <param name="right">目标矩形的右侧。 </param>
-      <param name="bottom">目标矩形的底部。 </param>
+      <param name="left"> 目标矩形的左侧。 </param>
+      <param name="top"> 目标矩形的顶部。 </param>
+      <param name="right"> 目标矩形的右侧。 </param>
+      <param name="bottom"> 目标矩形的底部。 </param>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.BoxChoose(FanKit.Transformers.TransformerRect)">
       <summary>
         卡住在矩形中的节点。
       </summary>
-      <param name="boxRect">目标矩形。 </param>
+      <param name="boxRect"> 目标矩形。 </param>
     </member>
     <member name="T:FanKit.Transformers.NodeCollectionMode">
       <summary>
-        <see cref="T:FanKit.Transformers.NodeCollection"/>的状态。
+        <see cref="T:FanKit.Transformers.NodeCollection"/> 的状态。
       </summary>
     </member>
     <member name="F:FanKit.Transformers.NodeCollectionMode.None">
-      <summary>正常。 </summary>
+      <summary> 正常。 </summary>
     </member>
     <member name="F:FanKit.Transformers.NodeCollectionMode.Preview">
-      <summary>在创建图层之前预览一行。 </summary>
+      <summary> 在创建图层之前预览一行。 </summary>
     </member>
     <member name="F:FanKit.Transformers.NodeCollectionMode.Add">
-      <summary>将节点添加到曲线图层中的节点。 </summary>
+      <summary> 将节点添加到曲线图层中的节点。 </summary>
     </member>
     <member name="F:FanKit.Transformers.NodeCollectionMode.Move">
-      <summary>在曲线图层中移动多个节点。 </summary>
+      <summary> 在曲线图层中移动多个节点。 </summary>
     </member>
     <member name="F:FanKit.Transformers.NodeCollectionMode.MoveSingleNodePoint">
-      <summary>移动节点的点。 </summary>
+      <summary> 移动节点的点。 </summary>
     </member>
     <member name="F:FanKit.Transformers.NodeCollectionMode.MoveSingleNodeLeftControlPoint">
-      <summary>移动节点的左控制点。 </summary>
+      <summary> 移动节点的左控制点。 </summary>
     </member>
     <member name="F:FanKit.Transformers.NodeCollectionMode.MoveSingleNodeRightControlPoint">
-      <summary>移动节点的右控制点。 </summary>
+      <summary> 移动节点的右控制点。 </summary>
     </member>
     <member name="F:FanKit.Transformers.NodeCollectionMode.RectChoose">
-      <summary>填充一个选择矩形。 </summary>
+      <summary> 填充一个选择矩形。 </summary>
     </member>
     <member name="T:FanKit.Transformers.NodeRemoveMode">
       <summary>
-        <see cref="!:Node"/>的状态。
+        <see cref="!:Node"/> 的状态。
       </summary>
     </member>
     <member name="F:FanKit.Transformers.NodeRemoveMode.None">
-      <summary>正常。 </summary>
+      <summary> 正常。 </summary>
     </member>
     <member name="F:FanKit.Transformers.NodeRemoveMode.RemovedNodes">
-      <summary>删除所有卡住的节点。 </summary>
+      <summary> 删除所有卡住的节点。 </summary>
     </member>
     <member name="F:FanKit.Transformers.NodeRemoveMode.RemoveCurve">
-      <summary>删除曲线。 </summary>
+      <summary> 删除曲线。 </summary>
     </member>
     <member name="T:FanKit.Transformers.NodeMode">
       <summary>
-        <see cref="T:FanKit.Transformers.Node"/>的模式。
+        <see cref="T:FanKit.Transformers.Node"/> 的模式。
       </summary>
     </member>
     <member name="F:FanKit.Transformers.NodeMode.None">
-      <summary>正常。 </summary>
+      <summary> 正常。 </summary>
     </member>
     <member name="F:FanKit.Transformers.NodeMode.PointWithChecked">
-      <summary>已卡住节点的点。 </summary>
+      <summary> 已卡住节点的点。 </summary>
     </member>
     <member name="F:FanKit.Transformers.NodeMode.PointWithoutChecked">
-      <summary>未卡住节点的点。 </summary>
+      <summary> 未卡住节点的点。 </summary>
     </member>
     <member name="F:FanKit.Transformers.NodeMode.LeftControlPoint">
-      <summary>左控制点。 </summary>
+      <summary> 左控制点。 </summary>
     </member>
     <member name="F:FanKit.Transformers.NodeMode.RightControlPoint">
-      <summary>右控制点。 </summary>
+      <summary> 右控制点。 </summary>
     </member>
     <member name="T:FanKit.Transformers.NodeType">
       <summary>
-        <see cref="F:FanKit.Transformers.NodeType.Node"/>的类型。
+        <see cref="F:FanKit.Transformers.NodeType.Node"/> 的类型。
       </summary>
     </member>
     <member name="T:FanKit.Transformers.CanvasDrawingSessionExtensions">
       <summary>
-        <see cref="T:Microsoft.Graphics.Canvas.CanvasDrawingSession"/>的扩展。
+        <see cref="T:Microsoft.Graphics.Canvas.CanvasDrawingSession"/> 的扩展。
       </summary>
     </member>
     <member name="F:FanKit.Transformers.CanvasDrawingSessionExtensions.TranslucentDodgerBlue">
-      <summary> 兰色的半透明颜色。默认（A90 R54 G135 B230）。</summary>
+      <summary> 兰色的半透明颜色。默认（A90 R54 G135 B230）。 </summary>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawLineDodgerBlue(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>
         画一条线带着兰色颜色。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="point0">第一个点。 </param>
-      <param name="point1">第二点。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="point0"> 第一个点。 </param>
+      <param name="point1"> 第二点。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawThickLine(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>
         画一条粗线。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="point0">第一个点。 </param>
-      <param name="point1">第二点。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="point0"> 第一个点。 </param>
+      <param name="point1"> 第二点。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawEllipseDodgerBlue(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2,System.Single,System.Single)">
       <summary>
         画一个椭圆带着兰色颜色。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="centerPoint">中心点。 </param>
-      <param name="radiusX">半径X。</param>
-      <param name="radiusY">半径Y。</param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="centerPoint"> 中心点。 </param>
+      <param name="radiusX"> 半径X。 </param>
+      <param name="radiusY"> 半径Y。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawThickEllipse(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2,System.Single,System.Single)">
       <summary>
         画一个椭圆。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="centerPoint">中心点。 </param>
-      <param name="radiusX">半径X。</param>
-      <param name="radiusY">半径Y。</param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="centerPoint"> 中心点。 </param>
+      <param name="radiusX"> 半径X。 </param>
+      <param name="radiusY"> 半径Y。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawRectangleDodgerBlue(Microsoft.Graphics.Canvas.CanvasDrawingSession,Windows.Foundation.Rect)">
       <summary>
         画一个矩形带着兰色颜色。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="rect">矩形。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="rect"> 矩形。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawThickRectangle(Microsoft.Graphics.Canvas.CanvasDrawingSession,Windows.Foundation.Rect)">
       <summary>
         画一个粗矩形。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="rect">矩形。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="rect"> 矩形。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawGeometryDodgerBlue(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.Geometry.CanvasGeometry)">
       <summary>
         绘制几何图形带着兰色颜色。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="canvasGeometry">画布几何形状。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="canvasGeometry"> 画布几何形状。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawThickGeometry(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.Geometry.CanvasGeometry)">
       <summary>
         绘制粗的几何图形。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="canvasGeometry">画布几何形状。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="canvasGeometry"> 画布几何形状。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawDottedLine(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.DottedLineBrush,FanKit.Transformers.DottedLineImage,System.Single,System.Single,System.Single,System.Single)">
       <summary>
         画虚线。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="dottedLineBrush">画笔。 </param>
-      <param name="dottedLineImage">图片。 </param>
-      <param name="width">宽度。 </param>
-      <param name="height">高度。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="dottedLineBrush"> 画笔。 </param>
+      <param name="dottedLineImage"> 图片。 </param>
+      <param name="width"> 宽度。 </param>
+      <param name="height"> 高度。 </param>
       <param name="x"> X 轴距离。 </param>
       <param name="y"> Y 轴距离。 </param>
     </member>
@@ -805,448 +805,448 @@
       <summary>
         画一个⊙。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="point">点。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="point"> 点。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2,Windows.UI.Color)">
       <summary>
         画一个⊙。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="point">点。 </param>
-      <param name="accentColor">强调色。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="point"> 点。 </param>
+      <param name="accentColor"> 强调色。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode2(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2)">
       <summary>
         画一个◉。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="point">点。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="point"> 点。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode2(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2,Windows.UI.Color)">
       <summary>
         画一个◉。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="point">点。 </param>
-      <param name="accentColor">强调色。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="point"> 点。 </param>
+      <param name="accentColor"> 强调色。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode3(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2)">
       <summary>
         画一个◻。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="point">点。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="point"> 点。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode3(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2,Windows.UI.Color)">
       <summary>
         画一个◻。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="point">点。 </param>
-      <param name="accentColor">强调色。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="point"> 点。 </param>
+      <param name="accentColor"> 强调色。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode4(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2)">
       <summary>
         画一个◼。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="point">点。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="point"> 点。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode4(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2,Windows.UI.Color)">
       <summary>
         画一个◼。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="point">点。 </param>
-      <param name="accentColor">强调色。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="point"> 点。 </param>
+      <param name="accentColor"> 强调色。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode5(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2)">
       <summary>
         画一个◌。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="point">点。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="point"> 点。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode5(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2,Windows.UI.Color)">
       <summary>
         画一个◌。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="point">点。 </param>
-      <param name="accentColor">强调色。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="point"> 点。 </param>
+      <param name="accentColor"> 强调色。 </param>
     </member>
     <member name="F:FanKit.Transformers.CanvasDrawingSessionExtensions.ShadowColor">
-      <summary>投影的颜色。默认值（A64 R0 G0 B0）。</summary>
+      <summary> 投影的颜色。默认值（A64 R0 G0 B0）。 </summary>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrad(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasImage,Windows.Foundation.Rect,System.Single,System.Single)">
       <summary>
         画一张牌。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="previousImage">上一个图像。 </param>
-      <param name="cropRect">图片裁剪矩形。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="previousImage"> 上一个图像。 </param>
+      <param name="cropRect"> 图片裁剪矩形。 </param>
       <param name="shadowBlurAmount"> 投影模糊量。 </param>
-      <param name="shadowOffset">阴影偏移量。 </param>
+      <param name="shadowOffset"> 阴影偏移量。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrad(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasImage,Windows.Foundation.Rect,Windows.UI.Color,System.Single,System.Single)">
       <summary>
         画一张牌。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="previousImage">上一个图像。 </param>
-      <param name="cropRect">图片裁剪矩形。 </param>
-      <param name="shadowColor">阴影颜色。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="previousImage"> 上一个图像。 </param>
+      <param name="cropRect"> 图片裁剪矩形。 </param>
+      <param name="shadowColor"> 阴影颜色。 </param>
       <param name="shadowBlurAmount"> 投影模糊量。 </param>
-      <param name="shadowOffset">阴影偏移量。 </param>
+      <param name="shadowOffset"> 阴影偏移量。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrad(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasImage,Windows.Foundation.Rect,System.Numerics.Matrix3x2,System.Single,System.Single)">
       <summary>
         画一张牌。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="previousImage">上一个图像。 </param>
-      <param name="cropRect">图片裁剪矩形。 </param>
-      <param name="matrix">矩阵。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="previousImage"> 上一个图像。 </param>
+      <param name="cropRect"> 图片裁剪矩形。 </param>
+      <param name="matrix"> 矩阵。 </param>
       <param name="shadowBlurAmount"> 投影模糊量。 </param>
-      <param name="shadowOffset">阴影偏移量。 </param>
+      <param name="shadowOffset"> 阴影偏移量。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrad(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasImage,Windows.Foundation.Rect,System.Numerics.Matrix3x2,Windows.UI.Color,System.Single,System.Single)">
       <summary>
         画一张牌。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="previousImage">上一个图像。 </param>
-      <param name="cropRect">图片裁剪矩形。 </param>
-      <param name="matrix">矩阵。 </param>
-      <param name="shadowColor">阴影颜色。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="previousImage"> 上一个图像。 </param>
+      <param name="cropRect"> 图片裁剪矩形。 </param>
+      <param name="matrix"> 矩阵。 </param>
+      <param name="shadowColor"> 阴影颜色。 </param>
       <param name="shadowBlurAmount"> 投影模糊量。 </param>
-      <param name="shadowOffset">阴影偏移量。 </param>
+      <param name="shadowOffset"> 阴影偏移量。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrad(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasImage,FanKit.Transformers.CanvasTransformer,System.Single,System.Single)">
       <summary>
         画一张牌。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="previousImage">上一张图片</param>
-      <param name="canvasTransformer">画布变换者。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="previousImage"> 上一张图片 </param>
+      <param name="canvasTransformer"> 画布变换者。 </param>
       <param name="shadowBlurAmount"> 投影模糊量。 </param>
-      <param name="shadowOffset">阴影偏移量</param>
+      <param name="shadowOffset"> 阴影偏移量 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCard(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasImage,FanKit.Transformers.CanvasTransformer,Windows.UI.Color,System.Single,System.Single)">
       <summary>
         画一张牌。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="previousImage">前一张图片。 </param>
-      <param name="canvasTransformer">画布变换者。 </param>
-      <param name="shadowColor">阴影颜色。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="previousImage"> 前一张图片。 </param>
+      <param name="canvasTransformer"> 画布变换者。 </param>
+      <param name="shadowColor"> 阴影颜色。 </param>
       <param name="shadowBlurAmount"> 投影模糊量。 </param>
-      <param name="shadowOffset">阴影偏移。 </param>
+      <param name="shadowOffset"> 阴影偏移。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNodeCollection(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.NodeCollection)">
       <summary>
         通过节点集合绘制贝塞尔曲线。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
       <param name="nodeCollection"> 节点集合。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNodeCollection(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.NodeCollection,System.Numerics.Matrix3x2)">
       <summary>
         通过节点集合绘制贝塞尔曲线。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
       <param name="nodeCollection"> 节点集合。 </param>
-      <param name="matrix">矩阵。 </param>
+      <param name="matrix"> 矩阵。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNodeCollection(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.NodeCollection,System.Numerics.Matrix3x2,Windows.UI.Color)">
       <summary>
         通过节点集合绘制贝塞尔曲线。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
       <param name="nodeCollection"> 节点集合。 </param>
-      <param name="matrix">矩阵。 </param>
-      <param name="accentColor">强调色。 </param>
+      <param name="matrix"> 矩阵。 </param>
+      <param name="accentColor"> 强调色。 </param>
     </member>
     <member name="F:FanKit.Transformers.CanvasDrawingSessionExtensions.TextColor">
-      <summary>文本的颜色。默认（A255 R127 G127 B127）。</summary>
+      <summary> 文本的颜色。默认（A255 R127 G127 B127）。 </summary>
     </member>
     <member name="F:FanKit.Transformers.CanvasDrawingSessionExtensions.TextFormat">
-      <summary>文本格式。 </summary>
+      <summary> 文本格式。 </summary>
     </member>
     <member name="F:FanKit.Transformers.CanvasDrawingSessionExtensions.AxisLine">
-      <summary>两行之间的距离。默认值12。</summary>
+      <summary> 两行之间的距离。默认值12。 </summary>
     </member>
     <member name="F:FanKit.Transformers.CanvasDrawingSessionExtensions.AxisThickLine">
-      <summary>两条粗线之间的距离。默认值20。</summary>
+      <summary> 两条粗线之间的距离。默认值20。 </summary>
     </member>
     <member name="F:FanKit.Transformers.CanvasDrawingSessionExtensions.AxisColor">
-      <summary>轴的颜色。默认（A255 R127 G127 B127）。</summary>
+      <summary> 轴的颜色。默认（A255 R127 G127 B127）。 </summary>
     </member>
     <member name="F:FanKit.Transformers.CanvasDrawingSessionExtensions.AxisLineColor">
-      <summary>轴线的颜色。默认（A127 R127 G127 B127）。</summary>
+      <summary> 轴线的颜色。默认（A127 R127 G127 B127）。 </summary>
     </member>
     <member name="F:FanKit.Transformers.CanvasDrawingSessionExtensions.AxisThickLineColor">
-      <summary>轴粗线的颜色。默认（A127 R127 G127 B127）。</summary>
+      <summary> 轴粗线的颜色。默认（A127 R127 G127 B127）。 </summary>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawAxis(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.CanvasTransformer)">
       <summary>
         绘制一个XY 轴。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="canvasTransformer">画布变换者。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="canvasTransformer"> 画布变换者。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawAxis(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.CanvasTransformer,System.Single,System.Single)">
       <summary>
         绘制一个XY 轴。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="canvasTransformer">画布变换者。 </param>
-      <param name="axisLine">两条线之间的距离。 </param>
-      <param name="axisThickLine">两条粗线之间的距离。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="canvasTransformer"> 画布变换者。 </param>
+      <param name="axisLine"> 两条线之间的距离。 </param>
+      <param name="axisThickLine"> 两条粗线之间的距离。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawAxis(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.CanvasTransformer,System.Single,System.Single,Windows.UI.Color,Windows.UI.Color,Windows.UI.Color)">
       <summary>
         绘制一个XY 轴。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="canvasTransformer">画布变换者。 </param>
-      <param name="axisLine">两条线之间的距离。 </param>
-      <param name="axisThickLine">两条粗线之间的距离。 </param>
-      <param name="axisColor">轴的颜色。 </param>
-      <param name="axisLineColor">轴线的颜色。 </param>
-      <param name="axisThickLineColor">轴粗线的颜色。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="canvasTransformer"> 画布变换者。 </param>
+      <param name="axisLine"> 两条线之间的距离。 </param>
+      <param name="axisThickLine"> 两条粗线之间的距离。 </param>
+      <param name="axisColor"> 轴的颜色。 </param>
+      <param name="axisLineColor"> 轴线的颜色。 </param>
+      <param name="axisThickLineColor"> 轴粗线的颜色。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawAxis(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.CanvasTransformer,System.Single,System.Single,Windows.UI.Color,Windows.UI.Color,Windows.UI.Color,Windows.UI.Color,Microsoft.Graphics.Canvas.Text.CanvasTextFormat)">
       <summary>
         绘制一个XY 轴。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="canvasTransformer">画布变换者。 </param>
-      <param name="axisLine">两条线之间的距离。 </param>
-      <param name="axisThickLine">两条粗线之间的距离。 </param>
-      <param name="axisColor">轴的颜色。 </param>
-      <param name="axisLineColor">轴线的颜色。 </param>
-      <param name="axisThickLineColor">轴粗线的颜色。 </param>
-      <param name="textColor">文本的颜色。 </param>
-      <param name="textFormat">文本的格式。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="canvasTransformer"> 画布变换者。 </param>
+      <param name="axisLine"> 两条线之间的距离。 </param>
+      <param name="axisThickLine"> 两条粗线之间的距离。 </param>
+      <param name="axisColor"> 轴的颜色。 </param>
+      <param name="axisLineColor"> 轴线的颜色。 </param>
+      <param name="axisThickLineColor"> 轴粗线的颜色。 </param>
+      <param name="textColor"> 文本的颜色。 </param>
+      <param name="textFormat"> 文本的格式。 </param>
     </member>
     <member name="F:FanKit.Transformers.CanvasDrawingSessionExtensions.RulerWidth">
-      <summary>标尺的宽度。默认值20。</summary>
+      <summary> 标尺的宽度。默认值20。 </summary>
     </member>
     <member name="F:FanKit.Transformers.CanvasDrawingSessionExtensions.RulerLine">
-      <summary>两行之间的距离。默认值8。</summary>
+      <summary> 两行之间的距离。默认值8。 </summary>
     </member>
     <member name="F:FanKit.Transformers.CanvasDrawingSessionExtensions.RulerThickLine">
-      <summary>两条粗线之间的距离。默认值12。</summary>
+      <summary> 两条粗线之间的距离。默认值12。 </summary>
     </member>
     <member name="F:FanKit.Transformers.CanvasDrawingSessionExtensions.RulerBackgroundColor">
-      <summary>标尺背景色的颜色。默认（A64 R127 G127 B127）。</summary>
+      <summary> 标尺背景色的颜色。默认（A64 R127 G127 B127）。 </summary>
     </member>
     <member name="F:FanKit.Transformers.CanvasDrawingSessionExtensions.RulerColor">
-      <summary>标尺的颜色。默认（A255 R127 G127 B127）。</summary>
+      <summary> 标尺的颜色。默认（A255 R127 G127 B127）。 </summary>
     </member>
     <member name="F:FanKit.Transformers.CanvasDrawingSessionExtensions.RulerLineColor">
-      <summary>标尺线的颜色。默认（A127 R127 G127 B127）。</summary>
+      <summary> 标尺线的颜色。默认（A127 R127 G127 B127）。 </summary>
     </member>
     <member name="F:FanKit.Transformers.CanvasDrawingSessionExtensions.RulerThickLineColor">
-      <summary>标尺粗线的颜色。默认（A127 R127 G127 B127）。</summary>
+      <summary> 标尺粗线的颜色。默认（A127 R127 G127 B127）。 </summary>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawRuler(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.CanvasTransformer)">
       <summary>
         画一把尺子。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="canvasTransformer">画布变换者。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="canvasTransformer"> 画布变换者。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawRuler(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.CanvasTransformer,System.Single,System.Single,System.Single)">
       <summary>
         画一把尺子。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="canvasTransformer">画布变换者。 </param>
-      <param name="rulerWidth">标尺的宽度。 </param>
-      <param name="rulerLine">两条线之间的距离。 </param>
-      <param name="rulerThickLine">两条粗线之间的距离。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="canvasTransformer"> 画布变换者。 </param>
+      <param name="rulerWidth"> 标尺的宽度。 </param>
+      <param name="rulerLine"> 两条线之间的距离。 </param>
+      <param name="rulerThickLine"> 两条粗线之间的距离。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawRuler(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.CanvasTransformer,System.Single,System.Single,System.Single,Windows.UI.Color,Windows.UI.Color,Windows.UI.Color,Windows.UI.Color)">
       <summary>
         画一把尺子。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="canvasTransformer">画布变换者。 </param>
-      <param name="rulerWidth">标尺的宽度。 </param>
-      <param name="rulerLine">两条线之间的距离。 </param>
-      <param name="rulerThickLine">两条粗线之间的距离。 </param>
-      <param name="rulerBackgroundColor">标尺背景色的颜色。 </param>
-      <param name="rulerColor">标尺的颜色。 </param>
-      <param name="rulerLineColor">标尺线的颜色。 </param>
-      <param name="rulerThickLineColor">标尺粗线的颜色。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="canvasTransformer"> 画布变换者。 </param>
+      <param name="rulerWidth"> 标尺的宽度。 </param>
+      <param name="rulerLine"> 两条线之间的距离。 </param>
+      <param name="rulerThickLine"> 两条粗线之间的距离。 </param>
+      <param name="rulerBackgroundColor"> 标尺背景色的颜色。 </param>
+      <param name="rulerColor"> 标尺的颜色。 </param>
+      <param name="rulerLineColor"> 标尺线的颜色。 </param>
+      <param name="rulerThickLineColor"> 标尺粗线的颜色。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawRuler(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.CanvasTransformer,System.Single,System.Single,System.Single,Windows.UI.Color,Windows.UI.Color,Windows.UI.Color,Windows.UI.Color,Windows.UI.Color,Microsoft.Graphics.Canvas.Text.CanvasTextFormat)">
       <summary>
         画一把尺子。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="canvasTransformer">画布变换者。 </param>
-      <param name="rulerWidth">标尺的宽度。 </param>
-      <param name="rulerLine">两条线之间的距离。 </param>
-      <param name="rulerThickLine">两条粗线之间的距离。 </param>
-      <param name="rulerBackgroundColor">标尺背景色的颜色。 </param>
-      <param name="rulerColor">标尺的颜色。 </param>
-      <param name="rulerLineColor">标尺线的颜色。 </param>
-      <param name="rulerThickLineColor">标尺粗线的颜色。 </param>
-      <param name="textColor">文本的颜色。 </param>
-      <param name="textFormat">文本的格式。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="canvasTransformer"> 画布变换者。 </param>
+      <param name="rulerWidth"> 标尺的宽度。 </param>
+      <param name="rulerLine"> 两条线之间的距离。 </param>
+      <param name="rulerThickLine"> 两条粗线之间的距离。 </param>
+      <param name="rulerBackgroundColor"> 标尺背景色的颜色。 </param>
+      <param name="rulerColor"> 标尺的颜色。 </param>
+      <param name="rulerLineColor"> 标尺线的颜色。 </param>
+      <param name="rulerThickLineColor"> 标尺粗线的颜色。 </param>
+      <param name="textColor"> 文本的颜色。 </param>
+      <param name="textFormat"> 文本的格式。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.FillMarqueeMaskl(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.MarqueeToolType,FanKit.Transformers.MarqueeTool,Windows.Foundation.Rect,FanKit.Transformers.MarqueeCompositeMode)">
       <summary>
         用选框工具填充选框面具。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="toolType">字幕工具类型。 </param>
-      <param name="marqueeTool">字幕工具。 </param>
-      <param name="sourceRectangle">源矩形。 </param>
-      <param name="compositeMode">复合模式。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="toolType"> 字幕工具类型。 </param>
+      <param name="marqueeTool"> 字幕工具。 </param>
+      <param name="sourceRectangle"> 源矩形。 </param>
+      <param name="compositeMode"> 复合模式。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawMarqueeTool(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.MarqueeToolType,FanKit.Transformers.MarqueeTool)">
       <summary>
         画一个选框工具。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="toolType">选取框工具类型。 </param>
-      <param name="marqueeTool">字幕工具。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="toolType"> 选取框工具类型。 </param>
+      <param name="marqueeTool"> 字幕工具。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawMarqueeTool(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.MarqueeToolType,FanKit.Transformers.MarqueeTool,System.Numerics.Matrix3x2)">
       <summary>
         画一个选框工具。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="toolType">字幕工具类型。 </param>
-      <param name="marqueeTool">字幕工具。 </param>
-      <param name="matrix">矩阵。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="toolType"> 字幕工具类型。 </param>
+      <param name="marqueeTool"> 字幕工具。 </param>
+      <param name="matrix"> 矩阵。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawBound(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.Transformer)">
       <summary>
         在边界上画线。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="transformer">变换者。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="transformer"> 变换者。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawBound(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.Transformer,System.Numerics.Matrix3x2)">
       <summary>
         在边界上画线。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="transformer">变换者。 </param>
-      <param name="matrix">矩阵。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="transformer"> 变换者。 </param>
+      <param name="matrix"> 矩阵。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawBound(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.Transformer,Windows.UI.Color)">
       <summary>
         在边界上画线。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="transformer">变换者</param>
-      <param name="accentColor">强调色。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="transformer"> 变换者 </param>
+      <param name="accentColor"> 强调色。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawBound(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.Transformer,System.Numerics.Matrix3x2,Windows.UI.Color)">
       <summary>
         在边界上画线。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="transformer">变换者。 </param>
-      <param name="matrix">矩阵。 </param>
-      <param name="accentColor">强调色。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="transformer"> 变换者。 </param>
+      <param name="matrix"> 矩阵。 </param>
+      <param name="accentColor"> 强调色。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawBoundNodes(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.Transformer,System.Boolean)">
       <summary>
         在边界上绘制节点和线，就像【由】一样。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="transformer">变换者。 </param>
-      <param name="disabledRadian">禁用旋转角度。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="transformer"> 变换者。 </param>
+      <param name="disabledRadian"> 禁用旋转角度。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawBoundNodes(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.Transformer,System.Numerics.Matrix3x2,System.Boolean)">
       <summary>
         在边界上绘制节点和线，就像【由】一样。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="transformer">变换者。 </param>
-      <param name="matrix">矩阵。 </param>
-      <param name="disabledRadian">禁用腐烂角。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="transformer"> 变换者。 </param>
+      <param name="matrix"> 矩阵。 </param>
+      <param name="disabledRadian"> 禁用腐烂角。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawBoundNodes(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.Transformer,Windows.UI.Color,System.Boolean)">
       <summary>
         在边界上绘制节点和线，就像【由】一样。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="transformer">变换者。 </param>
-      <param name="accentColor">强调色。 </param>
-      <param name="disabledRadian">禁用旋转角度。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="transformer"> 变换者。 </param>
+      <param name="accentColor"> 强调色。 </param>
+      <param name="disabledRadian"> 禁用旋转角度。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawBoundNodes(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.Transformer,System.Numerics.Matrix3x2,Windows.UI.Color,System.Boolean)">
       <summary>
         在边界上绘制节点和线，就像【由】一样。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="transformer">变换者。 </param>
-      <param name="matrix">矩阵。 </param>
-      <param name="accentColor">强调色。 </param>
-      <param name="disabledRadian">禁用旋转角度。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="transformer"> 变换者。 </param>
+      <param name="matrix"> 矩阵。 </param>
+      <param name="accentColor"> 强调色。 </param>
+      <param name="disabledRadian"> 禁用旋转角度。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrop(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.Transformer)">
       <summary>
         在边框上画框和线，就像🔳。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="transformer">变换者。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="transformer"> 变换者。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrop(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.Transformer,System.Numerics.Matrix3x2)">
       <summary>
         在边框上画框和线，就像🔳。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="transformer">变换者。 </param>
-      <param name="matrix">矩阵。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="transformer"> 变换者。 </param>
+      <param name="matrix"> 矩阵。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrop(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.Transformer,Windows.UI.Color)">
       <summary>
         在边框上画框和线，就像🔳。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="transformer">变换者。 </param>
-      <param name="accentColor">强调色。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="transformer"> 变换者。 </param>
+      <param name="accentColor"> 强调色。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrop(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.Transformer,System.Numerics.Matrix3x2,Windows.UI.Color,System.Boolean)">
       <summary>
         在边框上画框和线，就像🔳。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="transformer">变换者。 </param>
-      <param name="matrix">矩阵。 </param>
-      <param name="accentColor">强调色。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="transformer"> 变换者。 </param>
+      <param name="matrix"> 矩阵。 </param>
+      <param name="accentColor"> 强调色。 </param>
     </member>
     <member name="T:FanKit.Transformers.IndicatorModeExtensions">
       <summary>
-        <see cref="T:FanKit.Transformers.IndicatorMode"/>的扩展。
+        <see cref="T:FanKit.Transformers.IndicatorMode"/> 的扩展。
       </summary>
     </member>
     <member name="M:FanKit.Transformers.IndicatorModeExtensions.ToHorizontalAlignment(FanKit.Transformers.IndicatorMode)">
       <summary>
-        转换为<see cref="T:Windows.UI.Xaml.HorizontalAlignment"/>。
+        转换为 <see cref="T:Windows.UI.Xaml.HorizontalAlignment"/>。
       </summary>
-      <param name="indicatorMode">指示模式。 </param>
-      <returns>产生的对齐方式。 </returns>
+      <param name="indicatorMode"> 指示模式。 </param>
+      <returns> 产生的对齐方式。 </returns>
     </member>
     <member name="M:FanKit.Transformers.IndicatorModeExtensions.ToVerticalAlignment(FanKit.Transformers.IndicatorMode)">
       <summary>
-        转换为<see cref="T:Windows.UI.Xaml.VerticalAlignment"/>。
+        转换为 <see cref="T:Windows.UI.Xaml.VerticalAlignment"/>。
       </summary>
-      <param name="indicatorMode">指示模式。 </param>
-      <returns>产生的对齐方式。 </returns>
+      <param name="indicatorMode"> 指示模式。 </param>
+      <returns> 产生的对齐方式。 </returns>
     </member>
     <member name="T:FanKit.Transformers.IGetActualTransformer">
       <summary>
@@ -1267,31 +1267,31 @@
       <summary>
         转到几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <returns>产生的的几何形状。 </returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <returns> 产生的的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.ITransformerGeometry.ToRectangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Matrix3x2)">
       <summary>
         转到几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="matrix">矩阵。 </param>
-      <returns>产生的的几何形状。 </returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="matrix"> 矩阵。 </param>
+      <returns> 产生的的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.ITransformerGeometry.ToEllipse(Microsoft.Graphics.Canvas.ICanvasResourceCreator)">
       <summary>
         转到几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <returns>产生的的几何形状。 </returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <returns> 产生的的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.ITransformerGeometry.ToEllipse(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Matrix3x2)">
       <summary>
         转到几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="matrix">矩阵。 </param>
-      <returns>产生的的几何形状。 </returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="matrix"> 矩阵。 </param>
+      <returns> 产生的的几何形状。 </returns>
     </member>
     <member name="T:FanKit.Transformers.ITransformerLTRB">
       <summary>
@@ -1302,34 +1302,34 @@
       <summary> 左上方的向量。 </summary>
     </member>
     <member name="P:FanKit.Transformers.ITransformerLTRB.RightTop">
-      <summary>右上方的向量。 </summary>
+      <summary> 右上方的向量。 </summary>
     </member>
     <member name="P:FanKit.Transformers.ITransformerLTRB.RightBottom">
-      <summary>右下方的向量。 </summary>
+      <summary> 右下方的向量。 </summary>
     </member>
     <member name="P:FanKit.Transformers.ITransformerLTRB.LeftBottom">
       <summary> 左下方的向量。 </summary>
     </member>
     <member name="P:FanKit.Transformers.ITransformerLTRB.Center">
-      <summary>获取中心向量。 </summary>
+      <summary> 获取中心向量。 </summary>
     </member>
     <member name="P:FanKit.Transformers.ITransformerLTRB.CenterLeft">
-      <summary>获取左中心向量。 </summary>
+      <summary> 获取左中心向量。 </summary>
     </member>
     <member name="P:FanKit.Transformers.ITransformerLTRB.CenterTop">
-      <summary>获取中心顶部向量。 </summary>
+      <summary> 获取中心顶部向量。 </summary>
     </member>
     <member name="P:FanKit.Transformers.ITransformerLTRB.CenterRight">
-      <summary>获取中心右向量。 </summary>
+      <summary> 获取中心右向量。 </summary>
     </member>
     <member name="P:FanKit.Transformers.ITransformerLTRB.CenterBottom">
-      <summary>获取中心底部向量。 </summary>
+      <summary> 获取中心底部向量。 </summary>
     </member>
     <member name="P:FanKit.Transformers.ITransformerLTRB.Horizontal">
-      <summary>获取水平向量。 </summary>
+      <summary> 获取水平向量。 </summary>
     </member>
     <member name="P:FanKit.Transformers.ITransformerLTRB.Vertical">
-      <summary>获取垂直向量。 </summary>
+      <summary> 获取垂直向量。 </summary>
     </member>
     <member name="T:FanKit.Transformers.Node">
       <summary>
@@ -1350,111 +1350,111 @@
       <summary>
         该矢量包含在矩形中。
       </summary>
-      <param name="left">目标矩形的左侧。 </param>
-      <param name="top">目标矩形的顶部。 </param>
-      <param name="right">目标矩形的右侧。 </param>
-      <param name="bottom">目标矩形的底部。 </param>
-      <returns>如果向量包含在矩形中，则返回**true**，否则返回**false**。 </returns>
+      <param name="left"> 目标矩形的左侧。 </param>
+      <param name="top"> 目标矩形的顶部。 </param>
+      <param name="right"> 目标矩形的右侧。 </param>
+      <param name="bottom"> 目标矩形的底部。 </param>
+      <returns> 如果向量包含在矩形中，则返回**true**，否则返回**false**。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Node.Contained(FanKit.Transformers.TransformerRect)">
       <summary>
         该矢量包含在一个矩形中。
       </summary>
-      <param name="transformerRect">目标矩形。 </param>
-      <returns>如果向量包含在矩形中，则返回**true**。 </returns>
+      <param name="transformerRect"> 目标矩形。 </param>
+      <returns> 如果向量包含在矩形中，则返回**true**。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Node.ContainsNodeMode(System.Numerics.Vector2,FanKit.Transformers.Node)">
       <summary>
         获取包含指定点的节点。
       </summary>
-      <param name="point">输入点。 </param>
-      <param name="node">源节点。 </param>
-      <returns>节点模式。 </returns>
+      <param name="point"> 输入点。 </param>
+      <param name="node"> 源节点。 </param>
+      <returns> 节点模式。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Node.ContainsNodeMode(System.Numerics.Vector2,FanKit.Transformers.Node,System.Numerics.Matrix3x2)">
       <summary>
         获取包含指定点的节点。
       </summary>
-      <param name="point">输入点。 </param>
-      <param name="node">源节点。 </param>
-      <param name="matrix">矩阵。 </param>
-      <returns>节点模式。 </returns>
+      <param name="point"> 输入点。 </param>
+      <param name="node"> 源节点。 </param>
+      <param name="matrix"> 矩阵。 </param>
+      <returns> 节点模式。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Node.Move(System.Numerics.Vector2,FanKit.Transformers.Node)">
       <summary>
         移动
       </summary>
-      <param name="point">点。 </param>
-      <param name="node">节点。 </param>
+      <param name="point"> 点。 </param>
+      <param name="node"> 节点。 </param>
     </member>
     <member name="M:FanKit.Transformers.Node.Controller(FanKit.Transformers.SelfControlPointMode,FanKit.Transformers.EachControlPointLengthMode,FanKit.Transformers.EachControlPointAngleMode,System.Numerics.Vector2,FanKit.Transformers.Node,System.Boolean)">
       <summary>
         这个可以控制节点控制点的转换。
       </summary>
-      <param name="mode">模式。 </param>
-      <param name="lengthMode">长度模式。 </param>
-      <param name="angleMode">角度模式。 </param>
-      <param name="point">点。 </param>
-      <param name="startingNoder">起始节点。 </param>
+      <param name="mode"> 模式。 </param>
+      <param name="lengthMode"> 长度模式。 </param>
+      <param name="angleMode"> 角度模式。 </param>
+      <param name="point"> 点。 </param>
+      <param name="startingNoder"> 起始节点。 </param>
       <param name="isLeftControlPoint">
-        <see cref="F:FanKit.Transformers.Node.LeftControlPoint"/>或<see cref="F:FanKit.Transformers.Node.RightControlPoint"/>。
+        <see cref="F:FanKit.Transformers.Node.LeftControlPoint"/> 或 <see cref="F:FanKit.Transformers.Node.RightControlPoint"/>。
       </param>
-      <returns>受控制的节点。 </returns>
+      <returns> 受控制的节点。 </returns>
     </member>
     <member name="P:FanKit.Transformers.Node.Type">
-      <summary>获取或设置类型。 </summary>
+      <summary> 获取或设置类型。 </summary>
     </member>
     <member name="P:FanKit.Transformers.Node.FigureFill">
-      <summary>获取或设置图形填充。 </summary>
+      <summary> 获取或设置图形填充。 </summary>
     </member>
     <member name="P:FanKit.Transformers.Node.FigureLoop">
-      <summary>获取或设置图形循环。 </summary>
+      <summary> 获取或设置图形循环。 </summary>
     </member>
     <member name="F:FanKit.Transformers.Node.Point">
-      <summary>点。 </summary>
+      <summary> 点。 </summary>
     </member>
     <member name="P:FanKit.Transformers.Node.StartingPoint">
       <summary>
-        <see cref="F:FanKit.Transformers.Node.Point"/>的缓存。
+        <see cref="F:FanKit.Transformers.Node.Point"/> 的缓存。
       </summary>
     </member>
     <member name="F:FanKit.Transformers.Node.LeftControlPoint">
-      <summary>左侧的指定控制点。 </summary>
+      <summary> 左侧的指定控制点。 </summary>
     </member>
     <member name="P:FanKit.Transformers.Node.StartingLeftControlPoint">
       <summary>
-        <see cref="F:FanKit.Transformers.Node.LeftControlPoint"/>的缓存。
+        <see cref="F:FanKit.Transformers.Node.LeftControlPoint"/> 的缓存。
       </summary>
     </member>
     <member name="F:FanKit.Transformers.Node.RightControlPoint">
-      <summary>右边的指定控制点。 </summary>
+      <summary> 右边的指定控制点。 </summary>
     </member>
     <member name="P:FanKit.Transformers.Node.StartingRightControlPoint">
       <summary>
-        <see cref="F:FanKit.Transformers.Node.RightControlPoint"/>的缓存。
+        <see cref="F:FanKit.Transformers.Node.RightControlPoint"/> 的缓存。
       </summary>
     </member>
     <member name="P:FanKit.Transformers.Node.IsChecked">
-      <summary>获取或设置节点的是否卡住。 </summary>
+      <summary> 获取或设置节点的是否卡住。 </summary>
     </member>
     <member name="P:FanKit.Transformers.Node.StartingIsChecked">
       <summary>
-        <see cref="P:FanKit.Transformers.Node.IsChecked"/>的缓存。
+        <see cref="P:FanKit.Transformers.Node.IsChecked"/> 的缓存。
       </summary>
     </member>
     <member name="P:FanKit.Transformers.Node.IsSmooth">
-      <summary>获取或设置节点是否平滑。 </summary>
+      <summary> 获取或设置节点是否平滑。 </summary>
     </member>
     <member name="P:FanKit.Transformers.Node.StartingIsSmooth">
       <summary>
-        <see cref="P:FanKit.Transformers.Node.IsSmooth"/>的缓存。
+        <see cref="P:FanKit.Transformers.Node.IsSmooth"/> 的缓存。
       </summary>
     </member>
     <member name="M:FanKit.Transformers.Node.Clone">
       <summary>
         获取自己的副本。
       </summary>
-      <returns>克隆的节点。 </returns>
+      <returns> 克隆的节点。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Node.CacheTransform">
       <summary>
@@ -1465,13 +1465,13 @@
       <summary>
         通过给定的向量变换节点。
       </summary>
-      <param name="vector">用于相加的加值。 </param>
+      <param name="vector"> 用于相加的加值。 </param>
     </member>
     <member name="M:FanKit.Transformers.Node.TransformMultiplies(System.Numerics.Matrix3x2)">
       <summary>
         通过给定的矩阵转换节点。
       </summary>
-      <param name="matrix">结果矩阵。 </param>
+      <param name="matrix"> 结果矩阵。 </param>
     </member>
     <member name="T:FanKit.Transformers.SelfControlPointMode">
       <summary>
@@ -1479,16 +1479,16 @@
       </summary>
     </member>
     <member name="F:FanKit.Transformers.SelfControlPointMode.None">
-      <summary>正常。 </summary>
+      <summary> 正常。 </summary>
     </member>
     <member name="F:FanKit.Transformers.SelfControlPointMode.Angle">
-      <summary>不更改角度。 </summary>
+      <summary> 不更改角度。 </summary>
     </member>
     <member name="F:FanKit.Transformers.SelfControlPointMode.Length">
-      <summary>不更改长度。 </summary>
+      <summary> 不更改长度。 </summary>
     </member>
     <member name="F:FanKit.Transformers.SelfControlPointMode.Disable">
-      <summary>禁用控制点。 </summary>
+      <summary> 禁用控制点。 </summary>
     </member>
     <member name="T:FanKit.Transformers.EachControlPointLengthMode">
       <summary>
@@ -1496,13 +1496,13 @@
       </summary>
     </member>
     <member name="F:FanKit.Transformers.EachControlPointLengthMode.None">
-      <summary>正常。 </summary>
+      <summary> 正常。 </summary>
     </member>
     <member name="F:FanKit.Transformers.EachControlPointLengthMode.Equal">
-      <summary>长度相等。 </summary>
+      <summary> 长度相等。 </summary>
     </member>
     <member name="F:FanKit.Transformers.EachControlPointLengthMode.Ratio">
-      <summary>比率长度。 </summary>
+      <summary> 比率长度。 </summary>
     </member>
     <member name="T:FanKit.Transformers.EachControlPointAngleMode">
       <summary>
@@ -1510,13 +1510,13 @@
       </summary>
     </member>
     <member name="F:FanKit.Transformers.EachControlPointAngleMode.None">
-      <summary>正常。 </summary>
+      <summary> 正常。 </summary>
     </member>
     <member name="F:FanKit.Transformers.EachControlPointAngleMode.Asymmetric">
-      <summary>原点对称。 </summary>
+      <summary> 原点对称。 </summary>
     </member>
     <member name="F:FanKit.Transformers.EachControlPointAngleMode.Fixed">
-      <summary>固定角度。 </summary>
+      <summary> 固定角度。 </summary>
     </member>
     <member name="T:FanKit.Transformers.MarqueeTool">
       <summary>
@@ -1524,55 +1524,55 @@
       </summary>
     </member>
     <member name="P:FanKit.Transformers.MarqueeTool.IsStarted">
-      <summary>获取或设置是否正在使用该工具。 </summary>
+      <summary> 获取或设置是否正在使用该工具。 </summary>
     </member>
     <member name="P:FanKit.Transformers.MarqueeTool.TransformerRect">
-      <summary>获取矩形或椭圆形工具的变换者矩形。 </summary>
+      <summary> 获取矩形或椭圆形工具的变换者矩形。 </summary>
     </member>
     <member name="P:FanKit.Transformers.MarqueeTool.Points">
-      <summary>获取多边形或自由手工具的点。 </summary>
+      <summary> 获取多边形或自由手工具的点。 </summary>
     </member>
     <member name="M:FanKit.Transformers.MarqueeTool.Start(System.Numerics.Vector2,FanKit.Transformers.MarqueeToolType,System.Boolean,System.Boolean)">
       <summary>
         开始使用选取框工具。
       </summary>
-      <param name="point">点。 </param>
-      <param name="toolType">工具类型。</param>
-      <param name="isCenter">围绕中心缩放。 </param>
-      <param name="isSquare">宽度和高度相等。 </param>
+      <param name="point"> 点。 </param>
+      <param name="toolType"> 工具类型。 </param>
+      <param name="isCenter"> 围绕中心缩放。 </param>
+      <param name="isSquare"> 宽度和高度相等。 </param>
     </member>
     <member name="M:FanKit.Transformers.MarqueeTool.Delta(System.Numerics.Vector2,System.Numerics.Vector2,FanKit.Transformers.MarqueeToolType,System.Boolean,System.Boolean)">
       <summary>
         在使用选框工具。
       </summary>
-      <param name="startingPoint">起点。 </param>
-      <param name="point">点。 </param>
-      <param name="toolType">工具类型。</param>
-      <param name="isCenter">围绕中心缩放。 </param>
-      <param name="isSquare">宽度和高度相等。 </param>
+      <param name="startingPoint"> 起点。 </param>
+      <param name="point"> 点。 </param>
+      <param name="toolType"> 工具类型。 </param>
+      <param name="isCenter"> 围绕中心缩放。 </param>
+      <param name="isSquare"> 宽度和高度相等。 </param>
     </member>
     <member name="M:FanKit.Transformers.MarqueeTool.Complete(System.Numerics.Vector2,System.Numerics.Vector2,FanKit.Transformers.MarqueeToolType,System.Boolean,System.Boolean)">
       <summary>
         最后使用选取框工具。
       </summary>
-      <param name="startingPoint"></param>
-      <param name="point"></param>
-      <param name="toolType"></param>
-      <param name="isCenter"></param>
-      <param name="isSquare"></param>
-      <returns>如果需要重绘字幕蒙版，则返回**true**，否则返回**false**。 </returns>
+      <param name="startingPoint"> </param>
+      <param name="point"> </param>
+      <param name="toolType"> </param>
+      <param name="isCenter"> </param>
+      <param name="isSquare"> </param>
+      <returns> 如果需要重绘字幕蒙版，则返回**true**，否则返回**false**。 </returns>
     </member>
     <member name="M:FanKit.Transformers.MarqueeTool.Complete(System.Numerics.Vector2,System.Numerics.Vector2,FanKit.Transformers.MarqueeToolType,System.Numerics.Matrix3x2,System.Boolean,System.Boolean)">
       <summary>
         最后使用选取框工具。
       </summary>
-      <param name="startingPoint"></param>
-      <param name="point"></param>
-      <param name="toolType"></param>
-      <param name="matrix"></param>
-      <param name="isCenter"></param>
-      <param name="isSquare"></param>
-      <returns>如果选框蒙版需要重绘，则返回**true**，否则她的**false**。 </returns>
+      <param name="startingPoint"> </param>
+      <param name="point"> </param>
+      <param name="toolType"> </param>
+      <param name="matrix"> </param>
+      <param name="isCenter"> </param>
+      <param name="isSquare"> </param>
+      <returns> 如果选框蒙版需要重绘，则返回**true**，否则她的**false**。 </returns>
     </member>
     <member name="T:FanKit.Transformers.CanvasOperator">
       <summary>
@@ -1581,60 +1581,60 @@
     </member>
     <member name="P:FanKit.Transformers.CanvasOperator.DestinationControl">
       <summary>
-        <see cref = "T:FanKit.Transformers.CanvasOperator" />的目标控件。
+        <see cref="T:FanKit.Transformers.CanvasOperator"/> 的目标控件。
       </summary>
     </member>
     <member name="F:FanKit.Transformers.CanvasOperator.DestinationControlProperty">
       <summary>
-        Identifies the <see cref = "P:FanKit.Transformers.CanvasOperator.DestinationControl" /> dependency property.
+        Identifies the <see cref="P:FanKit.Transformers.CanvasOperator.DestinationControl"/> dependency property.
       </summary>
     </member>
     <member name="T:FanKit.Transformers.CanvasOperator.SingleHandler">
       <summary>
         表示对 Single_Start，Single_Delta，Single_Complete 事件的处理的方法。
       </summary>
-      <param name="point">接触点的位置。 </param>
-      <param name="properties">接触点的属性。 </param>
+      <param name="point"> 接触点的位置。 </param>
+      <param name="properties"> 接触点的属性。 </param>
     </member>
     <member name="E:FanKit.Transformers.CanvasOperator.Single_Start">
-      <summary>发生在单指|鼠标左键|笔事件开始。 </summary>
+      <summary> 发生在单指|鼠标左键|笔事件开始。 </summary>
     </member>
     <member name="E:FanKit.Transformers.CanvasOperator.Single_Delta">
-      <summary>发生在单指|鼠标左键|笔事件更改。 </summary>
+      <summary> 发生在单指|鼠标左键|笔事件更改。 </summary>
     </member>
     <member name="E:FanKit.Transformers.CanvasOperator.Single_Complete">
-      <summary>发生在单指|鼠标左键|笔事件已完成。 </summary>
+      <summary> 发生在单指|鼠标左键|笔事件已完成。 </summary>
     </member>
     <member name="T:FanKit.Transformers.CanvasOperator.RightHandler">
       <summary>
         表示处理 Right_Start，Right_Delta，Right_Complete 事件的方法。
-        <param name="point">鼠标指针的位置。 </param>
+        <param name="point"> 鼠标指针的位置。 </param>
       </summary>
     </member>
     <member name="E:FanKit.Transformers.CanvasOperator.Right_Start">
-      <summary>在鼠标右键事件开始时发生。 </summary>
+      <summary> 在鼠标右键事件开始时发生。 </summary>
     </member>
     <member name="E:FanKit.Transformers.CanvasOperator.Right_Delta">
-      <summary>在鼠标右键事件更改时发生。 </summary>
+      <summary> 在鼠标右键事件更改时发生。 </summary>
     </member>
     <member name="E:FanKit.Transformers.CanvasOperator.Right_Complete">
-      <summary>当鼠标右键事件完成时发生。 </summary>
+      <summary> 当鼠标右键事件完成时发生。 </summary>
     </member>
     <member name="T:FanKit.Transformers.CanvasOperator.DoubleHandler">
       <summary>
         表示处理Double_Start，Double_Delta，Double_Complete事件的方法。
       </summary>
-      <param name="center">两只手指的中心。 </param>
-      <param name="space">两个手指之间的间距。 </param>
+      <param name="center"> 两只手指的中心。 </param>
+      <param name="space"> 两个手指之间的间距。 </param>
     </member>
     <member name="E:FanKit.Transformers.CanvasOperator.Double_Start">
-      <summary>在双指事件开始时发生。 </summary>
+      <summary> 在双指事件开始时发生。 </summary>
     </member>
     <member name="E:FanKit.Transformers.CanvasOperator.Double_Delta">
-      <summary>当更改双指事件时发生。 </summary>
+      <summary> 当更改双指事件时发生。 </summary>
     </member>
     <member name="E:FanKit.Transformers.CanvasOperator.Double_Complete">
-      <summary>当双指事件完成时发生。 </summary>
+      <summary> 当双指事件完成时发生。 </summary>
     </member>
     <member name="E:FanKit.Transformers.CanvasOperator.Wheel_Changed">
       <summary>
@@ -1645,81 +1645,81 @@
       <summary>
         获取接触点的位置
       </summary>
-      <param name="relativeTo">连接到同一对象树的任何UI元素派生对象。 </param>
-      <param name="e">事件的事件数据。 </param>
-      <returns>触摸点的位置。</returns>
+      <param name="relativeTo"> 连接到同一对象树的任何UI元素派生对象。 </param>
+      <param name="e"> 事件的事件数据。 </param>
+      <returns> 触摸点的位置。 </returns>
     </member>
     <member name="M:FanKit.Transformers.CanvasOperator.PointerPressure(Windows.UI.Xaml.UIElement,Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
       <summary>
         获取接触点的压力
       </summary>
-      <param name="relativeTo">连接到同一对象树的任何UI元素派生对象。 </param>
-      <param name="e">事件的事件数据。 </param>
-      <returns>接触点的压力。</returns>
+      <param name="relativeTo"> 连接到同一对象树的任何UI元素派生对象。 </param>
+      <param name="e"> 事件的事件数据。 </param>
+      <returns> 接触点的压力。 </returns>
     </member>
     <member name="M:FanKit.Transformers.CanvasOperator.PointerWheelDelta(Windows.UI.Xaml.UIElement,Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
       <summary>
         获取通过滚轮按钮输入的值。
       </summary>
-      <param name="relativeTo">连接到同一对象树的任何UI元素派生对象。 </param>
-      <param name="e">的事件数据事件。 </param>
-      <returns>滚轮按钮输入的值。 </returns>
+      <param name="relativeTo"> 连接到同一对象树的任何UI元素派生对象。 </param>
+      <param name="e"> 的事件数据事件。 </param>
+      <returns> 滚轮按钮输入的值。 </returns>
     </member>
     <member name="M:FanKit.Transformers.CanvasOperator.PointerIsTouch(Windows.UI.Xaml.UIElement,Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
       <summary>
         判断动作。
       </summary>
-      <param name="relativeTo">连接到同一对象树的任何UI元素派生对象。 </param>
-      <param name="e">事件的事件数据。 </param>
-      <returns>如果该动作是通过触摸触发的，则返回**true**。 </returns>
+      <param name="relativeTo"> 连接到同一对象树的任何UI元素派生对象。 </param>
+      <param name="e"> 事件的事件数据。 </param>
+      <returns> 如果该动作是通过触摸触发的，则返回**true**。 </returns>
     </member>
     <member name="M:FanKit.Transformers.CanvasOperator.PointerIsPen(Windows.UI.Xaml.UIElement,Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
       <summary>
         判断动作。
       </summary>
-      <param name="relativeTo">连接到同一对象树的任何UI元素派生对象。 </param>
-      <param name="e">事件的事件数据。 </param>
-      <returns>如果该动作是由笔触发的，则返回**true**。 </returns>
+      <param name="relativeTo"> 连接到同一对象树的任何UI元素派生对象。 </param>
+      <param name="e"> 事件的事件数据。 </param>
+      <returns> 如果该动作是由笔触发的，则返回**true**。 </returns>
     </member>
     <member name="M:FanKit.Transformers.CanvasOperator.PointerIsBarrel(Windows.UI.Xaml.UIElement,Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
       <summary>
         判断动作。
       </summary>
-      <param name="relativeTo">连接到同一对象树的任何UI元素派生对象。 </param>
-      <param name="e">事件的事件数据。 </param>
-      <returns>如果该动作是由发条盒触发的，则返回**true**。 </returns>
+      <param name="relativeTo"> 连接到同一对象树的任何UI元素派生对象。 </param>
+      <param name="e"> 事件的事件数据。 </param>
+      <returns> 如果该动作是由发条盒触发的，则返回**true**。 </returns>
     </member>
     <member name="M:FanKit.Transformers.CanvasOperator.PointerIsMouse(Windows.UI.Xaml.UIElement,Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
       <summary>
         判断动作。
       </summary>
-      <param name="relativeTo">连接到同一对象树的任何UI元素派生对象。 </param>
-      <param name="e">事件的事件数据。 </param>
-      <returns>如果该动作是由鼠标触发的，则返回**true**。 </returns>
+      <param name="relativeTo"> 连接到同一对象树的任何UI元素派生对象。 </param>
+      <param name="e"> 事件的事件数据。 </param>
+      <returns> 如果该动作是由鼠标触发的，则返回**true**。 </returns>
     </member>
     <member name="M:FanKit.Transformers.CanvasOperator.PointerIsLeft(Windows.UI.Xaml.UIElement,Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
       <summary>
         判断动作。
       </summary>
-      <param name="relativeTo">连接到同一对象树的任何UI元素派生对象。 </param>
-      <param name="e">事件的事件数据。 </param>
-      <returns>如果该动作是由鼠标左键触发的，则返回**true**。 </returns>
+      <param name="relativeTo"> 连接到同一对象树的任何UI元素派生对象。 </param>
+      <param name="e"> 事件的事件数据。 </param>
+      <returns> 如果该动作是由鼠标左键触发的，则返回**true**。 </returns>
     </member>
     <member name="M:FanKit.Transformers.CanvasOperator.PointerIsRight(Windows.UI.Xaml.UIElement,Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
       <summary>
         判断动作。
       </summary>
-      <param name="relativeTo">连接到同一对象树的任何UI元素派生对象。 </param>
-      <param name="e">事件的事件数据。 </param>
-      <returns>如果该动作是由鼠标右键触发的，则返回**true**。 </returns>
+      <param name="relativeTo"> 连接到同一对象树的任何UI元素派生对象。 </param>
+      <param name="e"> 事件的事件数据。 </param>
+      <returns> 如果该动作是由鼠标右键触发的，则返回**true**。 </returns>
     </member>
     <member name="T:FanKit.Transformers.InputDevice">
       <summary>
-        <see cref="T:FanKit.Transformers.CanvasOperator"/>的输入设备类型。
+        <see cref="T:FanKit.Transformers.CanvasOperator"/> 的输入设备类型。
       </summary>
     </member>
     <member name="F:FanKit.Transformers.InputDevice.None">
-      <summary>正常。 </summary>
+      <summary> 正常。 </summary>
     </member>
     <member name="F:FanKit.Transformers.InputDevice.Single">
       <summary>
@@ -1727,10 +1727,10 @@
       </summary>
     </member>
     <member name="F:FanKit.Transformers.InputDevice.Double">
-      <summary>两个手指。 </summary>
+      <summary> 两个手指。 </summary>
     </member>
     <member name="F:FanKit.Transformers.InputDevice.Right">
-      <summary>鼠标右键。 </summary>
+      <summary> 鼠标右键。 </summary>
     </member>
     <member name="T:FanKit.Transformers.ICacheTransform">
       <summary>
@@ -1748,23 +1748,23 @@
         通过给定的矩阵变换类。
         例如：变换者.相乘(）
       </summary>
-      <param name="matrix">结果矩阵。 </param>
+      <param name="matrix"> 结果矩阵。 </param>
     </member>
     <member name="M:FanKit.Transformers.ICacheTransform.TransformAdd(System.Numerics.Vector2)">
       <summary>
         通过给定的向量变换类。
         例如：变换者.相加(）
       </summary>
-      <param name="vector">用于相加的加值。 </param>
+      <param name="vector"> 用于相加的加值。 </param>
     </member>
     <member name="T:FanKit.Transformers.Icon">
       <summary>
-        <see cref="N:FanKit.Transformers"/>的图标。
+        <see cref="N:FanKit.Transformers"/> 的图标。
       </summary>
     </member>
     <member name="M:FanKit.Transformers.Icon.#ctor">
       <summary>
-        初始化一个<see cref="T:FanKit.Transformers.Icon"/>。
+        初始化一个 <see cref="T:FanKit.Transformers.Icon"/>。
       </summary>
     </member>
     <member name="M:FanKit.Transformers.Icon.InitializeComponent">
@@ -1791,19 +1791,19 @@
       </summary>
     </member>
     <member name="E:FanKit.Transformers.IndicatorControl.ModeChanged">
-      <summary>单击不同的小方块以触发**ModeChanged**事件。 </summary>
+      <summary> 单击不同的小方块以触发**ModeChanged**事件。 </summary>
     </member>
     <member name="P:FanKit.Transformers.IndicatorControl.Mode">
       <summary>
-        获取或设置<see cref="T:FanKit.Transformers.IndicatorControl"/>的模式。
+        获取或设置 <see cref="T:FanKit.Transformers.IndicatorControl"/> 的模式。
       </summary>
     </member>
     <member name="P:FanKit.Transformers.IndicatorControl.Radians">
-      <summary>旋转弧度。 </summary>
+      <summary> 旋转弧度。 </summary>
     </member>
     <member name="M:FanKit.Transformers.IndicatorControl.#ctor">
       <summary>
-        初始化<see cref="T:FanKit.Transformers.IndicatorControl"/>。
+        初始化 <see cref="T:FanKit.Transformers.IndicatorControl"/>。
       </summary>
     </member>
     <member name="M:FanKit.Transformers.IndicatorControl.InitializeComponent">
@@ -1823,11 +1823,11 @@
     </member>
     <member name="T:FanKit.Transformers.IndicatorMode">
       <summary>
-        <see cref="T:FanKit.Transformers.IndicatorControl"/>的模式。
+        <see cref="T:FanKit.Transformers.IndicatorControl"/> 的模式。
       </summary>
     </member>
     <member name="F:FanKit.Transformers.IndicatorMode.None">
-      <summary>正常。 </summary>
+      <summary> 正常。 </summary>
     </member>
     <member name="F:FanKit.Transformers.IndicatorMode.LeftTop">
       <summary> LeftTop。 </summary>
@@ -1836,46 +1836,46 @@
       <summary> RightTop。 </summary>
     </member>
     <member name="F:FanKit.Transformers.IndicatorMode.RightBottom">
-      <summary>右下。 </summary>
+      <summary> 右下。 </summary>
     </member>
     <member name="F:FanKit.Transformers.IndicatorMode.LeftBottom">
-      <summary>左下。 </summary>
+      <summary> 左下。 </summary>
     </member>
     <member name="F:FanKit.Transformers.IndicatorMode.Left">
-      <summary>左。 </summary>
+      <summary> 左。 </summary>
     </member>
     <member name="F:FanKit.Transformers.IndicatorMode.Top">
-      <summary>顶部。 </summary>
+      <summary> 顶部。 </summary>
     </member>
     <member name="F:FanKit.Transformers.IndicatorMode.Right">
-      <summary>对。 </summary>
+      <summary> 对。 </summary>
     </member>
     <member name="F:FanKit.Transformers.IndicatorMode.Bottom">
-      <summary>底部。 </summary>
+      <summary> 底部。 </summary>
     </member>
     <member name="F:FanKit.Transformers.IndicatorMode.Center">
-      <summary>中心。 </summary>
+      <summary> 中心。 </summary>
     </member>
     <member name="T:FanKit.Transformers.IndicatorModeHandler">
       <summary>
         表示对IndicatorModeChange事件的处理的方法。
       </summary>
-      <param name="sender">事件处理程序附加到的对象。 </param>
-      <param name="mode">指示器模式。 </param>
+      <param name="sender"> 事件处理程序附加到的对象。 </param>
+      <param name="mode"> 指示器模式。 </param>
     </member>
     <member name="T:FanKit.Transformers.InverseMatrixTransformerMode">
       <summary>
-        <see cref="T:FanKit.Transformers.CanvasTransformer"/>的逆矩阵模式。
+        <see cref="T:FanKit.Transformers.CanvasTransformer"/> 的逆矩阵模式。
       </summary>
     </member>
     <member name="F:FanKit.Transformers.InverseMatrixTransformerMode.ControlToVirtualToCanvas">
-      <summary>控件>虚拟>画布。 </summary>
+      <summary> 控件>虚拟>画布。 </summary>
     </member>
     <member name="F:FanKit.Transformers.InverseMatrixTransformerMode.ControlToVirtual">
-      <summary>控件>虚拟。 </summary>
+      <summary> 控件>虚拟。 </summary>
     </member>
     <member name="F:FanKit.Transformers.InverseMatrixTransformerMode.VirtualToCanvas">
-      <summary>虚拟>画布。 </summary>
+      <summary> 虚拟>画布。 </summary>
     </member>
     <member name="T:FanKit.Transformers.LineDistance">
       <summary>
@@ -1896,23 +1896,23 @@
       <summary> [点]和[中心点]之间的距离。 </summary>
     </member>
     <member name="M:FanKit.Transformers.LineDistance.Scale(FanKit.Transformers.LineDistance)">
-      <summary> [垂足][中心点]的缩放 / [点][中心点]的缩放（可能为负）</summary>
-      <param name="distance">距离</param>
-      <returns>缩放</returns>
+      <summary> [垂足][中心点]的缩放 / [点][中心点]的缩放（可能为负） </summary>
+      <param name="distance"> 距离 </param>
+      <returns> 缩放 </returns>
     </member>
     <member name="T:FanKit.Transformers.MatrixTransformerMode">
       <summary>
-        <see cref="T:FanKit.Transformers.CanvasTransformer"/>的矩阵模式。
+        <see cref="T:FanKit.Transformers.CanvasTransformer"/> 的矩阵模式。
       </summary>
     </member>
     <member name="F:FanKit.Transformers.MatrixTransformerMode.CanvasToVirtualToControl">
-      <summary>画布>虚拟>控件。 </summary>
+      <summary> 画布> 虚拟>控件。 </summary>
     </member>
     <member name="F:FanKit.Transformers.MatrixTransformerMode.CanvasToVirtual">
-      <summary>画布>虚拟。 </summary>
+      <summary> 画布> 虚拟。 </summary>
     </member>
     <member name="F:FanKit.Transformers.MatrixTransformerMode.VirtualToControl">
-      <summary>虚拟>控制。 </summary>
+      <summary> 虚拟>控制。 </summary>
     </member>
     <member name="T:FanKit.Transformers.RemoteControl">
       <summary>
@@ -1920,16 +1920,16 @@
       </summary>
     </member>
     <member name="E:FanKit.Transformers.RemoteControl.ValueChangeStarted">
-      <summary>在值更改开始时发生。 </summary>
+      <summary> 在值更改开始时发生。 </summary>
     </member>
     <member name="E:FanKit.Transformers.RemoteControl.ValueChangeDelta">
-      <summary>在值更改时发生。 </summary>
+      <summary> 在值更改时发生。 </summary>
     </member>
     <member name="E:FanKit.Transformers.RemoteControl.ValueChangeCompleted">
-      <summary>在值更改完成时发生。 </summary>
+      <summary> 在值更改完成时发生。 </summary>
     </member>
     <member name="E:FanKit.Transformers.RemoteControl.Moved">
-      <summary>单击周围的按钮以触发**Moved**事件。 </summary>
+      <summary> 单击周围的按钮以触发**Moved**事件。 </summary>
     </member>
     <member name="P:FanKit.Transformers.RemoteControl.RemoteCenter">
       <summary>
@@ -1938,7 +1938,7 @@
     </member>
     <member name="M:FanKit.Transformers.RemoteControl.#ctor">
       <summary>
-        初始化一个<see cref="T:FanKit.Transformers.RemoteControl"/>。
+        初始化一个 <see cref="T:FanKit.Transformers.RemoteControl"/>。
       </summary>
     </member>
     <member name="M:FanKit.Transformers.RemoteControl.InitializeComponent">
@@ -1960,18 +1960,18 @@
       <summary>
         表示值改变事件处理的方法。
       </summary>
-      <param name="sender">事件处理程序附加到的对象。 </param>
-      <param name="value">事件数据。 </param>
+      <param name="sender"> 事件处理程序附加到的对象。 </param>
+      <param name="value"> 事件数据。 </param>
     </member>
     <member name="T:FanKit.Transformers.BorderSnapBase`1">
       <summary>
-        <see cref="T:FanKit.Transformers.TransformerBorder"/>的捕捉工具。
+        <see cref="T:FanKit.Transformers.TransformerBorder"/> 的捕捉工具。
       </summary>
-      <typeparam name="D">目标类型。 </typeparam>
+      <typeparam name="D"> 目标类型。 </typeparam>
     </member>
     <member name="P:FanKit.Transformers.BorderSnapBase`1.StartingSource">
       <summary>
-        <see cref="P:FanKit.Transformers.SnapBase`2.Source"/>的缓存。
+        <see cref="P:FanKit.Transformers.SnapBase`2.Source"/> 的缓存。
       </summary>
     </member>
     <member name="F:FanKit.Transformers.BorderSnapBase`1.XGap">
@@ -1984,62 +1984,62 @@
       <summary>
         抓拍
       </summary>
-      <param name="move">移动向量。 </param>
-      <returns>乘积向量。 </returns>
+      <param name="move"> 移动向量。 </param>
+      <returns> 乘积向量。 </returns>
     </member>
     <member name="M:FanKit.Transformers.BorderSnapBase`1.SetSnapMove(System.Numerics.Vector2)">
       <summary>
-        设置<see cref="F:FanKit.Transformers.SnapBase`2.XSnap"/>和<see cref="F:FanKit.Transformers.SnapBase`2.XSnap"/>。
+        设置 <see cref="F:FanKit.Transformers.SnapBase`2.XSnap"/> 和 <see cref="F:FanKit.Transformers.SnapBase`2.XSnap"/>。
       </summary>
-      <param name="move">移动向量。 </param>
+      <param name="move"> 移动向量。 </param>
     </member>
     <member name="M:FanKit.Transformers.BorderSnapBase`1.GetSnapMove">
       <summary>
-        获取<see cref="F:FanKit.Transformers.SnapBase`2.XSnap"/>和<see cref="F:FanKit.Transformers.SnapBase`2.XSnap"/>。
+        获取 <see cref="F:FanKit.Transformers.SnapBase`2.XSnap"/> 和 <see cref="F:FanKit.Transformers.SnapBase`2.XSnap"/>。
       </summary>
-      <returns>乘积向量。 </returns>
+      <returns> 乘积向量。 </returns>
     </member>
     <member name="M:FanKit.Transformers.BorderSnapBase`1.SetXSnapMove(System.Single,`0)">
       <summary>
-        设置<see cref="F:FanKit.Transformers.SnapBase`2.XSnap"/>。
+        设置 <see cref="F:FanKit.Transformers.SnapBase`2.XSnap"/>。
       </summary>
-      <param name="moveX">移动 X。</param>
-      <param name="destination">目的地。 </param>
+      <param name="moveX"> 移动 X。 </param>
+      <param name="destination"> 目的地。 </param>
       <returns>
         <see cref="F:FanKit.Transformers.SnapBase`2.IsXSnap"/>
       </returns>
     </member>
     <member name="M:FanKit.Transformers.BorderSnapBase`1.SetYSnapMove(System.Single,`0)">
       <summary>
-        设置<see cref="F:FanKit.Transformers.SnapBase`2.YSnap"/>。
+        设置 <see cref="F:FanKit.Transformers.SnapBase`2.YSnap"/>。
       </summary>
-      <param name="moveY">移动 Y。</param>
-      <param name="destination">目的地。 </param>
+      <param name="moveY"> 移动 Y。 </param>
+      <param name="destination"> 目的地。 </param>
       <returns>
         <see cref="F:FanKit.Transformers.SnapBase`2.IsYSnap"/>
       </returns>
     </member>
     <member name="T:FanKit.Transformers.VectorVectorSnap">
       <summary>
-        <see cref="T:System.Numerics.Vector2"/>的捕捉工具。
+        <see cref="T:System.Numerics.Vector2"/> 的捕捉工具。
       </summary>
     </member>
     <member name="M:FanKit.Transformers.VectorVectorSnap.SetXSnap(System.Single,System.Numerics.Vector2)">
       <summary>
-        设置<see cref="F:FanKit.Transformers.SnapBase`2.XSnap"/>。
+        设置 <see cref="F:FanKit.Transformers.SnapBase`2.XSnap"/>。
       </summary>
-      <param name="pointX">点 X。</param>
-      <param name="destination">目的地。 </param>
+      <param name="pointX"> 点 X。 </param>
+      <param name="destination"> 目的地。 </param>
       <returns>
         <see cref="F:FanKit.Transformers.SnapBase`2.IsXSnap"/>
       </returns>
     </member>
     <member name="M:FanKit.Transformers.VectorVectorSnap.SetYSnap(System.Single,System.Numerics.Vector2)">
       <summary>
-        设置<see cref="F:FanKit.Transformers.SnapBase`2.YSnap"/>。
+        设置 <see cref="F:FanKit.Transformers.SnapBase`2.YSnap"/>。
       </summary>
-      <param name="pointY">点 Y。</param>
-      <param name="destination">目的地。 </param>
+      <param name="pointY"> 点 Y。 </param>
+      <param name="destination"> 目的地。 </param>
       <returns>
         <see cref="F:FanKit.Transformers.SnapBase`2.IsYSnap"/>
       </returns>
@@ -2058,45 +2058,45 @@
     </member>
     <member name="T:FanKit.Transformers.VectorSnapBase`1">
       <summary>
-        <see cref="T:System.Numerics.Vector2"/>的捕捉工具。
+        <see cref="T:System.Numerics.Vector2"/> 的捕捉工具。
       </summary>
-      <typeparam name="D">目标类型。 </typeparam>
+      <typeparam name="D"> 目标类型。 </typeparam>
     </member>
     <member name="M:FanKit.Transformers.VectorSnapBase`1.Snap(System.Numerics.Vector2)">
       <summary>
         抓拍
       </summary>
-      <param name="point">点。 </param>
-      <returns>乘积向量。 </returns>
+      <param name="point"> 点。 </param>
+      <returns> 乘积向量。 </returns>
     </member>
     <member name="M:FanKit.Transformers.VectorSnapBase`1.SetSnap(System.Numerics.Vector2)">
       <summary>
-        设置<see cref="F:FanKit.Transformers.SnapBase`2.XSnap"/>和<see cref="F:FanKit.Transformers.SnapBase`2.XSnap"/>。
+        设置 <see cref="F:FanKit.Transformers.SnapBase`2.XSnap"/> 和 <see cref="F:FanKit.Transformers.SnapBase`2.XSnap"/>。
       </summary>
-      <param name="point">点。 </param>
+      <param name="point"> 点。 </param>
     </member>
     <member name="M:FanKit.Transformers.VectorSnapBase`1.GetSnap(System.Numerics.Vector2)">
       <summary>
-        获取<see cref="F:FanKit.Transformers.SnapBase`2.XSnap"/>和<see cref="F:FanKit.Transformers.SnapBase`2.XSnap"/>。
+        获取 <see cref="F:FanKit.Transformers.SnapBase`2.XSnap"/> 和 <see cref="F:FanKit.Transformers.SnapBase`2.XSnap"/>。
       </summary>
-      <returns>乘积向量。 </returns>
+      <returns> 乘积向量。 </returns>
     </member>
     <member name="M:FanKit.Transformers.VectorSnapBase`1.SetXSnap(System.Single,`0)">
       <summary>
-        设置<see cref="F:FanKit.Transformers.SnapBase`2.XSnap"/>。
+        设置 <see cref="F:FanKit.Transformers.SnapBase`2.XSnap"/>。
       </summary>
-      <param name="pointX">点 X。</param>
-      <param name="destination">目的地。 </param>
+      <param name="pointX"> 点 X。 </param>
+      <param name="destination"> 目的地。 </param>
       <returns>
         <see cref="F:FanKit.Transformers.SnapBase`2.IsXSnap"/>
       </returns>
     </member>
     <member name="M:FanKit.Transformers.VectorSnapBase`1.SetYSnap(System.Single,`0)">
       <summary>
-        设置<see cref="F:FanKit.Transformers.SnapBase`2.YSnap"/>。
+        设置 <see cref="F:FanKit.Transformers.SnapBase`2.YSnap"/>。
       </summary>
-      <param name="pointY">点 Y。</param>
-      <param name="destination">目的地。 </param>
+      <param name="pointY"> 点 Y。 </param>
+      <param name="destination"> 目的地。 </param>
       <returns>
         <see cref="F:FanKit.Transformers.SnapBase`2.IsYSnap"/>
       </returns>
@@ -2105,30 +2105,30 @@
       <summary>
         画一个⊙。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="matrix">矩阵。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="matrix"> 矩阵。 </param>
     </member>
     <member name="T:FanKit.Transformers.VectorBorderSnap">
       <summary>
-        <see cref="T:System.Numerics.Vector2"/>的捕捉工具<请see cref="T:FanKit.Transformers.TransformerBorder"/>。
+        <see cref="T:System.Numerics.Vector2"/> 的捕捉工具<请see cref="T:FanKit.Transformers.TransformerBorder"/>。
       </summary>
     </member>
     <member name="M:FanKit.Transformers.VectorBorderSnap.SetXSnap(System.Single,FanKit.Transformers.TransformerBorder)">
       <summary>
-        设置<see cref="F:FanKit.Transformers.SnapBase`2.XSnap"/>。
+        设置 <see cref="F:FanKit.Transformers.SnapBase`2.XSnap"/>。
       </summary>
-      <param name="pointX">点 X。</param>
-      <param name="destination">目的地。 </param>
+      <param name="pointX"> 点 X。 </param>
+      <param name="destination"> 目的地。 </param>
       <returns>
         <see cref="F:FanKit.Transformers.SnapBase`2.IsXSnap"/>
       </returns>
     </member>
     <member name="M:FanKit.Transformers.VectorBorderSnap.SetYSnap(System.Single,FanKit.Transformers.TransformerBorder)">
       <summary>
-        设置<see cref="F:FanKit.Transformers.SnapBase`2.YSnap"/>。
+        设置 <see cref="F:FanKit.Transformers.SnapBase`2.YSnap"/>。
       </summary>
-      <param name="pointY">点 Y。</param>
-      <param name="destination">目的地。 </param>
+      <param name="pointY"> 点 Y。 </param>
+      <param name="destination"> 目的地。 </param>
       <returns>
         <see cref="F:FanKit.Transformers.SnapBase`2.IsYSnap"/>
       </returns>
@@ -2154,11 +2154,11 @@
       <summary>
         创建一个固定宽高比例的变换者。
       </summary>
-      <param name="startingPoint">起点</param>
-      <param name="point">点。 </param>
-      <param name="sizeWidth">源宽度。 </param>
-      <param name="sizeHeight">源高度。 </param>
-      <returns>提供的变换者。 </returns>
+      <param name="startingPoint"> 起点 </param>
+      <param name="point"> 点。 </param>
+      <param name="sizeWidth"> 源宽度。 </param>
+      <param name="sizeHeight"> 源高度。 </param>
+      <returns> 提供的变换者。 </returns>
     </member>
     <member name="P:FanKit.Transformers.Transformer.LeftTop">
       <summary> 左上方的向量。 </summary>
@@ -2167,108 +2167,108 @@
       <summary> 右上方的向量。 </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.RightBottom">
-      <summary>右下方的向量。 </summary>
+      <summary> 右下方的向量。 </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.LeftBottom">
-      <summary>左下方的向量。 </summary>
+      <summary> 左下方的向量。 </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.Center">
-      <summary>获取中心向量。 </summary>
+      <summary> 获取中心向量。 </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.CenterLeft">
-      <summary>获取左中心向量。 </summary>
+      <summary> 获取左中心向量。 </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.CenterTop">
-      <summary>获取中心顶部向量。 </summary>
+      <summary> 获取中心顶部向量。 </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.CenterRight">
-      <summary>获取中心右向量。 </summary>
+      <summary> 获取中心右向量。 </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.CenterBottom">
-      <summary>获取中心底部向量。 </summary>
+      <summary> 获取中心底部向量。 </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.MinX">
-      <summary>获取 X 轴上的最小值。 </summary>
+      <summary> 获取 X 轴上的最小值。 </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.MaxX">
-      <summary>获取 X 轴上的最大值。 </summary>
+      <summary> 获取 X 轴上的最大值。 </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.MinY">
-      <summary>获取 Y 轴上的最小值。 </summary>
+      <summary> 获取 Y 轴上的最小值。 </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.MaxY">
-      <summary>获取 Y 轴上的最大值。 </summary>
+      <summary> 获取 Y 轴上的最大值。 </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.Horizontal">
-      <summary>获取水平向量。 </summary>
+      <summary> 获取水平向量。 </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.Vertical">
-      <summary>获取垂直向量。 </summary>
+      <summary> 获取垂直向量。 </summary>
     </member>
     <member name="M:FanKit.Transformers.Transformer.GetBorderValue(FanKit.Transformers.BorderMode)">
       <summary>
         通过左，右，上，下获取值。
       </summary>
-      <param name="borderMode">边框模式</param>
-      <returns>产生的值。 </returns>
+      <param name="borderMode"> 边框模式 </param>
+      <returns> 产生的值。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.GetIndicatorVector(FanKit.Transformers.IndicatorMode)">
       <summary>
         按左，右，上，下获取向量。
       </summary>
-      <param name="indicatorMode">指示器模式</param>
-      <returns>产生的向量。 </returns>
+      <param name="indicatorMode"> 指示器模式 </param>
+      <returns> 产生的向量。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.FillContainsPoint(System.Numerics.Vector2)">
       <summary>
         返回由变换者填充的区域是否包含指定的点。
       </summary>
-      <param name="point">点。 </param>
-      <returns>如果变换者填充的区域包含指定点，则返回**true**，否则返回**false**。 </returns>
+      <param name="point"> 点。 </param>
+      <returns> 如果变换者填充的区域包含指定点，则返回**true**，否则返回**false**。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.Contained(System.Single,System.Single,System.Single,System.Single)">
       <summary>
         返回该变换者是否包含在矩形中。
       </summary>
-      <param name="left">目标矩形的左侧。 </param>
-      <param name="top">目标矩形的顶部。 </param>
-      <param name="right">目标矩形的右侧。 </param>
-      <param name="bottom">目标矩形的底部。 </param>
-      <returns>如果变换者包含在矩形中，则返回**true**，否则返回**false**。 </returns>
+      <param name="left"> 目标矩形的左侧。 </param>
+      <param name="top"> 目标矩形的顶部。 </param>
+      <param name="right"> 目标矩形的右侧。 </param>
+      <param name="bottom"> 目标矩形的底部。 </param>
+      <returns> 如果变换者包含在矩形中，则返回**true**，否则返回**false**。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.Contained(FanKit.Transformers.TransformerRect)">
       <summary>
         变换者包含在一个矩形中。
       </summary>
-      <param name="transformerRect">目标矩形。 </param>
-      <returns>如果变换者包含在矩形中，则返回**true**，否则返回**false**。 </returns>
+      <param name="transformerRect"> 目标矩形。 </param>
+      <returns> 如果变换者包含在矩形中，则返回**true**，否则返回**false**。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.Controller(FanKit.Transformers.TransformerMode,System.Numerics.Vector2,System.Numerics.Vector2,FanKit.Transformers.Transformer,System.Boolean,System.Boolean,System.Boolean)">
       <summary>
         它控制变换者的转换。
       </summary>
-      <param name="mode">模式。 </param>
-      <param name="startingPoint">起点。 </param>
-      <param name="point">点。 </param>
-      <param name="startingTransformer">起始变换者。 </param>
-      <param name="isRatio">缩放时保持比例。 </param>
-      <param name="isCenter">围绕中心缩放。 </param>
-      <param name="isSnapToTick">是否旋转时捕捉。 </param>
-      <returns>受控制的变换者。 </returns>
+      <param name="mode"> 模式。 </param>
+      <param name="startingPoint"> 起点。 </param>
+      <param name="point"> 点。 </param>
+      <param name="startingTransformer"> 起始变换者。 </param>
+      <param name="isRatio"> 缩放时保持比例。 </param>
+      <param name="isCenter"> 围绕中心缩放。 </param>
+      <param name="isSnapToTick"> 是否旋转时捕捉。 </param>
+      <returns> 受控制的变换者。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.Controller(FanKit.Transformers.TransformerMode,System.Numerics.Vector2,System.Numerics.Vector2,FanKit.Transformers.Transformer,System.Numerics.Matrix3x2,System.Boolean,System.Boolean,System.Boolean)">
       <summary>
         这个可以控制变换者的转换。
       </summary>
-      <param name="mode">模式。 </param>
-      <param name="startingPoint">起点。 </param>
-      <param name="point">点。 </param>
-      <param name="startingTransformer">起始变换者。 </param>
-      <param name="inverseMatrix">逆矩阵。 </param>
-      <param name="isRatio">缩放时保持比例。 </param>
-      <param name="isCenter">围绕中心缩放。 </param>
-      <param name="isSnapToTick">是否旋转时捕捉。 </param>
-      <returns>受控制的变换者。 </returns>
+      <param name="mode"> 模式。 </param>
+      <param name="startingPoint"> 起点。 </param>
+      <param name="point"> 点。 </param>
+      <param name="startingTransformer"> 起始变换者。 </param>
+      <param name="inverseMatrix"> 逆矩阵。 </param>
+      <param name="isRatio"> 缩放时保持比例。 </param>
+      <param name="isCenter"> 围绕中心缩放。 </param>
+      <param name="isSnapToTick"> 是否旋转时捕捉。 </param>
+      <returns> 受控制的变换者。 </returns>
     </member>
     <member name="F:FanKit.Transformers.Transformer.One">
       <summary>
@@ -2279,262 +2279,262 @@
       <summary>
         初始化变换者。
       </summary>
-      <param name="left">左侧。 </param>
-      <param name="top">顶部。 </param>
-      <param name="right">右边。 </param>
-      <param name="bottom">底部。 </param>
+      <param name="left"> 左侧。 </param>
+      <param name="top"> 顶部。 </param>
+      <param name="right"> 右边。 </param>
+      <param name="bottom"> 底部。 </param>
     </member>
     <member name="M:FanKit.Transformers.Transformer.#ctor(FanKit.Transformers.TransformerRect)">
       <summary>
         初始化变换者。
       </summary>
-      <param name="transformerRect">初始矩形。 </param>
+      <param name="transformerRect"> 初始矩形。 </param>
     </member>
     <member name="M:FanKit.Transformers.Transformer.#ctor(System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>
         初始化变换者。
       </summary>
-      <param name="pointA">变换者的第一点。 </param>
-      <param name="pointB">变换者的第二点。 </param>
+      <param name="pointA"> 变换者的第一点。 </param>
+      <param name="pointB"> 变换者的第二点。 </param>
     </member>
     <member name="M:FanKit.Transformers.Transformer.#ctor(System.Numerics.Vector2,System.Numerics.Vector2,System.Boolean,System.Boolean)">
       <summary>
         初始化变换者。
       </summary>
-      <param name="pointA">变换者的第一点。 </param>
-      <param name="pointB">变换者的第二个点。 </param>
-      <param name="isCenter">围绕中心缩放。 </param>
-      <param name="isRatio">缩放时保持比例。 </param>
+      <param name="pointA"> 变换者的第一点。 </param>
+      <param name="pointB"> 变换者的第二个点。 </param>
+      <param name="isCenter"> 围绕中心缩放。 </param>
+      <param name="isRatio"> 缩放时保持比例。 </param>
     </member>
     <member name="M:FanKit.Transformers.Transformer.#ctor(System.Single,System.Single,System.Numerics.Vector2)">
       <summary>
         初始化变换者。
       </summary>
-      <param name="width">宽度。 </param>
-      <param name="height">高度。 </param>
-      <param name="postion">位置。 </param>
+      <param name="width"> 宽度。 </param>
+      <param name="height"> 高度。 </param>
+      <param name="postion"> 位置。 </param>
     </member>
     <member name="M:FanKit.Transformers.Transformer.Add(FanKit.Transformers.Transformer,System.Numerics.Vector2)">
       <summary>
         将变换者和矢量相加。
       </summary>
-      <param name="transformer">源变换者。 </param>
-      <param name="vector">相加的向量。 </param>
-      <returns>生成的变换者。 </returns>
+      <param name="transformer"> 源变换者。 </param>
+      <param name="vector"> 相加的向量。 </param>
+      <returns> 生成的变换者。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.Multiplies(FanKit.Transformers.Transformer,System.Numerics.Matrix3x2)">
       <summary>
         将变换者和向量相乘，然后返回结果变换者。
       </summary>
-      <param name="transformer">源变换者。 </param>
-      <param name="matrix">转换矩阵。 </param>
-      <returns>产生的变换者。 </returns>
+      <param name="transformer"> 源变换者。 </param>
+      <param name="matrix"> 转换矩阵。 </param>
+      <returns> 产生的变换者。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.op_Addition(FanKit.Transformers.Transformer,System.Numerics.Vector2)">
       <summary>
         将变换者和矢量相加。
       </summary>
-      <param name="value1">源变换者。 </param>
-      <param name="value2">源向量。 </param>
-      <returns>求和的变换者。 </returns>
+      <param name="value1"> 源变换者。 </param>
+      <param name="value2"> 源向量。 </param>
+      <returns> 求和的变换者。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.op_Multiply(FanKit.Transformers.Transformer,System.Numerics.Matrix3x2)">
       <summary>
         将变换者和向量相乘，然后返回结果变换者。
       </summary>
-      <param name="value1">源变换者。 </param>
-      <param name="value2">要使用的缩放值。 </param>
-      <returns>生成的变换者。 </returns>
+      <param name="value1"> 源变换者。 </param>
+      <param name="value2"> 要使用的缩放值。 </param>
+      <returns> 生成的变换者。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.Equals(FanKit.Transformers.Transformer)">
       <summary>
         返回一个布尔值，该布尔值指示给定的变换者是否等于此变换者实例。
       </summary>
-      <param name="other">与该实例进行比较的变换者。 </param>
-      <returns>如果另一个变换者与此实例相等，则返回**true**，否则返回**false**。 </returns>
+      <param name="other"> 与该实例进行比较的变换者。 </param>
+      <returns> 如果另一个变换者与此实例相等，则返回**true**，否则返回**false**。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.op_Equality(FanKit.Transformers.Transformer,FanKit.Transformers.Transformer)">
       <summary>
         返回一个值，该值指示两个指定节点中的每对元素是否相等。
       </summary>
-      <param name="left">第一个要比较的变换者。 </param>
-      <param name="right">要比较的第二个变换者。 </param>
-      <returns>如果左右相等则返回**true**，否则返回**false**。 </returns>
+      <param name="left"> 第一个要比较的变换者。 </param>
+      <param name="right"> 要比较的第二个变换者。 </param>
+      <returns> 如果左右相等则返回**true**，否则返回**false**。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.op_Inequality(FanKit.Transformers.Transformer,FanKit.Transformers.Transformer)">
       <summary>
         返回一个布尔值，指示两个g是否节点不相等。
       </summary>
-      <param name="left">第一个要比较的变换者。 </param>
-      <param name="right">要比较的第二个变换者。 </param>
-      <returns>如果节点不相等，则返回**true**；如果它们相等，则为假。 </returns>
+      <param name="left"> 第一个要比较的变换者。 </param>
+      <param name="right"> 要比较的第二个变换者。 </param>
+      <returns> 如果节点不相等，则返回**true**；如果它们相等，则为假。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.ToRectangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator)">
       <summary>
         转到几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <returns>产生的的几何形状。 </returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <returns> 产生的的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.ToRectangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Matrix3x2)">
       <summary>
         转到几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="matrix">矩阵。 </param>
-      <returns>产生的的几何形状。 </returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="matrix"> 矩阵。 </param>
+      <returns> 产生的的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.ToEllipse(Microsoft.Graphics.Canvas.ICanvasResourceCreator)">
       <summary>
         转到几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <returns>产生的的几何形状。 </returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <returns> 产生的的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.ToEllipse(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Matrix3x2)">
       <summary>
         转到几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="matrix">矩阵。 </param>
-      <returns>产生的的几何形状。 </returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="matrix"> 矩阵。 </param>
+      <returns> 产生的的几何形状。 </returns>
     </member>
 
     <member name="M:FanKit.Transformers.Transformer.FindHomography(System.Single,System.Single,FanKit.Transformers.ITransformerLTRB)">
       <summary>
         查找单应性。
       </summary>
-      <param name="sourceWidth">源矩形的宽度</param>
-      <param name="sourceHeight">源矩形的高度</param>
-      <param name="destination">目标变换者。</param>
-      <returns>单应性矩阵。 </returns>
+      <param name="sourceWidth"> 源矩形的宽度 </param>
+      <param name="sourceHeight"> 源矩形的高度 </param>
+      <param name="destination"> 目标变换者。 </param>
+      <returns> 单应性矩阵。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.FindHomography3D(System.Single,System.Single,FanKit.Transformers.ITransformerLTRB)">
       <summary>
         查找单应性。
       </summary>
-      <param name="sourceWidth">源矩形的宽度</param>
-      <param name="sourceHeight">源矩形的高度</param>
-      <param name="destination">目标变换者。</param>
-      <returns>单应性矩阵。 </returns>
+      <param name="sourceWidth"> 源矩形的宽度 </param>
+      <param name="sourceHeight"> 源矩形的高度 </param>
+      <param name="destination"> 目标变换者。 </param>
+      <returns> 单应性矩阵。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.FindHomography(System.Single,System.Single,System.Single,System.Single,FanKit.Transformers.ITransformerLTRB)">
       <summary>
         查找单应性。
       </summary>
-      <param name="sourceX">源矩形的 X</param>
-      <param name="sourceY">源矩形的 Y</param>
-      <param name="sourceWidth">源矩形的宽度</param>
-      <param name="sourceHeight">源矩形的高度</param>
-      <param name="destination">目标变换者。</param>
-      <returns>单应性矩阵。 </returns>
+      <param name="sourceX"> 源矩形的 X </param>
+      <param name="sourceY"> 源矩形的 Y </param>
+      <param name="sourceWidth"> 源矩形的宽度 </param>
+      <param name="sourceHeight"> 源矩形的高度 </param>
+      <param name="destination"> 目标变换者。 </param>
+      <returns> 单应性矩阵。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.FindHomography3D(System.Single,System.Single,System.Single,System.Single,FanKit.Transformers.ITransformerLTRB)">
       <summary>
         查找单应性。
       </summary>
-      <param name="sourceX">源矩形的 X</param>
-      <param name="sourceY">源矩形的 Y</param>
-      <param name="sourceWidth">源矩形的宽度</param>
-      <param name="sourceHeight">源矩形的高度</param>
-      <param name="destination">目标变换者。</param>
-      <returns>单应性矩阵。 </returns>
+      <param name="sourceX"> 源矩形的 X </param>
+      <param name="sourceY"> 源矩形的 Y </param>
+      <param name="sourceWidth"> 源矩形的宽度 </param>
+      <param name="sourceHeight"> 源矩形的高度 </param>
+      <param name="destination"> 目标变换者。 </param>
+      <returns> 单应性矩阵。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.FindHomography(FanKit.Transformers.ITransformerLTRB,FanKit.Transformers.ITransformerLTRB)">
       <summary>
         查找单应性。
       </summary>
-      <param name="source">源变换者。</param>
-      <param name="destination">目标变换者。</param>
-      <returns>单应性矩阵。 </returns>
+      <param name="source"> 源变换者。 </param>
+      <param name="destination"> 目标变换者。 </param>
+      <returns> 单应性矩阵。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.ContainsNodeMode(System.Numerics.Vector2,FanKit.Transformers.Transformer,System.Boolean)">
       <summary>
         通过包含指定点的变换者获取所有节点。
       </summary>
-      <param name="point">输入点。 </param>
-      <param name="transformer">源变换者。 </param>
-      <param name="disabledRadian">是否禁用弧度。 </param>
-      <returns>变换者模式。 </returns>
+      <param name="point"> 输入点。 </param>
+      <param name="transformer"> 源变换者。 </param>
+      <param name="disabledRadian"> 是否禁用弧度。 </param>
+      <returns> 变换者模式。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.ContainsNodeMode(System.Numerics.Vector2,FanKit.Transformers.Transformer,System.Numerics.Matrix3x2,System.Boolean)">
       <summary>
         通过包含指定点的变换者获取所有节点。
       </summary>
-      <param name="point">输入点。 </param>
-      <param name="transformer">源变换者。 </param>
-      <param name="matrix">矩阵。 </param>
-      <param name="disabledRadian">是否禁用弧度。 </param>
-      <returns>变换者模式。 </returns>
+      <param name="point"> 输入点。 </param>
+      <param name="transformer"> 源变换者。 </param>
+      <param name="matrix"> 矩阵。 </param>
+      <param name="disabledRadian"> 是否禁用弧度。 </param>
+      <returns> 变换者模式。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.TransformX(System.Single,FanKit.Transformers.IndicatorMode)">
       <summary>
         X
       </summary>
-      <param name="value">目标值。</param>
-      <param name="indicatorMode">指示器模式</param>
-      <returns>产生的向量。 </returns>
+      <param name="value"> 目标值。 </param>
+      <param name="indicatorMode"> 指示器模式 </param>
+      <returns> 产生的向量。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.TransformY(System.Single,FanKit.Transformers.IndicatorMode)">
       <summary>
         ÿ
       </summary>
-      <param name="value">目标值。</param>
-      <param name="indicatorMode">指示器模式</param>
-      <returns>产生的向量。 </returns>
+      <param name="value"> 目标值。 </param>
+      <param name="indicatorMode"> 指示器模式 </param>
+      <returns> 产生的向量。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.TransformWidth(System.Single,FanKit.Transformers.IndicatorMode,System.Boolean)">
       <summary>
         宽度
       </summary>
-      <param name="value">目标值。</param>
-      <param name="indicatorMode">指示器模式</param>
-      <param name="isRatio">缩放时保持比例。 </param>
-      <returns>产生的矩阵。 </returns>
+      <param name="value"> 目标值。 </param>
+      <param name="indicatorMode"> 指示器模式 </param>
+      <param name="isRatio"> 缩放时保持比例。 </param>
+      <returns> 产生的矩阵。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.TransformHeight(System.Single,FanKit.Transformers.IndicatorMode,System.Boolean)">
       <summary>
         高度
       </summary>
-      <param name="value">目标值。</param>
-      <param name="indicatorMode">指示器模式</param>
-      <param name="isRatio">缩放时保持比例。 </param>
-      <returns>产生的矩阵。 </returns>
+      <param name="value"> 目标值。 </param>
+      <param name="indicatorMode"> 指示器模式 </param>
+      <param name="isRatio"> 缩放时保持比例。 </param>
+      <returns> 产生的矩阵。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.TransformRotate(System.Single,FanKit.Transformers.IndicatorMode)">
       <summary>
         旋转
       </summary>
-      <param name="value">目标值。</param>
-      <param name="indicatorMode">指示器模式</param>
-      <returns>产生的矩阵。 </returns>
+      <param name="value"> 目标值。 </param>
+      <param name="indicatorMode"> 指示器模式 </param>
+      <returns> 产生的矩阵。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.TransformSkew(System.Single,FanKit.Transformers.IndicatorMode)">
       <summary>
         偏斜
       </summary>
-      <param name="value">目标值。</param>
-      <param name="indicatorMode">指示器模式</param>
-      <returns>产生的矩阵。 </returns>
+      <param name="value"> 目标值。 </param>
+      <param name="indicatorMode"> 指示器模式 </param>
+      <returns> 产生的矩阵。 </returns>
     </member>
     <member name="T:FanKit.Transformers.SnapBase`2">
       <summary>
         基础捕捉工具。
       </summary>
-      <typeparam name="S">源类型。 </typeparam>
-      <typeparam name="D">目标类型。 </typeparam>
+      <typeparam name="S"> 源类型。 </typeparam>
+      <typeparam name="D"> 目标类型。 </typeparam>
     </member>
     <member name="P:FanKit.Transformers.SnapBase`2.NodeRadius">
-      <summary>节点的半径”。破坏12。</summary>
+      <summary> 节点的半径”。破坏12。 </summary>
     </member>
     <member name="P:FanKit.Transformers.SnapBase`2.Source">
-      <summary>获取或设置源。 </summary>
+      <summary> 获取或设置源。 </summary>
     </member>
     <member name="P:FanKit.Transformers.SnapBase`2.Destinations">
-      <summary>获取或设置目标。 </summary>
+      <summary> 获取或设置目标。 </summary>
     </member>
     <member name="F:FanKit.Transformers.SnapBase`2.IsXSnap">
-      <summary>是否捕捉到 X 轴。 </summary>
+      <summary> 是否捕捉到 X 轴。 </summary>
     </member>
     <member name="F:FanKit.Transformers.SnapBase`2.XSnap">
       <summary> X 轴位置。 </summary>
@@ -2543,7 +2543,7 @@
       <summary> X 轴目标。 </summary>
     </member>
     <member name="F:FanKit.Transformers.SnapBase`2.IsYSnap">
-      <summary>是否捕捉到 Y 轴。 </summary>
+      <summary> 是否捕捉到 Y 轴。 </summary>
     </member>
     <member name="F:FanKit.Transformers.SnapBase`2.YSnap">
       <summary> Y 轴位置。 </summary>
@@ -2555,14 +2555,14 @@
       <summary>
         在绘制画布时发生。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
     </member>
     <member name="M:FanKit.Transformers.SnapBase`2.Draw(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Matrix3x2)">
       <summary>
         在绘制画布时发生。
       </summary>
-      <param name="drawingSession">绘制会话。 </param>
-      <param name="matrix">矩阵。 </param>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="matrix"> 矩阵。 </param>
     </member>
     <member name="M:FanKit.Transformers.SnapBase`2.XTop">
       <summary> X 轴顶部。 </summary>
@@ -2571,7 +2571,7 @@
       <summary> X 轴底部。 </summary>
     </member>
     <member name="M:FanKit.Transformers.SnapBase`2.YLeft">
-      <summary>Y 轴向左。 </summary>
+      <summary> Y 轴向左。 </summary>
     </member>
     <member name="M:FanKit.Transformers.SnapBase`2.YRight">
       <summary> Y 轴向右。 </summary>
@@ -2589,45 +2589,45 @@
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.#ctor(System.Single,System.Single,System.Single,System.Single)">
       <summary>
-        初始化<see cref="T:FanKit.Transformers.TransformerBorder"/>。
+        初始化 <see cref="T:FanKit.Transformers.TransformerBorder"/>。
       </summary>
-      <param name="width">宽度。 </param>
-      <param name="height">高度。 </param>
+      <param name="width"> 宽度。 </param>
+      <param name="height"> 高度。 </param>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.#ctor(System.Single,System.Single)">
       <summary>
-        初始化<see cref="T:FanKit.Transformers.TransformerBorder"/>。
+        初始化 <see cref="T:FanKit.Transformers.TransformerBorder"/>。
       </summary>
-      <param name="width">宽度。 </param>
-      <param name="height">高度。 </param>
+      <param name="width"> 宽度。 </param>
+      <param name="height"> 高度。 </param>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.#ctor(FanKit.Transformers.ITransformerLTRB)">
       <summary>
-        初始化<see cref="T:FanKit。Transformers.Transformer"/>。
+        初始化 <see cref="T:FanKit。Transformers.Transformer"/>。
       </summary>
-      <param name="transformer">变换者。 </param>
+      <param name="transformer"> 变换者。 </param>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.#ctor(System.Collections.Generic.IEnumerable{FanKit.Transformers.Transformer})">
       <summary>
-        初始化<see cref="T:FanKit.Transformers.TransformerBorder"/>。
+        初始化 <see cref="T:FanKit.Transformers.TransformerBorder"/>。
       </summary>
-      <param name="transformers">变换者。 </param>
+      <param name="transformers"> 变换者。 </param>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.#ctor(System.Collections.Generic.IEnumerable{FanKit.Transformers.IGetActualTransformer})">
       <summary>
-        初始化<see cref="T:FanKit.Transformers.TransformerBorder"/>。
+        初始化 <see cref="T:FanKit.Transformers.TransformerBorder"/>。
       </summary>
       <param name="getActualTransformers"> IGetActualTransformer。 </param>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.#ctor(System.Collections.Generic.IEnumerable{FanKit.Transformers.Node})">
       <summary>
-        初始化<see cref="T:FanKit.Transformers.TransformerBorder"/>。
+        初始化 <see cref="T:FanKit.Transformers.TransformerBorder"/>。
       </summary>
-      <param name="nodes">节点。 </param>
+      <param name="nodes"> 节点。 </param>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.#ctor(System.Collections.Generic.IList{FanKit.Transformers.NodeCollection})">
       <summary>
-        初始化<see cref="T:FanKit.Transformers.TransformerBorder"/>。
+        初始化 <see cref="T:FanKit.Transformers.TransformerBorder"/>。
       </summary>
       <param name="nodess"> NodeCollectionCollection。 </param>
     </member>
@@ -2635,91 +2635,91 @@
       <summary>
         一起添加边框和矢量。
       </summary>
-      <param name="border">源边框。 </param>
-      <param name="vector">添加的向量。 </param>
-      <returns>结果边框。 </returns>
+      <param name="border"> 源边框。 </param>
+      <param name="vector"> 添加的向量。 </param>
+      <returns> 结果边框。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.op_Addition(FanKit.Transformers.TransformerBorder,System.Numerics.Vector2)">
       <summary>
         一起添加边框和矢量。
       </summary>
-      <param name="value1">源边框。 </param>
-      <param name="value2">源向量。 </param>
-      <returns>求和边框。 </returns>
+      <param name="value1"> 源边框。 </param>
+      <param name="value2"> 源向量。 </param>
+      <returns> 求和边框。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.Equals(FanKit.Transformers.TransformerBorder)">
       <summary>
         返回一个布尔值，该布尔值指示给定的变换者边框是否等于此变换者边框实例。
       </summary>
-      <param name="other">与该实例进行比较的变换者边框。 </param>
-      <returns>如果另一个变换者边框等于此实例，则返回**true**，否则返回**false**。 </returns>
+      <param name="other"> 与该实例进行比较的变换者边框。 </param>
+      <returns> 如果另一个变换者边框等于此实例，则返回**true**，否则返回**false**。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.op_Equality(FanKit.Transformers.TransformerBorder,FanKit.Transformers.TransformerBorder)">
       <summary>
         返回一个值，该值指示两个指定节点中的每对元素是否相等。
       </summary>
-      <param name="left">要比较的第一个边框。 </param>
-      <param name="right">要比较的第二个边框。 </param>
-      <returns>如果左右相等则返回**true**，否则返回**false**。 </returns>
+      <param name="left"> 要比较的第一个边框。 </param>
+      <param name="right"> 要比较的第二个边框。 </param>
+      <returns> 如果左右相等则返回**true**，否则返回**false**。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.op_Inequality(FanKit.Transformers.TransformerBorder,FanKit.Transformers.TransformerBorder)">
       <summary>
         返回一个布尔值，指示两个给定节点是否不相等。
       </summary>
-      <param name="left">要比较的第一个边框。 </param>
-      <param name="right">要比较的第二个边框。 </param>
-      <returns>如果节点不相等，则返回**true**；如果它们相等，则为假。 </returns>
+      <param name="left"> 要比较的第一个边框。 </param>
+      <param name="right"> 要比较的第二个边框。 </param>
+      <returns> 如果节点不相等，则返回**true**；如果它们相等，则为假。 </returns>
     </member>
     <member name="P:FanKit.Transformers.TransformerBorder.Left">
-      <summary>获取边框的左侧。 </summary>
+      <summary> 获取边框的左侧。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerBorder.Top">
-      <summary>获取边框的顶部。 </summary>
+      <summary> 获取边框的顶部。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerBorder.Right">
-      <summary>获取边框的权利。 </summary>
+      <summary> 获取边框的权利。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerBorder.Bottom">
-      <summary>获取边框的底部。 </summary>
+      <summary> 获取边框的底部。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerBorder.CenterX">
-      <summary>获取 X 的边界中心。</summary>
+      <summary> 获取 X 的边界中心。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerBorder.CenterY">
-      <summary>获取 Y 的边界中心。</summary>
+      <summary> 获取 Y 的边界中心。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerBorder.Center">
-      <summary>获取记录缠结的中心点。 </summary>
+      <summary> 获取记录缠结的中心点。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerBorder.CenterLeft">
-      <summary>获取左中心向量。 </summary>
+      <summary> 获取左中心向量。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerBorder.CenterTop">
-      <summary>获取中心顶部向量。 </summary>
+      <summary> 获取中心顶部向量。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerBorder.CenterRight">
-      <summary>获取中心右向量。 </summary>
+      <summary> 获取中心右向量。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerBorder.CenterBottom">
-      <summary>获取中心底部向量。 </summary>
+      <summary> 获取中心底部向量。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerBorder.LeftTop">
-      <summary>获取边框的左上角。 </summary>
+      <summary> 获取边框的左上角。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerBorder.RightTop">
-      <summary>获取边框的右上角。 </summary>
+      <summary> 获取边框的右上角。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerBorder.RightBottom">
-      <summary>获取边框的右下角。 </summary>
+      <summary> 获取边框的右下角。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerBorder.LeftBottom">
-      <summary>获取边框的左下点。 </summary>
+      <summary> 获取边框的左下点。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerBorder.Horizontal">
-      <summary>获取水平向量。 </summary>
+      <summary> 获取水平向量。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerBorder.Vertical">
-      <summary>获取垂直向量。 </summary>
+      <summary> 获取垂直向量。 </summary>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.ToTransformer">
       <summary>
@@ -2730,30 +2730,30 @@
       <summary>
         通过左，右，上，下获取值。
       </summary>
-      <param name="borderMode">边框模式</param>
-      <returns>产生的值。 </returns>
+      <param name="borderMode"> 边框模式 </param>
+      <returns> 产生的值。 </returns>
     </member>
     <member name="T:FanKit.Transformers.BorderBorderSnap">
       <summary>
-        <see cref="T:FanKit.Transformers.TransformerBorder"/>的捕捉工具。
+        <see cref="T:FanKit.Transformers.TransformerBorder"/> 的捕捉工具。
       </summary>
     </member>
     <member name="M:FanKit.Transformers.BorderBorderSnap.SetXSnapMove(System.Single,FanKit.Transformers.TransformerBorder)">
       <summary>
-        设置<see cref="F:FanKit.Transformers.SnapBase`2.XSnap"/>。
+        设置 <see cref="F:FanKit.Transformers.SnapBase`2.XSnap"/>。
       </summary>
-      <param name="moveX">移动X。</param>
-      <param name="destination">目的地。 </param>
+      <param name="moveX"> 移动X。 </param>
+      <param name="destination"> 目的地。 </param>
       <returns>
         <see cref="F:FanKit.Transformers.SnapBase`2.IsXSnap"/>
       </returns>
     </member>
     <member name="M:FanKit.Transformers.BorderBorderSnap.SetYSnapMove(System.Single,FanKit.Transformers.TransformerBorder)">
       <summary>
-        设置<see cref="F:FanKit.Transformers.SnapBase`2.YSnap"/>。
+        设置 <see cref="F:FanKit.Transformers.SnapBase`2.YSnap"/>。
       </summary>
-      <param name="moveY">移动 Y。</param>
-      <param name="destination">目的地。 </param>
+      <param name="moveY"> 移动 Y。 </param>
+      <param name="destination"> 目的地。 </param>
       <returns>
         <see cref="F:FanKit.Transformers.SnapBase`2.IsYSnap"/>
       </returns>
@@ -2782,344 +2782,344 @@
       <summary> 0.55228f </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerGeometry.StartingRotation">
-      <summary>获取顶部向量。 </summary>
+      <summary> 获取顶部向量。 </summary>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.GetRotationVector(System.Single)">
       <summary>
         从旋转获取单位向量。
       </summary>
-      <param name="rotation">源旋转。 </param>
-      <returns>单位向量。 </returns>
+      <param name="rotation"> 源旋转。 </param>
+      <returns> 单位向量。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateRectangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB)">
       <summary>
         创建一个新的矩形几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="transformerLTRB">变换者LTRB。 </param>
-      <returns>产生的的几何形状。 </returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="transformerLTRB"> 变换者LTRB。 </param>
+      <returns> 产生的的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateRectangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2)">
       <summary>
         创建一个新的矩形几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="transformerLTRB">变换者LTRB。 </param>
-      <param name="matrix">矩阵。 </param>
-      <returns>产生的的几何形状。 </returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="transformerLTRB"> 变换者LTRB。 </param>
+      <param name="matrix"> 矩阵。 </param>
+      <returns> 产生的的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateRectangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>
         创建一个新的矩形几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="leftTop">左上角。 </param>
-      <param name="rightTop">右上角。 </param>
-      <param name="rightBottom">右下角。 </param>
-      <param name="leftBottom">左下角。 </param>
-      <returns>产生的的几何形状。 </returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="leftTop"> 左上角。 </param>
+      <param name="rightTop"> 右上角。 </param>
+      <param name="rightBottom"> 右下角。 </param>
+      <param name="leftBottom"> 左下角。 </param>
+      <returns> 产生的的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateRectangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Matrix3x2)">
       <summary>
         创建一个新的矩形几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="leftTop">左上角。 </param>
-      <param name="rightTop">右上角。 </param>
-      <param name="rightBottom">右下角。 </param>
-      <param name="leftBottom">左下角。 </param>
-      <param name="matrix">矩阵。 </param>
-      <returns>产生的的几何形状。 </returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="leftTop"> 左上角。 </param>
+      <param name="rightTop"> 右上角。 </param>
+      <param name="rightBottom"> 右下角。 </param>
+      <param name="leftBottom"> 左下角。 </param>
+      <param name="matrix"> 矩阵。 </param>
+      <returns> 产生的的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateEllipse(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB)">
       <summary>
         创建一个新的椭圆几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="transformerLTRB">变换者LTRB。 </param>
-      <returns>产生的的几何形状。 </returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="transformerLTRB"> 变换者LTRB。 </param>
+      <returns> 产生的的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateEllipse(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2)">
       <summary>
         创建一个新的椭圆几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="transformerLTRB">变换者LTRB。 </param>
-      <param name="matrix">矩阵。 </param>
-      <returns>产生的的几何形状。 </returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="transformerLTRB"> 变换者LTRB。 </param>
+      <param name="matrix"> 矩阵。 </param>
+      <returns> 产生的的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateEllipse(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>
         创建一个新的椭圆几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="centerLeft">左点。 </param>
-      <param name="centerTop">最高点。 </param>
-      <param name="centerRight">正确的点。 </param>
-      <param name="centerBottom">最低点。 </param>
-      <returns>产生的的几何形状。 </returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="centerLeft"> 左点。 </param>
+      <param name="centerTop"> 最高点。 </param>
+      <param name="centerRight"> 正确的点。 </param>
+      <param name="centerBottom"> 最低点。 </param>
+      <returns> 产生的的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateEllipse(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Matrix3x2)">
       <summary>
         创建一个新的椭圆几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="centerLeft">左点。 </param>
-      <param name="centerTop">最高点。 </param>
-      <param name="centerRight">正确的点。 </param>
-      <param name="centerBottom">最低点。 </param>
-      <param name="matrix">矩阵。 </param>
-      <returns>产生的的几何形状。 </returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="centerLeft"> 左点。 </param>
+      <param name="centerTop"> 最高点。 </param>
+      <param name="centerRight"> 正确的点。 </param>
+      <param name="centerBottom"> 最低点。 </param>
+      <param name="matrix"> 矩阵。 </param>
+      <returns> 产生的的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateRoundRect(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Single)">
       <summary>
         创建一个新的圆角矩形几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="transformer">源变换者。 </param>
-      <param name="corner">角落。 </param>
-      <returns>产生的的几何形状。 </returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="transformer"> 源变换者。 </param>
+      <param name="corner"> 角落。 </param>
+      <returns> 产生的的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateRoundRect(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Single)">
       <summary>
         创建一个新的圆角矩形几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="transformer">源变换者。 </param>
-      <param name="matrix">矩阵。 </param>
-      <param name="corner">角落。 </param>
-      <returns>产生的的几何形状。 </returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="transformer"> 源变换者。 </param>
+      <param name="matrix"> 矩阵。 </param>
+      <param name="corner"> 角落。 </param>
+      <returns> 产生的的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateTriangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Single)">
       <summary>
         创建一个新的三角形几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="transformerLTRB">变换者LTRB。 </param>
-      <returns>产生的的几何形状。 </returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="transformerLTRB"> 变换者LTRB。 </param>
+      <returns> 产生的的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateTriangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Single)">
       <summary>
         创建一个新的三角形几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="transformerLTRB">变换者LTRB。 </param>
-      <param name="matrix">矩阵。 </param>
-      <returns>产生的的几何形状。 </returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="transformerLTRB"> 变换者LTRB。 </param>
+      <param name="matrix"> 矩阵。 </param>
+      <returns> 产生的的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateTriangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Single)">
       <summary>
         创建一个新的三角形几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="leftTop">左上角。 </param>
-      <param name="rightTop">右上角。 </param>
-      <param name="rightBottom">右下角。 </param>
-      <param name="leftBottom">左下角。 </param>
-      <returns>产生的的几何形状。 </returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="leftTop"> 左上角。 </param>
+      <param name="rightTop"> 右上角。 </param>
+      <param name="rightBottom"> 右下角。 </param>
+      <param name="leftBottom"> 左下角。 </param>
+      <returns> 产生的的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateTriangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Matrix3x2,System.Single)">
       <summary>
         创建一个新的三角形几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="leftTop">左上角。 </param>
-      <param name="rightTop">右上角。 </param>
-      <param name="rightBottom">右下角。 </param>
-      <param name="leftBottom">左下角。 </param>
-      <param name="matrix">矩阵。 </param>
-      <param name="matrix">矩阵。 </param>
-      <returns>产生的的几何形状。 </returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="leftTop"> 左上角。 </param>
+      <param name="rightTop"> 右上角。 </param>
+      <param name="rightBottom"> 右下角。 </param>
+      <param name="leftBottom"> 左下角。 </param>
+      <param name="matrix"> 矩阵。 </param>
+      <param name="matrix"> 矩阵。 </param>
+      <returns> 产生的的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateDiamond(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Single)">
       <summary>
         创建一个新的菱形几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="mid">中间值。 </param>
-      <returns>产生的的几何形状。 </returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="mid"> 中间值。 </param>
+      <returns> 产生的的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateDiamond(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Single)">
       <summary>
         创建一个新的菱形几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="transformer">源变换者。 </param>
-      <param name="mid">中间值。 </param>
-      <returns>产生的的几何形状。 </returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="transformer"> 源变换者。 </param>
+      <param name="mid"> 中间值。 </param>
+      <returns> 产生的的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreatePentagon(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Int32)">
       <summary>
         创建一个新的五边形几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="points">点数。 </param>
-      <returns>产生的的几何形状。 </returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="points"> 点数。 </param>
+      <returns> 产生的的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreatePentagon(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Int32)">
       <summary>
         创建一个新的五边形几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="transformer">源变换者。 </param>
-      <param name="points">点数。 </param>
-      <returns>产生的的几何形状。 </returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="transformer"> 源变换者。 </param>
+      <param name="points"> 点数。 </param>
+      <returns> 产生的的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateStar(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Int32,System.Single)">
       <summary>
         创建一个新的星形几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="points">点数。 </param>
-      <param name="innerRadius">内部半径。 </param>
-      <returns>产生的的几何形状。 </returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="points"> 点数。 </param>
+      <param name="innerRadius"> 内部半径。 </param>
+      <returns> 产生的的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateStar(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Int32,System.Single)">
       <summary>
         创建一个新的星形几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="transformer">源变换者。 </param>
-      <param name="points">点数。 </param>
-      <param name="innerRadius">内部半径。 </param>
-      <returns>产生的的几何形状。 </returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="transformer"> 源变换者。 </param>
+      <param name="points"> 点数。 </param>
+      <param name="innerRadius"> 内部半径。 </param>
+      <returns> 产生的的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateCog(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Int32,System.Single,System.Single,System.Single)">
       <summary>
         创建一个新的齿轮几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="count">点数。 </param>
-      <param name="innerRadius">内部半径。 </param>
-      <param name="tooth">牙齿。 </param>
-      <param name="notch">缺口。 </param>
-      <returns>产生的的几何形状。 </returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="count"> 点数。 </param>
+      <param name="innerRadius"> 内部半径。 </param>
+      <param name="tooth"> 牙齿。 </param>
+      <param name="notch"> 缺口。 </param>
+      <returns> 产生的的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateCog(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Int32,System.Single,System.Single,System.Single)">
       <summary>
         创建一个新的齿轮几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="transformer">源变换者。 </param>
-      <param name="count">点数。 </param>
-      <param name="innerRadius">内部半径。 </param>
-      <param name="tooth">牙齿。 </param>
-      <param name="notch">缺口。 </param>
-      <returns>产生的的几何形状。 </returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="transformer"> 源变换者。 </param>
+      <param name="count"> 点数。 </param>
+      <param name="innerRadius"> 内部半径。 </param>
+      <param name="tooth"> 牙齿。 </param>
+      <param name="notch"> 缺口。 </param>
+      <returns> 产生的的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateDonut(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Single)">
       <summary>
         创建一个新的甜甜圈几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="holeRadius">孔半径。 </param>
-      <returns>产生的的几何形状。 </returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="holeRadius"> 孔半径。 </param>
+      <returns> 产生的的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateDonut(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Single)">
       <summary>
         创建一个新的甜甜圈几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="transformer">源变换者。 </param>
-      <param name="holeRadius">孔半径。 </param>
-      <returns>产生的的几何形状。 </returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="transformer"> 源变换者。 </param>
+      <param name="holeRadius"> 孔半径。 </param>
+      <returns> 产生的的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreatePie(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Single)">
       <summary>
         创建一个新的饼图几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="sweepAngle">扫角。 </param>
-      <returns>产生的的几何形状。 </returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="sweepAngle"> 扫角。 </param>
+      <returns> 产生的的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreatePie(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Single)">
       <summary>
         创建一个新的饼图几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="transformer">源变换者。 </param>
-      <param name="sweepAngle">扫角。 </param>
-      <returns>产生的的几何形状。 </returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="transformer"> 源变换者。 </param>
+      <param name="sweepAngle"> 扫角。 </param>
+      <returns> 产生的的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateCookie(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Single,System.Single)">
       <summary>
         创建一个新的曲奇饼几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="innerRadius">内部半径。 </param>
-      <param name="sweepAngle">扫角。 </param>
-      <returns>产生的的几何形状。 </returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="innerRadius"> 内部半径。 </param>
+      <param name="sweepAngle"> 扫角。 </param>
+      <returns> 产生的的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateCookie(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Single,System.Single)">
       <summary>
         创建一个新的曲奇饼几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="transformer">源变换者。 </param>
-      <param name="innerRadius">内部半径。 </param>
-      <param name="sweepAngle">扫角。 </param>
-      <returns>产生的的几何形状。 </returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="transformer"> 源变换者。 </param>
+      <param name="innerRadius"> 内部半径。 </param>
+      <param name="sweepAngle"> 扫角。 </param>
+      <returns> 产生的的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateArrow(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Boolean,System.Single,System.Single,FanKit.Transformers.GeometryArrowTailType,FanKit.Transformers.GeometryArrowTailType)">
       <summary>
         创建一个新的箭头几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="transformer">源变换者。 </param>
-      <param name="isAbsolute">是绝对的吗？ </param>
-      <param name="width">绝对宽度。 </param>
-      <param name="value">相对值。 </param>
-      <param name="leftTail">左侧-尾巴。 </param>
-      <param name="rightTail">右侧-尾巴。 </param>
-      <returns>产生的的几何形状。 </returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="transformer"> 源变换者。 </param>
+      <param name="isAbsolute"> 是绝对的吗？ </param>
+      <param name="width"> 绝对宽度。 </param>
+      <param name="value"> 相对值。 </param>
+      <param name="leftTail"> 左侧-尾巴。 </param>
+      <param name="rightTail"> 右侧-尾巴。 </param>
+      <returns> 产生的的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateArrow(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Boolean,System.Single,System.Single,FanKit.Transformers.GeometryArrowTailType,FanKit.Transformers.GeometryArrowTailType)">
       <summary>
         创建一个新的箭头几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="transformer">源变换者。 </param>
-      <param name="matrix">矩阵。 </param>
-      <param name="isAbsolute">是绝对的吗？ </param>
-      <param name="width">绝对宽度。 </param>
-      <param name="value">相对值。 </param>
-      <param name="leftTail">左侧尾巴。 </param>
-      <param name="rightTail">右侧尾巴。 </param>
-      <returns>产生的的几何形状。 </returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="transformer"> 源变换者。 </param>
+      <param name="matrix"> 矩阵。 </param>
+      <param name="isAbsolute"> 是绝对的吗？ </param>
+      <param name="width"> 绝对宽度。 </param>
+      <param name="value"> 相对值。 </param>
+      <param name="leftTail"> 左侧尾巴。 </param>
+      <param name="rightTail"> 右侧尾巴。 </param>
+      <returns> 产生的的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateCapsule(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB)">
       <summary>
         创建一个新的胶囊几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="transformerLTRB">变换者LTRB。 </param>
-      <returns>产生的的几何形状。 </returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="transformerLTRB"> 变换者LTRB。 </param>
+      <returns> 产生的的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateCapsule(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2)">
       <summary>
         创建一个新的胶囊几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="transformerLTRB">变换者LTRB。 </param>
-      <param name="matrix">矩阵。 </param>
-      <returns>产生的的几何形状。 </returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="transformerLTRB"> 变换者LTRB。 </param>
+      <param name="matrix"> 矩阵。 </param>
+      <returns> 产生的的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateHeart(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Single)">
       <summary>
         创建一个新的心脏几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="spread">价差。 </param>
-      <returns>产生的的几何形状。 </returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="spread"> 价差。 </param>
+      <returns> 产生的的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateHeart(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Single)">
       <summary>
         创建一个新的心脏几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="transformer">源变换者。 </param>
-      <param name="spread">价差。 </param>
-      <returns>产生的的几何形状。 </returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="transformer"> 源变换者。 </param>
+      <param name="spread"> 价差。 </param>
+      <returns> 产生的的几何形状。 </returns>
     </member>
     <member name="T:FanKit.Transformers.GeometryArrowTailType">
       <summary>
@@ -3127,10 +3127,10 @@
       </summary>
     </member>
     <member name="F:FanKit.Transformers.GeometryArrowTailType.None">
-      <summary>正常。 </summary>
+      <summary> 正常。 </summary>
     </member>
     <member name="F:FanKit.Transformers.GeometryArrowTailType.Arrow">
-      <summary>箭头。 </summary>
+      <summary> 箭头。 </summary>
     </member>
     <member name="T:FanKit.Transformers.TransformerMatrix">
       <summary>
@@ -3138,39 +3138,39 @@
       </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerMatrix.Source">
-      <summary>源变换者。 </summary>
+      <summary> 源变换者。 </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerMatrix.Destination">
-      <summary>目标变换者。 </summary>
+      <summary> 目标变换者。 </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerMatrix.DisabledRadian">
-      <summary>禁用旋转弧度吗？默认**false**。 </summary>
+      <summary> 禁用旋转弧度吗？默认**false**。 </summary>
     </member>
     <member name="M:FanKit.Transformers.TransformerMatrix.#ctor(FanKit.Transformers.Transformer)">
       <summary>
-        初始化<see cref="T:FanKit.Transformers.TransformerMatrix"/>。
+        初始化 <see cref="T:FanKit.Transformers.TransformerMatrix"/>。
       </summary>
     </member>
     <member name="M:FanKit.Transformers.TransformerMatrix.#ctor(System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>
-        初始化<see cref="T:FanKit.Transformers.TransformerMatrix"/>。
+        初始化 <see cref="T:FanKit.Transformers.TransformerMatrix"/>。
       </summary>
-      <param name="pointA">变换者矩阵的第一点。 </param>
-      <param name="pointB">变换者矩阵的第二个点。 </param>
+      <param name="pointA"> 变换者矩阵的第一点。 </param>
+      <param name="pointB"> 变换者矩阵的第二个点。 </param>
     </member>
     <member name="M:FanKit.Transformers.TransformerMatrix.#ctor(System.Single,System.Single,System.Numerics.Vector2)">
       <summary>
-        初始化<see cref="T:FanKit.Transformers.TransformerMatrix"/>。
+        初始化 <see cref="T:FanKit.Transformers.TransformerMatrix"/>。
       </summary>
-      <param name="width">宽度。 </param>
-      <param name="height">高度。 </param>
-      <param name="postion">位置。 </param>
+      <param name="width"> 宽度。 </param>
+      <param name="height"> 高度。 </param>
+      <param name="postion"> 位置。 </param>
     </member>
     <member name="M:FanKit.Transformers.TransformerMatrix.GetMatrix">
       <summary>
         获取变换者矩阵的结果矩阵。
       </summary>
-      <returns>乘积矩阵。 </returns>
+      <returns> 乘积矩阵。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerMatrix.CacheTransform">
       <summary>
@@ -3181,60 +3181,60 @@
       <summary>
         通过给定的矩阵对变换者矩阵进行变换。
       </summary>
-      <param name="matrix">结果矩阵。 </param>
+      <param name="matrix"> 结果矩阵。 </param>
     </member>
     <member name="M:FanKit.Transformers.TransformerMatrix.TransformAdd(System.Numerics.Vector2)">
       <summary>
         通过给定的向量对变换者矩阵进行变换。
       </summary>
-      <param name="vector">用于相加的加值。 </param>
+      <param name="vector"> 用于相加的加值。 </param>
     </member>
     <member name="T:FanKit.Transformers.TransformerMode">
       <summary>
-        <see cref="T:FanKit.Transformers.Transformer"/>的模式。
+        <see cref="T:FanKit.Transformers.Transformer"/> 的模式。
       </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerMode.None">
-      <summary>正常。 </summary>
+      <summary> 正常。 </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerMode.Rotation">
-      <summary>旋转。 </summary>
+      <summary> 旋转。 </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerMode.SkewLeft">
-      <summary>倾斜（左）。 </summary>
+      <summary> 倾斜（左）。 </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerMode.SkewTop">
-      <summary>倾斜（顶部）。 </summary>
+      <summary> 倾斜（顶部）。 </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerMode.SkewRight">
-      <summary>倾斜（右）。 </summary>
+      <summary> 倾斜（右）。 </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerMode.SkewBottom">
-      <summary>倾斜（底部）。 </summary>
+      <summary> 倾斜（底部）。 </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerMode.ScaleLeft">
-      <summary>比例（左）。 </summary>
+      <summary> 比例（左）。 </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerMode.ScaleTop">
-      <summary>比例（顶部）。 </summary>
+      <summary> 比例（顶部）。 </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerMode.ScaleRight">
-      <summary>比例（右）。 </summary>
+      <summary> 比例（右）。 </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerMode.ScaleBottom">
-      <summary>比例（底部）。 </summary>
+      <summary> 比例（底部）。 </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerMode.ScaleLeftTop">
-      <summary>比例（左上方）。 </summary>
+      <summary> 比例（左上方）。 </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerMode.ScaleRightTop">
-      <summary>比例（右上方）。 </summary>
+      <summary> 比例（右上方）。 </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerMode.ScaleRightBottom">
-      <summary>比例（右下方）。 </summary>
+      <summary> 比例（右下方）。 </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerMode.ScaleLeftBottom">
-      <summary>比例尺（左下方）。 </summary>
+      <summary> 比例尺（左下方）。 </summary>
     </member>
     <member name="T:FanKit.Transformers.TransformerRect">
       <summary>
@@ -3243,27 +3243,27 @@
     </member>
     <member name="M:FanKit.Transformers.TransformerRect.#ctor(System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>
-        初始化<see cref="T:FanKit.Transformers.TransformerRect"/>。
+        初始化 <see cref="T:FanKit.Transformers.TransformerRect"/>。
       </summary>
-      <param name="pointA">矩形的第一点。 </param>
-      <param name="pointB">矩形的第二个点。 </param>
+      <param name="pointA"> 矩形的第一点。 </param>
+      <param name="pointB"> 矩形的第二个点。 </param>
     </member>
     <member name="M:FanKit.Transformers.TransformerRect.#ctor(System.Numerics.Vector2,System.Numerics.Vector2,System.Boolean,System.Boolean)">
       <summary>
-        初始化<see cref="T:FanKit.Transformers.TransformerRect"/>。
+        初始化 <see cref="T:FanKit.Transformers.TransformerRect"/>。
       </summary>
-      <param name="pointA">矩形的第一点。 </param>
-      <param name="pointB">矩形的第二个点。 </param>
-      <param name="isCenter">围绕中心缩放。 </param>
-      <param name="isSquare">宽度和高度相等。 </param>
+      <param name="pointA"> 矩形的第一点。 </param>
+      <param name="pointB"> 矩形的第二个点。 </param>
+      <param name="isCenter"> 围绕中心缩放。 </param>
+      <param name="isSquare"> 宽度和高度相等。 </param>
     </member>
     <member name="M:FanKit.Transformers.TransformerRect.#ctor(System.Single,System.Single,System.Numerics.Vector2)">
       <summary>
-        初始化<see cref="T:FanKit.Transformers.TransformerRect"/>。
+        初始化 <see cref="T:FanKit.Transformers.TransformerRect"/>。
       </summary>
-      <param name="width">宽度。 </param>
-      <param name="height">高度。 </param>
-      <param name="postion">位置。 </param>
+      <param name="width"> 宽度。 </param>
+      <param name="height"> 高度。 </param>
+      <param name="postion"> 位置。 </param>
     </member>
     <member name="M:FanKit.Transformers.TransformerRect.ToRect">
       <summary>
@@ -3274,88 +3274,88 @@
       <summary>
         转到几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <returns>产生的的几何形状。 </returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <returns> 产生的的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerRect.ToRectangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Matrix3x2)">
       <summary>
         转到几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="matrix">矩阵。 </param>
-      <returns>产生的的几何形状。 </returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="matrix"> 矩阵。 </param>
+      <returns> 产生的的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerRect.ToEllipse(Microsoft.Graphics.Canvas.ICanvasResourceCreator)">
       <summary>
         转到几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <returns></returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <returns> </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerRect.ToEllipse(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Matrix3x2)">
       <summary>
         转到几何。
       </summary>
-      <param name="resourceCreator">资源创建者。 </param>
-      <param name="matrix">矩阵。 </param>
-      <returns></returns>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="matrix"> 矩阵。 </param>
+      <returns> </returns>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.Left">
-      <summary>获取矩形的左侧。 </summary>
+      <summary> 获取矩形的左侧。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.Top">
-      <summary>获取矩形的顶部。 </summary>
+      <summary> 获取矩形的顶部。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.Right">
-      <summary>获取矩形的右边。 </summary>
+      <summary> 获取矩形的右边。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.Bottom">
-      <summary>获取矩形的底部。 </summary>
+      <summary> 获取矩形的底部。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.Width">
-      <summary>获取矩形的宽度。 </summary>
+      <summary> 获取矩形的宽度。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.Height">
-      <summary>获取矩形的高度。 </summary>
+      <summary> 获取矩形的高度。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.CenterX">
-      <summary>获取矩形的X中心。</summary>
+      <summary> 获取矩形的X中心。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.CenterY">
-      <summary>获取Y的矩形中心。</summary>
+      <summary> 获取Y的矩形中心。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.Center">
-      <summary>获取矩形的中心点。 </summary>
+      <summary> 获取矩形的中心点。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.CenterLeft">
-      <summary>获取左中心向量。 </summary>
+      <summary> 获取左中心向量。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.CenterTop">
-      <summary>获取中心顶部向量。 </summary>
+      <summary> 获取中心顶部向量。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.CenterRight">
-      <summary>获取中心右向量。 </summary>
+      <summary> 获取中心右向量。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.CenterBottom">
-      <summary>获取中心底部向量。 </summary>
+      <summary> 获取中心底部向量。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.LeftTop">
-      <summary>获取矩形的左上角。 </summary>
+      <summary> 获取矩形的左上角。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.RightTop">
-      <summary>获取矩形的右上角。 </summary>
+      <summary> 获取矩形的右上角。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.RightBottom">
-      <summary>获取矩形的右下点。 </summary>
+      <summary> 获取矩形的右下点。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.LeftBottom">
-      <summary>获取矩形的左下点。 </summary>
+      <summary> 获取矩形的左下点。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.Horizontal">
-      <summary>获取水平向量。 </summary>
+      <summary> 获取水平向量。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.Vertical">
-      <summary>获取垂直向量。 </summary>
+      <summary> 获取垂直向量。 </summary>
     </member>
     <member name="T:FanKit.Transformers.XML">
       <summary>
@@ -3364,70 +3364,70 @@
     </member>
     <member name="M:FanKit.Transformers.XML.SaveColor(System.String,Windows.UI.Color)">
       <summary>
-        将整个<see cref="T:Windows.UI.Color"/>保存到 XElement。
+        将整个 <see cref="T:Windows.UI.Color"/> 保存到 XElement。
       </summary>
-      <param name="elementName">元素名称。 </param>
-      <param name="color">源数据。 </param>
-      <returns>保存的 XElement。 </returns>
+      <param name="elementName"> 元素名称。 </param>
+      <param name="color"> 源数据。 </param>
+      <returns> 保存的 XElement。 </returns>
     </member>
     <member name="M:FanKit.Transformers.XML.LoadColor(System.Xml.Linq.XElement)">
       <summary>
-        从 XElement 加载<see cref="T:Windows.UI.Color"/>。
+        从 XElement 加载 <see cref="T:Windows.UI.Color"/>。
       </summary>
-      <param name="element">源 XElement。 </param>
+      <param name="element"> 源 XElement。 </param>
       <returns>
-        已加载的<see cref="T:Windows.UI.Color"/>。
+        已加载的 <see cref="T:Windows.UI.Color"/>。
       </returns>
     </member>
     <member name="M:FanKit.Transformers.XML.SaveNode(System.String,FanKit.Transformers.Node)">
       <summary>
-        将整个<see cref="T:FanKit.Transformers.Node"/>保存到 XElement。
+        将整个 <see cref="T:FanKit.Transformers.Node"/> 保存到 XElement。
       </summary>
-      <param name="elementName">元素名称。 </param>
-      <param name="node">源数据。 </param>
-      <returns>保存的 XElement。 </returns>
+      <param name="elementName"> 元素名称。 </param>
+      <param name="node"> 源数据。 </param>
+      <returns> 保存的 XElement。 </returns>
     </member>
     <member name="M:FanKit.Transformers.XML.LoadNode(System.Xml.Linq.XElement)">
       <summary>
-        从 XElement 加载<see cref="T:FanKit.Transformers.Node"/>。
+        从 XElement 加载 <see cref="T:FanKit.Transformers.Node"/>。
       </summary>
-      <param name="element">源 XElement。 </param>
+      <param name="element"> 源 XElement。 </param>
       <returns>
-        已加载的<see cref="T:FanKit.Transformers.Node"/>。
+        已加载的 <see cref="T:FanKit.Transformers.Node"/>。
       </returns>
     </member>
     <member name="M:FanKit.Transformers.XML.SaveNodeCollection(System.String,FanKit.Transformers.NodeCollection)">
       <summary>
-        将整个<see cref="T:FanKit.Transformers.NodeCollection"/>保存到 XElement 。
+        将整个 <see cref="T:FanKit.Transformers.NodeCollection"/> 保存到 XElement 。
       </summary>
-      <param name="elementName">元素名称。 </param>
-      <param name="nodes">源数据。 </param>
-      <returns>保存的 XElement 。 </returns>
+      <param name="elementName"> 元素名称。 </param>
+      <param name="nodes"> 源数据。 </param>
+      <returns> 保存的 XElement 。 </returns>
     </member>
     <member name="M:FanKit.Transformers.XML.LoadNodeCollection(System.Xml.Linq.XElement)">
       <summary>
-        从 XElement 加载<see cref="T:FanKit.Transformers.NodeCollection"/>。
+        从 XElement 加载 <see cref="T:FanKit.Transformers.NodeCollection"/>。
       </summary>
-      <param name="element">源 XElement 。 </param>
+      <param name="element"> 源 XElement 。 </param>
       <returns>
-        已加载的<see cref="T:FanKit.Transformers.NodeCollection"/>。
+        已加载的 <see cref="T:FanKit.Transformers.NodeCollection"/>。
       </returns>
     </member>
     <member name="M:FanKit.Transformers.XML.SaveTransformer(System.String,FanKit.Transformers.Transformer)">
       <summary>
-        将整个<see cref="T:FanKit.Transformers.Transformer"/>保存到 XElement 。
+        将整个 <see cref="T:FanKit.Transformers.Transformer"/> 保存到 XElement 。
       </summary>
-      <param name="elementName">元素名称。 </param>
-      <param name="transformer">源数据。 </param>
-      <returns>保存的 XElement 。 </returns>
+      <param name="elementName"> 元素名称。 </param>
+      <param name="transformer"> 源数据。 </param>
+      <returns> 保存的 XElement 。 </returns>
     </member>
     <member name="M:FanKit.Transformers.XML.LoadTransformer(System.Xml.Linq.XElement)">
       <summary>
-        从 XElement 加载<see cref="T:FanKit.Transformers.Transformer"/>。
+        从 XElement 加载 <see cref="T:FanKit.Transformers.Transformer"/>。
       </summary>
-      <param name="element">源 XElement 。 </param>
+      <param name="element"> 源 XElement 。 </param>
       <returns>
-        已加载的<see cref="T:FanKit.Transformers.Transformer"/>。
+        已加载的 <see cref="T:FanKit.Transformers.Transformer"/>。
       </returns>
     </member>
     <member name="M:FanKit.Transformers.XML.SaveVector2(System.String,System.Numerics.Vector2)">
@@ -3487,101 +3487,101 @@
       </summary>
     </member>
     <member name="F:FanKit.Math.RadiansStep">
-      <summary>角度系统的 15 度。 </summary>
+      <summary> 角度系统的 15 度。 </summary>
     </member>
     <member name="F:FanKit.Math.RadiansStepHalf">
-      <summary>角度系统的 7.5。 </summary>
+      <summary> 角度系统的 7.5。 </summary>
     </member>
     <member name="M:FanKit.Math.RadiansStepFrequency(System.Single)">
-      <summary>查找最接近的 15 的倍数。</summary>
+      <summary> 查找最接近的 15 的倍数。 </summary>
     </member>
     <member name="F:FanKit.Math.PiTwice">
-      <summary>数字 Π * 2。 </summary>
+      <summary> 数字 Π * 2。 </summary>
     </member>
     <member name="F:FanKit.Math.Pi">
-      <summary>数字 П。 </summary>
+      <summary> 数字 П。 </summary>
     </member>
     <member name="F:FanKit.Math.PiOver2">
-      <summary>数字 Π / 2。 </summary>
+      <summary> 数字 Π / 2。 </summary>
     </member>
     <member name="F:FanKit.Math.PiOver4">
-      <summary>数字 Π / 4。 </summary>
+      <summary> 数字 Π / 4。 </summary>
     </member>
     <member name="F:FanKit.Math.NodeRadius">
-      <summary>节点的半径。默认 12。</summary>
+      <summary> 节点的半径。默认 12。 </summary>
     </member>
     <member name="F:FanKit.Math.NodeDistance">
-      <summary>两个节点之间的最小距离。默认 20。</summary>
+      <summary> 两个节点之间的最小距离。默认 20。 </summary>
     </member>
     <member name="M:FanKit.Math.InNodeRadius(System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>
         距离是否超过[节点半径]。最低：144。
       </summary>
-      <param name="point0">第一点。 </param>
-      <param name="point1">第二点。 </param>
-      <returns>如果距离超过[节点半径]，则返回**true**，否则返回**false**。 </returns>
+      <param name="point0"> 第一点。 </param>
+      <param name="point1"> 第二点。 </param>
+      <returns> 如果距离超过[节点半径]，则返回**true**，否则返回**false**。 </returns>
     </member>
     <member name="M:FanKit.Math.OutNodeDistance(System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>
         距离的长度平方是否超过[节点距离]。默认：400
       </summary>
-      <param name="point0">第一点。 </param>
-      <param name="point1">第二点。 </param>
-      <returns>如果长度平方'的距离超过[节点距离]，则返回**true**，否则返回**false**。 </returns>
+      <param name="point0"> 第一点。 </param>
+      <param name="point1"> 第二点。 </param>
+      <returns> 如果长度平方'的距离超过[节点距离]，则返回**true**，否则返回**false**。 </returns>
     </member>
     <member name="M:FanKit.Math.GetOutsidePointInTransformer(System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>
         在变换者上获得线的外点。
       </summary>
-      <param name="nearPoint">到变换者上直线中到外点的最近点。</param>
-      <param name="farPoint">到变换者上直线中最外点的距离。</param>
-      <returns>乘积点。 </returns>
+      <param name="nearPoint"> 到变换者上直线中到外点的最近点。 </param>
+      <param name="farPoint"> 到变换者上直线中最外点的距离。 </param>
+      <returns> 乘积点。 </returns>
     </member>
     <member name="M:FanKit.Math.InQuadrangle(System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>
         返回四边形是否包含指定的点。
       </summary>
-      <param name="point">点。 </param>
-      <param name="leftTop">四边形的左上角。 </param>
-      <param name="rightTop">四边形的右上角点</param>
-      <param name="rightBottom">四边形的右下点。 </param>
-      <param name="leftBottom">四边形的左下点。 </param>
-      <returns>如果四边形包含指定点，则返回**true**，否则返回**false**。 </returns>
+      <param name="point"> 点。 </param>
+      <param name="leftTop"> 四边形的左上角。 </param>
+      <param name="rightTop"> 四边形的右上角点 </param>
+      <param name="rightBottom"> 四边形的右下点。 </param>
+      <param name="leftBottom"> 四边形的左下点。 </param>
+      <returns> 如果四边形包含指定点，则返回**true**，否则返回**false**。 </returns>
     </member>
     <member name="M:FanKit.Math.FootPoint(System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>
         获取点和线的[垂足]。
       </summary>
-      <param name="point">点。 </param>
-      <param name="lineA">线的第一点。 </param>
-      <param name="lineB">第二行。 </param>
-      <returns>乘积向量。 </returns>
+      <param name="point"> 点。 </param>
+      <param name="lineA"> 线的第一点。 </param>
+      <param name="lineB"> 第二行。 </param>
+      <returns> 乘积向量。 </returns>
     </member>
     <member name="M:FanKit.Math.IntersectionPoint(System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>
         获取Line1和LIne2的交点。
       </summary>
-      <param name="line1A">第一行的第一点。 </param>
-      <param name="line1B">第一行第二点。 </param>
-      <param name="line2A">第二行第一点。 </param>
-      <param name="line2B">第二行第二点。 </param>
-      <returns>乘积向量。 </returns>
+      <param name="line1A"> 第一行的第一点。 </param>
+      <param name="line1B"> 第一行第二点。 </param>
+      <param name="line2A"> 第二行第一点。 </param>
+      <param name="line2B"> 第二行第二点。 </param>
+      <returns> 乘积向量。 </returns>
     </member>
     <member name="M:FanKit.Math.RadiansToVector(System.Single,System.Numerics.Vector2,System.Single)">
       <summary>
         获取坐标系中弧度的向量。
       </summary>
-      <param name="radians">弧度。 </param>
-      <param name="center">坐标系的中心。 </param>
-      <param name="length">向量的长度。 </param>
-      <returns>乘积向量。 </returns>
+      <param name="radians"> 弧度。 </param>
+      <param name="center"> 坐标系的中心。 </param>
+      <param name="length"> 向量的长度。 </param>
+      <returns> 乘积向量。 </returns>
     </member>
     <member name="M:FanKit.Math.VectorToRadians(System.Numerics.Vector2)">
       <summary>
         在坐标系中获取向量的弧度。
       </summary>
-      <param name="vector">向量。 </param>
-      <returns>乘积弧度。 </returns>
+      <param name="vector"> 向量。 </param>
+      <returns> 乘积弧度。 </returns>
     </member>
   </members>
 </doc>
