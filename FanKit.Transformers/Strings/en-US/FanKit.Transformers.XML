@@ -1766,7 +1766,7 @@
     </member>
     <member name="T:FanKit.Transformers.IndicatorControl">
       <summary>
-        Transformed indicator control.
+        Transform indicator control.
       </summary>
     </member>
     <member name="E:FanKit.Transformers.IndicatorControl.ModeChanged">
@@ -1913,7 +1913,7 @@
     </member>
     <member name="T:FanKit.Transformers.RemoteControl">
       <summary>
-        Transformed remote control.
+        Transform remote control.
       </summary>
     </member>
     <member name="E:FanKit.Transformers.RemoteControl.ValueChangeStarted">

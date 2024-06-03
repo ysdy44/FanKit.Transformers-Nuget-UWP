@@ -7,7 +7,7 @@ using Windows.UI.Xaml.Shapes;
 namespace FanKit.Transformers
 {
     /// <summary>
-    /// Transformed indicator control.
+    /// Transform indicator control.
     /// </summary>
     public sealed partial class IndicatorControl : UserControl
     {

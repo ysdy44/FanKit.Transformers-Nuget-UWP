@@ -7,7 +7,7 @@ using Windows.UI.Xaml.Input;
 namespace FanKit.Transformers
 {
     /// <summary>
-    /// Transformed remote control.
+    /// Transform remote control.
     /// </summary>
     public sealed partial class RemoteControl : UserControl
     {
