@@ -1204,7 +1204,7 @@
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="transformer"> 变换者。 </param>
       <param name="matrix"> 矩阵。 </param>
-      <param name="disabledRadian"> 禁用腐烂角。 </param>
+      <param name="disabledRadian"> 禁用旋转角度。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawBoundNodes(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.Transformer,Windows.UI.Color,System.Boolean)">
       <summary>
@@ -3012,7 +3012,7 @@
       <param name="resourceCreator"> 资源创建者。 </param>
       <param name="count"> 点数。 </param>
       <param name="innerRadius"> 内部半径。 </param>
-      <param name="tooth"> 牙齿。 </param>
+      <param name="tooth"> 外齿。 </param>
       <param name="notch"> 缺口。 </param>
       <returns> 产生的几何形状。 </returns>
     </member>
@@ -3024,7 +3024,7 @@
       <param name="transformer"> 源变换者。 </param>
       <param name="count"> 点数。 </param>
       <param name="innerRadius"> 内部半径。 </param>
-      <param name="tooth"> 牙齿。 </param>
+      <param name="tooth"> 外齿。 </param>
       <param name="notch"> 缺口。 </param>
       <returns> 产生的几何形状。 </returns>
     </member>
@@ -3132,7 +3132,7 @@
         创建一个新的心脏几何形状。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
-      <param name="spread"> 价差。 </param>
+      <param name="spread"> 扩展。 </param>
       <returns> 产生的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateHeart(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Single)">
@@ -3141,7 +3141,7 @@
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
       <param name="transformer"> 源变换者。 </param>
-      <param name="spread"> 价差。 </param>
+      <param name="spread"> 扩展。 </param>
       <returns> 产生的几何形状。 </returns>
     </member>
     <member name="T:FanKit.Transformers.TransformerMatrix">
@@ -3503,10 +3503,10 @@
       </summary>
     </member>
     <member name="F:FanKit.Math.RadiansStep">
-      <summary> 角度系统的 15 度。 </summary>
+      <summary> 角度制的 15 度。 </summary>
     </member>
     <member name="F:FanKit.Math.RadiansStepHalf">
-      <summary> 角度系统的 7.5。 </summary>
+      <summary> 角度制的 7.5。 </summary>
     </member>
     <member name="M:FanKit.Math.RadiansStepFrequency(System.Single)">
       <summary> 查找最接近的 15 的倍数。 </summary>
