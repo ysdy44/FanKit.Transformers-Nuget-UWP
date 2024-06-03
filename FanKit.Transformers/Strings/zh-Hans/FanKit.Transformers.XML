@@ -1637,9 +1637,9 @@
       <summary>
         表示对 Single_Start，Single_Delta，Single_Complete 事件的处理的方法。
       </summary>
-      <param name="point"> 接触点的位置。 </param>
+      <param name="point"> 触控点的位置。 </param>
       <param name="device"> 当前输入设备。 </param>
-      <param name="properties"> 接触点的属性。 </param>
+      <param name="properties"> 触控点的属性。 </param>
     </member>
     <member name="T:FanKit.Transformers.RightHandler">
       <summary>
@@ -1669,7 +1669,7 @@
     </member>
     <member name="P:FanKit.Transformers.CanvasOperator.TouchMode">
       <summary>
-        获取或设置触摸模式。
+        获取或设置触控模式。
       </summary>
     </member>
     <member name="P:FanKit.Transformers.CanvasOperator.DestinationControl">
@@ -1895,7 +1895,7 @@
     </member>
     <member name="T:FanKit.Transformers.TouchMode">
       <summary>
-        <see cref="T:FanKit.Transformers.CanvasOperator"/> 的触摸模式。
+        <see cref="T:FanKit.Transformers.CanvasOperator"/> 的触控模式。
       </summary>
     </member>
     <member name="F:FanKit.Transformers.TouchMode.Disable">
@@ -1962,7 +1962,7 @@
     </member>
     <member name="T:FanKit.Transformers.BorderSnapBase`1">
       <summary>
-        <see cref="T:FanKit.Transformers.TransformerBorder"/> 的捕捉工具。
+        <see cref="T:FanKit.Transformers.TransformerBorder"/> 的吸附工具。
       </summary>
       <typeparam name="D"> 目标类型。 </typeparam>
     </member>
@@ -1979,7 +1979,7 @@
     </member>
     <member name="M:FanKit.Transformers.BorderSnapBase`1.Snap(System.Numerics.Vector2)">
       <summary>
-        抓拍
+        吸附
       </summary>
       <param name="move"> 移动向量。 </param>
       <returns> 产生的向量。 </returns>
@@ -2018,7 +2018,7 @@
     </member>
     <member name="T:FanKit.Transformers.VectorVectorSnap">
       <summary>
-        <see cref="T:System.Numerics.Vector2"/> 的捕捉工具。
+        <see cref="T:System.Numerics.Vector2"/> 的吸附工具。
       </summary>
     </member>
     <member name="M:FanKit.Transformers.VectorVectorSnap.SetXSnap(System.Single,System.Numerics.Vector2)">
@@ -2055,13 +2055,13 @@
     </member>
     <member name="T:FanKit.Transformers.VectorSnapBase`1">
       <summary>
-        <see cref="T:System.Numerics.Vector2"/> 的捕捉工具。
+        <see cref="T:System.Numerics.Vector2"/> 的吸附工具。
       </summary>
       <typeparam name="D"> 目标类型。 </typeparam>
     </member>
     <member name="M:FanKit.Transformers.VectorSnapBase`1.Snap(System.Numerics.Vector2)">
       <summary>
-        抓拍
+        吸附
       </summary>
       <param name="point"> 点。 </param>
       <returns> 产生的向量。 </returns>
@@ -2107,7 +2107,7 @@
     </member>
     <member name="T:FanKit.Transformers.VectorBorderSnap">
       <summary>
-        <see cref="T:System.Numerics.Vector2"/> 的捕捉工具<请see cref="T:FanKit.Transformers.TransformerBorder"/>。
+        <see cref="T:System.Numerics.Vector2"/> 的吸附工具<请see cref="T:FanKit.Transformers.TransformerBorder"/>。
       </summary>
     </member>
     <member name="M:FanKit.Transformers.VectorBorderSnap.SetXSnap(System.Single,FanKit.Transformers.TransformerBorder)">
@@ -2269,7 +2269,7 @@
       <param name="startingTransformer"> 起始变换者。 </param>
       <param name="isRatio"> 缩放时保持比例。 </param>
       <param name="isCenter"> 围绕中心缩放。 </param>
-      <param name="isSnapToTick"> 是否旋转时捕捉。 </param>
+      <param name="isSnapToTick"> 是否旋转时吸附。 </param>
       <returns> 受控制的变换者。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.Controller(FanKit.Transformers.TransformerMode,System.Numerics.Vector2,System.Numerics.Vector2,FanKit.Transformers.Transformer,System.Numerics.Matrix3x2,System.Boolean,System.Boolean,System.Boolean)">
@@ -2283,7 +2283,7 @@
       <param name="inverseMatrix"> 逆矩阵。 </param>
       <param name="isRatio"> 缩放时保持比例。 </param>
       <param name="isCenter"> 围绕中心缩放。 </param>
-      <param name="isSnapToTick"> 是否旋转时捕捉。 </param>
+      <param name="isSnapToTick"> 是否旋转时吸附。 </param>
       <returns> 受控制的变换者。 </returns>
     </member>
     <member name="F:FanKit.Transformers.Transformer.One">
@@ -2379,7 +2379,7 @@
     </member>
     <member name="M:FanKit.Transformers.Transformer.op_Inequality(FanKit.Transformers.Transformer,FanKit.Transformers.Transformer)">
       <summary>
-        返回一个布尔值，指示两个g是否节点不相等。
+        返回一个布尔值，指示两个给定节点是否不相等。
       </summary>
       <param name="left"> 第一个要比较的变换者。 </param>
       <param name="right"> 要比较的第二个变换者。 </param>
@@ -2523,7 +2523,7 @@
     </member>
     <member name="T:FanKit.Transformers.SnapBase`2">
       <summary>
-        基础捕捉工具。
+        基础吸附工具。
       </summary>
       <typeparam name="S"> 源类型。 </typeparam>
       <typeparam name="D"> 目标类型。 </typeparam>
@@ -2538,7 +2538,7 @@
       <summary> 获取或设置目标。 </summary>
     </member>
     <member name="F:FanKit.Transformers.SnapBase`2.IsXSnap">
-      <summary> 是否捕捉到 X 轴。 </summary>
+      <summary> 是否吸附到 X 轴。 </summary>
     </member>
     <member name="F:FanKit.Transformers.SnapBase`2.XSnap">
       <summary> X 轴位置。 </summary>
@@ -2547,7 +2547,7 @@
       <summary> X 轴目标。 </summary>
     </member>
     <member name="F:FanKit.Transformers.SnapBase`2.IsYSnap">
-      <summary> 是否捕捉到 Y 轴。 </summary>
+      <summary> 是否吸附到 Y 轴。 </summary>
     </member>
     <member name="F:FanKit.Transformers.SnapBase`2.YSnap">
       <summary> Y 轴位置。 </summary>
@@ -2743,7 +2743,7 @@
     </member>
     <member name="T:FanKit.Transformers.BorderBorderSnap">
       <summary>
-        <see cref="T:FanKit.Transformers.TransformerBorder"/> 的捕捉工具。
+        <see cref="T:FanKit.Transformers.TransformerBorder"/> 的吸附工具。
       </summary>
     </member>
     <member name="M:FanKit.Transformers.BorderBorderSnap.SetXSnapMove(System.Single,FanKit.Transformers.TransformerBorder)">
