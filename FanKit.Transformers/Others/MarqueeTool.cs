@@ -90,7 +90,7 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="startingPoint"> The starting point. </param>
         /// <param name="point"> The point. </param>
-        /// <param name="toolType"> The tool type.</param>
+        /// <param name="toolType"> The tool type. </param>
         /// <param name="isCenter"> Scaling around the center. </param>
         /// <param name="isSquare"> Equal in width and height. </param>
         /// <returns> Return **true** if the marquee mask need to redraw, otherwise **false**. </returns>
@@ -131,7 +131,7 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="startingPoint"> The starting point. </param>
         /// <param name="point"> The point. </param>
-        /// <param name="toolType"> The tool type.</param>
+        /// <param name="toolType"> The tool type. </param>
         /// <param name="matrix"> The matrix. </param>
         /// <param name="isCenter"> Scaling around the center. </param>
         /// <param name="isSquare"> Equal in width and height. </param>

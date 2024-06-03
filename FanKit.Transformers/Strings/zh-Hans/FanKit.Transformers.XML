@@ -3444,7 +3444,7 @@
     </member>
     <member name="M:FanKit.Transformers.XML.SaveVector2(System.String,System.Numerics.Vector2)">
       <summary>
-        Saves the entire <see cref="T:System.Numerics.Vector2"/>  to a XElement.
+        Saves the entire <see cref="T:System.Numerics.Vector2"/> to a XElement.
       </summary>
       <param name="elementName"> The element name. </param>
       <param name="vector"> The source data. </param>
