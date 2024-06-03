@@ -408,7 +408,7 @@
       <summary>
         Initialize a NodeBorderCollection.
       </summary>
-      <param name="nodeCollection"> The NodeCollection. </param>
+      <param name="nodeCollection"> The <see cref="T:FanKit.Transformers.NodeCollection"/>. </param>
     </member>
     <member name="M:FanKit.Transformers.NodeBorderCollection.GetRemoveMode">
       <summary>
@@ -434,12 +434,12 @@
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.CacheTransform">
       <summary>
-        Cache the NodeCollection's transformer.
+        Cache the <see cref="T:FanKit.Transformers.NodeCollection"/>'s transformer.
       </summary>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.CacheTransformOnlySelected">
       <summary>
-        Cache the NodeCollection's transformer.
+        Cache the <see cref="T:FanKit.Transformers.NodeCollection"/>'s transformer.
       </summary>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.TransformAdd(System.Numerics.Vector2)">
@@ -471,25 +471,25 @@
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.#ctor">
       <summary>
-        Initialize a NodeCollection.
+        Initialize a <see cref="T:FanKit.Transformers.NodeCollection"/>.
       </summary>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.#ctor(System.Collections.Generic.IEnumerable{FanKit.Transformers.Node})">
       <summary>
-        Initialize a NodeCollection.
+        Initialize a <see cref="T:FanKit.Transformers.NodeCollection"/>.
       </summary>
       <param name="nodes"> The nodes. </param>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.#ctor(System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>
-        Initialize a NodeCollection.
+        Initialize a <see cref="T:FanKit.Transformers.NodeCollection"/>.
       </summary>
       <param name="left"> The frist point. </param>
       <param name="right"> The second point. </param>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.#ctor(Microsoft.Graphics.Canvas.Geometry.CanvasGeometry)">
       <summary>
-        Initialize a NodeCollection.
+        Initialize a <see cref="T:FanKit.Transformers.NodeCollection"/>.
       </summary>
       <param name="geometry"> The geometry. </param>
     </member>
@@ -510,7 +510,7 @@
       <summary>
         Get own copy.
       </summary>
-      <returns> The cloned NodeCollection. </returns>
+      <returns> The cloned <see cref="T:FanKit.Transformers.NodeCollection"/>. </returns>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.NodesClone">
       <summary>
@@ -526,38 +526,38 @@
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.ContainsNodeCollectionMode(System.Numerics.Vector2,FanKit.Transformers.NodeCollection)">
       <summary>
-        Gets the all points by the NodeCollection contains the specified point.
+        Gets the all points by the <see cref="T:FanKit.Transformers.NodeCollection"/> contains the specified point.
       </summary>
       <param name="point"> The input point. </param>
-      <param name="nodeCollection"> The source NodeCollection. </param>
-      <returns> The NodeCollection mode. </returns>
+      <param name="nodeCollection"> The source <see cref="T:FanKit.Transformers.NodeCollection"/>. </param>
+      <returns> The <see cref="T:FanKit.Transformers.NodeCollection"/> mode. </returns>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.ContainsNodeCollectionMode(System.Numerics.Vector2,FanKit.Transformers.NodeCollection,System.Numerics.Matrix3x2)">
       <summary>
-        Gets the all points by the NodeCollection contains the specified point.
+        Gets the all points by the <see cref="T:FanKit.Transformers.NodeCollection"/> contains the specified point.
       </summary>
       <param name="point"> The input point. </param>
-      <param name="nodeCollection"> The source NodeCollection. </param>
+      <param name="nodeCollection"> The source <see cref="T:FanKit.Transformers.NodeCollection"/>. </param>
       <param name="matrix"> The matrix. </param>
-      <returns> The NodeCollection mode. </returns>
+      <returns> The <see cref="T:FanKit.Transformers.NodeCollection"/> mode. </returns>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.InterpolationCheckedNodes(FanKit.Transformers.NodeCollection)">
       <summary>
         Insert a new point between checked points
       </summary>
-      <param name="nodeCollection"> The source NodeCollection. </param>
+      <param name="nodeCollection"> The source <see cref="T:FanKit.Transformers.NodeCollection"/>. </param>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.SharpCheckedNodes(FanKit.Transformers.NodeCollection)">
       <summary>
         Sharpen all checked nodes.
       </summary>
-      <param name="nodeCollection"> The source NodeCollection. </param>
+      <param name="nodeCollection"> The source <see cref="T:FanKit.Transformers.NodeCollection"/>. </param>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.SmoothCheckedNodes(FanKit.Transformers.NodeCollection)">
       <summary>
         Smoothly all checked nodes.
       </summary>
-      <param name="nodeCollection"> The source NodeCollection. </param>
+      <param name="nodeCollection"> The source <see cref="T:FanKit.Transformers.NodeCollection"/>. </param>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.ArrangeNodes(System.Collections.Generic.IList{FanKit.Transformers.Node})">
       <summary>
@@ -950,25 +950,25 @@
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNodeCollection(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.NodeCollection)">
       <summary>
-        Draw bezier-curve by NodeCollection.
+        Draw bezier-curve by <see cref="T:FanKit.Transformers.NodeCollection"/>.
       </summary>
       <param name="drawingSession"> The drawing-session. </param>
-      <param name="nodeCollection"> The NodeCollection. </param>
+      <param name="nodeCollection"> The <see cref="T:FanKit.Transformers.NodeCollection"/>. </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNodeCollection(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.NodeCollection,System.Numerics.Matrix3x2)">
       <summary>
-        Draw bezier-curve by NodeCollection.
+        Draw bezier-curve by <see cref="T:FanKit.Transformers.NodeCollection"/>.
       </summary>
       <param name="drawingSession"> The drawing-session. </param>
-      <param name="nodeCollection"> The NodeCollection. </param>
+      <param name="nodeCollection"> The <see cref="T:FanKit.Transformers.NodeCollection"/>. </param>
       <param name="matrix"> The matrix. </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNodeCollection(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.NodeCollection,System.Numerics.Matrix3x2,Windows.UI.Color)">
       <summary>
-        Draw bezier-curve by NodeCollection.
+        Draw bezier-curve by <see cref="T:FanKit.Transformers.NodeCollection"/>.
       </summary>
       <param name="drawingSession"> The drawing-session. </param>
-      <param name="nodeCollection"> The NodeCollection. </param>
+      <param name="nodeCollection"> The <see cref="T:FanKit.Transformers.NodeCollection"/>. </param>
       <param name="matrix"> The matrix. </param>
       <param name="accentColor"> The accent color. </param>
     </member>
@@ -2611,7 +2611,7 @@
       <summary>
         Initialize a <see cref="T:FanKit.Transformers.TransformerBorder"/>.
       </summary>
-      <param name="nodess"> The NodeCollectionCollection. </param>
+      <param name="nodess"> The <see cref="T:FanKit.Transformers.NodeCollection"/> collection. </param>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.Add(FanKit.Transformers.TransformerBorder,System.Numerics.Vector2)">
       <summary>

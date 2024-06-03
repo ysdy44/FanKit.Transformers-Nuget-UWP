@@ -408,7 +408,7 @@
       <summary>
         初始化节点边框集合。
       </summary>
-      <param name="nodeCollection"> 节点集合。 </param>
+      <param name="nodeCollection"> <see cref="T:FanKit.Transformers.NodeCollection"/>。 </param>
     </member>
     <member name="M:FanKit.Transformers.NodeBorderCollection.GetRemoveMode">
       <summary>
@@ -434,12 +434,12 @@
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.CacheTransform">
       <summary>
-        缓存节点集合的变换者。
+        缓存 <see cref="T:FanKit.Transformers.NodeCollection"/> 的变换者。
       </summary>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.CacheTransformOnlySelected">
       <summary>
-        缓存节点集合的变换者。
+        缓存 <see cref="T:FanKit.Transformers.NodeCollection"/> 的变换者。
       </summary>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.TransformAdd(System.Numerics.Vector2)">
@@ -471,25 +471,25 @@
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.#ctor">
       <summary>
-        初始化节点集合。
+        初始化 <see cref="T:FanKit.Transformers.NodeCollection"/>。
       </summary>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.#ctor(System.Collections.Generic.IEnumerable{FanKit.Transformers.Node})">
       <summary>
-        初始化节点集合。
+        初始化 <see cref="T:FanKit.Transformers.NodeCollection"/>。
       </summary>
       <param name="nodes"> 节点。 </param>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.#ctor(System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>
-        初始化节点集合。
+        初始化 <see cref="T:FanKit.Transformers.NodeCollection"/>。
       </summary>
       <param name="left"> 第一个要点。 </param>
       <param name="right"> 第二点。 </param>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.#ctor(Microsoft.Graphics.Canvas.Geometry.CanvasGeometry)">
       <summary>
-        初始化节点集合。
+        初始化 <see cref="T:FanKit.Transformers.NodeCollection"/>。
       </summary>
       <param name="geometry"> 几何。 </param>
     </member>
@@ -510,7 +510,7 @@
       <summary>
         获取自己的副本。
       </summary>
-      <returns> 克隆的节点集合。 </returns>
+      <returns> 克隆的 <see cref="T:FanKit.Transformers.NodeCollection"/>。 </returns>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.NodesClone">
       <summary>
@@ -526,38 +526,38 @@
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.ContainsNodeCollectionMode(System.Numerics.Vector2,FanKit.Transformers.NodeCollection)">
       <summary>
-        通过节点集合获取包含指定点的所有点。
+        通过 <see cref="T:FanKit.Transformers.NodeCollection"/> 获取包含指定点的所有点。
       </summary>
       <param name="point"> 输入点。 </param>
-      <param name="nodeCollection"> 源节点集合。 </param>
-      <returns> 节点集合模式。 </returns>
+      <param name="nodeCollection"> 源 <see cref="T:FanKit.Transformers.NodeCollection"/>。 </param>
+      <returns> <see cref="T:FanKit.Transformers.NodeCollection"/> 模式。 </returns>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.ContainsNodeCollectionMode(System.Numerics.Vector2,FanKit.Transformers.NodeCollection,System.Numerics.Matrix3x2)">
       <summary>
-        通过节点集合获取包含指定点的所有点。
+        通过 <see cref="T:FanKit.Transformers.NodeCollection"/> 获取包含指定点的所有点。
       </summary>
       <param name="point"> 输入点。 </param>
-      <param name="nodeCollection"> 源节点集合。 </param>
+      <param name="nodeCollection"> 源 <see cref="T:FanKit.Transformers.NodeCollection"/>。 </param>
       <param name="matrix"> 矩阵。 </param>
-      <returns> 节点集合模式。 </returns>
+      <returns> <see cref="T:FanKit.Transformers.NodeCollection"/> 模式。 </returns>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.InterpolationCheckedNodes(FanKit.Transformers.NodeCollection)">
       <summary>
         在卡住点之间插入新点
       </summary>
-      <param name="nodeCollection"> 源节点集合。 </param>
+      <param name="nodeCollection"> 源 <see cref="T:FanKit.Transformers.NodeCollection"/>。 </param>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.SharpCheckedNodes(FanKit.Transformers.NodeCollection)">
       <summary>
         锐化所有选中的节点。
       </summary>
-      <param name="nodeCollection"> 源节点集合。 </param>
+      <param name="nodeCollection"> 源 <see cref="T:FanKit.Transformers.NodeCollection"/>。 </param>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.SmoothCheckedNodes(FanKit.Transformers.NodeCollection)">
       <summary>
         平滑地所有卡住的节点。
       </summary>
-      <param name="nodeCollection"> 源节点集合。 </param>
+      <param name="nodeCollection"> 源 <see cref="T:FanKit.Transformers.NodeCollection"/>。 </param>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.ArrangeNodes(System.Collections.Generic.IList{FanKit.Transformers.Node})">
       <summary>
@@ -950,25 +950,25 @@
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNodeCollection(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.NodeCollection)">
       <summary>
-        通过节点集合绘制贝塞尔曲线。
+        通过 <see cref="T:FanKit.Transformers.NodeCollection"/> 绘制贝塞尔曲线。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
-      <param name="nodeCollection"> 节点集合。 </param>
+      <param name="nodeCollection"> <see cref="T:FanKit.Transformers.NodeCollection"/>。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNodeCollection(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.NodeCollection,System.Numerics.Matrix3x2)">
       <summary>
-        通过节点集合绘制贝塞尔曲线。
+        通过 <see cref="T:FanKit.Transformers.NodeCollection"/> 绘制贝塞尔曲线。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
-      <param name="nodeCollection"> 节点集合。 </param>
+      <param name="nodeCollection"> <see cref="T:FanKit.Transformers.NodeCollection"/>。 </param>
       <param name="matrix"> 矩阵。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNodeCollection(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.NodeCollection,System.Numerics.Matrix3x2,Windows.UI.Color)">
       <summary>
-        通过节点集合绘制贝塞尔曲线。
+        通过 <see cref="T:FanKit.Transformers.NodeCollection"/> 绘制贝塞尔曲线。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
-      <param name="nodeCollection"> 节点集合。 </param>
+      <param name="nodeCollection"> <see cref="T:FanKit.Transformers.NodeCollection"/>。 </param>
       <param name="matrix"> 矩阵。 </param>
       <param name="accentColor"> 强调色。 </param>
     </member>
@@ -2611,7 +2611,7 @@
       <summary>
         初始化 <see cref="T:FanKit.Transformers.TransformerBorder"/>。
       </summary>
-      <param name="nodess"> NodeCollectionCollection。 </param>
+      <param name="nodess"> <see cref="T:FanKit.Transformers.NodeCollection"/> 集合。 </param>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.Add(FanKit.Transformers.TransformerBorder,System.Numerics.Vector2)">
       <summary>

@@ -18,16 +18,16 @@ namespace FanKit.Transformers
 
         //@Constructs
         /// <summary>
-        /// Initialize a NodeCollection.
+        /// Initialize a <see cref="NodeCollection"/>.
         /// </summary>
         public NodeCollection() => this.Nodes = new List<Node>();
         /// <summary>
-        /// Initialize a NodeCollection.
+        /// Initialize a <see cref="NodeCollection"/>.
         /// </summary>
         /// <param name="nodes"> The nodes. </param>
         public NodeCollection(IEnumerable<Node> nodes) => this.Nodes = nodes.ToList();
         /// <summary>
-        /// Initialize a NodeCollection.
+        /// Initialize a <see cref="NodeCollection"/>.
         /// </summary>
         /// <param name="left"> The frist point. </param>
         /// <param name="right"> The second point. </param>
@@ -65,7 +65,7 @@ namespace FanKit.Transformers
              }
         };
         /// <summary>
-        /// Initialize a NodeCollection.
+        /// Initialize a <see cref="NodeCollection"/>.
         /// </summary>
         /// <param name="geometry"> The geometry. </param>
         public NodeCollection(CanvasGeometry geometry)
@@ -129,7 +129,7 @@ namespace FanKit.Transformers
         /// <summary>
         /// Get own copy.
         /// </summary>
-        /// <returns> The cloned NodeCollection. </returns>
+        /// <returns> The cloned <see cref="NodeCollection"/>. </returns>
         public NodeCollection Clone() => new NodeCollection(from node in this.Nodes select node.Clone());
 
         /// <summary>

@@ -7,10 +7,10 @@ namespace FanKit.Transformers
     {
 
         /// <summary>
-        /// Draw bezier-curve by NodeCollection.
+        /// Draw bezier-curve by <see cref="NodeCollection"/>.
         /// </summary>
         /// <param name="drawingSession"> The drawing-session. </param>
-        /// <param name="nodeCollection"> The NodeCollection. </param>
+        /// <param name="nodeCollection"> The <see cref="NodeCollection"/>. </param>
         public static void DrawNodeCollection(this CanvasDrawingSession drawingSession, NodeCollection nodeCollection)
         {
             foreach (Node node in nodeCollection)
@@ -82,10 +82,10 @@ namespace FanKit.Transformers
         }
 
         /// <summary>
-        /// Draw bezier-curve by NodeCollection.
+        /// Draw bezier-curve by <see cref="NodeCollection"/>.
         /// </summary>
         /// <param name="drawingSession"> The drawing-session. </param>
-        /// <param name="nodeCollection"> The NodeCollection. </param>
+        /// <param name="nodeCollection"> The <see cref="NodeCollection"/>. </param>
         /// <param name="matrix"> The matrix. </param>
         public static void DrawNodeCollection(this CanvasDrawingSession drawingSession, NodeCollection nodeCollection, Matrix3x2 matrix)
         {
@@ -158,10 +158,10 @@ namespace FanKit.Transformers
         }
 
         /// <summary>
-        /// Draw bezier-curve by NodeCollection.
+        /// Draw bezier-curve by <see cref="NodeCollection"/>.
         /// </summary>
         /// <param name="drawingSession"> The drawing-session. </param>
-        /// <param name="nodeCollection"> The NodeCollection. </param>
+        /// <param name="nodeCollection"> The <see cref="NodeCollection"/>. </param>
         /// <param name="matrix"> The matrix. </param>
         /// <param name="accentColor"> The accent color. </param>
         public static void DrawNodeCollection(this CanvasDrawingSession drawingSession, NodeCollection nodeCollection, Matrix3x2 matrix, Windows.UI.Color accentColor)

@@ -15,7 +15,7 @@ namespace FanKit.Transformers
         /// <summary>
         /// Initialize a NodeBorderCollection.
         /// </summary>
-        /// <param name="nodeCollection"> The NodeCollection. </param>
+        /// <param name="nodeCollection"> The <see cref="NodeCollection"/>. </param>
         public NodeBorderCollection(NodeCollection nodeCollection)
         {
             foreach (Node node in nodeCollection)

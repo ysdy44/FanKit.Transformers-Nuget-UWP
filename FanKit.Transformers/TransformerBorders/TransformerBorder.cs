@@ -187,7 +187,7 @@ namespace FanKit.Transformers
         /// <summary>
         /// Initialize a <see cref="TransformerBorder"/>.
         /// </summary>
-        /// <param name="nodess"> The NodeCollectionCollection. </param>
+        /// <param name="nodess"> The <see cref="NodeCollection"/> collection. </param>
         public TransformerBorder(IList<NodeCollection> nodess)
         {
             float left = float.MaxValue;

@@ -10,7 +10,7 @@ namespace FanKit.Transformers
         /// <summary>
         /// Insert a new point between checked points
         /// </summary>
-        /// <param name="nodeCollection"> The source NodeCollection. </param>
+        /// <param name="nodeCollection"> The source <see cref="NodeCollection"/>. </param>
         public static bool InterpolationCheckedNodes(NodeCollection nodeCollection)
         {
             bool hasIsSelectd = false;
@@ -63,7 +63,7 @@ namespace FanKit.Transformers
         /// <summary>
         /// Sharpen all checked nodes.
         /// </summary>
-        /// <param name="nodeCollection"> The source NodeCollection. </param>
+        /// <param name="nodeCollection"> The source <see cref="NodeCollection"/>. </param>
         public static bool SharpCheckedNodes(NodeCollection nodeCollection)
         {
             bool hasIsSelectd = false;
@@ -83,7 +83,7 @@ namespace FanKit.Transformers
         /// <summary>
         /// Smoothly all checked nodes.
         /// </summary>
-        /// <param name="nodeCollection"> The source NodeCollection. </param>
+        /// <param name="nodeCollection"> The source <see cref="NodeCollection"/>. </param>
         public static bool SmoothCheckedNodes(NodeCollection nodeCollection)
         {
             if (nodeCollection.Count < 3) return false;

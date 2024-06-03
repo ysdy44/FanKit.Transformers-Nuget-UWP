@@ -9,11 +9,11 @@ namespace FanKit.Transformers
     {
 
         /// <summary>
-        /// Gets the all points by the NodeCollection contains the specified point. 
+        /// Gets the all points by the <see cref="NodeCollection"/> contains the specified point. 
         /// </summary>
         /// <param name="point"> The input point. </param>
-        /// <param name="nodeCollection"> The source NodeCollection. </param>
-        /// <returns> The NodeCollection mode. </returns>
+        /// <param name="nodeCollection"> The source <see cref="NodeCollection"/>. </param>
+        /// <returns> The <see cref="NodeCollection"/> mode. </returns>
         public static NodeCollectionMode ContainsNodeCollectionMode(Vector2 point, NodeCollection nodeCollection)
         {
             if (nodeCollection == null) throw new NullReferenceException("NodeCollection is null.");
@@ -53,12 +53,12 @@ namespace FanKit.Transformers
         }
 
         /// <summary>
-        /// Gets the all points by the NodeCollection contains the specified point. 
+        /// Gets the all points by the <see cref="NodeCollection"/> contains the specified point. 
         /// </summary>
         /// <param name="point"> The input point. </param>
-        /// <param name="nodeCollection"> The source NodeCollection. </param>
+        /// <param name="nodeCollection"> The source <see cref="NodeCollection"/>. </param>
         /// <param name="matrix"> The matrix. </param>
-        /// <returns> The NodeCollection mode. </returns>
+        /// <returns> The <see cref="NodeCollection"/> mode. </returns>
         public static NodeCollectionMode ContainsNodeCollectionMode(Vector2 point, NodeCollection nodeCollection, Matrix3x2 matrix)
         {
             if (nodeCollection == null) throw new NullReferenceException("NodeCollection is null.");

@@ -8,7 +8,7 @@ namespace FanKit.Transformers
     {
 
         /// <summary>
-        /// Cache the NodeCollection's transformer.
+        /// Cache the <see cref="NodeCollection"/>'s transformer.
         /// </summary>
         public void CacheTransform()
         {
@@ -18,7 +18,7 @@ namespace FanKit.Transformers
             }
         }
         /// <summary>
-        /// Cache the NodeCollection's transformer.
+        /// Cache the <see cref="NodeCollection"/>'s transformer.
         /// </summary>
         public void CacheTransformOnlySelected()
         {
