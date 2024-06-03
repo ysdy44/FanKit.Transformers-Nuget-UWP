@@ -805,14 +805,14 @@
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawThickGeometry(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.Geometry.CanvasGeometry)">
       <summary>
-        绘制粗的几何形状。
+        绘制粗几何形状。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="canvasGeometry"> 画布几何形状。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawDottedLine(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.DottedLineBrush,FanKit.Transformers.DottedLineImage,System.Single,System.Single,System.Single,System.Single)">
       <summary>
-        画虚线。
+        绘制虚线。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="resourceCreator"> 资源创建者。 </param>
@@ -1000,7 +1000,7 @@
       <summary> 文本的颜色。默认（A255 R127 G127 B127）。 </summary>
     </member>
     <member name="F:FanKit.Transformers.CanvasDrawingSessionExtensions.TextFormat">
-      <summary> 文本格式。 </summary>
+      <summary> 文本的格式。 </summary>
     </member>
     <member name="F:FanKit.Transformers.CanvasDrawingSessionExtensions.AxisLine">
       <summary> 两行之间的距离。默认值12。 </summary>
@@ -1227,14 +1227,14 @@
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrop(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.Transformer)">
       <summary>
-        在边界上画框和线，就像🔳。
+        在边界上绘制节点和线，就像 🔳一样。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="transformer"> 变换者。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrop(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.Transformer,System.Numerics.Matrix3x2)">
       <summary>
-        在边界上画框和线，就像🔳。
+        在边界上绘制节点和线，就像 🔳一样。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="transformer"> 变换者。 </param>
@@ -1242,7 +1242,7 @@
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrop(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.Transformer,Windows.UI.Color)">
       <summary>
-        在边界上画框和线，就像🔳。
+        在边界上绘制节点和线，就像 🔳一样。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="transformer"> 变换者。 </param>
@@ -1250,7 +1250,7 @@
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrop(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.Transformer,System.Numerics.Matrix3x2,Windows.UI.Color,System.Boolean)">
       <summary>
-        在边界上画框和线，就像🔳。
+        在边界上绘制节点和线，就像 🔳一样。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="transformer"> 变换者。 </param>
