@@ -46,7 +46,7 @@
     </member>
     <member name="P:FanKit.Transformers.CanvasTransformer.Position">
       <summary>
-        <see cref="T:FanKit.Transformers.CanvasTransformer"/> 的翻译。
+        <see cref="T:FanKit.Transformers.CanvasTransformer"/> 的转移。
       </summary>
     </member>
     <member name="P:FanKit.Transformers.CanvasTransformer.Radian">
@@ -1715,8 +1715,8 @@
       </summary>
     </member>
     <member name="T:FanKit.Transformers.ICacheTransform">
-      <summary>
-        为转换中的图形类提供接口。
+      <summary>        
+        为变换中的图形类提供接口。
       </summary>
     </member>
     <member name="M:FanKit.Transformers.ICacheTransform.CacheTransform">
@@ -1766,7 +1766,7 @@
     </member>
     <member name="T:FanKit.Transformers.IndicatorControl">
       <summary>
-        变换后的指标控件。
+        变换指示控件。
       </summary>
     </member>
     <member name="E:FanKit.Transformers.IndicatorControl.ModeChanged">
@@ -1913,7 +1913,7 @@
     </member>
     <member name="T:FanKit.Transformers.RemoteControl">
       <summary>
-        改造后的遥控器。
+        变换遥控器。
       </summary>
     </member>
     <member name="E:FanKit.Transformers.RemoteControl.ValueChangeStarted">
@@ -2343,7 +2343,7 @@
         将变换者和向量相乘，然后返回结果变换者。
       </summary>
       <param name="transformer"> 源变换者。 </param>
-      <param name="matrix"> 转换矩阵。 </param>
+      <param name="matrix"> 变换矩阵。 </param>
       <returns> 产生的变换者。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.op_Addition(FanKit.Transformers.Transformer,System.Numerics.Vector2)">
