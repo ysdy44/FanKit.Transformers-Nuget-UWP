@@ -3167,8 +3167,12 @@
       <summary>
         初始化 <see cref="T:FanKit.Transformers.TransformerMatrix"/>。
       </summary>
-      <param name="pointA"> <see cref="T:FanKit.Transformers.TransformerMatrix"/> 的第一点。 </param>
-      <param name="pointB"> <see cref="T:FanKit.Transformers.TransformerMatrix"/> 的第二点。 </param>
+      <param name="pointA">
+        <see cref="T:FanKit.Transformers.TransformerMatrix"/> 的第一点。
+      </param>
+      <param name="pointB">
+        <see cref="T:FanKit.Transformers.TransformerMatrix"/> 的第二点。
+      </param>
     </member>
     <member name="M:FanKit.Transformers.TransformerMatrix.#ctor(System.Single,System.Single,System.Numerics.Vector2)">
       <summary>

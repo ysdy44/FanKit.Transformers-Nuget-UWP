@@ -3167,8 +3167,12 @@
       <summary>
         Initialize a <see cref="T:FanKit.Transformers.TransformerMatrix"/>.
       </summary>
-      <param name="pointA"> The frist point of <see cref="T:FanKit.Transformers.TransformerMatrix"/>. </param>
-      <param name="pointB"> The second point of <see cref="T:FanKit.Transformers.TransformerMatrix"/>. </param>
+      <param name="pointA">
+        The frist point of <see cref="T:FanKit.Transformers.TransformerMatrix"/>.
+      </param>
+      <param name="pointB">
+        The second point of <see cref="T:FanKit.Transformers.TransformerMatrix"/>.
+      </param>
     </member>
     <member name="M:FanKit.Transformers.TransformerMatrix.#ctor(System.Single,System.Single,System.Numerics.Vector2)">
       <summary>
