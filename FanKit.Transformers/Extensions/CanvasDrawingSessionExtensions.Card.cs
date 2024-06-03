@@ -102,7 +102,7 @@ namespace FanKit.Transformers
         /// Draw a card.
         /// </summary>
         /// <param name="drawingSession"> The drawing-session. </param>
-        /// <param name="previousImage"> The previous image </param>
+        /// <param name="previousImage"> The previous image. </param>
         /// <param name="canvasTransformer"> The canvas-transformer. </param>
         /// <param name="shadowBlurAmount"> The shaodw blur amount. </param>
         /// <param name="shadowOffset"> The shadow offset. </param>
@@ -111,7 +111,7 @@ namespace FanKit.Transformers
         /// Draw a card.
         /// </summary>
         /// <param name="drawingSession"> The drawing-session. </param>
-        /// <param name="previousImage"> The previous image </param>
+        /// <param name="previousImage"> The previous image. </param>
         /// <param name="canvasTransformer"> The canvas-transformer. </param>
         /// <param name="shadowColor"> The shadow color. </param>
         /// <param name="shadowBlurAmount"> The shaodw blur amount. </param>
