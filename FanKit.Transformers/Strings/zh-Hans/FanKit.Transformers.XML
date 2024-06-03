@@ -633,8 +633,8 @@
       <param name="radiusX"> Y半径。 </param>
       <param name="radiusY"> X半径。 </param>
       <param name="rotationAngle"> 旋转角度 </param>
-      <param name="sweepDirection"> 扫描判定。 </param>
-      <param name="arcSize"> 面积尺寸。 </param>
+      <param name="sweepDirection"> 扫描方向。 </param>
+      <param name="arcSize"> 圆弧尺寸。 </param>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.AddCubicBezier(System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>
@@ -3052,7 +3052,7 @@
         创建一个新的饼图几何形状。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
-      <param name="sweepAngle"> 扫角。 </param>
+      <param name="sweepAngle"> 扫描角度。 </param>
       <returns> 产生的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreatePie(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Single)">
@@ -3061,7 +3061,7 @@
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
       <param name="transformer"> 源变换者。 </param>
-      <param name="sweepAngle"> 扫角。 </param>
+      <param name="sweepAngle"> 扫描角度。 </param>
       <returns> 产生的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateCookie(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Single,System.Single)">
@@ -3070,7 +3070,7 @@
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
       <param name="innerRadius"> 内部半径。 </param>
-      <param name="sweepAngle"> 扫角。 </param>
+      <param name="sweepAngle"> 扫描角度。 </param>
       <returns> 产生的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateCookie(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Single,System.Single)">
@@ -3080,7 +3080,7 @@
       <param name="resourceCreator"> 资源创建者。 </param>
       <param name="transformer"> 源变换者。 </param>
       <param name="innerRadius"> 内部半径。 </param>
-      <param name="sweepAngle"> 扫角。 </param>
+      <param name="sweepAngle"> 扫描角度。 </param>
       <returns> 产生的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateArrow(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Boolean,System.Single,System.Single,FanKit.Transformers.GeometryArrowTailType,FanKit.Transformers.GeometryArrowTailType)">
