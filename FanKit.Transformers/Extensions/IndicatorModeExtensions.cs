@@ -15,7 +15,7 @@ namespace FanKit.Transformers
         /// <summary>
         /// Convert to <see cref="HorizontalAlignment"/>.
         /// </summary>
-        /// <param name="indicatorMode"> The indicato rmode. </param>
+        /// <param name="indicatorMode"> The indicator mode. </param>
         /// <returns> The produced alignment. </returns>
         public static HorizontalAlignment ToHorizontalAlignment(this IndicatorMode indicatorMode)
         {
@@ -44,7 +44,7 @@ namespace FanKit.Transformers
         /// <summary>
         /// Convert to <see cref="VerticalAlignment"/>.
         /// </summary>
-        /// <param name="indicatorMode"> The indicato rmode. </param>
+        /// <param name="indicatorMode"> The indicator mode. </param>
         /// <returns> The produced alignment. </returns>
         public static VerticalAlignment ToVerticalAlignment(this IndicatorMode indicatorMode)
         {

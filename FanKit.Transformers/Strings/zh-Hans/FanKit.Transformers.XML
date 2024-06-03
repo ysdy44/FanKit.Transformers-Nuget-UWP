@@ -1266,14 +1266,14 @@
       <summary>
         转换为 <see cref="T:Windows.UI.Xaml.HorizontalAlignment"/>。
       </summary>
-      <param name="indicatorMode"> 指示模式。 </param>
+      <param name="indicatorMode"> The indicator mode。 </param>
       <returns> 产生的对齐方式。 </returns>
     </member>
     <member name="M:FanKit.Transformers.IndicatorModeExtensions.ToVerticalAlignment(FanKit.Transformers.IndicatorMode)">
       <summary>
         转换为 <see cref="T:Windows.UI.Xaml.VerticalAlignment"/>。
       </summary>
-      <param name="indicatorMode"> 指示模式。 </param>
+      <param name="indicatorMode"> The indicator mode。 </param>
       <returns> 产生的对齐方式。 </returns>
     </member>
     <member name="T:FanKit.Transformers.IGetActualTransformer">

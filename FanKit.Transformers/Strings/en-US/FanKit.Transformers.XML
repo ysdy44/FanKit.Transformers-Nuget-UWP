@@ -1266,14 +1266,14 @@
       <summary>
         Convert to <see cref="T:Windows.UI.Xaml.HorizontalAlignment"/>.
       </summary>
-      <param name="indicatorMode"> The indicato rmode. </param>
+      <param name="indicatorMode"> The indicator mode. </param>
       <returns> The produced alignment. </returns>
     </member>
     <member name="M:FanKit.Transformers.IndicatorModeExtensions.ToVerticalAlignment(FanKit.Transformers.IndicatorMode)">
       <summary>
         Convert to <see cref="T:Windows.UI.Xaml.VerticalAlignment"/>.
       </summary>
-      <param name="indicatorMode"> The indicato rmode. </param>
+      <param name="indicatorMode"> The indicator mode. </param>
       <returns> The produced alignment. </returns>
     </member>
     <member name="T:FanKit.Transformers.IGetActualTransformer">
