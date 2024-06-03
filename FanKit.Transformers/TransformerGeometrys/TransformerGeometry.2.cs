@@ -71,7 +71,7 @@ namespace FanKit.Transformers
         /// Create a new star geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
-        /// <param name="points"> The point count. </param>
+        /// <param name="points"> The points count. </param>
         /// <param name="innerRadius"> The inner-radius. </param>
         /// <returns> The product geometry. </returns>
         public static CanvasGeometry CreateStar(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformer, int points, float innerRadius)
@@ -86,7 +86,7 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
         /// <param name="transformer"> The source transformer. </param>
-        /// <param name="points"> The point count. </param>
+        /// <param name="points"> The points count. </param>
         /// <param name="innerRadius"> The inner-radius. </param>
         /// <returns> The product geometry. </returns>
         public static CanvasGeometry CreateStar(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformer, Matrix3x2 matrix, int points, float innerRadius)
@@ -135,7 +135,7 @@ namespace FanKit.Transformers
         /// Create a new cog geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
-        /// <param name="count"> The point count. </param>
+        /// <param name="count"> The points count. </param>
         /// <param name="innerRadius"> The inner-radius. </param>
         /// <param name="tooth"> The tooth. </param>
         /// <param name="notch"> The notch. </param>
@@ -152,7 +152,7 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
         /// <param name="transformer"> The source transformer. </param>
-        /// <param name="count"> The point count. </param>
+        /// <param name="count"> The points count. </param>
         /// <param name="innerRadius"> The inner-radius. </param>
         /// <param name="tooth"> The tooth. </param>
         /// <param name="notch"> The notch. </param>

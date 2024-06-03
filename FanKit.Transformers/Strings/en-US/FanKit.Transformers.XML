@@ -2991,7 +2991,7 @@
         Create a new star geometry.
       </summary>
       <param name="resourceCreator"> The resource-creator. </param>
-      <param name="points"> The point count. </param>
+      <param name="points"> The points count. </param>
       <param name="innerRadius"> The inner-radius. </param>
       <returns> The product geometry. </returns>
     </member>
@@ -3001,7 +3001,7 @@
       </summary>
       <param name="resourceCreator"> The resource-creator. </param>
       <param name="transformer"> The source transformer. </param>
-      <param name="points"> The point count. </param>
+      <param name="points"> The points count. </param>
       <param name="innerRadius"> The inner-radius. </param>
       <returns> The product geometry. </returns>
     </member>
@@ -3010,7 +3010,7 @@
         Create a new cog geometry.
       </summary>
       <param name="resourceCreator"> The resource-creator. </param>
-      <param name="count"> The point count. </param>
+      <param name="count"> The points count. </param>
       <param name="innerRadius"> The inner-radius. </param>
       <param name="tooth"> The tooth. </param>
       <param name="notch"> The notch. </param>
@@ -3022,7 +3022,7 @@
       </summary>
       <param name="resourceCreator"> The resource-creator. </param>
       <param name="transformer"> The source transformer. </param>
-      <param name="count"> The point count. </param>
+      <param name="count"> The points count. </param>
       <param name="innerRadius"> The inner-radius. </param>
       <param name="tooth"> The tooth. </param>
       <param name="notch"> The notch. </param>
