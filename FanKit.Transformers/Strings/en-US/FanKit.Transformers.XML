@@ -2417,7 +2417,7 @@
     </member>
     <member name="M:FanKit.Transformers.Transformer.FindHomography(System.Single,System.Single,FanKit.Transformers.ITransformerLTRB)">
       <summary>
-        Find Homography.
+        Find homography.
       </summary>
       <param name="sourceWidth"> The width of source rectangle. </param>
       <param name="sourceHeight"> The height of source rectangle. </param>
@@ -2426,7 +2426,7 @@
     </member>
     <member name="M:FanKit.Transformers.Transformer.FindHomography3D(System.Single,System.Single,FanKit.Transformers.ITransformerLTRB)">
       <summary>
-        Find Homography.
+        Find homography.
       </summary>
       <param name="sourceWidth"> The width of source rectangle. </param>
       <param name="sourceHeight"> The height of source rectangle. </param>
@@ -2435,7 +2435,7 @@
     </member>
     <member name="M:FanKit.Transformers.Transformer.FindHomography(System.Single,System.Single,System.Single,System.Single,FanKit.Transformers.ITransformerLTRB)">
       <summary>
-        Find Homography.
+        Find homography.
       </summary>
       <param name="sourceX"> The x of source rectangle. </param>
       <param name="sourceY"> The y of source rectangle. </param>
@@ -2446,7 +2446,7 @@
     </member>
     <member name="M:FanKit.Transformers.Transformer.FindHomography3D(System.Single,System.Single,System.Single,System.Single,FanKit.Transformers.ITransformerLTRB)">
       <summary>
-        Find Homography.
+        Find homography.
       </summary>
       <param name="sourceX"> The x of source rectangle. </param>
       <param name="sourceY"> The y of source rectangle. </param>
@@ -2457,7 +2457,7 @@
     </member>
     <member name="M:FanKit.Transformers.Transformer.FindHomography(FanKit.Transformers.ITransformerLTRB,FanKit.Transformers.ITransformerLTRB)">
       <summary>
-        Find Homography.
+        Find homography.
       </summary>
       <param name="source"> The source transformer. </param>
       <param name="destination"> The destination Transformer. </param>
@@ -2465,7 +2465,7 @@
     </member>
     <member name="M:FanKit.Transformers.Transformer.FindHomography3D(FanKit.Transformers.TransformerRect,FanKit.Transformers.ITransformerLTRB)">
       <summary>
-        Find Homography.
+        Find homography.
       </summary>
       <param name="source"> The source transformer. </param>
       <param name="destination"> The destination Transformer. </param>

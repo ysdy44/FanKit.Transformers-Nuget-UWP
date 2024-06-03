@@ -28,7 +28,7 @@ namespace FanKit.Transformers
         };
 
         /// <summary>
-        /// Find Homography.  
+        /// Find homography.  
         /// </summary>
         /// <param name="sourceWidth"> The width of source rectangle. </param>
         /// <param name="sourceHeight"> The height of source rectangle. </param>
@@ -38,7 +38,7 @@ namespace FanKit.Transformers
           Matrix3x2.CreateScale(1f / sourceWidth, 1f / sourceHeight) * FindHomographyFromIdentity(destination);
 
         /// <summary>
-        /// Find Homography.  
+        /// Find homography.  
         /// </summary>
         /// <param name="sourceWidth"> The width of source rectangle. </param>
         /// <param name="sourceHeight"> The height of source rectangle. </param>
@@ -51,7 +51,7 @@ namespace FanKit.Transformers
         }
 
         /// <summary>
-        /// Find Homography.  
+        /// Find homography.  
         /// </summary>
         /// <param name="sourceX"> The x of source rectangle. </param>
         /// <param name="sourceY"> The y of source rectangle. </param>
@@ -68,7 +68,7 @@ namespace FanKit.Transformers
         } * FindHomographyFromIdentity(destination);
 
         /// <summary>
-        /// Find Homography.  
+        /// Find homography.  
         /// </summary>
         /// <param name="sourceX"> The x of source rectangle. </param>
         /// <param name="sourceY"> The y of source rectangle. </param>
@@ -91,7 +91,7 @@ namespace FanKit.Transformers
         }
 
         /// <summary>
-        /// Find Homography.  
+        /// Find homography.  
         /// </summary>
         /// <param name="source"> The source transformer. </param>
         /// <param name="destination"> The destination Transformer. </param>
@@ -103,7 +103,7 @@ namespace FanKit.Transformers
         }
 
         /// <summary>
-        /// Find Homography.  
+        /// Find homography.  
         /// </summary>
         /// <param name="source"> The source transformer. </param>
         /// <param name="destination"> The destination Transformer. </param>
