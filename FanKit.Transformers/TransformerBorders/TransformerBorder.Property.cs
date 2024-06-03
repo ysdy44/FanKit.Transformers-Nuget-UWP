@@ -54,7 +54,7 @@ namespace FanKit.Transformers
         /// <summary>
         /// Gets value by left, right, top, bottom.
         /// </summary>
-        /// <param name="borderMode"> The border mode </param>
+        /// <param name="borderMode"> The border mode. </param>
         /// <returns> The produced value. </returns>
         public float GetBorderValue(BorderMode borderMode)
         {

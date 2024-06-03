@@ -29,7 +29,7 @@ namespace FanKit.Transformers
         /// X
         /// </summary>
         /// <param name="value"> The destination value. </param>
-        /// <param name="indicatorMode"> The indicator mode </param>
+        /// <param name="indicatorMode"> The indicator mode. </param>
         /// <returns> The produced vector. </returns>
         public Vector2 TransformX(float value, IndicatorMode indicatorMode = IndicatorMode.LeftTop)
         {
@@ -44,7 +44,7 @@ namespace FanKit.Transformers
         /// Y
         /// </summary>
         /// <param name="value"> The destination value. </param>
-        /// <param name="indicatorMode"> The indicator mode </param>
+        /// <param name="indicatorMode"> The indicator mode. </param>
         /// <returns> The produced vector. </returns>
         public Vector2 TransformY(float value, IndicatorMode indicatorMode = IndicatorMode.LeftTop)
         {
@@ -59,8 +59,8 @@ namespace FanKit.Transformers
         /// <summary>
         /// Width
         /// </summary>
-        /// <param name="value"> The destination value.</param>
-        /// <param name="indicatorMode"> The indicator mode </param>
+        /// <param name="value"> The destination value. </param>
+        /// <param name="indicatorMode"> The indicator mode. </param>
         /// <param name="isRatio"> Maintain a ratio when scaling. </param>
         /// <returns> The produced matrix. </returns>
         public Matrix3x2 TransformWidth(float value, IndicatorMode indicatorMode = IndicatorMode.LeftTop, bool isRatio = false)
@@ -81,8 +81,8 @@ namespace FanKit.Transformers
         /// <summary>
         /// Height
         /// </summary>
-        /// <param name="value"> The destination value.</param>
-        /// <param name="indicatorMode"> The indicator mode </param>
+        /// <param name="value"> The destination value. </param>
+        /// <param name="indicatorMode"> The indicator mode. </param>
         /// <param name="isRatio"> Maintain a ratio when scaling. </param>
         /// <returns> The produced matrix. </returns>
         public Matrix3x2 TransformHeight(float value, IndicatorMode indicatorMode = IndicatorMode.LeftTop, bool isRatio = false)
@@ -104,8 +104,8 @@ namespace FanKit.Transformers
         /// <summary>
         /// Rotate
         /// </summary>
-        /// <param name="value"> The destination value.</param>
-        /// <param name="indicatorMode"> The indicator mode </param>
+        /// <param name="value"> The destination value. </param>
+        /// <param name="indicatorMode"> The indicator mode. </param>
         /// <returns> The produced matrix. </returns>
         public Matrix3x2 TransformRotate(float value, IndicatorMode indicatorMode = IndicatorMode.LeftTop)
         {

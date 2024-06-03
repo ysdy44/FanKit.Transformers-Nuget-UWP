@@ -44,7 +44,7 @@ namespace FanKit.Transformers
         /// <summary>
         /// Gets value by left, right, top, bottom.
         /// </summary>
-        /// <param name="borderMode"> The border mode </param>
+        /// <param name="borderMode"> The border mode. </param>
         /// <returns> The produced value. </returns>
         public float GetBorderValue(BorderMode borderMode)
         {
@@ -65,7 +65,7 @@ namespace FanKit.Transformers
         /// <summary>
         /// Gets vector by left, right, top, bottom.
         /// </summary>
-        /// <param name="indicatorMode"> The indicator mode </param>
+        /// <param name="indicatorMode"> The indicator mode. </param>
         /// <returns> The produced vector. </returns>
         public Vector2 GetIndicatorVector(IndicatorMode indicatorMode)
         {

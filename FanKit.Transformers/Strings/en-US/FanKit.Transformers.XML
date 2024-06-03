@@ -91,14 +91,14 @@
       <summary>
         Gets value by left, right, top, bottom.
       </summary>
-      <param name="borderMode"> The border mode </param>
+      <param name="borderMode"> The border mode. </param>
       <returns> The produced value. </returns>
     </member>
     <member name="M:FanKit.Transformers.CanvasTransformer.GetIndicatorVector(FanKit.Transformers.IndicatorMode)">
       <summary>
         Gets vector by left, right, top, bottom.
       </summary>
-      <param name="indicatorMode"> The indicator mode </param>
+      <param name="indicatorMode"> The indicator mode. </param>
       <returns> The produced vector. </returns>
     </member>
     <member name="M:FanKit.Transformers.CanvasTransformer.Equals(Windows.Graphics.Imaging.BitmapSize)">
@@ -2206,14 +2206,14 @@
       <summary>
         Gets value by left, right, top, bottom.
       </summary>
-      <param name="borderMode"> The border mode </param>
+      <param name="borderMode"> The border mode. </param>
       <returns> The produced value. </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.GetIndicatorVector(FanKit.Transformers.IndicatorMode)">
       <summary>
         Gets vector by left, right, top, bottom.
       </summary>
-      <param name="indicatorMode"> The indicator mode </param>
+      <param name="indicatorMode"> The indicator mode. </param>
       <returns> The produced vector. </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.ContainsNodeMode(System.Numerics.Vector2,FanKit.Transformers.Transformer,System.Boolean)">
@@ -2476,7 +2476,7 @@
         X
       </summary>
       <param name="value"> The destination value. </param>
-      <param name="indicatorMode"> The indicator mode </param>
+      <param name="indicatorMode"> The indicator mode. </param>
       <returns> The produced vector. </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.TransformY(System.Single,FanKit.Transformers.IndicatorMode)">
@@ -2484,7 +2484,7 @@
         Y
       </summary>
       <param name="value"> The destination value. </param>
-      <param name="indicatorMode"> The indicator mode </param>
+      <param name="indicatorMode"> The indicator mode. </param>
       <returns> The produced vector. </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.TransformWidth(System.Single,FanKit.Transformers.IndicatorMode,System.Boolean)">
@@ -2492,7 +2492,7 @@
         Width
       </summary>
       <param name="value"> The destination value. </param>
-      <param name="indicatorMode"> The indicator mode </param>
+      <param name="indicatorMode"> The indicator mode. </param>
       <param name="isRatio"> Maintain a ratio when scaling. </param>
       <returns> The produced matrix. </returns>
     </member>
@@ -2501,7 +2501,7 @@
         Height
       </summary>
       <param name="value"> The destination value. </param>
-      <param name="indicatorMode"> The indicator mode </param>
+      <param name="indicatorMode"> The indicator mode. </param>
       <param name="isRatio"> Maintain a ratio when scaling. </param>
       <returns> The produced matrix. </returns>
     </member>
@@ -2510,7 +2510,7 @@
         Rotate
       </summary>
       <param name="value"> The destination value. </param>
-      <param name="indicatorMode"> The indicator mode </param>
+      <param name="indicatorMode"> The indicator mode. </param>
       <returns> The produced matrix. </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.TransformSkew(System.Single,FanKit.Transformers.IndicatorMode)">
@@ -2738,7 +2738,7 @@
       <summary>
         Gets value by left, right, top, bottom.
       </summary>
-      <param name="borderMode"> The border mode </param>
+      <param name="borderMode"> The border mode. </param>
       <returns> The produced value. </returns>
     </member>
     <member name="T:FanKit.Transformers.BorderBorderSnap">
