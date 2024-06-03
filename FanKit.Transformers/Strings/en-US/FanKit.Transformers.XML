@@ -2421,7 +2421,7 @@
       </summary>
       <param name="sourceWidth"> The width of source rectangle. </param>
       <param name="sourceHeight"> The height of source rectangle. </param>
-      <param name="destination"> The destination Transformer. </param>
+      <param name="destination"> The destination transformer. </param>
       <returns> The homologous matrix. </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.FindHomography3D(System.Single,System.Single,FanKit.Transformers.ITransformerLTRB)">
@@ -2430,7 +2430,7 @@
       </summary>
       <param name="sourceWidth"> The width of source rectangle. </param>
       <param name="sourceHeight"> The height of source rectangle. </param>
-      <param name="destination"> The destination Transformer. </param>
+      <param name="destination"> The destination transformer. </param>
       <returns> The homologous matrix. </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.FindHomography(System.Single,System.Single,System.Single,System.Single,FanKit.Transformers.ITransformerLTRB)">
@@ -2441,7 +2441,7 @@
       <param name="sourceY"> The y of source rectangle. </param>
       <param name="sourceWidth"> The width of source rectangle. </param>
       <param name="sourceHeight"> The height of source rectangle. </param>
-      <param name="destination"> The destination Transformer. </param>
+      <param name="destination"> The destination transformer. </param>
       <returns> The homologous matrix. </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.FindHomography3D(System.Single,System.Single,System.Single,System.Single,FanKit.Transformers.ITransformerLTRB)">
@@ -2452,7 +2452,7 @@
       <param name="sourceY"> The y of source rectangle. </param>
       <param name="sourceWidth"> The width of source rectangle. </param>
       <param name="sourceHeight"> The height of source rectangle. </param>
-      <param name="destination"> The destination Transformer. </param>
+      <param name="destination"> The destination transformer. </param>
       <returns> The homologous matrix. </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.FindHomography(FanKit.Transformers.ITransformerLTRB,FanKit.Transformers.ITransformerLTRB)">
@@ -2460,7 +2460,7 @@
         Find homography.
       </summary>
       <param name="source"> The source transformer. </param>
-      <param name="destination"> The destination Transformer. </param>
+      <param name="destination"> The destination transformer. </param>
       <returns> The homologous matrix. </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.FindHomography3D(FanKit.Transformers.TransformerRect,FanKit.Transformers.ITransformerLTRB)">
@@ -2468,7 +2468,7 @@
         Find homography.
       </summary>
       <param name="source"> The source transformer. </param>
-      <param name="destination"> The destination Transformer. </param>
+      <param name="destination"> The destination transformer. </param>
       <returns> The homologous matrix. </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.TransformX(System.Single,FanKit.Transformers.IndicatorMode)">
@@ -3153,7 +3153,7 @@
       <summary> The source transformer. </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerMatrix.Destination">
-      <summary> The destination Transformer. </summary>
+      <summary> The destination transformer. </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerMatrix.DisabledRadian">
       <summary> Is disable rotate radian? Default **false**. </summary>

@@ -10,7 +10,7 @@ namespace FanKit.Transformers
         /// <summary> The source transformer. </summary>
         public Transformer Source;
 
-        /// <summary> The destination Transformer. </summary>
+        /// <summary> The destination transformer. </summary>
         public Transformer Destination;
         private Transformer startingDestination;
 
