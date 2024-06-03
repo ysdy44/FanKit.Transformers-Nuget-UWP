@@ -2518,7 +2518,7 @@
         偏斜
       </summary>
       <param name="value"> 目标值。 </param>
-      <param name="indicatorMode"> 指示器模式 </param>
+      <param name="indicatorMode"> 指示器模式。 </param>
       <returns> 产生的矩阵。 </returns>
     </member>
     <member name="T:FanKit.Transformers.SnapBase`2">

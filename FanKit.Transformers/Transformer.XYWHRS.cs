@@ -121,8 +121,8 @@ namespace FanKit.Transformers
         /// <summary>
         /// Skew
         /// </summary>
-        /// <param name="value"> The destination value.</param>
-        /// <param name="indicatorMode"> The indicator mode </param>
+        /// <param name="value"> The destination value. </param>
+        /// <param name="indicatorMode"> The indicator mode. </param>
         /// <returns> The produced matrix. </returns>
         public Matrix3x2 TransformSkew(float value, IndicatorMode indicatorMode = IndicatorMode.LeftTop)
         {

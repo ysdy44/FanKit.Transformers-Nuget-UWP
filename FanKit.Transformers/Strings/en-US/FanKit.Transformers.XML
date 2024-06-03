@@ -2518,7 +2518,7 @@
         Skew
       </summary>
       <param name="value"> The destination value. </param>
-      <param name="indicatorMode"> The indicator mode </param>
+      <param name="indicatorMode"> The indicator mode. </param>
       <returns> The produced matrix. </returns>
     </member>
     <member name="T:FanKit.Transformers.SnapBase`2">
