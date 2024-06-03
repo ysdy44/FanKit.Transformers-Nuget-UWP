@@ -1082,14 +1082,14 @@
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawRuler(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.CanvasTransformer)">
       <summary>
-        画一把尺子。
+        画一把标尺。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="canvasTransformer"> 画布变换者。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawRuler(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.CanvasTransformer,System.Single,System.Single,System.Single)">
       <summary>
-        画一把尺子。
+        画一把标尺。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="canvasTransformer"> 画布变换者。 </param>
@@ -1099,7 +1099,7 @@
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawRuler(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.CanvasTransformer,System.Single,System.Single,System.Single,Windows.UI.Color,Windows.UI.Color,Windows.UI.Color,Windows.UI.Color)">
       <summary>
-        画一把尺子。
+        画一把标尺。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="canvasTransformer"> 画布变换者。 </param>
@@ -1113,7 +1113,7 @@
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawRuler(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.CanvasTransformer,System.Single,System.Single,System.Single,Windows.UI.Color,Windows.UI.Color,Windows.UI.Color,Windows.UI.Color,Windows.UI.Color,Microsoft.Graphics.Canvas.Text.CanvasTextFormat)">
       <summary>
-        画一把尺子。
+        画一把标尺。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="canvasTransformer"> 画布变换者。 </param>
