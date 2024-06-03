@@ -37,8 +37,8 @@ namespace FanKit.Transformers
         /// <summary>
         /// Initialize a <see cref="TransformerMatrix"/>.
         /// </summary>
-        /// <param name="pointA"> The frist point of transformer matrix. </param>
-        /// <param name="pointB"> The second point of transformer matrix. </param>
+        /// <param name="pointA"> The frist point of <see cref="TransformerMatrix"/>. </param>
+        /// <param name="pointB"> The second point of <see cref="TransformerMatrix"/>. </param>
         public TransformerMatrix(Vector2 pointA, Vector2 pointB)
         {
             Transformer transformer = new Transformer(pointA, pointB);
@@ -76,7 +76,7 @@ namespace FanKit.Transformers
 
 
         /// <summary>
-        /// Gets transformer-matrix's resulting matrix.
+        /// Gets the resulting matrix of the <see cref="TransformerMatrix"/>.
         /// </summary>
         /// <returns> The product matrix. </returns>
         public Matrix3x2 GetMatrix() => Transformer.FindHomography(this.Source, this.Destination);
@@ -84,16 +84,16 @@ namespace FanKit.Transformers
 
         //@Override
         /// <summary>
-        ///  Cache the transformer-matrix's transformer.
+        /// Cache the transformer of the <see cref="TransformerMatrix"/>.
         /// </summary>
         public void CacheTransform() => this.startingDestination = this.Destination;
         /// <summary>
-        ///  Transforms the TransformerMatrix by the given matrix.
+        ///  Transforms the <see cref="TransformerMatrix"/> by the given matrix.
         /// </summary>
         /// <param name="matrix"> The resulting matrix. </param>
         public void TransformMultiplies(Matrix3x2 matrix) => this.Destination = this.startingDestination * matrix;
         /// <summary>
-        ///  Transforms the TransformerMatrix by the given vector.
+        ///  Transforms the <see cref="TransformerMatrix"/> by the given vector.
         /// </summary>
         /// <param name="vector"> The add value use to summed. </param>
         public void TransformAdd(Vector2 vector) => this.Destination = this.startingDestination + vector;

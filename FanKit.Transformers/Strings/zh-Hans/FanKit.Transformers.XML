@@ -3167,8 +3167,8 @@
       <summary>
         初始化 <see cref="T:FanKit.Transformers.TransformerMatrix"/>。
       </summary>
-      <param name="pointA"> 变换者矩阵的第一点。 </param>
-      <param name="pointB"> 变换者矩阵的第二个点。 </param>
+      <param name="pointA"> <see cref="T:FanKit.Transformers.TransformerMatrix"/> 的第一点。 </param>
+      <param name="pointB"> <see cref="T:FanKit.Transformers.TransformerMatrix"/> 的第二点。 </param>
     </member>
     <member name="M:FanKit.Transformers.TransformerMatrix.#ctor(System.Single,System.Single,System.Numerics.Vector2)">
       <summary>
@@ -3180,24 +3180,24 @@
     </member>
     <member name="M:FanKit.Transformers.TransformerMatrix.GetMatrix">
       <summary>
-        获取变换者矩阵的结果矩阵。
+        获取 <see cref="T:FanKit.Transformers.TransformerMatrix"/> 的结果矩阵。
       </summary>
       <returns> 产生的矩阵。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerMatrix.CacheTransform">
       <summary>
-        缓存变换者矩阵的变换者。
+        缓存 <see cref="T:FanKit.Transformers.TransformerMatrix"/> 的变换者。
       </summary>
     </member>
     <member name="M:FanKit.Transformers.TransformerMatrix.TransformMultiplies(System.Numerics.Matrix3x2)">
       <summary>
-        通过给定的矩阵对变换者矩阵进行变换。
+        通过给定的矩阵对 <see cref="T:FanKit.Transformers.TransformerMatrix"/> 进行变换。
       </summary>
       <param name="matrix"> 结果矩阵。 </param>
     </member>
     <member name="M:FanKit.Transformers.TransformerMatrix.TransformAdd(System.Numerics.Vector2)">
       <summary>
-        通过给定的向量对变换者矩阵进行变换。
+        通过给定的向量对 <see cref="T:FanKit.Transformers.TransformerMatrix"/> 进行变换。
       </summary>
       <param name="vector"> 用于相加的加值。 </param>
     </member>

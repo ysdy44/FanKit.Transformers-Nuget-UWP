@@ -3167,8 +3167,8 @@
       <summary>
         Initialize a <see cref="T:FanKit.Transformers.TransformerMatrix"/>.
       </summary>
-      <param name="pointA"> The frist point of transformer matrix. </param>
-      <param name="pointB"> The second point of transformer matrix. </param>
+      <param name="pointA"> The frist point of <see cref="T:FanKit.Transformers.TransformerMatrix"/>. </param>
+      <param name="pointB"> The second point of <see cref="T:FanKit.Transformers.TransformerMatrix"/>. </param>
     </member>
     <member name="M:FanKit.Transformers.TransformerMatrix.#ctor(System.Single,System.Single,System.Numerics.Vector2)">
       <summary>
@@ -3180,24 +3180,24 @@
     </member>
     <member name="M:FanKit.Transformers.TransformerMatrix.GetMatrix">
       <summary>
-        Gets transformer-matrix's resulting matrix.
+        Gets the resulting matrix of the <see cref="T:FanKit.Transformers.TransformerMatrix"/>.
       </summary>
       <returns> The product matrix. </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerMatrix.CacheTransform">
       <summary>
-        Cache the transformer-matrix's transformer.
+        Cache the transformer of the <see cref="T:FanKit.Transformers.TransformerMatrix"/>.
       </summary>
     </member>
     <member name="M:FanKit.Transformers.TransformerMatrix.TransformMultiplies(System.Numerics.Matrix3x2)">
       <summary>
-        Transforms the TransformerMatrix by the given matrix.
+        Transforms the <see cref="T:FanKit.Transformers.TransformerMatrix"/> by the given matrix.
       </summary>
       <param name="matrix"> The resulting matrix. </param>
     </member>
     <member name="M:FanKit.Transformers.TransformerMatrix.TransformAdd(System.Numerics.Vector2)">
       <summary>
-        Transforms the TransformerMatrix by the given vector.
+        Transforms the <see cref="T:FanKit.Transformers.TransformerMatrix"/> by the given vector.
       </summary>
       <param name="vector"> The add value use to summed. </param>
     </member>
