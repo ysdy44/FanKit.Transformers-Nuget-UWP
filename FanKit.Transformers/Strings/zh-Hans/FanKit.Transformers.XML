@@ -681,7 +681,7 @@
       <summary> 正常。 </summary>
     </member>
     <member name="F:FanKit.Transformers.NodeCollectionMode.Preview">
-      <summary> 在创建图层之前预览一行。 </summary>
+      <summary> 在创建图层之前预览一条线。 </summary>
     </member>
     <member name="F:FanKit.Transformers.NodeCollectionMode.Add">
       <summary> 将节点添加到曲线图层中的节点。 </summary>
@@ -1003,7 +1003,7 @@
       <summary> 文本的格式。 </summary>
     </member>
     <member name="F:FanKit.Transformers.CanvasDrawingSessionExtensions.AxisLine">
-      <summary> 两行之间的距离。默认值12。 </summary>
+      <summary> 两条线之间的距离。默认值12。 </summary>
     </member>
     <member name="F:FanKit.Transformers.CanvasDrawingSessionExtensions.AxisThickLine">
       <summary> 两条粗线之间的距离。默认值20。 </summary>
@@ -1063,7 +1063,7 @@
       <summary> 标尺的宽度。默认值20。 </summary>
     </member>
     <member name="F:FanKit.Transformers.CanvasDrawingSessionExtensions.RulerLine">
-      <summary> 两行之间的距离。默认值8。 </summary>
+      <summary> 两条线之间的距离。默认值8。 </summary>
     </member>
     <member name="F:FanKit.Transformers.CanvasDrawingSessionExtensions.RulerThickLine">
       <summary> 两条粗线之间的距离。默认值12。 </summary>
@@ -1563,7 +1563,7 @@
       <summary> 单指。 </summary>
     </member>
     <member name="F:FanKit.Transformers.InputDevice.DoubleFinger">
-      <summary> 两个手指。 </summary>
+      <summary> 双指。 </summary>
     </member>
     <member name="F:FanKit.Transformers.InputDevice.Pen">
       <summary> 钢笔。 </summary>
@@ -1655,7 +1655,7 @@
         表示处理Double_Start，Double_Delta，Double_Complete事件的方法。
       </summary>
       <param name="center"> 两只手指的中心。 </param>
-      <param name="space"> 两个手指之间的间距。 </param>
+      <param name="space"> 双指之间的间距。 </param>
     </member>
     <member name="T:FanKit.Transformers.CanvasOperator">
       <summary>
@@ -2318,7 +2318,7 @@
         初始化变换者。
       </summary>
       <param name="pointA"> 变换者的第一点。 </param>
-      <param name="pointB"> 变换者的第二个点。 </param>
+      <param name="pointB"> 变换者的第二点。 </param>
       <param name="isCenter"> 围绕中心缩放。 </param>
       <param name="isRatio"> 缩放时保持比例。 </param>
     </member>
@@ -3262,14 +3262,14 @@
         初始化 <see cref="T:FanKit.Transformers.TransformerRect"/>。
       </summary>
       <param name="pointA"> 矩形的第一点。 </param>
-      <param name="pointB"> 矩形的第二个点。 </param>
+      <param name="pointB"> 矩形的第二点。 </param>
     </member>
     <member name="M:FanKit.Transformers.TransformerRect.#ctor(System.Numerics.Vector2,System.Numerics.Vector2,System.Boolean,System.Boolean)">
       <summary>
         初始化 <see cref="T:FanKit.Transformers.TransformerRect"/>。
       </summary>
       <param name="pointA"> 矩形的第一点。 </param>
-      <param name="pointB"> 矩形的第二个点。 </param>
+      <param name="pointB"> 矩形的第二点。 </param>
       <param name="isCenter"> 围绕中心缩放。 </param>
       <param name="isSquare"> 宽度和高度相等。 </param>
     </member>
@@ -3570,17 +3570,17 @@
       </summary>
       <param name="point"> 点。 </param>
       <param name="lineA"> 线的第一点。 </param>
-      <param name="lineB"> 第二行。 </param>
+      <param name="lineB"> 线的第二点。 </param>
       <returns> 产生的向量。 </returns>
     </member>
     <member name="M:FanKit.Math.IntersectionPoint(System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>
-        获取Line1和LIne2的交点。
+        获取第一行和LIne2的交点。
       </summary>
-      <param name="line1A"> 第一行的第一点。 </param>
-      <param name="line1B"> 第一行第二点。 </param>
-      <param name="line2A"> 第二行第一点。 </param>
-      <param name="line2B"> 第二行第二点。 </param>
+      <param name="line1A"> 线1的第一点。 </param>
+      <param name="line1B"> 线1的第二点。 </param>
+      <param name="line2A"> 线2的第一点。 </param>
+      <param name="line2B"> 线2的第二点。 </param>
       <returns> 产生的向量。 </returns>
     </member>
     <member name="M:FanKit.Math.RadiansToVector(System.Single,System.Numerics.Vector2,System.Single)">
