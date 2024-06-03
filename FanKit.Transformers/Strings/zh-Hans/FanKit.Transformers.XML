@@ -750,7 +750,7 @@
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawLineDodgerBlue(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>
-        画一条线带着兰色颜色。
+        绘制线带着兰色颜色。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="point0"> 第一个点。 </param>
@@ -758,7 +758,7 @@
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawThickLine(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>
-        画一条粗线。
+        绘制粗线。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="point0"> 第一个点。 </param>
@@ -766,7 +766,7 @@
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawEllipseDodgerBlue(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2,System.Single,System.Single)">
       <summary>
-        画一个椭圆带着兰色颜色。
+        绘制椭圆带着兰色颜色。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="centerPoint"> 中心点。 </param>
@@ -775,7 +775,7 @@
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawThickEllipse(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2,System.Single,System.Single)">
       <summary>
-        画一个椭圆。
+        绘制椭圆。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="centerPoint"> 中心点。 </param>
@@ -784,14 +784,14 @@
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawRectangleDodgerBlue(Microsoft.Graphics.Canvas.CanvasDrawingSession,Windows.Foundation.Rect)">
       <summary>
-        画一个矩形带着兰色颜色。
+        绘制矩形带着兰色颜色。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="rect"> 矩形。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawThickRectangle(Microsoft.Graphics.Canvas.CanvasDrawingSession,Windows.Foundation.Rect)">
       <summary>
-        画一个粗矩形。
+        绘制粗矩形。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="rect"> 矩形。 </param>
@@ -825,14 +825,14 @@
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2)">
       <summary>
-        画一个⊙。
+        绘制 ⊙。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="point"> 点。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2,Windows.UI.Color)">
       <summary>
-        画一个⊙。
+        绘制 ⊙。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="point"> 点。 </param>
@@ -840,14 +840,14 @@
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode2(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2)">
       <summary>
-        画一个◉。
+        绘制 ◉。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="point"> 点。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode2(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2,Windows.UI.Color)">
       <summary>
-        画一个◉。
+        绘制 ◉。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="point"> 点。 </param>
@@ -855,14 +855,14 @@
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode3(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2)">
       <summary>
-        画一个◻。
+        绘制 ◻。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="point"> 点。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode3(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2,Windows.UI.Color)">
       <summary>
-        画一个◻。
+        绘制 ◻。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="point"> 点。 </param>
@@ -870,14 +870,14 @@
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode4(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2)">
       <summary>
-        画一个◼。
+        绘制 ◼。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="point"> 点。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode4(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2,Windows.UI.Color)">
       <summary>
-        画一个◼。
+        绘制 ◼。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="point"> 点。 </param>
@@ -885,14 +885,14 @@
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode5(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2)">
       <summary>
-        画一个◌。
+        绘制 ◌。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="point"> 点。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode5(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2,Windows.UI.Color)">
       <summary>
-        画一个◌。
+        绘制 ◌。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="point"> 点。 </param>
@@ -903,7 +903,7 @@
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrad(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasImage,Windows.Foundation.Rect,System.Single,System.Single)">
       <summary>
-        画一张卡片。
+        绘制卡片。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="previousImage"> 上一个图像。 </param>
@@ -913,7 +913,7 @@
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrad(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasImage,Windows.Foundation.Rect,Windows.UI.Color,System.Single,System.Single)">
       <summary>
-        画一张卡片。
+        绘制卡片。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="previousImage"> 上一个图像。 </param>
@@ -924,7 +924,7 @@
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrad(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasImage,Windows.Foundation.Rect,System.Numerics.Matrix3x2,System.Single,System.Single)">
       <summary>
-        画一张卡片。
+        绘制卡片。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="previousImage"> 上一个图像。 </param>
@@ -935,7 +935,7 @@
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrad(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasImage,Windows.Foundation.Rect,System.Numerics.Matrix3x2,Windows.UI.Color,System.Single,System.Single)">
       <summary>
-        画一张卡片。
+        绘制卡片。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="previousImage"> 上一个图像。 </param>
@@ -947,7 +947,7 @@
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrad(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasImage,FanKit.Transformers.CanvasTransformer,System.Single,System.Single)">
       <summary>
-        画一张卡片。
+        绘制卡片。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="previousImage"> 上一张图片 </param>
@@ -957,7 +957,7 @@
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCard(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasImage,FanKit.Transformers.CanvasTransformer,Windows.UI.Color,System.Single,System.Single)">
       <summary>
-        画一张卡片。
+        绘制卡片。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="previousImage"> 前一张图片。 </param>
@@ -1019,14 +1019,14 @@
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawAxis(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.CanvasTransformer)">
       <summary>
-        绘制一个XY 轴。
+        绘制 XY 轴。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="canvasTransformer"> 画布变换者。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawAxis(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.CanvasTransformer,System.Single,System.Single)">
       <summary>
-        绘制一个XY 轴。
+        绘制 XY 轴。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="canvasTransformer"> 画布变换者。 </param>
@@ -1035,7 +1035,7 @@
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawAxis(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.CanvasTransformer,System.Single,System.Single,Windows.UI.Color,Windows.UI.Color,Windows.UI.Color)">
       <summary>
-        绘制一个XY 轴。
+        绘制 XY 轴。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="canvasTransformer"> 画布变换者。 </param>
@@ -1047,7 +1047,7 @@
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawAxis(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.CanvasTransformer,System.Single,System.Single,Windows.UI.Color,Windows.UI.Color,Windows.UI.Color,Windows.UI.Color,Microsoft.Graphics.Canvas.Text.CanvasTextFormat)">
       <summary>
-        绘制一个XY 轴。
+        绘制 XY 轴。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="canvasTransformer"> 画布变换者。 </param>
@@ -1082,14 +1082,14 @@
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawRuler(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.CanvasTransformer)">
       <summary>
-        画一把标尺。
+        绘制标尺。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="canvasTransformer"> 画布变换者。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawRuler(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.CanvasTransformer,System.Single,System.Single,System.Single)">
       <summary>
-        画一把标尺。
+        绘制标尺。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="canvasTransformer"> 画布变换者。 </param>
@@ -1099,7 +1099,7 @@
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawRuler(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.CanvasTransformer,System.Single,System.Single,System.Single,Windows.UI.Color,Windows.UI.Color,Windows.UI.Color,Windows.UI.Color)">
       <summary>
-        画一把标尺。
+        绘制标尺。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="canvasTransformer"> 画布变换者。 </param>
@@ -1113,7 +1113,7 @@
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawRuler(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.CanvasTransformer,System.Single,System.Single,System.Single,Windows.UI.Color,Windows.UI.Color,Windows.UI.Color,Windows.UI.Color,Windows.UI.Color,Microsoft.Graphics.Canvas.Text.CanvasTextFormat)">
       <summary>
-        画一把标尺。
+        绘制标尺。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="canvasTransformer"> 画布变换者。 </param>
@@ -1140,7 +1140,7 @@
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawMarqueeTool(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.MarqueeToolType,FanKit.Transformers.MarqueeTool)">
       <summary>
-        画一个选框工具。
+        绘制选框工具。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="resourceCreator"> 资源创建者。 </param>
@@ -1149,7 +1149,7 @@
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawMarqueeTool(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.MarqueeToolType,FanKit.Transformers.MarqueeTool,System.Numerics.Matrix3x2)">
       <summary>
-        画一个选框工具。
+        绘制选框工具。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="resourceCreator"> 资源创建者。 </param>
@@ -2100,7 +2100,7 @@
     </member>
     <member name="M:FanKit.Transformers.VectorSnapBase`1.DrawNode2(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Matrix3x2)">
       <summary>
-        画一个⊙。
+        绘制⊙。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="matrix"> 矩阵。 </param>
