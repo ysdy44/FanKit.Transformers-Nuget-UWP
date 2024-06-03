@@ -240,18 +240,18 @@
       </summary>
     </member>
     <member name="P:FanKit.Transformers.DottedLineBrush.Brush">
-      <summary> 获取线性渐变画笔。 </summary>
+      <summary> 获取线性渐变笔刷。 </summary>
     </member>
     <member name="M:FanKit.Transformers.DottedLineBrush.#ctor(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Single)">
       <summary>
-        初始化用于绘制虚线的画笔。
+        初始化用于绘制虚线的笔刷。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
       <param name="distance"> 两个渐变点之间的距离。 </param>
     </member>
     <member name="M:FanKit.Transformers.DottedLineBrush.Update(System.Single)">
       <summary>
-        更新画笔的位移
+        更新笔刷的位移
       </summary>
       <param name="space"> 位移的变化。 </param>
     </member>
@@ -816,7 +816,7 @@
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="resourceCreator"> 资源创建者。 </param>
-      <param name="dottedLineBrush"> 画笔。 </param>
+      <param name="dottedLineBrush"> 笔刷。 </param>
       <param name="dottedLineImage"> 图片。 </param>
       <param name="width"> 宽度。 </param>
       <param name="height"> 高度。 </param>
