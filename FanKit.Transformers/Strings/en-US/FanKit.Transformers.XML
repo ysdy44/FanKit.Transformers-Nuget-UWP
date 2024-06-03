@@ -1427,7 +1427,6 @@
       <param name="lengthMode"> The length mode. </param>
       <param name="angleMode"> The angle mode. </param>
       <param name="point"> The point. </param>
-      <param name="startingNoder"> The starting node. </param>
       <param name="isLeftControlPoint">
         <see cref="F:FanKit.Transformers.Node.LeftControlPoint"/> or <see cref="F:FanKit.Transformers.Node.RightControlPoint"/>.
       </param>

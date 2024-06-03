@@ -28,7 +28,6 @@ namespace FanKit.Transformers
         /// <param name="lengthMode"> The length mode. </param>
         /// <param name="angleMode"> The angle mode. </param>
         /// <param name="point"> The point. </param>
-        /// <param name="startingNoder"> The starting node. </param>
         /// <param name="isLeftControlPoint"> <see cref="Node.LeftControlPoint"/> or <see cref="Node.RightControlPoint"/>. </param>
         /// <returns> The controlled node. </returns>
         public static void Controller(SelfControlPointMode mode, EachControlPointLengthMode lengthMode, EachControlPointAngleMode angleMode, Vector2 point, Node node, bool isLeftControlPoint = true)

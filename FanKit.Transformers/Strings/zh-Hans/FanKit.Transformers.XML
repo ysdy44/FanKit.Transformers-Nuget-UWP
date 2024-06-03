@@ -1427,7 +1427,6 @@
       <param name="lengthMode"> 长度模式。 </param>
       <param name="angleMode"> 角度模式。 </param>
       <param name="point"> 点。 </param>
-      <param name="startingNoder"> 起始节点。 </param>
       <param name="isLeftControlPoint">
         <see cref="F:FanKit.Transformers.Node.LeftControlPoint"/> 或 <see cref="F:FanKit.Transformers.Node.RightControlPoint"/>。
       </param>
