@@ -374,7 +374,7 @@
     </member>
     <member name="T:FanKit.Transformers.NodeBorder">
       <summary>
-        表示用于临时存储的未卡住节点的边框。
+        表示用于临时存储的未选中节点的边框。
       </summary>
     </member>
     <member name="P:FanKit.Transformers.NodeBorder.Mode">
@@ -390,7 +390,7 @@
     </member>
     <member name="M:FanKit.Transformers.NodeBorder.GetUnCheckedNodes">
       <summary>
-        获取所有未卡住的节点。
+        获取所有未选中的节点。
       </summary>
       <returns> 产生的节点。 </returns>
     </member>
@@ -401,7 +401,7 @@
     </member>
     <member name="T:FanKit.Transformers.NodeBorderCollection">
       <summary>
-        表示未经卡住的节点的边界集合，用于临时存储。
+        表示未经选中的节点的边界集合，用于临时存储。
       </summary>
     </member>
     <member name="M:FanKit.Transformers.NodeBorderCollection.#ctor(FanKit.Transformers.NodeCollection)">
@@ -420,7 +420,7 @@
     </member>
     <member name="M:FanKit.Transformers.NodeBorderCollection.GetUnCheckedNodes">
       <summary>
-        获取所有未卡住的节点。
+        获取所有未选中的节点。
       </summary>
       <returns> 产生的节点。 </returns>
     </member>
@@ -555,7 +555,7 @@
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.InterpolationCheckedNodes(FanKit.Transformers.NodeCollection)">
       <summary>
-        在卡住点之间插入新点
+        在选中点之间插入新点
       </summary>
       <param name="nodeCollection">
         源 <see cref="T:FanKit.Transformers.NodeCollection"/>。
@@ -571,7 +571,7 @@
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.SmoothCheckedNodes(FanKit.Transformers.NodeCollection)">
       <summary>
-        平滑地所有卡住的节点。
+        平滑地所有选中的节点。
       </summary>
       <param name="nodeCollection">
         源 <see cref="T:FanKit.Transformers.NodeCollection"/>。
@@ -579,7 +579,7 @@
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.ArrangeNodes(System.Collections.Generic.IList{FanKit.Transformers.Node})">
       <summary>
-        排列所有卡住点的右控制点。
+        排列所有选中点的右控制点。
       </summary>
       <param name="nodes"> 节点。 </param>
     </member>
@@ -659,7 +659,7 @@
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.RectChoose(System.Single,System.Single,System.Single,System.Single)">
       <summary>
-        卡住在矩形中的节点。
+        选中在矩形中的节点。
       </summary>
       <param name="left"> 目标矩形的左侧。 </param>
       <param name="top"> 目标矩形的顶部。 </param>
@@ -668,7 +668,7 @@
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.BoxChoose(FanKit.Transformers.TransformerRect)">
       <summary>
-        卡住在矩形中的节点。
+        选中在矩形中的节点。
       </summary>
       <param name="boxRect"> 目标矩形。 </param>
     </member>
@@ -710,7 +710,7 @@
       <summary> 正常。 </summary>
     </member>
     <member name="F:FanKit.Transformers.NodeRemoveMode.RemovedNodes">
-      <summary> 删除所有卡住的节点。 </summary>
+      <summary> 删除所有选中的节点。 </summary>
     </member>
     <member name="F:FanKit.Transformers.NodeRemoveMode.RemoveCurve">
       <summary> 删除曲线。 </summary>
@@ -724,10 +724,10 @@
       <summary> 正常。 </summary>
     </member>
     <member name="F:FanKit.Transformers.NodeMode.PointWithChecked">
-      <summary> 已卡住节点的点。 </summary>
+      <summary> 已选中节点的点。 </summary>
     </member>
     <member name="F:FanKit.Transformers.NodeMode.PointWithoutChecked">
-      <summary> 未卡住节点的点。 </summary>
+      <summary> 未选中节点的点。 </summary>
     </member>
     <member name="F:FanKit.Transformers.NodeMode.LeftControlPoint">
       <summary> 左控制点。 </summary>
@@ -1490,7 +1490,7 @@
       </summary>
     </member>
     <member name="P:FanKit.Transformers.Node.IsChecked">
-      <summary> 获取或设置节点的是否卡住。 </summary>
+      <summary> 获取或设置节点的是否选中。 </summary>
     </member>
     <member name="P:FanKit.Transformers.Node.StartingIsChecked">
       <summary>
