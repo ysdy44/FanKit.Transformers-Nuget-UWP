@@ -7,7 +7,7 @@ namespace FanKit.Transformers
     /// </summary>
     public struct TransformerMatrix : ICacheTransform
     {
-        /// <summary> The source Transformer. </summary>
+        /// <summary> The source transformer. </summary>
         public Transformer Source;
 
         /// <summary> The destination Transformer. </summary>

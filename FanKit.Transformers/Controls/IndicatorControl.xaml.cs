@@ -141,9 +141,6 @@ namespace FanKit.Transformers
         }
     }
 
-    /// <summary>
-    /// Transformed indicator control.
-    /// </summary>
     public sealed partial class IndicatorControl : UserControl
     {
 

@@ -61,7 +61,7 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="value"> The destination value.</param>
         /// <param name="indicatorMode"> The indicator mode </param>
-        /// <param name="isRatio">  Maintain a ratio when scaling.  </param>
+        /// <param name="isRatio"> Maintain a ratio when scaling. </param>
         /// <returns> The produced matrix. </returns>
         public Matrix3x2 TransformWidth(float value, IndicatorMode indicatorMode = IndicatorMode.LeftTop, bool isRatio = false)
         {
@@ -83,7 +83,7 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="value"> The destination value.</param>
         /// <param name="indicatorMode"> The indicator mode </param>
-        /// <param name="isRatio">  Maintain a ratio when scaling.  </param>
+        /// <param name="isRatio"> Maintain a ratio when scaling. </param>
         /// <returns> The produced matrix. </returns>
         public Matrix3x2 TransformHeight(float value, IndicatorMode indicatorMode = IndicatorMode.LeftTop, bool isRatio = false)
         {

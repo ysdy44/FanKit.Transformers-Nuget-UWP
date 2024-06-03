@@ -93,7 +93,7 @@ namespace FanKit.Transformers
         /// <summary>
         /// Find Homography.  
         /// </summary>
-        /// <param name="source"> The source Transformer. </param>
+        /// <param name="source"> The source transformer. </param>
         /// <param name="destination"> The destination Transformer. </param>
         /// <returns> The homologous matrix. </returns>
         public static Matrix3x2 FindHomography(ITransformerLTRB source, ITransformerLTRB destination)
@@ -105,7 +105,7 @@ namespace FanKit.Transformers
         /// <summary>
         /// Find Homography.  
         /// </summary>
-        /// <param name="source"> The source Transformer. </param>
+        /// <param name="source"> The source transformer. </param>
         /// <param name="destination"> The destination Transformer. </param>
         /// <returns> The homologous matrix. </returns>
         public static Matrix4x4 FindHomography3D(TransformerRect source, ITransformerLTRB destination)
