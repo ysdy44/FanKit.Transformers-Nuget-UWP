@@ -18,8 +18,8 @@ namespace FanKit.Transformers
         /// <param name="isAbsolute"> Is absolute? </param>
         /// <param name="width"> The absolute width. </param>
         /// <param name="value"> The relative value. </param>
-        /// <param name="leftTail"> The left - tail. </param>
-        /// <param name="rightTail"> The right - tail. </param>
+        /// <param name="leftTail"> The left tail. </param>
+        /// <param name="rightTail"> The right tail. </param>
         /// <returns> The product geometry. </returns>
         public static CanvasGeometry CreateArrow(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformer, bool isAbsolute = false, float width = 10, float value = 0.5f, GeometryArrowTailType leftTail = GeometryArrowTailType.None, GeometryArrowTailType rightTail = GeometryArrowTailType.Arrow)
         {
@@ -75,8 +75,8 @@ namespace FanKit.Transformers
         /// <param name="isAbsolute"> Is absolute? </param>
         /// <param name="width"> The absolute width. </param>
         /// <param name="value"> The relative value. </param>
-        /// <param name="leftTail"> The left - tail. </param>
-        /// <param name="rightTail"> The right - tail. </param>
+        /// <param name="leftTail"> The left tail. </param>
+        /// <param name="rightTail"> The right tail. </param>
         /// <returns> The product geometry. </returns>
         public static CanvasGeometry CreateArrow(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformer, Matrix3x2 matrix, bool isAbsolute = false, float width = 10, float value = 0.5f, GeometryArrowTailType leftTail = GeometryArrowTailType.None, GeometryArrowTailType rightTail = GeometryArrowTailType.Arrow)
         {

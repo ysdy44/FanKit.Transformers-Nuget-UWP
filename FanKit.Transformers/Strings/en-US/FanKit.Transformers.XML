@@ -3092,8 +3092,8 @@
       <param name="isAbsolute"> Is absolute? </param>
       <param name="width"> The absolute width. </param>
       <param name="value"> The relative value. </param>
-      <param name="leftTail"> The left - tail. </param>
-      <param name="rightTail"> The right - tail. </param>
+      <param name="leftTail"> The left tail. </param>
+      <param name="rightTail"> The right tail. </param>
       <returns> The product geometry. </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateArrow(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Boolean,System.Single,System.Single,FanKit.Transformers.GeometryArrowTailType,FanKit.Transformers.GeometryArrowTailType)">
@@ -3106,8 +3106,8 @@
       <param name="isAbsolute"> Is absolute? </param>
       <param name="width"> The absolute width. </param>
       <param name="value"> The relative value. </param>
-      <param name="leftTail"> The left - tail. </param>
-      <param name="rightTail"> The right - tail. </param>
+      <param name="leftTail"> The left tail. </param>
+      <param name="rightTail"> The right tail. </param>
       <returns> The product geometry. </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateCapsule(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB)">

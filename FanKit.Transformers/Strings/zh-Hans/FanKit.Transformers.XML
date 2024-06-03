@@ -3092,8 +3092,8 @@
       <param name="isAbsolute"> 是绝对的吗？ </param>
       <param name="width"> 绝对宽度。 </param>
       <param name="value"> 相对值。 </param>
-      <param name="leftTail"> 左侧-尾巴。 </param>
-      <param name="rightTail"> 右侧-尾巴。 </param>
+      <param name="leftTail"> 左尾。 </param>
+      <param name="rightTail"> 右尾。 </param>
       <returns> 产生的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateArrow(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Boolean,System.Single,System.Single,FanKit.Transformers.GeometryArrowTailType,FanKit.Transformers.GeometryArrowTailType)">
@@ -3106,8 +3106,8 @@
       <param name="isAbsolute"> 是绝对的吗？ </param>
       <param name="width"> 绝对宽度。 </param>
       <param name="value"> 相对值。 </param>
-      <param name="leftTail"> 左侧尾巴。 </param>
-      <param name="rightTail"> 右侧尾巴。 </param>
+      <param name="leftTail"> 左尾。 </param>
+      <param name="rightTail"> 右尾。 </param>
       <returns> 产生的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateCapsule(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB)">
