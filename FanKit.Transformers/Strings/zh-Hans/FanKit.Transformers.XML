@@ -903,7 +903,7 @@
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrad(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasImage,Windows.Foundation.Rect,System.Single,System.Single)">
       <summary>
-        画一张牌。
+        画一张卡片。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="previousImage"> 上一个图像。 </param>
@@ -913,7 +913,7 @@
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrad(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasImage,Windows.Foundation.Rect,Windows.UI.Color,System.Single,System.Single)">
       <summary>
-        画一张牌。
+        画一张卡片。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="previousImage"> 上一个图像。 </param>
@@ -924,7 +924,7 @@
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrad(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasImage,Windows.Foundation.Rect,System.Numerics.Matrix3x2,System.Single,System.Single)">
       <summary>
-        画一张牌。
+        画一张卡片。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="previousImage"> 上一个图像。 </param>
@@ -935,7 +935,7 @@
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrad(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasImage,Windows.Foundation.Rect,System.Numerics.Matrix3x2,Windows.UI.Color,System.Single,System.Single)">
       <summary>
-        画一张牌。
+        画一张卡片。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="previousImage"> 上一个图像。 </param>
@@ -947,7 +947,7 @@
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrad(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasImage,FanKit.Transformers.CanvasTransformer,System.Single,System.Single)">
       <summary>
-        画一张牌。
+        画一张卡片。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="previousImage"> 上一张图片 </param>
@@ -957,7 +957,7 @@
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCard(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasImage,FanKit.Transformers.CanvasTransformer,Windows.UI.Color,System.Single,System.Single)">
       <summary>
-        画一张牌。
+        画一张卡片。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="previousImage"> 前一张图片。 </param>
