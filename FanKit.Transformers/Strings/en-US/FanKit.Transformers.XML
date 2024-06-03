@@ -408,7 +408,9 @@
       <summary>
         Initialize a NodeBorderCollection.
       </summary>
-      <param name="nodeCollection"> The <see cref="T:FanKit.Transformers.NodeCollection"/>. </param>
+      <param name="nodeCollection">
+        The <see cref="T:FanKit.Transformers.NodeCollection"/>.
+      </param>
     </member>
     <member name="M:FanKit.Transformers.NodeBorderCollection.GetRemoveMode">
       <summary>
@@ -510,7 +512,9 @@
       <summary>
         Get own copy.
       </summary>
-      <returns> The cloned <see cref="T:FanKit.Transformers.NodeCollection"/>. </returns>
+      <returns>
+        The cloned <see cref="T:FanKit.Transformers.NodeCollection"/>.
+      </returns>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.NodesClone">
       <summary>
@@ -529,35 +533,49 @@
         Gets the all points by the <see cref="T:FanKit.Transformers.NodeCollection"/> contains the specified point.
       </summary>
       <param name="point"> The input point. </param>
-      <param name="nodeCollection"> The source <see cref="T:FanKit.Transformers.NodeCollection"/>. </param>
-      <returns> The <see cref="T:FanKit.Transformers.NodeCollection"/> mode. </returns>
+      <param name="nodeCollection">
+        The source <see cref="T:FanKit.Transformers.NodeCollection"/>.
+      </param>
+      <returns>
+        The <see cref="T:FanKit.Transformers.NodeCollection"/> mode.
+      </returns>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.ContainsNodeCollectionMode(System.Numerics.Vector2,FanKit.Transformers.NodeCollection,System.Numerics.Matrix3x2)">
       <summary>
         Gets the all points by the <see cref="T:FanKit.Transformers.NodeCollection"/> contains the specified point.
       </summary>
       <param name="point"> The input point. </param>
-      <param name="nodeCollection"> The source <see cref="T:FanKit.Transformers.NodeCollection"/>. </param>
+      <param name="nodeCollection">
+        The source <see cref="T:FanKit.Transformers.NodeCollection"/>.
+      </param>
       <param name="matrix"> The matrix. </param>
-      <returns> The <see cref="T:FanKit.Transformers.NodeCollection"/> mode. </returns>
+      <returns>
+        The <see cref="T:FanKit.Transformers.NodeCollection"/> mode.
+      </returns>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.InterpolationCheckedNodes(FanKit.Transformers.NodeCollection)">
       <summary>
         Insert a new point between checked points
       </summary>
-      <param name="nodeCollection"> The source <see cref="T:FanKit.Transformers.NodeCollection"/>. </param>
+      <param name="nodeCollection">
+        The source <see cref="T:FanKit.Transformers.NodeCollection"/>.
+      </param>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.SharpCheckedNodes(FanKit.Transformers.NodeCollection)">
       <summary>
         Sharpen all checked nodes.
       </summary>
-      <param name="nodeCollection"> The source <see cref="T:FanKit.Transformers.NodeCollection"/>. </param>
+      <param name="nodeCollection">
+        The source <see cref="T:FanKit.Transformers.NodeCollection"/>.
+      </param>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.SmoothCheckedNodes(FanKit.Transformers.NodeCollection)">
       <summary>
         Smoothly all checked nodes.
       </summary>
-      <param name="nodeCollection"> The source <see cref="T:FanKit.Transformers.NodeCollection"/>. </param>
+      <param name="nodeCollection">
+        The source <see cref="T:FanKit.Transformers.NodeCollection"/>.
+      </param>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.ArrangeNodes(System.Collections.Generic.IList{FanKit.Transformers.Node})">
       <summary>
@@ -953,14 +971,18 @@
         Draw bezier-curve by <see cref="T:FanKit.Transformers.NodeCollection"/>.
       </summary>
       <param name="drawingSession"> The drawing-session. </param>
-      <param name="nodeCollection"> The <see cref="T:FanKit.Transformers.NodeCollection"/>. </param>
+      <param name="nodeCollection">
+        The <see cref="T:FanKit.Transformers.NodeCollection"/>.
+      </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNodeCollection(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.NodeCollection,System.Numerics.Matrix3x2)">
       <summary>
         Draw bezier-curve by <see cref="T:FanKit.Transformers.NodeCollection"/>.
       </summary>
       <param name="drawingSession"> The drawing-session. </param>
-      <param name="nodeCollection"> The <see cref="T:FanKit.Transformers.NodeCollection"/>. </param>
+      <param name="nodeCollection">
+        The <see cref="T:FanKit.Transformers.NodeCollection"/>.
+      </param>
       <param name="matrix"> The matrix. </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNodeCollection(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.NodeCollection,System.Numerics.Matrix3x2,Windows.UI.Color)">
@@ -968,7 +990,9 @@
         Draw bezier-curve by <see cref="T:FanKit.Transformers.NodeCollection"/>.
       </summary>
       <param name="drawingSession"> The drawing-session. </param>
-      <param name="nodeCollection"> The <see cref="T:FanKit.Transformers.NodeCollection"/>. </param>
+      <param name="nodeCollection">
+        The <see cref="T:FanKit.Transformers.NodeCollection"/>.
+      </param>
       <param name="matrix"> The matrix. </param>
       <param name="accentColor"> The accent color. </param>
     </member>
@@ -2611,7 +2635,9 @@
       <summary>
         Initialize a <see cref="T:FanKit.Transformers.TransformerBorder"/>.
       </summary>
-      <param name="nodess"> The <see cref="T:FanKit.Transformers.NodeCollection"/> collection. </param>
+      <param name="nodess">
+        The <see cref="T:FanKit.Transformers.NodeCollection"/> collection.
+      </param>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.Add(FanKit.Transformers.TransformerBorder,System.Numerics.Vector2)">
       <summary>
