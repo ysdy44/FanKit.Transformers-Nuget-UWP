@@ -1848,13 +1848,13 @@
       </summary>
     </member>
     <member name="F:FanKit.Transformers.InverseMatrixTransformerMode.ControlToVirtualToCanvas">
-      <summary> Control > Virtual > Canvas . </summary>
+      <summary> Control > Virtual > Canvas. </summary>
     </member>
     <member name="F:FanKit.Transformers.InverseMatrixTransformerMode.ControlToVirtual">
       <summary> Control > Virtual. </summary>
     </member>
     <member name="F:FanKit.Transformers.InverseMatrixTransformerMode.VirtualToCanvas">
-      <summary> Virtual > Canvas . </summary>
+      <summary> Virtual > Canvas. </summary>
     </member>
     <member name="T:FanKit.Transformers.LineDistance">
       <summary>
