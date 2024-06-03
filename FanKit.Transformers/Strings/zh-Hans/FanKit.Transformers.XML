@@ -129,7 +129,7 @@
         获取 <see cref="T:FanKit.Transformers.CanvasTransformer"/> 的矩阵。
         在使用之前，请调用 <see cref="M:FanKit.Transformers.CanvasTransformer.ReloadMatrix"/> 方法。
       </summary>
-      <returns> 乘积矩阵。 </returns>
+      <returns> 产生的矩阵。 </returns>
     </member>
     <member name="M:FanKit.Transformers.CanvasTransformer.GetMatrix(FanKit.Transformers.MatrixTransformerMode)">
       <summary>
@@ -137,14 +137,14 @@
         在使用之前，请调用 <see cref="M:FanKit.Transformers.CanvasTransformer.ReloadMatrix"/> 方法。
       </summary>
       <param name="mode"> 矩阵模式。 </param>
-      <returns> 乘积矩阵。 </returns>
+      <returns> 产生的矩阵。 </returns>
     </member>
     <member name="M:FanKit.Transformers.CanvasTransformer.GetInverseMatrix">
       <summary>
         获取 <see cref="T:FanKit.Transformers.CanvasTransformer"/> 的逆矩阵。
         在使用之前，请调用 <see cref="M:FanKit.Transformers.CanvasTransformer.ReloadMatrix"/> 方法。
       </summary>
-      <returns> 乘积逆矩阵。 </returns>
+      <returns> 产生的逆矩阵。 </returns>
     </member>
     <member name="M:FanKit.Transformers.CanvasTransformer.GetInverseMatrix(FanKit.Transformers.InverseMatrixTransformerMode)">
       <summary>
@@ -152,7 +152,7 @@
         在使用之前，请调用 <see cref="M:FanKit.Transformers.CanvasTransformer.ReloadMatrix"/> 方法。
       </summary>
       <param name="mode"> 逆矩阵模式。 </param>
-      <returns> 乘积逆矩阵。 </returns>
+      <returns> 产生的逆矩阵。 </returns>
     </member>
     <member name="M:FanKit.Transformers.CanvasTransformer.ReloadMatrix">
       <summary>
@@ -1982,7 +1982,7 @@
         抓拍
       </summary>
       <param name="move"> 移动向量。 </param>
-      <returns> 乘积向量。 </returns>
+      <returns> 产生的向量。 </returns>
     </member>
     <member name="M:FanKit.Transformers.BorderSnapBase`1.SetSnapMove(System.Numerics.Vector2)">
       <summary>
@@ -1994,7 +1994,7 @@
       <summary>
         获取 <see cref="F:FanKit.Transformers.SnapBase`2.XSnap"/> 和 <see cref="F:FanKit.Transformers.SnapBase`2.XSnap"/>。
       </summary>
-      <returns> 乘积向量。 </returns>
+      <returns> 产生的向量。 </returns>
     </member>
     <member name="M:FanKit.Transformers.BorderSnapBase`1.SetXSnapMove(System.Single,`0)">
       <summary>
@@ -2064,7 +2064,7 @@
         抓拍
       </summary>
       <param name="point"> 点。 </param>
-      <returns> 乘积向量。 </returns>
+      <returns> 产生的向量。 </returns>
     </member>
     <member name="M:FanKit.Transformers.VectorSnapBase`1.SetSnap(System.Numerics.Vector2)">
       <summary>
@@ -2076,7 +2076,7 @@
       <summary>
         获取 <see cref="F:FanKit.Transformers.SnapBase`2.XSnap"/> 和 <see cref="F:FanKit.Transformers.SnapBase`2.XSnap"/>。
       </summary>
-      <returns> 乘积向量。 </returns>
+      <returns> 产生的向量。 </returns>
     </member>
     <member name="M:FanKit.Transformers.VectorSnapBase`1.SetXSnap(System.Single,`0)">
       <summary>
@@ -3182,7 +3182,7 @@
       <summary>
         获取变换者矩阵的结果矩阵。
       </summary>
-      <returns> 乘积矩阵。 </returns>
+      <returns> 产生的矩阵。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerMatrix.CacheTransform">
       <summary>
@@ -3547,7 +3547,7 @@
       </summary>
       <param name="nearPoint"> 到变换者上直线中到外点的最近点。 </param>
       <param name="farPoint"> 到变换者上直线中最外点的距离。 </param>
-      <returns> 乘积点。 </returns>
+      <returns> 产生的点。 </returns>
     </member>
     <member name="M:FanKit.Math.InQuadrangle(System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>
@@ -3567,7 +3567,7 @@
       <param name="point"> 点。 </param>
       <param name="lineA"> 线的第一点。 </param>
       <param name="lineB"> 第二行。 </param>
-      <returns> 乘积向量。 </returns>
+      <returns> 产生的向量。 </returns>
     </member>
     <member name="M:FanKit.Math.IntersectionPoint(System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>
@@ -3577,7 +3577,7 @@
       <param name="line1B"> 第一行第二点。 </param>
       <param name="line2A"> 第二行第一点。 </param>
       <param name="line2B"> 第二行第二点。 </param>
-      <returns> 乘积向量。 </returns>
+      <returns> 产生的向量。 </returns>
     </member>
     <member name="M:FanKit.Math.RadiansToVector(System.Single,System.Numerics.Vector2,System.Single)">
       <summary>
@@ -3586,14 +3586,14 @@
       <param name="radians"> 弧度。 </param>
       <param name="center"> 坐标系的中心。 </param>
       <param name="length"> 向量的长度。 </param>
-      <returns> 乘积向量。 </returns>
+      <returns> 产生的向量。 </returns>
     </member>
     <member name="M:FanKit.Math.VectorToRadians(System.Numerics.Vector2)">
       <summary>
         在坐标系中获取向量的弧度。
       </summary>
       <param name="vector"> 向量。 </param>
-      <returns> 乘积弧度。 </returns>
+      <returns> 产生的弧度。 </returns>
     </member>
   </members>
 </doc>
