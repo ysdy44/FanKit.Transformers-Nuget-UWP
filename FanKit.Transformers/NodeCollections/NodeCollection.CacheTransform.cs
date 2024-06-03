@@ -73,7 +73,7 @@ namespace FanKit.Transformers
         /// <summary>
         /// Transforms the node by the given matrix.
         /// </summary>
-        /// <param name="matrix"> The resulting matrix. </param>  
+        /// <param name="matrix"> The resulting matrix. </param>
         public void TransformMultipliesOnlySelected(Matrix3x2 matrix)
         {
             foreach (Node node in this)

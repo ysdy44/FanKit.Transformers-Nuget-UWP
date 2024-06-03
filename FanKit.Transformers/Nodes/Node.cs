@@ -3,7 +3,7 @@ using System.Numerics;
 
 namespace FanKit.Transformers
 {
-    /// <summary>  
+    /// <summary>
     /// Nodes of the Bezier Curve.
     /// </summary>
     public partial class Node : ICacheTransform

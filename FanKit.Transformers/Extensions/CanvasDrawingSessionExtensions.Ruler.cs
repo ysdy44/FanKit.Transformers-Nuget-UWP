@@ -192,7 +192,7 @@ namespace FanKit.Transformers
 
         /// <summary>
         /// Draw a Ruler.
-        /// </summary>      
+        /// </summary>
         /// <param name="drawingSession"> The drawing-session. </param>
         /// <param name="canvasTransformer"> The canvas-transformer. </param>
         /// <param name="rulerWidth"> The width of the ruler. </param>
