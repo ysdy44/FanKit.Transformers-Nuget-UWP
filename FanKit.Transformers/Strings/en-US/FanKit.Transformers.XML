@@ -486,7 +486,7 @@
       <summary>
         Initialize a <see cref="T:FanKit.Transformers.NodeCollection"/>.
       </summary>
-      <param name="left"> The frist point. </param>
+      <param name="left"> The first point. </param>
       <param name="right"> The second point. </param>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.#ctor(Microsoft.Graphics.Canvas.Geometry.CanvasGeometry)">
@@ -753,7 +753,7 @@
         Draw a line and the DodgerBlue color.
       </summary>
       <param name="drawingSession"> The drawing-session. </param>
-      <param name="point0"> The frist point. </param>
+      <param name="point0"> The first point. </param>
       <param name="point1"> The second point. </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawThickLine(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2,System.Numerics.Vector2)">
@@ -761,7 +761,7 @@
         Draw a thick line.
       </summary>
       <param name="drawingSession"> The drawing-session. </param>
-      <param name="point0"> The frist point. </param>
+      <param name="point0"> The first point. </param>
       <param name="point1"> The second point. </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawEllipseDodgerBlue(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2,System.Single,System.Single)">
@@ -2310,14 +2310,14 @@
       <summary>
         Initialize a transformer.
       </summary>
-      <param name="pointA"> The frist point of transformer. </param>
+      <param name="pointA"> The first point of transformer. </param>
       <param name="pointB"> The second point of transformer. </param>
     </member>
     <member name="M:FanKit.Transformers.Transformer.#ctor(System.Numerics.Vector2,System.Numerics.Vector2,System.Boolean,System.Boolean)">
       <summary>
         Initialize a transformer.
       </summary>
-      <param name="pointA"> The frist point of transformer. </param>
+      <param name="pointA"> The first point of transformer. </param>
       <param name="pointB"> The second point of transformer. </param>
       <param name="isCenter"> Scaling around the center. </param>
       <param name="isRatio"> Maintain a ratio when scaling. </param>
@@ -3168,7 +3168,7 @@
         Initialize a <see cref="T:FanKit.Transformers.TransformerMatrix"/>.
       </summary>
       <param name="pointA">
-        The frist point of <see cref="T:FanKit.Transformers.TransformerMatrix"/>.
+        The first point of <see cref="T:FanKit.Transformers.TransformerMatrix"/>.
       </param>
       <param name="pointB">
         The second point of <see cref="T:FanKit.Transformers.TransformerMatrix"/>.
@@ -3261,14 +3261,14 @@
       <summary>
         Initialize a <see cref="T:FanKit.Transformers.TransformerRect"/>.
       </summary>
-      <param name="pointA"> The frist point of rectangle. </param>
+      <param name="pointA"> The first point of rectangle. </param>
       <param name="pointB"> The second point of rectangle. </param>
     </member>
     <member name="M:FanKit.Transformers.TransformerRect.#ctor(System.Numerics.Vector2,System.Numerics.Vector2,System.Boolean,System.Boolean)">
       <summary>
         Initialize a <see cref="T:FanKit.Transformers.TransformerRect"/>.
       </summary>
-      <param name="pointA"> The frist point of rectangle. </param>
+      <param name="pointA"> The first point of rectangle. </param>
       <param name="pointB"> The second point of rectangle. </param>
       <param name="isCenter"> Scaling around the center. </param>
       <param name="isSquare"> Equal in width and height. </param>

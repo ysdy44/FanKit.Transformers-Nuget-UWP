@@ -29,7 +29,7 @@ namespace FanKit.Transformers
         /// <summary>
         /// Initialize a <see cref="NodeCollection"/>.
         /// </summary>
-        /// <param name="left"> The frist point. </param>
+        /// <param name="left"> The first point. </param>
         /// <param name="right"> The second point. </param>
         public NodeCollection(Vector2 left, Vector2 right) => this.Nodes = new List<Node>
         {

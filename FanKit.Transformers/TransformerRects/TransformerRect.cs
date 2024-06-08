@@ -14,7 +14,7 @@ namespace FanKit.Transformers
         /// <summary>
         /// Initialize a <see cref="TransformerRect"/>.
         /// </summary>
-        /// <param name="pointA"> The frist point of rectangle. </param>
+        /// <param name="pointA"> The first point of rectangle. </param>
         /// <param name="pointB"> The second point of rectangle. </param>
         public TransformerRect(Vector2 pointA, Vector2 pointB)
         {
@@ -54,7 +54,7 @@ namespace FanKit.Transformers
         /// <summary>
         /// Initialize a <see cref="TransformerRect"/>.
         /// </summary>
-        /// <param name="pointA"> The frist point of rectangle. </param>
+        /// <param name="pointA"> The first point of rectangle. </param>
         /// <param name="pointB"> The second point of rectangle. </param>
         /// <param name="isCenter"> Scaling around the center. </param>
         /// <param name="isSquare"> Equal in width and height. </param>

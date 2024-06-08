@@ -50,7 +50,7 @@ namespace FanKit.Transformers
         /// <summary>
         /// Initialize a transformer.
         /// </summary>
-        /// <param name="pointA"> The frist point of transformer. </param>
+        /// <param name="pointA"> The first point of transformer. </param>
         /// <param name="pointB"> The second point of transformer. </param>
         public Transformer(Vector2 pointA, Vector2 pointB)
         {
@@ -65,7 +65,7 @@ namespace FanKit.Transformers
         /// <summary>
         /// Initialize a transformer.
         /// </summary>
-        /// <param name="pointA"> The frist point of transformer. </param>
+        /// <param name="pointA"> The first point of transformer. </param>
         /// <param name="pointB"> The second point of transformer. </param>
         /// <param name="isCenter"> Scaling around the center. </param>
         /// <param name="isRatio"> Maintain a ratio when scaling. </param>
