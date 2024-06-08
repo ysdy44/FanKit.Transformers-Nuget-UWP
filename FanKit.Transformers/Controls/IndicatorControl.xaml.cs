@@ -7,7 +7,7 @@ using Windows.UI.Xaml.Shapes;
 namespace FanKit.Transformers
 {
     /// <summary>
-    /// Transform indicator control.
+    /// Represents a control that indicates the center point of the transformer.
     /// </summary>
     public sealed partial class IndicatorControl : UserControl
     {

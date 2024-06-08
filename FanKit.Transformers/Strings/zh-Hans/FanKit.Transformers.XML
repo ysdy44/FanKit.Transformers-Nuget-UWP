@@ -1782,7 +1782,7 @@
     </member>
     <member name="T:FanKit.Transformers.IndicatorControl">
       <summary>
-        变换指示控件。
+        表示一个指示变换器中心点的控件。
       </summary>
     </member>
     <member name="E:FanKit.Transformers.IndicatorControl.ModeChanged">
@@ -1929,7 +1929,7 @@
     </member>
     <member name="T:FanKit.Transformers.RemoteControl">
       <summary>
-        变换遥控器。
+        表示一个用来遥控变换器的控件。
       </summary>
     </member>
     <member name="E:FanKit.Transformers.RemoteControl.ValueChangeStarted">

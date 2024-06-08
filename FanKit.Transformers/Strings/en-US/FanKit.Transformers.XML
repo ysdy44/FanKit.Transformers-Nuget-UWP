@@ -1782,7 +1782,7 @@
     </member>
     <member name="T:FanKit.Transformers.IndicatorControl">
       <summary>
-        Transform indicator control.
+        Represents a control that indicates the center point of the transformer.
       </summary>
     </member>
     <member name="E:FanKit.Transformers.IndicatorControl.ModeChanged">
@@ -1929,7 +1929,7 @@
     </member>
     <member name="T:FanKit.Transformers.RemoteControl">
       <summary>
-        Transform remote control.
+        Represents a control that is used to remote the transformer.
       </summary>
     </member>
     <member name="E:FanKit.Transformers.RemoteControl.ValueChangeStarted">
