@@ -10,23 +10,21 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="drawingSession"> The drawing-session. </param>
         /// <param name="point"> The point. </param>
-        public static void DrawNode(this CanvasDrawingSession drawingSession, Vector2 point)
-        {
-            drawingSession.FillCircle(point, 10, Windows.UI.Color.FromArgb(70, 127, 127, 127));
-            drawingSession.FillCircle(point, 8, Windows.UI.Colors.DodgerBlue);
-            drawingSession.FillCircle(point, 6, Windows.UI.Colors.White);
-        }
+        public static void DrawNode(this CanvasDrawingSession drawingSession, Vector2 point) => CanvasDrawingSessionExtensions.DrawNode1Core(drawingSession, point.X, point.Y, Windows.UI.Colors.DodgerBlue);
+
         /// <summary>
         /// Draw a ⊙.
         /// </summary>
         /// <param name="drawingSession"> The drawing-session. </param>
         /// <param name="point"> The point. </param>
         /// <param name="accentColor"> The accent color. </param>
-        public static void DrawNode(this CanvasDrawingSession drawingSession, Vector2 point, Windows.UI.Color accentColor)
+        public static void DrawNode(this CanvasDrawingSession drawingSession, Vector2 point, Windows.UI.Color accentColor) => CanvasDrawingSessionExtensions.DrawNode1Core(drawingSession, point.X, point.Y, accentColor);
+
+        private static void DrawNode1Core(CanvasDrawingSession drawingSession, float x, float y, Windows.UI.Color accentColor)
         {
-            drawingSession.FillCircle(point, 10, Windows.UI.Color.FromArgb(70, 127, 127, 127));
-            drawingSession.FillCircle(point, 8, accentColor);
-            drawingSession.FillCircle(point, 6, Windows.UI.Colors.White);
+            drawingSession.FillCircle(x, y, 10, Windows.UI.Color.FromArgb(70, 127, 127, 127));
+            drawingSession.FillCircle(x, y, 8, accentColor);
+            drawingSession.FillCircle(x, y, 6, Windows.UI.Colors.White);
         }
 
 
@@ -35,23 +33,21 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="drawingSession"> The drawing-session. </param>
         /// <param name="point"> The point. </param>
-        public static void DrawNode2(this CanvasDrawingSession drawingSession, Vector2 point)
-        {
-            drawingSession.FillCircle(point, 10, Windows.UI.Color.FromArgb(70, 127, 127, 127));
-            drawingSession.FillCircle(point, 8, Windows.UI.Colors.White);
-            drawingSession.FillCircle(point, 6, Windows.UI.Colors.DodgerBlue);
-        }
+        public static void DrawNode2(this CanvasDrawingSession drawingSession, Vector2 point) => CanvasDrawingSessionExtensions.DrawNode2Core(drawingSession, point.X, point.Y, Windows.UI.Colors.DodgerBlue);
+    
         /// <summary>
         /// Draw a ◉.
         /// </summary>
         /// <param name="drawingSession"> The drawing-session. </param>
         /// <param name="point"> The point. </param>
         /// <param name="accentColor"> The accent color. </param>
-        public static void DrawNode2(this CanvasDrawingSession drawingSession, Vector2 point, Windows.UI.Color accentColor)
+        public static void DrawNode2(this CanvasDrawingSession drawingSession, Vector2 point, Windows.UI.Color accentColor) => CanvasDrawingSessionExtensions.DrawNode2Core(drawingSession, point.X, point.Y, accentColor);
+
+        private static void DrawNode2Core(CanvasDrawingSession drawingSession, float x, float y, Windows.UI.Color accentColor)
         {
-            drawingSession.FillCircle(point, 10, Windows.UI.Color.FromArgb(70, 127, 127, 127));
-            drawingSession.FillCircle(point, 8, Windows.UI.Colors.White);
-            drawingSession.FillCircle(point, 6, accentColor);
+            drawingSession.FillCircle(x, y, 10, Windows.UI.Color.FromArgb(70, 127, 127, 127));
+            drawingSession.FillCircle(x, y, 8, Windows.UI.Colors.White);
+            drawingSession.FillCircle(x, y, 6, accentColor);
         }
 
 
@@ -60,23 +56,21 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="drawingSession"> The drawing-session. </param>
         /// <param name="point"> The point. </param>
-        public static void DrawNode3(this CanvasDrawingSession drawingSession, Vector2 point)
-        {
-            drawingSession.FillRectangle(point.X - 7, point.Y - 7, 14, 14, Windows.UI.Color.FromArgb(70, 127, 127, 127));
-            drawingSession.FillRectangle(point.X - 6, point.Y - 6, 12, 12, Windows.UI.Colors.DodgerBlue);
-            drawingSession.FillRectangle(point.X - 5, point.Y - 5, 10, 10, Windows.UI.Colors.White);
-        }
+        public static void DrawNode3(this CanvasDrawingSession drawingSession, Vector2 point) => CanvasDrawingSessionExtensions.DrawNode3Core(drawingSession, point.X, point.Y, Windows.UI.Colors.DodgerBlue);
+   
         /// <summary>
         /// Draw a ◻.
         /// </summary>
         /// <param name="drawingSession"> The drawing-session. </param>
         /// <param name="point"> The point. </param>
         /// <param name="accentColor"> The accent color. </param>
-        public static void DrawNode3(this CanvasDrawingSession drawingSession, Vector2 point, Windows.UI.Color accentColor)
+        public static void DrawNode3(this CanvasDrawingSession drawingSession, Vector2 point, Windows.UI.Color accentColor) => CanvasDrawingSessionExtensions.DrawNode3Core(drawingSession, point.X, point.Y, accentColor);
+
+        private static void DrawNode3Core(CanvasDrawingSession drawingSession, float x, float y, Windows.UI.Color accentColor)
         {
-            drawingSession.FillRectangle(point.X - 7, point.Y - 7, 14, 14, Windows.UI.Color.FromArgb(70, 127, 127, 127));
-            drawingSession.FillRectangle(point.X - 6, point.Y - 6, 12, 12, accentColor);
-            drawingSession.FillRectangle(point.X - 5, point.Y - 5, 10, 10, Windows.UI.Colors.White);
+            drawingSession.FillRectangle(x - 7, y - 7, 14, 14, Windows.UI.Color.FromArgb(70, 127, 127, 127));
+            drawingSession.FillRectangle(x - 6, y - 6, 12, 12, accentColor);
+            drawingSession.FillRectangle(x - 5, y - 5, 10, 10, Windows.UI.Colors.White);
         }
 
 
@@ -85,23 +79,21 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="drawingSession"> The drawing-session. </param>
         /// <param name="point"> The point. </param>
-        public static void DrawNode4(this CanvasDrawingSession drawingSession, Vector2 point)
-        {
-            drawingSession.FillRectangle(point.X - 7, point.Y - 7, 14, 14, Windows.UI.Color.FromArgb(70, 127, 127, 127));
-            drawingSession.FillRectangle(point.X - 6, point.Y - 6, 12, 12, Windows.UI.Colors.White);
-            drawingSession.FillRectangle(point.X - 5, point.Y - 5, 10, 10, Windows.UI.Colors.DodgerBlue);
-        }
+        public static void DrawNode4(this CanvasDrawingSession drawingSession, Vector2 point) => CanvasDrawingSessionExtensions.DrawNode4Core(drawingSession, point.X, point.Y, Windows.UI.Colors.DodgerBlue);
+     
         /// <summary>
         /// Draw a ◼.
         /// </summary>
         /// <param name="drawingSession"> The drawing-session. </param>
         /// <param name="point"> The point. </param>
         /// <param name="accentColor"> The accent color. </param>
-        public static void DrawNode4(this CanvasDrawingSession drawingSession, Vector2 point, Windows.UI.Color accentColor)
+        public static void DrawNode4(this CanvasDrawingSession drawingSession, Vector2 point, Windows.UI.Color accentColor) => CanvasDrawingSessionExtensions.DrawNode4Core(drawingSession, point.X, point.Y, accentColor);
+
+        private static void DrawNode4Core(CanvasDrawingSession drawingSession, float x, float y, Windows.UI.Color accentColor)
         {
-            drawingSession.FillRectangle(point.X - 7, point.Y - 7, 14, 14, Windows.UI.Color.FromArgb(70, 127, 127, 127));
-            drawingSession.FillRectangle(point.X - 6, point.Y - 6, 12, 12, Windows.UI.Colors.White);
-            drawingSession.FillRectangle(point.X - 5, point.Y - 5, 10, 10, accentColor);
+            drawingSession.FillRectangle(x - 7, y - 7, 14, 14, Windows.UI.Color.FromArgb(70, 127, 127, 127));
+            drawingSession.FillRectangle(x - 6, y - 6, 12, 12, Windows.UI.Colors.White);
+            drawingSession.FillRectangle(x - 5, y - 5, 10, 10, accentColor);
         }
 
 
@@ -110,21 +102,20 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="drawingSession"> The drawing-session. </param>
         /// <param name="point"> The point. </param>
-        public static void DrawNode5(this CanvasDrawingSession drawingSession, Vector2 point)
-        {
-            drawingSession.FillCircle(point, 6, Windows.UI.Colors.DodgerBlue);
-            drawingSession.FillCircle(point, 5, Windows.UI.Colors.White);
-        }
+        public static void DrawNode5(this CanvasDrawingSession drawingSession, Vector2 point) => CanvasDrawingSessionExtensions.DrawNode5Core(drawingSession, point.X, point.Y, Windows.UI.Colors.DodgerBlue);
+       
         /// <summary>
         /// Draw a ◌.
         /// </summary>
         /// <param name="drawingSession"> The drawing-session. </param>
         /// <param name="point"> The point. </param>
         /// <param name="accentColor"> The accent color. </param>
-        public static void DrawNode5(this CanvasDrawingSession drawingSession, Vector2 point, Windows.UI.Color accentColor)
+        public static void DrawNode5(this CanvasDrawingSession drawingSession, Vector2 point, Windows.UI.Color accentColor) => CanvasDrawingSessionExtensions.DrawNode5Core(drawingSession, point.X, point.Y, accentColor);
+
+        private static void DrawNode5Core(CanvasDrawingSession drawingSession, float x, float y, Windows.UI.Color accentColor)
         {
-            drawingSession.FillCircle(point, 6, accentColor);
-            drawingSession.FillCircle(point, 5, Windows.UI.Colors.White);
+            drawingSession.FillCircle(x, y, 6, accentColor);
+            drawingSession.FillCircle(x, y, 5, Windows.UI.Colors.White);
         }
     }
 }
