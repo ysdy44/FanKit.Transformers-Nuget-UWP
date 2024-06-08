@@ -4,18 +4,18 @@ namespace FanKit.Transformers
 {
     partial struct Transformer
     {
-        public static float GetRadians(Vector2 vector)
+        public static float GetRadians(Vector2 centerPoint)
         {
-            float radians = FanKit.Math.VectorToRadians(vector);
+            float radians = FanKit.Math.VectorToRadians(centerPoint);
             if (float.IsNaN(radians)) return 0.0f;
 
             float value = radians * 180.0f / FanKit.Math.Pi;
             return value % 180.0f;
         }
 
-        public static float GetSkew(Vector2 vector, float radians)
+        public static float GetSkew(Vector2 centerPoint, float radians)
         {
-            float skew = FanKit.Math.VectorToRadians(vector);
+            float skew = FanKit.Math.VectorToRadians(centerPoint);
             if (float.IsNaN(skew)) return 0;
 
             skew = skew * 180.0f / FanKit.Math.Pi;

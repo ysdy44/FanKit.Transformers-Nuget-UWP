@@ -10,7 +10,7 @@
         /// <summary> Arrow. </summary>
         Arrow,
 
-        /// <summary> Arrow. </summary>
+        // <summary> Arrow. </summary>
         // Round,
     }
 }

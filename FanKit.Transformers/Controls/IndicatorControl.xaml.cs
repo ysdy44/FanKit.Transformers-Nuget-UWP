@@ -18,7 +18,7 @@ namespace FanKit.Transformers
 
         //@VisualState
         IndicatorMode vsMode;
-        public VisualState VisualState
+        private VisualState VisualState
         {
             get
             {
@@ -50,7 +50,7 @@ namespace FanKit.Transformers
         }
 
 
-        public IndicatorMode ModeCore
+        private IndicatorMode ModeCore
         {
             set
             {

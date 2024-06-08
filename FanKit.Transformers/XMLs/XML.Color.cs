@@ -1,5 +1,6 @@
 ﻿using System.Xml.Linq;
 using Windows.UI;
+using Color = Windows.UI.Color;
 
 namespace FanKit.Transformers
 {

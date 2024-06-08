@@ -10,7 +10,7 @@
 
         /// <summary> □ </summary>
         Rectangular,
-        /// <summary> ▢ </summary>
+        // <summary> ▢ </summary>
         //RoundedRectangle,
         /// <summary> ◯ </summary>
         Elliptical,
