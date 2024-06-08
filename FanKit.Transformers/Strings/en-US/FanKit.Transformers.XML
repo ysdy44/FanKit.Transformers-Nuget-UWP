@@ -1248,7 +1248,7 @@
       <param name="transformer"> The transformer. </param>
       <param name="accentColor"> The accent color. </param>
     </member>
-    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrop(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.Transformer,System.Numerics.Matrix3x2,Windows.UI.Color,System.Boolean)">
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrop(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.Transformer,System.Numerics.Matrix3x2,Windows.UI.Color)">
       <summary>
         Draw box and lines on bound，just like 🔳.
       </summary>

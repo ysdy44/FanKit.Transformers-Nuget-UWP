@@ -1248,7 +1248,7 @@
       <param name="transformer"> 变换者。 </param>
       <param name="accentColor"> 强调色。 </param>
     </member>
-    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrop(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.Transformer,System.Numerics.Matrix3x2,Windows.UI.Color,System.Boolean)">
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrop(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.Transformer,System.Numerics.Matrix3x2,Windows.UI.Color)">
       <summary>
         在边界上绘制节点和线，就像 🔳一样。
       </summary>
