@@ -4,6 +4,11 @@ namespace FanKit.Transformers
 {
     partial struct Transformer
     {
+        /// <summary>
+        /// Gets the radians of rotation.
+        /// </summary>
+        /// <param name="centerPoint"> The center point. </param>
+        /// <returns> The product radians. </returns>
         public static float GetRadians(Vector2 centerPoint)
         {
             float radians = FanKit.Math.VectorToRadians(centerPoint);
@@ -13,6 +18,12 @@ namespace FanKit.Transformers
             return value % 180.0f;
         }
 
+        /// <summary>
+        /// Gets the radians of skew.
+        /// </summary>
+        /// <param name="centerPoint"> The center point. </param>
+        /// <param name="radians"> The radians of rotation. </param>
+        /// <returns> The product radians. </returns>
         public static float GetSkew(Vector2 centerPoint, float radians)
         {
             float skew = FanKit.Math.VectorToRadians(centerPoint);

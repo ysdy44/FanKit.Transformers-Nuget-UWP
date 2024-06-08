@@ -73,6 +73,7 @@ namespace FanKit.Transformers
         /// Create a new pie geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
+        /// <param name="transformer"> The source transformer. </param>
         /// <param name="sweepAngle"> The sweep-angle. </param>
         /// <returns> The product geometry. </returns>
         public static CanvasGeometry CreatePie(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformer, float sweepAngle)
@@ -94,6 +95,7 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
         /// <param name="transformer"> The source transformer. </param>
+        /// <param name="matrix"> The matrix. </param>
         /// <param name="sweepAngle"> The sweep-angle. </param>
         /// <returns> The product geometry. </returns>
         public static CanvasGeometry CreatePie(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformer, Matrix3x2 matrix, float sweepAngle)
@@ -145,6 +147,7 @@ namespace FanKit.Transformers
         /// Create a new cookie geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
+        /// <param name="transformer"> The source transformer. </param>
         /// <param name="innerRadius"> The inner-radius. </param>
         /// <param name="sweepAngle"> The sweep-angle. </param>
         /// <returns> The product geometry. </returns>
@@ -182,6 +185,7 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
         /// <param name="transformer"> The source transformer. </param>
+        /// <param name="matrix"> The matrix. </param>
         /// <param name="innerRadius"> The inner-radius. </param>
         /// <param name="sweepAngle"> The sweep-angle. </param>
         /// <returns> The product geometry. </returns>

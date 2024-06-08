@@ -239,7 +239,7 @@ namespace FanKit.Transformers
         /// Create a new capsule geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
-        /// <param name="transformer"> The ITransformer - LTRB. </param>
+        /// <param name="transformer"> The ITransformer-LTRB. </param>
         /// <returns> The product geometry. </returns>
         public static CanvasGeometry CreateCapsule(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformer)
         {
@@ -278,7 +278,7 @@ namespace FanKit.Transformers
         /// Create a new capsule geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
-        /// <param name="transformerLTRB"> The ITransformer - LTRB. </param>
+        /// <param name="transformer"> The ITransformer-LTRB. </param>
         /// <param name="matrix"> The matrix. </param>
         /// <returns> The product geometry. </returns>
         public static CanvasGeometry CreateCapsule(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformer, Matrix3x2 matrix)
@@ -389,6 +389,7 @@ namespace FanKit.Transformers
         /// Create a new heart geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
+        /// <param name="transformer"> The ITransformer-LTRB. </param>
         /// <param name="spread"> The spread. </param>
         /// <returns> The product geometry. </returns>
         public static CanvasGeometry CreateHeart(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformer, float spread)
@@ -403,6 +404,7 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
         /// <param name="transformer"> The source transformer. </param>
+        /// <param name="matrix"> The matrix. </param>
         /// <param name="spread"> The spread. </param>
         /// <returns> The product geometry. </returns>
         public static CanvasGeometry CreateHeart(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformer, Matrix3x2 matrix, float spread)

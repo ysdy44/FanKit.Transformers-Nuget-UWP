@@ -267,6 +267,33 @@ namespace FanKit.Transformers
         }
 
         /// <summary>
+        /// Returns the hash code for this instance.
+        /// </summary>
+        /// <returns> A 32-bit signed integer that is the hash code for this instance. </returns>
+        public override int GetHashCode()
+        {
+            int hashCode = 2045187211;
+            hashCode = hashCode * -1521134295 + this.Left.GetHashCode();
+            hashCode = hashCode * -1521134295 + this.Top.GetHashCode();
+            hashCode = hashCode * -1521134295 + this.Right.GetHashCode();
+            hashCode = hashCode * -1521134295 + this.Bottom.GetHashCode();
+            hashCode = hashCode * -1521134295 + this.CenterX.GetHashCode();
+            hashCode = hashCode * -1521134295 + this.CenterY.GetHashCode();
+            //hashCode = hashCode * -1521134295 + this.Center.GetHashCode();
+            //hashCode = hashCode * -1521134295 + this.CenterLeft.GetHashCode();
+            //hashCode = hashCode * -1521134295 + this.CenterTop.GetHashCode();
+            //hashCode = hashCode * -1521134295 + this.CenterRight.GetHashCode();
+            //hashCode = hashCode * -1521134295 + this.CenterBottom.GetHashCode();
+            //hashCode = hashCode * -1521134295 + this.LeftTop.GetHashCode();
+            //hashCode = hashCode * -1521134295 + this.RightTop.GetHashCode();
+            //hashCode = hashCode * -1521134295 + this.RightBottom.GetHashCode();
+            //hashCode = hashCode * -1521134295 + this.LeftBottom.GetHashCode();
+            //hashCode = hashCode * -1521134295 + this.Horizontal.GetHashCode();
+            //hashCode = hashCode * -1521134295 + this.Vertical.GetHashCode();
+            return hashCode;
+        }
+
+        /// <summary>
         /// Returns a value that indicates whether each pair of elements in two specified nodes is equal.
         /// </summary>
         /// <param name="left"> The first border to compare. </param>

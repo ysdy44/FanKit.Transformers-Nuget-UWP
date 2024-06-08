@@ -740,6 +740,21 @@
         <see cref="F:FanKit.Transformers.NodeType.Node"/> 的类型。
       </summary>
     </member>
+    <member name="F:FanKit.Transformers.NodeType.BeginFigure">
+      <summary>
+        图形的开始。
+      </summary>
+    </member>
+    <member name="F:FanKit.Transformers.NodeType.Node">
+      <summary>
+        节点。
+      </summary>
+    </member>
+    <member name="F:FanKit.Transformers.NodeType.EndFigure">
+      <summary>
+        图形的结束。
+      </summary>
+    </member>
     <member name="T:FanKit.Transformers.CanvasDrawingSessionExtensions">
       <summary>
         <see cref="T:Microsoft.Graphics.Canvas.CanvasDrawingSession"/> 的扩展。
@@ -1451,6 +1466,7 @@
       <param name="lengthMode"> 长度模式。 </param>
       <param name="angleMode"> 角度模式。 </param>
       <param name="point"> 点。 </param>
+      <param name="node"> 节点。 </param>
       <param name="isLeftControlPoint">
         <see cref="F:FanKit.Transformers.Node.LeftControlPoint"/> 或 <see cref="F:FanKit.Transformers.Node.RightControlPoint"/>。
       </param>
@@ -1715,7 +1731,7 @@
       </summary>
     </member>
     <member name="T:FanKit.Transformers.ICacheTransform">
-      <summary>        
+      <summary>
         为变换中的图形类提供接口。
       </summary>
     </member>
@@ -2100,7 +2116,7 @@
     </member>
     <member name="M:FanKit.Transformers.VectorSnapBase`1.DrawNode2(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Matrix3x2)">
       <summary>
-        绘制⊙。
+        绘制 ⊙。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="matrix"> 矩阵。 </param>
@@ -2369,6 +2385,12 @@
       <param name="other"> 与该实例进行比较的变换者。 </param>
       <returns> 如果另一个变换者与此实例相等，则返回**true**，否则返回**false**。 </returns>
     </member>
+    <member name="M:FanKit.Transformers.Transformer.GetHashCode">
+      <summary>
+        返回此实例的哈希码。
+      </summary>
+      <returns> 一个是此实例的哈希码的 32 位有符号整型。 </returns>
+    </member>
     <member name="M:FanKit.Transformers.Transformer.op_Equality(FanKit.Transformers.Transformer,FanKit.Transformers.Transformer)">
       <summary>
         返回一个值，该值指示两个指定节点中的每对元素是否相等。
@@ -2470,6 +2492,21 @@
       <param name="source"> 源变换者。 </param>
       <param name="destination"> 目标变换者。 </param>
       <returns> 单应性矩阵。 </returns>
+    </member>
+    <member name="M:FanKit.Transformers.Transformer.GetRadians(System.Numerics.Vector2)">
+      <summary>
+        获取旋转弧度。
+      </summary>
+      <param name="centerPoint"> 中心点。 </param>
+      <returns> 产生的弧度。 </returns>
+    </member>
+    <member name="M:FanKit.Transformers.Transformer.GetSkew(System.Numerics.Vector2,System.Single)">
+      <summary>
+        获取倾斜弧度。
+      </summary>
+      <param name="centerPoint"> 中心点。 </param>
+      <param name="radians"> 旋转弧度。 </param>
+      <returns> 产生的弧度。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.TransformX(System.Single,FanKit.Transformers.IndicatorMode)">
       <summary>
@@ -2661,6 +2698,12 @@
       </summary>
       <param name="other"> 与该实例进行比较的变换者边界。 </param>
       <returns> 如果另一个变换者边界等于此实例，则返回**true**，否则返回**false**。 </returns>
+    </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.GetHashCode">
+      <summary>
+        返回此实例的哈希码。
+      </summary>
+      <returns> 一个是此实例的哈希码的 32 位有符号整型。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.op_Equality(FanKit.Transformers.TransformerBorder,FanKit.Transformers.TransformerBorder)">
       <summary>
@@ -2915,6 +2958,7 @@
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
       <param name="transformerLTRB"> 变换者LTRB。 </param>
+      <param name="center"> 中心的值， </param>
       <returns> 产生的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateTriangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Single)">
@@ -2924,6 +2968,7 @@
       <param name="resourceCreator"> 资源创建者。 </param>
       <param name="transformerLTRB"> 变换者LTRB。 </param>
       <param name="matrix"> 矩阵。 </param>
+      <param name="center"> 中心的值， </param>
       <returns> 产生的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateTriangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Single)">
@@ -2935,6 +2980,7 @@
       <param name="rightTop"> 右上角。 </param>
       <param name="rightBottom"> 右下角。 </param>
       <param name="leftBottom"> 左下角。 </param>
+      <param name="center"> 中心的值， </param>
       <returns> 产生的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateTriangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Matrix3x2,System.Single)">
@@ -2947,7 +2993,7 @@
       <param name="rightBottom"> 右下角。 </param>
       <param name="leftBottom"> 左下角。 </param>
       <param name="matrix"> 矩阵。 </param>
-      <param name="matrix"> 矩阵。 </param>
+      <param name="center"> 中心的值， </param>
       <returns> 产生的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateDiamond(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Single)">
@@ -2955,6 +3001,7 @@
         创建一个新的菱形几何形状。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="transformer"> 变换者LTRB。 </param>
       <param name="mid"> 中间值。 </param>
       <returns> 产生的几何形状。 </returns>
     </member>
@@ -2964,6 +3011,7 @@
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
       <param name="transformer"> 源变换者。 </param>
+      <param name="matrix"> 矩阵。 </param>
       <param name="mid"> 中间值。 </param>
       <returns> 产生的几何形状。 </returns>
     </member>
@@ -2991,6 +3039,7 @@
         创建一个新的星形几何形状。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="transformer"> 变换者LTRB。 </param>
       <param name="points"> 点数。 </param>
       <param name="innerRadius"> 内部半径。 </param>
       <returns> 产生的几何形状。 </returns>
@@ -3001,6 +3050,7 @@
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
       <param name="transformer"> 源变换者。 </param>
+      <param name="matrix"> 矩阵。 </param>
       <param name="points"> 点数。 </param>
       <param name="innerRadius"> 内部半径。 </param>
       <returns> 产生的几何形状。 </returns>
@@ -3010,6 +3060,7 @@
         创建一个新的齿轮几何形状。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="transformer"> 变换者LTRB。 </param>
       <param name="count"> 点数。 </param>
       <param name="innerRadius"> 内部半径。 </param>
       <param name="tooth"> 外齿。 </param>
@@ -3022,6 +3073,7 @@
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
       <param name="transformer"> 源变换者。 </param>
+      <param name="matrix"> 矩阵。 </param>
       <param name="count"> 点数。 </param>
       <param name="innerRadius"> 内部半径。 </param>
       <param name="tooth"> 外齿。 </param>
@@ -3052,6 +3104,7 @@
         创建一个新的饼图几何形状。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="transformer"> 变换者LTRB。 </param>
       <param name="sweepAngle"> 扫描角度。 </param>
       <returns> 产生的几何形状。 </returns>
     </member>
@@ -3061,6 +3114,7 @@
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
       <param name="transformer"> 源变换者。 </param>
+      <param name="matrix"> 矩阵。 </param>
       <param name="sweepAngle"> 扫描角度。 </param>
       <returns> 产生的几何形状。 </returns>
     </member>
@@ -3069,6 +3123,7 @@
         创建一个新的曲奇饼几何形状。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="transformer"> 变换者LTRB。 </param>
       <param name="innerRadius"> 内部半径。 </param>
       <param name="sweepAngle"> 扫描角度。 </param>
       <returns> 产生的几何形状。 </returns>
@@ -3079,6 +3134,7 @@
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
       <param name="transformer"> 源变换者。 </param>
+      <param name="matrix"> 矩阵。 </param>
       <param name="innerRadius"> 内部半径。 </param>
       <param name="sweepAngle"> 扫描角度。 </param>
       <returns> 产生的几何形状。 </returns>
@@ -3123,7 +3179,7 @@
         创建一个新的胶囊几何形状。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
-      <param name="transformerLTRB"> 变换者LTRB。 </param>
+      <param name="transformer"> 变换者 LTRB。 </param>
       <param name="matrix"> 矩阵。 </param>
       <returns> 产生的几何形状。 </returns>
     </member>
@@ -3132,6 +3188,7 @@
         创建一个新的心脏几何形状。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="transformer"> 变换者LTRB。 </param>
       <param name="spread"> 扩展。 </param>
       <returns> 产生的几何形状。 </returns>
     </member>
@@ -3141,6 +3198,7 @@
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
       <param name="transformer"> 源变换者。 </param>
+      <param name="matrix"> 矩阵。 </param>
       <param name="spread"> 扩展。 </param>
       <returns> 产生的几何形状。 </returns>
     </member>

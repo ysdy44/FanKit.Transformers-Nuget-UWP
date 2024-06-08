@@ -131,7 +131,7 @@ namespace FanKit.Transformers
         /// <param name="value2"> The source vector. </param>
         /// <returns> The summed transformer. </returns>
         public static Transformer operator +(Transformer value1, Vector2 value2) => Transformer.Add(value1, value2);
-        
+
         /// <summary>
         /// Multiplies transformer and vector  and returns the resulting transformer.
         /// </summary>
@@ -153,6 +153,31 @@ namespace FanKit.Transformers
             if (this.RightBottom != other.RightBottom) return false;
             if (this.LeftBottom != other.LeftBottom) return false;
             return true;
+        }
+
+        /// <summary>
+        /// Returns the hash code for this instance.
+        /// </summary>
+        /// <returns> A 32-bit signed integer that is the hash code for this instance. </returns>
+        public override int GetHashCode()
+        {
+            int hashCode = 848733247;
+            hashCode = hashCode * -1521134295 + this.LeftTop.GetHashCode();
+            hashCode = hashCode * -1521134295 + this.RightTop.GetHashCode();
+            hashCode = hashCode * -1521134295 + this.RightBottom.GetHashCode();
+            hashCode = hashCode * -1521134295 + this.LeftBottom.GetHashCode();
+            //hashCode = hashCode * -1521134295 + this.Center.GetHashCode();
+            //hashCode = hashCode * -1521134295 + this.CenterLeft.GetHashCode();
+            //hashCode = hashCode * -1521134295 + this.CenterTop.GetHashCode();
+            //hashCode = hashCode * -1521134295 + this.CenterRight.GetHashCode();
+            //hashCode = hashCode * -1521134295 + this.CenterBottom.GetHashCode();
+            //hashCode = hashCode * -1521134295 + this.MinX.GetHashCode();
+            //hashCode = hashCode * -1521134295 + this.MaxX.GetHashCode();
+            //hashCode = hashCode * -1521134295 + this.MinY.GetHashCode();
+            //hashCode = hashCode * -1521134295 + this.MaxY.GetHashCode();
+            //hashCode = hashCode * -1521134295 + this.Horizontal.GetHashCode();
+            //hashCode = hashCode * -1521134295 + this.Vertical.GetHashCode();
+            return hashCode;
         }
 
         /// <summary>

@@ -71,6 +71,7 @@ namespace FanKit.Transformers
         /// Create a new star geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
+        /// <param name="transformer"> The source transformer. </param>
         /// <param name="points"> The points count. </param>
         /// <param name="innerRadius"> The inner-radius. </param>
         /// <returns> The product geometry. </returns>
@@ -86,6 +87,7 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
         /// <param name="transformer"> The source transformer. </param>
+        /// <param name="matrix"> The matrix. </param>
         /// <param name="points"> The points count. </param>
         /// <param name="innerRadius"> The inner-radius. </param>
         /// <returns> The product geometry. </returns>
@@ -135,6 +137,7 @@ namespace FanKit.Transformers
         /// Create a new cog geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
+        /// <param name="transformer"> The source transformer. </param>
         /// <param name="count"> The points count. </param>
         /// <param name="innerRadius"> The inner-radius. </param>
         /// <param name="tooth"> The tooth. </param>
@@ -152,6 +155,7 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
         /// <param name="transformer"> The source transformer. </param>
+        /// <param name="matrix"> The matrix. </param>
         /// <param name="count"> The points count. </param>
         /// <param name="innerRadius"> The inner-radius. </param>
         /// <param name="tooth"> The tooth. </param>

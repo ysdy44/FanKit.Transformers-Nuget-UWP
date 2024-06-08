@@ -740,6 +740,21 @@
         Type of <see cref="F:FanKit.Transformers.NodeType.Node"/>.
       </summary>
     </member>
+    <member name="F:FanKit.Transformers.NodeType.BeginFigure">
+      <summary>
+        The beginning of a figure.
+      </summary>
+    </member>
+    <member name="F:FanKit.Transformers.NodeType.Node">
+      <summary>
+        The node.
+      </summary>
+    </member>
+    <member name="F:FanKit.Transformers.NodeType.EndFigure">
+      <summary>
+        The end of a figure.
+      </summary>
+    </member>
     <member name="T:FanKit.Transformers.CanvasDrawingSessionExtensions">
       <summary>
         Extensions of <see cref="T:Microsoft.Graphics.Canvas.CanvasDrawingSession"/>.
@@ -1451,6 +1466,7 @@
       <param name="lengthMode"> The length mode. </param>
       <param name="angleMode"> The angle mode. </param>
       <param name="point"> The point. </param>
+      <param name="node"> The node. </param>
       <param name="isLeftControlPoint">
         <see cref="F:FanKit.Transformers.Node.LeftControlPoint"/> or <see cref="F:FanKit.Transformers.Node.RightControlPoint"/>.
       </param>
@@ -2369,6 +2385,12 @@
       <param name="other"> The Transformer to compare this instance to. </param>
       <returns> Return **true** if the other Transformer is equal to this instance, otherwise **false**. </returns>
     </member>
+    <member name="M:FanKit.Transformers.Transformer.GetHashCode">
+      <summary>
+        Returns the hash code for this instance.
+      </summary>
+      <returns> A 32-bit signed integer that is the hash code for this instance. </returns>
+    </member>
     <member name="M:FanKit.Transformers.Transformer.op_Equality(FanKit.Transformers.Transformer,FanKit.Transformers.Transformer)">
       <summary>
         Returns a value that indicates whether each pair of elements in two specified nodes is equal.
@@ -2470,6 +2492,21 @@
       <param name="source"> The source transformer. </param>
       <param name="destination"> The destination transformer. </param>
       <returns> The homologous matrix. </returns>
+    </member>
+    <member name="M:FanKit.Transformers.Transformer.GetRadians(System.Numerics.Vector2)">
+      <summary>
+        Gets the radians of rotation.
+      </summary>
+      <param name="centerPoint"> The center point. </param>
+      <returns> The product radians. </returns>
+    </member>
+    <member name="M:FanKit.Transformers.Transformer.GetSkew(System.Numerics.Vector2,System.Single)">
+      <summary>
+        Gets the radians of skew.
+      </summary>
+      <param name="centerPoint"> The center point. </param>
+      <param name="radians"> The radians of rotation. </param>
+      <returns> The product radians. </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.TransformX(System.Single,FanKit.Transformers.IndicatorMode)">
       <summary>
@@ -2662,6 +2699,12 @@
       <param name="other"> The TransformerBorder to compare this instance to. </param>
       <returns> Return **true** if the other TransformerBorder is equal to this instance, otherwise **false**. </returns>
     </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.GetHashCode">
+      <summary>
+        Returns the hash code for this instance.
+      </summary>
+      <returns> A 32-bit signed integer that is the hash code for this instance. </returns>
+    </member>
     <member name="M:FanKit.Transformers.TransformerBorder.op_Equality(FanKit.Transformers.TransformerBorder,FanKit.Transformers.TransformerBorder)">
       <summary>
         Returns a value that indicates whether each pair of elements in two specified nodes is equal.
@@ -2697,7 +2740,7 @@
       <summary> Gets border's center of Y. </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerBorder.Center">
-      <summary> Gets rectangle's center point. </summary>
+      <summary> Gets border's center point. </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerBorder.CenterLeft">
       <summary> Gets the center left vector. </summary>
@@ -2915,6 +2958,7 @@
       </summary>
       <param name="resourceCreator"> The resource-creator. </param>
       <param name="transformerLTRB"> The ITransformer-LTRB. </param>
+      <param name="center"> The value of center. </param>
       <returns> The product geometry. </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateTriangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Single)">
@@ -2924,6 +2968,7 @@
       <param name="resourceCreator"> The resource-creator. </param>
       <param name="transformerLTRB"> The ITransformer-LTRB. </param>
       <param name="matrix"> The matrix. </param>
+      <param name="center"> The value of center. </param>
       <returns> The product geometry. </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateTriangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Single)">
@@ -2935,6 +2980,7 @@
       <param name="rightTop"> The right-top point. </param>
       <param name="rightBottom"> The right-bottom point. </param>
       <param name="leftBottom"> The left-bottom point. </param>
+      <param name="center"> The value of center. </param>
       <returns> The product geometry. </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateTriangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Matrix3x2,System.Single)">
@@ -2947,7 +2993,7 @@
       <param name="rightBottom"> The right-bottom point. </param>
       <param name="leftBottom"> The left-bottom point. </param>
       <param name="matrix"> The matrix. </param>
-      <param name="matrix"> The matrix. </param>
+      <param name="center"> The value of center. </param>
       <returns> The product geometry. </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateDiamond(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Single)">
@@ -2955,6 +3001,7 @@
         Create a new diamond geometry.
       </summary>
       <param name="resourceCreator"> The resource-creator. </param>
+      <param name="transformer"> The ITransformer-LTRB. </param>
       <param name="mid"> The mid value. </param>
       <returns> The product geometry. </returns>
     </member>
@@ -2964,6 +3011,7 @@
       </summary>
       <param name="resourceCreator"> The resource-creator. </param>
       <param name="transformer"> The source transformer. </param>
+      <param name="matrix"> The matrix. </param>
       <param name="mid"> The mid value. </param>
       <returns> The product geometry. </returns>
     </member>
@@ -2991,6 +3039,7 @@
         Create a new star geometry.
       </summary>
       <param name="resourceCreator"> The resource-creator. </param>
+      <param name="transformer"> The ITransformer-LTRB. </param>
       <param name="points"> The points count. </param>
       <param name="innerRadius"> The inner-radius. </param>
       <returns> The product geometry. </returns>
@@ -3001,6 +3050,7 @@
       </summary>
       <param name="resourceCreator"> The resource-creator. </param>
       <param name="transformer"> The source transformer. </param>
+      <param name="matrix"> The matrix. </param>
       <param name="points"> The points count. </param>
       <param name="innerRadius"> The inner-radius. </param>
       <returns> The product geometry. </returns>
@@ -3010,6 +3060,7 @@
         Create a new cog geometry.
       </summary>
       <param name="resourceCreator"> The resource-creator. </param>
+      <param name="transformer"> The ITransformer-LTRB. </param>
       <param name="count"> The points count. </param>
       <param name="innerRadius"> The inner-radius. </param>
       <param name="tooth"> The tooth. </param>
@@ -3022,6 +3073,7 @@
       </summary>
       <param name="resourceCreator"> The resource-creator. </param>
       <param name="transformer"> The source transformer. </param>
+      <param name="matrix"> The matrix. </param>
       <param name="count"> The points count. </param>
       <param name="innerRadius"> The inner-radius. </param>
       <param name="tooth"> The tooth. </param>
@@ -3052,6 +3104,7 @@
         Create a new pie geometry.
       </summary>
       <param name="resourceCreator"> The resource-creator. </param>
+      <param name="transformer"> The ITransformer-LTRB. </param>
       <param name="sweepAngle"> The sweep-angle. </param>
       <returns> The product geometry. </returns>
     </member>
@@ -3061,6 +3114,7 @@
       </summary>
       <param name="resourceCreator"> The resource-creator. </param>
       <param name="transformer"> The source transformer. </param>
+      <param name="matrix"> The matrix. </param>
       <param name="sweepAngle"> The sweep-angle. </param>
       <returns> The product geometry. </returns>
     </member>
@@ -3069,6 +3123,7 @@
         Create a new cookie geometry.
       </summary>
       <param name="resourceCreator"> The resource-creator. </param>
+      <param name="transformer"> The ITransformer-LTRB. </param>
       <param name="innerRadius"> The inner-radius. </param>
       <param name="sweepAngle"> The sweep-angle. </param>
       <returns> The product geometry. </returns>
@@ -3079,6 +3134,7 @@
       </summary>
       <param name="resourceCreator"> The resource-creator. </param>
       <param name="transformer"> The source transformer. </param>
+      <param name="matrix"> The matrix. </param>
       <param name="innerRadius"> The inner-radius. </param>
       <param name="sweepAngle"> The sweep-angle. </param>
       <returns> The product geometry. </returns>
@@ -3123,7 +3179,7 @@
         Create a new capsule geometry.
       </summary>
       <param name="resourceCreator"> The resource-creator. </param>
-      <param name="transformerLTRB"> The ITransformer - LTRB. </param>
+      <param name="transformer"> The ITransformer-LTRB. </param>
       <param name="matrix"> The matrix. </param>
       <returns> The product geometry. </returns>
     </member>
@@ -3132,6 +3188,7 @@
         Create a new heart geometry.
       </summary>
       <param name="resourceCreator"> The resource-creator. </param>
+      <param name="transformer"> The ITransformer-LTRB. </param>
       <param name="spread"> The spread. </param>
       <returns> The product geometry. </returns>
     </member>
@@ -3141,6 +3198,7 @@
       </summary>
       <param name="resourceCreator"> The resource-creator. </param>
       <param name="transformer"> The source transformer. </param>
+      <param name="matrix"> The matrix. </param>
       <param name="spread"> The spread. </param>
       <returns> The product geometry. </returns>
     </member>
@@ -3558,8 +3616,8 @@
         Returns whether the quadrangle contains the specified point.
       </summary>
       <param name="point"> The point. </param>
-      <param name="leftTop"> The quadrangle's left-top point . </param>
-      <param name="rightTop"> The quadrangle's right-top point </param>
+      <param name="leftTop"> The quadrangle's left-top point. </param>
+      <param name="rightTop"> The quadrangle's right-top point. </param>
       <param name="rightBottom"> The quadrangle's right-bottom point. </param>
       <param name="leftBottom"> The quadrangle's left-bottom point. </param>
       <returns> Return **true** if the quadrangle contains the specified point, otherwise **false**. </returns>
