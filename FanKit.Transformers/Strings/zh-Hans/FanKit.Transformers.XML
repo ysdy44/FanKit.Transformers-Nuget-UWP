@@ -1825,31 +1825,49 @@
       <summary> 正常。 </summary>
     </member>
     <member name="F:FanKit.Transformers.IndicatorMode.LeftTop">
-      <summary> LeftTop。 </summary>
+      <summary>
+        <see cref="P:FanKit.Transformers.Transformer.LeftTop"/>。
+      </summary>
     </member>
     <member name="F:FanKit.Transformers.IndicatorMode.RightTop">
-      <summary> RightTop。 </summary>
+      <summary>
+        <see cref="P:FanKit.Transformers.Transformer.RightTop"/>。
+      </summary>
     </member>
     <member name="F:FanKit.Transformers.IndicatorMode.RightBottom">
-      <summary> 右下。 </summary>
+      <summary>
+        <see cref="P:FanKit.Transformers.Transformer.RightBottom"/>。
+      </summary>
     </member>
     <member name="F:FanKit.Transformers.IndicatorMode.LeftBottom">
-      <summary> 左下。 </summary>
+      <summary>
+        <see cref="P:FanKit.Transformers.Transformer.LeftBottom"/>。
+      </summary>
     </member>
     <member name="F:FanKit.Transformers.IndicatorMode.Left">
-      <summary> 左。 </summary>
+      <summary>
+        <see cref="P:FanKit.Transformers.Transformer.CenterLeft"/>。
+      </summary>
     </member>
     <member name="F:FanKit.Transformers.IndicatorMode.Top">
-      <summary> 顶部。 </summary>
+      <summary>
+        <see cref="P:FanKit.Transformers.Transformer.CenterTop"/>。
+      </summary>
     </member>
     <member name="F:FanKit.Transformers.IndicatorMode.Right">
-      <summary> 对。 </summary>
+      <summary>
+        <see cref="P:FanKit.Transformers.Transformer.CenterRight"/>。
+      </summary>
     </member>
     <member name="F:FanKit.Transformers.IndicatorMode.Bottom">
-      <summary> 底部。 </summary>
+      <summary>
+        <see cref="P:FanKit.Transformers.Transformer.CenterBottom"/>。
+      </summary>
     </member>
     <member name="F:FanKit.Transformers.IndicatorMode.Center">
-      <summary> 中心。 </summary>
+      <summary>
+        <see cref="P:FanKit.Transformers.Transformer.Center"/>。
+      </summary>
     </member>
     <member name="T:FanKit.Transformers.IndicatorModeHandler">
       <summary>

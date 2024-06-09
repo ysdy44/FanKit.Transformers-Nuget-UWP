@@ -1,32 +1,50 @@
 ﻿namespace FanKit.Transformers
 {
     /// <summary>
-    /// Mode of <see cref="IndicatorControl"/>. 
+    /// Mode of <see cref="IndicatorControl"/>.
     /// </summary>
     public enum IndicatorMode
     {
         /// <summary> Normal. </summary>
         None,
 
-        /// <summary> LeftTop. </summary>
+        /// <summary>
+        /// <see cref="Transformer.LeftTop"/>.
+        /// </summary>
         LeftTop,
-        /// <summary> RightTop. </summary>
+        /// <summary>
+        /// <see cref="Transformer.RightTop"/>.
+        /// </summary>
         RightTop,
-        /// <summary> RightBottom. </summary>
+        /// <summary>
+        /// <see cref="Transformer.RightBottom"/>.
+        /// </summary>
         RightBottom,
-        /// <summary> LeftBottom. </summary>
+        /// <summary>
+        /// <see cref="Transformer.LeftBottom"/>.
+        /// </summary>
         LeftBottom,
 
-        /// <summary> Left. </summary>
+        /// <summary>
+        /// <see cref="Transformer.CenterLeft"/>.
+        /// </summary>
         Left,
-        /// <summary> Top. </summary>
+        /// <summary>
+        /// <see cref="Transformer.CenterTop"/>.
+        /// </summary>
         Top,
-        /// <summary> Right. </summary>
+        /// <summary>
+        /// <see cref="Transformer.CenterRight"/>.
+        /// </summary>
         Right,
-        /// <summary> Bottom. </summary>
+        /// <summary>
+        /// <see cref="Transformer.CenterBottom"/>.
+        /// </summary>
         Bottom,
 
-        /// <summary> Center. </summary>
+        /// <summary>
+        /// <see cref="Transformer.Center"/>.
+        /// </summary>
         Center,
     }
 }
