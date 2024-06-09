@@ -63,10 +63,10 @@ namespace FanKit
         /// Returns whether the quadrangle contains the specified point.
         /// </summary>
         /// <param name="point"> The point. </param>
-        /// <param name="leftTop"> The quadrangle's left-top point . </param>
-        /// <param name="rightTop"> The quadrangle's right-top point </param>
-        /// <param name="rightBottom"> The quadrangle's right-bottom point. </param>
-        /// <param name="leftBottom"> The quadrangle's left-bottom point. </param>
+        /// <param name="leftTop"> The position of the top-left corner of the quadrangle. </param>
+        /// <param name="rightTop"> The position of the top-right corner of the quadrangle. </param>
+        /// <param name="rightBottom"> The position of the bottom-right corner of the quadrangle. </param>
+        /// <param name="leftBottom"> The position of the bottom-left corner of the quadrangle. </param>
         /// <returns> Return **true** if the quadrangle contains the specified point, otherwise **false**. </returns>
         public static bool InQuadrangle(Vector2 point, Vector2 leftTop, Vector2 rightTop, Vector2 rightBottom, Vector2 leftBottom)
         {

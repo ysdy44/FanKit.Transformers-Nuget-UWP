@@ -4,13 +4,13 @@ namespace FanKit.Transformers
 {
     partial struct Transformer
     {
-        /// <summary> Vector in LeftTop. </summary>
+        /// <summary> Gets or sets the position of the top-left corner of the transformer. </summary>
         public Vector2 LeftTop { get; set; }
-        /// <summary> Vector in RightTop. </summary>
+        /// <summary> Gets or sets the position of the top-right corner of the transformer. </summary>
         public Vector2 RightTop { get; set; }
-        /// <summary> Vector in RightBottom. </summary>
+        /// <summary> Gets or sets the position of the bottom-right corner of the transformer. </summary>
         public Vector2 RightBottom { get; set; }
-        /// <summary> Vector in LeftBottom. </summary>
+        /// <summary> Gets or sets the position of the bottom-left corner of the transformer. </summary>
         public Vector2 LeftBottom { get; set; }
 
 

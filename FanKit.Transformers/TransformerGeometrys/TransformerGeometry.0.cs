@@ -50,10 +50,10 @@ namespace FanKit.Transformers
         /// Create a new rectangle geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
-        /// <param name="leftTop"> The left-top point. </param>
-        /// <param name="rightTop"> The right-top point. </param>
-        /// <param name="rightBottom"> The right-bottom point. </param>
-        /// <param name="leftBottom"> The left-bottom point. </param>
+        /// <param name="leftTop"> The position of the top-left corner of the bounds. </param>
+        /// <param name="rightTop"> The position of the top-right corner of the bounds. </param>
+        /// <param name="rightBottom"> The position of the bottom-right corner of the bounds. </param>
+        /// <param name="leftBottom"> The position of the bottom-left corner of the bounds. </param>
         /// <returns> The product geometry. </returns>
         public static CanvasGeometry CreateRectangle(ICanvasResourceCreator resourceCreator, Vector2 leftTop, Vector2 rightTop, Vector2 rightBottom, Vector2 leftBottom) => TransformerGeometry.CreateRectangleCore(resourceCreator, leftTop, rightTop, rightBottom, leftBottom);
 
@@ -61,10 +61,10 @@ namespace FanKit.Transformers
         /// Create a new rectangle geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
-        /// <param name="leftTop"> The left-top point. </param>
-        /// <param name="rightTop"> The right-top point. </param>
-        /// <param name="rightBottom"> The right-bottom point. </param>
-        /// <param name="leftBottom"> The left-bottom point. </param>
+        /// <param name="leftTop"> The position of the top-left corner of the bounds. </param>
+        /// <param name="rightTop"> The position of the top-right corner of the bounds. </param>
+        /// <param name="rightBottom"> The position of the bottom-right corner of the bounds. </param>
+        /// <param name="leftBottom"> The position of the bottom-left corner of the bounds. </param>
         /// <param name="matrix"> The matrix. </param>
         /// <returns> The product geometry. </returns>
         public static CanvasGeometry CreateRectangle(ICanvasResourceCreator resourceCreator, Vector2 leftTop, Vector2 rightTop, Vector2 rightBottom, Vector2 leftBottom, Matrix3x2 matrix) => TransformerGeometry.CreateRectangleCore(resourceCreator, Vector2.Transform(leftTop, matrix), Vector2.Transform(rightTop, matrix), Vector2.Transform(rightBottom, matrix), Vector2.Transform(leftBottom, matrix));

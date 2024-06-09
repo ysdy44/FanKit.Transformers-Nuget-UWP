@@ -1342,16 +1342,16 @@
       </summary>
     </member>
     <member name="P:FanKit.Transformers.ITransformerLTRB.LeftTop">
-      <summary> 左上方的向量。 </summary>
+      <summary> 获取左上角的位置。 </summary>
     </member>
     <member name="P:FanKit.Transformers.ITransformerLTRB.RightTop">
-      <summary> 右上方的向量。 </summary>
+      <summary> 获取右上角的位置。 </summary>
     </member>
     <member name="P:FanKit.Transformers.ITransformerLTRB.RightBottom">
-      <summary> 右下方的向量。 </summary>
+      <summary> 获取右下角的位置。 </summary>
     </member>
     <member name="P:FanKit.Transformers.ITransformerLTRB.LeftBottom">
-      <summary> 左下方的向量。 </summary>
+      <summary> 获取左下角的位置。 </summary>
     </member>
     <member name="P:FanKit.Transformers.ITransformerLTRB.Center">
       <summary> 获取中心向量。 </summary>
@@ -2773,16 +2773,16 @@
       <summary> 获取中心底部向量。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerBorder.LeftTop">
-      <summary> 获取边界的左上角。 </summary>
+      <summary> 获取边界的左上角的位置。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerBorder.RightTop">
-      <summary> 获取边界的右上角。 </summary>
+      <summary> 获取边界的右上角的位置。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerBorder.RightBottom">
-      <summary> 获取边界的右下角。 </summary>
+      <summary> 获取边界的右下角的位置。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerBorder.LeftBottom">
-      <summary> 获取边界的左下点。 </summary>
+      <summary> 获取边界的左下角的位置。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerBorder.Horizontal">
       <summary> 获取水平向量。 </summary>
@@ -2893,10 +2893,10 @@
         创建一个新的矩形几何形状。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
-      <param name="leftTop"> 左上角。 </param>
-      <param name="rightTop"> 右上角。 </param>
-      <param name="rightBottom"> 右下角。 </param>
-      <param name="leftBottom"> 左下角。 </param>
+      <param name="leftTop"> 边框的左上角的位置。 </param>
+      <param name="rightTop"> 边框的右上角的位置。 </param>
+      <param name="rightBottom"> 边框的右下角的位置。 </param>
+      <param name="leftBottom"> 边框的左下角的位置。 </param>
       <returns> 产生的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateRectangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Matrix3x2)">
@@ -2904,10 +2904,10 @@
         创建一个新的矩形几何形状。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
-      <param name="leftTop"> 左上角。 </param>
-      <param name="rightTop"> 右上角。 </param>
-      <param name="rightBottom"> 右下角。 </param>
-      <param name="leftBottom"> 左下角。 </param>
+      <param name="leftTop"> 边框的左上角的位置。 </param>
+      <param name="rightTop"> 边框的右上角的位置。 </param>
+      <param name="rightBottom"> 边框的右下角的位置。 </param>
+      <param name="leftBottom"> 边框的左下角的位置。 </param>
       <param name="matrix"> 矩阵。 </param>
       <returns> 产生的几何形状。 </returns>
     </member>
@@ -2994,10 +2994,10 @@
         创建一个新的三角形几何形状。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
-      <param name="leftTop"> 左上角。 </param>
-      <param name="rightTop"> 右上角。 </param>
-      <param name="rightBottom"> 右下角。 </param>
-      <param name="leftBottom"> 左下角。 </param>
+      <param name="leftTop"> 边框的左上角的位置。 </param>
+      <param name="rightTop"> 边框的右上角的位置。 </param>
+      <param name="rightBottom"> 边框的右下角的位置。 </param>
+      <param name="leftBottom"> 边框的左下角的位置。 </param>
       <param name="center"> 中心的值， </param>
       <returns> 产生的几何形状。 </returns>
     </member>
@@ -3006,10 +3006,10 @@
         创建一个新的三角形几何形状。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
-      <param name="leftTop"> 左上角。 </param>
-      <param name="rightTop"> 右上角。 </param>
-      <param name="rightBottom"> 右下角。 </param>
-      <param name="leftBottom"> 左下角。 </param>
+      <param name="leftTop"> 边框的左上角的位置。 </param>
+      <param name="rightTop"> 边框的右上角的位置。 </param>
+      <param name="rightBottom"> 边框的右下角的位置。 </param>
+      <param name="leftBottom"> 边框的左下角的位置。 </param>
       <param name="matrix"> 矩阵。 </param>
       <param name="center"> 中心的值， </param>
       <returns> 产生的几何形状。 </returns>
@@ -3432,16 +3432,16 @@
       <summary> 获取中心底部向量。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.LeftTop">
-      <summary> 获取矩形的左上角。 </summary>
+      <summary> 获取矩形的左上角的位置。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.RightTop">
-      <summary> 获取矩形的右上角。 </summary>
+      <summary> 获取矩形的左上角的位置。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.RightBottom">
-      <summary> 获取矩形的右下点。 </summary>
+      <summary> 获取矩形的右下角的位置。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.LeftBottom">
-      <summary> 获取矩形的左下点。 </summary>
+      <summary> 获取矩形的左下角的位置。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.Horizontal">
       <summary> 获取水平向量。 </summary>
@@ -3634,10 +3634,10 @@
         返回四边形是否包含指定的点。
       </summary>
       <param name="point"> 点。 </param>
-      <param name="leftTop"> 四边形的左上角。 </param>
-      <param name="rightTop"> 四边形的右上角点 </param>
-      <param name="rightBottom"> 四边形的右下点。 </param>
-      <param name="leftBottom"> 四边形的左下点。 </param>
+      <param name="leftTop"> 四边形的左上角的位置。 </param>
+      <param name="rightTop"> 四边形的右上角的位置。 </param>
+      <param name="rightBottom"> 四边形的右下角的位置。 </param>
+      <param name="leftBottom"> 四边形的左下角的位置。 </param>
       <returns> 如果四边形包含指定点，则返回**true**，否则返回**false**。 </returns>
     </member>
     <member name="M:FanKit.Math.FootPoint(System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2)">

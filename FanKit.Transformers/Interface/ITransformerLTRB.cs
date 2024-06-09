@@ -7,13 +7,13 @@ namespace FanKit.Transformers
     /// </summary>
     public interface ITransformerLTRB
     {
-        /// <summary> Vector in LeftTop. </summary>
+        /// <summary> Gets the position of the top-left corner. </summary>
         Vector2 LeftTop { get; }
-        /// <summary> Vector in RightTop. </summary>
+        /// <summary> Gets the position of the top-right corner. </summary>
         Vector2 RightTop { get; }
-        /// <summary> Vector in RightBottom. </summary>
+        /// <summary> Gets the position of the bottom-right corner. </summary>
         Vector2 RightBottom { get; }
-        /// <summary> Vector in LeftBottom. </summary>
+        /// <summary> Gets the position of the bottom-left corner. </summary>
         Vector2 LeftBottom { get; }
 
         /// <summary> Gets the center vector. </summary>

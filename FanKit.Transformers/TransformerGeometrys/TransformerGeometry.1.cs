@@ -171,10 +171,10 @@ namespace FanKit.Transformers
         /// Create a new triangle geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
-        /// <param name="leftTop"> The left-top point. </param>
-        /// <param name="rightTop"> The right-top point. </param>
-        /// <param name="rightBottom"> The right-bottom point. </param>
-        /// <param name="leftBottom"> The left-bottom point. </param>
+        /// <param name="leftTop"> The position of the top-left corner of the bounds. </param>
+        /// <param name="rightTop"> The position of the top-right corner of the bounds. </param>
+        /// <param name="rightBottom"> The position of the bottom-right corner of the bounds. </param>
+        /// <param name="leftBottom"> The position of the bottom-left corner of the bounds. </param>
         /// <param name="center"> The value of center. </param>
         /// <returns> The product geometry. </returns>
         public static CanvasGeometry CreateTriangle(ICanvasResourceCreator resourceCreator, Vector2 leftTop, Vector2 rightTop, Vector2 rightBottom, Vector2 leftBottom, float center) => TransformerGeometry.CreateTriangleCore(resourceCreator, leftTop, rightTop, rightBottom, leftBottom, center);
@@ -183,10 +183,10 @@ namespace FanKit.Transformers
         /// Create a new triangle geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
-        /// <param name="leftTop"> The left-top point. </param>
-        /// <param name="rightTop"> The right-top point. </param>
-        /// <param name="rightBottom"> The right-bottom point. </param>
-        /// <param name="leftBottom"> The left-bottom point. </param>
+        /// <param name="leftTop"> The position of the top-left corner of the bounds. </param>
+        /// <param name="rightTop"> The position of the top-right corner of the bounds. </param>
+        /// <param name="rightBottom"> The position of the bottom-right corner of the bounds. </param>
+        /// <param name="leftBottom"> The position of the bottom-left corner of the bounds. </param>
         /// <param name="matrix"> The matrix. </param>
         /// <param name="center"> The value of center. </param>
         /// <returns> The product geometry. </returns>

@@ -1342,16 +1342,16 @@
       </summary>
     </member>
     <member name="P:FanKit.Transformers.ITransformerLTRB.LeftTop">
-      <summary> Vector in LeftTop. </summary>
+      <summary> Gets the position of the top-left corner. </summary>
     </member>
     <member name="P:FanKit.Transformers.ITransformerLTRB.RightTop">
-      <summary> Vector in RightTop. </summary>
+      <summary> Gets the position of the top-right corner. </summary>
     </member>
     <member name="P:FanKit.Transformers.ITransformerLTRB.RightBottom">
-      <summary> Vector in RightBottom. </summary>
+      <summary> Gets the position of the bottom-right corner. </summary>
     </member>
     <member name="P:FanKit.Transformers.ITransformerLTRB.LeftBottom">
-      <summary> Vector in LeftBottom. </summary>
+      <summary> Gets the position of the bottom-left corner. </summary>
     </member>
     <member name="P:FanKit.Transformers.ITransformerLTRB.Center">
       <summary> Gets the center vector. </summary>
@@ -2192,16 +2192,16 @@
       <returns> The provided transformer. </returns>
     </member>
     <member name="P:FanKit.Transformers.Transformer.LeftTop">
-      <summary> Vector in LeftTop. </summary>
+      <summary> Gets or sets the position of the top-left corner of the transformer. </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.RightTop">
-      <summary> Vector in RightTop. </summary>
+      <summary> Gets or sets the position of the top-right corner of the transformer. </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.RightBottom">
-      <summary> Vector in RightBottom. </summary>
+      <summary> Gets or sets the position of the bottom-right corner of the transformer. </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.LeftBottom">
-      <summary> Vector in LeftBottom. </summary>
+      <summary> Gets or sets the position of the bottom-left corner of the transformer. </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.Center">
       <summary> Gets the center vector. </summary>
@@ -2773,16 +2773,16 @@
       <summary> Gets the center bottom vector. </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerBorder.LeftTop">
-      <summary> Gets border's left-top point. </summary>
+      <summary> Gets the position of the top-left corner of the border. </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerBorder.RightTop">
-      <summary> Gets border's right-top point. </summary>
+      <summary> Gets the position of the top-right corner of the border. </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerBorder.RightBottom">
-      <summary> Gets border's right-bottom point. </summary>
+      <summary> Gets the position of the bottom-right corner of the border. </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerBorder.LeftBottom">
-      <summary> Gets border's left-bottom point. </summary>
+      <summary> Gets the position of the bottom-left corner of the border. </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerBorder.Horizontal">
       <summary> Gets horizontal vector. </summary>
@@ -2893,10 +2893,10 @@
         Create a new rectangle geometry.
       </summary>
       <param name="resourceCreator"> The resource-creator. </param>
-      <param name="leftTop"> The left-top point. </param>
-      <param name="rightTop"> The right-top point. </param>
-      <param name="rightBottom"> The right-bottom point. </param>
-      <param name="leftBottom"> The left-bottom point. </param>
+      <param name="leftTop"> The position of the top-left corner. </param>
+      <param name="rightTop"> The position of the top-right corner. </param>
+      <param name="rightBottom"> The position of the bottom-right corner. </param>
+      <param name="leftBottom"> The position of the bottom-left corner. </param>
       <returns> The product geometry. </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateRectangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Matrix3x2)">
@@ -2904,10 +2904,10 @@
         Create a new rectangle geometry.
       </summary>
       <param name="resourceCreator"> The resource-creator. </param>
-      <param name="leftTop"> The left-top point. </param>
-      <param name="rightTop"> The right-top point. </param>
-      <param name="rightBottom"> The right-bottom point. </param>
-      <param name="leftBottom"> The left-bottom point. </param>
+      <param name="leftTop"> The position of the top-left corner. </param>
+      <param name="rightTop"> The position of the top-right corner. </param>
+      <param name="rightBottom"> The position of the bottom-right corner. </param>
+      <param name="leftBottom"> The position of the bottom-left corner. </param>
       <param name="matrix"> The matrix. </param>
       <returns> The product geometry. </returns>
     </member>
@@ -2994,10 +2994,10 @@
         Create a new triangle geometry.
       </summary>
       <param name="resourceCreator"> The resource-creator. </param>
-      <param name="leftTop"> The left-top point. </param>
-      <param name="rightTop"> The right-top point. </param>
-      <param name="rightBottom"> The right-bottom point. </param>
-      <param name="leftBottom"> The left-bottom point. </param>
+      <param name="leftTop"> The position of the top-left corner. </param>
+      <param name="rightTop"> The position of the top-right corner. </param>
+      <param name="rightBottom"> The position of the bottom-right corner. </param>
+      <param name="leftBottom"> The position of the bottom-left corner. </param>
       <param name="center"> The value of center. </param>
       <returns> The product geometry. </returns>
     </member>
@@ -3006,10 +3006,10 @@
         Create a new triangle geometry.
       </summary>
       <param name="resourceCreator"> The resource-creator. </param>
-      <param name="leftTop"> The left-top point. </param>
-      <param name="rightTop"> The right-top point. </param>
-      <param name="rightBottom"> The right-bottom point. </param>
-      <param name="leftBottom"> The left-bottom point. </param>
+      <param name="leftTop"> The position of the top-left corner. </param>
+      <param name="rightTop"> The position of the top-right corner. </param>
+      <param name="rightBottom"> The position of the bottom-right corner. </param>
+      <param name="leftBottom"> The position of the bottom-left corner. </param>
       <param name="matrix"> The matrix. </param>
       <param name="center"> The value of center. </param>
       <returns> The product geometry. </returns>
@@ -3432,16 +3432,16 @@
       <summary> Gets the center bottom vector. </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.LeftTop">
-      <summary> Gets rectangle's left-top point. </summary>
+      <summary> Gets the position of the top-left corner of the rectangle. </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.RightTop">
-      <summary> Gets rectangle's right-top point. </summary>
+      <summary> Gets the position of the top-right corner of the rectangle. </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.RightBottom">
-      <summary> Gets rectangle's right-bottom point. </summary>
+      <summary> Gets the position of the bottom-right corner of the rectangle. </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.LeftBottom">
-      <summary> Gets rectangle's left-bottom point. </summary>
+      <summary> Gets the position of the bottom-left corner of the rectangle. </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.Horizontal">
       <summary> Gets horizontal vector. </summary>
@@ -3634,10 +3634,10 @@
         Returns whether the quadrangle contains the specified point.
       </summary>
       <param name="point"> The point. </param>
-      <param name="leftTop"> The quadrangle's left-top point. </param>
-      <param name="rightTop"> The quadrangle's right-top point. </param>
-      <param name="rightBottom"> The quadrangle's right-bottom point. </param>
-      <param name="leftBottom"> The quadrangle's left-bottom point. </param>
+      <param name="leftTop"> The position of the top-left corner of the quadrangle. </param>
+      <param name="rightTop"> The position of the top-right corner of the quadrangle. </param>
+      <param name="rightBottom"> The position of the bottom-right corner of the quadrangle. </param>
+      <param name="leftBottom"> The position of the bottom-left corner of the quadrangle. </param>
       <returns> Return **true** if the quadrangle contains the specified point, otherwise **false**. </returns>
     </member>
     <member name="M:FanKit.Math.FootPoint(System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2)">
