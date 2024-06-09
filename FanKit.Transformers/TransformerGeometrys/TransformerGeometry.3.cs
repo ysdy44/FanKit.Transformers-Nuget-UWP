@@ -14,19 +14,19 @@ namespace FanKit.Transformers
         /// Create a new donut geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
-        /// <param name="transformer"> The source transformer. </param>
+        /// <param name="bounds"> The bounds. </param>
         /// <param name="holeRadius"> The hole-radius. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreateDonut(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformer, float holeRadius)
+        public static CanvasGeometry CreateDonut(ICanvasResourceCreator resourceCreator, ITransformerLTRB bounds, float holeRadius)
         {
             bool zeroHoleRadius = holeRadius == 0;
-            CanvasGeometry outter = TransformerGeometry.CreateEllipse(resourceCreator, transformer);
+            CanvasGeometry outter = TransformerGeometry.CreateEllipse(resourceCreator, bounds);
 
             if (zeroHoleRadius)
                 return outter;
             else
             {
-                Vector2 center = transformer.Center;
+                Vector2 center = bounds.Center;
 
                 return TransformerGeometry.CreateDonutCore(outter, holeRadius, center);
             }
@@ -36,20 +36,20 @@ namespace FanKit.Transformers
         /// Create a new donut geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
-        /// <param name="transformer"> The source transformer. </param>
+        /// <param name="bounds"> The bounds. </param>
         /// <param name="matrix"> The matrix. </param>
         /// <param name="holeRadius"> The hole-radius. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreateDonut(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformer, Matrix3x2 matrix, float holeRadius)
+        public static CanvasGeometry CreateDonut(ICanvasResourceCreator resourceCreator, ITransformerLTRB bounds, Matrix3x2 matrix, float holeRadius)
         {
             bool zeroHoleRadius = holeRadius == 0;
-            CanvasGeometry outter = TransformerGeometry.CreateEllipse(resourceCreator, transformer, matrix);
+            CanvasGeometry outter = TransformerGeometry.CreateEllipse(resourceCreator, bounds, matrix);
 
             if (zeroHoleRadius)
                 return outter;
             else
             {
-                Vector2 center = Vector2.Transform(transformer.Center, matrix);
+                Vector2 center = Vector2.Transform(bounds.Center, matrix);
 
                 return TransformerGeometry.CreateDonutCore(outter, holeRadius, center);
             }
@@ -73,18 +73,18 @@ namespace FanKit.Transformers
         /// Create a new pie geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
-        /// <param name="transformer"> The source transformer. </param>
+        /// <param name="bounds"> The bounds. </param>
         /// <param name="sweepAngle"> The sweep-angle. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreatePie(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformer, float sweepAngle)
+        public static CanvasGeometry CreatePie(ICanvasResourceCreator resourceCreator, ITransformerLTRB bounds, float sweepAngle)
         {
             bool zeroSweepAngle = sweepAngle == 0;
 
             if (zeroSweepAngle)
-                return TransformerGeometry.CreateEllipse(resourceCreator, transformer);
+                return TransformerGeometry.CreateEllipse(resourceCreator, bounds);
             else
             {
-                Matrix3x2 oneMatrix = Transformer.FindHomographyFromIdentity(transformer);
+                Matrix3x2 oneMatrix = Transformer.FindHomographyFromIdentity(bounds);
 
                 return TransformerGeometry.CreatePieCore(resourceCreator, oneMatrix, sweepAngle);
             }
@@ -94,19 +94,19 @@ namespace FanKit.Transformers
         /// Create a new pie geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
-        /// <param name="transformer"> The source transformer. </param>
+        /// <param name="bounds"> The bounds. </param>
         /// <param name="matrix"> The matrix. </param>
         /// <param name="sweepAngle"> The sweep-angle. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreatePie(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformer, Matrix3x2 matrix, float sweepAngle)
+        public static CanvasGeometry CreatePie(ICanvasResourceCreator resourceCreator, ITransformerLTRB bounds, Matrix3x2 matrix, float sweepAngle)
         {
             bool zeroSweepAngle = sweepAngle == 0;
 
             if (zeroSweepAngle)
-                return TransformerGeometry.CreateEllipse(resourceCreator, transformer, matrix);
+                return TransformerGeometry.CreateEllipse(resourceCreator, bounds, matrix);
             else
             {
-                Matrix3x2 oneMatrix = Transformer.FindHomographyFromIdentity(transformer);
+                Matrix3x2 oneMatrix = Transformer.FindHomographyFromIdentity(bounds);
                 Matrix3x2 oneMatrix2 = oneMatrix * matrix;
 
                 return TransformerGeometry.CreatePieCore(resourceCreator, oneMatrix2, sweepAngle);
@@ -147,31 +147,31 @@ namespace FanKit.Transformers
         /// Create a new cookie geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
-        /// <param name="transformer"> The source transformer. </param>
+        /// <param name="bounds"> The bounds. </param>
         /// <param name="innerRadius"> The inner-radius. </param>
         /// <param name="sweepAngle"> The sweep-angle. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreateCookie(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformer, float innerRadius, float sweepAngle)
+        public static CanvasGeometry CreateCookie(ICanvasResourceCreator resourceCreator, ITransformerLTRB bounds, float innerRadius, float sweepAngle)
         {
             bool zeroInnerRadius = innerRadius == 0;
             bool zeroSweepAngle = sweepAngle == 0;
 
             if (zeroSweepAngle)
             {
-                CanvasGeometry ellipse = TransformerGeometry.CreateEllipse(resourceCreator, transformer);
+                CanvasGeometry ellipse = TransformerGeometry.CreateEllipse(resourceCreator, bounds);
 
                 if (zeroInnerRadius)
                     return ellipse;
                 else
                 {
-                    Vector2 center = transformer.Center;
+                    Vector2 center = bounds.Center;
 
                     return TransformerGeometry.CreateDonutCore(ellipse, innerRadius, center);
                 }
             }
             else
             {
-                Matrix3x2 oneMatrix = Transformer.FindHomographyFromIdentity(transformer);
+                Matrix3x2 oneMatrix = Transformer.FindHomographyFromIdentity(bounds);
 
                 if (zeroInnerRadius)
                     return TransformerGeometry.CreatePieCore(resourceCreator, oneMatrix, sweepAngle);
@@ -184,32 +184,32 @@ namespace FanKit.Transformers
         /// Create a new cookie geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
-        /// <param name="transformer"> The source transformer. </param>
+        /// <param name="bounds"> The bounds. </param>
         /// <param name="matrix"> The matrix. </param>
         /// <param name="innerRadius"> The inner-radius. </param>
         /// <param name="sweepAngle"> The sweep-angle. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreateCookie(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformer, Matrix3x2 matrix, float innerRadius, float sweepAngle)
+        public static CanvasGeometry CreateCookie(ICanvasResourceCreator resourceCreator, ITransformerLTRB bounds, Matrix3x2 matrix, float innerRadius, float sweepAngle)
         {
             bool zeroInnerRadius = innerRadius == 0;
             bool zeroSweepAngle = sweepAngle == 0;
 
             if (zeroSweepAngle)
             {
-                CanvasGeometry ellipse = TransformerGeometry.CreateEllipse(resourceCreator, transformer, matrix);
+                CanvasGeometry ellipse = TransformerGeometry.CreateEllipse(resourceCreator, bounds, matrix);
 
                 if (zeroInnerRadius)
                     return ellipse;
                 else
                 {
-                    Vector2 center = Vector2.Transform(transformer.Center, matrix);
+                    Vector2 center = Vector2.Transform(bounds.Center, matrix);
 
                     return TransformerGeometry.CreateDonutCore(ellipse, innerRadius, center);
                 }
             }
             else
             {
-                Matrix3x2 oneMatrix = Transformer.FindHomographyFromIdentity(transformer);
+                Matrix3x2 oneMatrix = Transformer.FindHomographyFromIdentity(bounds);
                 Matrix3x2 oneMatrix2 = oneMatrix * matrix;
 
                 if (zeroInnerRadius)

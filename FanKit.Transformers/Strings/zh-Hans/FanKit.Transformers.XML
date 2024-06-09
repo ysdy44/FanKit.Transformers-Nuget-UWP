@@ -2876,7 +2876,7 @@
         创建一个新的矩形几何形状。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
-      <param name="transformerLTRB"> 变换者LTRB。 </param>
+      <param name="bounds"> 边框。 </param>
       <returns> 产生的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateRectangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2)">
@@ -2884,7 +2884,7 @@
         创建一个新的矩形几何形状。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
-      <param name="transformerLTRB"> 变换者LTRB。 </param>
+      <param name="bounds"> 边框。 </param>
       <param name="matrix"> 矩阵。 </param>
       <returns> 产生的几何形状。 </returns>
     </member>
@@ -2916,7 +2916,7 @@
         创建一个新的椭圆几何形状。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
-      <param name="transformerLTRB"> 变换者LTRB。 </param>
+      <param name="bounds"> 边框。 </param>
       <returns> 产生的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateEllipse(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2)">
@@ -2924,7 +2924,7 @@
         创建一个新的椭圆几何形状。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
-      <param name="transformerLTRB"> 变换者LTRB。 </param>
+      <param name="bounds"> 边框。 </param>
       <param name="matrix"> 矩阵。 </param>
       <returns> 产生的几何形状。 </returns>
     </member>
@@ -2956,7 +2956,7 @@
         创建一个新的圆角矩形几何形状。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
-      <param name="transformer"> 源变换者。 </param>
+      <param name="bounds"> 边框。 </param>
       <param name="corner"> 角落。 </param>
       <returns> 产生的几何形状。 </returns>
     </member>
@@ -2965,7 +2965,7 @@
         创建一个新的圆角矩形几何形状。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
-      <param name="transformer"> 源变换者。 </param>
+      <param name="bounds"> 边框。 </param>
       <param name="matrix"> 矩阵。 </param>
       <param name="corner"> 角落。 </param>
       <returns> 产生的几何形状。 </returns>
@@ -2975,7 +2975,7 @@
         创建一个新的三角形几何形状。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
-      <param name="transformerLTRB"> 变换者LTRB。 </param>
+      <param name="bounds"> 边框。 </param>
       <param name="center"> 中心的值， </param>
       <returns> 产生的几何形状。 </returns>
     </member>
@@ -2984,7 +2984,7 @@
         创建一个新的三角形几何形状。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
-      <param name="transformerLTRB"> 变换者LTRB。 </param>
+      <param name="bounds"> 边框。 </param>
       <param name="matrix"> 矩阵。 </param>
       <param name="center"> 中心的值， </param>
       <returns> 产生的几何形状。 </returns>
@@ -3019,7 +3019,7 @@
         创建一个新的菱形几何形状。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
-      <param name="transformer"> 变换者LTRB。 </param>
+      <param name="bounds"> 边框。 </param>
       <param name="mid"> 中间值。 </param>
       <returns> 产生的几何形状。 </returns>
     </member>
@@ -3028,7 +3028,7 @@
         创建一个新的菱形几何形状。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
-      <param name="transformer"> 源变换者。 </param>
+      <param name="bounds"> 边框。 </param>
       <param name="matrix"> 矩阵。 </param>
       <param name="mid"> 中间值。 </param>
       <returns> 产生的几何形状。 </returns>
@@ -3038,7 +3038,7 @@
         创建一个新的五边形几何形状。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
-      <param name="transformer"> 源变换者。 </param>
+      <param name="bounds"> 边框。 </param>
       <param name="points"> 点数。 </param>
       <returns> 产生的几何形状。 </returns>
     </member>
@@ -3047,7 +3047,7 @@
         创建一个新的五边形几何形状。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
-      <param name="transformer"> 源变换者。 </param>
+      <param name="bounds"> 边框。 </param>
       <param name="matrix"> 矩阵。 </param>
       <param name="points"> 点数。 </param>
       <returns> 产生的几何形状。 </returns>
@@ -3057,7 +3057,7 @@
         创建一个新的星形几何形状。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
-      <param name="transformer"> 变换者LTRB。 </param>
+      <param name="bounds"> 边框。 </param>
       <param name="points"> 点数。 </param>
       <param name="innerRadius"> 内部半径。 </param>
       <returns> 产生的几何形状。 </returns>
@@ -3067,7 +3067,7 @@
         创建一个新的星形几何形状。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
-      <param name="transformer"> 源变换者。 </param>
+      <param name="bounds"> 边框。 </param>
       <param name="matrix"> 矩阵。 </param>
       <param name="points"> 点数。 </param>
       <param name="innerRadius"> 内部半径。 </param>
@@ -3078,7 +3078,7 @@
         创建一个新的齿轮几何形状。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
-      <param name="transformer"> 变换者LTRB。 </param>
+      <param name="bounds"> 边框。 </param>
       <param name="count"> 点数。 </param>
       <param name="innerRadius"> 内部半径。 </param>
       <param name="tooth"> 外齿。 </param>
@@ -3090,7 +3090,7 @@
         创建一个新的齿轮几何形状。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
-      <param name="transformer"> 源变换者。 </param>
+      <param name="bounds"> 边框。 </param>
       <param name="matrix"> 矩阵。 </param>
       <param name="count"> 点数。 </param>
       <param name="innerRadius"> 内部半径。 </param>
@@ -3103,7 +3103,7 @@
         创建一个新的甜甜圈几何形状。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
-      <param name="transformer"> 源变换者。 </param>
+      <param name="bounds"> 边框。 </param>
       <param name="holeRadius"> 孔半径。 </param>
       <returns> 产生的几何形状。 </returns>
     </member>
@@ -3112,7 +3112,7 @@
         创建一个新的甜甜圈几何形状。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
-      <param name="transformer"> 源变换者。 </param>
+      <param name="bounds"> 边框。 </param>
       <param name="matrix"> 矩阵。 </param>
       <param name="holeRadius"> 孔半径。 </param>
       <returns> 产生的几何形状。 </returns>
@@ -3122,7 +3122,7 @@
         创建一个新的饼图几何形状。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
-      <param name="transformer"> 变换者LTRB。 </param>
+      <param name="bounds"> 边框。 </param>
       <param name="sweepAngle"> 扫描角度。 </param>
       <returns> 产生的几何形状。 </returns>
     </member>
@@ -3131,7 +3131,7 @@
         创建一个新的饼图几何形状。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
-      <param name="transformer"> 源变换者。 </param>
+      <param name="bounds"> 边框。 </param>
       <param name="matrix"> 矩阵。 </param>
       <param name="sweepAngle"> 扫描角度。 </param>
       <returns> 产生的几何形状。 </returns>
@@ -3141,7 +3141,7 @@
         创建一个新的曲奇饼几何形状。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
-      <param name="transformer"> 变换者LTRB。 </param>
+      <param name="bounds"> 边框。 </param>
       <param name="innerRadius"> 内部半径。 </param>
       <param name="sweepAngle"> 扫描角度。 </param>
       <returns> 产生的几何形状。 </returns>
@@ -3151,7 +3151,7 @@
         创建一个新的曲奇饼几何形状。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
-      <param name="transformer"> 源变换者。 </param>
+      <param name="bounds"> 边框。 </param>
       <param name="matrix"> 矩阵。 </param>
       <param name="innerRadius"> 内部半径。 </param>
       <param name="sweepAngle"> 扫描角度。 </param>
@@ -3162,7 +3162,7 @@
         创建一个新的箭头几何形状。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
-      <param name="transformer"> 源变换者。 </param>
+      <param name="bounds"> 边框。 </param>
       <param name="isAbsolute"> 是绝对的吗？ </param>
       <param name="width"> 绝对宽度。 </param>
       <param name="value"> 相对值。 </param>
@@ -3175,7 +3175,7 @@
         创建一个新的箭头几何形状。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
-      <param name="transformer"> 源变换者。 </param>
+      <param name="bounds"> 边框。 </param>
       <param name="matrix"> 矩阵。 </param>
       <param name="isAbsolute"> 是绝对的吗？ </param>
       <param name="width"> 绝对宽度。 </param>
@@ -3189,7 +3189,7 @@
         创建一个新的胶囊几何形状。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
-      <param name="transformer"> 变换者LTRB。 </param>
+      <param name="bounds"> 边框。 </param>
       <returns> 产生的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateCapsule(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2)">
@@ -3197,7 +3197,7 @@
         创建一个新的胶囊几何形状。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
-      <param name="transformer"> 变换者 LTRB。 </param>
+      <param name="bounds"> 边框。 </param>
       <param name="matrix"> 矩阵。 </param>
       <returns> 产生的几何形状。 </returns>
     </member>
@@ -3206,7 +3206,7 @@
         创建一个新的心脏几何形状。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
-      <param name="transformer"> 变换者LTRB。 </param>
+      <param name="bounds"> 边框。 </param>
       <param name="spread"> 扩展。 </param>
       <returns> 产生的几何形状。 </returns>
     </member>
@@ -3215,7 +3215,7 @@
         创建一个新的心脏几何形状。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
-      <param name="transformer"> 源变换者。 </param>
+      <param name="bounds"> 边框。 </param>
       <param name="matrix"> 矩阵。 </param>
       <param name="spread"> 扩展。 </param>
       <returns> 产生的几何形状。 </returns>

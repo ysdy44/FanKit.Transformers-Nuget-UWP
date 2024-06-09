@@ -14,50 +14,50 @@ namespace FanKit.Transformers
         /// Create a new arrow geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
-        /// <param name="transformer"> The source transformer. </param>
+        /// <param name="bounds"> The bounds. </param>
         /// <param name="isAbsolute"> Is absolute? </param>
         /// <param name="width"> The absolute width. </param>
         /// <param name="value"> The relative value. </param>
         /// <param name="leftTail"> The left tail. </param>
         /// <param name="rightTail"> The right tail. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreateArrow(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformer, bool isAbsolute = false, float width = 10, float value = 0.5f, GeometryArrowTailType leftTail = GeometryArrowTailType.None, GeometryArrowTailType rightTail = GeometryArrowTailType.Arrow)
+        public static CanvasGeometry CreateArrow(ICanvasResourceCreator resourceCreator, ITransformerLTRB bounds, bool isAbsolute = false, float width = 10, float value = 0.5f, GeometryArrowTailType leftTail = GeometryArrowTailType.None, GeometryArrowTailType rightTail = GeometryArrowTailType.Arrow)
         {
-            Vector2 center = transformer.Center;
-            Vector2 centerLeft = transformer.CenterLeft;
-            Vector2 centerRight = transformer.CenterRight;
+            Vector2 center = bounds.Center;
+            Vector2 centerLeft = bounds.CenterLeft;
+            Vector2 centerRight = bounds.CenterRight;
 
             // horizontal
-            Vector2 horizontal = transformer.Horizontal;
+            Vector2 horizontal = bounds.Horizontal;
             float horizontalLength = horizontal.Length();
             // vertical
-            Vector2 vertical = transformer.Vertical;
+            Vector2 vertical = bounds.Vertical;
             float verticalLength = vertical.Length();
 
             Vector2 widthVector = TransformerGeometry.GetArrowWidthVector(isAbsolute, width, value, vertical, verticalLength);
 
             Vector2 focusVector = TransformerGeometry.GetArrowFocusVector(verticalLength, horizontalLength, horizontal);
-            Vector2 leftFocusTransform = (transformer.CenterLeft + focusVector);
-            Vector2 rightFocusTransform = (transformer.CenterRight - focusVector);
+            Vector2 leftFocusTransform = (bounds.CenterLeft + focusVector);
+            Vector2 rightFocusTransform = (bounds.CenterRight - focusVector);
 
             return TransformerGeometry.CreateArrowCore
             (
                 resourceCreator,
-                widthVector + transformer.Center - center,
+                widthVector + bounds.Center - center,
 
                 // Left
                 centerLeft,
-                transformer.LeftBottom,
+                bounds.LeftBottom,
 
-                transformer.LeftTop,
+                bounds.LeftTop,
                 leftFocusTransform - centerLeft,
                 leftFocusTransform,
 
                 // Right
                 centerRight,
-                transformer.RightBottom,
+                bounds.RightBottom,
 
-                transformer.RightTop,
+                bounds.RightTop,
                 rightFocusTransform - centerRight,
                 rightFocusTransform,
 
@@ -70,7 +70,7 @@ namespace FanKit.Transformers
         /// Create a new arrow geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
-        /// <param name="transformer"> The source transformer. </param>
+        /// <param name="bounds"> The bounds. </param>
         /// <param name="matrix"> The matrix. </param>
         /// <param name="isAbsolute"> Is absolute? </param>
         /// <param name="width"> The absolute width. </param>
@@ -78,43 +78,43 @@ namespace FanKit.Transformers
         /// <param name="leftTail"> The left tail. </param>
         /// <param name="rightTail"> The right tail. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreateArrow(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformer, Matrix3x2 matrix, bool isAbsolute = false, float width = 10, float value = 0.5f, GeometryArrowTailType leftTail = GeometryArrowTailType.None, GeometryArrowTailType rightTail = GeometryArrowTailType.Arrow)
+        public static CanvasGeometry CreateArrow(ICanvasResourceCreator resourceCreator, ITransformerLTRB bounds, Matrix3x2 matrix, bool isAbsolute = false, float width = 10, float value = 0.5f, GeometryArrowTailType leftTail = GeometryArrowTailType.None, GeometryArrowTailType rightTail = GeometryArrowTailType.Arrow)
         {
-            Vector2 center = Vector2.Transform(transformer.Center, matrix);
-            Vector2 centerLeft = Vector2.Transform(transformer.CenterLeft, matrix);
-            Vector2 centerRight = Vector2.Transform(transformer.CenterRight, matrix);
+            Vector2 center = Vector2.Transform(bounds.Center, matrix);
+            Vector2 centerLeft = Vector2.Transform(bounds.CenterLeft, matrix);
+            Vector2 centerRight = Vector2.Transform(bounds.CenterRight, matrix);
 
             // horizontal
-            Vector2 horizontal = transformer.Horizontal;
+            Vector2 horizontal = bounds.Horizontal;
             float horizontalLength = horizontal.Length();
             // vertical
-            Vector2 vertical = transformer.Vertical;
+            Vector2 vertical = bounds.Vertical;
             float verticalLength = vertical.Length();
 
             Vector2 widthVector = TransformerGeometry.GetArrowWidthVector(isAbsolute, width, value, vertical, verticalLength);
 
             Vector2 focusVector = TransformerGeometry.GetArrowFocusVector(verticalLength, horizontalLength, horizontal);
-            Vector2 leftFocusTransform = Vector2.Transform(transformer.CenterLeft + focusVector, matrix);
-            Vector2 rightFocusTransform = Vector2.Transform(transformer.CenterRight - focusVector, matrix);
+            Vector2 leftFocusTransform = Vector2.Transform(bounds.CenterLeft + focusVector, matrix);
+            Vector2 rightFocusTransform = Vector2.Transform(bounds.CenterRight - focusVector, matrix);
 
             return TransformerGeometry.CreateArrowCore
             (
                 resourceCreator,
-                Vector2.Transform(widthVector + transformer.Center, matrix) - center,
+                Vector2.Transform(widthVector + bounds.Center, matrix) - center,
 
                 // Left
                 centerLeft,
-                Vector2.Transform(transformer.LeftBottom, matrix),
+                Vector2.Transform(bounds.LeftBottom, matrix),
 
-                Vector2.Transform(transformer.LeftTop, matrix),
+                Vector2.Transform(bounds.LeftTop, matrix),
                 (leftFocusTransform - centerLeft),
                 leftFocusTransform,
 
                 // Right
                 centerRight,
-                Vector2.Transform(transformer.RightBottom, matrix),
+                Vector2.Transform(bounds.RightBottom, matrix),
 
-                Vector2.Transform(transformer.RightTop, matrix),
+                Vector2.Transform(bounds.RightTop, matrix),
                 (rightFocusTransform - centerRight),
                 rightFocusTransform,
 
@@ -239,24 +239,24 @@ namespace FanKit.Transformers
         /// Create a new capsule geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
-        /// <param name="transformer"> The ITransformer-LTRB. </param>
+        /// <param name="bounds"> The bounds. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreateCapsule(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformer)
+        public static CanvasGeometry CreateCapsule(ICanvasResourceCreator resourceCreator, ITransformerLTRB bounds)
         {
-            Vector2 centerLeft = transformer.CenterLeft;
-            Vector2 centerTop = transformer.CenterTop;
-            Vector2 centerRight = transformer.CenterRight;
-            Vector2 centerBottom = transformer.CenterBottom;
+            Vector2 centerLeft = bounds.CenterLeft;
+            Vector2 centerTop = bounds.CenterTop;
+            Vector2 centerRight = bounds.CenterRight;
+            Vector2 centerBottom = bounds.CenterBottom;
 
             // Horizontal
-            Vector2 horizontal = transformer.Horizontal;
+            Vector2 horizontal = bounds.Horizontal;
             float horizontalLength = horizontal.Length();
             Vector2 horizontalUnit = horizontal / horizontalLength;
             // Vertical
-            Vector2 vertical = transformer.Vertical;
+            Vector2 vertical = bounds.Vertical;
             float verticalLength = vertical.Length();
 
-            if (horizontalLength < verticalLength) return TransformerGeometry.CreateEllipse(resourceCreator, transformer);
+            if (horizontalLength < verticalLength) return TransformerGeometry.CreateEllipse(resourceCreator, bounds);
 
             return TransformerGeometry.CreateCapsuleCore(resourceCreator,
                 verticalLength,
@@ -267,10 +267,10 @@ namespace FanKit.Transformers
                 centerRight,
                 centerBottom,
 
-                transformer.LeftTop,
-                transformer.RightTop,
-                transformer.RightBottom,
-                transformer.LeftBottom
+                bounds.LeftTop,
+                bounds.RightTop,
+                bounds.RightBottom,
+                bounds.LeftBottom
             );
         }
 
@@ -278,20 +278,20 @@ namespace FanKit.Transformers
         /// Create a new capsule geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
-        /// <param name="transformer"> The ITransformer-LTRB. </param>
+        /// <param name="bounds"> The bounds. </param>
         /// <param name="matrix"> The matrix. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreateCapsule(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformer, Matrix3x2 matrix)
+        public static CanvasGeometry CreateCapsule(ICanvasResourceCreator resourceCreator, ITransformerLTRB bounds, Matrix3x2 matrix)
         {
-            Vector2 leftTop = Vector2.Transform(transformer.LeftTop, matrix);
-            Vector2 rightTop = Vector2.Transform(transformer.RightTop, matrix);
-            Vector2 rightBottom = Vector2.Transform(transformer.RightBottom, matrix);
-            Vector2 leftBottom = Vector2.Transform(transformer.LeftBottom, matrix);
+            Vector2 leftTop = Vector2.Transform(bounds.LeftTop, matrix);
+            Vector2 rightTop = Vector2.Transform(bounds.RightTop, matrix);
+            Vector2 rightBottom = Vector2.Transform(bounds.RightBottom, matrix);
+            Vector2 leftBottom = Vector2.Transform(bounds.LeftBottom, matrix);
 
-            Vector2 centerLeft = Vector2.Transform(transformer.CenterLeft, matrix);
-            Vector2 centerTop = Vector2.Transform(transformer.CenterTop, matrix);
-            Vector2 centerRight = Vector2.Transform(transformer.CenterRight, matrix);
-            Vector2 centerBottom = Vector2.Transform(transformer.CenterBottom, matrix);
+            Vector2 centerLeft = Vector2.Transform(bounds.CenterLeft, matrix);
+            Vector2 centerTop = Vector2.Transform(bounds.CenterTop, matrix);
+            Vector2 centerRight = Vector2.Transform(bounds.CenterRight, matrix);
+            Vector2 centerBottom = Vector2.Transform(bounds.CenterBottom, matrix);
 
             // Horizontal
             Vector2 horizontal = (centerRight - centerLeft);
@@ -301,7 +301,7 @@ namespace FanKit.Transformers
             Vector2 vertical = (centerBottom - centerTop);
             float verticalLength = vertical.Length();
 
-            if (horizontalLength < verticalLength) return TransformerGeometry.CreateEllipse(resourceCreator, transformer, matrix);
+            if (horizontalLength < verticalLength) return TransformerGeometry.CreateEllipse(resourceCreator, bounds, matrix);
 
             return TransformerGeometry.CreateCapsuleCore(resourceCreator,
                 verticalLength,
@@ -389,12 +389,12 @@ namespace FanKit.Transformers
         /// Create a new heart geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
-        /// <param name="transformer"> The ITransformer-LTRB. </param>
+        /// <param name="bounds"> The bounds. </param>
         /// <param name="spread"> The spread. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreateHeart(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformer, float spread)
+        public static CanvasGeometry CreateHeart(ICanvasResourceCreator resourceCreator, ITransformerLTRB bounds, float spread)
         {
-            Matrix3x2 oneMatrix = Transformer.FindHomographyFromIdentity(transformer);
+            Matrix3x2 oneMatrix = Transformer.FindHomographyFromIdentity(bounds);
 
             return TransformerGeometry.CreateHeartCore(resourceCreator, spread, oneMatrix);
         }
@@ -403,13 +403,13 @@ namespace FanKit.Transformers
         /// Create a new heart geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
-        /// <param name="transformer"> The source transformer. </param>
+        /// <param name="bounds"> The bounds. </param>
         /// <param name="matrix"> The matrix. </param>
         /// <param name="spread"> The spread. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreateHeart(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformer, Matrix3x2 matrix, float spread)
+        public static CanvasGeometry CreateHeart(ICanvasResourceCreator resourceCreator, ITransformerLTRB bounds, Matrix3x2 matrix, float spread)
         {
-            Matrix3x2 oneMatrix = Transformer.FindHomographyFromIdentity(transformer);
+            Matrix3x2 oneMatrix = Transformer.FindHomographyFromIdentity(bounds);
             Matrix3x2 oneMatrix2 = oneMatrix * matrix;
 
             return TransformerGeometry.CreateHeartCore(resourceCreator, spread, oneMatrix2);

@@ -14,24 +14,24 @@ namespace FanKit.Transformers
         /// Create a new round rect geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
-        /// <param name="transformer"> The source transformer. </param>
+        /// <param name="bounds"> The bounds. </param>
         /// <param name="corner"> The corner. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreateRoundRect(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformer, float corner)
+        public static CanvasGeometry CreateRoundRect(ICanvasResourceCreator resourceCreator, ITransformerLTRB bounds, float corner)
         {
             return TransformerGeometry.CreateRoundRectCore
             (
                 resourceCreator,
 
-                transformer.LeftTop,
-                transformer.RightTop,
-                transformer.RightBottom,
-                transformer.LeftBottom,
+                bounds.LeftTop,
+                bounds.RightTop,
+                bounds.RightBottom,
+                bounds.LeftBottom,
 
-                transformer.CenterLeft,
-                transformer.CenterTop,
-                transformer.CenterRight,
-                transformer.CenterBottom,
+                bounds.CenterLeft,
+                bounds.CenterTop,
+                bounds.CenterRight,
+                bounds.CenterBottom,
 
                 corner
             );
@@ -41,25 +41,25 @@ namespace FanKit.Transformers
         /// Create a new round rect geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
-        /// <param name="transformer"> The source transformer. </param>
+        /// <param name="bounds"> The bounds. </param>
         /// <param name="matrix"> The matrix. </param>
         /// <param name="corner"> The corner. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreateRoundRect(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformer, Matrix3x2 matrix, float corner)
+        public static CanvasGeometry CreateRoundRect(ICanvasResourceCreator resourceCreator, ITransformerLTRB bounds, Matrix3x2 matrix, float corner)
         {
             return TransformerGeometry.CreateRoundRectCore
             (
                 resourceCreator,
 
-                Vector2.Transform(transformer.LeftTop, matrix),
-                Vector2.Transform(transformer.RightTop, matrix),
-                Vector2.Transform(transformer.RightBottom, matrix),
-                Vector2.Transform(transformer.LeftBottom, matrix),
+                Vector2.Transform(bounds.LeftTop, matrix),
+                Vector2.Transform(bounds.RightTop, matrix),
+                Vector2.Transform(bounds.RightBottom, matrix),
+                Vector2.Transform(bounds.LeftBottom, matrix),
 
-                Vector2.Transform(transformer.CenterLeft, matrix),
-                Vector2.Transform(transformer.CenterTop, matrix),
-                Vector2.Transform(transformer.CenterRight, matrix),
-                Vector2.Transform(transformer.CenterBottom, matrix),
+                Vector2.Transform(bounds.CenterLeft, matrix),
+                Vector2.Transform(bounds.CenterTop, matrix),
+                Vector2.Transform(bounds.CenterRight, matrix),
+                Vector2.Transform(bounds.CenterBottom, matrix),
 
                 corner
             );
@@ -152,20 +152,20 @@ namespace FanKit.Transformers
         /// Create a new triangle geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
-        /// <param name="transformerLTRB"> The ITransformer-LTRB. </param>
+        /// <param name="bounds"> The bounds. </param>
         /// <param name="center"> The value of center. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreateTriangle(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformerLTRB, float center) => TransformerGeometry.CreateTriangleCore(resourceCreator, transformerLTRB.LeftTop, transformerLTRB.RightTop, transformerLTRB.RightBottom, transformerLTRB.LeftBottom, center);
+        public static CanvasGeometry CreateTriangle(ICanvasResourceCreator resourceCreator, ITransformerLTRB bounds, float center) => TransformerGeometry.CreateTriangleCore(resourceCreator, bounds.LeftTop, bounds.RightTop, bounds.RightBottom, bounds.LeftBottom, center);
 
         /// <summary>
         /// Create a new triangle geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
-        /// <param name="transformerLTRB"> The ITransformer-LTRB. </param>
+        /// <param name="bounds"> The bounds. </param>
         /// <param name="matrix"> The matrix. </param>
         /// <param name="center"> The value of center. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreateTriangle(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformerLTRB, Matrix3x2 matrix, float center) => TransformerGeometry.CreateTriangleCore(resourceCreator, Vector2.Transform(transformerLTRB.LeftTop, matrix), Vector2.Transform(transformerLTRB.RightTop, matrix), Vector2.Transform(transformerLTRB.RightBottom, matrix), Vector2.Transform(transformerLTRB.LeftBottom, matrix), center);
+        public static CanvasGeometry CreateTriangle(ICanvasResourceCreator resourceCreator, ITransformerLTRB bounds, Matrix3x2 matrix, float center) => TransformerGeometry.CreateTriangleCore(resourceCreator, Vector2.Transform(bounds.LeftTop, matrix), Vector2.Transform(bounds.RightTop, matrix), Vector2.Transform(bounds.RightBottom, matrix), Vector2.Transform(bounds.LeftBottom, matrix), center);
 
         /// <summary>
         /// Create a new triangle geometry.
@@ -220,19 +220,19 @@ namespace FanKit.Transformers
         /// Create a new diamond geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
-        /// <param name="transformer"> The ITransformer-LTRB. </param>
+        /// <param name="bounds"> The bounds. </param>
         /// <param name="mid"> The mid value. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreateDiamond(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformer, float mid)
+        public static CanvasGeometry CreateDiamond(ICanvasResourceCreator resourceCreator, ITransformerLTRB bounds, float mid)
         {
             return TransformerGeometry.CreateDiamondCore(resourceCreator,
-                 transformer.LeftTop,
-                 transformer.RightTop,
-                 transformer.RightBottom,
-                 transformer.LeftBottom,
+                 bounds.LeftTop,
+                 bounds.RightTop,
+                 bounds.RightBottom,
+                 bounds.LeftBottom,
 
-                 transformer.CenterLeft,
-                 transformer.CenterRight,
+                 bounds.CenterLeft,
+                 bounds.CenterRight,
 
                  mid
             );
@@ -242,20 +242,20 @@ namespace FanKit.Transformers
         /// Create a new diamond geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
-        /// <param name="transformer"> The source transformer. </param>
+        /// <param name="bounds"> The bounds. </param>
         /// <param name="matrix"> The matrix. </param>
         /// <param name="mid"> The mid value. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreateDiamond(ICanvasResourceCreator resourceCreator, ITransformerLTRB transformer, Matrix3x2 matrix, float mid)
+        public static CanvasGeometry CreateDiamond(ICanvasResourceCreator resourceCreator, ITransformerLTRB bounds, Matrix3x2 matrix, float mid)
         {
             return TransformerGeometry.CreateDiamondCore(resourceCreator,
-               Vector2.Transform(transformer.LeftTop, matrix),
-               Vector2.Transform(transformer.RightTop, matrix),
-               Vector2.Transform(transformer.RightBottom, matrix),
-               Vector2.Transform(transformer.LeftBottom, matrix),
+               Vector2.Transform(bounds.LeftTop, matrix),
+               Vector2.Transform(bounds.RightTop, matrix),
+               Vector2.Transform(bounds.RightBottom, matrix),
+               Vector2.Transform(bounds.LeftBottom, matrix),
 
-               Vector2.Transform(transformer.CenterLeft, matrix),
-               Vector2.Transform(transformer.CenterRight, matrix),
+               Vector2.Transform(bounds.CenterLeft, matrix),
+               Vector2.Transform(bounds.CenterRight, matrix),
 
                mid
             );
