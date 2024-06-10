@@ -111,11 +111,44 @@
     <Compile Include="CanvasTransformers\CanvasTransformer.Matrix.cs" />
     <Compile Include="CanvasTransformers\CanvasTransformer.Operator.cs" />
     <Compile Include="CanvasTransformers\CanvasTransformer.Transition.cs" />
+    <Compile Include="Controls\Icon.xaml.cs">
+      <DependentUpon>Icon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\IndicatorControl.xaml.cs">
+      <DependentUpon>IndicatorControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RemoteControl.xaml.cs">
+      <DependentUpon>RemoteControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DottedLines\DottedLineBrush.cs" />
     <Compile Include="DottedLines\DottedLineImage.cs" />
     <Compile Include="Enums\BorderMode.cs" />
+    <Compile Include="Enums\IndicatorMode.cs" />
+    <Compile Include="Enums\InverseMatrixTransformerMode.cs" />
     <Compile Include="Enums\MarqueeCompositeMode.cs" />
     <Compile Include="Enums\MarqueeToolType.cs" />
+    <Compile Include="Enums\MatrixTransformerMode.cs" />
+    <Compile Include="Enums\NodeCollectionMode.cs" />
+    <Compile Include="Enums\NodeMode.cs" />
+    <Compile Include="Enums\NodeRemoveMode.cs" />
+    <Compile Include="Enums\NodeType.cs" />
+    <Compile Include="Enums\TransformerMode.cs" />
+    <Compile Include="Extensions\CanvasDrawingSessionExtensions.Card.cs" />
+    <Compile Include="Extensions\CanvasDrawingSessionExtensions.cs" />
+    <Compile Include="Extensions\CanvasDrawingSessionExtensions.DottedLine.cs" />
+    <Compile Include="Extensions\CanvasDrawingSessionExtensions.MarqueeTool.cs" />
+    <Compile Include="Extensions\CanvasDrawingSessionExtensions.Node.cs" />
+    <Compile Include="Extensions\CanvasDrawingSessionExtensions.NodeCollection.cs" />
+    <Compile Include="Extensions\CanvasDrawingSessionExtensions.Ruler.cs" />
+    <Compile Include="Extensions\CanvasDrawingSessionExtensions.Transformer.cs" />
+    <Compile Include="Extensions\IndicatorModeExtensions.cs" />
+    <Compile Include="Handlers\IndicatorModeHandler.cs" />
+    <Compile Include="Handlers\RemoteVectorHandler.cs" />
+    <Compile Include="Interface\ICacheTransform.cs" />
+    <Compile Include="Interface\IGetActualTransformer.cs" />
+    <Compile Include="Interface\ITransformerGeometry.cs" />
+    <Compile Include="Interface\ITransformerLTRB.cs" />
+    <Compile Include="Math.cs" />
     <Compile Include="NodeBorders\NodeBorder.cs" />
     <Compile Include="NodeBorders\NodeBorderCollection.cs" />
     <Compile Include="NodeCollections\NodeCollection.CacheTransform.cs" />
@@ -125,67 +158,36 @@
     <Compile Include="NodeCollections\NodeCollection.Operation.cs" />
     <Compile Include="NodeCollections\NodeCollection.PathReceiver.cs" />
     <Compile Include="NodeCollections\NodeCollection.Selection.cs" />
-    <Compile Include="Enums\NodeCollectionMode.cs" />
-    <Compile Include="Enums\NodeRemoveMode.cs" />
-    <Compile Include="Enums\NodeMode.cs" />
-    <Compile Include="Enums\NodeType.cs" />
-    <Compile Include="Extensions\CanvasDrawingSessionExtensions.cs" />
-    <Compile Include="Extensions\CanvasDrawingSessionExtensions.DottedLine.cs" />
-    <Compile Include="Extensions\CanvasDrawingSessionExtensions.Node.cs" />
-    <Compile Include="Extensions\CanvasDrawingSessionExtensions.Card.cs" />
-    <Compile Include="Extensions\CanvasDrawingSessionExtensions.NodeCollection.cs" />
-    <Compile Include="Extensions\CanvasDrawingSessionExtensions.Ruler.cs" />
-    <Compile Include="Extensions\CanvasDrawingSessionExtensions.MarqueeTool.cs" />
-    <Compile Include="Extensions\IndicatorModeExtensions.cs" />
-    <Compile Include="Interface\IGetActualTransformer.cs" />
-    <Compile Include="Interface\ITransformerGeometry.cs" />
-    <Compile Include="Interface\ITransformerLTRB.cs" />
     <Compile Include="Nodes\EachControlPointAngleMode.cs" />
     <Compile Include="Nodes\EachControlPointLengthMode.cs" />
-    <Compile Include="Nodes\Node.Operation.cs" />
     <Compile Include="Nodes\Node.Contained.cs" />
-    <Compile Include="Nodes\Node.Mode.cs" />
     <Compile Include="Nodes\Node.Controller.cs" />
-    <Compile Include="Nodes\SelfControlPointMode.cs" />
-    <Compile Include="Others\InputDevice.cs" />
-    <Compile Include="Others\MarqueeTool.cs" />
     <Compile Include="Nodes\Node.cs" />
+    <Compile Include="Nodes\Node.Mode.cs" />
+    <Compile Include="Nodes\Node.Operation.cs" />
+    <Compile Include="Nodes\SelfControlPointMode.cs" />
     <Compile Include="Others\CanvasOperator.cs" />
-    <Compile Include="Interface\ICacheTransform.cs" />
-    <Compile Include="Controls\Icon.xaml.cs">
-      <DependentUpon>Icon.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\IndicatorControl.xaml.cs">
-      <DependentUpon>IndicatorControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Enums\IndicatorMode.cs" />
-    <Compile Include="Handlers\IndicatorModeHandler.cs" />
-    <Compile Include="Enums\InverseMatrixTransformerMode.cs" />
+    <Compile Include="Others\InputDevice.cs" />
     <Compile Include="Others\LineDistance.cs" />
-    <Compile Include="Enums\MatrixTransformerMode.cs" />
+    <Compile Include="Others\MarqueeTool.cs" />
     <Compile Include="Others\TouchMode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Controls\RemoteControl.xaml.cs">
-      <DependentUpon>RemoteControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Handlers\RemoteVectorHandler.cs" />
+    <Compile Include="Snappings\1.SnapBase.cs" />
     <Compile Include="Snappings\2.BorderSnapBase.cs" />
-    <Compile Include="Snappings\3.VectorVectorSnap.cs" />
     <Compile Include="Snappings\2.VectorSnapBase.cs" />
+    <Compile Include="Snappings\3.BorderBorderSnap.cs" />
     <Compile Include="Snappings\3.VectorBorderSnap.cs" />
+    <Compile Include="Snappings\3.VectorVectorSnap.cs" />
     <Compile Include="Transformer.AspectRatio.cs" />
-    <Compile Include="Transformer.Property.cs" />
     <Compile Include="Transformer.Contains.cs" />
     <Compile Include="Transformer.Controller.cs" />
     <Compile Include="Transformer.cs" />
     <Compile Include="Transformer.Geometry.cs" />
     <Compile Include="Transformer.Homography.cs" />
-    <Compile Include="Math.cs" />
-    <Compile Include="Snappings\1.SnapBase.cs" />
+    <Compile Include="Transformer.Property.cs" />
     <Compile Include="Transformer.XYWHRS.cs" />
-    <Compile Include="TransformerBorders\TransformerBorder.cs" />
-    <Compile Include="TransformerBorders\TransformerBorder.Property.cs" />
-    <Compile Include="Snappings\3.BorderBorderSnap.cs" />
+    <Compile Include="TransformerBorder.cs" />
+    <Compile Include="TransformerBorder.Property.cs" />
     <Compile Include="TransformerGeometrys\GeometryArrowTailType.cs" />
     <Compile Include="TransformerGeometrys\TransformerGeometry.0.cs" />
     <Compile Include="TransformerGeometrys\TransformerGeometry.1.cs" />
@@ -193,16 +195,16 @@
     <Compile Include="TransformerGeometrys\TransformerGeometry.3.cs" />
     <Compile Include="TransformerGeometrys\TransformerGeometry.4.cs" />
     <Compile Include="TransformerMatrix.cs" />
-    <Compile Include="Enums\TransformerMode.cs" />
     <Compile Include="TransformerRects\TransformerRect.cs" />
     <Compile Include="TransformerRects\TransformerRect.Geometry.cs" />
     <Compile Include="TransformerRects\TransformerRect.Property.cs" />
     <Compile Include="XMLs\XML.Color.cs" />
+    <Compile Include="XMLs\XML.GeometryArrowTailTypeFactory.cs" />
     <Compile Include="XMLs\XML.Node.cs" />
     <Compile Include="XMLs\XML.NodeCollection.cs" />
+    <Compile Include="XMLs\XML.NodeTypeFactory.cs" />
     <Compile Include="XMLs\XML.Transformer.cs" />
     <Compile Include="XMLs\XML.Vector2.cs" />
-    <Compile Include="XMLs\XML.NodeTypeFactory.cs" />
     <EmbeddedResource Include="Properties\FanKit.Transformers.rd.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -226,12 +228,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Extensions\CanvasDrawingSessionExtensions.Transformer.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="XMLs\XML.GeometryArrowTailTypeFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Strings\en-US\FanKit.Transformers.XML" />
