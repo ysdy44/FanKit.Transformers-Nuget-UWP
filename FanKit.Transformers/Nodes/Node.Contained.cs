@@ -1,6 +1,4 @@
-﻿using System.Numerics;
-
-namespace FanKit.Transformers
+﻿namespace FanKit.Transformers
 {
     partial class Node
     {
@@ -15,13 +13,9 @@ namespace FanKit.Transformers
         /// <returns> Return **true** if the vector was contained in rectangle, otherwise **false**. </returns>
         public bool Contained(float left, float top, float right, float bottom)
         {
-            if (this.Point.X < left) return false;
-            if (this.Point.Y < top) return false;
-            if (this.Point.X > right) return false;
-            if (this.Point.Y > bottom) return false;
-
-            return true;
+            return this.Point.X >= left && this.Point.Y >= top && this.Point.X <= right && this.Point.Y <= bottom;
         }
+
         /// <summary>
         /// The vector was contained in a rectangle.
         /// </summary>

@@ -173,11 +173,7 @@ namespace FanKit.Transformers
         /// <returns> Return **true** if the other BitmapSize is equal to this instance, otherwise **false**. </returns>
         public bool Equals(BitmapSize other)
         {
-            int width = (int)other.Width;
-            int height = (int)other.Height;
-            if (this.Width != width) return false;
-            if (this.Height != height) return false;
-            return true;
+            return this.Width == (int)other.Width && this.Height == (int)other.Height;
         }
 
         /// <summary>

@@ -187,11 +187,7 @@ namespace FanKit.Transformers
         /// <returns> Return **true** if the other TransformerBorder is equal to this instance, otherwise **false**. </returns>
         public bool Equals(TransformerBorder other)
         {
-            if (this.Left != other.Left) return false;
-            if (this.Top != other.Top) return false;
-            if (this.Right != other.Right) return false;
-            if (this.Bottom != other.Bottom) return false;
-            return true;
+            return this.Left == other.Left && this.Top == other.Top && this.Right == other.Right && this.Bottom == other.Bottom;
         }
 
         /// <summary>

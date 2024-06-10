@@ -99,12 +99,7 @@ namespace FanKit.Transformers
         /// <returns> Return **true** if the transformer was contained in rectangle, otherwise **false**. </returns>
         public bool Contained(float left, float top, float right, float bottom)
         {
-            if (this.MinX < left) return false;
-            if (this.MinY < top) return false;
-            if (this.MaxX > right) return false;
-            if (this.MaxY > bottom) return false;
-
-            return true;
+            return this.MinX >= left && this.MinY >= top && this.MaxX <= right && this.MaxY <= bottom;
         }
 
         /// <summary>
