@@ -44,28 +44,15 @@ namespace FanKit.Transformers
         /// <param name="transformer"> The transformer. </param>
         public TransformerBorder(ITransformerLTRB transformer)
         {
-            float left = float.MaxValue;
-            float top = float.MaxValue;
-            float right = float.MinValue;
-            float bottom = float.MinValue;
-
-            void aaa(Vector2 vector)
-            {
-                if (left > vector.X) left = vector.X;
-                if (top > vector.Y) top = vector.Y;
-                if (right < vector.X) right = vector.X;
-                if (bottom < vector.Y) bottom = vector.Y;
-            }
+            this.Left = float.MaxValue;
+            this.Top = float.MaxValue;
+            this.Right = float.MinValue;
+            this.Bottom = float.MinValue;
 
             aaa(transformer.LeftTop);
             aaa(transformer.RightTop);
             aaa(transformer.RightBottom);
             aaa(transformer.LeftBottom);
-
-            this.Left = left;
-            this.Top = top;
-            this.Right = right;
-            this.Bottom = bottom;
         }
 
         /// <summary>
@@ -74,18 +61,10 @@ namespace FanKit.Transformers
         /// <param name="transformers"> The transformers. </param>
         public TransformerBorder(IEnumerable<Transformer> transformers)
         {
-            float left = float.MaxValue;
-            float top = float.MaxValue;
-            float right = float.MinValue;
-            float bottom = float.MinValue;
-
-            void aaa(Vector2 vector)
-            {
-                if (left > vector.X) left = vector.X;
-                if (top > vector.Y) top = vector.Y;
-                if (right < vector.X) right = vector.X;
-                if (bottom < vector.Y) bottom = vector.Y;
-            }
+            this.Left = float.MaxValue;
+            this.Top = float.MaxValue;
+            this.Right = float.MinValue;
+            this.Bottom = float.MinValue;
 
             foreach (Transformer transformer in transformers)
             {
@@ -94,11 +73,6 @@ namespace FanKit.Transformers
                 aaa(transformer.RightBottom);
                 aaa(transformer.LeftBottom);
             }
-
-            this.Left = left;
-            this.Top = top;
-            this.Right = right;
-            this.Bottom = bottom;
         }
 
         /// <summary>
@@ -107,18 +81,10 @@ namespace FanKit.Transformers
         /// <param name="getActualTransformers"> The IGetActualTransformer. </param>
         public TransformerBorder(IEnumerable<IGetActualTransformer> getActualTransformers)
         {
-            float left = float.MaxValue;
-            float top = float.MaxValue;
-            float right = float.MinValue;
-            float bottom = float.MinValue;
-
-            void aaa(Vector2 vector)
-            {
-                if (left > vector.X) left = vector.X;
-                if (top > vector.Y) top = vector.Y;
-                if (right < vector.X) right = vector.X;
-                if (bottom < vector.Y) bottom = vector.Y;
-            }
+            this.Left = float.MaxValue;
+            this.Top = float.MaxValue;
+            this.Right = float.MinValue;
+            this.Bottom = float.MinValue;
 
             foreach (IGetActualTransformer getActualTransformer in getActualTransformers)
             {
@@ -129,11 +95,6 @@ namespace FanKit.Transformers
                 aaa(transformer.RightBottom);
                 aaa(transformer.LeftBottom);
             }
-
-            this.Left = left;
-            this.Top = top;
-            this.Right = right;
-            this.Bottom = bottom;
         }
 
         /// <summary>
@@ -142,18 +103,10 @@ namespace FanKit.Transformers
         /// <param name="nodes"> The nodes. </param>
         public TransformerBorder(IEnumerable<Node> nodes)
         {
-            float left = float.MaxValue;
-            float top = float.MaxValue;
-            float right = float.MinValue;
-            float bottom = float.MinValue;
-
-            void aaa(Vector2 vector)
-            {
-                if (left > vector.X) left = vector.X;
-                if (top > vector.Y) top = vector.Y;
-                if (right < vector.X) right = vector.X;
-                if (bottom < vector.Y) bottom = vector.Y;
-            }
+            this.Left = float.MaxValue;
+            this.Top = float.MaxValue;
+            this.Right = float.MinValue;
+            this.Bottom = float.MinValue;
 
             foreach (Node node in nodes)
             {
@@ -165,11 +118,6 @@ namespace FanKit.Transformers
                         break;
                 }
             }
-
-            this.Left = left;
-            this.Top = top;
-            this.Right = right;
-            this.Bottom = bottom;
         }
 
         /// <summary>
@@ -178,18 +126,10 @@ namespace FanKit.Transformers
         /// <param name="nodess"> The <see cref="NodeCollection"/> collection. </param>
         public TransformerBorder(IList<NodeCollection> nodess)
         {
-            float left = float.MaxValue;
-            float top = float.MaxValue;
-            float right = float.MinValue;
-            float bottom = float.MinValue;
-
-            void aaa(Vector2 vector)
-            {
-                if (left > vector.X) left = vector.X;
-                if (top > vector.Y) top = vector.Y;
-                if (right < vector.X) right = vector.X;
-                if (bottom < vector.Y) bottom = vector.Y;
-            }
+            this.Left = float.MaxValue;
+            this.Top = float.MaxValue;
+            this.Right = float.MinValue;
+            this.Bottom = float.MinValue;
 
             foreach (NodeCollection nodes in nodess)
             {
@@ -204,13 +144,15 @@ namespace FanKit.Transformers
                     }
                 }
             }
-
-            this.Left = left;
-            this.Top = top;
-            this.Right = right;
-            this.Bottom = bottom;
         }
 
+        void aaa(Vector2 vector)
+        {
+            if (this.Left > vector.X) this.Left = vector.X;
+            if (this.Top > vector.Y) this.Top = vector.Y;
+            if (this.Right < vector.X) this.Right = vector.X;
+            if (this.Bottom < vector.Y) this.Bottom = vector.Y;
+        } // Init
 
 
         //@Static
@@ -221,12 +163,12 @@ namespace FanKit.Transformers
         /// <param name="vector"> The added vector. </param>
         /// <returns> The resulting border. </returns>
         public static TransformerBorder Add(TransformerBorder border, Vector2 vector) => new TransformerBorder
-        (
-            left: border.Left + vector.X,
-            top: border.Top + vector.Y,
-            right: border.Right + vector.X,
-            bottom: border.Bottom + vector.Y
-        );
+        {
+            Left = border.Left + vector.X,
+            Top = border.Top + vector.Y,
+            Right = border.Right + vector.X,
+            Bottom = border.Bottom + vector.Y
+        };
 
 
         /// <summary>
