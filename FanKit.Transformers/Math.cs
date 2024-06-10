@@ -87,14 +87,19 @@ namespace FanKit
         /// <returns> The product vector. </returns>
         public static Vector2 FootPoint(Vector2 point, Vector2 lineA, Vector2 lineB)
         {
-            Vector2 lineVector = lineA - lineB;
-            Vector2 pointLineA = lineA - point;
+            float x = lineA.X - lineB.X;
+            float y = lineA.Y - lineB.Y;
 
-            float t = -(pointLineA.Y * lineVector.Y + pointLineA.X * lineVector.X)
-                / lineVector.LengthSquared();
+            float s = x * x + y * y;
+            float p = (lineA.Y - point.Y) * y + (lineA.X - point.X) * x;
 
-            return lineVector * t + lineA;
+            return new Vector2
+            {
+                X = lineA.X - x * p / s,
+                Y = lineA.Y - y * p / s
+            };
         }
+
         /// <summary>
         /// Get the intersection-point of Line1 and LIne2.
         /// </summary>

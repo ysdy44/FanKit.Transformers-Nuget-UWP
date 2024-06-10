@@ -4,7 +4,7 @@ namespace FanKit.Transformers
 {
     partial struct Transformer
     {
-        private static TransformerMode ContainsNodeMode(Vector2 point, Vector2 leftTop, Vector2 rightTop, Vector2 rightBottom, Vector2 leftBottom, bool disabledRadian)
+        private static TransformerMode ContainsNodeModeCore(Vector2 point, Vector2 leftTop, Vector2 rightTop, Vector2 rightBottom, Vector2 leftBottom, bool disabledRadian)
         {
             // Scale2
             if (Math.InNodeRadius(leftTop, point)) return TransformerMode.ScaleLeftTop;
@@ -55,12 +55,12 @@ namespace FanKit.Transformers
         /// <returns> The transformer-mode. </returns>
         public static TransformerMode ContainsNodeMode(Vector2 point, Transformer transformer, bool disabledRadian = false)
         {
-            Vector2 leftTop = (transformer.LeftTop);
-            Vector2 rightTop = (transformer.RightTop);
-            Vector2 rightBottom = (transformer.RightBottom);
-            Vector2 leftBottom = (transformer.LeftBottom);
+            Vector2 leftTop = transformer.LeftTop;
+            Vector2 rightTop = transformer.RightTop;
+            Vector2 rightBottom = transformer.RightBottom;
+            Vector2 leftBottom = transformer.LeftBottom;
 
-            return Transformer.ContainsNodeMode(point, leftTop, rightTop, rightBottom, leftBottom, disabledRadian);
+            return Transformer.ContainsNodeModeCore(point, leftTop, rightTop, rightBottom, leftBottom, disabledRadian);
         }
 
         /// <summary>
@@ -78,7 +78,7 @@ namespace FanKit.Transformers
             Vector2 rightBottom = Vector2.Transform(transformer.RightBottom, matrix);
             Vector2 leftBottom = Vector2.Transform(transformer.LeftBottom, matrix);
 
-            return Transformer.ContainsNodeMode(point, leftTop, rightTop, rightBottom, leftBottom, disabledRadian);
+            return Transformer.ContainsNodeModeCore(point, leftTop, rightTop, rightBottom, leftBottom, disabledRadian);
         }
 
 

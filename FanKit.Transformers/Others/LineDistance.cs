@@ -44,5 +44,8 @@ namespace FanKit.Transformers
             bool isReverse = (distance.FP < distance.FD);
             return isReverse ? scale : -scale;
         }
+
+        public static implicit operator float(LineDistance distance) => LineDistance.Scale(distance);
+  
     }
 }

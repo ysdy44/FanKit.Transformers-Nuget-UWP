@@ -210,8 +210,8 @@ namespace FanKit.Transformers
             {
                 Vector2 center = isCenter ? startingTransformer.Center : lineDiagonalPoint;
 
-                LineDistance distance = new LineDistance(footPoint, linePoint, center);
-                Matrix3x2 scaleMatrix = Matrix3x2.CreateScale(LineDistance.Scale(distance), center);
+                float distance = new LineDistance(footPoint, linePoint, center);
+                Matrix3x2 scaleMatrix = Matrix3x2.CreateScale(distance, center);
 
                 return Transformer.Multiplies(startingTransformer, scaleMatrix);
             }
@@ -230,8 +230,8 @@ namespace FanKit.Transformers
             {
                 Vector2 center = isCenter ? startingTransformer.Center : lineDiagonalPoint;
 
-                LineDistance distance = new LineDistance(footPoint, linePoint, center);
-                Matrix3x2 scaleMatrix = Matrix3x2.CreateScale(LineDistance.Scale(distance), center);
+                float distance = new LineDistance(footPoint, linePoint, center);
+                Matrix3x2 scaleMatrix = Matrix3x2.CreateScale(distance, center);
 
                 return Transformer.Multiplies(startingTransformer, scaleMatrix);
             }
@@ -367,8 +367,8 @@ namespace FanKit.Transformers
                 Vector2 center = isCenter ? startingTransformer.Center : lineDiagonalPoint;
                 Vector2 footPoint = Math.FootPoint(canvasPoint, linePoint, center);
 
-                LineDistance lineDistance = new LineDistance(footPoint, linePoint, center);
-                Matrix3x2 scaleMatrix = Matrix3x2.CreateScale(LineDistance.Scale(lineDistance), center);
+                float distance = new LineDistance(footPoint, linePoint, center);
+                Matrix3x2 scaleMatrix = Matrix3x2.CreateScale(distance, center);
 
                 return Transformer.Multiplies(startingTransformer, scaleMatrix);
             }
@@ -395,8 +395,8 @@ namespace FanKit.Transformers
                 Vector2 center = isCenter ? startingTransformer.Center : lineDiagonalPoint;
                 Vector2 footPoint = Math.FootPoint(canvasPoint, linePoint, center);
 
-                LineDistance lineDistance = new LineDistance(footPoint, linePoint, center);
-                Matrix3x2 scaleMatrix = Matrix3x2.CreateScale(LineDistance.Scale(lineDistance), center);
+                float distance = new LineDistance(footPoint, linePoint, center);
+                Matrix3x2 scaleMatrix = Matrix3x2.CreateScale(distance, center);
 
                 return Transformer.Multiplies(startingTransformer, scaleMatrix);
             }

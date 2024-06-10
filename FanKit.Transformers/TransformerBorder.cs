@@ -67,12 +67,12 @@ namespace FanKit.Transformers
             this.Right = float.MinValue;
             this.Bottom = float.MinValue;
 
-            foreach (Transformer transformer in transformers)
+            foreach (Transformer item in transformers)
             {
-                this.Init(transformer.LeftTop);
-                this.Init(transformer.RightTop);
-                this.Init(transformer.RightBottom);
-                this.Init(transformer.LeftBottom);
+                this.Init(item.LeftTop);
+                this.Init(item.RightTop);
+                this.Init(item.RightBottom);
+                this.Init(item.LeftBottom);
             }
         }
 
@@ -87,9 +87,9 @@ namespace FanKit.Transformers
             this.Right = float.MinValue;
             this.Bottom = float.MinValue;
 
-            foreach (IGetActualTransformer getActualTransformer in getActualTransformers)
+            foreach (IGetActualTransformer item in getActualTransformers)
             {
-                Transformer transformer = getActualTransformer.GetActualTransformer();
+                Transformer transformer = item.GetActualTransformer();
 
                 this.Init(transformer.LeftTop);
                 this.Init(transformer.RightTop);
@@ -109,13 +109,13 @@ namespace FanKit.Transformers
             this.Right = float.MinValue;
             this.Bottom = float.MinValue;
 
-            foreach (Node node in nodes)
+            foreach (Node item in nodes)
             {
-                switch (node.Type)
+                switch (item.Type)
                 {
                     case NodeType.BeginFigure:
                     case NodeType.Node:
-                        this.Init(node.Point);
+                        this.Init(item.Point);
                         break;
                 }
             }
@@ -132,9 +132,9 @@ namespace FanKit.Transformers
             this.Right = float.MinValue;
             this.Bottom = float.MinValue;
 
-            foreach (NodeCollection nodes in nodess)
+            foreach (NodeCollection item in nodess)
             {
-                foreach (Node node in nodes)
+                foreach (Node node in item)
                 {
                     switch (node.Type)
                     {
@@ -233,7 +233,6 @@ namespace FanKit.Transformers
         /// <param name="right"> The second border to compare. </param>
         /// <returns> Return **true** if the nodes are not equal; False if they are equal. </returns>
         public static bool operator !=(TransformerBorder left, TransformerBorder right) => !left.Equals(right);
-
 
     }
 }
