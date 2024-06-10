@@ -148,6 +148,8 @@
     <Compile Include="Interface\IGetActualTransformer.cs" />
     <Compile Include="Interface\ITransformerGeometry.cs" />
     <Compile Include="Interface\ITransformerLTRB.cs" />
+    <Compile Include="Interface\ITransformerWH.cs" />
+    <Compile Include="Interface\ITransformerXY.cs" />
     <Compile Include="Math.cs" />
     <Compile Include="NodeBorders\NodeBorder.cs" />
     <Compile Include="NodeBorders\NodeBorderCollection.cs" />

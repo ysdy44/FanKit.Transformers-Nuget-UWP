@@ -5,7 +5,7 @@ namespace FanKit.Transformers
     /// <summary> 
     /// A structure encapsulating four vector values (LeftTop, RightTop, RightBottom, LeftBottom). 
     /// </summary>
-    public partial struct Transformer : ITransformerLTRB, ITransformerGeometry
+    public partial struct Transformer : ITransformerXY, ITransformerLTRB, ITransformerGeometry
     {
 
         //@Static
@@ -148,7 +148,7 @@ namespace FanKit.Transformers
         /// <returns> Return **true** if the other Transformer is equal to this instance, otherwise **false**. </returns>
         public bool Equals(Transformer other)
         {
-            return this.LeftTop == other.LeftTop&& this.RightTop == other.RightTop && this.RightBottom == other.RightBottom && this.LeftBottom == other.LeftBottom;
+            return this.LeftTop == other.LeftTop && this.RightTop == other.RightTop && this.RightBottom == other.RightBottom && this.LeftBottom == other.LeftBottom;
         }
 
         /// <summary>
