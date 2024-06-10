@@ -6,18 +6,18 @@ namespace FanKit.Transformers
     {
 
         /// <summary> Gets border's left. </summary>
-        public float Left { get; private set; }
+        public float Left { get; set; }
         /// <summary> Gets border's top. </summary>
-        public float Top { get; private set; }
+        public float Top { get; set; }
         /// <summary> Gets border's right. </summary>
-        public float Right { get; private set; }
+        public float Right { get; set; }
         /// <summary> Gets border's bottom. </summary>
-        public float Bottom { get; private set; }
+        public float Bottom { get; set; }
 
         /// <summary> Gets border's center of X. </summary>
-        public float CenterX { get; private set; }
+        public float CenterX => (this.Left + this.Right) / 2;
         /// <summary> Gets border's center of Y. </summary>
-        public float CenterY { get; private set; }
+        public float CenterY => (this.Top + this.Bottom) / 2;
         /*
         /// <summary> Gets rectangle's center point. </summary>
         public Vector2 Center => new Vector2(this.CenterX, this.CenterY);

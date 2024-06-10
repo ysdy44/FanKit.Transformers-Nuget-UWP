@@ -23,8 +23,6 @@ namespace FanKit.Transformers
             this.Top = top;
             this.Right = right;
             this.Bottom = bottom;
-            this.CenterX = (left + right) / 2;
-            this.CenterY = (top + bottom) / 2;
         }
 
         /// <summary>
@@ -38,8 +36,6 @@ namespace FanKit.Transformers
             this.Top = 0;
             this.Right = width;
             this.Bottom = height;
-            this.CenterX = width / 2;
-            this.CenterY = height / 2;
         }
 
         /// <summary>
@@ -70,8 +66,6 @@ namespace FanKit.Transformers
             this.Top = top;
             this.Right = right;
             this.Bottom = bottom;
-            this.CenterX = (left + right) / 2;
-            this.CenterY = (Top + bottom) / 2;
         }
 
         /// <summary>
@@ -105,8 +99,6 @@ namespace FanKit.Transformers
             this.Top = top;
             this.Right = right;
             this.Bottom = bottom;
-            this.CenterX = (left + right) / 2;
-            this.CenterY = (Top + bottom) / 2;
         }
 
         /// <summary>
@@ -142,8 +134,6 @@ namespace FanKit.Transformers
             this.Top = top;
             this.Right = right;
             this.Bottom = bottom;
-            this.CenterX = (left + right) / 2;
-            this.CenterY = (Top + bottom) / 2;
         }
 
         /// <summary>
@@ -180,8 +170,6 @@ namespace FanKit.Transformers
             this.Top = top;
             this.Right = right;
             this.Bottom = bottom;
-            this.CenterX = (left + right) / 2;
-            this.CenterY = (Top + bottom) / 2;
         }
 
         /// <summary>
@@ -221,8 +209,6 @@ namespace FanKit.Transformers
             this.Top = top;
             this.Right = right;
             this.Bottom = bottom;
-            this.CenterX = (left + right) / 2;
-            this.CenterY = (Top + bottom) / 2;
         }
 
 
