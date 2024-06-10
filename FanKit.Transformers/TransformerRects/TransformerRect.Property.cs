@@ -35,14 +35,14 @@ namespace FanKit.Transformers
         /// <summary> Gets the center bottom vector. </summary>
         public Vector2 CenterBottom { get; private set; }
 
-        /// <summary> Gets or sets the position of the top-left corner of the rectangle. </summary>
-        public Vector2 LeftTop { get; set; }
-        /// <summary> Gets or sets the position of the top-right corner of the rectangle. </summary>
-        public Vector2 RightTop { get; set; }
-        /// <summary> Gets or sets the position of the bottom-right corner of the rectangle. </summary>
-        public Vector2 RightBottom { get; set; }
-        /// <summary> Gets or sets the position of the bottom-left corner of the rectangle. </summary>
-        public Vector2 LeftBottom { get; set; }
+        /// <summary> Gets the position of the top-left corner of the rectangle. </summary>
+        public Vector2 LeftTop { get; private set; }
+        /// <summary> Gets the position of the top-right corner of the rectangle. </summary>
+        public Vector2 RightTop { get; private set; }
+        /// <summary> Gets the position of the bottom-right corner of the rectangle. </summary>
+        public Vector2 RightBottom { get; private set; }
+        /// <summary> Gets the position of the bottom-left corner of the rectangle. </summary>
+        public Vector2 LeftBottom { get; private set; }
 
         /// <summary> Gets horizontal vector. </summary>
         public Vector2 Horizontal => this.CenterRight - this.CenterLeft;

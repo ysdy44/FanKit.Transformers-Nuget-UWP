@@ -30,13 +30,13 @@ namespace FanKit.Transformers
         /// <summary> Gets the center bottom vector. </summary>
         public Vector2 CenterBottom => new Vector2(this.CenterX, this.Bottom);
 
-        /// <summary> Gets or sets the position of the top-left corner of the border. </summary>
+        /// <summary> Gets the position of the top-left corner of the border. </summary>
         public Vector2 LeftTop => new Vector2(this.Left, this.Top);
-        /// <summary> Gets or sets the position of the top-right corner of the border. </summary>
+        /// <summary> Gets the position of the top-right corner of the border. </summary>
         public Vector2 RightTop => new Vector2(this.Right, this.Top);
-        /// <summary> Gets or sets the position of the bottom-right corner of the border. </summary>
+        /// <summary> Gets the position of the bottom-right corner of the border. </summary>
         public Vector2 RightBottom => new Vector2(this.Right, this.Bottom);
-        /// <summary> Gets or sets the position of the bottom-left corner of the border. </summary>
+        /// <summary> Gets the position of the bottom-left corner of the border. </summary>
         public Vector2 LeftBottom => new Vector2(this.Left, this.Bottom);
 
         /// <summary> Gets horizontal vector. </summary>
