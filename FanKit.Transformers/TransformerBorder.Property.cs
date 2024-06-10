@@ -18,6 +18,7 @@ namespace FanKit.Transformers
         public float CenterX { get; private set; }
         /// <summary> Gets border's center of Y. </summary>
         public float CenterY { get; private set; }
+        /*
         /// <summary> Gets rectangle's center point. </summary>
         public Vector2 Center => new Vector2(this.CenterX, this.CenterY);
 
@@ -43,6 +44,7 @@ namespace FanKit.Transformers
         public Vector2 Horizontal => this.CenterRight - this.CenterLeft;
         /// <summary> Gets vertical vector. </summary>
         public Vector2 Vertical => this.CenterBottom - this.CenterTop;
+         */
 
 
         /// <summary>
