@@ -49,10 +49,10 @@ namespace FanKit.Transformers
             this.Right = float.MinValue;
             this.Bottom = float.MinValue;
 
-            aaa(transformer.LeftTop);
-            aaa(transformer.RightTop);
-            aaa(transformer.RightBottom);
-            aaa(transformer.LeftBottom);
+            this.Init(transformer.LeftTop);
+            this.Init(transformer.RightTop);
+            this.Init(transformer.RightBottom);
+            this.Init(transformer.LeftBottom);
         }
 
         /// <summary>
@@ -68,10 +68,10 @@ namespace FanKit.Transformers
 
             foreach (Transformer transformer in transformers)
             {
-                aaa(transformer.LeftTop);
-                aaa(transformer.RightTop);
-                aaa(transformer.RightBottom);
-                aaa(transformer.LeftBottom);
+                this.Init(transformer.LeftTop);
+                this.Init(transformer.RightTop);
+                this.Init(transformer.RightBottom);
+                this.Init(transformer.LeftBottom);
             }
         }
 
@@ -90,10 +90,10 @@ namespace FanKit.Transformers
             {
                 Transformer transformer = getActualTransformer.GetActualTransformer();
 
-                aaa(transformer.LeftTop);
-                aaa(transformer.RightTop);
-                aaa(transformer.RightBottom);
-                aaa(transformer.LeftBottom);
+                this.Init(transformer.LeftTop);
+                this.Init(transformer.RightTop);
+                this.Init(transformer.RightBottom);
+                this.Init(transformer.LeftBottom);
             }
         }
 
@@ -114,7 +114,7 @@ namespace FanKit.Transformers
                 {
                     case NodeType.BeginFigure:
                     case NodeType.Node:
-                        aaa(node.Point);
+                        this.Init(node.Point);
                         break;
                 }
             }
@@ -139,20 +139,20 @@ namespace FanKit.Transformers
                     {
                         case NodeType.BeginFigure:
                         case NodeType.Node:
-                            aaa(node.Point);
+                            this.Init(node.Point);
                             break;
                     }
                 }
             }
         }
 
-        void aaa(Vector2 vector)
+        private void Init(Vector2 vector)
         {
             if (this.Left > vector.X) this.Left = vector.X;
             if (this.Top > vector.Y) this.Top = vector.Y;
             if (this.Right < vector.X) this.Right = vector.X;
             if (this.Bottom < vector.Y) this.Bottom = vector.Y;
-        } // Init
+        }
 
 
         //@Static
