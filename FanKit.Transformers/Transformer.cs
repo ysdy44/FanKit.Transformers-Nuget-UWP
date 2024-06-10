@@ -5,6 +5,7 @@ namespace FanKit.Transformers
     /// <summary> 
     /// A structure encapsulating four vector values (LeftTop, RightTop, RightBottom, LeftBottom). 
     /// </summary>
+    [System.Runtime.InteropServices.StructLayout(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct Transformer : ITransformerXY, ITransformerLTRB, ITransformerGeometry
     {
 

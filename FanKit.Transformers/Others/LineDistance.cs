@@ -6,6 +6,7 @@ namespace FanKit.Transformers
     /// Distance of points on these points in a line: 
     /// ------D[Diagonal Point]、C[Center Point]、P[Point) and F[FootPoint] .
     /// </summary>
+    [System.Runtime.InteropServices.StructLayout(System.Runtime.InteropServices.LayoutKind.Sequential)]
     internal struct LineDistance
     {
         /// <summary> Distance between [Foot Point] and [Center Point] . </summary>

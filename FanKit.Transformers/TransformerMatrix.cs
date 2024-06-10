@@ -5,6 +5,7 @@ namespace FanKit.Transformers
     /// <summary>
     /// A structure encapsulating two transformer values  (Source and Destination). 
     /// </summary>
+    [System.Runtime.InteropServices.StructLayout(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public struct TransformerMatrix : ICacheTransform
     {
         /// <summary> The source transformer. </summary>
