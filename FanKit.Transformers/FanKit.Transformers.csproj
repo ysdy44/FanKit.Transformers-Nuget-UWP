@@ -183,6 +183,7 @@
     <Compile Include="Transformer.AspectRatio.cs" />
     <Compile Include="Transformer.Contains.cs" />
     <Compile Include="Transformer.Controller.cs" />
+    <Compile Include="Transformer.Corner.cs" />
     <Compile Include="Transformer.cs" />
     <Compile Include="Transformer.Geometry.cs" />
     <Compile Include="Transformer.Homography.cs" />
