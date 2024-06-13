@@ -20,28 +20,44 @@ namespace FanKit.Transformers
         {
             switch (mode)
             {
-                case TransformerMode.None: return startingTransformer;
+                case TransformerMode.None:
+                    return startingTransformer;
 
-                case TransformerMode.Rotation: return Transformer.Rotation(startingPoint, point, startingTransformer, isSnapToTick);
+                case TransformerMode.Rotation:
+                    return Transformer.Rotation(startingPoint, point, startingTransformer, isSnapToTick);
 
-                case TransformerMode.SkewLeft: return Transformer.SkewLeft(startingPoint, point, startingTransformer, isCenter);
-                case TransformerMode.SkewTop: return Transformer.SkewTop(startingPoint, point, startingTransformer, isCenter);
-                case TransformerMode.SkewRight: return Transformer.SkewRight(startingPoint, point, startingTransformer, isCenter);
-                case TransformerMode.SkewBottom: return Transformer.SkewBottom(startingPoint, point, startingTransformer, isCenter);
+                case TransformerMode.SkewLeft:
+                    return Transformer.SkewLeft(startingPoint, point, startingTransformer, isCenter);
+                case TransformerMode.SkewTop:
+                    return Transformer.SkewTop(startingPoint, point, startingTransformer, isCenter);
+                case TransformerMode.SkewRight:
+                    return Transformer.SkewRight(startingPoint, point, startingTransformer, isCenter);
+                case TransformerMode.SkewBottom:
+                    return Transformer.SkewBottom(startingPoint, point, startingTransformer, isCenter);
 
-                case TransformerMode.ScaleLeft: return Transformer.ScaleLeft(point, startingTransformer, isRatio, isCenter);
-                case TransformerMode.ScaleTop: return Transformer.ScaleTop(point, startingTransformer, isRatio, isCenter);
-                case TransformerMode.ScaleRight: return Transformer.ScaleRight(point, startingTransformer, isRatio, isCenter);
-                case TransformerMode.ScaleBottom: return Transformer.ScaleBottom(point, startingTransformer, isRatio, isCenter);
+                case TransformerMode.ScaleLeft:
+                    return Transformer.ScaleLeft(point, startingTransformer, isRatio, isCenter);
+                case TransformerMode.ScaleTop:
+                    return Transformer.ScaleTop(point, startingTransformer, isRatio, isCenter);
+                case TransformerMode.ScaleRight:
+                    return Transformer.ScaleRight(point, startingTransformer, isRatio, isCenter);
+                case TransformerMode.ScaleBottom:
+                    return Transformer.ScaleBottom(point, startingTransformer, isRatio, isCenter);
 
-                case TransformerMode.ScaleLeftTop: return Transformer.ScaleLeftTop(point, startingTransformer, isRatio, isCenter);
-                case TransformerMode.ScaleRightTop: return Transformer.ScaleRightTop(point, startingTransformer, isRatio, isCenter);
-                case TransformerMode.ScaleRightBottom: return Transformer.ScaleRightBottom(point, startingTransformer, isRatio, isCenter);
-                case TransformerMode.ScaleLeftBottom: return Transformer.ScaleLeftBottom(point, startingTransformer, isRatio, isCenter);
+                case TransformerMode.ScaleLeftTop:
+                    return Transformer.ScaleLeftTop(point, startingTransformer, isRatio, isCenter);
+                case TransformerMode.ScaleRightTop:
+                    return Transformer.ScaleRightTop(point, startingTransformer, isRatio, isCenter);
+                case TransformerMode.ScaleRightBottom:
+                    return Transformer.ScaleRightBottom(point, startingTransformer, isRatio, isCenter);
+                case TransformerMode.ScaleLeftBottom:
+                    return Transformer.ScaleLeftBottom(point, startingTransformer, isRatio, isCenter);
+
+                default:
+                    return startingTransformer;
             }
-
-            return startingTransformer;
         }
+
         /// <summary>
         /// It controls the transformation of transformer.
         /// </summary>
@@ -58,27 +74,42 @@ namespace FanKit.Transformers
         {
             switch (mode)
             {
-                case TransformerMode.None: return startingTransformer;
+                case TransformerMode.None:
+                    return startingTransformer;
 
-                case TransformerMode.Rotation: return Transformer.Rotation(startingPoint, point, startingTransformer, inverseMatrix, isSnapToTick);
+                case TransformerMode.Rotation:
+                    return Transformer.Rotation(startingPoint, point, startingTransformer, inverseMatrix, isSnapToTick);
 
-                case TransformerMode.SkewLeft: return Transformer.SkewLeft(startingPoint, point, startingTransformer, isCenter);
-                case TransformerMode.SkewTop: return Transformer.SkewTop(startingPoint, point, startingTransformer, isCenter);
-                case TransformerMode.SkewRight: return Transformer.SkewRight(startingPoint, point, startingTransformer, isCenter);
-                case TransformerMode.SkewBottom: return Transformer.SkewBottom(startingPoint, point, startingTransformer, isCenter);
+                case TransformerMode.SkewLeft:
+                    return Transformer.SkewLeft(startingPoint, point, startingTransformer, isCenter);
+                case TransformerMode.SkewTop:
+                    return Transformer.SkewTop(startingPoint, point, startingTransformer, isCenter);
+                case TransformerMode.SkewRight:
+                    return Transformer.SkewRight(startingPoint, point, startingTransformer, isCenter);
+                case TransformerMode.SkewBottom:
+                    return Transformer.SkewBottom(startingPoint, point, startingTransformer, isCenter);
 
-                case TransformerMode.ScaleLeft: return Transformer.ScaleLeft(point, startingTransformer, inverseMatrix, isRatio, isCenter);
-                case TransformerMode.ScaleTop: return Transformer.ScaleTop(point, startingTransformer, inverseMatrix, isRatio, isCenter);
-                case TransformerMode.ScaleRight: return Transformer.ScaleRight(point, startingTransformer, inverseMatrix, isRatio, isCenter);
-                case TransformerMode.ScaleBottom: return Transformer.ScaleBottom(point, startingTransformer, inverseMatrix, isRatio, isCenter);
+                case TransformerMode.ScaleLeft:
+                    return Transformer.ScaleLeft(point, startingTransformer, inverseMatrix, isRatio, isCenter);
+                case TransformerMode.ScaleTop:
+                    return Transformer.ScaleTop(point, startingTransformer, inverseMatrix, isRatio, isCenter);
+                case TransformerMode.ScaleRight:
+                    return Transformer.ScaleRight(point, startingTransformer, inverseMatrix, isRatio, isCenter);
+                case TransformerMode.ScaleBottom:
+                    return Transformer.ScaleBottom(point, startingTransformer, inverseMatrix, isRatio, isCenter);
 
-                case TransformerMode.ScaleLeftTop: return Transformer.ScaleLeftTop(point, startingTransformer, inverseMatrix, isRatio, isCenter);
-                case TransformerMode.ScaleRightTop: return Transformer.ScaleRightTop(point, startingTransformer, inverseMatrix, isRatio, isCenter);
-                case TransformerMode.ScaleRightBottom: return Transformer.ScaleRightBottom(point, startingTransformer, inverseMatrix, isRatio, isCenter);
-                case TransformerMode.ScaleLeftBottom: return Transformer.ScaleLeftBottom(point, startingTransformer, inverseMatrix, isRatio, isCenter);
+                case TransformerMode.ScaleLeftTop:
+                    return Transformer.ScaleLeftTop(point, startingTransformer, inverseMatrix, isRatio, isCenter);
+                case TransformerMode.ScaleRightTop:
+                    return Transformer.ScaleRightTop(point, startingTransformer, inverseMatrix, isRatio, isCenter);
+                case TransformerMode.ScaleRightBottom:
+                    return Transformer.ScaleRightBottom(point, startingTransformer, inverseMatrix, isRatio, isCenter);
+                case TransformerMode.ScaleLeftBottom:
+                    return Transformer.ScaleLeftBottom(point, startingTransformer, inverseMatrix, isRatio, isCenter);
+
+                default:
+                    return startingTransformer;
             }
-
-            return startingTransformer;
         }
 
 
