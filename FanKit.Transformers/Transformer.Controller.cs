@@ -24,7 +24,11 @@ namespace FanKit.Transformers
                     return startingTransformer;
 
                 case TransformerMode.Rotation:
-                    return Transformer.Rotation(startingPoint, point, startingTransformer, isSnapToTick);
+                    return Transformer.Rotate(
+                        startingPoint,
+                        point,
+                        startingTransformer,
+                        isSnapToTick);
 
                 case TransformerMode.SkewLeft:
                     return Transformer.SkewLeft(startingPoint, point, startingTransformer, isCenter);
@@ -78,7 +82,11 @@ namespace FanKit.Transformers
                     return startingTransformer;
 
                 case TransformerMode.Rotation:
-                    return Transformer.Rotation(startingPoint, point, startingTransformer, inverseMatrix, isSnapToTick);
+                    return Transformer.Rotate(
+                        Vector2.Transform(startingPoint, inverseMatrix),
+                        Vector2.Transform(point, inverseMatrix),
+                        startingTransformer,
+                        isSnapToTick);
 
                 case TransformerMode.SkewLeft:
                     return Transformer.SkewLeft(startingPoint, point, startingTransformer, isCenter);
@@ -115,25 +123,8 @@ namespace FanKit.Transformers
 
 
         // Rotation      
-        private static Transformer Rotation(Vector2 startingPoint, Vector2 point, Transformer startingTransformer, bool isSnapToTick)
+        private static Transformer Rotate(Vector2 canvasStartingPoint, Vector2 canvasPoint, Transformer startingTransformer, bool isSnapToTick)
         {
-            Vector2 canvasPoint = point;
-            Vector2 canvasStartingPoint = startingPoint;
-            Vector2 center = startingTransformer.Center;
-
-            float canvasRadian = Math.VectorToRadians(canvasPoint - center);
-            if (isSnapToTick) canvasRadian = Math.RadiansStepFrequency(canvasRadian);
-
-            float canvasStartingRadian = Math.VectorToRadians(canvasStartingPoint - center);
-            float radian = canvasRadian - canvasStartingRadian;
-
-            Matrix3x2 rotationMatrix = Matrix3x2.CreateRotation(radian, center);
-            return Transformer.Multiplies(startingTransformer, rotationMatrix);
-        }
-        private static Transformer Rotation(Vector2 startingPoint, Vector2 point, Transformer startingTransformer, Matrix3x2 inverseMatrix, bool isSnapToTick)
-        {
-            Vector2 canvasPoint = Vector2.Transform(point, inverseMatrix);
-            Vector2 canvasStartingPoint = Vector2.Transform(startingPoint, inverseMatrix);
             Vector2 center = startingTransformer.Center;
 
             float canvasRadian = Math.VectorToRadians(canvasPoint - center);
