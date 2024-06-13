@@ -31,13 +31,17 @@ namespace FanKit.Transformers
                         isSnapToTick);
 
                 case TransformerMode.SkewLeft:
-                    return Transformer.SkewLeft(startingPoint, point, startingTransformer, isCenter);
+                    Vector2 vector1 = Transformer.Skew(startingPoint, point, startingTransformer.LeftTop, startingTransformer.LeftBottom);
+                    return isCenter ? Transformer.ScaleLeftCenter(startingTransformer, vector1) : Transformer.ScaleLeft(startingTransformer, vector1);
                 case TransformerMode.SkewTop:
-                    return Transformer.SkewTop(startingPoint, point, startingTransformer, isCenter);
+                    Vector2 vector2 = Transformer.Skew(startingPoint, point, startingTransformer.LeftTop, startingTransformer.RightTop);
+                    return isCenter ? Transformer.ScaleTopCenter(startingTransformer, vector2) : Transformer.ScaleTop(startingTransformer, vector2);
                 case TransformerMode.SkewRight:
-                    return Transformer.SkewRight(startingPoint, point, startingTransformer, isCenter);
+                    Vector2 vector3 = Transformer.Skew(startingPoint, point, startingTransformer.RightTop, startingTransformer.RightBottom);
+                    return isCenter ? Transformer.ScaleRightCenter(startingTransformer, vector3) : Transformer.ScaleRight(startingTransformer, vector3);
                 case TransformerMode.SkewBottom:
-                    return Transformer.SkewBottom(startingPoint, point, startingTransformer, isCenter);
+                    Vector2 vector4 = Transformer.Skew(startingPoint, point, startingTransformer.LeftBottom, startingTransformer.RightBottom);
+                    return isCenter ? Transformer.ScaleBottomCenter(startingTransformer, vector4) : Transformer.ScaleBottom(startingTransformer, vector4);
 
                 case TransformerMode.ScaleLeft:
                     return Transformer.ScaleLeft(point, startingTransformer, isRatio, isCenter);
@@ -89,13 +93,17 @@ namespace FanKit.Transformers
                         isSnapToTick);
 
                 case TransformerMode.SkewLeft:
-                    return Transformer.SkewLeft(startingPoint, point, startingTransformer, isCenter);
+                    Vector2 vector1 = Transformer.Skew(startingPoint, point, startingTransformer.LeftTop, startingTransformer.LeftBottom);
+                    return isCenter ? Transformer.ScaleLeftCenter(startingTransformer, vector1) : Transformer.ScaleLeft(startingTransformer, vector1);
                 case TransformerMode.SkewTop:
-                    return Transformer.SkewTop(startingPoint, point, startingTransformer, isCenter);
+                    Vector2 vector2 = Transformer.Skew(startingPoint, point, startingTransformer.LeftTop, startingTransformer.RightTop);
+                    return isCenter ? Transformer.ScaleTopCenter(startingTransformer, vector2) : Transformer.ScaleTop(startingTransformer, vector2);
                 case TransformerMode.SkewRight:
-                    return Transformer.SkewRight(startingPoint, point, startingTransformer, isCenter);
+                    Vector2 vector3 = Transformer.Skew(startingPoint, point, startingTransformer.RightTop, startingTransformer.RightBottom);
+                    return isCenter ? Transformer.ScaleRightCenter(startingTransformer, vector3) : Transformer.ScaleRight(startingTransformer, vector3);
                 case TransformerMode.SkewBottom:
-                    return Transformer.SkewBottom(startingPoint, point, startingTransformer, isCenter);
+                    Vector2 vector4 = Transformer.Skew(startingPoint, point, startingTransformer.LeftBottom, startingTransformer.RightBottom);
+                    return isCenter ? Transformer.ScaleBottomCenter(startingTransformer, vector4) : Transformer.ScaleBottom(startingTransformer, vector4);
 
                 case TransformerMode.ScaleLeft:
                     return Transformer.ScaleLeft(point, startingTransformer, inverseMatrix, isRatio, isCenter);
@@ -149,75 +157,6 @@ namespace FanKit.Transformers
             Vector2 halfVector = vector / 2;
 
             return halfVector;
-        }
-
-        private static Transformer SkewLeft(Vector2 startingPoint, Vector2 point, Transformer startingTransformer, bool isCenter)
-        {
-            Vector2 linePoineA = startingTransformer.LeftTop;
-            Vector2 linePoineB = startingTransformer.LeftBottom;
-            Vector2 vector = Transformer.Skew(startingPoint, point, linePoineA, linePoineB);
-
-            startingTransformer.LeftTop += vector;
-            startingTransformer.LeftBottom += vector;
-
-            if (isCenter)
-            {
-                startingTransformer.RightTop -= vector;
-                startingTransformer.RightBottom -= vector;
-            }
-
-            return startingTransformer;
-        }
-        private static Transformer SkewTop(Vector2 startingPoint, Vector2 point, Transformer startingTransformer, bool isCenter)
-        {
-            Vector2 linePoineA = startingTransformer.LeftTop;
-            Vector2 linePoineB = startingTransformer.RightTop;
-            Vector2 vector = Transformer.Skew(startingPoint, point, linePoineA, linePoineB);
-
-            startingTransformer.LeftTop += vector;
-            startingTransformer.RightTop += vector;
-
-            if (isCenter)
-            {
-                startingTransformer.RightBottom -= vector;
-                startingTransformer.LeftBottom -= vector;
-            }
-
-            return startingTransformer;
-        }
-        private static Transformer SkewRight(Vector2 startingPoint, Vector2 point, Transformer startingTransformer, bool isCenter)
-        {
-            Vector2 linePoineA = startingTransformer.RightTop;
-            Vector2 linePoineB = startingTransformer.RightBottom;
-            Vector2 vector = Transformer.Skew(startingPoint, point, linePoineA, linePoineB);
-
-            startingTransformer.RightTop += vector;
-            startingTransformer.RightBottom += vector;
-
-            if (isCenter)
-            {
-                startingTransformer.LeftTop -= vector;
-                startingTransformer.LeftBottom -= vector;
-            }
-
-            return startingTransformer;
-        }
-        private static Transformer SkewBottom(Vector2 startingPoint, Vector2 point, Transformer startingTransformer, bool isCenter)
-        {
-            Vector2 linePoineA = startingTransformer.LeftBottom;
-            Vector2 linePoineB = startingTransformer.RightBottom;
-            Vector2 vector = Transformer.Skew(startingPoint, point, linePoineA, linePoineB);
-
-            startingTransformer.RightBottom += vector;
-            startingTransformer.LeftBottom += vector;
-
-            if (isCenter)
-            {
-                startingTransformer.LeftTop -= vector;
-                startingTransformer.RightTop -= vector;
-            }
-
-            return startingTransformer;
         }
 
 
