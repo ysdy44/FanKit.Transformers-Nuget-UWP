@@ -117,13 +117,89 @@ namespace FanKit.Transformers
                     }
 
                 case TransformerMode.ScaleLeftTop:
-                    return Transformer.ScaleLeftTop(point, startingTransformer, isRatio, isCenter);
+                    if (isRatio)
+                    {
+                        if (isCenter) return Transformer.ScaleCornerRatioCenter(startingTransformer, new LineP1C
+                        {
+                            Point = startingTransformer.LeftTop,
+                            CanvasPoint = point
+                        });
+                        else return Transformer.ScaleRatio(startingTransformer, new LinePD1C
+                        {
+                            Point = startingTransformer.LeftTop,
+                            DiagonalPoint = startingTransformer.RightBottom,
+                            CanvasPoint = point
+                        });
+                    }
+                    else if (isCenter) return Transformer.FromLeftTop(startingTransformer, point);
+                    else return Transformer.FromLeftTop(startingTransformer, new LineD1C
+                    {
+                        DiagonalPoint = startingTransformer.RightBottom,
+                        CanvasPoint = point
+                    });
                 case TransformerMode.ScaleRightTop:
-                    return Transformer.ScaleRightTop(point, startingTransformer, isRatio, isCenter);
+                    if (isRatio)
+                    {
+                        if (isCenter) return Transformer.ScaleCornerRatioCenter(startingTransformer, new LineP1C
+                        {
+                            Point = startingTransformer.RightTop,
+                            CanvasPoint = point
+                        });
+                        else return Transformer.ScaleRatio(startingTransformer, new LinePD1C
+                        {
+                            Point = startingTransformer.RightTop,
+                            DiagonalPoint = startingTransformer.LeftBottom,
+                            CanvasPoint = point
+                        });
+                    }
+                    else if (isCenter) return Transformer.FromRightTop(startingTransformer, point);
+                    else return Transformer.FromRightTop(startingTransformer, new LineD1C
+                    {
+                        DiagonalPoint = startingTransformer.LeftBottom,
+                        CanvasPoint = point
+                    });
                 case TransformerMode.ScaleRightBottom:
-                    return Transformer.ScaleRightBottom(point, startingTransformer, isRatio, isCenter);
+                    if (isRatio)
+                    {
+                        if (isCenter) return Transformer.ScaleCornerRatioCenter(startingTransformer, new LineP1C
+                        {
+                            Point = startingTransformer.RightBottom,
+                            CanvasPoint = point
+                        });
+                        else return Transformer.ScaleRatio(startingTransformer, new LinePD1C
+                        {
+                            Point = startingTransformer.RightBottom,
+                            DiagonalPoint = startingTransformer.LeftTop,
+                            CanvasPoint = point
+                        });
+                    }
+                    else if (isCenter) return Transformer.FromRightBottom(startingTransformer, point);
+                    else return Transformer.FromRightBottom(startingTransformer, new LineD1C
+                    {
+                        DiagonalPoint = startingTransformer.LeftTop,
+                        CanvasPoint = point
+                    });
                 case TransformerMode.ScaleLeftBottom:
-                    return Transformer.ScaleLeftBottom(point, startingTransformer, isRatio, isCenter);
+                    if (isRatio)
+                    {
+                        if (isCenter) return Transformer.ScaleCornerRatioCenter(startingTransformer, new LineP1C
+                        {
+                            Point = startingTransformer.LeftBottom,
+                            CanvasPoint = point
+                        });
+                        else return Transformer.ScaleRatio(startingTransformer, new LinePD1C
+                        {
+                            Point = startingTransformer.LeftBottom,
+                            DiagonalPoint = startingTransformer.RightTop,
+                            CanvasPoint = point
+                        });
+                    }
+                    else if (isCenter) return Transformer.FromLeftBottom(startingTransformer, point);
+                    else return Transformer.FromLeftBottom(startingTransformer, new LineD1C
+                    {
+                        DiagonalPoint = startingTransformer.RightTop,
+                        CanvasPoint = point
+                    });
 
                 default:
                     return startingTransformer;
@@ -243,13 +319,89 @@ namespace FanKit.Transformers
                     }
 
                 case TransformerMode.ScaleLeftTop:
-                    return Transformer.ScaleLeftTop(point, startingTransformer, inverseMatrix, isRatio, isCenter);
+                    if (isRatio)
+                    {
+                        if (isCenter) return Transformer.ScaleCornerRatioCenter(startingTransformer, new LineP1C
+                        {
+                            Point = startingTransformer.LeftTop,
+                            CanvasPoint = Vector2.Transform(point, inverseMatrix)
+                        });
+                        else return Transformer.ScaleRatio(startingTransformer, new LinePD1C
+                        {
+                            Point = startingTransformer.LeftTop,
+                            DiagonalPoint = startingTransformer.RightBottom,
+                            CanvasPoint = Vector2.Transform(point, inverseMatrix)
+                        });
+                    }
+                    else if (isCenter) return Transformer.FromLeftTop(startingTransformer, Vector2.Transform(point, inverseMatrix));
+                    else return Transformer.FromLeftTop(startingTransformer, new LineD1C
+                    {
+                        DiagonalPoint = startingTransformer.RightBottom,
+                        CanvasPoint = Vector2.Transform(point, inverseMatrix)
+                    });
                 case TransformerMode.ScaleRightTop:
-                    return Transformer.ScaleRightTop(point, startingTransformer, inverseMatrix, isRatio, isCenter);
+                    if (isRatio)
+                    {
+                        if (isCenter) return Transformer.ScaleCornerRatioCenter(startingTransformer, new LineP1C
+                        {
+                            Point = startingTransformer.RightTop,
+                            CanvasPoint = Vector2.Transform(point, inverseMatrix)
+                        });
+                        else return Transformer.ScaleRatio(startingTransformer, new LinePD1C
+                        {
+                            Point = startingTransformer.RightTop,
+                            DiagonalPoint = startingTransformer.LeftBottom,
+                            CanvasPoint = Vector2.Transform(point, inverseMatrix)
+                        });
+                    }
+                    else if (isCenter) return Transformer.FromRightTop(startingTransformer, Vector2.Transform(point, inverseMatrix));
+                    else return Transformer.FromRightTop(startingTransformer, new LineD1C
+                    {
+                        DiagonalPoint = startingTransformer.LeftBottom,
+                        CanvasPoint = Vector2.Transform(point, inverseMatrix)
+                    });
                 case TransformerMode.ScaleRightBottom:
-                    return Transformer.ScaleRightBottom(point, startingTransformer, inverseMatrix, isRatio, isCenter);
+                    if (isRatio)
+                    {
+                        if (isCenter) return Transformer.ScaleCornerRatioCenter(startingTransformer, new LineP1C
+                        {
+                            Point = startingTransformer.RightBottom,
+                            CanvasPoint = Vector2.Transform(point, inverseMatrix)
+                        });
+                        else return Transformer.ScaleRatio(startingTransformer, new LinePD1C
+                        {
+                            Point = startingTransformer.RightBottom,
+                            DiagonalPoint = startingTransformer.LeftTop,
+                            CanvasPoint = Vector2.Transform(point, inverseMatrix)
+                        });
+                    }
+                    else if (isCenter) return Transformer.FromRightBottom(startingTransformer, Vector2.Transform(point, inverseMatrix));
+                    else return Transformer.FromRightBottom(startingTransformer, new LineD1C
+                    {
+                        DiagonalPoint = startingTransformer.LeftTop,
+                        CanvasPoint = Vector2.Transform(point, inverseMatrix)
+                    });
                 case TransformerMode.ScaleLeftBottom:
-                    return Transformer.ScaleLeftBottom(point, startingTransformer, inverseMatrix, isRatio, isCenter);
+                    if (isRatio)
+                    {
+                        if (isCenter) return Transformer.ScaleCornerRatioCenter(startingTransformer, new LineP1C
+                        {
+                            Point = startingTransformer.LeftBottom,
+                            CanvasPoint = Vector2.Transform(point, inverseMatrix)
+                        });
+                        else return Transformer.ScaleRatio(startingTransformer, new LinePD1C
+                        {
+                            Point = startingTransformer.LeftBottom,
+                            DiagonalPoint = startingTransformer.RightTop,
+                            CanvasPoint = Vector2.Transform(point, inverseMatrix)
+                        });
+                    }
+                    else if (isCenter) return Transformer.FromLeftBottom(startingTransformer, Vector2.Transform(point, inverseMatrix));
+                    else return Transformer.FromLeftBottom(startingTransformer, new LineD1C
+                    {
+                        DiagonalPoint = startingTransformer.RightTop,
+                        CanvasPoint = Vector2.Transform(point, inverseMatrix)
+                    });
 
                 default:
                     return startingTransformer;
@@ -304,162 +456,15 @@ namespace FanKit.Transformers
 
 
         // ScaleCorner
-        private static Transformer ScaleCorner(Vector2 point, Transformer startingTransformer, bool isRatio, bool isCenter, Vector2 linePoint, Vector2 lineDiagonalPoint, Func<Vector2, Vector2, Vector2, Vector2, Transformer> func)
+        private static Transformer ScaleCornerRatioCenter(Transformer startingTransformer, LineP1C line)
         {
-            Vector2 canvasPoint = point;
+            Vector2 center = startingTransformer.Center;
+            Vector2 footPoint = Math.FootPoint(line.CanvasPoint, line.Point, center);
 
-            if (isRatio)
-            {
-                Vector2 center = isCenter ? startingTransformer.Center : lineDiagonalPoint;
-                Vector2 footPoint = Math.FootPoint(canvasPoint, linePoint, center);
+            float distance = new LineDistance(footPoint, line.Point, center);
+            Matrix3x2 scaleMatrix = Matrix3x2.CreateScale(distance, center);
 
-                float distance = new LineDistance(footPoint, linePoint, center);
-                Matrix3x2 scaleMatrix = Matrix3x2.CreateScale(distance, center);
-
-                return Transformer.Multiplies(startingTransformer, scaleMatrix);
-            }
-            else
-            {
-                Vector2 center = isCenter ? startingTransformer.Center * 2 - canvasPoint : lineDiagonalPoint;
-                Vector2 horizontal = startingTransformer.CenterRight - startingTransformer.CenterLeft;
-                Vector2 vertical = startingTransformer.CenterBottom - startingTransformer.CenterTop;
-
-                Vector2 returnPoint = canvasPoint;
-                Vector2 returnDiagonalPoint = center;
-                Vector2 returnHorizontalPoint = Math.IntersectionPoint(canvasPoint, (canvasPoint - horizontal), (center + vertical), center);
-                Vector2 returnVerticalPoint = Math.IntersectionPoint(canvasPoint, (canvasPoint - vertical), (center + horizontal), center);
-
-                return func(returnPoint, returnDiagonalPoint, returnHorizontalPoint, returnVerticalPoint);
-            }
-        }
-        private static Transformer ScaleCorner(Vector2 point, Transformer startingTransformer, Matrix3x2 inverseMatrix, bool isRatio, bool isCenter, Vector2 linePoint, Vector2 lineDiagonalPoint, Func<Vector2, Vector2, Vector2, Vector2, Transformer> func)
-        {
-            Vector2 canvasPoint = Vector2.Transform(point, inverseMatrix);
-
-            if (isRatio)
-            {
-                Vector2 center = isCenter ? startingTransformer.Center : lineDiagonalPoint;
-                Vector2 footPoint = Math.FootPoint(canvasPoint, linePoint, center);
-
-                float distance = new LineDistance(footPoint, linePoint, center);
-                Matrix3x2 scaleMatrix = Matrix3x2.CreateScale(distance, center);
-
-                return Transformer.Multiplies(startingTransformer, scaleMatrix);
-            }
-            else
-            {
-                Vector2 center = isCenter ? startingTransformer.Center * 2 - canvasPoint : lineDiagonalPoint;
-                Vector2 horizontal = startingTransformer.CenterRight - startingTransformer.CenterLeft;
-                Vector2 vertical = startingTransformer.CenterBottom - startingTransformer.CenterTop;
-
-                Vector2 returnPoint = canvasPoint;
-                Vector2 returnDiagonalPoint = center;
-                Vector2 returnHorizontalPoint = Math.IntersectionPoint(canvasPoint, (canvasPoint - horizontal), (center + vertical), center);
-                Vector2 returnVerticalPoint = Math.IntersectionPoint(canvasPoint, (canvasPoint - vertical), (center + horizontal), center);
-
-                return func(returnPoint, returnDiagonalPoint, returnHorizontalPoint, returnVerticalPoint);
-            }
-        }
-
-
-        private static Transformer ScaleLeftTop(Vector2 point, Transformer startingTransformer, bool isRatio, bool isCenter)
-        {
-            Vector2 linePoint = startingTransformer.LeftTop;
-            Vector2 lineDiagonalPoint = startingTransformer.RightBottom;
-
-            return Transformer.ScaleCorner(point, startingTransformer, isRatio, isCenter, linePoint, lineDiagonalPoint, Transformer.FuncScaleLeftTop);
-        }
-        private static Transformer ScaleLeftTop(Vector2 point, Transformer startingTransformer, Matrix3x2 inverseMatrix, bool isRatio, bool isCenter)
-        {
-            Vector2 linePoint = startingTransformer.LeftTop;
-            Vector2 lineDiagonalPoint = startingTransformer.RightBottom;
-
-            return Transformer.ScaleCorner(point, startingTransformer, inverseMatrix, isRatio, isCenter, linePoint, lineDiagonalPoint, Transformer.FuncScaleLeftTop);
-        }
-        static Transformer FuncScaleLeftTop(Vector2 returnPoint, Vector2 returnDiagonalPoint, Vector2 returnHorizontalPoint, Vector2 returnVerticalPoint)
-        {
-            return new Transformer
-            {
-                LeftTop = returnPoint,
-                RightTop = returnHorizontalPoint,
-                RightBottom = returnDiagonalPoint,
-                LeftBottom = returnVerticalPoint,
-            };
-        }
-
-        private static Transformer ScaleRightTop(Vector2 point, Transformer startingTransformer, bool isRatio, bool isCenter)
-        {
-            Vector2 linePoint = startingTransformer.RightTop;
-            Vector2 lineDiagonalPoint = startingTransformer.LeftBottom;
-
-            return Transformer.ScaleCorner(point, startingTransformer, isRatio, isCenter, linePoint, lineDiagonalPoint, Transformer.FuncScaleRightTop);
-        }
-        private static Transformer ScaleRightTop(Vector2 point, Transformer startingTransformer, Matrix3x2 inverseMatrix, bool isRatio, bool isCenter)
-        {
-            Vector2 linePoint = startingTransformer.RightTop;
-            Vector2 lineDiagonalPoint = startingTransformer.LeftBottom;
-
-            return Transformer.ScaleCorner(point, startingTransformer, inverseMatrix, isRatio, isCenter, linePoint, lineDiagonalPoint, Transformer.FuncScaleRightTop);
-        }
-        static Transformer FuncScaleRightTop(Vector2 returnPoint, Vector2 returnDiagonalPoint, Vector2 returnHorizontalPoint, Vector2 returnVerticalPoint)
-        {
-            return new Transformer
-            {
-                LeftTop = returnHorizontalPoint,
-                RightTop = returnPoint,
-                RightBottom = returnVerticalPoint,
-                LeftBottom = returnDiagonalPoint,
-            };
-        }
-
-        private static Transformer ScaleRightBottom(Vector2 point, Transformer startingTransformer, bool isRatio, bool isCenter)
-        {
-            Vector2 linePoint = startingTransformer.RightBottom;
-            Vector2 lineDiagonalPoint = startingTransformer.LeftTop;
-
-            return Transformer.ScaleCorner(point, startingTransformer, isRatio, isCenter, linePoint, lineDiagonalPoint, Transformer.FuncScaleRightBottom);
-        }
-        private static Transformer ScaleRightBottom(Vector2 point, Transformer startingTransformer, Matrix3x2 inverseMatrix, bool isRatio, bool isCenter)
-        {
-            Vector2 linePoint = startingTransformer.RightBottom;
-            Vector2 lineDiagonalPoint = startingTransformer.LeftTop;
-
-            return Transformer.ScaleCorner(point, startingTransformer, inverseMatrix, isRatio, isCenter, linePoint, lineDiagonalPoint, Transformer.FuncScaleRightBottom);
-        }
-        static Transformer FuncScaleRightBottom(Vector2 returnPoint, Vector2 returnDiagonalPoint, Vector2 returnHorizontalPoint, Vector2 returnVerticalPoint)
-        {
-            return new Transformer
-            {
-                LeftTop = returnDiagonalPoint,
-                RightTop = returnVerticalPoint,
-                RightBottom = returnPoint,
-                LeftBottom = returnHorizontalPoint,
-            };
-        }
-
-        private static Transformer ScaleLeftBottom(Vector2 point, Transformer startingTransformer, bool isRatio, bool isCenter)
-        {
-            Vector2 linePoint = startingTransformer.LeftBottom;
-            Vector2 lineDiagonalPoint = startingTransformer.RightTop;
-
-            return Transformer.ScaleCorner(point, startingTransformer, isRatio, isCenter, linePoint, lineDiagonalPoint, Transformer.FuncScaleLeftBottom);
-        }
-        private static Transformer ScaleLeftBottom(Vector2 point, Transformer startingTransformer, Matrix3x2 inverseMatrix, bool isRatio, bool isCenter)
-        {
-            Vector2 linePoint = startingTransformer.LeftBottom;
-            Vector2 lineDiagonalPoint = startingTransformer.RightTop;
-
-            return Transformer.ScaleCorner(point, startingTransformer, inverseMatrix, isRatio, isCenter, linePoint, lineDiagonalPoint, Transformer.FuncScaleLeftBottom);
-        }
-        static Transformer FuncScaleLeftBottom(Vector2 returnPoint, Vector2 returnDiagonalPoint, Vector2 returnHorizontalPoint, Vector2 returnVerticalPoint)
-        {
-            return new Transformer
-            {
-                LeftTop = returnVerticalPoint,
-                RightTop = returnDiagonalPoint,
-                RightBottom = returnHorizontalPoint,
-                LeftBottom = returnPoint,
-            };
+            return Transformer.Multiplies(startingTransformer, scaleMatrix);
         }
 
 
