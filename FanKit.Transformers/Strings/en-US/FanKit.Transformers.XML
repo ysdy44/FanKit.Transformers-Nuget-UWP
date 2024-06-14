@@ -2900,10 +2900,10 @@
         Create a new ellipse geometry.
       </summary>
       <param name="resourceCreator"> The resource-creator. </param>
-      <param name="centerLeft"> The left point. </param>
-      <param name="centerTop"> The top point. </param>
-      <param name="centerRight"> The right point. </param>
-      <param name="centerBottom"> The bottom point. </param>
+      <param name="centerLeft"> The position of the center of top-right and bottom-right corners of the bounds. </param>
+      <param name="centerTop"> The position of the center of bottom-left and top-left corners of the bounds. </param>
+      <param name="centerRight"> The position of the center of top-left and top-right corners of the bounds. </param>
+      <param name="centerBottom"> The position of the center of bottom-right and bottom-left corners of the bounds. </param>
       <returns> The product geometry. </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateEllipse(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Matrix3x2)">
@@ -2911,10 +2911,10 @@
         Create a new ellipse geometry.
       </summary>
       <param name="resourceCreator"> The resource-creator. </param>
-      <param name="centerLeft"> The left point. </param>
-      <param name="centerTop"> The top point. </param>
-      <param name="centerRight"> The right point. </param>
-      <param name="centerBottom"> The bottom point. </param>
+      <param name="centerLeft"> The position of the center of top-right and bottom-right corners of the bounds. </param>
+      <param name="centerTop"> The position of the center of bottom-left and top-left corners of the bounds. </param>
+      <param name="centerRight"> The position of the center of top-left and top-right corners of the bounds. </param>
+      <param name="centerBottom"> The position of the center of bottom-right and bottom-left corners of the bounds. </param>
       <param name="matrix"> The matrix. </param>
       <returns> The product geometry. </returns>
     </member>
