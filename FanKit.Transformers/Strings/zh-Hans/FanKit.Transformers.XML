@@ -1357,16 +1357,16 @@
       <summary> 获取中心向量。 </summary>
     </member>
     <member name="P:FanKit.Transformers.ITransformerLTRB.CenterLeft">
-      <summary> 获取左中心向量。 </summary>
+      <summary> 获取左下角和左上角的中心点的位置。 </summary>
     </member>
     <member name="P:FanKit.Transformers.ITransformerLTRB.CenterTop">
-      <summary> 获取中心顶部向量。 </summary>
+      <summary> 获取左上角和右上角的中心点的位置。 </summary>
     </member>
     <member name="P:FanKit.Transformers.ITransformerLTRB.CenterRight">
-      <summary> 获取中心右向量。 </summary>
+      <summary> 获取右上角和右下角的中心点的位置。 </summary>
     </member>
     <member name="P:FanKit.Transformers.ITransformerLTRB.CenterBottom">
-      <summary> 获取中心底部向量。 </summary>
+      <summary> 获取右下角和左下角的中心点的位置。 </summary>
     </member>
     <member name="P:FanKit.Transformers.ITransformerLTRB.Horizontal">
       <summary> 获取水平向量。 </summary>
@@ -2207,16 +2207,16 @@
       <summary> 获取中心向量。 </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.CenterLeft">
-      <summary> 获取左中心向量。 </summary>
+      <summary> 获取变换者的左下角和左上角的中心点的位置。 </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.CenterTop">
-      <summary> 获取中心顶部向量。 </summary>
+      <summary> 获取变换者的左上角和右上角的中心点的位置。 </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.CenterRight">
-      <summary> 获取中心右向量。 </summary>
+      <summary> 获取变换者的右上角和右下角的中心点的位置。 </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.CenterBottom">
-      <summary> 获取中心底部向量。 </summary>
+      <summary> 获取变换者的右下角和左下角的中心点的位置。 </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.MinX">
       <summary> 获取 X 轴上的最小值。 </summary>
@@ -3420,16 +3420,16 @@
       <summary> 获取矩形的中心点。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.CenterLeft">
-      <summary> 获取左中心向量。 </summary>
+      <summary> 获取矩形的左下角和左上角的中心点的位置。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.CenterTop">
-      <summary> 获取中心顶部向量。 </summary>
+      <summary> 获取矩形的左上角和右上角的中心点的位置。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.CenterRight">
-      <summary> 获取中心右向量。 </summary>
+      <summary> 获取矩形的右上角和右下角的中心点的位置。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.CenterBottom">
-      <summary> 获取中心底部向量。 </summary>
+      <summary> 获取矩形的右下角和左下角的中心点的位置。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.LeftTop">
       <summary> 获取矩形的左上角的位置。 </summary>

@@ -26,13 +26,13 @@ namespace FanKit.Transformers
         /// <summary> Gets rectangle's center point. </summary>
         public Vector2 Center { get; private set; }
 
-        /// <summary> Gets the center left vector. </summary>
+        /// <summary> Gets the position of the center of bottom-left and top-left corners of the rectangle. </summary>
         public Vector2 CenterLeft { get; private set; }
-        /// <summary> Gets the center top vector. </summary>
+        /// <summary> Gets the position of the center of top-left and top-right corners of the rectangle. </summary>
         public Vector2 CenterTop { get; private set; }
-        /// <summary> Gets the center right vector. </summary>
+        /// <summary> Gets the position of the center of top-right and bottom-right corners of the rectangle. </summary>
         public Vector2 CenterRight { get; private set; }
-        /// <summary> Gets the center bottom vector. </summary>
+        /// <summary> Gets the position of the center of bottom-right and bottom-left corners of the rectangle. </summary>
         public Vector2 CenterBottom { get; private set; }
 
         /// <summary> Gets the position of the top-left corner of the rectangle. </summary>

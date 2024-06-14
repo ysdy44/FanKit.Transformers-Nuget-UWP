@@ -1,6 +1,4 @@
-﻿using System.Numerics;
-
-namespace FanKit.Transformers
+﻿namespace FanKit.Transformers
 {
     partial struct TransformerBorder
     {
@@ -20,15 +18,15 @@ namespace FanKit.Transformers
         public float CenterY => (this.Top + this.Bottom) / 2;
         /*
         /// <summary> Gets rectangle's center point. </summary>
-        public Vector2 Center => new Vector2(this.CenterX, this.CenterY);
-
-        /// <summary> Gets the center left vector. </summary>
+        public Vector2 Center => new Vector2(this.CenterX, this.CenterY);   
+        
+        /// <summary> Gets the position of the center of bottom-left and top-left corners of the border. </summary>
         public Vector2 CenterLeft => new Vector2(this.Left, this.CenterY);
-        /// <summary> Gets the center top vector. </summary>
+        /// <summary> Gets the position of the center of top-left and top-right corners of the border. </summary>
         public Vector2 CenterTop => new Vector2(this.CenterX, this.Top);
-        /// <summary> Gets the center right vector. </summary>
+        /// <summary> Gets the position of the center of top-right and bottom-right corners of the border. </summary>
         public Vector2 CenterRight => new Vector2(this.Right, this.CenterY);
-        /// <summary> Gets the center bottom vector. </summary>
+        /// <summary> Gets the position of the center of bottom-right and bottom-left corners of the border. </summary>
         public Vector2 CenterBottom => new Vector2(this.CenterX, this.Bottom);
 
         /// <summary> Gets the position of the top-left corner of the border. </summary>

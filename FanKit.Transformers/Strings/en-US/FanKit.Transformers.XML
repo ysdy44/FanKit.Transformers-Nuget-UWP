@@ -1357,16 +1357,16 @@
       <summary> Gets the center vector. </summary>
     </member>
     <member name="P:FanKit.Transformers.ITransformerLTRB.CenterLeft">
-      <summary> Gets the center left vector. </summary>
+      <summary> Gets the position of the center of bottom-left and top-left corners. </summary>
     </member>
     <member name="P:FanKit.Transformers.ITransformerLTRB.CenterTop">
-      <summary> Gets the center top vector. </summary>
+      <summary> Gets the position of the center of top-left and top-right corners. </summary>
     </member>
     <member name="P:FanKit.Transformers.ITransformerLTRB.CenterRight">
-      <summary> Gets the center right vector. </summary>
+      <summary> Gets the position of the center of top-right and bottom-right corners. </summary>
     </member>
     <member name="P:FanKit.Transformers.ITransformerLTRB.CenterBottom">
-      <summary> Gets the center bottom vector. </summary>
+      <summary> Gets the position of the center of bottom-right and bottom-left corners. </summary>
     </member>
     <member name="P:FanKit.Transformers.ITransformerLTRB.Horizontal">
       <summary> Gets the horizontal vector. </summary>
@@ -2207,16 +2207,16 @@
       <summary> Gets the center vector. </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.CenterLeft">
-      <summary> Gets the center left vector. </summary>
+      <summary> Gets the position of the center of bottom-left and top-left corners of the transformer. </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.CenterTop">
-      <summary> Gets the center top vector. </summary>
+      <summary> Gets the position of the center of top-left and top-right corners of the transformer. </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.CenterRight">
-      <summary> Gets the center right vector. </summary>
+      <summary> Gets the position of the center of top-right and bottom-right corners of the transformer. </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.CenterBottom">
-      <summary> Gets the center bottom vector. </summary>
+      <summary> Gets the position of the center of bottom-right and bottom-left corners of the transformer. </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.MinX">
       <summary> Gets the minimum value on the X-Axis. </summary>
@@ -3420,16 +3420,16 @@
       <summary> Gets rectangle's center point. </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.CenterLeft">
-      <summary> Gets the center left vector. </summary>
+      <summary> Gets the position of the center of bottom-left and top-left corners of the rectangle. </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.CenterTop">
-      <summary> Gets the center top vector. </summary>
+      <summary> Gets the position of the center of top-left and top-right corners of the rectangle. </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.CenterRight">
-      <summary> Gets the center right vector. </summary>
+      <summary> Gets the position of the center of top-right and bottom-right corners of the rectangle. </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.CenterBottom">
-      <summary> Gets the center bottom vector. </summary>
+      <summary> Gets the position of the center of bottom-right and bottom-left corners of the rectangle. </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.LeftTop">
       <summary> Gets the position of the top-left corner of the rectangle. </summary>

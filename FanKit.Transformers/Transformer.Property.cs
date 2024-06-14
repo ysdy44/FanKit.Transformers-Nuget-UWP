@@ -17,13 +17,13 @@ namespace FanKit.Transformers
         /// <summary> Gets the center vector. </summary>
         public Vector2 Center => (this.LeftTop + this.RightTop + this.RightBottom + this.LeftBottom) / 4;
 
-        /// <summary> Gets the center left vector. </summary>
+        /// <summary> Gets the position of the center of bottom-left and top-left corners of the transformer. </summary>
         public Vector2 CenterLeft => (this.LeftTop + this.LeftBottom) / 2;
-        /// <summary> Gets the center top vector. </summary>
+        /// <summary> Gets the position of the center of top-left and top-right corners of the transformer. </summary>
         public Vector2 CenterTop => (this.LeftTop + this.RightTop) / 2;
-        /// <summary> Gets the center right vector. </summary>
+        /// <summary> Gets the position of the center of top-right and bottom-right corners of the transformer. </summary>
         public Vector2 CenterRight => (this.RightTop + this.RightBottom) / 2;
-        /// <summary> Gets the center bottom vector. </summary>
+        /// <summary> Gets the position of the center of bottom-right and bottom-left corners of the transformer. </summary>
         public Vector2 CenterBottom => (this.RightBottom + this.LeftBottom) / 2;
 
         /// <summary> Gets the minimum value on the X-Axis. </summary>

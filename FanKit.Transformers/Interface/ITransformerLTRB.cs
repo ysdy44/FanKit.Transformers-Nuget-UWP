@@ -19,13 +19,13 @@ namespace FanKit.Transformers
         /// <summary> Gets the center vector. </summary>
         Vector2 Center { get; }
 
-        /// <summary> Gets the center left vector. </summary>
+        /// <summary> Gets the position of the center of bottom-left and top-left corners. </summary>
         Vector2 CenterLeft { get; }
-        /// <summary> Gets the center top vector. </summary>
+        /// <summary> Gets the position of the center of top-left and top-right corners. </summary>
         Vector2 CenterTop { get; }
-        /// <summary> Gets the center right vector. </summary>
+        /// <summary> Gets the position of the center of top-right and bottom-right corners. </summary>
         Vector2 CenterRight { get; }
-        /// <summary> Gets the center bottom vector. </summary>
+        /// <summary> Gets the position of the center of bottom-right and bottom-left corners. </summary>
         Vector2 CenterBottom { get; }
 
         /// <summary> Gets the horizontal vector. </summary>
