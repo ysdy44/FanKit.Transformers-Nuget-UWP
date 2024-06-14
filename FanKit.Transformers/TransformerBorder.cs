@@ -14,10 +14,10 @@ namespace FanKit.Transformers
         /// <summary>
         /// Initialize a <see cref="TransformerBorder"/>.
         /// </summary>
-        /// <param name="left"> The left. </param>
-        /// <param name="top"> The top. </param>
-        /// <param name="right"> The right. </param>
-        /// <param name="bottom"> The bottom. </param>
+        /// <param name="left"> The X-axis value of the left side of the bounds. </param>
+        /// <param name="top"> The Y-axis position of the top of the bounds. </param>
+        /// <param name="right"> The X-axis value of the right side of the bounds. </param>
+        /// <param name="bottom"> The Y-axis position of the bottom of the bounds. </param>
         public TransformerBorder(float left, float top, float right, float bottom)
         {
             this.Left = left;

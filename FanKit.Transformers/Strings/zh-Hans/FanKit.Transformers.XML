@@ -661,10 +661,10 @@
       <summary>
         选中在矩形中的节点。
       </summary>
-      <param name="left"> 目标矩形的左侧。 </param>
-      <param name="top"> 目标矩形的顶部。 </param>
-      <param name="right"> 目标矩形的右侧。 </param>
-      <param name="bottom"> 目标矩形的底部。 </param>
+      <param name="left"> 目标矩形的左侧的 X 轴值。 </param>
+      <param name="top"> 目标矩形的顶部的 Y 轴位置。 </param>
+      <param name="right"> 目标矩形的右侧的 X 轴值。 </param>
+      <param name="bottom"> 目标矩形的底部的 Y 轴位置。 </param>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.BoxChoose(FanKit.Transformers.TransformerRect)">
       <summary>
@@ -1421,10 +1421,10 @@
       <summary>
         该矢量包含在矩形中。
       </summary>
-      <param name="left"> 目标矩形的左侧。 </param>
-      <param name="top"> 目标矩形的顶部。 </param>
-      <param name="right"> 目标矩形的右侧。 </param>
-      <param name="bottom"> 目标矩形的底部。 </param>
+      <param name="left"> 目标矩形的左侧的 X 轴值。 </param>
+      <param name="top"> 目标矩形的顶部的 Y 轴位置。 </param>
+      <param name="right"> 目标矩形的右侧的 X 轴值。 </param>
+      <param name="bottom"> 目标矩形的底部的 Y 轴位置。 </param>
       <returns> 如果向量包含在矩形中，则返回**true**，否则返回**false**。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Node.Contained(FanKit.Transformers.TransformerRect)">
@@ -2280,10 +2280,10 @@
       <summary>
         返回该变换者是否包含在矩形中。
       </summary>
-      <param name="left"> 目标矩形的左侧。 </param>
-      <param name="top"> 目标矩形的顶部。 </param>
-      <param name="right"> 目标矩形的右侧。 </param>
-      <param name="bottom"> 目标矩形的底部。 </param>
+      <param name="left"> 目标矩形的左侧的 X 轴值。 </param>
+      <param name="top"> 目标矩形的顶部的 Y 轴位置。 </param>
+      <param name="right"> 目标矩形的右侧的 X 轴值。 </param>
+      <param name="bottom"> 目标矩形的底部的 Y 轴位置。 </param>
       <returns> 如果变换者包含在矩形中，则返回**true**，否则返回**false**。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.Contained(FanKit.Transformers.TransformerRect)">
@@ -2329,10 +2329,10 @@
       <summary>
         初始化变换者。
       </summary>
-      <param name="left"> 左侧。 </param>
-      <param name="top"> 顶部。 </param>
-      <param name="right"> 右边。 </param>
-      <param name="bottom"> 底部。 </param>
+      <param name="left"> 边框的左侧的 X 轴值。 </param>
+      <param name="top"> 边框的顶部的 Y 轴位置。 </param>
+      <param name="right"> 边框的右侧的 X 轴值。 </param>
+      <param name="bottom"> 边框的底部的 Y 轴位置。 </param>
     </member>
     <member name="M:FanKit.Transformers.Transformer.#ctor(FanKit.Transformers.TransformerRect)">
       <summary>
@@ -2650,10 +2650,10 @@
       <summary>
         初始化 <see cref="T:FanKit.Transformers.TransformerBorder"/>。
       </summary>
-      <param name="left"> 左侧。 </param>
-      <param name="top"> 顶部。 </param>
-      <param name="right"> 右边。 </param>
-      <param name="bottom"> 底部。 </param>
+      <param name="left"> 边框的左侧的 X 轴值。 </param>
+      <param name="top"> 边框的顶部的 Y 轴位置。 </param>
+      <param name="right"> 边框的右侧的 X 轴值。 </param>
+      <param name="bottom"> 边框的底部的 Y 轴位置。 </param>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.#ctor(System.Single,System.Single)">
       <summary>

@@ -661,10 +661,10 @@
       <summary>
         Check node which in the rect.
       </summary>
-      <param name="left"> The destination rectangle's left. </param>
-      <param name="top"> The destination rectangle's top. </param>
-      <param name="right"> The destination rectangle's right. </param>
-      <param name="bottom"> The destination rectangle's bottom. </param>
+      <param name="left"> The X-axis value of the left side of the destination rectangle. </param>
+      <param name="top"> The Y-axis position of the top of the destination rectangle. </param>
+      <param name="right"> The X-axis value of the right side of the destination rectangle. </param>
+      <param name="bottom"> The Y-axis position of the bottom of the destination rectangle. </param>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.BoxChoose(FanKit.Transformers.TransformerRect)">
       <summary>
@@ -1421,10 +1421,10 @@
       <summary>
         The vector was contained in the rectangle.
       </summary>
-      <param name="left"> The destination rectangle's left. </param>
-      <param name="top"> The destination rectangle's top. </param>
-      <param name="right"> The destination rectangle's right. </param>
-      <param name="bottom"> The destination rectangle's bottom. </param>
+      <param name="left"> The X-axis value of the left side of the destination rectangle. </param>
+      <param name="top"> The Y-axis position of the top of the destination rectangle. </param>
+      <param name="right"> The X-axis value of the right side of the destination rectangle. </param>
+      <param name="bottom"> The Y-axis position of the bottom of the destination rectangle. </param>
       <returns> Return **true** if the vector was contained in rectangle, otherwise **false**. </returns>
     </member>
     <member name="M:FanKit.Transformers.Node.Contained(FanKit.Transformers.TransformerRect)">
@@ -2280,10 +2280,10 @@
       <summary>
         Returns whether the transformer was contained in the rectangle.
       </summary>
-      <param name="left"> The destination rectangle's left. </param>
-      <param name="top"> The destination rectangle's top. </param>
-      <param name="right"> The destination rectangle's right. </param>
-      <param name="bottom"> The destination rectangle's bottom. </param>
+      <param name="left"> The X-axis value of the left side of the destination rectangle. </param>
+      <param name="top"> The Y-axis position of the top of the destination rectangle. </param>
+      <param name="right"> The X-axis value of the right side of the destination rectangle. </param>
+      <param name="bottom"> The Y-axis position of the bottom of the destination rectangle. </param>
       <returns> Return **true** if the transformer was contained in rectangle, otherwise **false**. </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.Contained(FanKit.Transformers.TransformerRect)">
@@ -2329,10 +2329,10 @@
       <summary>
         Initialize a transformer.
       </summary>
-      <param name="left"> The left. </param>
-      <param name="top"> The top. </param>
-      <param name="right"> The right. </param>
-      <param name="bottom"> The bottom. </param>
+      <param name="left"> The X-axis value of the left side of the bounds. </param>
+      <param name="top"> The Y-axis position of the top of the bounds. </param>
+      <param name="right"> The X-axis value of the right side of the bounds. </param>
+      <param name="bottom"> The Y-axis position of the bottom of the bounds. </param>
     </member>
     <member name="M:FanKit.Transformers.Transformer.#ctor(FanKit.Transformers.TransformerRect)">
       <summary>
@@ -2650,10 +2650,10 @@
       <summary>
         Initialize a <see cref="T:FanKit.Transformers.TransformerBorder"/>.
       </summary>
-      <param name="left"> The left. </param>
-      <param name="top"> The top. </param>
-      <param name="right"> The right. </param>
-      <param name="bottom"> The bottom. </param>
+      <param name="left"> The X-axis value of the left side of the bounds. </param>
+      <param name="top"> The Y-axis position of the top of the bounds. </param>
+      <param name="right"> The X-axis value of the right side of the bounds. </param>
+      <param name="bottom"> The Y-axis position of the bottom of the bounds. </param>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.#ctor(System.Single,System.Single)">
       <summary>

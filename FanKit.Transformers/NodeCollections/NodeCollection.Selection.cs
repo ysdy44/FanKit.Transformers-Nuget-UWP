@@ -68,10 +68,10 @@ namespace FanKit.Transformers
         /// <summary>
         /// Check node which in the rect.
         /// </summary>
-        /// <param name="left"> The destination rectangle's left. </param>
-        /// <param name="top"> The destination rectangle's top. </param>
-        /// <param name="right"> The destination rectangle's right. </param>
-        /// <param name="bottom"> The destination rectangle's bottom. </param>
+        /// <param name="left"> The X-axis value of the left side of the destination rectangle. </param>
+        /// <param name="top"> The Y-axis position of the top of the destination rectangle. </param>
+        /// <param name="right"> The X-axis value of the right side of the destination rectangle. </param>
+        /// <param name="bottom"> The Y-axis position of the bottom of the destination rectangle. </param>
         public void RectChoose(float left, float top, float right, float bottom)
         {
             foreach (Node node in this)
@@ -91,6 +91,7 @@ namespace FanKit.Transformers
                 }
             }
         }
+
         /// <summary>
         /// Check node which in the rect.
         /// </summary>
