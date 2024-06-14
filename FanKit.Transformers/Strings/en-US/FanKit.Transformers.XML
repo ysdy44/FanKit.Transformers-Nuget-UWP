@@ -1369,10 +1369,10 @@
       <summary> Gets the center bottom vector. </summary>
     </member>
     <member name="P:FanKit.Transformers.ITransformerLTRB.Horizontal">
-      <summary> Gets horizontal vector. </summary>
+      <summary> Gets the horizontal vector. </summary>
     </member>
     <member name="P:FanKit.Transformers.ITransformerLTRB.Vertical">
-      <summary> Gets vertical vector. </summary>
+      <summary> Gets the vertical vector. </summary>
     </member>
     <member name="T:FanKit.Transformers.EachControlPointAngleMode">
       <summary>
@@ -2231,10 +2231,10 @@
       <summary> Gets the maximum value on the Y-Axis. </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.Horizontal">
-      <summary> Gets horizontal vector. </summary>
+      <summary> Gets the horizontal vector of the transformer. </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.Vertical">
-      <summary> Gets vertical vector. </summary>
+      <summary> Gets the vertical vector of the transformer. </summary>
     </member>
     <member name="M:FanKit.Transformers.Transformer.GetBorderValue(FanKit.Transformers.BorderMode)">
       <summary>
@@ -3444,10 +3444,10 @@
       <summary> Gets the position of the bottom-left corner of the rectangle. </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.Horizontal">
-      <summary> Gets horizontal vector. </summary>
+      <summary> Gets the horizontal vector of the rectangle. </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.Vertical">
-      <summary> Gets vertical vector. </summary>
+      <summary> Gets the vertical vector of the rectangle. </summary>
     </member>
     <member name="T:FanKit.Transformers.XML">
       <summary>

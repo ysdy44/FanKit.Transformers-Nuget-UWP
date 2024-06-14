@@ -35,9 +35,9 @@ namespace FanKit.Transformers
         /// <summary> Gets the maximum value on the Y-Axis. </summary>
         public float MaxY => System.Math.Max(System.Math.Max(this.LeftTop.Y, this.RightTop.Y), System.Math.Max(this.RightBottom.Y, this.LeftBottom.Y));
 
-        /// <summary> Gets horizontal vector. </summary>
+        /// <summary> Gets the horizontal vector of the transformer. </summary>
         public Vector2 Horizontal => this.CenterRight - this.CenterLeft;
-        /// <summary> Gets vertical vector. </summary>
+        /// <summary> Gets the vertical vector of the transformer. </summary>
         public Vector2 Vertical => this.CenterBottom - this.CenterTop;
 
 

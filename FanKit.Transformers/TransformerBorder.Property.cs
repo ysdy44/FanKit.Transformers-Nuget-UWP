@@ -40,9 +40,9 @@ namespace FanKit.Transformers
         /// <summary> Gets the position of the bottom-left corner of the border. </summary>
         public Vector2 LeftBottom => new Vector2(this.Left, this.Bottom);
 
-        /// <summary> Gets horizontal vector. </summary>
+        /// <summary> Gets the horizontal vector of the border. </summary>
         public Vector2 Horizontal => this.CenterRight - this.CenterLeft;
-        /// <summary> Gets vertical vector. </summary>
+        /// <summary> Gets the vertical vector of the border. </summary>
         public Vector2 Vertical => this.CenterBottom - this.CenterTop;
          */
 

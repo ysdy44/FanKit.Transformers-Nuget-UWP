@@ -2231,10 +2231,10 @@
       <summary> 获取 Y 轴上的最大值。 </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.Horizontal">
-      <summary> 获取水平向量。 </summary>
+      <summary> 获取变换者的水平向量。 </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.Vertical">
-      <summary> 获取垂直向量。 </summary>
+      <summary> 获取变换者的垂直向量。 </summary>
     </member>
     <member name="M:FanKit.Transformers.Transformer.GetBorderValue(FanKit.Transformers.BorderMode)">
       <summary>
@@ -3444,10 +3444,10 @@
       <summary> 获取矩形的左下角的位置。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.Horizontal">
-      <summary> 获取水平向量。 </summary>
+      <summary> 获取矩形的水平向量。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.Vertical">
-      <summary> 获取垂直向量。 </summary>
+      <summary> 获取矩形的垂直向量。 </summary>
     </member>
     <member name="T:FanKit.Transformers.XML">
       <summary>
