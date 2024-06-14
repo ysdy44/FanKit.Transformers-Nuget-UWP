@@ -1076,17 +1076,6 @@ P:FanKit.Transformers.TransformerBorder.Right@Summary
 P:FanKit.Transformers.TransformerBorder.Bottom@Summary
 P:FanKit.Transformers.TransformerBorder.CenterX@Summary
 P:FanKit.Transformers.TransformerBorder.CenterY@Summary
-P:FanKit.Transformers.TransformerBorder.Center@Summary
-P:FanKit.Transformers.TransformerBorder.CenterLeft@Summary
-P:FanKit.Transformers.TransformerBorder.CenterTop@Summary
-P:FanKit.Transformers.TransformerBorder.CenterRight@Summary
-P:FanKit.Transformers.TransformerBorder.CenterBottom@Summary
-P:FanKit.Transformers.TransformerBorder.LeftTop@Summary
-P:FanKit.Transformers.TransformerBorder.RightTop@Summary
-P:FanKit.Transformers.TransformerBorder.RightBottom@Summary
-P:FanKit.Transformers.TransformerBorder.LeftBottom@Summary
-P:FanKit.Transformers.TransformerBorder.Horizontal@Summary
-P:FanKit.Transformers.TransformerBorder.Vertical@Summary
 M:FanKit.Transformers.TransformerBorder.ToTransformer@Summary
 M:FanKit.Transformers.TransformerBorder.GetBorderValue(FanKit.Transformers.BorderMode)@Summary
 M:FanKit.Transformers.TransformerBorder.GetBorderValue(FanKit.Transformers.BorderMode)@Param@borderMode

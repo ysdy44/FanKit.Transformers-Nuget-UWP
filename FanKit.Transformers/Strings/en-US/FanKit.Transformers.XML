@@ -2757,39 +2757,6 @@
     <member name="P:FanKit.Transformers.TransformerBorder.CenterY">
       <summary> Gets border's center of Y. </summary>
     </member>
-    <member name="P:FanKit.Transformers.TransformerBorder.Center">
-      <summary> Gets border's center point. </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerBorder.CenterLeft">
-      <summary> Gets the center left vector. </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerBorder.CenterTop">
-      <summary> Gets the center top vector. </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerBorder.CenterRight">
-      <summary> Gets the center right vector. </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerBorder.CenterBottom">
-      <summary> Gets the center bottom vector. </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerBorder.LeftTop">
-      <summary> Gets the position of the top-left corner of the border. </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerBorder.RightTop">
-      <summary> Gets the position of the top-right corner of the border. </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerBorder.RightBottom">
-      <summary> Gets the position of the bottom-right corner of the border. </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerBorder.LeftBottom">
-      <summary> Gets the position of the bottom-left corner of the border. </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerBorder.Horizontal">
-      <summary> Gets horizontal vector. </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerBorder.Vertical">
-      <summary> Gets vertical vector. </summary>
-    </member>
     <member name="M:FanKit.Transformers.TransformerBorder.ToTransformer">
       <summary>
         Turn to transformer.

@@ -2757,39 +2757,6 @@
     <member name="P:FanKit.Transformers.TransformerBorder.CenterY">
       <summary> 获取 Y 的边界中心。 </summary>
     </member>
-    <member name="P:FanKit.Transformers.TransformerBorder.Center">
-      <summary> 获取边界的中心点。 </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerBorder.CenterLeft">
-      <summary> 获取左中心向量。 </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerBorder.CenterTop">
-      <summary> 获取中心顶部向量。 </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerBorder.CenterRight">
-      <summary> 获取中心右向量。 </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerBorder.CenterBottom">
-      <summary> 获取中心底部向量。 </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerBorder.LeftTop">
-      <summary> 获取边界的左上角的位置。 </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerBorder.RightTop">
-      <summary> 获取边界的右上角的位置。 </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerBorder.RightBottom">
-      <summary> 获取边界的右下角的位置。 </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerBorder.LeftBottom">
-      <summary> 获取边界的左下角的位置。 </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerBorder.Horizontal">
-      <summary> 获取水平向量。 </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerBorder.Vertical">
-      <summary> 获取垂直向量。 </summary>
-    </member>
     <member name="M:FanKit.Transformers.TransformerBorder.ToTransformer">
       <summary>
         转向变换者。
