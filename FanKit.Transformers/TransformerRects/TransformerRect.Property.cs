@@ -19,11 +19,11 @@ namespace FanKit.Transformers
         /// <summary> Gets rectangle's height. </summary>
         public float Height { get; private set; }
 
-        /// <summary> Gets rectangle's center of X. </summary>
+        /// <summary> Gets the X-axis value of the center of the rectangle. </summary>
         public float CenterX { get; private set; }
-        /// <summary> Gets rectangle's center of Y. </summary>
+        /// <summary> Gets the Y-axis position of the center of the rectangle. </summary>
         public float CenterY { get; private set; }
-        /// <summary> Gets rectangle's center point. </summary>
+        /// <summary> Gets the position of the center of the rectangle. </summary>
         public Vector2 Center { get; private set; }
 
         /// <summary> Gets the position of the center of bottom-left and top-left corners of the rectangle. </summary>

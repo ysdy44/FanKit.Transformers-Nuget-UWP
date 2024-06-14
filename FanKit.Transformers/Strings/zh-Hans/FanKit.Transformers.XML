@@ -1354,7 +1354,7 @@
       <summary> 获取左下角的位置。 </summary>
     </member>
     <member name="P:FanKit.Transformers.ITransformerLTRB.Center">
-      <summary> 获取中心向量。 </summary>
+      <summary> 获取中心点的位置。 </summary>
     </member>
     <member name="P:FanKit.Transformers.ITransformerLTRB.CenterLeft">
       <summary> 获取左下角和左上角的中心点的位置。 </summary>
@@ -2204,7 +2204,7 @@
       <summary> 左下方的向量。 </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.Center">
-      <summary> 获取中心向量。 </summary>
+      <summary> 获取变换者的中心点的位置。 </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.CenterLeft">
       <summary> 获取变换者的左下角和左上角的中心点的位置。 </summary>
@@ -2752,10 +2752,10 @@
       <summary> 获取边界的底部的 Y 轴位置。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerBorder.CenterX">
-      <summary> 获取 X 的边界中心。 </summary>
+      <summary> 获取边界的中心点的 X 轴值。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerBorder.CenterY">
-      <summary> 获取 Y 的边界中心。 </summary>
+      <summary> 获取边界的中心点的 Y 轴位置。 </summary>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.ToTransformer">
       <summary>
@@ -3378,13 +3378,13 @@
       <summary> 获取矩形的高度。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.CenterX">
-      <summary> 获取矩形的X中心。 </summary>
+      <summary> 获取矩形的中心点的 X 轴值。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.CenterY">
-      <summary> 获取Y的矩形中心。 </summary>
+      <summary> 获取矩形的中心点的 Y 轴位置。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.Center">
-      <summary> 获取矩形的中心点。 </summary>
+      <summary> 获取矩形的中心点的位置。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.CenterLeft">
       <summary> 获取矩形的左下角和左上角的中心点的位置。 </summary>

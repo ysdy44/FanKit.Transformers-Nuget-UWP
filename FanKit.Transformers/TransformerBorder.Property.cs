@@ -12,12 +12,12 @@
         /// <summary> Gets the Y-axis position of the bottom of the border. </summary>
         public float Bottom { get; set; }
 
-        /// <summary> Gets border's center of X. </summary>
+        /// <summary> Gets the X-axis value of the center of the border. </summary>
         public float CenterX => (this.Left + this.Right) / 2;
-        /// <summary> Gets border's center of Y. </summary>
+        /// <summary> Gets the Y-axis position of the center of the border. </summary>
         public float CenterY => (this.Top + this.Bottom) / 2;
         /*
-        /// <summary> Gets rectangle's center point. </summary>
+        /// <summary> Gets the position of the center of the border. </summary>
         public Vector2 Center => new Vector2(this.CenterX, this.CenterY);   
         
         /// <summary> Gets the position of the center of bottom-left and top-left corners of the border. </summary>

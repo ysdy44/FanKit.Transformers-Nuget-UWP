@@ -1354,7 +1354,7 @@
       <summary> Gets the position of the bottom-left corner. </summary>
     </member>
     <member name="P:FanKit.Transformers.ITransformerLTRB.Center">
-      <summary> Gets the center vector. </summary>
+      <summary> Gets the position of the center. </summary>
     </member>
     <member name="P:FanKit.Transformers.ITransformerLTRB.CenterLeft">
       <summary> Gets the position of the center of bottom-left and top-left corners. </summary>
@@ -2204,7 +2204,7 @@
       <summary> Gets or sets the position of the bottom-left corner of the transformer. </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.Center">
-      <summary> Gets the center vector. </summary>
+      <summary> Gets the position of the center of the transformer. </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.CenterLeft">
       <summary> Gets the position of the center of bottom-left and top-left corners of the transformer. </summary>
@@ -2752,10 +2752,10 @@
       <summary> Gets the Y-axis position of the bottom of the border. </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerBorder.CenterX">
-      <summary> Gets border's center of X. </summary>
+      <summary> Gets the X-axis value of the center of the border. </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerBorder.CenterY">
-      <summary> Gets border's center of Y. </summary>
+      <summary> Gets the Y-axis position of the center of the border. </summary>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.ToTransformer">
       <summary>
@@ -3378,13 +3378,13 @@
       <summary> Gets rectangle's height. </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.CenterX">
-      <summary> Gets rectangle's center of X. </summary>
+      <summary> Gets the X-axis value of the center of the rectangle. </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.CenterY">
-      <summary> Gets rectangle's center of Y. </summary>
+      <summary> Gets the Y-axis position of the center of the rectangle. </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.Center">
-      <summary> Gets rectangle's center point. </summary>
+      <summary> Gets the position of the center of the rectangle. </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.CenterLeft">
       <summary> Gets the position of the center of bottom-left and top-left corners of the rectangle. </summary>

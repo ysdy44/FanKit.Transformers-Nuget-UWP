@@ -14,7 +14,7 @@ namespace FanKit.Transformers
         public Vector2 LeftBottom { get; set; }
 
 
-        /// <summary> Gets the center vector. </summary>
+        /// <summary> Gets the position of the center of the transformer. </summary>
         public Vector2 Center => (this.LeftTop + this.RightTop + this.RightBottom + this.LeftBottom) / 4;
 
         /// <summary> Gets the position of the center of bottom-left and top-left corners of the transformer. </summary>
