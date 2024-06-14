@@ -5,13 +5,13 @@ namespace FanKit.Transformers
     partial struct TransformerRect
     {
 
-        /// <summary> Gets rectangle's left. </summary>
+        /// <summary> Gets the X-axis value of the left side of the rectangle. </summary>
         public float Left { get; private set; }
-        /// <summary> Gets rectangle's top. </summary>
+        /// <summary> Gets the Y-axis position of the top of the rectangle. </summary>
         public float Top { get; private set; }
-        /// <summary> Gets rectangle's right. </summary>
+        /// <summary> Gets the X-axis value of the right side of the rectangle. </summary>
         public float Right { get; private set; }
-        /// <summary> Gets rectangle's bottom. </summary>
+        /// <summary> Gets the Y-axis position of the bottom of the rectangle. </summary>
         public float Bottom { get; private set; }
 
         /// <summary> Gets rectangle's width. </summary>

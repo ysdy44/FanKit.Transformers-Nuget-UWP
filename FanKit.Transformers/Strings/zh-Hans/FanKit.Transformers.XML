@@ -2740,16 +2740,16 @@
       <returns> 如果节点不相等，则返回**true**；如果它们相等，则为假。 </returns>
     </member>
     <member name="P:FanKit.Transformers.TransformerBorder.Left">
-      <summary> 获取边界的左侧。 </summary>
+      <summary> 获取边界的左侧的 X 轴值。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerBorder.Top">
-      <summary> 获取边界的顶部。 </summary>
+      <summary> 获取边界的顶部的 Y 轴位置。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerBorder.Right">
-      <summary> 获取边界的权利。 </summary>
+      <summary> 获取边界的右侧的 X 轴值。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerBorder.Bottom">
-      <summary> 获取边界的底部。 </summary>
+      <summary> 获取边界的底部的 Y 轴位置。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerBorder.CenterX">
       <summary> 获取 X 的边界中心。 </summary>
@@ -3393,16 +3393,16 @@
       <returns> </returns>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.Left">
-      <summary> 获取矩形的左侧。 </summary>
+      <summary> 获取矩形的左侧的 X 轴值。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.Top">
-      <summary> 获取矩形的顶部。 </summary>
+      <summary> 获取矩形的顶部的 Y 轴位置。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.Right">
-      <summary> 获取矩形的右边。 </summary>
+      <summary> 获取矩形的右侧的 X 轴值。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.Bottom">
-      <summary> 获取矩形的底部。 </summary>
+      <summary> 获取矩形的底部的 Y 轴位置。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.Width">
       <summary> 获取矩形的宽度。 </summary>

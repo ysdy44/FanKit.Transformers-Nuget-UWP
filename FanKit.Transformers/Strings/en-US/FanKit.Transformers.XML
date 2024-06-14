@@ -2740,16 +2740,16 @@
       <returns> Return **true** if the nodes are not equal; False if they are equal. </returns>
     </member>
     <member name="P:FanKit.Transformers.TransformerBorder.Left">
-      <summary> Gets border's left. </summary>
+      <summary> Gets the X-axis value of the left side of the border. </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerBorder.Top">
-      <summary> Gets border's top. </summary>
+      <summary> Gets the Y-axis position of the top of the border. </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerBorder.Right">
-      <summary> Gets border's right. </summary>
+      <summary> Gets the X-axis value of the right side of the border. </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerBorder.Bottom">
-      <summary> Gets border's bottom. </summary>
+      <summary> Gets the Y-axis position of the bottom of the border. </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerBorder.CenterX">
       <summary> Gets border's center of X. </summary>
@@ -3393,16 +3393,16 @@
       <returns> The product geometry. </returns>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.Left">
-      <summary> Gets rectangle's left. </summary>
+      <summary> Gets the X-axis value of the left side of the rectangle. </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.Top">
-      <summary> Gets rectangle's top. </summary>
+      <summary> Gets the Y-axis position of the top of the rectangle. </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.Right">
-      <summary> Gets rectangle's right. </summary>
+      <summary> Gets the X-axis value of the right side of the rectangle. </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.Bottom">
-      <summary> Gets rectangle's bottom. </summary>
+      <summary> Gets the Y-axis position of the bottom of the rectangle. </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.Width">
       <summary> Gets rectangle's width. </summary>

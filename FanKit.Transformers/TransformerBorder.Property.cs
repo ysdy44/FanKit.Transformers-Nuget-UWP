@@ -5,13 +5,13 @@ namespace FanKit.Transformers
     partial struct TransformerBorder
     {
 
-        /// <summary> Gets border's left. </summary>
+        /// <summary> Gets the X-axis value of the left side of the border. </summary>
         public float Left { get; set; }
-        /// <summary> Gets border's top. </summary>
+        /// <summary> Gets the Y-axis position of the top of the border. </summary>
         public float Top { get; set; }
-        /// <summary> Gets border's right. </summary>
+        /// <summary> Gets the X-axis value of the right side of the border. </summary>
         public float Right { get; set; }
-        /// <summary> Gets border's bottom. </summary>
+        /// <summary> Gets the Y-axis position of the bottom of the border. </summary>
         public float Bottom { get; set; }
 
         /// <summary> Gets border's center of X. </summary>
