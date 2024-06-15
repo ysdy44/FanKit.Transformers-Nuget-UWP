@@ -2872,10 +2872,10 @@
         Create a new rectangle geometry.
       </summary>
       <param name="resourceCreator"> The resource-creator. </param>
-      <param name="leftTop"> The position of the top-left corner. </param>
-      <param name="rightTop"> The position of the top-right corner. </param>
-      <param name="rightBottom"> The position of the bottom-right corner. </param>
-      <param name="leftBottom"> The position of the bottom-left corner. </param>
+      <param name="leftTop"> The position of the top-left corner of the bounds. </param>
+      <param name="rightTop"> The position of the top-right corner of the bounds. </param>
+      <param name="rightBottom"> The position of the bottom-right corner of the bounds. </param>
+      <param name="leftBottom"> The position of the bottom-left corner of the bounds. </param>
       <returns> The product geometry. </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateRectangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Matrix3x2)">
@@ -2883,10 +2883,10 @@
         Create a new rectangle geometry.
       </summary>
       <param name="resourceCreator"> The resource-creator. </param>
-      <param name="leftTop"> The position of the top-left corner. </param>
-      <param name="rightTop"> The position of the top-right corner. </param>
-      <param name="rightBottom"> The position of the bottom-right corner. </param>
-      <param name="leftBottom"> The position of the bottom-left corner. </param>
+      <param name="leftTop"> The position of the top-left corner of the bounds. </param>
+      <param name="rightTop"> The position of the top-right corner of the bounds. </param>
+      <param name="rightBottom"> The position of the bottom-right corner of the bounds. </param>
+      <param name="leftBottom"> The position of the bottom-left corner of the bounds. </param>
       <param name="matrix"> The matrix. </param>
       <returns> The product geometry. </returns>
     </member>
@@ -2973,10 +2973,10 @@
         Create a new triangle geometry.
       </summary>
       <param name="resourceCreator"> The resource-creator. </param>
-      <param name="leftTop"> The position of the top-left corner. </param>
-      <param name="rightTop"> The position of the top-right corner. </param>
-      <param name="rightBottom"> The position of the bottom-right corner. </param>
-      <param name="leftBottom"> The position of the bottom-left corner. </param>
+      <param name="leftTop"> The position of the top-left corner of the bounds. </param>
+      <param name="rightTop"> The position of the top-right corner of the bounds. </param>
+      <param name="rightBottom"> The position of the bottom-right corner of the bounds. </param>
+      <param name="leftBottom"> The position of the bottom-left corner of the bounds. </param>
       <param name="center"> The value of center. </param>
       <returns> The product geometry. </returns>
     </member>
@@ -2985,10 +2985,10 @@
         Create a new triangle geometry.
       </summary>
       <param name="resourceCreator"> The resource-creator. </param>
-      <param name="leftTop"> The position of the top-left corner. </param>
-      <param name="rightTop"> The position of the top-right corner. </param>
-      <param name="rightBottom"> The position of the bottom-right corner. </param>
-      <param name="leftBottom"> The position of the bottom-left corner. </param>
+      <param name="leftTop"> The position of the top-left corner of the bounds. </param>
+      <param name="rightTop"> The position of the top-right corner of the bounds. </param>
+      <param name="rightBottom"> The position of the bottom-right corner of the bounds. </param>
+      <param name="leftBottom"> The position of the bottom-left corner of the bounds. </param>
       <param name="matrix"> The matrix. </param>
       <param name="center"> The value of center. </param>
       <returns> The product geometry. </returns>
