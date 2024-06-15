@@ -83,9 +83,9 @@ namespace FanKit.Transformers
         /// <summary>
         /// Initialize a transformer.
         /// </summary>
-        /// <param name="width"> The width. </param>
-        /// <param name="height"> The height. </param>
-        /// <param name="postion"> The postion. </param>
+        /// <param name="width"> The width of the transformer. </param>
+        /// <param name="height"> The height of the transformer. </param>
+        /// <param name="postion"> The position of the top-left corner of the transformer. </param>
         public Transformer(float width, float height, Vector2 postion)
         {
             this.LeftTop = postion;

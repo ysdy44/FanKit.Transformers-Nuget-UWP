@@ -2372,9 +2372,9 @@
       <summary>
         初始化变换者。
       </summary>
-      <param name="width"> 宽度。 </param>
-      <param name="height"> 高度。 </param>
-      <param name="postion"> 位置。 </param>
+      <param name="width"> 变换者的宽度。 </param>
+      <param name="height"> 变换者的高度。 </param>
+      <param name="postion"> 变换者的左上角的位置。 </param>
     </member>
     <member name="M:FanKit.Transformers.Transformer.Add(FanKit.Transformers.Transformer,System.Numerics.Vector2)">
       <summary>
@@ -2671,8 +2671,8 @@
       <summary>
         初始化 <see cref="T:FanKit.Transformers.TransformerBorder"/>。
       </summary>
-      <param name="width"> 宽度。 </param>
-      <param name="height"> 高度。 </param>
+      <param name="width"> 边界的宽度。 </param>
+      <param name="height"> 边界的高度。 </param>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.#ctor(FanKit.Transformers.ITransformerLTRB)">
       <summary>
@@ -3233,9 +3233,9 @@
       <summary>
         初始化 <see cref="T:FanKit.Transformers.TransformerMatrix"/>。
       </summary>
-      <param name="width"> 宽度。 </param>
-      <param name="height"> 高度。 </param>
-      <param name="postion"> 位置。 </param>
+      <param name="width"> 目标矩形的宽度。 </param>
+      <param name="height"> 目标矩形的高度。 </param>
+      <param name="postion"> 目标变换者的左上角的位置。 </param>
     </member>
     <member name="M:FanKit.Transformers.TransformerMatrix.GetMatrix">
       <summary>
@@ -3332,9 +3332,9 @@
       <summary>
         初始化 <see cref="T:FanKit.Transformers.TransformerRect"/>。
       </summary>
-      <param name="width"> 宽度。 </param>
-      <param name="height"> 高度。 </param>
-      <param name="postion"> 位置。 </param>
+      <param name="width"> 矩形的宽度。 </param>
+      <param name="height"> 矩形的高度。 </param>
+      <param name="postion"> 矩形的左上角的位置。 </param>
     </member>
     <member name="M:FanKit.Transformers.TransformerRect.ToRect">
       <summary>

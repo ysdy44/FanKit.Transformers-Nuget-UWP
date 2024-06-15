@@ -29,8 +29,8 @@ namespace FanKit.Transformers
         /// <summary>
         /// Initialize a <see cref="TransformerBorder"/>.
         /// </summary>
-        /// <param name="width"> The width. </param>
-        /// <param name="height"> The height. </param>
+        /// <param name="width"> The width of the border. </param>
+        /// <param name="height"> The height of the border. </param>
         public TransformerBorder(float width, float height)
         {
             this.Left = 0;

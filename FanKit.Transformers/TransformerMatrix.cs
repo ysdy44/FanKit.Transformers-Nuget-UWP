@@ -57,9 +57,9 @@ namespace FanKit.Transformers
         /// <summary>
         /// Initialize a <see cref="TransformerMatrix"/>. 
         /// </summary> 
-        /// <param name="width"> The width. </param>
-        /// <param name="height"> The height. </param>
-        /// <param name="postion"> The postion. </param>
+        /// <param name="width"> The width of the destination transformer. </param>
+        /// <param name="height"> The height of the destination transformer. </param>
+        /// <param name="postion"> The position of the top-left corner of the destination transformer. </param>
         public TransformerMatrix(float width, float height, Vector2 postion)
         {
             Transformer transformer = new Transformer(width, height, postion);

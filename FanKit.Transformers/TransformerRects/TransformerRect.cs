@@ -108,9 +108,9 @@ namespace FanKit.Transformers
         /// <summary>
         /// Initialize a <see cref="TransformerRect"/>.
         /// </summary>
-        /// <param name="width"> The width. </param>
-        /// <param name="height"> The height. </param>
-        /// <param name="postion"> The postion. </param>
+        /// <param name="width"> The width of the rectangle. </param>
+        /// <param name="height"> The height of the rectangle. </param>
+        /// <param name="postion"> The position of the top-left corner of the rectangle. </param>
         public TransformerRect(float width, float height, Vector2 postion)
         {
             float left = postion.X;
