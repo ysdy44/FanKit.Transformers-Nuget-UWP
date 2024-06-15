@@ -26,13 +26,13 @@ namespace FanKit.Transformers
         /// <summary> Gets the position of the center of bottom-right and bottom-left corners of the transformer. </summary>
         public Vector2 CenterBottom => (this.RightBottom + this.LeftBottom) / 2;
 
-        /// <summary> Gets the minimum value on the X-Axis. </summary>
+        /// <summary> Gets the minimum value of the X-axis value for all corners of the transformer. </summary>
         public float MinX => System.Math.Min(System.Math.Min(this.LeftTop.X, this.RightTop.X), System.Math.Min(this.RightBottom.X, this.LeftBottom.X));
-        /// <summary> Gets the maximum  value on the X-Axis. </summary>
+        /// <summary> Gets the maximum value of the X-axis value for all corners of the transformer. </summary>
         public float MaxX => System.Math.Max(System.Math.Max(this.LeftTop.X, this.RightTop.X), System.Math.Max(this.RightBottom.X, this.LeftBottom.X));
-        /// <summary> Gets the minimum value on the Y-Axis. </summary>
+        /// <summary> Gets the minimum position of the Y-axis position for all corners of the transformer. </summary>
         public float MinY => System.Math.Min(System.Math.Min(this.LeftTop.Y, this.RightTop.Y), System.Math.Min(this.RightBottom.Y, this.LeftBottom.Y));
-        /// <summary> Gets the maximum value on the Y-Axis. </summary>
+        /// <summary> Gets the maximum position of the Y-axis position for all corners of the transformer. </summary>
         public float MaxY => System.Math.Max(System.Math.Max(this.LeftTop.Y, this.RightTop.Y), System.Math.Max(this.RightBottom.Y, this.LeftBottom.Y));
 
         /// <summary> Gets the horizontal vector of the transformer. </summary>

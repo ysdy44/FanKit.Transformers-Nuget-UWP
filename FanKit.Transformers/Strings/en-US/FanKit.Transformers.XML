@@ -2219,16 +2219,16 @@
       <summary> Gets the position of the center of bottom-right and bottom-left corners of the transformer. </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.MinX">
-      <summary> Gets the minimum value on the X-Axis. </summary>
+      <summary> Gets the minimum value of the X-axis value for all corners of the transformer. </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.MaxX">
-      <summary> Gets the maximum  value on the X-Axis. </summary>
+      <summary> Gets the maximum value of the X-axis value for all corners of the transformer. </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.MinY">
-      <summary> Gets the minimum value on the Y-Axis. </summary>
+      <summary> Gets the minimum position of the Y-axis position for all corners of the transformer. </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.MaxY">
-      <summary> Gets the maximum value on the Y-Axis. </summary>
+      <summary> Gets the maximum position of the Y-axis position for all corners of the transformer. </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.Horizontal">
       <summary> Gets the horizontal vector of the transformer. </summary>

@@ -2219,16 +2219,16 @@
       <summary> 获取变换者的右下角和左下角的中心点的位置。 </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.MinX">
-      <summary> 获取 X 轴上的最小值。 </summary>
+      <summary> 获取变换者的所有角的 X 轴值的最小值。 </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.MaxX">
-      <summary> 获取 X 轴上的最大值。 </summary>
+      <summary> 获取变换者的所有角的 X 轴值的最大值。 </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.MinY">
-      <summary> 获取 Y 轴上的最小值。 </summary>
+      <summary> 获取变换者的所有角的 Y 轴位置的最小位置。 </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.MaxY">
-      <summary> 获取 Y 轴上的最大值。 </summary>
+      <summary> 获取变换者的所有角的 Y 轴位置的最大位置。 </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.Horizontal">
       <summary> 获取变换者的水平向量。 </summary>
