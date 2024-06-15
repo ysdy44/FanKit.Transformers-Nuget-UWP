@@ -315,22 +315,34 @@
       <summary> 正常。 </summary>
     </member>
     <member name="F:FanKit.Transformers.BorderMode.MinX">
-      <summary> 最小。 </summary>
+      <summary>
+        <see cref="P:FanKit.Transformers.Transformer.MinX"/>。
+      </summary>
     </member>
     <member name="F:FanKit.Transformers.BorderMode.CenterX">
-      <summary> 中心。 </summary>
+      <summary>
+        <see cref="P:FanKit.Transformers.Transformer.CenterX"/>。
+      </summary>
     </member>
     <member name="F:FanKit.Transformers.BorderMode.MaxX">
-      <summary> 最大值 </summary>
+      <summary>
+        <see cref="P:FanKit.Transformers.Transformer.MaxX"/>。
+      </summary>
     </member>
     <member name="F:FanKit.Transformers.BorderMode.MinY">
-      <summary> 最小。 </summary>
+      <summary>
+        <see cref="P:FanKit.Transformers.Transformer.MinY"/>。
+      </summary>
     </member>
     <member name="F:FanKit.Transformers.BorderMode.CenterY">
-      <summary> 中心。 </summary>
+      <summary>
+        <see cref="P:FanKit.Transformers.Transformer.CenterY"/>。
+      </summary>
     </member>
     <member name="F:FanKit.Transformers.BorderMode.MaxY">
-      <summary> 最大值 </summary>
+      <summary>
+        <see cref="P:FanKit.Transformers.Transformer.MaxY"/>。
+      </summary>
     </member>
     <member name="T:FanKit.Transformers.MarqueeCompositeMode">
       <summary>

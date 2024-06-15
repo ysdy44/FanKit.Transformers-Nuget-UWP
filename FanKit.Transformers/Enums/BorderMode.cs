@@ -8,18 +8,30 @@
         /// <summary> Normal. </summary>
         None,
 
-        /// <summary> Min. </summary>
+        /// <summary>
+        /// <see cref="Transformer.MinX"/>.
+        /// </summary>
         MinX,
-        /// <summary> Center. </summary>
+        /// <summary>
+        /// <see cref="Transformer.CenterX"/>.
+        /// </summary>
         CenterX,
-        /// <summary> Max. </summary>
+        /// <summary>
+        /// <see cref="Transformer.MaxX"/>.
+        /// </summary>
         MaxX,
 
-        /// <summary> Min. </summary>
+        /// <summary>
+        /// <see cref="Transformer.MinY"/>.
+        /// </summary>
         MinY,
-        /// <summary> Center. </summary>
+        /// <summary>
+        /// <see cref="Transformer.CenterY"/>.
+        /// </summary>
         CenterY,
-        /// <summary> Max. </summary>
+        /// <summary>
+        /// <see cref="Transformer.MaxY"/>.
+        /// </summary>
         MaxY,
     }
 }

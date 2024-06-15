@@ -315,22 +315,34 @@
       <summary> Normal. </summary>
     </member>
     <member name="F:FanKit.Transformers.BorderMode.MinX">
-      <summary> Min. </summary>
+      <summary>
+        <see cref="P:FanKit.Transformers.Transformer.MinX"/>.
+      </summary>
     </member>
     <member name="F:FanKit.Transformers.BorderMode.CenterX">
-      <summary> Center. </summary>
+      <summary>
+        <see cref="P:FanKit.Transformers.Transformer.CenterX"/>.
+      </summary>
     </member>
     <member name="F:FanKit.Transformers.BorderMode.MaxX">
-      <summary> Max. </summary>
+      <summary>
+        <see cref="P:FanKit.Transformers.Transformer.MaxX"/>.
+      </summary>
     </member>
     <member name="F:FanKit.Transformers.BorderMode.MinY">
-      <summary> Min. </summary>
+      <summary>
+        <see cref="P:FanKit.Transformers.Transformer.MinY"/>.
+      </summary>
     </member>
     <member name="F:FanKit.Transformers.BorderMode.CenterY">
-      <summary> Center. </summary>
+      <summary>
+        <see cref="P:FanKit.Transformers.Transformer.CenterY"/>.
+      </summary>
     </member>
     <member name="F:FanKit.Transformers.BorderMode.MaxY">
-      <summary> Max. </summary>
+      <summary>
+        <see cref="P:FanKit.Transformers.Transformer.MaxY"/>.
+      </summary>
     </member>
     <member name="T:FanKit.Transformers.MarqueeCompositeMode">
       <summary>
