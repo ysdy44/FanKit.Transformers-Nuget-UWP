@@ -498,8 +498,8 @@
       <summary>
         初始化 <see cref="T:FanKit.Transformers.NodeCollection"/>。
       </summary>
-      <param name="left"> 第一个要点。 </param>
-      <param name="right"> 第二点。 </param>
+      <param name="left"> 第一个点。 </param>
+      <param name="right"> 第二个点。 </param>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.#ctor(Microsoft.Graphics.Canvas.Geometry.CanvasGeometry)">
       <summary>
@@ -781,7 +781,7 @@
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="point0"> 第一个点。 </param>
-      <param name="point1"> 第二点。 </param>
+      <param name="point1"> 第二个点。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawThickLine(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>
@@ -789,7 +789,7 @@
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="point0"> 第一个点。 </param>
-      <param name="point1"> 第二点。 </param>
+      <param name="point1"> 第二个点。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawEllipseDodgerBlue(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2,System.Single,System.Single)">
       <summary>
@@ -3607,16 +3607,16 @@
       <summary>
         距离是否超过[节点半径]。最低：144。
       </summary>
-      <param name="point0"> 第一点。 </param>
-      <param name="point1"> 第二点。 </param>
+      <param name="point0"> 第一个点。 </param>
+      <param name="point1"> 第二个点。 </param>
       <returns> 如果距离超过[节点半径]，则返回**true**，否则返回**false**。 </returns>
     </member>
     <member name="M:FanKit.Math.OutNodeDistance(System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>
         距离的长度平方是否超过[节点距离]。默认：400
       </summary>
-      <param name="point0"> 第一点。 </param>
-      <param name="point1"> 第二点。 </param>
+      <param name="point0"> 第一个点。 </param>
+      <param name="point1"> 第二个点。 </param>
       <returns> 如果长度平方'的距离超过[节点距离]，则返回**true**，否则返回**false**。 </returns>
     </member>
     <member name="M:FanKit.Math.GetOutsidePointInTransformer(System.Numerics.Vector2,System.Numerics.Vector2)">
@@ -3643,18 +3643,18 @@
         获取点和线的[垂足]。
       </summary>
       <param name="point"> 点。 </param>
-      <param name="lineA"> 线的第一点。 </param>
-      <param name="lineB"> 线的第二点。 </param>
+      <param name="lineA"> 线的第一个点。 </param>
+      <param name="lineB"> 线的第二个点。 </param>
       <returns> 产生的向量。 </returns>
     </member>
     <member name="M:FanKit.Math.IntersectionPoint(System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>
         获取第一行和LIne2的交点。
       </summary>
-      <param name="line1A"> 线1的第一点。 </param>
-      <param name="line1B"> 线1的第二点。 </param>
-      <param name="line2A"> 线2的第一点。 </param>
-      <param name="line2B"> 线2的第二点。 </param>
+      <param name="line1A"> 线1的第一个点。 </param>
+      <param name="line1B"> 线1的第二个点。 </param>
+      <param name="line2A"> 线2的第一个点。 </param>
+      <param name="line2B"> 线2的第二个点。 </param>
       <returns> 产生的向量。 </returns>
     </member>
     <member name="M:FanKit.Math.RadiansToVector(System.Single,System.Numerics.Vector2,System.Single)">
