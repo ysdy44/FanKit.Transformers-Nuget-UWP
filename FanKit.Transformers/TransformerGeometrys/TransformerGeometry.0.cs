@@ -112,9 +112,9 @@ namespace FanKit.Transformers
         /// Create a new ellipse geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
-        /// <param name="centerLeft"> The position of the center of top-right and bottom-right corners of the bounds. </param>
-        /// <param name="centerTop"> The position of the center of bottom-left and top-left corners of the bounds. </param>
-        /// <param name="centerRight"> The position of the center of top-left and top-right corners of the bounds. </param>
+        /// <param name="centerLeft"> The position of the center of bottom-left and top-left corners of the bounds. </param>
+        /// <param name="centerTop"> The position of the center of top-left and top-right corners of the bounds. </param>
+        /// <param name="centerRight"> The position of the center of top-right and bottom-right corners of the bounds. </param>
         /// <param name="centerBottom"> The position of the center of bottom-right and bottom-left corners of the bounds. </param>
         /// <returns> The product geometry. </returns>
         public static CanvasGeometry CreateEllipse(ICanvasResourceCreator resourceCreator, Vector2 centerLeft, Vector2 centerTop, Vector2 centerRight, Vector2 centerBottom) => TransformerGeometry.CreateEllipseCore(resourceCreator, centerLeft, centerTop, centerRight, centerBottom);
@@ -123,9 +123,9 @@ namespace FanKit.Transformers
         /// Create a new ellipse geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
-        /// <param name="centerLeft"> The position of the center of top-right and bottom-right corners of the bounds. </param>
-        /// <param name="centerTop"> The position of the center of bottom-left and top-left corners of the bounds. </param>
-        /// <param name="centerRight"> The position of the center of top-left and top-right corners of the bounds. </param>
+        /// <param name="centerLeft"> The position of the center of bottom-left and top-left corners of the bounds. </param>
+        /// <param name="centerTop"> The position of the center of top-left and top-right corners of the bounds. </param>
+        /// <param name="centerRight"> The position of the center of top-right and bottom-right corners of the bounds. </param>
         /// <param name="centerBottom"> The position of the center of bottom-right and bottom-left corners of the bounds. </param>
         /// <param name="matrix"> The matrix. </param>
         /// <returns> The product geometry. </returns>

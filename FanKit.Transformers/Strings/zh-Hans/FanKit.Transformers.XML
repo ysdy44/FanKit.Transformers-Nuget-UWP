@@ -2930,9 +2930,9 @@
         创建一个新的椭圆几何形状。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
-      <param name="centerLeft"> 边框的右上角和右下角的中心点的位置。 </param>
-      <param name="centerTop"> 边框的左下角和左上角的中心点的位置。 </param>
-      <param name="centerRight"> 边框的左上角和右上角的中心点的位置。 </param>
+      <param name="centerLeft"> 边框的左下角和左上角的中心点的位置。 </param>
+      <param name="centerTop"> 边框的左上角和右上角的中心点的位置。 </param>
+      <param name="centerRight"> 边框的右上角和右下角的中心点的位置。 </param>
       <param name="centerBottom"> 边框的右下角和左下角的中心点的位置。 </param>
       <returns> 产生的几何形状。 </returns>
     </member>
@@ -2941,9 +2941,9 @@
         创建一个新的椭圆几何形状。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
-      <param name="centerLeft"> 边框的右上角和右下角的中心点的位置。 </param>
-      <param name="centerTop"> 边框的左下角和左上角的中心点的位置。 </param>
-      <param name="centerRight"> 边框的左上角和右上角的中心点的位置。 </param>
+      <param name="centerLeft"> 边框的左下角和左上角的中心点的位置。 </param>
+      <param name="centerTop"> 边框的左上角和右上角的中心点的位置。 </param>
+      <param name="centerRight"> 边框的右上角和右下角的中心点的位置。 </param>
       <param name="centerBottom"> 边框的右下角和左下角的中心点的位置。 </param>
       <param name="matrix"> 矩阵。 </param>
       <returns> 产生的几何形状。 </returns>
