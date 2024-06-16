@@ -6,5 +6,8 @@
         float Right { get; }
         float Top { get; }
         float Bottom { get; }
+
+        float Height { get; }
+        float Width { get; }
     }
 }

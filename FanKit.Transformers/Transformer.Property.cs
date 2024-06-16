@@ -13,7 +13,10 @@ namespace FanKit.Transformers
         /// <summary> Gets or sets the position of the bottom-left corner of the transformer. </summary>
         public Vector2 LeftBottom { get; set; }
 
-
+        /// <summary>  Gets the X-axis value of the center of the transformer. </summary>
+        public float CenterX => (this.LeftTop.X + this.RightTop.X + this.RightBottom.X + this.LeftBottom.X) / 4;
+        /// <summary> Gets the Y-axis position of the center of the transformer. </summary>
+        public float CenterY => (this.LeftTop.Y + this.RightTop.Y + this.RightBottom.Y + this.LeftBottom.Y) / 4;
         /// <summary> Gets the position of the center of the transformer. </summary>
         public Vector2 Center => (this.LeftTop + this.RightTop + this.RightBottom + this.LeftBottom) / 4;
 

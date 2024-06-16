@@ -1365,6 +1365,12 @@
     <member name="P:FanKit.Transformers.ITransformerLTRB.LeftBottom">
       <summary> Gets the position of the bottom-left corner. </summary>
     </member>
+    <member name="P:FanKit.Transformers.ITransformerLTRB.CenterX">
+      <summary> Gets the X-axis value of the center. </summary>
+    </member>
+    <member name="P:FanKit.Transformers.ITransformerLTRB.CenterY">
+      <summary> Gets the Y-axis position of the center. </summary>
+    </member>
     <member name="P:FanKit.Transformers.ITransformerLTRB.Center">
       <summary> Gets the position of the center. </summary>
     </member>
@@ -2215,6 +2221,12 @@
     <member name="P:FanKit.Transformers.Transformer.LeftBottom">
       <summary> Gets or sets the position of the bottom-left corner of the transformer. </summary>
     </member>
+    <member name="P:FanKit.Transformers.Transformer.CenterX">
+      <summary> Gets the X-axis value of the center of the transformer. </summary>
+    </member>
+    <member name="P:FanKit.Transformers.Transformer.CenterY">
+      <summary> Gets the Y-axis position of the center of the transformer. </summary>
+    </member>
     <member name="P:FanKit.Transformers.Transformer.Center">
       <summary> Gets the position of the center of the transformer. </summary>
     </member>
@@ -2763,6 +2775,12 @@
     <member name="P:FanKit.Transformers.TransformerBorder.Bottom">
       <summary> Gets the Y-axis position of the bottom of the border. </summary>
     </member>
+    <member name="P:FanKit.Transformers.TransformerBorder.Width">
+      <summary> Gets the width of the border. </summary>
+    </member>
+    <member name="P:FanKit.Transformers.TransformerBorder.Height">
+      <summary> Gets the height of the border. </summary>
+    </member>
     <member name="P:FanKit.Transformers.TransformerBorder.CenterX">
       <summary> Gets the X-axis value of the center of the border. </summary>
     </member>
@@ -3217,6 +3235,7 @@
       <summary>
         Initialize a <see cref="T:FanKit.Transformers.TransformerMatrix"/>.
       </summary>
+      <param name="transformer"> The destination transformer. </param>
     </member>
     <member name="M:FanKit.Transformers.TransformerMatrix.#ctor(System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>

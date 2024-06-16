@@ -12,6 +12,11 @@
         /// <summary> Gets the Y-axis position of the bottom of the border. </summary>
         public float Bottom { get; set; }
 
+        /// <summary> Gets the width of the border. </summary>
+        public float Width => this.Right - this.Left;
+        /// <summary> Gets the height of the border. </summary>
+        public float Height => this.Bottom - this.Top;
+
         /// <summary> Gets the X-axis value of the center of the border. </summary>
         public float CenterX => (this.Left + this.Right) / 2;
         /// <summary> Gets the Y-axis position of the center of the border. </summary>

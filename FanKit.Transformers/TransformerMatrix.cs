@@ -23,6 +23,7 @@ namespace FanKit.Transformers
         /// <summary> 
         /// Initialize a <see cref="TransformerMatrix"/>. 
         /// </summary>
+        /// <param name="transformer"> The destination transformer. </param>
         public TransformerMatrix(Transformer transformer)
         {
             //Source

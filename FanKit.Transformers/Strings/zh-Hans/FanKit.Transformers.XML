@@ -1365,6 +1365,12 @@
     <member name="P:FanKit.Transformers.ITransformerLTRB.LeftBottom">
       <summary> 获取左下角的位置。 </summary>
     </member>
+    <member name="P:FanKit.Transformers.ITransformerLTRB.CenterX">
+      <summary> 获取中心点的 X 轴值。 </summary>
+    </member>
+    <member name="P:FanKit.Transformers.ITransformerLTRB.CenterY">
+      <summary> 获取中心点的 Y 轴位置。 </summary>
+    </member>
     <member name="P:FanKit.Transformers.ITransformerLTRB.Center">
       <summary> 获取中心点的位置。 </summary>
     </member>
@@ -2215,6 +2221,12 @@
     <member name="P:FanKit.Transformers.Transformer.LeftBottom">
       <summary> 获取或设置变换者的左下角的位置。 </summary>
     </member>
+    <member name="P:FanKit.Transformers.Transformer.CenterX">
+      <summary> 获取变换者的中心点的 X 轴值。 </summary>
+    </member>
+    <member name="P:FanKit.Transformers.Transformer.CenterY">
+      <summary> 获取变换者的中心点的 Y 轴位置。 </summary>
+    </member>
     <member name="P:FanKit.Transformers.Transformer.Center">
       <summary> 获取变换者的中心点的位置。 </summary>
     </member>
@@ -2763,6 +2775,12 @@
     <member name="P:FanKit.Transformers.TransformerBorder.Bottom">
       <summary> 获取边界的底部的 Y 轴位置。 </summary>
     </member>
+    <member name="P:FanKit.Transformers.TransformerBorder.Width">
+      <summary> 获取边界的宽度。 </summary>
+    </member>
+    <member name="P:FanKit.Transformers.TransformerBorder.Height">
+      <summary> 获取边界的高度。 </summary>
+    </member>
     <member name="P:FanKit.Transformers.TransformerBorder.CenterX">
       <summary> 获取边界的中心点的 X 轴值。 </summary>
     </member>
@@ -3217,6 +3235,7 @@
       <summary>
         初始化 <see cref="T:FanKit.Transformers.TransformerMatrix"/>。
       </summary>
+      <param name="transformer"> 目标变换者。 </param>
     </member>
     <member name="M:FanKit.Transformers.TransformerMatrix.#ctor(System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>

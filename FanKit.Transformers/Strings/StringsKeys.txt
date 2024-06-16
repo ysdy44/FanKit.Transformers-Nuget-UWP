@@ -1,4 +1,4 @@
-FanKit.Transformers
+ FanKit.Transformers 
 T:FanKit.Transformers.CanvasTransformer@Summary
 P:FanKit.Transformers.CanvasTransformer.Width@Summary
 P:FanKit.Transformers.CanvasTransformer.Height@Summary
@@ -541,6 +541,8 @@ P:FanKit.Transformers.ITransformerLTRB.LeftTop@Summary
 P:FanKit.Transformers.ITransformerLTRB.RightTop@Summary
 P:FanKit.Transformers.ITransformerLTRB.RightBottom@Summary
 P:FanKit.Transformers.ITransformerLTRB.LeftBottom@Summary
+P:FanKit.Transformers.ITransformerLTRB.CenterX@Summary
+P:FanKit.Transformers.ITransformerLTRB.CenterY@Summary
 P:FanKit.Transformers.ITransformerLTRB.Center@Summary
 P:FanKit.Transformers.ITransformerLTRB.CenterLeft@Summary
 P:FanKit.Transformers.ITransformerLTRB.CenterTop@Summary
@@ -821,6 +823,8 @@ P:FanKit.Transformers.Transformer.LeftTop@Summary
 P:FanKit.Transformers.Transformer.RightTop@Summary
 P:FanKit.Transformers.Transformer.RightBottom@Summary
 P:FanKit.Transformers.Transformer.LeftBottom@Summary
+P:FanKit.Transformers.Transformer.CenterX@Summary
+P:FanKit.Transformers.Transformer.CenterY@Summary
 P:FanKit.Transformers.Transformer.Center@Summary
 P:FanKit.Transformers.Transformer.CenterLeft@Summary
 P:FanKit.Transformers.Transformer.CenterTop@Summary
@@ -1074,6 +1078,8 @@ P:FanKit.Transformers.TransformerBorder.Left@Summary
 P:FanKit.Transformers.TransformerBorder.Top@Summary
 P:FanKit.Transformers.TransformerBorder.Right@Summary
 P:FanKit.Transformers.TransformerBorder.Bottom@Summary
+P:FanKit.Transformers.TransformerBorder.Width@Summary
+P:FanKit.Transformers.TransformerBorder.Height@Summary
 P:FanKit.Transformers.TransformerBorder.CenterX@Summary
 P:FanKit.Transformers.TransformerBorder.CenterY@Summary
 M:FanKit.Transformers.TransformerBorder.ToTransformer@Summary
@@ -1321,6 +1327,7 @@ F:FanKit.Transformers.TransformerMatrix.Source@Summary
 F:FanKit.Transformers.TransformerMatrix.Destination@Summary
 F:FanKit.Transformers.TransformerMatrix.DisabledRadian@Summary
 M:FanKit.Transformers.TransformerMatrix.#ctor(FanKit.Transformers.Transformer)@Summary
+M:FanKit.Transformers.TransformerMatrix.#ctor(FanKit.Transformers.Transformer)@Param@transformer
 M:FanKit.Transformers.TransformerMatrix.#ctor(System.Numerics.Vector2,System.Numerics.Vector2)@Summary
 M:FanKit.Transformers.TransformerMatrix.#ctor(System.Numerics.Vector2,System.Numerics.Vector2)@Param@pointA
 M:FanKit.Transformers.TransformerMatrix.#ctor(System.Numerics.Vector2,System.Numerics.Vector2)@Param@pointB
