@@ -14,7 +14,7 @@ namespace FanKit.Transformers
 
 
         /// <summary>
-        /// Set the rect of the source.
+        /// Set the rectangle of the source.
         /// </summary>
         /// <param name="postion"> The postion of source. </param>
         /// <param name="width"> The width of source. </param>
@@ -26,13 +26,13 @@ namespace FanKit.Transformers
             this.SourceScale = this.GetTransitionScale(width, height);
         }
         /// <summary>
-        /// Set the rect of the source.
+        /// Set the rectangle of the source.
         /// </summary>
         public void TransitionSource(Rect rect) => this.TransitionSource(new Vector2((float)rect.X, (float)rect.Y), (float)rect.Width, (float)rect.Height);
 
 
         /// <summary>
-        /// Set the rect of the destination.
+        /// Set the rectangle of the destination.
         /// </summary>
         /// <param name="postion"> The postion of destination. </param>
         /// <param name="width"> The width of destination. </param>
@@ -44,7 +44,7 @@ namespace FanKit.Transformers
             this.DestinationScale = this.GetTransitionScale(width, height);
         }
         /// <summary>
-        /// Set the rect of the destination.
+        /// Set the rectangle of the destination.
         /// </summary>
         public void TransitionDestination(Rect rect) => this.TransitionSource(new Vector2((float)rect.X, (float)rect.Y), (float)rect.Width, (float)rect.Height);
 

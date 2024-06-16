@@ -66,7 +66,7 @@ namespace FanKit.Transformers
 
 
         /// <summary>
-        /// Check node which in the rect.
+        /// Check node which in the rectangle.
         /// </summary>
         /// <param name="left"> The X-axis value of the left side of the destination rectangle. </param>
         /// <param name="top"> The Y-axis position of the top of the destination rectangle. </param>
@@ -93,7 +93,7 @@ namespace FanKit.Transformers
         }
 
         /// <summary>
-        /// Check node which in the rect.
+        /// Check node which in the rectangle.
         /// </summary>
         /// <param name="boxRect"> The destination rectangle. </param>
         public void BoxChoose(TransformerRect boxRect) => this.RectChoose(boxRect.Left, boxRect.Top, boxRect.Right, boxRect.Bottom);

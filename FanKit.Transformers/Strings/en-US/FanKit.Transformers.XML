@@ -204,7 +204,7 @@
     </member>
     <member name="M:FanKit.Transformers.CanvasTransformer.TransitionSource(System.Numerics.Vector2,System.Single,System.Single)">
       <summary>
-        Set the rect of the source.
+        Set the rectangle of the source.
       </summary>
       <param name="postion"> The postion of source. </param>
       <param name="width"> The width of source. </param>
@@ -212,12 +212,12 @@
     </member>
     <member name="M:FanKit.Transformers.CanvasTransformer.TransitionSource(Windows.Foundation.Rect)">
       <summary>
-        Set the rect of the source.
+        Set the rectangle of the source.
       </summary>
     </member>
     <member name="M:FanKit.Transformers.CanvasTransformer.TransitionDestination(System.Numerics.Vector2,System.Single,System.Single)">
       <summary>
-        Set the rect of the destination.
+        Set the rectangle of the destination.
       </summary>
       <param name="postion"> The postion of destination. </param>
       <param name="width"> The width of destination. </param>
@@ -225,7 +225,7 @@
     </member>
     <member name="M:FanKit.Transformers.CanvasTransformer.TransitionDestination(Windows.Foundation.Rect)">
       <summary>
-        Set the rect of the destination.
+        Set the rectangle of the destination.
       </summary>
     </member>
     <member name="M:FanKit.Transformers.CanvasTransformer.Transition(System.Single)">
@@ -671,7 +671,7 @@
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.RectChoose(System.Single,System.Single,System.Single,System.Single)">
       <summary>
-        Check node which in the rect.
+        Check node which in the rectangle.
       </summary>
       <param name="left"> The X-axis value of the left side of the destination rectangle. </param>
       <param name="top"> The Y-axis position of the top of the destination rectangle. </param>
@@ -680,7 +680,7 @@
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.BoxChoose(FanKit.Transformers.TransformerRect)">
       <summary>
-        Check node which in the rect.
+        Check node which in the rectangle.
       </summary>
       <param name="boxRect"> The destination rectangle. </param>
     </member>
@@ -814,14 +814,14 @@
         Draw a rectangle and the DodgerBlue color.
       </summary>
       <param name="drawingSession"> The drawing-session. </param>
-      <param name="rect"> The rect. </param>
+      <param name="rect"> The rectangle. </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawThickRectangle(Microsoft.Graphics.Canvas.CanvasDrawingSession,Windows.Foundation.Rect)">
       <summary>
         Draw a thick rectangle.
       </summary>
       <param name="drawingSession"> The drawing-session. </param>
-      <param name="rect"> The rect. </param>
+      <param name="rect"> The rectangle. </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawGeometryDodgerBlue(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.Geometry.CanvasGeometry)">
       <summary>
@@ -2950,7 +2950,7 @@
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateRoundRect(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Single)">
       <summary>
-        Create a new round rect geometry.
+        Create a new round rectangle geometry.
       </summary>
       <param name="resourceCreator"> The resource-creator. </param>
       <param name="bounds"> The bounds. </param>
@@ -2959,7 +2959,7 @@
     </member>
     <member name="M:FanKit.Transformers.TransformerGeometry.CreateRoundRect(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Single)">
       <summary>
-        Create a new round rect geometry.
+        Create a new round rectangle geometry.
       </summary>
       <param name="resourceCreator"> The resource-creator. </param>
       <param name="bounds"> The bounds. </param>
@@ -3353,7 +3353,7 @@
     </member>
     <member name="M:FanKit.Transformers.TransformerRect.ToRect">
       <summary>
-        Turn to Rect.
+        Turn to rectangle.
       </summary>
     </member>
     <member name="M:FanKit.Transformers.TransformerRect.ToRectangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator)">

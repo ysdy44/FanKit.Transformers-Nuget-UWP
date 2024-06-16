@@ -64,7 +64,7 @@ namespace FanKit.Transformers
         /// Draw a rectangle and the DodgerBlue color.
         /// </summary>
         /// <param name="drawingSession"> The drawing-session. </param>
-        /// <param name="rect"> The rect. </param>
+        /// <param name="rect"> The rectangle. </param>
         public static void DrawRectangleDodgerBlue(this CanvasDrawingSession drawingSession, Rect rect)
         {
             drawingSession.DrawRectangle(rect, Windows.UI.Colors.DodgerBlue);
@@ -74,7 +74,7 @@ namespace FanKit.Transformers
         /// Draw a thick rectangle.
         /// </summary>
         /// <param name="drawingSession"> The drawing-session. </param>
-        /// <param name="rect"> The rect. </param>
+        /// <param name="rect"> The rectangle. </param>
         public static void DrawThickRectangle(this CanvasDrawingSession drawingSession, Rect rect)
         {
             drawingSession.DrawRectangle(rect, Windows.UI.Colors.Black, 2);

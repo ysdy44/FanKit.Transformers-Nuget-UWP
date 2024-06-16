@@ -11,7 +11,7 @@ namespace FanKit.Transformers
 
 
         /// <summary>
-        /// Create a new round rect geometry.
+        /// Create a new round rectangle geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
         /// <param name="bounds"> The bounds. </param>
@@ -38,7 +38,7 @@ namespace FanKit.Transformers
         }
 
         /// <summary>
-        /// Create a new round rect geometry.
+        /// Create a new round rectangle geometry.
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
         /// <param name="bounds"> The bounds. </param>
