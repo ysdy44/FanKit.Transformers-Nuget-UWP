@@ -2368,15 +2368,15 @@
       <summary>
         初始化变换者。
       </summary>
-      <param name="pointA"> 变换者的第一点。 </param>
-      <param name="pointB"> 变换者的第二点。 </param>
+      <param name="pointA"> 新添加的变换者必须包含的第一个点。 </param>
+      <param name="pointB"> 新添加的变换者必须包含的第二个点。 </param>
     </member>
     <member name="M:FanKit.Transformers.Transformer.#ctor(System.Numerics.Vector2,System.Numerics.Vector2,System.Boolean,System.Boolean)">
       <summary>
         初始化变换者。
       </summary>
-      <param name="pointA"> 变换者的第一点。 </param>
-      <param name="pointB"> 变换者的第二点。 </param>
+      <param name="pointA"> 新添加的变换者必须包含的第一个点。 </param>
+      <param name="pointB"> 新添加的变换者必须包含的第二个点。 </param>
       <param name="isCenter"> 围绕中心缩放。 </param>
       <param name="isRatio"> 缩放时保持比例。 </param>
     </member>
@@ -3241,12 +3241,8 @@
       <summary>
         初始化 <see cref="T:FanKit.Transformers.TransformerMatrix"/>。
       </summary>
-      <param name="pointA">
-        <see cref="T:FanKit.Transformers.TransformerMatrix"/> 的第一点。
-      </param>
-      <param name="pointB">
-        <see cref="T:FanKit.Transformers.TransformerMatrix"/> 的第二点。
-      </param>
+      <param name="pointA"> 新添加的目标变换者必须包含的第一个点。 </param>
+      <param name="pointB"> 新添加的目标变换者必须包含的第二个点。 </param>
     </member>
     <member name="M:FanKit.Transformers.TransformerMatrix.#ctor(System.Single,System.Single,System.Numerics.Vector2)">
       <summary>
@@ -3335,15 +3331,15 @@
       <summary>
         初始化 <see cref="T:FanKit.Transformers.TransformerRect"/>。
       </summary>
-      <param name="pointA"> 矩形的第一点。 </param>
-      <param name="pointB"> 矩形的第二点。 </param>
+      <param name="pointA"> 新添加的矩形必须包含的第一个点。 </param>
+      <param name="pointB"> 新添加的矩形必须包含的第二个点。 </param>
     </member>
     <member name="M:FanKit.Transformers.TransformerRect.#ctor(System.Numerics.Vector2,System.Numerics.Vector2,System.Boolean,System.Boolean)">
       <summary>
         初始化 <see cref="T:FanKit.Transformers.TransformerRect"/>。
       </summary>
-      <param name="pointA"> 矩形的第一点。 </param>
-      <param name="pointB"> 矩形的第二点。 </param>
+      <param name="pointA"> 新添加的矩形必须包含的第一个点。 </param>
+      <param name="pointB"> 新添加的矩形必须包含的第二个点。 </param>
       <param name="isCenter"> 围绕中心缩放。 </param>
       <param name="isSquare"> 宽度和高度相等。 </param>
     </member>

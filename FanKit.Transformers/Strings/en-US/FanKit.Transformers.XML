@@ -2368,15 +2368,15 @@
       <summary>
         Initialize a transformer.
       </summary>
-      <param name="pointA"> The first point of transformer. </param>
-      <param name="pointB"> The second point of transformer. </param>
+      <param name="pointA"> The first point that new transformer must contain. </param>
+      <param name="pointB"> The second point that new transformer must contain. </param>
     </member>
     <member name="M:FanKit.Transformers.Transformer.#ctor(System.Numerics.Vector2,System.Numerics.Vector2,System.Boolean,System.Boolean)">
       <summary>
         Initialize a transformer.
       </summary>
-      <param name="pointA"> The first point of transformer. </param>
-      <param name="pointB"> The second point of transformer. </param>
+      <param name="pointA"> The first point that new transformer must contain. </param>
+      <param name="pointB"> The second point that new transformer must contain. </param>
       <param name="isCenter"> Scaling around the center. </param>
       <param name="isRatio"> Maintain a ratio when scaling. </param>
     </member>
@@ -3241,12 +3241,8 @@
       <summary>
         Initialize a <see cref="T:FanKit.Transformers.TransformerMatrix"/>.
       </summary>
-      <param name="pointA">
-        The first point of <see cref="T:FanKit.Transformers.TransformerMatrix"/>.
-      </param>
-      <param name="pointB">
-        The second point of <see cref="T:FanKit.Transformers.TransformerMatrix"/>.
-      </param>
+      <param name="pointA"> The first point that destination transformer must contain. </param>
+      <param name="pointB"> The second point that destination transformer must contain. </param>
     </member>
     <member name="M:FanKit.Transformers.TransformerMatrix.#ctor(System.Single,System.Single,System.Numerics.Vector2)">
       <summary>
@@ -3335,15 +3331,15 @@
       <summary>
         Initialize a <see cref="T:FanKit.Transformers.TransformerRect"/>.
       </summary>
-      <param name="pointA"> The first point of rectangle. </param>
-      <param name="pointB"> The second point of rectangle. </param>
+      <param name="pointA"> The first point that new rectangle must contain. </param>
+      <param name="pointB"> The second point that new rectangle must contain. </param>
     </member>
     <member name="M:FanKit.Transformers.TransformerRect.#ctor(System.Numerics.Vector2,System.Numerics.Vector2,System.Boolean,System.Boolean)">
       <summary>
         Initialize a <see cref="T:FanKit.Transformers.TransformerRect"/>.
       </summary>
-      <param name="pointA"> The first point of rectangle. </param>
-      <param name="pointB"> The second point of rectangle. </param>
+      <param name="pointA"> The first point that new rectangle must contain. </param>
+      <param name="pointB"> The second point that new rectangle must contain. </param>
       <param name="isCenter"> Scaling around the center. </param>
       <param name="isSquare"> Equal in width and height. </param>
     </member>

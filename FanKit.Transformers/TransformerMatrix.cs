@@ -39,8 +39,8 @@ namespace FanKit.Transformers
         /// <summary>
         /// Initialize a <see cref="TransformerMatrix"/>.
         /// </summary>
-        /// <param name="pointA"> The first point of <see cref="TransformerMatrix"/>. </param>
-        /// <param name="pointB"> The second point of <see cref="TransformerMatrix"/>. </param>
+        /// <param name="pointA"> The first point that destination transformer must contain. </param>
+        /// <param name="pointB"> The second point that destination transformer must contain. </param>
         public TransformerMatrix(Vector2 pointA, Vector2 pointB)
         {
             Transformer transformer = new Transformer(pointA, pointB);

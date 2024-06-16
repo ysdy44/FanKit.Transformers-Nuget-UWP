@@ -14,8 +14,8 @@ namespace FanKit.Transformers
         /// <summary>
         /// Initialize a <see cref="TransformerRect"/>.
         /// </summary>
-        /// <param name="pointA"> The first point of rectangle. </param>
-        /// <param name="pointB"> The second point of rectangle. </param>
+        /// <param name="pointA"> The first point that new rectangle must contain. </param>
+        /// <param name="pointB"> The second point that new rectangle must contain. </param>
         public TransformerRect(Vector2 pointA, Vector2 pointB)
         {
             float left = System.Math.Min(pointA.X, pointB.X);
@@ -54,8 +54,8 @@ namespace FanKit.Transformers
         /// <summary>
         /// Initialize a <see cref="TransformerRect"/>.
         /// </summary>
-        /// <param name="pointA"> The first point of rectangle. </param>
-        /// <param name="pointB"> The second point of rectangle. </param>
+        /// <param name="pointA"> The first point that new rectangle must contain. </param>
+        /// <param name="pointB"> The second point that new rectangle must contain. </param>
         /// <param name="isCenter"> Scaling around the center. </param>
         /// <param name="isSquare"> Equal in width and height. </param>
         public TransformerRect(Vector2 pointA, Vector2 pointB, bool isCenter, bool isSquare)

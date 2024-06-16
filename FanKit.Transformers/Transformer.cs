@@ -51,8 +51,8 @@ namespace FanKit.Transformers
         /// <summary>
         /// Initialize a transformer.
         /// </summary>
-        /// <param name="pointA"> The first point of transformer. </param>
-        /// <param name="pointB"> The second point of transformer. </param>
+        /// <param name="pointA"> The first point that new transformer must contain. </param>
+        /// <param name="pointB"> The second point that new transformer must contain. </param>
         public Transformer(Vector2 pointA, Vector2 pointB)
         {
             TransformerRect rect = new TransformerRect(pointA, pointB);
@@ -66,8 +66,8 @@ namespace FanKit.Transformers
         /// <summary>
         /// Initialize a transformer.
         /// </summary>
-        /// <param name="pointA"> The first point of transformer. </param>
-        /// <param name="pointB"> The second point of transformer. </param>
+        /// <param name="pointA"> The first point that new transformer must contain. </param>
+        /// <param name="pointB"> The second point that new transformer must contain. </param>
         /// <param name="isCenter"> Scaling around the center. </param>
         /// <param name="isRatio"> Maintain a ratio when scaling. </param>
         public Transformer(Vector2 pointA, Vector2 pointB, bool isCenter, bool isRatio)
