@@ -4,10 +4,10 @@
     {
 
         /// <summary>
-        /// Create a GeometryArrowTailType from the string.
+        /// Create a <see cref="GeometryArrowTailType"/> from the string.
         /// </summary>
         /// <param name="type"> The source string. </param>
-        /// <returns> The created type. </returns>
+        /// <returns> The created <see cref="GeometryArrowTailType"/>. </returns>
         public static GeometryArrowTailType CreateGeometryArrowTailType(string type)
         {
             switch (type)

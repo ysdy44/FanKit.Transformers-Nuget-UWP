@@ -3535,17 +3535,21 @@
     </member>
     <member name="M:FanKit.Transformers.XML.CreateNodeType(System.String)">
       <summary>
-        Create a node type from an string and XElement.
+        Create a <see cref="T:FanKit.Transformers.NodeType"/> from an string and XElement.
       </summary>
       <param name="type"> The source string. </param>
-      <returns> The created Visibility. </returns>
+      <returns>
+        The loaded <see cref="T:FanKit.Transformers.NodeType"/>.
+      </returns>
     </member>
     <member name="M:FanKit.Transformers.XML.CreateGeometryArrowTailType(System.String)">
       <summary>
-        Create a GeometryArrowTailType from the string.
+        Create a <see cref="T:FanKit.Transformers.GeometryArrowTailType"/> from the string.
       </summary>
       <param name="type"> The source string. </param>
-      <returns> The created type. </returns>
+      <returns>
+        The created <see cref="T:FanKit.Transformers.GeometryArrowTailType"/>.
+      </returns>
     </member>
     <member name="T:FanKit.Transformers.FanKit_Transformers_XamlTypeInfo.XamlMetaDataProvider">
       <summary>

@@ -4,10 +4,10 @@
     {
 
         /// <summary>
-        /// Create a node type from an string and XElement.
+        /// Create a <see cref="NodeType"/> from an string and XElement.
         /// </summary>
         /// <param name="type"> The source string. </param>
-        /// <returns> The created Visibility. </returns>
+        /// <returns> The loaded <see cref="NodeType"/>. </returns>
         public static NodeType CreateNodeType(string type)
         {
             switch (type)
