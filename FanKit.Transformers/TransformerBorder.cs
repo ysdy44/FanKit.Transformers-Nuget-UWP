@@ -40,34 +40,34 @@ namespace FanKit.Transformers
         }
 
         /// <summary>
-        /// Initialize a <see cref="Transformer"/>.
+        /// Initialize a <see cref="TransformerBorder"/>.
         /// </summary>
-        /// <param name="transformer"> The transformer. </param>
-        public TransformerBorder(ITransformerLTRB transformer)
+        /// <param name="bounds"> The bounds. </param>
+        public TransformerBorder(ITransformerLTRB bounds)
         {
             this.Left = float.MaxValue;
             this.Top = float.MaxValue;
             this.Right = float.MinValue;
             this.Bottom = float.MinValue;
 
-            this.Init(transformer.LeftTop);
-            this.Init(transformer.RightTop);
-            this.Init(transformer.RightBottom);
-            this.Init(transformer.LeftBottom);
+            this.Init(bounds.LeftTop);
+            this.Init(bounds.RightTop);
+            this.Init(bounds.RightBottom);
+            this.Init(bounds.LeftBottom);
         }
 
         /// <summary>
         /// Initialize a <see cref="TransformerBorder"/>.
         /// </summary>
-        /// <param name="transformers"> The transformers. </param>
-        public TransformerBorder(IEnumerable<Transformer> transformers)
+        /// <param name="bounds"> The bounds. </param>
+        public TransformerBorder(IEnumerable<Transformer> bounds)
         {
             this.Left = float.MaxValue;
             this.Top = float.MaxValue;
             this.Right = float.MinValue;
             this.Bottom = float.MinValue;
 
-            foreach (Transformer item in transformers)
+            foreach (Transformer item in bounds)
             {
                 this.Init(item.LeftTop);
                 this.Init(item.RightTop);
@@ -79,15 +79,15 @@ namespace FanKit.Transformers
         /// <summary>
         /// Initialize a <see cref="TransformerBorder"/>.
         /// </summary>
-        /// <param name="getActualTransformers"> The IGetActualTransformer. </param>
-        public TransformerBorder(IEnumerable<IGetActualTransformer> getActualTransformers)
+        /// <param name="bounds"> The bounds. </param>
+        public TransformerBorder(IEnumerable<IGetActualTransformer> bounds)
         {
             this.Left = float.MaxValue;
             this.Top = float.MaxValue;
             this.Right = float.MinValue;
             this.Bottom = float.MinValue;
 
-            foreach (IGetActualTransformer item in getActualTransformers)
+            foreach (IGetActualTransformer item in bounds)
             {
                 Transformer transformer = item.GetActualTransformer();
 

@@ -2688,21 +2688,21 @@
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.#ctor(FanKit.Transformers.ITransformerLTRB)">
       <summary>
-        初始化 <see cref="T:FanKit。Transformers.Transformer"/>。
+        初始化 <see cref="T:FanKit.Transformers.TransformerBorder"/>。
       </summary>
-      <param name="transformer"> 变换者。 </param>
+      <param name="bounds"> 边框。 </param>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.#ctor(System.Collections.Generic.IEnumerable{FanKit.Transformers.Transformer})">
       <summary>
         初始化 <see cref="T:FanKit.Transformers.TransformerBorder"/>。
       </summary>
-      <param name="transformers"> 变换者。 </param>
+      <param name="bounds"> 边框。 </param>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.#ctor(System.Collections.Generic.IEnumerable{FanKit.Transformers.IGetActualTransformer})">
       <summary>
         初始化 <see cref="T:FanKit.Transformers.TransformerBorder"/>。
       </summary>
-      <param name="getActualTransformers"> IGetActualTransformer。 </param>
+      <param name="bounds"> 边框。 </param>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.#ctor(System.Collections.Generic.IEnumerable{FanKit.Transformers.Node})">
       <summary>

@@ -1044,11 +1044,11 @@ M:FanKit.Transformers.TransformerBorder.#ctor(System.Single,System.Single)@Summa
 M:FanKit.Transformers.TransformerBorder.#ctor(System.Single,System.Single)@Param@width
 M:FanKit.Transformers.TransformerBorder.#ctor(System.Single,System.Single)@Param@height
 M:FanKit.Transformers.TransformerBorder.#ctor(FanKit.Transformers.ITransformerLTRB)@Summary
-M:FanKit.Transformers.TransformerBorder.#ctor(FanKit.Transformers.ITransformerLTRB)@Param@transformer
+M:FanKit.Transformers.TransformerBorder.#ctor(FanKit.Transformers.ITransformerLTRB)@Param@bounds
 M:FanKit.Transformers.TransformerBorder.#ctor(System.Collections.Generic.IEnumerable{FanKit.Transformers.Transformer})@Summary
-M:FanKit.Transformers.TransformerBorder.#ctor(System.Collections.Generic.IEnumerable{FanKit.Transformers.Transformer})@Param@transformers
+M:FanKit.Transformers.TransformerBorder.#ctor(System.Collections.Generic.IEnumerable{FanKit.Transformers.Transformer})@Param@bounds
 M:FanKit.Transformers.TransformerBorder.#ctor(System.Collections.Generic.IEnumerable{FanKit.Transformers.IGetActualTransformer})@Summary
-M:FanKit.Transformers.TransformerBorder.#ctor(System.Collections.Generic.IEnumerable{FanKit.Transformers.IGetActualTransformer})@Param@getActualTransformers
+M:FanKit.Transformers.TransformerBorder.#ctor(System.Collections.Generic.IEnumerable{FanKit.Transformers.IGetActualTransformer})@Param@bounds
 M:FanKit.Transformers.TransformerBorder.#ctor(System.Collections.Generic.IEnumerable{FanKit.Transformers.Node})@Summary
 M:FanKit.Transformers.TransformerBorder.#ctor(System.Collections.Generic.IEnumerable{FanKit.Transformers.Node})@Param@nodes
 M:FanKit.Transformers.TransformerBorder.#ctor(System.Collections.Generic.IList{FanKit.Transformers.NodeCollection})@Summary

@@ -2688,21 +2688,21 @@
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.#ctor(FanKit.Transformers.ITransformerLTRB)">
       <summary>
-        Initialize a <see cref="T:FanKit.Transformers.Transformer"/>.
+        Initialize a <see cref="T:FanKit.Transformers.TransformerBorder"/>.
       </summary>
-      <param name="transformer"> The transformer. </param>
+      <param name="bounds"> The bounds. </param>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.#ctor(System.Collections.Generic.IEnumerable{FanKit.Transformers.Transformer})">
       <summary>
         Initialize a <see cref="T:FanKit.Transformers.TransformerBorder"/>.
       </summary>
-      <param name="transformers"> The transformers. </param>
+      <param name="bounds"> The bounds. </param>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.#ctor(System.Collections.Generic.IEnumerable{FanKit.Transformers.IGetActualTransformer})">
       <summary>
         Initialize a <see cref="T:FanKit.Transformers.TransformerBorder"/>.
       </summary>
-      <param name="getActualTransformers"> The IGetActualTransformer. </param>
+      <param name="bounds"> The bounds. </param>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.#ctor(System.Collections.Generic.IEnumerable{FanKit.Transformers.Node})">
       <summary>
