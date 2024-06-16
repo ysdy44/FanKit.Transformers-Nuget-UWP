@@ -39,8 +39,8 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="drawingSession"> The drawing-session. </param>
         /// <param name="centerPoint"> The center point. </param>
-        /// <param name="radiusX"> The radius X. </param>
-        /// <param name="radiusY"> The radius Y. </param>
+        /// <param name="radiusX"> The X-axis radius of the ellipse. </param>
+        /// <param name="radiusY"> The Y-axis radius of the ellipse. </param>
         public static void DrawEllipseDodgerBlue(this CanvasDrawingSession drawingSession, Vector2 centerPoint, float radiusX, float radiusY)
         {
             drawingSession.DrawEllipse(centerPoint, radiusX, radiusY, Windows.UI.Colors.DodgerBlue);
@@ -51,8 +51,8 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="drawingSession"> The drawing-session. </param>
         /// <param name="centerPoint"> The center point. </param>
-        /// <param name="radiusX"> The radius X. </param>
-        /// <param name="radiusY"> The radius Y. </param>
+        /// <param name="radiusX"> The X-axis radius of the ellipse. </param>
+        /// <param name="radiusY"> The Y-axis radius of the ellipse. </param>
         public static void DrawThickEllipse(this CanvasDrawingSession drawingSession, Vector2 centerPoint, float radiusX, float radiusY)
         {
             drawingSession.DrawEllipse(centerPoint, radiusX, radiusY, Windows.UI.Colors.Black, 2);

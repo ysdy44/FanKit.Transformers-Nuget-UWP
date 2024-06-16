@@ -642,8 +642,8 @@
         an ellipse will be fitted.
       </summary>
       <param name="endPoint"> The end-point. </param>
-      <param name="radiusX"> The radius X. </param>
-      <param name="radiusY"> The radius Y. </param>
+      <param name="radiusX"> The X-axis radius of the arc. </param>
+      <param name="radiusY"> The Y-axis radius of the arc. </param>
       <param name="rotationAngle"> The angle of rotation. </param>
       <param name="sweepDirection"> The direction for sweep. </param>
       <param name="arcSize"> The size of arc. </param>
@@ -797,8 +797,8 @@
       </summary>
       <param name="drawingSession"> The drawing-session. </param>
       <param name="centerPoint"> The center point. </param>
-      <param name="radiusX"> The radius X. </param>
-      <param name="radiusY"> The radius Y. </param>
+      <param name="radiusX"> The X-axis radius of the ellipse. </param>
+      <param name="radiusY"> The Y-axis radius of the ellipse. </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawThickEllipse(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2,System.Single,System.Single)">
       <summary>
@@ -806,8 +806,8 @@
       </summary>
       <param name="drawingSession"> The drawing-session. </param>
       <param name="centerPoint"> The center point. </param>
-      <param name="radiusX"> The radius X. </param>
-      <param name="radiusY"> The radius Y. </param>
+      <param name="radiusX"> The X-axis radius of the ellipse. </param>
+      <param name="radiusY"> The Y-axis radius of the ellipse. </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawRectangleDodgerBlue(Microsoft.Graphics.Canvas.CanvasDrawingSession,Windows.Foundation.Rect)">
       <summary>

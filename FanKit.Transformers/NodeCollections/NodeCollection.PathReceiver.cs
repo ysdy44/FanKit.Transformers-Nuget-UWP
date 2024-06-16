@@ -140,8 +140,8 @@ namespace FanKit.Transformers
         /// an ellipse will be fitted.
         /// </summary>
         /// <param name="endPoint"> The end-point. </param>
-        /// <param name="radiusX"> The radius X. </param>
-        /// <param name="radiusY"> The radius Y. </param>
+        /// <param name="radiusX"> The X-axis radius of the arc. </param>
+        /// <param name="radiusY"> The Y-axis radius of the arc. </param>
         /// <param name="rotationAngle"> The angle of rotation. </param>
         /// <param name="sweepDirection"> The direction for sweep. </param>
         /// <param name="arcSize"> The size of arc. </param>

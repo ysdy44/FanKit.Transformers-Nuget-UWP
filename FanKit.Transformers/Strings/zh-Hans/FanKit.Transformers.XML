@@ -642,8 +642,8 @@
         椭圆将被容纳。
       </summary>
       <param name="endPoint"> 结束点。 </param>
-      <param name="radiusX"> Y半径。 </param>
-      <param name="radiusY"> X半径。 </param>
+      <param name="radiusX"> 圆弧半径（ X 轴）。 </param>
+      <param name="radiusY"> 圆弧半径（ Y 轴）。 </param>
       <param name="rotationAngle"> 旋转角度 </param>
       <param name="sweepDirection"> 扫描方向。 </param>
       <param name="arcSize"> 圆弧尺寸。 </param>
@@ -797,8 +797,8 @@
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="centerPoint"> 中心点。 </param>
-      <param name="radiusX"> 半径X。 </param>
-      <param name="radiusY"> 半径Y。 </param>
+      <param name="radiusX"> 椭圆半径（ X 轴）。 </param>
+      <param name="radiusY"> 椭圆半径（ Y 轴）。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawThickEllipse(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2,System.Single,System.Single)">
       <summary>
@@ -806,8 +806,8 @@
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="centerPoint"> 中心点。 </param>
-      <param name="radiusX"> 半径X。 </param>
-      <param name="radiusY"> 半径Y。 </param>
+      <param name="radiusX"> 椭圆半径（ X 轴）。 </param>
+      <param name="radiusY"> 椭圆半径（ Y 轴）。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawRectangleDodgerBlue(Microsoft.Graphics.Canvas.CanvasDrawingSession,Windows.Foundation.Rect)">
       <summary>
