@@ -14,9 +14,9 @@ namespace FanKit.Transformers
         /// <summary> Gets the Y-axis position of the bottom of the rectangle. </summary>
         public float Bottom { get; private set; }
 
-        /// <summary> Gets rectangle's width. </summary>
+        /// <summary> Gets the width of the rectangle. </summary>
         public float Width { get; private set; }
-        /// <summary> Gets rectangle's height. </summary>
+        /// <summary> Gets the height of the rectangle. </summary>
         public float Height { get; private set; }
 
         /// <summary> Gets the X-axis value of the center of the rectangle. </summary>

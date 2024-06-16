@@ -3384,10 +3384,10 @@
       <summary> Gets the Y-axis position of the bottom of the rectangle. </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.Width">
-      <summary> Gets rectangle's width. </summary>
+      <summary> Gets the width of the rectangle. </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.Height">
-      <summary> Gets rectangle's height. </summary>
+      <summary> Gets the height of the rectangle. </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.CenterX">
       <summary> Gets the X-axis value of the center of the rectangle. </summary>
