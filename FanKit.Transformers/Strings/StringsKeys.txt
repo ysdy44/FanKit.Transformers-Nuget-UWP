@@ -568,7 +568,7 @@ M:FanKit.Transformers.Node.Contained(System.Single,System.Single,System.Single,S
 M:FanKit.Transformers.Node.Contained(System.Single,System.Single,System.Single,System.Single)@Param@bottom
 M:FanKit.Transformers.Node.Contained(System.Single,System.Single,System.Single,System.Single)@Returns
 M:FanKit.Transformers.Node.Contained(FanKit.Transformers.TransformerRect)@Summary
-M:FanKit.Transformers.Node.Contained(FanKit.Transformers.TransformerRect)@Param@transformerRect
+M:FanKit.Transformers.Node.Contained(FanKit.Transformers.TransformerRect)@Param@rect
 M:FanKit.Transformers.Node.Contained(FanKit.Transformers.TransformerRect)@Returns
 M:FanKit.Transformers.Node.ContainsNodeMode(System.Numerics.Vector2,FanKit.Transformers.Node)@Summary
 M:FanKit.Transformers.Node.ContainsNodeMode(System.Numerics.Vector2,FanKit.Transformers.Node)@Param@point
@@ -863,7 +863,7 @@ M:FanKit.Transformers.Transformer.Contained(System.Single,System.Single,System.S
 M:FanKit.Transformers.Transformer.Contained(System.Single,System.Single,System.Single,System.Single)@Param@bottom
 M:FanKit.Transformers.Transformer.Contained(System.Single,System.Single,System.Single,System.Single)@Returns
 M:FanKit.Transformers.Transformer.Contained(FanKit.Transformers.TransformerRect)@Summary
-M:FanKit.Transformers.Transformer.Contained(FanKit.Transformers.TransformerRect)@Param@transformerRect
+M:FanKit.Transformers.Transformer.Contained(FanKit.Transformers.TransformerRect)@Param@rect
 M:FanKit.Transformers.Transformer.Contained(FanKit.Transformers.TransformerRect)@Returns
 M:FanKit.Transformers.Transformer.Controller(FanKit.Transformers.TransformerMode,System.Numerics.Vector2,System.Numerics.Vector2,FanKit.Transformers.Transformer,System.Boolean,System.Boolean,System.Boolean)@Summary
 M:FanKit.Transformers.Transformer.Controller(FanKit.Transformers.TransformerMode,System.Numerics.Vector2,System.Numerics.Vector2,FanKit.Transformers.Transformer,System.Boolean,System.Boolean,System.Boolean)@Param@mode
@@ -891,7 +891,7 @@ M:FanKit.Transformers.Transformer.#ctor(System.Single,System.Single,System.Singl
 M:FanKit.Transformers.Transformer.#ctor(System.Single,System.Single,System.Single,System.Single)@Param@right
 M:FanKit.Transformers.Transformer.#ctor(System.Single,System.Single,System.Single,System.Single)@Param@bottom
 M:FanKit.Transformers.Transformer.#ctor(FanKit.Transformers.TransformerRect)@Summary
-M:FanKit.Transformers.Transformer.#ctor(FanKit.Transformers.TransformerRect)@Param@transformerRect
+M:FanKit.Transformers.Transformer.#ctor(FanKit.Transformers.TransformerRect)@Param@rect
 M:FanKit.Transformers.Transformer.#ctor(System.Numerics.Vector2,System.Numerics.Vector2)@Summary
 M:FanKit.Transformers.Transformer.#ctor(System.Numerics.Vector2,System.Numerics.Vector2)@Param@pointA
 M:FanKit.Transformers.Transformer.#ctor(System.Numerics.Vector2,System.Numerics.Vector2)@Param@pointB

@@ -39,13 +39,13 @@ namespace FanKit.Transformers
         /// <summary>
         /// Initialize a transformer.
         /// </summary>
-        /// <param name="transformerRect"> The initial rectangle. </param>
-        public Transformer(TransformerRect transformerRect)
+        /// <param name="rect"> The bounding rectangle. </param>
+        public Transformer(TransformerRect rect)
         {
-            this.LeftTop = transformerRect.LeftTop;
-            this.RightTop = transformerRect.RightTop;
-            this.RightBottom = transformerRect.RightBottom;
-            this.LeftBottom = transformerRect.LeftBottom;
+            this.LeftTop = rect.LeftTop;
+            this.RightTop = rect.RightTop;
+            this.RightBottom = rect.RightBottom;
+            this.LeftBottom = rect.LeftBottom;
         }
 
         /// <summary>

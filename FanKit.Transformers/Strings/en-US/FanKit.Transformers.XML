@@ -1449,7 +1449,7 @@
       <summary>
         The vector was contained in a rectangle.
       </summary>
-      <param name="transformerRect"> The destination rectangle. </param>
+      <param name="rect"> The destination rectangle. </param>
       <returns> Return **true** if the vector was contained in rectangle. </returns>
     </member>
     <member name="M:FanKit.Transformers.Node.ContainsNodeMode(System.Numerics.Vector2,FanKit.Transformers.Node)">
@@ -2314,7 +2314,7 @@
       <summary>
         The transformer was contained in a rectangle.
       </summary>
-      <param name="transformerRect"> The destination rectangle. </param>
+      <param name="rect"> The destination rectangle. </param>
       <returns> Return **true** if the transformer was contained in rectangle, otherwise **false**. </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.Controller(FanKit.Transformers.TransformerMode,System.Numerics.Vector2,System.Numerics.Vector2,FanKit.Transformers.Transformer,System.Boolean,System.Boolean,System.Boolean)">
@@ -2362,7 +2362,7 @@
       <summary>
         Initialize a transformer.
       </summary>
-      <param name="transformerRect"> The initial rectangle. </param>
+      <param name="rect"> The bounding rectangle. </param>
     </member>
     <member name="M:FanKit.Transformers.Transformer.#ctor(System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>

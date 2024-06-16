@@ -1449,7 +1449,7 @@
       <summary>
         该矢量包含在一个矩形中。
       </summary>
-      <param name="transformerRect"> 目标矩形。 </param>
+      <param name="rect"> 目标矩形。 </param>
       <returns> 如果向量包含在矩形中，则返回**true**。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Node.ContainsNodeMode(System.Numerics.Vector2,FanKit.Transformers.Node)">
@@ -2314,7 +2314,7 @@
       <summary>
         变换者包含在一个矩形中。
       </summary>
-      <param name="transformerRect"> 目标矩形。 </param>
+      <param name="rect"> 目标矩形。 </param>
       <returns> 如果变换者包含在矩形中，则返回**true**，否则返回**false**。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.Controller(FanKit.Transformers.TransformerMode,System.Numerics.Vector2,System.Numerics.Vector2,FanKit.Transformers.Transformer,System.Boolean,System.Boolean,System.Boolean)">
@@ -2362,7 +2362,7 @@
       <summary>
         初始化变换者。
       </summary>
-      <param name="transformerRect"> 初始矩形。 </param>
+      <param name="rect"> 边框矩形。 </param>
     </member>
     <member name="M:FanKit.Transformers.Transformer.#ctor(System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>

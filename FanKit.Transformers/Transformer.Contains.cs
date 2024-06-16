@@ -105,9 +105,9 @@ namespace FanKit.Transformers
         /// <summary>
         /// The transformer was contained in a rectangle.
         /// </summary>
-        /// <param name="transformerRect"> The destination rectangle. </param>
+        /// <param name="rect"> The destination rectangle. </param>
         /// <returns> Return **true** if the transformer was contained in rectangle, otherwise **false**. </returns>
-        public bool Contained(TransformerRect transformerRect) => this.Contained(transformerRect.Left, transformerRect.Top, transformerRect.Right, transformerRect.Bottom);
+        public bool Contained(TransformerRect rect) => this.Contained(rect.Left, rect.Top, rect.Right, rect.Bottom);
 
     }
 }
