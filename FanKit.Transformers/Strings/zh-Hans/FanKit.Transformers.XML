@@ -346,7 +346,7 @@
     </member>
     <member name="T:FanKit.Transformers.MarqueeCompositeMode">
       <summary>
-        选取框工具使用的复合模式。
+        选区框工具使用的复合模式。
       </summary>
     </member>
     <member name="F:FanKit.Transformers.MarqueeCompositeMode.New">
@@ -366,7 +366,7 @@
     </member>
     <member name="T:FanKit.Transformers.MarqueeToolType">
       <summary>
-        选框工具的不同形状的工具。
+        选区框工具的不同形状的工具。
       </summary>
     </member>
     <member name="F:FanKit.Transformers.MarqueeToolType.None">
@@ -1156,32 +1156,32 @@
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.FillMarqueeMask(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.MarqueeToolType,FanKit.Transformers.MarqueeTool,Windows.Foundation.Rect,FanKit.Transformers.MarqueeCompositeMode)">
       <summary>
-        用选框工具填充选框面具。
+        用选区框工具填充选区。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="resourceCreator"> 资源创建者。 </param>
-      <param name="toolType"> 字幕工具类型。 </param>
-      <param name="marqueeTool"> 字幕工具。 </param>
+      <param name="toolType"> 选区框工具类型。 </param>
+      <param name="marqueeTool"> 选区框工具。 </param>
       <param name="sourceRectangle"> 源矩形。 </param>
       <param name="compositeMode"> 复合模式。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawMarqueeTool(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.MarqueeToolType,FanKit.Transformers.MarqueeTool)">
       <summary>
-        绘制选框工具。
+        绘制选区框工具。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="resourceCreator"> 资源创建者。 </param>
-      <param name="toolType"> 选取框工具类型。 </param>
-      <param name="marqueeTool"> 字幕工具。 </param>
+      <param name="toolType"> 选区框工具类型。 </param>
+      <param name="marqueeTool"> 选区框工具。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawMarqueeTool(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.MarqueeToolType,FanKit.Transformers.MarqueeTool,System.Numerics.Matrix3x2)">
       <summary>
-        绘制选框工具。
+        绘制选区框工具。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="resourceCreator"> 资源创建者。 </param>
-      <param name="toolType"> 字幕工具类型。 </param>
-      <param name="marqueeTool"> 字幕工具。 </param>
+      <param name="toolType"> 选区框工具类型。 </param>
+      <param name="marqueeTool"> 选区框工具。 </param>
       <param name="matrix"> 矩阵。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawBound(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.Transformer)">
@@ -1613,7 +1613,7 @@
     </member>
     <member name="T:FanKit.Transformers.MarqueeTool">
       <summary>
-        可以选择矩形和椭圆形的选框工具。
+        可以选择矩形和椭圆形的选区框工具。
       </summary>
     </member>
     <member name="P:FanKit.Transformers.MarqueeTool.IsStarted">
@@ -1627,7 +1627,7 @@
     </member>
     <member name="M:FanKit.Transformers.MarqueeTool.Start(System.Numerics.Vector2,FanKit.Transformers.MarqueeToolType,System.Boolean,System.Boolean)">
       <summary>
-        开始使用选取框工具。
+        开始使用选区框工具。
       </summary>
       <param name="point"> 点。 </param>
       <param name="toolType"> 工具类型。 </param>
@@ -1636,7 +1636,7 @@
     </member>
     <member name="M:FanKit.Transformers.MarqueeTool.Delta(System.Numerics.Vector2,System.Numerics.Vector2,FanKit.Transformers.MarqueeToolType,System.Boolean,System.Boolean)">
       <summary>
-        在使用选框工具。
+        在使用选区框工具。
       </summary>
       <param name="startingPoint"> 起点。 </param>
       <param name="point"> 点。 </param>
@@ -1646,18 +1646,18 @@
     </member>
     <member name="M:FanKit.Transformers.MarqueeTool.Complete(System.Numerics.Vector2,System.Numerics.Vector2,FanKit.Transformers.MarqueeToolType,System.Boolean,System.Boolean)">
       <summary>
-        最后使用选取框工具。
+        最后使用选区框工具。
       </summary>
       <param name="startingPoint"> </param>
       <param name="point"> </param>
       <param name="toolType"> </param>
       <param name="isCenter"> </param>
       <param name="isSquare"> </param>
-      <returns> 如果需要重绘字幕蒙版，则返回**true**，否则返回**false**。 </returns>
+      <returns> 如果需要重绘选区，则返回**true**，否则返回**false**。 </returns>
     </member>
     <member name="M:FanKit.Transformers.MarqueeTool.Complete(System.Numerics.Vector2,System.Numerics.Vector2,FanKit.Transformers.MarqueeToolType,System.Numerics.Matrix3x2,System.Boolean,System.Boolean)">
       <summary>
-        最后使用选取框工具。
+        最后使用选区框工具。
       </summary>
       <param name="startingPoint"> </param>
       <param name="point"> </param>
@@ -1665,7 +1665,7 @@
       <param name="matrix"> </param>
       <param name="isCenter"> </param>
       <param name="isSquare"> </param>
-      <returns> 如果选框蒙版需要重绘，则返回**true**，否则她的**false**。 </returns>
+      <returns> 如果需要重绘选区，则返回**true**，否则返回**false**。 </returns>
     </member>
     <member name="T:FanKit.Transformers.SingleHandler">
       <summary>
