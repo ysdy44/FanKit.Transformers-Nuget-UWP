@@ -476,7 +476,7 @@
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.TransformMultipliesOnlySelected(System.Numerics.Matrix3x2)">
       <summary>
-        通过给定的矩阵转换节点。
+        通过给定的矩阵变换节点。
       </summary>
       <param name="matrix"> 结果矩阵。 </param>
     </member>
@@ -1305,7 +1305,7 @@
     </member>
     <member name="T:FanKit.Transformers.IGetActualTransformer">
       <summary>
-        提供一个接口来获取转换。
+        提供一个接口来获取变换者。
       </summary>
     </member>
     <member name="M:FanKit.Transformers.IGetActualTransformer.GetActualTransformer">
@@ -1478,7 +1478,7 @@
     </member>
     <member name="M:FanKit.Transformers.Node.Controller(FanKit.Transformers.SelfControlPointMode,FanKit.Transformers.EachControlPointLengthMode,FanKit.Transformers.EachControlPointAngleMode,System.Numerics.Vector2,FanKit.Transformers.Node,System.Boolean)">
       <summary>
-        这个可以控制节点控制点的转换。
+        它控制节点控制点的变换。
       </summary>
       <param name="mode"> 模式。 </param>
       <param name="lengthMode"> 长度模式。 </param>
@@ -1558,7 +1558,7 @@
     </member>
     <member name="M:FanKit.Transformers.Node.TransformMultiplies(System.Numerics.Matrix3x2)">
       <summary>
-        通过给定的矩阵转换节点。
+        通过给定的矩阵变换节点。
       </summary>
       <param name="matrix"> 结果矩阵。 </param>
     </member>
@@ -1800,7 +1800,7 @@
     </member>
     <member name="T:FanKit.Transformers.IndicatorControl">
       <summary>
-        表示一个指示变换器中心点的控件。
+        表示一个指示变换者中心点的控件。
       </summary>
     </member>
     <member name="E:FanKit.Transformers.IndicatorControl.ModeChanged">
@@ -1965,7 +1965,7 @@
     </member>
     <member name="T:FanKit.Transformers.RemoteControl">
       <summary>
-        表示一个用来遥控变换器的控件。
+        表示一个用来遥控变换者的控件。
       </summary>
     </member>
     <member name="E:FanKit.Transformers.RemoteControl.ValueChangeStarted">
@@ -2319,7 +2319,7 @@
     </member>
     <member name="M:FanKit.Transformers.Transformer.Controller(FanKit.Transformers.TransformerMode,System.Numerics.Vector2,System.Numerics.Vector2,FanKit.Transformers.Transformer,System.Boolean,System.Boolean,System.Boolean)">
       <summary>
-        它控制变换者的转换。
+        它控制变换者的变换。
       </summary>
       <param name="mode"> 模式。 </param>
       <param name="startingPoint"> 起点。 </param>
@@ -2332,7 +2332,7 @@
     </member>
     <member name="M:FanKit.Transformers.Transformer.Controller(FanKit.Transformers.TransformerMode,System.Numerics.Vector2,System.Numerics.Vector2,FanKit.Transformers.Transformer,System.Numerics.Matrix3x2,System.Boolean,System.Boolean,System.Boolean)">
       <summary>
-        这个可以控制变换者的转换。
+        它控制变换者的变换。
       </summary>
       <param name="mode"> 模式。 </param>
       <param name="startingPoint"> 起点。 </param>
