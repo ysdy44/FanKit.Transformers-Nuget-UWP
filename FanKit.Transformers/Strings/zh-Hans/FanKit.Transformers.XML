@@ -749,7 +749,7 @@
     </member>
     <member name="T:FanKit.Transformers.NodeType">
       <summary>
-        <see cref="F:FanKit.Transformers.NodeType.Node"/> 的类型。
+        <see cref="T:FanKit.Transformers.Node"/> 的类型。
       </summary>
     </member>
     <member name="F:FanKit.Transformers.NodeType.BeginFigure">

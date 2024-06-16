@@ -749,7 +749,7 @@
     </member>
     <member name="T:FanKit.Transformers.NodeType">
       <summary>
-        Type of <see cref="F:FanKit.Transformers.NodeType.Node"/>.
+        Type of <see cref="T:FanKit.Transformers.Node"/>.
       </summary>
     </member>
     <member name="F:FanKit.Transformers.NodeType.BeginFigure">
@@ -3619,8 +3619,8 @@
       <summary>
         Get outside point in a line on a transformer.
       </summary>
-      <param name="nearPoint"> The nearest point to outside point in a line on a transformer.. </param>
-      <param name="farPoint"> The farthest point to outside point in a line on a transformer.. </param>
+      <param name="nearPoint"> The nearest point to outside point in a line on a transformer. </param>
+      <param name="farPoint"> The farthest point to outside point in a line on a transformer. </param>
       <returns> The product point. </returns>
     </member>
     <member name="M:FanKit.Math.InQuadrangle(System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2)">

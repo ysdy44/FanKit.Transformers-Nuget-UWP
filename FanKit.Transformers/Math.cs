@@ -53,8 +53,8 @@ namespace FanKit
         /// <summary>
         /// Get outside point in a line on a transformer.
         /// </summary>
-        /// <param name="nearPoint"> The nearest point to outside point in a line on a transformer.. </param>
-        /// <param name="farPoint"> The farthest point to outside point in a line on a transformer.. </param>
+        /// <param name="nearPoint"> The nearest point to outside point in a line on a transformer. </param>
+        /// <param name="farPoint"> The farthest point to outside point in a line on a transformer. </param>
         /// <returns> The product point. </returns>
         public static Vector2 GetOutsidePointInTransformer(Vector2 nearPoint, Vector2 farPoint) => nearPoint - Vector2.Normalize(farPoint - nearPoint) * Math.NodeDistanceDouble;
 
