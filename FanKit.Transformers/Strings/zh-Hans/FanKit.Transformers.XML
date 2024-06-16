@@ -2720,15 +2720,15 @@
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.Add(FanKit.Transformers.TransformerBorder,System.Numerics.Vector2)">
       <summary>
-        一起添加边界和矢量。
+        将边界和矢量相加。
       </summary>
       <param name="border"> 源边界。 </param>
-      <param name="vector"> 添加的向量。 </param>
+      <param name="vector"> 相加的向量。 </param>
       <returns> 结果边界。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.op_Addition(FanKit.Transformers.TransformerBorder,System.Numerics.Vector2)">
       <summary>
-        一起添加边界和矢量。
+        将边界和矢量相加。
       </summary>
       <param name="value1"> 源边界。 </param>
       <param name="value2"> 源向量。 </param>
