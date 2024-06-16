@@ -3287,40 +3287,40 @@
       <summary> 旋转。 </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerMode.SkewLeft">
-      <summary> 倾斜（左）。 </summary>
+      <summary> 倾斜（拖拽左侧的节点）。 </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerMode.SkewTop">
-      <summary> 倾斜（顶部）。 </summary>
+      <summary> 倾斜（拖拽顶部的节点）。 </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerMode.SkewRight">
-      <summary> 倾斜（右）。 </summary>
+      <summary> 倾斜（拖拽右侧的节点）。 </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerMode.SkewBottom">
-      <summary> 倾斜（底部）。 </summary>
+      <summary> 倾斜（拖拽底部的节点）。 </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerMode.ScaleLeft">
-      <summary> 比例（左）。 </summary>
+      <summary> 缩放（拖拽左侧的节点）。 </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerMode.ScaleTop">
-      <summary> 比例（顶部）。 </summary>
+      <summary> 缩放（拖拽顶部的节点）。 </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerMode.ScaleRight">
-      <summary> 比例（右）。 </summary>
+      <summary> 缩放（拖拽右侧的节点）。 </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerMode.ScaleBottom">
-      <summary> 比例（底部）。 </summary>
+      <summary> 缩放（拖拽底部的节点）。 </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerMode.ScaleLeftTop">
-      <summary> 比例（左上方）。 </summary>
+      <summary> 缩放（拖拽左上角的节点）。 </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerMode.ScaleRightTop">
-      <summary> 比例（右上方）。 </summary>
+      <summary> 缩放（拖拽右上角的节点）。 </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerMode.ScaleRightBottom">
-      <summary> 比例（右下方）。 </summary>
+      <summary> 缩放（拖拽右下角的节点）。 </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerMode.ScaleLeftBottom">
-      <summary> 比例尺（左下方）。 </summary>
+      <summary> 缩放（拖拽左下角的节点）。 </summary>
     </member>
     <member name="T:FanKit.Transformers.TransformerRect">
       <summary>

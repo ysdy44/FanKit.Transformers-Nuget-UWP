@@ -3287,40 +3287,40 @@
       <summary> Rotation. </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerMode.SkewLeft">
-      <summary> Skew (Left). </summary>
+      <summary> Skew (The node at the left side is dragged). </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerMode.SkewTop">
-      <summary> Skew (Top). </summary>
+      <summary> Skew (The node at the top is dragged). </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerMode.SkewRight">
-      <summary> Skew (Right). </summary>
+      <summary> Skew (The node at the right side is dragged). </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerMode.SkewBottom">
-      <summary> Skew (Bottom). </summary>
+      <summary> Skew (The node at the bottom is dragged). </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerMode.ScaleLeft">
-      <summary> Scale (Left). </summary>
+      <summary> Scale (The node at the left side is dragged). </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerMode.ScaleTop">
-      <summary> Scale (Top). </summary>
+      <summary> Scale (The node at the top is dragged). </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerMode.ScaleRight">
-      <summary> Scale (Right). </summary>
+      <summary> Scale (The node at the right side is dragged). </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerMode.ScaleBottom">
-      <summary> Scale (Bottom). </summary>
+      <summary> Scale (The node at the bottom is dragged). </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerMode.ScaleLeftTop">
-      <summary> Scale (LeftTop). </summary>
+      <summary> Scale (The node at the top-left corner is dragged). </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerMode.ScaleRightTop">
-      <summary> Scale (RightTop). </summary>
+      <summary> Scale (The node at the top-right corner is dragged). </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerMode.ScaleRightBottom">
-      <summary> Scale (RightBottom). </summary>
+      <summary> Scale (The node at the bottom-right corner is dragged). </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerMode.ScaleLeftBottom">
-      <summary> Scale (LeftBottom). </summary>
+      <summary> Scale (The node at the bottom-left corner is dragged). </summary>
     </member>
     <member name="T:FanKit.Transformers.TransformerRect">
       <summary>

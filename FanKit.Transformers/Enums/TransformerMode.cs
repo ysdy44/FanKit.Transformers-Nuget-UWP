@@ -11,31 +11,31 @@
         /// <summary> Rotation. </summary>
         Rotation,
 
-        /// <summary> Skew (Left). </summary>
+        /// <summary> Skew (The node at the left side is dragged). </summary>
         SkewLeft,
-        /// <summary> Skew (Top). </summary>
+        /// <summary> Skew (The node at the top is dragged). </summary>
         SkewTop,
-        /// <summary> Skew (Right). </summary>
+        /// <summary> Skew (The node at the right side is dragged). </summary>
         SkewRight,
-        /// <summary> Skew (Bottom). </summary>
+        /// <summary> Skew (The node at the bottom is dragged). </summary>
         SkewBottom,
 
-        /// <summary> Scale (Left). </summary>
+        /// <summary> Scale (The node at the left side is dragged). </summary>
         ScaleLeft,
-        /// <summary> Scale (Top). </summary>
+        /// <summary> Scale (The node at the top is dragged). </summary>
         ScaleTop,
-        /// <summary> Scale (Right). </summary>
+        /// <summary> Scale (The node at the right side is dragged). </summary>
         ScaleRight,
-        /// <summary> Scale (Bottom). </summary>
+        /// <summary> Scale (The node at the bottom is dragged). </summary>
         ScaleBottom,
 
-        /// <summary> Scale (LeftTop). </summary>
+        /// <summary> Scale (The node at the top-left corner is dragged). </summary>
         ScaleLeftTop,
-        /// <summary> Scale (RightTop). </summary>
+        /// <summary> Scale (The node at the top-right corner is dragged). </summary>
         ScaleRightTop,
-        /// <summary> Scale (RightBottom). </summary>
+        /// <summary> Scale (The node at the bottom-right corner is dragged). </summary>
         ScaleRightBottom,
-        /// <summary> Scale (LeftBottom). </summary>
+        /// <summary> Scale (The node at the bottom-left corner is dragged). </summary>
         ScaleLeftBottom,
     }
 }
