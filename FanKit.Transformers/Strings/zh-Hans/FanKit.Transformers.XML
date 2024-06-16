@@ -936,7 +936,7 @@
       <param name="previousImage"> 原先的图像。 </param>
       <param name="cropRect"> 图像裁剪矩形。 </param>
       <param name="shadowBlurAmount"> 投影模糊量。 </param>
-      <param name="shadowOffset"> 阴影偏移量。 </param>
+      <param name="shadowOffset"> 投影偏移。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrad(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasImage,Windows.Foundation.Rect,Windows.UI.Color,System.Single,System.Single)">
       <summary>
@@ -947,7 +947,7 @@
       <param name="cropRect"> 图像裁剪矩形。 </param>
       <param name="shadowColor"> 投影颜色。 </param>
       <param name="shadowBlurAmount"> 投影模糊量。 </param>
-      <param name="shadowOffset"> 阴影偏移量。 </param>
+      <param name="shadowOffset"> 投影偏移。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrad(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasImage,Windows.Foundation.Rect,System.Numerics.Matrix3x2,System.Single,System.Single)">
       <summary>
@@ -958,7 +958,7 @@
       <param name="cropRect"> 图像裁剪矩形。 </param>
       <param name="matrix"> 矩阵。 </param>
       <param name="shadowBlurAmount"> 投影模糊量。 </param>
-      <param name="shadowOffset"> 阴影偏移量。 </param>
+      <param name="shadowOffset"> 投影偏移。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrad(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasImage,Windows.Foundation.Rect,System.Numerics.Matrix3x2,Windows.UI.Color,System.Single,System.Single)">
       <summary>
@@ -968,9 +968,9 @@
       <param name="previousImage"> 原先的图像。 </param>
       <param name="cropRect"> 图像裁剪矩形。 </param>
       <param name="matrix"> 矩阵。 </param>
-      <param name="shadowColor"> 阴影颜色。 </param>
+      <param name="shadowColor"> 投影颜色。 </param>
       <param name="shadowBlurAmount"> 投影模糊量。 </param>
-      <param name="shadowOffset"> 阴影偏移量。 </param>
+      <param name="shadowOffset"> 投影偏移。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrad(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasImage,FanKit.Transformers.CanvasTransformer,System.Single,System.Single)">
       <summary>
@@ -980,7 +980,7 @@
       <param name="previousImage"> 原先的图像。 </param>
       <param name="canvasTransformer"> 画布变换者。 </param>
       <param name="shadowBlurAmount"> 投影模糊量。 </param>
-      <param name="shadowOffset"> 阴影偏移量 </param>
+      <param name="shadowOffset"> 投影偏移。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCard(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasImage,FanKit.Transformers.CanvasTransformer,Windows.UI.Color,System.Single,System.Single)">
       <summary>
@@ -989,9 +989,9 @@
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="previousImage"> 原先的图像。 </param>
       <param name="canvasTransformer"> 画布变换者。 </param>
-      <param name="shadowColor"> 阴影颜色。 </param>
+      <param name="shadowColor"> 投影颜色。 </param>
       <param name="shadowBlurAmount"> 投影模糊量。 </param>
-      <param name="shadowOffset"> 阴影偏移。 </param>
+      <param name="shadowOffset"> 投影偏移。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNodeCollection(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.NodeCollection)">
       <summary>
