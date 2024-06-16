@@ -2204,16 +2204,16 @@
       <returns> 提供的变换者。 </returns>
     </member>
     <member name="P:FanKit.Transformers.Transformer.LeftTop">
-      <summary> 左上方的向量。 </summary>
+      <summary> 获取或设置变换者的左上角的位置。 </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.RightTop">
-      <summary> 右上方的向量。 </summary>
+      <summary> 获取或设置变换者的右上角的位置。 </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.RightBottom">
-      <summary> 右下方的向量。 </summary>
+      <summary> 获取或设置变换者的右下角的位置。 </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.LeftBottom">
-      <summary> 左下方的向量。 </summary>
+      <summary> 获取或设置变换者的左下角的位置。 </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.Center">
       <summary> 获取变换者的中心点的位置。 </summary>
