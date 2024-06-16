@@ -926,7 +926,7 @@
       <param name="accentColor"> 强调色。 </param>
     </member>
     <member name="F:FanKit.Transformers.CanvasDrawingSessionExtensions.ShadowColor">
-      <summary> 投影的颜色。默认值（A64 R0 G0 B0）。 </summary>
+      <summary> 投影的颜色。默认 （A64 R0 G0 B0）。 </summary>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrad(Microsoft.Graphics.Canvas.CanvasDrawingSession,Microsoft.Graphics.Canvas.ICanvasImage,Windows.Foundation.Rect,System.Single,System.Single)">
       <summary>
@@ -1030,10 +1030,10 @@
       <summary> 文本的格式。 </summary>
     </member>
     <member name="F:FanKit.Transformers.CanvasDrawingSessionExtensions.AxisLine">
-      <summary> 两条线之间的距离。默认值12。 </summary>
+      <summary> 两条线之间的距离。默认 12。 </summary>
     </member>
     <member name="F:FanKit.Transformers.CanvasDrawingSessionExtensions.AxisThickLine">
-      <summary> 两条粗线之间的距离。默认值20。 </summary>
+      <summary> 两条粗线之间的距离。默认 20。 </summary>
     </member>
     <member name="F:FanKit.Transformers.CanvasDrawingSessionExtensions.AxisColor">
       <summary> 轴的颜色。默认（A255 R127 G127 B127）。 </summary>
@@ -1087,13 +1087,13 @@
       <param name="textFormat"> 文本的格式。 </param>
     </member>
     <member name="F:FanKit.Transformers.CanvasDrawingSessionExtensions.RulerWidth">
-      <summary> 标尺的宽度。默认值20。 </summary>
+      <summary> 标尺的宽度。默认 20。 </summary>
     </member>
     <member name="F:FanKit.Transformers.CanvasDrawingSessionExtensions.RulerLine">
-      <summary> 两条线之间的距离。默认值8。 </summary>
+      <summary> 两条线之间的距离。默认 8。 </summary>
     </member>
     <member name="F:FanKit.Transformers.CanvasDrawingSessionExtensions.RulerThickLine">
-      <summary> 两条粗线之间的距离。默认值12。 </summary>
+      <summary> 两条粗线之间的距离。默认 12。 </summary>
     </member>
     <member name="F:FanKit.Transformers.CanvasDrawingSessionExtensions.RulerBackgroundColor">
       <summary> 标尺背景色的颜色。默认（A64 R127 G127 B127）。 </summary>
@@ -2608,7 +2608,7 @@
       <typeparam name="D"> 目标类型。 </typeparam>
     </member>
     <member name="P:FanKit.Transformers.SnapBase`2.NodeRadius">
-      <summary> 节点的半径”。破坏12。 </summary>
+      <summary> 节点的半径。默认 12。 </summary>
     </member>
     <member name="P:FanKit.Transformers.SnapBase`2.Source">
       <summary> 获取或设置源。 </summary>
