@@ -626,7 +626,7 @@
       <summary>
         将线段添加到具有指定终点的路径。
       </summary>
-      <param name="endPoint"> 结束点。 </param>
+      <param name="endPoint"> 终点。 </param>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.AddQuadraticBezier(System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>
@@ -634,14 +634,14 @@
         并具有指定的控制点和终点。
       </summary>
       <param name="controlPoint"> 控制点。 </param>
-      <param name="endPoint"> 结束点。 </param>
+      <param name="endPoint"> 终点。 </param>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.AddArc(System.Numerics.Vector2,System.Single,System.Single,System.Single,Microsoft.Graphics.Canvas.Geometry.CanvasSweepDirection,Microsoft.Graphics.Canvas.Geometry.CanvasArcSize)">
       <summary>
         向路径添加一个圆弧，该圆弧由起点和终点指定，通过该起点和终点
         椭圆将被容纳。
       </summary>
-      <param name="endPoint"> 结束点。 </param>
+      <param name="endPoint"> 终点。 </param>
       <param name="radiusX"> 圆弧半径（ X 轴）。 </param>
       <param name="radiusY"> 圆弧半径（ Y 轴）。 </param>
       <param name="rotationAngle"> 旋转角度 </param>
@@ -655,7 +655,7 @@
       </summary>
       <param name="controlPoint1"> 第一控制点。 </param>
       <param name="controlPoint2"> 第二控制点。 </param>
-      <param name="endPoint"> 结束点。 </param>
+      <param name="endPoint"> 终点。 </param>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.SelectionOnlyOne(System.Numerics.Vector2,System.Numerics.Matrix3x2)">
       <summary>
@@ -1638,7 +1638,7 @@
       <summary>
         在使用选区框工具。
       </summary>
-      <param name="startingPoint"> 起点。 </param>
+      <param name="startingPoint"> 起始点。 </param>
       <param name="point"> 点。 </param>
       <param name="toolType"> 工具类型。 </param>
       <param name="isCenter"> 围绕中心缩放。 </param>
@@ -2203,7 +2203,7 @@
       <summary>
         创建一个固定宽高比例的变换者。
       </summary>
-      <param name="startingPoint"> 起点 </param>
+      <param name="startingPoint"> 起始点 </param>
       <param name="point"> 点。 </param>
       <param name="sizeWidth"> 源宽度。 </param>
       <param name="sizeHeight"> 源高度。 </param>
@@ -2322,7 +2322,7 @@
         它控制变换者的变换。
       </summary>
       <param name="mode"> 模式。 </param>
-      <param name="startingPoint"> 起点。 </param>
+      <param name="startingPoint"> 起始点。 </param>
       <param name="point"> 点。 </param>
       <param name="startingTransformer"> 起始变换者。 </param>
       <param name="isRatio"> 缩放时保持比例。 </param>
@@ -2335,7 +2335,7 @@
         它控制变换者的变换。
       </summary>
       <param name="mode"> 模式。 </param>
-      <param name="startingPoint"> 起点。 </param>
+      <param name="startingPoint"> 起始点。 </param>
       <param name="point"> 点。 </param>
       <param name="startingTransformer"> 起始变换者。 </param>
       <param name="inverseMatrix"> 逆矩阵。 </param>
