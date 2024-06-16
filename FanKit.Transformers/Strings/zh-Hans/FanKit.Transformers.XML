@@ -844,7 +844,7 @@
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="resourceCreator"> 资源创建者。 </param>
       <param name="dottedLineBrush"> 笔刷。 </param>
-      <param name="dottedLineImage"> 图片。 </param>
+      <param name="dottedLineImage"> 图像。 </param>
       <param name="width"> 宽度。 </param>
       <param name="height"> 高度。 </param>
       <param name="x"> X 轴距离。 </param>
@@ -933,8 +933,8 @@
         绘制卡片。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
-      <param name="previousImage"> 上一个图像。 </param>
-      <param name="cropRect"> 图片裁剪矩形。 </param>
+      <param name="previousImage"> 原先的图像。 </param>
+      <param name="cropRect"> 图像裁剪矩形。 </param>
       <param name="shadowBlurAmount"> 投影模糊量。 </param>
       <param name="shadowOffset"> 阴影偏移量。 </param>
     </member>
@@ -943,9 +943,9 @@
         绘制卡片。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
-      <param name="previousImage"> 上一个图像。 </param>
-      <param name="cropRect"> 图片裁剪矩形。 </param>
-      <param name="shadowColor"> 阴影颜色。 </param>
+      <param name="previousImage"> 原先的图像。 </param>
+      <param name="cropRect"> 图像裁剪矩形。 </param>
+      <param name="shadowColor"> 投影颜色。 </param>
       <param name="shadowBlurAmount"> 投影模糊量。 </param>
       <param name="shadowOffset"> 阴影偏移量。 </param>
     </member>
@@ -954,8 +954,8 @@
         绘制卡片。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
-      <param name="previousImage"> 上一个图像。 </param>
-      <param name="cropRect"> 图片裁剪矩形。 </param>
+      <param name="previousImage"> 原先的图像。 </param>
+      <param name="cropRect"> 图像裁剪矩形。 </param>
       <param name="matrix"> 矩阵。 </param>
       <param name="shadowBlurAmount"> 投影模糊量。 </param>
       <param name="shadowOffset"> 阴影偏移量。 </param>
@@ -965,8 +965,8 @@
         绘制卡片。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
-      <param name="previousImage"> 上一个图像。 </param>
-      <param name="cropRect"> 图片裁剪矩形。 </param>
+      <param name="previousImage"> 原先的图像。 </param>
+      <param name="cropRect"> 图像裁剪矩形。 </param>
       <param name="matrix"> 矩阵。 </param>
       <param name="shadowColor"> 阴影颜色。 </param>
       <param name="shadowBlurAmount"> 投影模糊量。 </param>
@@ -977,7 +977,7 @@
         绘制卡片。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
-      <param name="previousImage"> 上一张图片 </param>
+      <param name="previousImage"> 原先的图像。 </param>
       <param name="canvasTransformer"> 画布变换者。 </param>
       <param name="shadowBlurAmount"> 投影模糊量。 </param>
       <param name="shadowOffset"> 阴影偏移量 </param>
@@ -987,7 +987,7 @@
         绘制卡片。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
-      <param name="previousImage"> 前一张图片。 </param>
+      <param name="previousImage"> 原先的图像。 </param>
       <param name="canvasTransformer"> 画布变换者。 </param>
       <param name="shadowColor"> 阴影颜色。 </param>
       <param name="shadowBlurAmount"> 投影模糊量。 </param>
