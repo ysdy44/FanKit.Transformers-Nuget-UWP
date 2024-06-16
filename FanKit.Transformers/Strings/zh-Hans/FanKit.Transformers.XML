@@ -481,7 +481,7 @@
       <param name="matrix"> 结果矩阵。 </param>
     </member>
     <member name="P:FanKit.Transformers.NodeCollection.Index">
-      <summary> 获取或设置所选项目的索引。 </summary>
+      <summary> 获取或设置选择项的索引。 </summary>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.#ctor">
       <summary>
@@ -508,10 +508,10 @@
       <param name="geometry"> 几何形状。 </param>
     </member>
     <member name="P:FanKit.Transformers.NodeCollection.SelectedItem">
-      <summary> 获取所选项目。 </summary>
+      <summary> 获取选择项。 </summary>
     </member>
     <member name="P:FanKit.Transformers.NodeCollection.SelectedItems">
-      <summary> 获取选定的项目。 </summary>
+      <summary> 获取选择项。 </summary>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.CreateGeometry(Microsoft.Graphics.Canvas.ICanvasResourceCreator)">
       <summary>
