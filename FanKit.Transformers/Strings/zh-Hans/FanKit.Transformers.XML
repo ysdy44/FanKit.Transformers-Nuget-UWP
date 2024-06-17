@@ -1726,13 +1726,13 @@
       <summary> 发生在单指|鼠标左键|笔事件已完成。 </summary>
     </member>
     <member name="E:FanKit.Transformers.CanvasOperator.Right_Start">
-      <summary> 在鼠标右键事件开始时发生。 </summary>
+      <summary> 在鼠标右键|单指长按事件开始时发生。 </summary>
     </member>
     <member name="E:FanKit.Transformers.CanvasOperator.Right_Delta">
-      <summary> 在鼠标右键事件更改时发生。 </summary>
+      <summary> 在鼠标右键|单指长按事件更改时发生。 </summary>
     </member>
     <member name="E:FanKit.Transformers.CanvasOperator.Right_Complete">
-      <summary> 当鼠标右键事件完成时发生。 </summary>
+      <summary> 当鼠标右键|单指长按事件完成时发生。 </summary>
     </member>
     <member name="E:FanKit.Transformers.CanvasOperator.Double_Start">
       <summary> 在双指事件开始时发生。 </summary>
@@ -1745,7 +1745,7 @@
     </member>
     <member name="E:FanKit.Transformers.CanvasOperator.Wheel_Changed">
       <summary>
-        当指针轮的增量值更改时发生。
+        当指针滚轮的增量值更改时发生。
       </summary>
     </member>
     <member name="T:FanKit.Transformers.ICacheTransform">
