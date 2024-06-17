@@ -3,7 +3,7 @@
 namespace FanKit.Transformers
 {
     /// <summary>
-    /// A interface provides vectors at LeftTop RightTop RightBottom LeftBottom. 
+    /// A interface provides four positions (top-left, top-right, bottom-right, bottom-left corners).
     /// </summary>
     public interface ITransformerLTRB
     {

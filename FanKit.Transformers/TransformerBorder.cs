@@ -4,8 +4,7 @@ using System.Numerics;
 namespace FanKit.Transformers
 {
     /// <summary>
-    /// Represents a maximum boundary in a plane right-angle coordinate system,
-    /// including the left right top bottom and center.
+    /// Represents a maximum boundary in a plane right-angle coordinate system.
     /// </summary>
     [System.Runtime.InteropServices.StructLayout(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct TransformerBorder : ITransformerWH //, ITransformerLTRB

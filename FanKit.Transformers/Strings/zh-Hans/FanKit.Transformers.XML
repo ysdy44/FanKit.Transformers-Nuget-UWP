@@ -1350,7 +1350,7 @@
     </member>
     <member name="T:FanKit.Transformers.ITransformerLTRB">
       <summary>
-        一个接口在左上方，右上方，右下方，左下方处提供矢量。
+        提供四个位置（左上，右上，右下，左下角）的接口。
       </summary>
     </member>
     <member name="P:FanKit.Transformers.ITransformerLTRB.LeftTop">
@@ -2196,7 +2196,7 @@
     </member>
     <member name="T:FanKit.Transformers.Transformer">
       <summary>
-        封装四个向量值(LeftTop，RightTop，RightBottom，LeftBottom）的结构。
+        封装四个位置（左上，右上，右下，左下角）的结构体。
       </summary>
     </member>
     <member name="M:FanKit.Transformers.Transformer.CreateWithAspectRatio(System.Numerics.Vector2,System.Numerics.Vector2,System.Single,System.Single)">
@@ -2666,8 +2666,7 @@
     </member>
     <member name="T:FanKit.Transformers.TransformerBorder">
       <summary>
-        表示平面直角坐标系中的最大边界，
-        包括左上右下角和中点。
+        表示平面直角坐标系中的最大边界。
       </summary>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.#ctor(System.Single,System.Single,System.Single,System.Single)">

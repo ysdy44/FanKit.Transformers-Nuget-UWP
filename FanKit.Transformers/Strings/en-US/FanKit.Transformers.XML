@@ -1350,7 +1350,7 @@
     </member>
     <member name="T:FanKit.Transformers.ITransformerLTRB">
       <summary>
-        A interface provides vectors at LeftTop RightTop RightBottom LeftBottom.
+        A interface provides four positions (top-left, top-right, bottom-right, bottom-left corners).
       </summary>
     </member>
     <member name="P:FanKit.Transformers.ITransformerLTRB.LeftTop">
@@ -2196,7 +2196,7 @@
     </member>
     <member name="T:FanKit.Transformers.Transformer">
       <summary>
-        A structure encapsulating four vector values (LeftTop, RightTop, RightBottom, LeftBottom).
+        A structure encapsulating four positions (top-left, top-right, bottom-right, bottom-left corners).
       </summary>
     </member>
     <member name="M:FanKit.Transformers.Transformer.CreateWithAspectRatio(System.Numerics.Vector2,System.Numerics.Vector2,System.Single,System.Single)">
@@ -2666,8 +2666,7 @@
     </member>
     <member name="T:FanKit.Transformers.TransformerBorder">
       <summary>
-        Represents a maximum boundary in a plane right-angle coordinate system,
-        including the left right top bottom and center.
+        Represents a maximum boundary in a plane right-angle coordinate system.
       </summary>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.#ctor(System.Single,System.Single,System.Single,System.Single)">
