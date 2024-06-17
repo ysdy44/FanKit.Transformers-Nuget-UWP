@@ -1669,7 +1669,7 @@
     </member>
     <member name="T:FanKit.Transformers.SingleHandler">
       <summary>
-        表示对 Single_Start，Single_Delta，Single_Complete 事件的处理的方法。
+        表示处理 <see cref="E:FanKit.Transformers.CanvasOperator.Single_Start"/> ， <see cref="E:FanKit.Transformers.CanvasOperator.Single_Delta"/> ， <see cref="E:FanKit.Transformers.CanvasOperator.Single_Complete"/>  事件的方法。
       </summary>
       <param name="point"> 触控点的位置。 </param>
       <param name="device"> 当前输入设备。 </param>
@@ -1677,7 +1677,7 @@
     </member>
     <member name="T:FanKit.Transformers.RightHandler">
       <summary>
-        表示处理 Right_Start，Right_Delta，Right_Complete 事件的方法。
+        表示处理 <see cref="E:FanKit.Transformers.CanvasOperator.Right_Start"/> ， <see cref="E:FanKit.Transformers.CanvasOperator.Right_Delta"/> ， <see cref="E:FanKit.Transformers.CanvasOperator.Right_Complete"/>  事件的方法。
       </summary>
       <param name="point"> 鼠标指针的位置。 </param>
       <param name="isHolding">
@@ -1804,7 +1804,9 @@
       </summary>
     </member>
     <member name="E:FanKit.Transformers.IndicatorControl.ModeChanged">
-      <summary> 单击不同的小方块以触发**ModeChanged**事件。 </summary>
+      <summary>
+        单击不同的小方块以触发 <see cref="E:FanKit.Transformers.IndicatorControl.ModeChanged"/> 事件。 
+      </summary>
     </member>
     <member name="P:FanKit.Transformers.IndicatorControl.Mode">
       <summary>
@@ -1889,7 +1891,7 @@
     </member>
     <member name="T:FanKit.Transformers.IndicatorModeHandler">
       <summary>
-        表示对IndicatorModeChange事件的处理的方法。
+        表示对 <see cref="E:FanKit.Transformers.IndicatorControl.ModeChanged"/> 事件的处理的方法。
       </summary>
       <param name="sender"> 事件处理程序附加到的对象。 </param>
       <param name="mode"> 指示器模式。 </param>
@@ -1978,7 +1980,9 @@
       <summary> 在值改变完成时发生。 </summary>
     </member>
     <member name="E:FanKit.Transformers.RemoteControl.Moved">
-      <summary> 单击周围的按钮以触发**Moved**事件。 </summary>
+      <summary>
+        单击周围的按钮以触发 <see cref="E:FanKit.Transformers.RemoteControl.Moved"/> 事件。
+      </summary>
     </member>
     <member name="P:FanKit.Transformers.RemoteControl.RemoteCenter">
       <summary>

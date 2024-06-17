@@ -20,7 +20,7 @@ namespace FanKit.Transformers
         public event RemoteVectorHandler ValueChangeCompleted;
 
 
-        /// <summary> Click the button around to trigger **Moved** event. </summary>
+        /// <summary> Click the button around to trigger <see cref="Moved"/> event. </summary>
         public event RemoteVectorHandler Moved;
 
 

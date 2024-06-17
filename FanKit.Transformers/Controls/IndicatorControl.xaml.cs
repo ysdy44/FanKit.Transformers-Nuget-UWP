@@ -12,7 +12,7 @@ namespace FanKit.Transformers
     public sealed partial class IndicatorControl : UserControl
     {
         //@Delegate
-        /// <summary> Click on different small squares to trigger **ModeChanged** event. </summary>
+        /// <summary> Click on different small squares to trigger <see cref="ModeChanged"/> event. </summary>
         public event IndicatorModeHandler ModeChanged;
 
 

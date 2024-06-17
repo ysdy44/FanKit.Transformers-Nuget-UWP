@@ -1804,7 +1804,9 @@
       </summary>
     </member>
     <member name="E:FanKit.Transformers.IndicatorControl.ModeChanged">
-      <summary> Click on different small squares to trigger **ModeChanged** event. </summary>
+      <summary>
+        Click on different small squares to trigger <see cref="E:FanKit.Transformers.IndicatorControl.ModeChanged"/> event.
+      </summary>
     </member>
     <member name="P:FanKit.Transformers.IndicatorControl.Mode">
       <summary>
@@ -1889,7 +1891,7 @@
     </member>
     <member name="T:FanKit.Transformers.IndicatorModeHandler">
       <summary>
-        Method that represents the handling of the IndicatorModeChange event.
+        Method that represents the handling of the <see cref="E:FanKit.Transformers.IndicatorControl.ModeChanged"/> event.
       </summary>
       <param name="sender"> The object to which the event handler is attached. </param>
       <param name="mode"> The indicator-mode. </param>
@@ -1978,7 +1980,9 @@
       <summary> Occurs when the value change is complete. </summary>
     </member>
     <member name="E:FanKit.Transformers.RemoteControl.Moved">
-      <summary> Click the button around to trigger **Moved** event. </summary>
+      <summary>
+        Click the button around to trigger <see cref="E:FanKit.Transformers.RemoteControl.Moved"/> event.
+      </summary>
     </member>
     <member name="P:FanKit.Transformers.RemoteControl.RemoteCenter">
       <summary>
