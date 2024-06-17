@@ -192,7 +192,7 @@
       </summary>
       <param name="centerPoint"> 中心点。 </param>
       <param name="zoomInScale"> 比例尺。 </param>
-      <param name="maximum"> 最大比例。 </param>
+      <param name="maximum"> 最大缩放。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasTransformer.ZoomOut(System.Numerics.Vector2,System.Single,System.Single)">
       <summary>
@@ -200,15 +200,15 @@
       </summary>
       <param name="centerPoint"> 中心点。 </param>
       <param name="zoomOutScale"> 比例尺。 </param>
-      <param name="minimum"> 最小比例尺。 </param>
+      <param name="minimum"> 最小缩放。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasTransformer.TransitionSource(System.Numerics.Vector2,System.Single,System.Single)">
       <summary>
         设置源矩形。
       </summary>
-      <param name="postion"> 源位置。 </param>
+      <param name="postion"> 源的位置。 </param>
       <param name="width"> 源的宽度。 </param>
-      <param name="height"> 源高度。 </param>
+      <param name="height"> 源的高度。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasTransformer.TransitionSource(Windows.Foundation.Rect)">
       <summary>
@@ -219,7 +219,7 @@
       <summary>
         设置目标区域。
       </summary>
-      <param name="postion"> 目标位置。 </param>
+      <param name="postion"> 目标的位置。 </param>
       <param name="width"> 目标的宽度。 </param>
       <param name="height"> 目标的高度。 </param>
     </member>
@@ -583,7 +583,7 @@
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.SmoothCheckedNodes(FanKit.Transformers.NodeCollection)">
       <summary>
-        平滑地所有选中的节点。
+        平滑所有选中的节点。
       </summary>
       <param name="nodeCollection">
         源 <see cref="T:FanKit.Transformers.NodeCollection"/>。
@@ -1516,7 +1516,7 @@
       </summary>
     </member>
     <member name="F:FanKit.Transformers.Node.RightControlPoint">
-      <summary> 右边的指定控制点。 </summary>
+      <summary> 右侧的指定控制点。 </summary>
     </member>
     <member name="P:FanKit.Transformers.Node.StartingRightControlPoint">
       <summary>
@@ -2636,13 +2636,13 @@
     </member>
     <member name="M:FanKit.Transformers.SnapBase`2.Draw(Microsoft.Graphics.Canvas.CanvasDrawingSession)">
       <summary>
-        在绘制画布时发生。
+        在画布绘制时发生。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
     </member>
     <member name="M:FanKit.Transformers.SnapBase`2.Draw(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Matrix3x2)">
       <summary>
-        在绘制画布时发生。
+        在画布绘制时发生。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="matrix"> 矩阵。 </param>
