@@ -613,7 +613,7 @@
       <summary>
         Starts a new figure at the specified point, with the specified figure fill option.
       </summary>
-      <param name="startPoint"> The start-point. </param>
+      <param name="startPoint"> The start point. </param>
       <param name="figureFill"> The figure-fill. </param>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.EndFigure(Microsoft.Graphics.Canvas.Geometry.CanvasFigureLoop)">
@@ -626,7 +626,7 @@
       <summary>
         Adds a line segment to the path, with the specified end point.
       </summary>
-      <param name="endPoint"> The end-point. </param>
+      <param name="endPoint"> The end point. </param>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.AddQuadraticBezier(System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>
@@ -634,14 +634,14 @@
         and has the specified control point and end point.
       </summary>
       <param name="controlPoint"> The control-point. </param>
-      <param name="endPoint"> The end-point. </param>
+      <param name="endPoint"> The end point. </param>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.AddArc(System.Numerics.Vector2,System.Single,System.Single,System.Single,Microsoft.Graphics.Canvas.Geometry.CanvasSweepDirection,Microsoft.Graphics.Canvas.Geometry.CanvasArcSize)">
       <summary>
         Adds a single arc to the path, specified by start and end points through which
         an ellipse will be fitted.
       </summary>
-      <param name="endPoint"> The end-point. </param>
+      <param name="endPoint"> The end point. </param>
       <param name="radiusX"> The X-axis radius of the arc. </param>
       <param name="radiusY"> The Y-axis radius of the arc. </param>
       <param name="rotationAngle"> The angle of rotation. </param>
@@ -655,7 +655,7 @@
       </summary>
       <param name="controlPoint1"> The first control-point. </param>
       <param name="controlPoint2"> The sencond control-point. </param>
-      <param name="endPoint"> The end-point. </param>
+      <param name="endPoint"> The end point. </param>
     </member>
     <member name="M:FanKit.Transformers.NodeCollection.SelectionOnlyOne(System.Numerics.Vector2,System.Numerics.Matrix3x2)">
       <summary>
@@ -2203,7 +2203,7 @@
       <summary>
         Create a transformer of aspect ratio fixed.
       </summary>
-      <param name="startingPoint"> The starting-point </param>
+      <param name="startingPoint"> The starting point. </param>
       <param name="point"> The point. </param>
       <param name="sizeWidth"> The source width. </param>
       <param name="sizeHeight"> The source height. </param>

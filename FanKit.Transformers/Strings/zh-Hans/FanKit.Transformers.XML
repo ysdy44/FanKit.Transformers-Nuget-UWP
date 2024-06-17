@@ -2203,7 +2203,7 @@
       <summary>
         创建一个固定宽高比例的变换者。
       </summary>
-      <param name="startingPoint"> 起始点 </param>
+      <param name="startingPoint"> 起始点。 </param>
       <param name="point"> 点。 </param>
       <param name="sizeWidth"> 源宽度。 </param>
       <param name="sizeHeight"> 源高度。 </param>
@@ -2560,7 +2560,7 @@
     </member>
     <member name="M:FanKit.Transformers.Transformer.TransformY(System.Single,FanKit.Transformers.IndicatorMode)">
       <summary>
-        ÿ
+        Y
       </summary>
       <param name="value"> 目标值。 </param>
       <param name="indicatorMode"> 指示器模式。 </param>
@@ -2808,7 +2808,7 @@
       <summary>
         设置 <see cref="F:FanKit.Transformers.SnapBase`2.XSnap"/>。
       </summary>
-      <param name="moveX"> 移动X。 </param>
+      <param name="moveX"> 移动 X。 </param>
       <param name="destination"> 目标。 </param>
       <returns>
         <see cref="F:FanKit.Transformers.SnapBase`2.IsXSnap"/>
