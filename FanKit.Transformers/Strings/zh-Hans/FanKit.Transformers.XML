@@ -181,7 +181,7 @@
     </member>
     <member name="M:FanKit.Transformers.CanvasTransformer.Pinch(System.Numerics.Vector2,System.Single)">
       <summary>
-        捏住屏幕以更改位置和比例（缓存捏合事件首先发生）。
+        捏住屏幕以改变位置和比例（缓存捏合事件首先发生）。
       </summary>
       <param name="centerPoint"> 中心点。 </param>
       <param name="space"> 手指之间的间距。 </param>
@@ -1571,10 +1571,10 @@
       <summary> 正常。 </summary>
     </member>
     <member name="F:FanKit.Transformers.SelfControlPointMode.Angle">
-      <summary> 不更改角度。 </summary>
+      <summary> 不改变角度。 </summary>
     </member>
     <member name="F:FanKit.Transformers.SelfControlPointMode.Length">
-      <summary> 不更改长度。 </summary>
+      <summary> 不改变长度。 </summary>
     </member>
     <member name="F:FanKit.Transformers.SelfControlPointMode.Disable">
       <summary> 禁用控制点。 </summary>
@@ -1738,14 +1738,14 @@
       <summary> 在双指事件开始时发生。 </summary>
     </member>
     <member name="E:FanKit.Transformers.CanvasOperator.Double_Delta">
-      <summary> 当更改双指事件时发生。 </summary>
+      <summary> 当双指事件更改时发生。 </summary>
     </member>
     <member name="E:FanKit.Transformers.CanvasOperator.Double_Complete">
       <summary> 当双指事件完成时发生。 </summary>
     </member>
     <member name="E:FanKit.Transformers.CanvasOperator.Wheel_Changed">
       <summary>
-        当指针滚轮的增量值更改时发生。
+        当指针滚轮的增量值改变时发生。
       </summary>
     </member>
     <member name="T:FanKit.Transformers.ICacheTransform">
@@ -1969,13 +1969,13 @@
       </summary>
     </member>
     <member name="E:FanKit.Transformers.RemoteControl.ValueChangeStarted">
-      <summary> 在值更改开始时发生。 </summary>
+      <summary> 在值改变开始时发生。 </summary>
     </member>
     <member name="E:FanKit.Transformers.RemoteControl.ValueChangeDelta">
-      <summary> 在值更改时发生。 </summary>
+      <summary> 在值改变更改时发生。 </summary>
     </member>
     <member name="E:FanKit.Transformers.RemoteControl.ValueChangeCompleted">
-      <summary> 在值更改完成时发生。 </summary>
+      <summary> 在值改变完成时发生。 </summary>
     </member>
     <member name="E:FanKit.Transformers.RemoteControl.Moved">
       <summary> 单击周围的按钮以触发**Moved**事件。 </summary>
