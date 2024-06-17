@@ -1686,7 +1686,7 @@
     </member>
     <member name="T:FanKit.Transformers.DoubleHandler">
       <summary>
-        表示处理Double_Start，Double_Delta，Double_Complete事件的方法。
+        表示处理 <see cref="E:FanKit.Transformers.CanvasOperator.Double_Start"/> ， <see cref="E:FanKit.Transformers.CanvasOperator.Double_Delta"/> ， <see cref="E:FanKit.Transformers.CanvasOperator.Double_Complete"/>  事件的方法。
       </summary>
       <param name="center"> 两只手指的中心。 </param>
       <param name="space"> 双指之间的间距。 </param>
@@ -1713,7 +1713,7 @@
     </member>
     <member name="F:FanKit.Transformers.CanvasOperator.DestinationControlProperty">
       <summary>
-        Identifies the <see cref="P:FanKit.Transformers.CanvasOperator.DestinationControl"/> dependency property.
+        标识 <see cref="P:FanKit.Transformers.CanvasOperator.DestinationControl"/> 依赖属性。
       </summary>
     </member>
     <member name="E:FanKit.Transformers.CanvasOperator.Single_Start">
@@ -1785,12 +1785,12 @@
     </member>
     <member name="M:FanKit.Transformers.Icon.InitializeComponent">
       <summary>
-        InitializeComponent()
+        初始化组件()
       </summary>
     </member>
     <member name="M:FanKit.Transformers.Icon.Connect(System.Int32,System.Object)">
       <summary>
-        Connect()
+        连接()
       </summary>
     </member>
     <member name="M:FanKit.Transformers.Icon.GetBindingConnector(System.Int32,System.Object)">
@@ -1821,12 +1821,12 @@
     </member>
     <member name="M:FanKit.Transformers.IndicatorControl.InitializeComponent">
       <summary>
-        InitializeComponent()
+        初始化组件()
       </summary>
     </member>
     <member name="M:FanKit.Transformers.IndicatorControl.Connect(System.Int32,System.Object)">
       <summary>
-        Connect()
+        连接()
       </summary>
     </member>
     <member name="M:FanKit.Transformers.IndicatorControl.GetBindingConnector(System.Int32,System.Object)">
@@ -1992,12 +1992,12 @@
     </member>
     <member name="M:FanKit.Transformers.RemoteControl.InitializeComponent">
       <summary>
-        InitializeComponent()
+        初始化组件()
       </summary>
     </member>
     <member name="M:FanKit.Transformers.RemoteControl.Connect(System.Int32,System.Object)">
       <summary>
-        Connect()
+        连接()
       </summary>
     </member>
     <member name="M:FanKit.Transformers.RemoteControl.GetBindingConnector(System.Int32,System.Object)">
@@ -3518,26 +3518,26 @@
     </member>
     <member name="M:FanKit.Transformers.XML.SaveVector2(System.String,System.Numerics.Vector2)">
       <summary>
-        Saves the entire <see cref="T:System.Numerics.Vector2"/> to a XElement.
+        将整个 <see cref="T:System.Numerics.Vector2"/> 保存到 XElement。
       </summary>
-      <param name="elementName"> The element name. </param>
-      <param name="vector"> The source data. </param>
-      <returns> The saved XElement. </returns>
+      <param name="elementName"> 元素名称。 </param>
+      <param name="vector"> 源数据。 </param>
+      <returns> 保存的 XElement。 </returns>
     </member>
     <member name="M:FanKit.Transformers.XML.LoadVector2(System.Xml.Linq.XElement)">
       <summary>
-        Loads a <see cref="T:System.Numerics.Vector2"/> from an XElement.
+        从 XElement 加载 <see cref="T:System.Numerics.Vector2"/>。
       </summary>
-      <param name="element"> The source XElement. </param>
+      <param name="element"> 源 XElement。 </param>
       <returns>
-        The loaded <see cref="T:System.Numerics.Vector2"/>.
+        已加载的 <see cref="T:System.Numerics.Vector2"/> 。
       </returns>
     </member>
     <member name="M:FanKit.Transformers.XML.CreateNodeType(System.String)">
       <summary>
         Create a <see cref="T:FanKit.Transformers.NodeType"/> from an string and XElement.
       </summary>
-      <param name="type"> The source string. </param>
+      <param name="type"> 起始字符串。 </param>
       <returns>
         The loaded <see cref="T:FanKit.Transformers.NodeType"/>.
       </returns>
@@ -3546,7 +3546,7 @@
       <summary>
         Create a <see cref="T:FanKit.Transformers.GeometryArrowTailType"/> from the string.
       </summary>
-      <param name="type"> The source string. </param>
+      <param name="type"> 起始字符串。 </param>
       <returns>
         The created <see cref="T:FanKit.Transformers.GeometryArrowTailType"/>.
       </returns>
