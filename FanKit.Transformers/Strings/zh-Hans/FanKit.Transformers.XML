@@ -391,12 +391,12 @@
     </member>
     <member name="P:FanKit.Transformers.NodeBorder.Mode">
       <summary>
-        删除模式。
+        移除模式。
       </summary>
     </member>
     <member name="M:FanKit.Transformers.NodeBorder.GetRemoveMode">
       <summary>
-        获取删除模式，设置 <see cref="P:FanKit.Transformers.NodeBorder.Mode"/>。
+        获取移除模式，设置 <see cref="P:FanKit.Transformers.NodeBorder.Mode"/>。
       </summary>
       <returns> 产生的模式。 </returns>
     </member>
@@ -426,7 +426,7 @@
     </member>
     <member name="M:FanKit.Transformers.NodeBorderCollection.GetRemoveMode">
       <summary>
-        获取删除模式。
+        获取移除模式。
       </summary>
       <returns> 产生的模式。 </returns>
     </member>
@@ -722,10 +722,10 @@
       <summary> 正常。 </summary>
     </member>
     <member name="F:FanKit.Transformers.NodeRemoveMode.RemovedNodes">
-      <summary> 删除所有选中的节点。 </summary>
+      <summary> 移除所有选中的节点。 </summary>
     </member>
     <member name="F:FanKit.Transformers.NodeRemoveMode.RemoveCurve">
-      <summary> 删除曲线。 </summary>
+      <summary> 移除曲线。 </summary>
     </member>
     <member name="T:FanKit.Transformers.NodeMode">
       <summary>
