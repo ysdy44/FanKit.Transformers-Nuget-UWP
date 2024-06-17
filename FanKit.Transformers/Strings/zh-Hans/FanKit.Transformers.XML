@@ -1648,23 +1648,23 @@
       <summary>
         最后使用选区框工具。
       </summary>
-      <param name="startingPoint"> </param>
-      <param name="point"> </param>
-      <param name="toolType"> </param>
-      <param name="isCenter"> </param>
-      <param name="isSquare"> </param>
+      <param name="startingPoint"> 起始点。 </param>
+      <param name="point"> 点。 </param>
+      <param name="toolType"> 工具类型。 </param>
+      <param name="isCenter"> 围绕中心缩放。 </param>
+      <param name="isSquare"> 宽度和高度相等。 </param>
       <returns> 如果需要重绘选区，则返回**true**，否则返回**false**。 </returns>
     </member>
     <member name="M:FanKit.Transformers.MarqueeTool.Complete(System.Numerics.Vector2,System.Numerics.Vector2,FanKit.Transformers.MarqueeToolType,System.Numerics.Matrix3x2,System.Boolean,System.Boolean)">
       <summary>
         最后使用选区框工具。
       </summary>
-      <param name="startingPoint"> </param>
-      <param name="point"> </param>
-      <param name="toolType"> </param>
-      <param name="matrix"> </param>
-      <param name="isCenter"> </param>
-      <param name="isSquare"> </param>
+      <param name="startingPoint"> 起始点。 </param>
+      <param name="point"> 点。 </param>
+      <param name="toolType"> 工具类型。 </param>
+      <param name="matrix"> 矩阵。 </param>
+      <param name="isCenter"> 围绕中心缩放。 </param>
+      <param name="isSquare"> 宽度和高度相等。 </param>
       <returns> 如果需要重绘选区，则返回**true**，否则返回**false**。 </returns>
     </member>
     <member name="T:FanKit.Transformers.SingleHandler">
@@ -3376,7 +3376,7 @@
         转为几何形状。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
-      <returns> </returns>
+      <returns> 产生的几何形状。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerRect.ToEllipse(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Matrix3x2)">
       <summary>
@@ -3384,7 +3384,7 @@
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
       <param name="matrix"> 矩阵。 </param>
-      <returns> </returns>
+      <returns> 产生的几何形状。 </returns>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.Left">
       <summary> 获取矩形的左侧的 X 轴值。 </summary>
