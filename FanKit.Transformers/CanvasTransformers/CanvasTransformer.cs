@@ -21,24 +21,24 @@ namespace FanKit.Transformers
     public partial class CanvasTransformer
     {
 
-        /// <summary> <see cref="CanvasTransformer"/>'s width. </summary>
+        /// <summary> Gets or sets the width of canvas. </summary>
         public int Width { get; set; } = 1000;
-        /// <summary> <see cref="CanvasTransformer"/>'s height. </summary>
+        /// <summary> Gets or sets the height of canvas. </summary>
         public int Height { get; set; } = 1000;
 
-        /// <summary> <see cref="CanvasTransformer"/>'s scale. </summary>
+        /// <summary> Gets or sets the scalar value of canvas. </summary>
         public float Scale { get; set; } = 1.0f;
 
-        /// <summary> CanvasControl's width. </summary>
+        /// <summary> Gets or sets the width of control. </summary>
         public float ControlWidth { get; set; } = 1000.0f;
-        /// <summary> CanvasControl's height. </summary>
+        /// <summary> Gets or sets the height of control. </summary>
         public float ControlHeight { get; set; } = 1000.0f;
-        /// <summary> CanvasControl's center. </summary>
+        /// <summary> Gets the position of center of control. </summary>
         public Vector2 ControlCenter => new Vector2(this.ControlWidth / 2, this.ControlHeight / 2);
 
-        /// <summary> <see cref="CanvasTransformer"/>'s translation. </summary>
+        /// <summary> Gets or sets the translation component of this canvas. </summary>
         public Vector2 Position { get; set; } = new Vector2(0.0f, 0.0f);
-        /// <summary> <see cref="CanvasTransformer"/>'s rotation. </summary>
+        /// <summary> Gets or sets the rotation value of canvas. </summary>
         public float Radian { get; set; } = 0.0f;
 
 
@@ -55,7 +55,7 @@ namespace FanKit.Transformers
         #region Size
 
 
-        /// <summary> <see cref="CanvasTransformer.ControlWidth"/> and <see cref="CanvasTransformer.ControlHeight"/>'s setter. </summary>
+        /// <summary> Gets the size of control. </summary>
         public Size Size
         {
             set
@@ -64,7 +64,7 @@ namespace FanKit.Transformers
                 this.ControlHeight = (float)value.Height;
             }
         }
-        /// <summary> <see cref="CanvasTransformer.Width"/> and <see cref="CanvasTransformer.Height"/>'s setter. </summary>
+        /// <summary> Gets the size of canvas. </summary>
         public BitmapSize BitmapSize
         {
             set

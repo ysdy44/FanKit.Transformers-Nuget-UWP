@@ -21,38 +21,28 @@
       </summary>
     </member>
     <member name="P:FanKit.Transformers.CanvasTransformer.Width">
-      <summary>
-        <see cref="T:FanKit.Transformers.CanvasTransformer"/> 的宽度。
-      </summary>
+      <summary> 获取或设置画布的宽度。 </summary>
     </member>
     <member name="P:FanKit.Transformers.CanvasTransformer.Height">
-      <summary>
-        <see cref="T:FanKit.Transformers.CanvasTransformer"/> 的高度。
-      </summary>
+      <summary> 获取或设置画布的高度。 </summary>
     </member>
     <member name="P:FanKit.Transformers.CanvasTransformer.Scale">
-      <summary>
-        <see cref="T:FanKit.Transformers.CanvasTransformer"/> 的比例尺。
-      </summary>
+      <summary> 获取或设置画布的缩放值。 </summary>
     </member>
     <member name="P:FanKit.Transformers.CanvasTransformer.ControlWidth">
-      <summary> 画布控件的宽度。 </summary>
+      <summary> 获取或设置控件的宽度。 </summary>
     </member>
     <member name="P:FanKit.Transformers.CanvasTransformer.ControlHeight">
-      <summary> 画布控件的高度。 </summary>
+      <summary> 获取或设置控件的高度。 </summary>
     </member>
     <member name="P:FanKit.Transformers.CanvasTransformer.ControlCenter">
-      <summary> 画布控件的中心。 </summary>
+      <summary> 获取控件的中心点的位置。 </summary>
     </member>
     <member name="P:FanKit.Transformers.CanvasTransformer.Position">
-      <summary>
-        <see cref="T:FanKit.Transformers.CanvasTransformer"/> 的转移。
-      </summary>
+      <summary> 获取或设置画布的平移分量。 </summary>
     </member>
     <member name="P:FanKit.Transformers.CanvasTransformer.Radian">
-      <summary>
-        <see cref="T:FanKit.Transformers.CanvasTransformer"/> 的旋转。
-      </summary>
+      <summary> 获取或设置画布的旋转值。 </summary>
     </member>
     <member name="M:FanKit.Transformers.CanvasTransformer.#ctor">
       <summary>
@@ -60,14 +50,10 @@
       </summary>
     </member>
     <member name="P:FanKit.Transformers.CanvasTransformer.Size">
-      <summary>
-        <see cref="P:FanKit.Transformers.CanvasTransformer.ControlWidth"/> 和 <see cref="P:FanKit.Transformers.CanvasTransformer.ControlHeight"/> 的设置方法。
-      </summary>
+      <summary> 获取控件的尺寸。 </summary>
     </member>
     <member name="P:FanKit.Transformers.CanvasTransformer.BitmapSize">
-      <summary>
-        <see cref="F:FanKit.Transformers.CanvasTransformer.Width"/> 和 <see cref="F:FanKit.Transformers.CanvasTransformer.Height"/> 的设置方法。
-      </summary>
+      <summary> 获取画布的尺寸。 </summary>
     </member>
     <member name="M:FanKit.Transformers.CanvasTransformer.GetScale(Windows.Graphics.Imaging.BitmapSize)">
       <summary>
