@@ -2396,8 +2396,8 @@
       <summary>
         将变换者和矢量相加。
       </summary>
-      <param name="transformer"> 源变换者。 </param>
-      <param name="vector"> 相加的向量。 </param>
+      <param name="left"> 源变换者。 </param>
+      <param name="right"> 相加的向量。 </param>
       <returns> 生成的变换者。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.Multiplies(FanKit.Transformers.Transformer,System.Numerics.Matrix3x2)">
@@ -2412,16 +2412,16 @@
       <summary>
         将变换者和矢量相加。
       </summary>
-      <param name="value1"> 源变换者。 </param>
-      <param name="value2"> 源向量。 </param>
+      <param name="left"> 源变换者。 </param>
+      <param name="right"> 源向量。 </param>
       <returns> 求和的变换者。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.op_Multiply(FanKit.Transformers.Transformer,System.Numerics.Matrix3x2)">
       <summary>
         将变换者和向量相乘，然后返回结果变换者。
       </summary>
-      <param name="value1"> 源变换者。 </param>
-      <param name="value2"> 要使用的缩放值。 </param>
+      <param name="left"> 源变换者。 </param>
+      <param name="right"> 要使用的缩放值。 </param>
       <returns> 生成的变换者。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.Equals(FanKit.Transformers.Transformer)">
@@ -2725,16 +2725,16 @@
       <summary>
         将边界和矢量相加。
       </summary>
-      <param name="border"> 源边界。 </param>
-      <param name="vector"> 相加的向量。 </param>
+      <param name="left"> 源边界。 </param>
+      <param name="right"> 相加的向量。 </param>
       <returns> 结果边界。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.op_Addition(FanKit.Transformers.TransformerBorder,System.Numerics.Vector2)">
       <summary>
         将边界和矢量相加。
       </summary>
-      <param name="value1"> 源边界。 </param>
-      <param name="value2"> 源向量。 </param>
+      <param name="left"> 源边界。 </param>
+      <param name="right"> 源向量。 </param>
       <returns> 求和边界。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.Equals(FanKit.Transformers.TransformerBorder)">
@@ -3646,8 +3646,8 @@
         获取点和线的[垂足]。
       </summary>
       <param name="point"> 点。 </param>
-      <param name="lineA"> 线的第一个点。 </param>
-      <param name="lineB"> 线的第二个点。 </param>
+      <param name="point0"> 线的第一个点。 </param>
+      <param name="point1"> 线的第二个点。 </param>
       <returns> 产生的向量。 </returns>
     </member>
     <member name="M:FanKit.Math.IntersectionPoint(System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2)">

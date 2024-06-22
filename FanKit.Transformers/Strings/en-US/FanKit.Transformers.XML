@@ -2396,8 +2396,8 @@
       <summary>
         Adds transformer and vector together.
       </summary>
-      <param name="transformer"> The source transformer. </param>
-      <param name="vector"> The added vector. </param>
+      <param name="left"> The source transformer. </param>
+      <param name="right"> The added vector. </param>
       <returns> The resulting transformer. </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.Multiplies(FanKit.Transformers.Transformer,System.Numerics.Matrix3x2)">
@@ -2412,16 +2412,16 @@
       <summary>
         Adds transformer and vector together.
       </summary>
-      <param name="value1"> The source transformer. </param>
-      <param name="value2"> The source vector. </param>
+      <param name="left"> The source transformer. </param>
+      <param name="right"> The source vector. </param>
       <returns> The summed transformer. </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.op_Multiply(FanKit.Transformers.Transformer,System.Numerics.Matrix3x2)">
       <summary>
         Multiplies transformer and vector  and returns the resulting transformer.
       </summary>
-      <param name="value1"> The source transformer. </param>
-      <param name="value2"> The scaling value to use. </param>
+      <param name="left"> The source transformer. </param>
+      <param name="right"> The scaling value to use. </param>
       <returns> The resulting transformer. </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.Equals(FanKit.Transformers.Transformer)">
@@ -2725,16 +2725,16 @@
       <summary>
         Adds border and vector together.
       </summary>
-      <param name="border"> The source border. </param>
-      <param name="vector"> The added vector. </param>
+      <param name="left"> The source border. </param>
+      <param name="right"> The added vector. </param>
       <returns> The resulting border. </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.op_Addition(FanKit.Transformers.TransformerBorder,System.Numerics.Vector2)">
       <summary>
         Adds border and vector together.
       </summary>
-      <param name="value1"> The source border. </param>
-      <param name="value2"> The source vector. </param>
+      <param name="left"> The source border. </param>
+      <param name="right"> The source vector. </param>
       <returns> The summed border. </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.Equals(FanKit.Transformers.TransformerBorder)">
@@ -3646,8 +3646,8 @@
         Get the [Foot Point] of point and LIne.
       </summary>
       <param name="point"> The point. </param>
-      <param name="lineA"> The line first point. </param>
-      <param name="lineB"> The line second point. </param>
+      <param name="point0"> The first point on the line. </param>
+      <param name="point1"> The second point on the line. </param>
       <returns> The product vector. </returns>
     </member>
     <member name="M:FanKit.Math.IntersectionPoint(System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2)">

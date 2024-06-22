@@ -82,21 +82,21 @@ namespace FanKit
         /// Get the [Foot Point] of point and LIne.
         /// </summary>
         /// <param name="point"> The point. </param>
-        /// <param name="lineA"> The line first point. </param>
-        /// <param name="lineB"> The line second point. </param>
+        /// <param name="point0"> The first point on the line. </param>
+        /// <param name="point1"> The second point on the line. </param>
         /// <returns> The product vector. </returns>
-        public static Vector2 FootPoint(Vector2 point, Vector2 lineA, Vector2 lineB)
+        public static Vector2 FootPoint(Vector2 point, Vector2 point0, Vector2 point1)
         {
-            float x = lineA.X - lineB.X;
-            float y = lineA.Y - lineB.Y;
+            float x = point0.X - point1.X;
+            float y = point0.Y - point1.Y;
 
             float s = x * x + y * y;
-            float p = (lineA.Y - point.Y) * y + (lineA.X - point.X) * x;
+            float p = (point0.Y - point.Y) * y + (point0.X - point.X) * x;
 
             return new Vector2
             {
-                X = lineA.X - x * p / s,
-                Y = lineA.Y - y * p / s
+                X = point0.X - x * p / s,
+                Y = point0.Y - y * p / s
             };
         }
 

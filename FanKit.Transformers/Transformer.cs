@@ -99,15 +99,15 @@ namespace FanKit.Transformers
         /// <summary>
         /// Adds transformer and vector together.
         /// </summary>
-        /// <param name="transformer"> The source transformer. </param>
-        /// <param name="vector"> The added vector. </param>
+        /// <param name="left"> The source transformer. </param>
+        /// <param name="right"> The added vector. </param>
         /// <returns> The resulting transformer. </returns>
-        public static Transformer Add(Transformer transformer, Vector2 vector) => new Transformer
+        public static Transformer Add(Transformer left, Vector2 right) => new Transformer
         {
-            LeftTop = transformer.LeftTop + vector,
-            RightTop = transformer.RightTop + vector,
-            RightBottom = transformer.RightBottom + vector,
-            LeftBottom = transformer.LeftBottom + vector,
+            LeftTop = left.LeftTop + right,
+            RightTop = left.RightTop + right,
+            RightBottom = left.RightBottom + right,
+            LeftBottom = left.LeftBottom + right,
         };
 
         /// <summary>
@@ -128,18 +128,18 @@ namespace FanKit.Transformers
         /// <summary>
         /// Adds transformer and vector together.
         /// </summary>
-        /// <param name="value1"> The source transformer. </param>
-        /// <param name="value2"> The source vector. </param>
+        /// <param name="left"> The source transformer. </param>
+        /// <param name="right"> The source vector. </param>
         /// <returns> The summed transformer. </returns>
-        public static Transformer operator +(Transformer value1, Vector2 value2) => Transformer.Add(value1, value2);
+        public static Transformer operator +(Transformer left, Vector2 right) => Transformer.Add(left, right);
 
         /// <summary>
         /// Multiplies transformer and vector  and returns the resulting transformer.
         /// </summary>
-        /// <param name="value1"> The source transformer. </param>
-        /// <param name="value2"> The scaling value to use. </param>
+        /// <param name="left"> The source transformer. </param>
+        /// <param name="right"> The scaling value to use. </param>
         /// <returns> The resulting transformer. </returns>
-        public static Transformer operator *(Transformer value1, Matrix3x2 value2) => Transformer.Multiplies(value1, value2);
+        public static Transformer operator *(Transformer left, Matrix3x2 right) => Transformer.Multiplies(left, right);
 
 
         /// <summary>
