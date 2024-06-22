@@ -162,13 +162,7 @@ namespace FanKit.Transformers
         /// <param name="left"> The border to add. </param>
         /// <param name="right"> The vector to add. </param>
         /// <returns> The summed border. </returns>
-        public static TransformerBorder Add(TransformerBorder left, Vector2 right) => new TransformerBorder
-        {
-            Left = left.Left + right.X,
-            Top = left.Top + right.Y,
-            Right = left.Right + right.X,
-            Bottom = left.Bottom + right.Y
-        };
+        public static TransformerBorder Add(TransformerBorder left, Vector2 right) => left + right;
 
 
         /// <summary>
@@ -177,7 +171,13 @@ namespace FanKit.Transformers
         /// <param name="left"> The border to add. </param>
         /// <param name="right"> The vector to add. </param>
         /// <returns> The summed border. </returns>
-        public static TransformerBorder operator +(TransformerBorder left, Vector2 right) => TransformerBorder.Add(left, right);
+        public static TransformerBorder operator +(TransformerBorder left, Vector2 right) => new TransformerBorder
+        {
+            Left = left.Left + right.X,
+            Top = left.Top + right.Y,
+            Right = left.Right + right.X,
+            Bottom = left.Bottom + right.Y
+        };
 
 
         /// <summary>
@@ -231,7 +231,7 @@ namespace FanKit.Transformers
         /// <param name="left"> The first border to compare. </param>
         /// <param name="right"> The second border to compare. </param>
         /// <returns> Return **true** if the nodes are not equal; False if they are equal. </returns>
-        public static bool operator !=(TransformerBorder left, TransformerBorder right) => !left.Equals(right);
+        public static bool operator !=(TransformerBorder left, TransformerBorder right) => !(left == right);
 
     }
 }

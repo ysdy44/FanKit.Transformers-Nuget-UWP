@@ -102,7 +102,24 @@ namespace FanKit.Transformers
         /// <param name="left"> The transformer to add. </param>
         /// <param name="right"> The vector to add. </param>
         /// <returns> The summed transformer. </returns>
-        public static Transformer Add(Transformer left, Vector2 right) => new Transformer
+        public static Transformer Add(Transformer left, Vector2 right) => left + right;
+
+        /// <summary>
+        /// Multiplies transformer and vector  and returns the resulting transformer.
+        /// </summary>
+        /// <param name="transformer"> The source transformer. </param>
+        /// <param name="matrix"> The transformation matrix. </param>
+        /// <returns> The product transformer. </returns>
+        public static Transformer Multiplies(Transformer transformer, Matrix3x2 matrix) => transformer * matrix;
+
+
+        /// <summary>
+        /// Adds transformer and vector together.
+        /// </summary>
+        /// <param name="left"> The transformer to add. </param>
+        /// <param name="right"> The vector to add. </param>
+        /// <returns> The summed transformer. </returns>
+        public static Transformer operator +(Transformer left, Vector2 right) => new Transformer
         {
             LeftTop = left.LeftTop + right,
             RightTop = left.RightTop + right,
@@ -113,33 +130,16 @@ namespace FanKit.Transformers
         /// <summary>
         /// Multiplies transformer and vector  and returns the resulting transformer.
         /// </summary>
-        /// <param name="transformer"> The source transformer. </param>
-        /// <param name="matrix"> The transformation matrix. </param>
-        /// <returns> The product transformer. </returns>
-        public static Transformer Multiplies(Transformer transformer, Matrix3x2 matrix) => new Transformer
-        {
-            LeftTop = Vector2.Transform(transformer.LeftTop, matrix),
-            RightTop = Vector2.Transform(transformer.RightTop, matrix),
-            RightBottom = Vector2.Transform(transformer.RightBottom, matrix),
-            LeftBottom = Vector2.Transform(transformer.LeftBottom, matrix)
-        };
-
-
-        /// <summary>
-        /// Adds transformer and vector together.
-        /// </summary>
-        /// <param name="left"> The transformer to add. </param>
-        /// <param name="right"> The vector to add. </param>
-        /// <returns> The summed transformer. </returns>
-        public static Transformer operator +(Transformer left, Vector2 right) => Transformer.Add(left, right);
-
-        /// <summary>
-        /// Multiplies transformer and vector  and returns the resulting transformer.
-        /// </summary>
         /// <param name="left"> The source transformer. </param>
         /// <param name="right"> The scaling value to use. </param>
         /// <returns> The resulting transformer. </returns>
-        public static Transformer operator *(Transformer left, Matrix3x2 right) => Transformer.Multiplies(left, right);
+        public static Transformer operator *(Transformer left, Matrix3x2 right) => new Transformer
+        {
+            LeftTop = Vector2.Transform(left.LeftTop, right),
+            RightTop = Vector2.Transform(left.RightTop, right),
+            RightBottom = Vector2.Transform(left.RightBottom, right),
+            LeftBottom = Vector2.Transform(left.LeftBottom, right)
+        };
 
 
         /// <summary>
@@ -191,7 +191,7 @@ namespace FanKit.Transformers
         /// <param name="left"> The first transformer to compare. </param>
         /// <param name="right"> The second transformer to compare. </param>
         /// <returns> Return **true** if the nodes are not equal; False if they are equal. </returns>
-        public static bool operator !=(Transformer left, Transformer right) => !left.Equals(right);
+        public static bool operator !=(Transformer left, Transformer right) => !(left == right);
 
     }
 }
