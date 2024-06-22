@@ -2311,7 +2311,7 @@
       <param name="isSnapToTick"> Snap to tick when spinning. </param>
       <returns> The controlled transformer. </returns>
     </member>
-    <member name="F:FanKit.Transformers.Transformer.One">
+    <member name="P:FanKit.Transformers.Transformer.One">
       <summary>
         Returns the transformer (-1,-1) (1,-1) (1,1) (-1,1).
       </summary>

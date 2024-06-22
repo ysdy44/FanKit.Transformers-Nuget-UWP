@@ -873,7 +873,7 @@ M:FanKit.Transformers.Transformer.Controller(FanKit.Transformers.TransformerMode
 M:FanKit.Transformers.Transformer.Controller(FanKit.Transformers.TransformerMode,System.Numerics.Vector2,System.Numerics.Vector2,FanKit.Transformers.Transformer,System.Numerics.Matrix3x2,System.Boolean,System.Boolean,System.Boolean)@Param@isCenter
 M:FanKit.Transformers.Transformer.Controller(FanKit.Transformers.TransformerMode,System.Numerics.Vector2,System.Numerics.Vector2,FanKit.Transformers.Transformer,System.Numerics.Matrix3x2,System.Boolean,System.Boolean,System.Boolean)@Param@isSnapToTick
 M:FanKit.Transformers.Transformer.Controller(FanKit.Transformers.TransformerMode,System.Numerics.Vector2,System.Numerics.Vector2,FanKit.Transformers.Transformer,System.Numerics.Matrix3x2,System.Boolean,System.Boolean,System.Boolean)@Returns
-F:FanKit.Transformers.Transformer.One@Summary
+P:FanKit.Transformers.Transformer.One@Summary
 M:FanKit.Transformers.Transformer.#ctor(System.Single,System.Single,System.Single,System.Single)@Summary
 M:FanKit.Transformers.Transformer.#ctor(System.Single,System.Single,System.Single,System.Single)@Param@left
 M:FanKit.Transformers.Transformer.#ctor(System.Single,System.Single,System.Single,System.Single)@Param@top

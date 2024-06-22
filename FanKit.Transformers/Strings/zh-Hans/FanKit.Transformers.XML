@@ -2311,7 +2311,7 @@
       <param name="isSnapToTick"> 是否旋转时吸附。 </param>
       <returns> 受控制的变换者。 </returns>
     </member>
-    <member name="F:FanKit.Transformers.Transformer.One">
+    <member name="P:FanKit.Transformers.Transformer.One">
       <summary>
         返回变换者（-1,-1）（1,-1）（1,1）（-1,1）。
       </summary>
