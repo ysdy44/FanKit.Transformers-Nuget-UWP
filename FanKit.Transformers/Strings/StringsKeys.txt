@@ -23,17 +23,6 @@ M:FanKit.Transformers.CanvasTransformer.GetBorderValue(FanKit.Transformers.Borde
 M:FanKit.Transformers.CanvasTransformer.GetIndicatorVector(FanKit.Transformers.IndicatorMode)@Summary
 M:FanKit.Transformers.CanvasTransformer.GetIndicatorVector(FanKit.Transformers.IndicatorMode)@Param@indicatorMode
 M:FanKit.Transformers.CanvasTransformer.GetIndicatorVector(FanKit.Transformers.IndicatorMode)@Returns
-M:FanKit.Transformers.CanvasTransformer.Equals(Windows.Graphics.Imaging.BitmapSize)@Summary
-M:FanKit.Transformers.CanvasTransformer.Equals(Windows.Graphics.Imaging.BitmapSize)@Param@other
-M:FanKit.Transformers.CanvasTransformer.Equals(Windows.Graphics.Imaging.BitmapSize)@Returns
-M:FanKit.Transformers.CanvasTransformer.op_Equality(FanKit.Transformers.CanvasTransformer,Windows.Graphics.Imaging.BitmapSize)@Summary
-M:FanKit.Transformers.CanvasTransformer.op_Equality(FanKit.Transformers.CanvasTransformer,Windows.Graphics.Imaging.BitmapSize)@Param@left
-M:FanKit.Transformers.CanvasTransformer.op_Equality(FanKit.Transformers.CanvasTransformer,Windows.Graphics.Imaging.BitmapSize)@Param@right
-M:FanKit.Transformers.CanvasTransformer.op_Equality(FanKit.Transformers.CanvasTransformer,Windows.Graphics.Imaging.BitmapSize)@Returns
-M:FanKit.Transformers.CanvasTransformer.op_Inequality(FanKit.Transformers.CanvasTransformer,Windows.Graphics.Imaging.BitmapSize)@Summary
-M:FanKit.Transformers.CanvasTransformer.op_Inequality(FanKit.Transformers.CanvasTransformer,Windows.Graphics.Imaging.BitmapSize)@Param@left
-M:FanKit.Transformers.CanvasTransformer.op_Inequality(FanKit.Transformers.CanvasTransformer,Windows.Graphics.Imaging.BitmapSize)@Param@right
-M:FanKit.Transformers.CanvasTransformer.op_Inequality(FanKit.Transformers.CanvasTransformer,Windows.Graphics.Imaging.BitmapSize)@Returns
 M:FanKit.Transformers.CanvasTransformer.GetMatrix@Summary
 M:FanKit.Transformers.CanvasTransformer.GetMatrix@Returns
 M:FanKit.Transformers.CanvasTransformer.GetMatrix(FanKit.Transformers.MatrixTransformerMode)@Summary

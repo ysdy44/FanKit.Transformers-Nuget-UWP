@@ -101,29 +101,6 @@
       <param name="indicatorMode"> 指示器模式。 </param>
       <returns> 产生的向量。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.CanvasTransformer.Equals(Windows.Graphics.Imaging.BitmapSize)">
-      <summary>
-        返回一个布尔值，指示给定的 BitmapSize 是否等于此画布变换者实例。
-      </summary>
-      <param name="other"> 与此实例进行比较的 BitmapSize。 </param>
-      <returns> 如果另一个 BitmapSize 等于此实例，则返回**true**，否则返回**false**。 </returns>
-    </member>
-    <member name="M:FanKit.Transformers.CanvasTransformer.op_Equality(FanKit.Transformers.CanvasTransformer,Windows.Graphics.Imaging.BitmapSize)">
-      <summary>
-        返回一个指示两个指定大小的每对元素是否相等的值。
-      </summary>
-      <param name="left"> 第一个要比较的画布变换者。 </param>
-      <param name="right"> 要比较的第二个 BitmapSize。 </param>
-      <returns> 如果左右相等则返回**true**，否则返回**false**。 </returns>
-    </member>
-    <member name="M:FanKit.Transformers.CanvasTransformer.op_Inequality(FanKit.Transformers.CanvasTransformer,Windows.Graphics.Imaging.BitmapSize)">
-      <summary>
-        返回一个布尔值，指示两个给定的大小是否相等。
-      </summary>
-      <param name="left"> 第一个要比较的画布变换者。 </param>
-      <param name="right"> 要比较的第二个 BitmapSize。 </param>
-      <returns> 如果节点不相等，则返回**true**；如果它们相等，则为假。 </returns>
-    </member>
     <member name="M:FanKit.Transformers.CanvasTransformer.GetMatrix">
       <summary>
         获取 <see cref="T:FanKit.Transformers.CanvasTransformer"/> 的矩阵。

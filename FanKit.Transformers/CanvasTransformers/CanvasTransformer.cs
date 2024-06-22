@@ -165,32 +165,5 @@ namespace FanKit.Transformers
             return new Vector2(0, 0);
         }
 
-
-        /// <summary>
-        /// Returns a boolean indicating whether the given BitmapSize is equal to this CanvasTransformer instance.
-        /// </summary>
-        /// <param name="other"> The BitmapSize to compare this instance to. </param>
-        /// <returns> Return **true** if the other BitmapSize is equal to this instance, otherwise **false**. </returns>
-        public bool Equals(BitmapSize other)
-        {
-            return this.Width == (int)other.Width && this.Height == (int)other.Height;
-        }
-
-        /// <summary>
-        /// Returns a value that indicates whether each pair of elements in two specified size is equal.
-        /// </summary>
-        /// <param name="left"> The first CanvasTransformer to compare. </param>
-        /// <param name="right"> The second BitmapSize to compare. </param>
-        /// <returns> Return **true** if left and right are equal, otherwise **false**. </returns>
-        public static bool operator ==(CanvasTransformer left, BitmapSize right) => left.Equals(right);
-
-        /// <summary>
-        /// Returns a boolean indicating whether the two given size are not equal.
-        /// </summary>
-        /// <param name="left"> The first CanvasTransformer to compare. </param>
-        /// <param name="right"> The second BitmapSize to compare. </param>
-        /// <returns> Return **true** if the nodes are not equal; False if they are equal. </returns>
-        public static bool operator !=(CanvasTransformer left, BitmapSize right) => !left.Equals(right);
-
     }
 }

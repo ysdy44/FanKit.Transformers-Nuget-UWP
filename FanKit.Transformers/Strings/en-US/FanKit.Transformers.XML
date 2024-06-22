@@ -101,29 +101,6 @@
       <param name="indicatorMode"> The indicator mode. </param>
       <returns> The produced vector. </returns>
     </member>
-    <member name="M:FanKit.Transformers.CanvasTransformer.Equals(Windows.Graphics.Imaging.BitmapSize)">
-      <summary>
-        Returns a boolean indicating whether the given BitmapSize is equal to this CanvasTransformer instance.
-      </summary>
-      <param name="other"> The BitmapSize to compare this instance to. </param>
-      <returns> Return **true** if the other BitmapSize is equal to this instance, otherwise **false**. </returns>
-    </member>
-    <member name="M:FanKit.Transformers.CanvasTransformer.op_Equality(FanKit.Transformers.CanvasTransformer,Windows.Graphics.Imaging.BitmapSize)">
-      <summary>
-        Returns a value that indicates whether each pair of elements in two specified size is equal.
-      </summary>
-      <param name="left"> The first CanvasTransformer to compare. </param>
-      <param name="right"> The second BitmapSize to compare. </param>
-      <returns> Return **true** if left and right are equal, otherwise **false**. </returns>
-    </member>
-    <member name="M:FanKit.Transformers.CanvasTransformer.op_Inequality(FanKit.Transformers.CanvasTransformer,Windows.Graphics.Imaging.BitmapSize)">
-      <summary>
-        Returns a boolean indicating whether the two given size are not equal.
-      </summary>
-      <param name="left"> The first CanvasTransformer to compare. </param>
-      <param name="right"> The second BitmapSize to compare. </param>
-      <returns> Return **true** if the nodes are not equal; False if they are equal. </returns>
-    </member>
     <member name="M:FanKit.Transformers.CanvasTransformer.GetMatrix">
       <summary>
         Gets <see cref="T:FanKit.Transformers.CanvasTransformer"/>'s matrix.
