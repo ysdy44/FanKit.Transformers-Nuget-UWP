@@ -2359,9 +2359,9 @@
       <summary>
         Adds transformer and vector together.
       </summary>
-      <param name="left"> The source transformer. </param>
-      <param name="right"> The added vector. </param>
-      <returns> The resulting transformer. </returns>
+      <param name="left"> The transformer to add. </param>
+      <param name="right"> The vector to add. </param>
+      <returns> The summed transformer. </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.Multiplies(FanKit.Transformers.Transformer,System.Numerics.Matrix3x2)">
       <summary>
@@ -2375,8 +2375,8 @@
       <summary>
         Adds transformer and vector together.
       </summary>
-      <param name="left"> The source transformer. </param>
-      <param name="right"> The source vector. </param>
+      <param name="left"> The transformer to add. </param>
+      <param name="right"> The vector to add. </param>
       <returns> The summed transformer. </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.op_Multiply(FanKit.Transformers.Transformer,System.Numerics.Matrix3x2)">
@@ -2688,16 +2688,16 @@
       <summary>
         Adds border and vector together.
       </summary>
-      <param name="left"> The source border. </param>
-      <param name="right"> The added vector. </param>
-      <returns> The resulting border. </returns>
+      <param name="left"> The border to add. </param>
+      <param name="right"> The vector to add. </param>
+      <returns> The summed border. </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.op_Addition(FanKit.Transformers.TransformerBorder,System.Numerics.Vector2)">
       <summary>
         Adds border and vector together.
       </summary>
-      <param name="left"> The source border. </param>
-      <param name="right"> The source vector. </param>
+      <param name="left"> The border to add. </param>
+      <param name="right"> The vector to add. </param>
       <returns> The summed border. </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.Equals(FanKit.Transformers.TransformerBorder)">

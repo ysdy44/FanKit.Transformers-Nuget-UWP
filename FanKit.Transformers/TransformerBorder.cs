@@ -159,9 +159,9 @@ namespace FanKit.Transformers
         /// <summary>
         /// Adds border and vector together.
         /// </summary>
-        /// <param name="left"> The source border. </param>
-        /// <param name="right"> The added vector. </param>
-        /// <returns> The resulting border. </returns>
+        /// <param name="left"> The border to add. </param>
+        /// <param name="right"> The vector to add. </param>
+        /// <returns> The summed border. </returns>
         public static TransformerBorder Add(TransformerBorder left, Vector2 right) => new TransformerBorder
         {
             Left = left.Left + right.X,
@@ -174,8 +174,8 @@ namespace FanKit.Transformers
         /// <summary>
         /// Adds border and vector together.
         /// </summary>
-        /// <param name="left"> The source border. </param>
-        /// <param name="right"> The source vector. </param>
+        /// <param name="left"> The border to add. </param>
+        /// <param name="right"> The vector to add. </param>
         /// <returns> The summed border. </returns>
         public static TransformerBorder operator +(TransformerBorder left, Vector2 right) => TransformerBorder.Add(left, right);
 

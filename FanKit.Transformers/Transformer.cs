@@ -99,9 +99,9 @@ namespace FanKit.Transformers
         /// <summary>
         /// Adds transformer and vector together.
         /// </summary>
-        /// <param name="left"> The source transformer. </param>
-        /// <param name="right"> The added vector. </param>
-        /// <returns> The resulting transformer. </returns>
+        /// <param name="left"> The transformer to add. </param>
+        /// <param name="right"> The vector to add. </param>
+        /// <returns> The summed transformer. </returns>
         public static Transformer Add(Transformer left, Vector2 right) => new Transformer
         {
             LeftTop = left.LeftTop + right,
@@ -128,8 +128,8 @@ namespace FanKit.Transformers
         /// <summary>
         /// Adds transformer and vector together.
         /// </summary>
-        /// <param name="left"> The source transformer. </param>
-        /// <param name="right"> The source vector. </param>
+        /// <param name="left"> The transformer to add. </param>
+        /// <param name="right"> The vector to add. </param>
         /// <returns> The summed transformer. </returns>
         public static Transformer operator +(Transformer left, Vector2 right) => Transformer.Add(left, right);
 

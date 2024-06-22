@@ -2359,9 +2359,9 @@
       <summary>
         将变换者和矢量相加。
       </summary>
-      <param name="left"> 源变换者。 </param>
-      <param name="right"> 相加的向量。 </param>
-      <returns> 生成的变换者。 </returns>
+      <param name="left"> 要相加的变换者。 </param>
+      <param name="right"> 要相加的向量。 </param>
+      <returns> 求和的变换者。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.Multiplies(FanKit.Transformers.Transformer,System.Numerics.Matrix3x2)">
       <summary>
@@ -2375,8 +2375,8 @@
       <summary>
         将变换者和矢量相加。
       </summary>
-      <param name="left"> 源变换者。 </param>
-      <param name="right"> 源向量。 </param>
+      <param name="left"> 要相加的变换者。 </param>
+      <param name="right"> 要相加的向量。 </param>
       <returns> 求和的变换者。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.op_Multiply(FanKit.Transformers.Transformer,System.Numerics.Matrix3x2)">
@@ -2688,17 +2688,17 @@
       <summary>
         将边界和矢量相加。
       </summary>
-      <param name="left"> 源边界。 </param>
-      <param name="right"> 相加的向量。 </param>
-      <returns> 结果边界。 </returns>
+      <param name="left"> 要相加的边界。 </param>
+      <param name="right"> 要相加的向量。 </param>
+      <returns> 求和的边界。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.op_Addition(FanKit.Transformers.TransformerBorder,System.Numerics.Vector2)">
       <summary>
         将边界和矢量相加。
       </summary>
-      <param name="left"> 源边界。 </param>
-      <param name="right"> 源向量。 </param>
-      <returns> 求和边界。 </returns>
+      <param name="left"> 要相加的边界。 </param>
+      <param name="right"> 要相加的向量。 </param>
+      <returns> 求和的边界。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.Equals(FanKit.Transformers.TransformerBorder)">
       <summary>
