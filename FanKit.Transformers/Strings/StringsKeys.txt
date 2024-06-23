@@ -905,6 +905,10 @@ M:FanKit.Transformers.Transformer.Multiplies(FanKit.Transformers.Transformer,Sys
 M:FanKit.Transformers.Transformer.Multiplies(FanKit.Transformers.Transformer,System.Numerics.Matrix3x2)@Param@transformer
 M:FanKit.Transformers.Transformer.Multiplies(FanKit.Transformers.Transformer,System.Numerics.Matrix3x2)@Param@matrix
 M:FanKit.Transformers.Transformer.Multiplies(FanKit.Transformers.Transformer,System.Numerics.Matrix3x2)@Returns
+M:FanKit.Transformers.Transformer.Multiply(FanKit.Transformers.Transformer,System.Single)@Summary
+M:FanKit.Transformers.Transformer.Multiply(FanKit.Transformers.Transformer,System.Single)@Param@left
+M:FanKit.Transformers.Transformer.Multiply(FanKit.Transformers.Transformer,System.Single)@Param@right
+M:FanKit.Transformers.Transformer.Multiply(FanKit.Transformers.Transformer,System.Single)@Returns
 M:FanKit.Transformers.Transformer.op_Addition(FanKit.Transformers.Transformer,System.Numerics.Vector2)@Summary
 M:FanKit.Transformers.Transformer.op_Addition(FanKit.Transformers.Transformer,System.Numerics.Vector2)@Param@left
 M:FanKit.Transformers.Transformer.op_Addition(FanKit.Transformers.Transformer,System.Numerics.Vector2)@Param@right
@@ -917,6 +921,10 @@ M:FanKit.Transformers.Transformer.op_Multiply(FanKit.Transformers.Transformer,Sy
 M:FanKit.Transformers.Transformer.op_Multiply(FanKit.Transformers.Transformer,System.Numerics.Matrix3x2)@Param@left
 M:FanKit.Transformers.Transformer.op_Multiply(FanKit.Transformers.Transformer,System.Numerics.Matrix3x2)@Param@right
 M:FanKit.Transformers.Transformer.op_Multiply(FanKit.Transformers.Transformer,System.Numerics.Matrix3x2)@Returns
+M:FanKit.Transformers.Transformer.op_Multiply(FanKit.Transformers.Transformer,System.Single)@Summary
+M:FanKit.Transformers.Transformer.op_Multiply(FanKit.Transformers.Transformer,System.Single)@Param@left
+M:FanKit.Transformers.Transformer.op_Multiply(FanKit.Transformers.Transformer,System.Single)@Param@right
+M:FanKit.Transformers.Transformer.op_Multiply(FanKit.Transformers.Transformer,System.Single)@Returns
 M:FanKit.Transformers.Transformer.Equals(FanKit.Transformers.Transformer)@Summary
 M:FanKit.Transformers.Transformer.Equals(FanKit.Transformers.Transformer)@Param@other
 M:FanKit.Transformers.Transformer.Equals(FanKit.Transformers.Transformer)@Returns
@@ -1058,6 +1066,10 @@ M:FanKit.Transformers.TransformerBorder.Subtract(FanKit.Transformers.Transformer
 M:FanKit.Transformers.TransformerBorder.Subtract(FanKit.Transformers.TransformerBorder,System.Numerics.Vector2)@Param@left
 M:FanKit.Transformers.TransformerBorder.Subtract(FanKit.Transformers.TransformerBorder,System.Numerics.Vector2)@Param@right
 M:FanKit.Transformers.TransformerBorder.Subtract(FanKit.Transformers.TransformerBorder,System.Numerics.Vector2)@Returns
+M:FanKit.Transformers.TransformerBorder.Multiply(FanKit.Transformers.TransformerBorder,System.Single)@Summary
+M:FanKit.Transformers.TransformerBorder.Multiply(FanKit.Transformers.TransformerBorder,System.Single)@Param@left
+M:FanKit.Transformers.TransformerBorder.Multiply(FanKit.Transformers.TransformerBorder,System.Single)@Param@right
+M:FanKit.Transformers.TransformerBorder.Multiply(FanKit.Transformers.TransformerBorder,System.Single)@Returns
 M:FanKit.Transformers.TransformerBorder.op_Addition(FanKit.Transformers.TransformerBorder,System.Numerics.Vector2)@Summary
 M:FanKit.Transformers.TransformerBorder.op_Addition(FanKit.Transformers.TransformerBorder,System.Numerics.Vector2)@Param@left
 M:FanKit.Transformers.TransformerBorder.op_Addition(FanKit.Transformers.TransformerBorder,System.Numerics.Vector2)@Param@right
@@ -1066,6 +1078,10 @@ M:FanKit.Transformers.TransformerBorder.op_Subtraction(FanKit.Transformers.Trans
 M:FanKit.Transformers.TransformerBorder.op_Subtraction(FanKit.Transformers.TransformerBorder,System.Numerics.Vector2)@Param@left
 M:FanKit.Transformers.TransformerBorder.op_Subtraction(FanKit.Transformers.TransformerBorder,System.Numerics.Vector2)@Param@right
 M:FanKit.Transformers.TransformerBorder.op_Subtraction(FanKit.Transformers.TransformerBorder,System.Numerics.Vector2)@Returns
+M:FanKit.Transformers.TransformerBorder.op_Multiply(FanKit.Transformers.TransformerBorder,System.Single)@Summary
+M:FanKit.Transformers.TransformerBorder.op_Multiply(FanKit.Transformers.TransformerBorder,System.Single)@Param@left
+M:FanKit.Transformers.TransformerBorder.op_Multiply(FanKit.Transformers.TransformerBorder,System.Single)@Param@right
+M:FanKit.Transformers.TransformerBorder.op_Multiply(FanKit.Transformers.TransformerBorder,System.Single)@Returns
 M:FanKit.Transformers.TransformerBorder.Equals(FanKit.Transformers.TransformerBorder)@Summary
 M:FanKit.Transformers.TransformerBorder.Equals(FanKit.Transformers.TransformerBorder)@Param@other
 M:FanKit.Transformers.TransformerBorder.Equals(FanKit.Transformers.TransformerBorder)@Returns

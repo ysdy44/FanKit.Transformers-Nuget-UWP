@@ -172,6 +172,12 @@ namespace FanKit.Transformers
         /// <returns> The difference border. </returns>
         public static TransformerBorder Subtract(TransformerBorder left, Vector2 right) => left - right;
 
+        /// <summary>
+        /// Multiplies a border by a specified scalar.
+        /// </summary>
+        /// <param name="left"> The border to multiply. </param>
+        /// <param name="right"> The scalar value. </param>
+        /// <returns> The scaled border. </returns>
         public static TransformerBorder Multiply(TransformerBorder left, float right) => left * right;
 
 
@@ -203,6 +209,12 @@ namespace FanKit.Transformers
             Bottom = left.Bottom - right.Y
         };
 
+        /// <summary>
+        /// Multiples the specified border by the specified scalar value.
+        /// </summary>
+        /// <param name="left"> The border. </param>
+        /// <param name="right"> The scalar value. </param>
+        /// <returns> The scaled border. </returns>
         public static TransformerBorder operator *(TransformerBorder left, float right) => new TransformerBorder
         {
             Left = left.Left * right,

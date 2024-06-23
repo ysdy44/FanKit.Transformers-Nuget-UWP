@@ -2379,6 +2379,14 @@
       <param name="matrix"> 变换矩阵。 </param>
       <returns> 产生的变换者。 </returns>
     </member>
+    <member name="M:FanKit.Transformers.Transformer.Divide(FanKit.Transformers.Transformer,System.Single)">
+      <summary>
+        以特定的缩放乘以变换者。
+      </summary>
+      <param name="left"> 要相乘的变换者。 </param>
+      <param name="right"> 缩放值。 </param>
+      <returns> 缩放的变换者。 </returns>
+    </member>
     <member name="M:FanKit.Transformers.Transformer.op_Addition(FanKit.Transformers.Transformer,System.Numerics.Vector2)">
       <summary>
         将变换者和矢量相加。
@@ -2402,6 +2410,14 @@
       <param name="left"> 源变换者。 </param>
       <param name="right"> 要使用的缩放值。 </param>
       <returns> 生成的变换者。 </returns>
+    </member>
+    <member name="M:FanKit.Transformers.Transformer.op_Multiply(FanKit.Transformers.Transformer,System.Single)">
+      <summary>
+        以特定的缩放值乘以特定的变换者。
+      </summary>
+      <param name="left"> 变换者。 </param>
+      <param name="right"> 缩放值。 </param>
+      <returns> 缩放的变换者。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.Equals(FanKit.Transformers.Transformer)">
       <summary>
@@ -2716,6 +2732,14 @@
       <param name="right"> 向量。 </param>
       <returns> 相差的边界。 </returns>
     </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.Multiply(FanKit.Transformers.TransformerBorder,System.Single)">
+      <summary>
+        以特定的缩放乘以边界。
+      </summary>
+      <param name="left"> 要相乘的边界。 </param>
+      <param name="right"> 缩放值。 </param>
+      <returns> 缩放的边界。 </returns>
+    </member>
     <member name="M:FanKit.Transformers.TransformerBorder.op_Addition(FanKit.Transformers.TransformerBorder,System.Numerics.Vector2)">
       <summary>
         将边界和矢量相加。
@@ -2731,6 +2755,14 @@
       <param name="left"> 边界。 </param>
       <param name="right"> 向量。 </param>
       <returns> 从边界减去向量的结果边界。 </returns>
+    </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.op_Multiply(FanKit.Transformers.TransformerBorder,System.Numerics.Matrix3x2)">
+      <summary>
+        以特定的缩放值乘以特定的边界。
+      </summary>
+      <param name="left"> 边界。 </param>
+      <param name="right"> 缩放值。 </param>
+      <returns> 缩放的边界。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.Equals(FanKit.Transformers.TransformerBorder)">
       <summary>

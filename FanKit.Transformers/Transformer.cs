@@ -120,6 +120,12 @@ namespace FanKit.Transformers
         /// <returns> The product transformer. </returns>
         public static Transformer Multiplies(Transformer transformer, Matrix3x2 matrix) => transformer * matrix;
 
+        /// <summary>
+        /// Multiplies a transformer by a specified scalar.
+        /// </summary>
+        /// <param name="left"> The transformer to multiply. </param>
+        /// <param name="right"> The scalar value. </param>
+        /// <returns> The scaled transformer. </returns>
         public static Transformer Multiply(Transformer left, float right) => left * right;
 
 
@@ -165,6 +171,12 @@ namespace FanKit.Transformers
             LeftBottom = Vector2.Transform(left.LeftBottom, right)
         };
 
+        /// <summary>
+        /// Multiples the specified transformer by the specified scalar value.
+        /// </summary>
+        /// <param name="left"> The transformer. </param>
+        /// <param name="right"> The scalar value. </param>
+        /// <returns> The scaled transformer. </returns>
         public static Transformer operator *(Transformer left, float right) => new Transformer
         {
             LeftTop = Vector2.Multiply(left.LeftTop, right),
