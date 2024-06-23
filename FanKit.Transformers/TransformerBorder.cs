@@ -180,6 +180,8 @@ namespace FanKit.Transformers
         /// <returns> The scaled border. </returns>
         public static TransformerBorder Multiply(TransformerBorder left, float right) => left * right;
 
+        public static TransformerBorder Divide(TransformerBorder left, float divisor) => left / divisor;
+
 
         /// <summary>
         /// Adds border and vector together.
@@ -221,6 +223,14 @@ namespace FanKit.Transformers
             Top = left.Top * right,
             Right = left.Right * right,
             Bottom = left.Bottom * right
+        };
+
+        public static TransformerBorder operator /(TransformerBorder left, float right) => new TransformerBorder
+        {
+            Left = left.Left / right,
+            Top = left.Top / right,
+            Right = left.Right / right,
+            Bottom = left.Bottom / right
         };
 
 

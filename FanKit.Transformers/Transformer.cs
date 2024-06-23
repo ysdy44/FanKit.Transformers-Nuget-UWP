@@ -128,6 +128,8 @@ namespace FanKit.Transformers
         /// <returns> The scaled transformer. </returns>
         public static Transformer Multiply(Transformer left, float right) => left * right;
 
+        public static Transformer Divide(Transformer left, float divisor) => left / divisor;
+
 
         /// <summary>
         /// Adds transformer and vector together.
@@ -183,6 +185,14 @@ namespace FanKit.Transformers
             RightTop = Vector2.Multiply(left.RightTop, right),
             RightBottom = Vector2.Multiply(left.RightBottom, right),
             LeftBottom = Vector2.Multiply(left.LeftBottom, right),
+        };
+
+        public static Transformer operator /(Transformer left, float right) => new Transformer
+        {
+            LeftTop = Vector2.Divide(left.LeftTop, right),
+            RightTop = Vector2.Divide(left.RightTop, right),
+            RightBottom = Vector2.Divide(left.RightBottom, right),
+            LeftBottom = Vector2.Divide(left.LeftBottom, right),
         };
 
 
