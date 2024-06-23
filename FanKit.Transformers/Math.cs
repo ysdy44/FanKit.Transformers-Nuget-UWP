@@ -8,21 +8,21 @@ namespace FanKit
     public static class Math
     {
         /// <summary> 15 degress in angle system. </summary>
-        public const float RadiansStep = 0.2617993833333333f;
+        public const float RadiansStep = System.MathF.PI / 12f;
         /// <summary> 7.5 degress in angle system. </summary>
-        public const float RadiansStepHalf = 0.1308996916666667f;
+        public const float RadiansStepHalf = System.MathF.PI / 24f;
         /// <summary> To find a multiple of the nearest 15. </summary>
         public static float RadiansStepFrequency(float radian) => ((int)((radian + Math.RadiansStepHalf) / Math.RadiansStep)) * Math.RadiansStep; // Get step radians
 
 
         /// <summary> The number pi*2. </summary>
-        public const float PiTwice = 6.283185307179586476925286766559f;
+        public const float PiTwice = System.MathF.PI * 2f;
         /// <summary> The number pi. </summary>
-        public const float Pi = 3.1415926535897932384626433832795028841971693993751f;
+        public const float Pi = System.MathF.PI;
         /// <summary> The number pi/2. </summary>
-        public const float PiOver2 = 1.5707963267948966192313216916397514420985846996876f;
+        public const float PiOver2 = System.MathF.PI / 2f;
         /// <summary> The number pi/4. </summary>
-        public const float PiOver4 = 0.78539816339744830961566084581987572104929234984378f;
+        public const float PiOver4 = System.MathF.PI / 4f;
 
 
         /// <summary> Radius of node'. Default 12. </summary>
@@ -158,7 +158,7 @@ namespace FanKit
         /// <param name="center"> The center of coordinate system. </param>
         /// <param name="length"> The length of vector. </param>
         /// <returns> The product vector. </returns>
-        public static Vector2 RadiansToVector(float radians, Vector2 center, float length = 40.0f) => new Vector2((float)System.Math.Cos(radians) * length + center.X, (float)System.Math.Sin(radians) * length + center.Y);
+        public static Vector2 RadiansToVector(float radians, Vector2 center, float length = 40.0f) => new Vector2(System.MathF.Cos(radians) * length + center.X, System.MathF.Sin(radians) * length + center.Y);
 
         /// <summary>
         /// Get radians of the vector in the coordinate system. 
@@ -167,16 +167,16 @@ namespace FanKit
         /// <returns> The product radians. </returns>
         public static float VectorToRadians(Vector2 vector)
         {
-            float tan = (float)System.Math.Atan(System.Math.Abs(vector.Y / vector.X));
+            float tan = System.MathF.Atan(System.Math.Abs(vector.Y / vector.X));
 
             // First Quantity
             if (vector.X > 0 && vector.Y > 0) return tan;
             // Second Quadrant
             else if (vector.X > 0 && vector.Y < 0) return -tan;
             // Third Quadrant  
-            else if (vector.X < 0 && vector.Y > 0) return (float)System.Math.PI - tan;
+            else if (vector.X < 0 && vector.Y > 0) return System.MathF.PI - tan;
             // Fourth Quadrant  
-            else return tan - (float)System.Math.PI;
+            else return tan - System.MathF.PI;
         }
     }
 }
