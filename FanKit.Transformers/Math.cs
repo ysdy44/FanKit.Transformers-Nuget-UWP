@@ -178,5 +178,55 @@ namespace FanKit
             // Fourth Quadrant  
             else return tan - System.MathF.PI;
         }
+
+
+        public static Vector2 Rotate(Vector2 value, float cos, float sin)
+        {
+            float x = cos * value.X - sin * value.Y;
+            float y = sin * value.X + cos * value.Y;
+            return new Vector2(x, y);
+        }
+
+        public static Vector2 Rotate(Vector2 value, Vector2 rotation)
+        {
+            float x = rotation.X * value.X - rotation.Y * value.Y;
+            float y = rotation.Y * value.X + rotation.X * value.Y;
+            return new Vector2(x, y);
+        }
+
+        public static Vector2 CreateRotation(float radians)
+        {
+            radians = System.MathF.IEEERemainder(radians, System.MathF.PI * 2);
+
+            const float epsilon = 0.001f * System.MathF.PI / 180f;     // 0.1% of a degree
+
+            if (radians > -epsilon && radians < epsilon)
+            {
+                // Exact case for zero rotation.
+                return new Vector2(1, 0);
+            }
+            else if (radians > System.Math.PI / 2 - epsilon && radians < System.Math.PI / 2 + epsilon)
+            {
+                // Exact case for 90 degree rotation.
+                return new Vector2(0, 1);
+            }
+            else if (radians < -System.Math.PI + epsilon || radians > System.Math.PI - epsilon)
+            {
+                // Exact case for 180 degree rotation.
+                return new Vector2(-1, 0);
+            }
+            else if (radians > -System.Math.PI / 2 - epsilon && radians < -System.Math.PI / 2 + epsilon)
+            {
+                // Exact case for 270 degree rotation.
+                return new Vector2(0, -1);
+            }
+            else
+            {
+                // Arbitrary rotation.
+                float c = System.MathF.Cos(radians);
+                float s = System.MathF.Sin(radians);
+                return new Vector2(c, s);
+            }
+        }
     }
 }
