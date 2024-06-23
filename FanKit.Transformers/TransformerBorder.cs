@@ -180,6 +180,12 @@ namespace FanKit.Transformers
         /// <returns> The scaled border. </returns>
         public static TransformerBorder Multiply(TransformerBorder left, float right) => left * right;
 
+        /// <summary>
+        /// Divides the specified border by a specified scalar value.
+        /// </summary>
+        /// <param name="left"> The border. </param>
+        /// <param name="divisor"> The scalar value. </param>
+        /// <returns> The border that results from the division. </returns>
         public static TransformerBorder Divide(TransformerBorder left, float divisor) => left / divisor;
 
 
@@ -225,6 +231,12 @@ namespace FanKit.Transformers
             Bottom = left.Bottom * right
         };
 
+        /// <summary>
+        /// Divides the specified border by a specified scalar value.
+        /// </summary>
+        /// <param name="left"> The border. </param>
+        /// <param name="right"> The scalar value. </param>
+        /// <returns> The result of the division. </returns>
         public static TransformerBorder operator /(TransformerBorder left, float right) => new TransformerBorder
         {
             Left = left.Left / right,

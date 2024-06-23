@@ -128,6 +128,12 @@ namespace FanKit.Transformers
         /// <returns> The scaled transformer. </returns>
         public static Transformer Multiply(Transformer left, float right) => left * right;
 
+        /// <summary>
+        /// Divides the specified transformer by a specified scalar value.
+        /// </summary>
+        /// <param name="left"> The transformer. </param>
+        /// <param name="divisor"> The scalar value. </param>
+        /// <returns> The transformer that results from the division. </returns>
         public static Transformer Divide(Transformer left, float divisor) => left / divisor;
 
 
@@ -187,6 +193,12 @@ namespace FanKit.Transformers
             LeftBottom = Vector2.Multiply(left.LeftBottom, right),
         };
 
+        /// <summary>
+        /// Divides the specified transformer by a specified scalar value.
+        /// </summary>
+        /// <param name="left"> The transformer. </param>
+        /// <param name="right"> The scalar value. </param>
+        /// <returns> The result of the division. </returns>
         public static Transformer operator /(Transformer left, float right) => new Transformer
         {
             LeftTop = Vector2.Divide(left.LeftTop, right),

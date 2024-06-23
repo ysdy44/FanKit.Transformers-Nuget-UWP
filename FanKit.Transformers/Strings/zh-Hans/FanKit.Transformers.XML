@@ -2387,6 +2387,14 @@
       <param name="right"> 缩放值。 </param>
       <returns> 缩放的变换者。 </returns>
     </member>
+    <member name="M:FanKit.Transformers.Transformer.Divide(FanKit.Transformers.Transformer,System.Single)">
+      <summary>
+        以特定的缩放除以变换者。
+      </summary>
+      <param name="left"> 变换者。 </param>
+      <param name="divisor"> 缩放值。 </param>
+      <returns> 相除的结果变换者。 </returns>
+    </member>    
     <member name="M:FanKit.Transformers.Transformer.op_Addition(FanKit.Transformers.Transformer,System.Numerics.Vector2)">
       <summary>
         将变换者和矢量相加。
@@ -2418,6 +2426,14 @@
       <param name="left"> 变换者。 </param>
       <param name="right"> 缩放值。 </param>
       <returns> 缩放的变换者。 </returns>
+    </member>
+    <member name="M:FanKit.Transformers.Transformer.op_Division(FanKit.Transformers.Transformer,System.Single)">
+      <summary>
+        以特定的缩放除以变换者。
+      </summary>
+      <param name="left"> 变换者。 </param>
+      <param name="right"> 缩放值。 </param>
+      <returns> 相除的结果。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.Equals(FanKit.Transformers.Transformer)">
       <summary>
@@ -2740,6 +2756,14 @@
       <param name="right"> 缩放值。 </param>
       <returns> 缩放的边界。 </returns>
     </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.Divide(FanKit.Transformers.TransformerBorder,System.Single)">
+      <summary>
+        以特定的缩放除以边界。
+      </summary>
+      <param name="left"> 边界。 </param>
+      <param name="divisor"> 缩放值。 </param>
+      <returns> 相除的结果边界。 </returns>
+    </member>
     <member name="M:FanKit.Transformers.TransformerBorder.op_Addition(FanKit.Transformers.TransformerBorder,System.Numerics.Vector2)">
       <summary>
         将边界和矢量相加。
@@ -2763,6 +2787,14 @@
       <param name="left"> 边界。 </param>
       <param name="right"> 缩放值。 </param>
       <returns> 缩放的边界。 </returns>
+    </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.op_Division(FanKit.Transformers.TransformerBorder,System.Single)">
+      <summary>
+        以特定的缩放除以边界。
+      </summary>
+      <param name="left"> 边界。 </param>
+      <param name="right"> 缩放值。 </param>
+      <returns> 相除的结果。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.Equals(FanKit.Transformers.TransformerBorder)">
       <summary>

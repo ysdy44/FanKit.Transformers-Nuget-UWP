@@ -2375,9 +2375,9 @@
       <summary>
         Multiplies transformer and vector  and returns the resulting transformer.
       </summary>
-    <param name="transformer"> The source transformer. </param>
-    <param name="matrix"> The transformation matrix. </param>
-    <returns> The product transformer. </returns>
+      <param name="transformer"> The source transformer. </param>
+      <param name="matrix"> The transformation matrix. </param>
+      <returns> The product transformer. </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.Multiply(FanKit.Transformers.Transformer,System.Single)">
       <summary>
@@ -2386,6 +2386,14 @@
       <param name="left"> The transformer to multiply. </param>
       <param name="right"> The scalar value. </param>
       <returns> The scaled transformer. </returns>
+    </member>
+    <member name="M:FanKit.Transformers.Transformer.Divide(FanKit.Transformers.Transformer,System.Single)">
+      <summary>
+        Divides the specified transformer by a specified scalar value.
+      </summary>
+      <param name="left"> The transformer. </param>
+      <param name="divisor"> The scalar value. </param>
+      <returns> The transformer that results from the division. </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.op_Addition(FanKit.Transformers.Transformer,System.Numerics.Vector2)">
       <summary>
@@ -2418,6 +2426,14 @@
       <param name="left"> The transformer. </param>
       <param name="right"> The scalar value. </param>
       <returns> The scaled transformer. </returns>
+    </member>
+    <member name="M:FanKit.Transformers.Transformer.op_Division(FanKit.Transformers.Transformer,System.Single)">
+      <summary>
+        Divides the specified transformer by a specified scalar value.
+      </summary>
+      <param name="left"> The transformer. </param>
+      <param name="right"> The scalar value. </param>
+      <returns> The result of the division. </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.Equals(FanKit.Transformers.Transformer)">
       <summary>
@@ -2740,6 +2756,14 @@
       <param name="right"> The scalar value. </param>
       <returns> The scaled border. </returns>
     </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.Divide(FanKit.Transformers.TransformerBorder,System.Single)">
+      <summary>
+        Divides the specified border by a specified scalar value.
+      </summary>
+      <param name="left"> The border. </param>
+      <param name="divisor"> The scalar value. </param>
+      <returns> The border that results from the division. </returns>
+    </member>
     <member name="M:FanKit.Transformers.TransformerBorder.op_Addition(FanKit.Transformers.TransformerBorder,System.Numerics.Vector2)">
       <summary>
         Adds border and vector together.
@@ -2763,6 +2787,14 @@
       <param name="left"> The border. </param>
       <param name="right"> The scalar value. </param>
       <returns> The scaled border. </returns>
+    </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.op_Division(FanKit.Transformers.TransformerBorder,System.Single)">
+      <summary>
+        Divides the specified border by a specified scalar value.
+      </summary>
+      <param name="left"> The border. </param>
+      <param name="right"> The scalar value. </param>
+      <returns> The result of the division. </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.Equals(FanKit.Transformers.TransformerBorder)">
       <summary>
