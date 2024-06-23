@@ -164,6 +164,8 @@ namespace FanKit.Transformers
         /// <returns> The summed border. </returns>
         public static TransformerBorder Add(TransformerBorder left, Vector2 right) => left + right;
 
+        public static TransformerBorder Subtract(TransformerBorder left, Vector2 right) => left - right;
+
 
         /// <summary>
         /// Adds border and vector together.
@@ -177,6 +179,14 @@ namespace FanKit.Transformers
             Top = left.Top + right.Y,
             Right = left.Right + right.X,
             Bottom = left.Bottom + right.Y
+        };
+
+        public static TransformerBorder operator -(TransformerBorder left, Vector2 right) => new TransformerBorder
+        {
+            Left = left.Left - right.X,
+            Top = left.Top - right.Y,
+            Right = left.Right - right.X,
+            Bottom = left.Bottom - right.Y
         };
 
 
