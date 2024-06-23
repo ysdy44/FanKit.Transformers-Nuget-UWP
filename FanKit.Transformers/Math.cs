@@ -180,6 +180,13 @@ namespace FanKit
         }
 
 
+        /// <summary>
+        /// Transforms a vector by the specified rotation value.
+        /// </summary>
+        /// <param name="value"> The vector to rotate. </param>
+        /// <param name="cos"> The cos value of rotation to apply. </param>
+        /// <param name="sin"> The sin value of rotation to apply. </param>
+        /// <returns> The transformed vector. </returns>
         public static Vector2 Rotate(Vector2 value, float cos, float sin)
         {
             float x = cos * value.X - sin * value.Y;
@@ -187,6 +194,12 @@ namespace FanKit
             return new Vector2(x, y);
         }
 
+        /// <summary>
+        /// Transforms a vector by the specified rotation value.
+        /// </summary>
+        /// <param name="value"> The vector to rotate. </param>
+        /// <param name="rotation"> The rotation to apply. </param>
+        /// <returns> The transformed vector. </returns>
         public static Vector2 Rotate(Vector2 value, Vector2 rotation)
         {
             float x = rotation.X * value.X - rotation.Y * value.Y;
@@ -194,6 +207,11 @@ namespace FanKit
             return new Vector2(x, y);
         }
 
+        /// <summary>
+        /// Creates a rotation vector using the given rotation in radians.
+        /// </summary>
+        /// <param name="radians"> The amount of rotation, in radians. </param>
+        /// <returns> The rotation vector. </returns>
         public static Vector2 CreateRotation(float radians)
         {
             radians = System.MathF.IEEERemainder(radians, System.MathF.PI * 2);

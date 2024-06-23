@@ -3735,5 +3735,29 @@
       <param name="vector"> The vector. </param>
       <returns> The product radians. </returns>
     </member>
+    <member name="M:FanKit.Math.Rotate(System.Numerics.Vector2,System.Single,System.Single)">
+      <summary>
+        Transforms a vector by the specified rotation value.
+      </summary>
+      <param name="value"> The vector to rotate. </param>
+      <param name="cos"> The cos value of rotation to apply. </param>
+      <param name="sin"> The sin value of rotation to apply. </param>
+      <returns> The transformed vector. </returns>
+    </member>
+    <member name="M:FanKit.Math.Rotate(System.Numerics.Vector2,System.Numerics.Vector2)">
+      <summary>
+        Transforms a vector by the specified rotation value.
+      </summary>
+      <param name="value"> The vector to rotate. </param>
+      <param name="rotation"> The rotation to apply. </param>
+      <returns> The transformed vector. </returns>
+    </member>
+    <member name="M:FanKit.Math.CreateRotation(System.Single)">
+      <summary>
+        Creates a rotation vector using the given rotation in radians.
+      </summary>
+      <param name="radians"> The amount of rotation, in radians. </param>
+      <returns> The rotation vector. </returns>
+    </member>
   </members>
 </doc>
