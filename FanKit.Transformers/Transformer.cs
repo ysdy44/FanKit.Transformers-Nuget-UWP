@@ -120,6 +120,8 @@ namespace FanKit.Transformers
         /// <returns> The product transformer. </returns>
         public static Transformer Multiplies(Transformer transformer, Matrix3x2 matrix) => transformer * matrix;
 
+        public static Transformer Multiply(Transformer left, float right) => left * right;
+
 
         /// <summary>
         /// Adds transformer and vector together.
@@ -161,6 +163,14 @@ namespace FanKit.Transformers
             RightTop = Vector2.Transform(left.RightTop, right),
             RightBottom = Vector2.Transform(left.RightBottom, right),
             LeftBottom = Vector2.Transform(left.LeftBottom, right)
+        };
+
+        public static Transformer operator *(Transformer left, float right) => new Transformer
+        {
+            LeftTop = Vector2.Multiply(left.LeftTop, right),
+            RightTop = Vector2.Multiply(left.RightTop, right),
+            RightBottom = Vector2.Multiply(left.RightBottom, right),
+            LeftBottom = Vector2.Multiply(left.LeftBottom, right),
         };
 
 
