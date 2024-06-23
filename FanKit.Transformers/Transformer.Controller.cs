@@ -408,8 +408,6 @@ namespace FanKit.Transformers
             }
         }
 
-
-
         // Rotation      
         private static Transformer Rotate(Vector2 canvasStartingPoint, Vector2 canvasPoint, Transformer startingTransformer, bool isSnapToTick)
         {
@@ -421,11 +419,8 @@ namespace FanKit.Transformers
             float canvasStartingRadian = Math.VectorToRadians(canvasStartingPoint - center);
             float radian = canvasRadian - canvasStartingRadian;
 
-            Matrix3x2 rotationMatrix = Matrix3x2.CreateRotation(radian, center);
-            return Transformer.Multiplies(startingTransformer, rotationMatrix);
+            return startingTransformer.Rotate(radian, center);
         }
-
-
 
         // Skew
         private static Vector2 Skew(Vector2 startingPoint, Vector2 point, Vector2 linePoineA, Vector2 linePoineB)
@@ -439,8 +434,6 @@ namespace FanKit.Transformers
             return halfVector;
         }
 
-
-
         // ScaleAround
         private static Transformer ScaleAroundRatioCenter(Transformer startingTransformer, LinePD1C line)
         {
@@ -448,12 +441,8 @@ namespace FanKit.Transformers
             Vector2 footPoint = Math.FootPoint(line.CanvasPoint, line.Point, line.DiagonalPoint);
 
             float distance = new LineDistance(footPoint, line.Point, center);
-            Matrix3x2 scaleMatrix = Matrix3x2.CreateScale(distance, center);
-
-            return Transformer.Multiplies(startingTransformer, scaleMatrix);
+            return startingTransformer.Scale(distance, center);
         }
-
-
 
         // ScaleCorner
         private static Transformer ScaleCornerRatioCenter(Transformer startingTransformer, LineP1C line)
@@ -462,12 +451,8 @@ namespace FanKit.Transformers
             Vector2 footPoint = Math.FootPoint(line.CanvasPoint, line.Point, center);
 
             float distance = new LineDistance(footPoint, line.Point, center);
-            Matrix3x2 scaleMatrix = Matrix3x2.CreateScale(distance, center);
-
-            return Transformer.Multiplies(startingTransformer, scaleMatrix);
+            return startingTransformer.Scale(distance, center);
         }
-
-
 
         // Scale
         private static Transformer ScaleRatio(Transformer startingTransformer, LinePD1C line)
@@ -476,9 +461,7 @@ namespace FanKit.Transformers
             Vector2 footPoint = Math.FootPoint(line.CanvasPoint, line.Point, center);
 
             float distance = new LineDistance(footPoint, line.Point, center);
-            Matrix3x2 scaleMatrix = Matrix3x2.CreateScale(distance, center);
-
-            return Transformer.Multiplies(startingTransformer, scaleMatrix);
+            return startingTransformer.Scale(distance, center);
         }
 
         private static Vector2 ScaleVector(LinePD1C line)

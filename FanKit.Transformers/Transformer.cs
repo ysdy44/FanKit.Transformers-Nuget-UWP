@@ -208,6 +208,43 @@ namespace FanKit.Transformers
         };
 
 
+        private Transformer Scale(float scale, Vector2 centerPoint)
+        {
+            Vector2 vector = centerPoint - centerPoint * scale;
+            return new Transformer
+            {
+                LeftTop = LeftTop * scale + vector,
+                RightTop = RightTop * scale + vector,
+                RightBottom = RightBottom * scale + vector,
+                LeftBottom = LeftBottom * scale + vector
+            };
+        }
+
+        private Transformer Rotate(float radians)
+        {
+            Vector2 rotation = Math.CreateRotation(radians);
+            return new Transformer
+            {
+                LeftTop = Math.Rotate(LeftTop, rotation),
+                RightTop = Math.Rotate(RightTop, rotation),
+                RightBottom = Math.Rotate(RightBottom, rotation),
+                LeftBottom = Math.Rotate(LeftBottom, rotation)
+            };
+        }
+
+        private Transformer Rotate(float radians, Vector2 centerPoint)
+        {
+            Vector2 rotation = Math.CreateRotation(radians);
+            return new Transformer
+            {
+                LeftTop = Math.Rotate(LeftTop - centerPoint, rotation) + centerPoint,
+                RightTop = Math.Rotate(RightTop - centerPoint, rotation) + centerPoint,
+                RightBottom = Math.Rotate(RightBottom - centerPoint, rotation) + centerPoint,
+                LeftBottom = Math.Rotate(LeftBottom - centerPoint, rotation) + centerPoint
+            };
+        }
+
+
         /// <summary>
         /// Returns a boolean indicating whether the given Transformer is equal to this Transformer instance.
         /// </summary>
