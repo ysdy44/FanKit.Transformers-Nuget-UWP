@@ -1768,7 +1768,7 @@
     </member>
     <member name="E:FanKit.Transformers.IndicatorControl.ModeChanged">
       <summary>
-        单击不同的小方块以触发 <see cref="E:FanKit.Transformers.IndicatorControl.ModeChanged"/> 事件。 
+        单击不同的小方块以触发 <see cref="E:FanKit.Transformers.IndicatorControl.ModeChanged"/> 事件。
       </summary>
     </member>
     <member name="P:FanKit.Transformers.IndicatorControl.Mode">
@@ -2363,6 +2363,14 @@
       <param name="right"> 要相加的向量。 </param>
       <returns> 求和的变换者。 </returns>
     </member>
+    <member name="M:FanKit.Transformers.Transformer.Subtract(FanKit.Transformers.Transformer,System.Numerics.Vector2)">
+      <summary>
+        从变换器减去向量。
+      </summary>
+      <param name="left"> 变换者。 </param>
+      <param name="right"> 向量。 </param>
+      <returns> 相差的变换器。 </returns>
+    </member>
     <member name="M:FanKit.Transformers.Transformer.Multiplies(FanKit.Transformers.Transformer,System.Numerics.Matrix3x2)">
       <summary>
         将变换者和向量相乘，然后返回结果变换者。
@@ -2378,6 +2386,14 @@
       <param name="left"> 要相加的变换者。 </param>
       <param name="right"> 要相加的向量。 </param>
       <returns> 求和的变换者。 </returns>
+    </member>
+    <member name="M:FanKit.Transformers.Transformer.op_Subtraction(FanKit.Transformers.Transformer,System.Numerics.Vector2)">
+      <summary>
+        从变换器减去向量。
+      </summary>
+      <param name="left"> 变换者。 </param>
+      <param name="right"> 向量。 </param>
+      <returns> 从变换器减去向量的结果变换器。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.op_Multiply(FanKit.Transformers.Transformer,System.Numerics.Matrix3x2)">
       <summary>
@@ -2692,6 +2708,14 @@
       <param name="right"> 要相加的向量。 </param>
       <returns> 求和的边界。 </returns>
     </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.Subtract(FanKit.Transformers.TransformerBorder,System.Numerics.Vector2)">
+      <summary>
+        从边界减去向量。
+      </summary>
+      <param name="left"> 边界。 </param>
+      <param name="right"> 向量。 </param>
+      <returns> 相差的边界。 </returns>
+    </member>
     <member name="M:FanKit.Transformers.TransformerBorder.op_Addition(FanKit.Transformers.TransformerBorder,System.Numerics.Vector2)">
       <summary>
         将边界和矢量相加。
@@ -2699,6 +2723,14 @@
       <param name="left"> 要相加的边界。 </param>
       <param name="right"> 要相加的向量。 </param>
       <returns> 求和的边界。 </returns>
+    </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.op_Subtraction(FanKit.Transformers.TransformerBorder,System.Numerics.Vector2)">
+      <summary>
+        从边界减去向量。
+      </summary>
+      <param name="left"> 边界。 </param>
+      <param name="right"> 向量。 </param>
+      <returns> 从边界减去向量的结果边界。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.Equals(FanKit.Transformers.TransformerBorder)">
       <summary>

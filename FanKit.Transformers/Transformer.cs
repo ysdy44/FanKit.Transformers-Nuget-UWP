@@ -104,6 +104,12 @@ namespace FanKit.Transformers
         /// <returns> The summed transformer. </returns>
         public static Transformer Add(Transformer left, Vector2 right) => left + right;
 
+        /// <summary>
+        /// Subtracts the vector from the transformer.
+        /// </summary>
+        /// <param name="left"> The transformer. </param>
+        /// <param name="right"> The vector. </param>
+        /// <returns> The difference transformer. </returns>
         public static Transformer Subtract(Transformer left, Vector2 right) => left - right;
 
         /// <summary>
@@ -129,6 +135,12 @@ namespace FanKit.Transformers
             LeftBottom = left.LeftBottom + right,
         };
 
+        /// <summary>
+        /// Subtracts the vector from the transformer.
+        /// </summary>
+        /// <param name="left"> The transformer. </param>
+        /// <param name="right"> The vector. </param>
+        /// <returns> The transformer that results from subtracting vector from transformer. </returns>
         public static Transformer operator -(Transformer left, Vector2 right) => new Transformer
         {
             LeftTop = Vector2.Subtract(left.LeftTop, right),

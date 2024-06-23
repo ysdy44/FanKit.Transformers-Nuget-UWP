@@ -2363,13 +2363,21 @@
       <param name="right"> The vector to add. </param>
       <returns> The summed transformer. </returns>
     </member>
+    <member name="M:FanKit.Transformers.Transformer.Subtract(FanKit.Transformers.Transformer,System.Numerics.Vector2)">
+      <summary>
+        Subtracts the vector from the transformer.
+      </summary>
+      <param name="left"> The transformer. </param>
+      <param name="right"> The vector. </param>
+      <returns> The difference transformer. </returns>
+    </member>
     <member name="M:FanKit.Transformers.Transformer.Multiplies(FanKit.Transformers.Transformer,System.Numerics.Matrix3x2)">
       <summary>
         Multiplies transformer and vector  and returns the resulting transformer.
       </summary>
-      <param name="transformer"> The source transformer. </param>
-      <param name="matrix"> The transformation matrix. </param>
-      <returns> The product transformer. </returns>
+    <param name="transformer"> The source transformer. </param>
+    <param name="matrix"> The transformation matrix. </param>
+    <returns> The product transformer. </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.op_Addition(FanKit.Transformers.Transformer,System.Numerics.Vector2)">
       <summary>
@@ -2378,6 +2386,14 @@
       <param name="left"> The transformer to add. </param>
       <param name="right"> The vector to add. </param>
       <returns> The summed transformer. </returns>
+    </member>
+    <member name="M:FanKit.Transformers.Transformer.op_Subtraction(FanKit.Transformers.Transformer,System.Numerics.Vector2)">
+      <summary>
+        Subtracts the vector from the transformer.
+      </summary>
+      <param name="left"> The transformer. </param>
+      <param name="right"> The vector. </param>
+      <returns> The transformer that results from subtracting vector from transformer. </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.op_Multiply(FanKit.Transformers.Transformer,System.Numerics.Matrix3x2)">
       <summary>
@@ -2692,6 +2708,14 @@
       <param name="right"> The vector to add. </param>
       <returns> The summed border. </returns>
     </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.Subtract(FanKit.Transformers.TransformerBorder,System.Numerics.Vector2)">
+      <summary>
+        Subtracts the vector from the border.
+      </summary>
+      <param name="left"> The border. </param>
+      <param name="right"> The vector. </param>
+      <returns> The difference border. </returns>
+    </member>
     <member name="M:FanKit.Transformers.TransformerBorder.op_Addition(FanKit.Transformers.TransformerBorder,System.Numerics.Vector2)">
       <summary>
         Adds border and vector together.
@@ -2699,6 +2723,14 @@
       <param name="left"> The border to add. </param>
       <param name="right"> The vector to add. </param>
       <returns> The summed border. </returns>
+    </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.op_Subtraction(FanKit.Transformers.TransformerBorder,System.Numerics.Vector2)">
+      <summary>
+        Subtracts the vector from the border.
+      </summary>
+      <param name="left"> The border. </param>
+      <param name="right"> The vector. </param>
+      <returns> The border that results from subtracting vector from border. </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.Equals(FanKit.Transformers.TransformerBorder)">
       <summary>
