@@ -75,6 +75,12 @@ namespace FanKit.Transformers
 
         #region ScaleCorner LeftTop
 
+        /// <summary>
+        /// Move the position of the top-left corner of the transformer.
+        /// </summary>
+        /// <param name="point"> The point. </param>
+        /// <param name="isConvexQuadrilateral"> Is the transformer is a convex quadrilateral? </param>
+        /// <returns> The product point. </returns>
         public Transformer MoveLeftTop(Vector2 point, bool isConvexQuadrilateral) => new Transformer
         {
             LeftTop = isConvexQuadrilateral ?
@@ -119,6 +125,12 @@ namespace FanKit.Transformers
 
         #region ScaleCorner RightTop
 
+        /// <summary>
+        /// Move the position of the top-right corner of the transformer.
+        /// </summary>
+        /// <param name="point"> The point. </param>
+        /// <param name="isConvexQuadrilateral"> Is the transformer is a convex quadrilateral? </param>
+        /// <returns> The product point. </returns>
         public Transformer MoveRightTop(Vector2 point, bool isConvexQuadrilateral) => new Transformer
         {
             LeftTop = this.LeftTop,
@@ -163,6 +175,12 @@ namespace FanKit.Transformers
 
         #region ScaleCorner RightBottom
 
+        /// <summary>
+        /// Move the position of the bottom-right corner of the transformer.
+        /// </summary>
+        /// <param name="point"> The point. </param>
+        /// <param name="isConvexQuadrilateral"> Is the transformer is a convex quadrilateral? </param>
+        /// <returns> The product point. </returns>
         public Transformer MoveRightBottom(Vector2 point, bool isConvexQuadrilateral) => new Transformer
         {
             LeftTop = this.LeftTop,
@@ -207,6 +225,12 @@ namespace FanKit.Transformers
 
         #region ScaleCorner LeftBottom
 
+        /// <summary>
+        /// Move the position of the bottom-left corner of the transformer.
+        /// </summary>
+        /// <param name="point"> The point. </param>
+        /// <param name="isConvexQuadrilateral"> Is the transformer is a convex quadrilateral? </param>
+        /// <returns> The product point. </returns>
         public Transformer MoveLeftBottom(Vector2 point, bool isConvexQuadrilateral) => new Transformer
         {
             LeftTop = this.LeftTop,

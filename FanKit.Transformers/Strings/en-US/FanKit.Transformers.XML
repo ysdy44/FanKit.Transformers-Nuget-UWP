@@ -2311,6 +2311,38 @@
       <param name="isSnapToTick"> Snap to tick when spinning. </param>
       <returns> The controlled transformer. </returns>
     </member>
+    <member name="M:FanKit.Transformers.Transformer.MoveRightBottom(System.Numerics.Vector2,System.Boolean)">
+      <summary>
+        Move the position of the bottom-right corner of the transformer.
+      </summary>
+      <param name="point"> The point. </param>
+      <param name="isConvexQuadrilateral"> Is the transformer is a convex quadrilateral? </param>
+      <returns> The product point. </returns>
+    </member>
+    <member name="M:FanKit.Transformers.Transformer.MoveLeftBottom(System.Numerics.Vector2,System.Boolean)">
+      <summary>
+        Move the position of the bottom-left corner of the transformer.
+      </summary>
+      <param name="point"> The point. </param>
+      <param name="isConvexQuadrilateral"> Is the transformer is a convex quadrilateral? </param>
+      <returns> The product point. </returns>
+    </member>
+    <member name="M:FanKit.Transformers.Transformer.MoveLeftTop(System.Numerics.Vector2,System.Boolean)">
+      <summary>
+        Move the position of the top-left corner of the transformer.
+      </summary>
+      <param name="point"> The point. </param>
+      <param name="isConvexQuadrilateral"> Is the transformer is a convex quadrilateral? </param>
+      <returns> The product point. </returns>
+    </member>
+    <member name="M:FanKit.Transformers.Transformer.MoveRightTop(System.Numerics.Vector2,System.Boolean)">
+      <summary>
+        Move the position of the top-right corner of the transformer.
+      </summary>
+      <param name="point"> The point. </param>
+      <param name="isConvexQuadrilateral"> Is the transformer is a convex quadrilateral? </param>
+      <returns> The product point. </returns>
+    </member>
     <member name="P:FanKit.Transformers.Transformer.One">
       <summary>
         Returns the transformer (-1,-1) (1,-1) (1,1) (-1,1).
@@ -3699,6 +3731,17 @@
       <param name="rightBottom"> The position of the bottom-right corner of the quadrangle. </param>
       <param name="leftBottom"> The position of the bottom-left corner of the quadrangle. </param>
       <returns> Return **true** if the quadrangle contains the specified point, otherwise **false**. </returns>
+    </member>
+    <member name="M:FanKit.Math.MovePointOfConvexQuadrilateral(System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Int32)">
+      <summary>
+        Move the position of the point of the quadrilateral so that the quadrilateral is a convex quadrilateral.
+      </summary>
+      <param name="point"> The point. </param>
+      <param name="diagonal"> The point on the diagonal. </param>
+      <param name="left"> The point to left of the diagonal. </param>
+      <param name="right"> The point to right of the diagonal. </param>
+      <param name="margin"> The margin of the triangle formed by other three points. </param>
+      <returns> The product point. </returns>
     </member>
     <member name="M:FanKit.Math.FootPoint(System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>

@@ -77,6 +77,15 @@ namespace FanKit
             return (a > 0 && b > 0 && c > 0 && d > 0) || (a < 0 && b < 0 && c < 0 && d < 0);
         }
 
+        /// <summary>
+        /// Move the position of the point of the quadrilateral so that the quadrilateral is a convex quadrilateral. 
+        /// </summary>
+        /// <param name="point"> The point. </param>
+        /// <param name="diagonal"> The point on the diagonal. </param>
+        /// <param name="left"> The point to left of the diagonal. </param>
+        /// <param name="right"> The point to right of the diagonal. </param>
+        /// <param name="margin"> The margin of the triangle formed by other three points. </param>
+        /// <returns> The product point. </returns>
         public static Vector2 MovePointOfConvexQuadrilateral(Vector2 point, Vector2 diagonal, Vector2 left, Vector2 right, int margin = 8)
         {
             if (margin > 0)

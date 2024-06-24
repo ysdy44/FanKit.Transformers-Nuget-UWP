@@ -2311,6 +2311,38 @@
       <param name="isSnapToTick"> 是否旋转时吸附。 </param>
       <returns> 受控制的变换者。 </returns>
     </member>
+    <member name="M:FanKit.Transformers.Transformer.MoveRightBottom(System.Numerics.Vector2,System.Boolean)">
+      <summary>
+        移动变换者的右下角的位置。
+      </summary>
+      <param name="point"> 点。 </param>
+      <param name="isConvexQuadrilateral"> 变换者是否是凸四边形？ </param>
+      <returns> 产生的点。 </returns>
+    </member>
+    <member name="M:FanKit.Transformers.Transformer.MoveLeftBottom(System.Numerics.Vector2,System.Boolean)">
+      <summary>
+        移动变换者的左下角的位置。
+      </summary>
+      <param name="point"> 点。 </param>
+      <param name="isConvexQuadrilateral"> 变换者是否是凸四边形？ </param>
+      <returns> 产生的点。 </returns>
+    </member>
+    <member name="M:FanKit.Transformers.Transformer.MoveLeftTop(System.Numerics.Vector2,System.Boolean)">
+      <summary>
+        移动变换者的左上角的位置。
+      </summary>
+      <param name="point"> 点。 </param>
+      <param name="isConvexQuadrilateral"> 变换者是否是凸四边形？ </param>
+      <returns> 产生的点。 </returns>
+    </member>
+    <member name="M:FanKit.Transformers.Transformer.MoveRightTop(System.Numerics.Vector2,System.Boolean)">
+      <summary>
+        移动变换者的右上角的位置。
+      </summary>
+      <param name="point"> 点。 </param>
+      <param name="isConvexQuadrilateral"> 变换者是否是凸四边形？ </param>
+      <returns> 产生的点。 </returns>
+    </member>
     <member name="P:FanKit.Transformers.Transformer.One">
       <summary>
         返回变换者（-1,-1）（1,-1）（1,1）（-1,1）。
@@ -3699,6 +3731,17 @@
       <param name="rightBottom"> 四边形的右下角的位置。 </param>
       <param name="leftBottom"> 四边形的左下角的位置。 </param>
       <returns> 如果四边形包含指定点，则返回**true**，否则返回**false**。 </returns>
+    </member>
+    <member name="M:FanKit.Math.MovePointOfConvexQuadrilateral(System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Int32)">
+      <summary>
+        移动四边形的点的位置来让四边形是一个凸四边形。
+      </summary>
+      <param name="point"> 点。 </param>
+      <param name="diagonal"> 对角线上的点。 </param>
+      <param name="left"> 对角线左侧的点。 </param>
+      <param name="right"> 对角线右侧的点。 </param>
+      <param name="margin"> 其他三个点组成的三角形的外边距。 </param>
+      <returns> 产生的点。 </returns>
     </member>
     <member name="M:FanKit.Math.FootPoint(System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>
