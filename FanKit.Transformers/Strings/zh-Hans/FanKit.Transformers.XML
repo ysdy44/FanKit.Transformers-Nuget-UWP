@@ -2365,11 +2365,11 @@
     </member>
     <member name="M:FanKit.Transformers.Transformer.Subtract(FanKit.Transformers.Transformer,System.Numerics.Vector2)">
       <summary>
-        从变换器减去向量。
+        从变换者减去向量。
       </summary>
       <param name="left"> 变换者。 </param>
       <param name="right"> 向量。 </param>
-      <returns> 相差的变换器。 </returns>
+      <returns> 相差的变换者。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.Multiplies(FanKit.Transformers.Transformer,System.Numerics.Matrix3x2)">
       <summary>
@@ -2405,11 +2405,11 @@
     </member>
     <member name="M:FanKit.Transformers.Transformer.op_Subtraction(FanKit.Transformers.Transformer,System.Numerics.Vector2)">
       <summary>
-        从变换器减去向量。
+        从变换者减去向量。
       </summary>
       <param name="left"> 变换者。 </param>
       <param name="right"> 向量。 </param>
-      <returns> 从变换器减去向量的结果变换器。 </returns>
+      <returns> 从变换者减去向量的结果变换者。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.op_Multiply(FanKit.Transformers.Transformer,System.Numerics.Matrix3x2)">
       <summary>
