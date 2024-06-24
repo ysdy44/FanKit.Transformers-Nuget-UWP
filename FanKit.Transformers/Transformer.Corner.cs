@@ -73,7 +73,21 @@ namespace FanKit.Transformers
             };
         }
 
-        #region ScaleCorner RightBottom
+        #region ScaleCorner LeftTop
+
+        public Transformer MoveLeftTop(Vector2 point, bool isConvexQuadrilateral) => new Transformer
+        {
+            LeftTop = isConvexQuadrilateral ?
+            Math.MovePointOfConvexQuadrilateral(
+                point: point,
+                left: this.RightTop,
+                diagonal: this.RightBottom,
+                right: this.LeftBottom,
+                margin: 8) : point,
+            RightTop = this.RightTop,
+            RightBottom = this.RightBottom,
+            LeftBottom = this.LeftBottom,
+        };
 
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         private static Transformer FromLeftTop(Transformer startingTransformer, LineD1C line)
@@ -105,6 +119,20 @@ namespace FanKit.Transformers
 
         #region ScaleCorner RightTop
 
+        public Transformer MoveRightTop(Vector2 point, bool isConvexQuadrilateral) => new Transformer
+        {
+            LeftTop = this.LeftTop,
+            RightTop = isConvexQuadrilateral ?
+            Math.MovePointOfConvexQuadrilateral(
+                point: point,
+                right: this.LeftTop,
+                diagonal: this.LeftBottom,
+                left: this.RightBottom,
+                margin: 8) : point,
+            RightBottom = this.RightBottom,
+            LeftBottom = this.LeftBottom,
+        };
+
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         private static Transformer FromRightTop(Transformer startingTransformer, LineD1C line)
         {
@@ -135,6 +163,20 @@ namespace FanKit.Transformers
 
         #region ScaleCorner RightBottom
 
+        public Transformer MoveRightBottom(Vector2 point, bool isConvexQuadrilateral) => new Transformer
+        {
+            LeftTop = this.LeftTop,
+            RightTop = this.RightTop,
+            RightBottom = isConvexQuadrilateral ?
+            Math.MovePointOfConvexQuadrilateral(
+                point: point,
+                left: this.LeftBottom,
+                diagonal: this.LeftTop,
+                right: this.RightTop,
+                margin: 8) : point,
+            LeftBottom = this.LeftBottom,
+        };
+
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         private static Transformer FromRightBottom(Transformer startingTransformer, LineD1C line)
         {
@@ -164,6 +206,20 @@ namespace FanKit.Transformers
         #endregion
 
         #region ScaleCorner LeftBottom
+
+        public Transformer MoveLeftBottom(Vector2 point, bool isConvexQuadrilateral) => new Transformer
+        {
+            LeftTop = this.LeftTop,
+            RightTop = this.RightTop,
+            RightBottom = this.RightBottom,
+            LeftBottom = isConvexQuadrilateral ?
+            Math.MovePointOfConvexQuadrilateral(
+                point: point,
+                right: this.RightBottom,
+                diagonal: this.RightTop,
+                left: this.LeftTop,
+                margin: 8) : point,
+        };
 
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         private static Transformer FromLeftBottom(Transformer startingTransformer, LineD1C line)

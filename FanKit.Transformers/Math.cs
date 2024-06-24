@@ -77,6 +77,60 @@ namespace FanKit
             return (a > 0 && b > 0 && c > 0 && d > 0) || (a < 0 && b < 0 && c < 0 && d < 0);
         }
 
+        public static Vector2 MovePointOfConvexQuadrilateral(Vector2 point, Vector2 diagonal, Vector2 left, Vector2 right, int margin = 8)
+        {
+            if (margin > 0)
+            {
+                Vector2 m = margin * Vector2.Normalize(diagonal + diagonal - left - right);
+                diagonal += m;
+                left -= m;
+                right -= m;
+            }
+
+            int i = 0;
+            do
+            {
+                Vector2 lineA;
+                Vector2 lineB;
+                switch (i)
+                {
+                    case 1:
+                        lineA = diagonal;
+                        lineB = right;
+                        break;
+                    case 2:
+                        lineA = left;
+                        lineB = diagonal;
+                        break;
+                    default:
+                        lineA = left;
+                        lineB = right;
+                        break;
+                }
+
+                float bx = lineA.X - lineB.X;
+                float by = lineA.Y - lineB.Y;
+                float px = lineA.X - point.X;
+                float py = lineA.Y - point.Y;
+
+                if (bx * py - by * px < 0f)
+                {
+                    float s = bx * bx + by * by;
+                    float p = py * by + px * bx;
+
+                    point = new Vector2
+                    {
+                        X = lineA.X - bx * p / s,
+                        Y = lineA.Y - by * p / s
+                    };
+                }
+                i++;
+            }
+            while (i < 4);
+
+            return point;
+        }
+
 
         /// <summary>
         /// Get the [Foot Point] of point and LIne.
