@@ -207,6 +207,7 @@
     <Compile Include="XMLs\XML.NodeCollection.cs" />
     <Compile Include="XMLs\XML.NodeTypeFactory.cs" />
     <Compile Include="XMLs\XML.Transformer.cs" />
+    <Compile Include="XMLs\XML.TransformerBorder.cs" />
     <Compile Include="XMLs\XML.Vector2.cs" />
     <EmbeddedResource Include="Properties\FanKit.Transformers.rd.xml" />
   </ItemGroup>
