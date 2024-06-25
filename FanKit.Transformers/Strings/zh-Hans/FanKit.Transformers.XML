@@ -3610,6 +3610,23 @@
         已加载的 <see cref="T:FanKit.Transformers.Transformer"/>。
       </returns>
     </member>
+    <member name="M:FanKit.Transformers.XML.SaveTransformerBorder(System.String,FanKit.Transformers.TransformerBorder)">
+      <summary>
+        将整个 <see cref="T:FanKit.Transformers.TransformerBorder"/> 保存到 XElement。
+      </summary>
+      <param name="elementName"> 元素名称。 </param>
+      <param name="border"> 源数据。 </param>
+      <returns> 保存的 XElement。 </returns>
+    </member>
+    <member name="M:FanKit.Transformers.XML.LoadTransformerBorder(System.Xml.Linq.XElement)">
+      <summary>
+        从 XElement 加载 <see cref="T:FanKit.Transformers.TransformerBorder"/>。
+      </summary>
+      <param name="element"> 源 XElement。 </param>
+      <returns>
+        已加载的 <see cref="T:FanKit.Transformers.TransformerBorder"/>。
+      </returns>
+    </member>
     <member name="M:FanKit.Transformers.XML.SaveVector2(System.String,System.Numerics.Vector2)">
       <summary>
         将整个 <see cref="T:System.Numerics.Vector2"/> 保存到 XElement。

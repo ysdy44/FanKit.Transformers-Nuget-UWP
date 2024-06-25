@@ -5,6 +5,12 @@ namespace FanKit.Transformers
     partial class XML
     {
 
+        /// <summary>
+        /// Saves the entire <see cref="TransformerBorder"/> to a XElement.
+        /// </summary>
+        /// <param name="elementName"> The element name. </param>
+        /// <param name="border"> The source data. </param>
+        /// <returns> The saved XElement. </returns>
         public static XElement SaveTransformerBorder(string elementName, TransformerBorder border)
         {
             return new XElement
@@ -17,6 +23,11 @@ namespace FanKit.Transformers
             );
         }
 
+        /// <summary>
+        ///  Loads a <see cref="TransformerBorder"/> from an XElement.
+        /// </summary>
+        /// <param name="element"> The source XElement. </param>
+        /// <returns> The loaded <see cref="TransformerBorder"/>. </returns>
         public static TransformerBorder LoadTransformerBorder(XElement element)
         {
             TransformerBorder result = new TransformerBorder();

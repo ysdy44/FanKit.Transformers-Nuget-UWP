@@ -1486,6 +1486,13 @@ M:FanKit.Transformers.XML.SaveTransformer(System.String,FanKit.Transformers.Tran
 M:FanKit.Transformers.XML.LoadTransformer(System.Xml.Linq.XElement)@Summary
 M:FanKit.Transformers.XML.LoadTransformer(System.Xml.Linq.XElement)@Param@element
 M:FanKit.Transformers.XML.LoadTransformer(System.Xml.Linq.XElement)@Returns
+M:FanKit.Transformers.XML.SaveTransformerBorder(System.String,FanKit.Transformers.TransformerBorder)@Summary
+M:FanKit.Transformers.XML.SaveTransformerBorder(System.String,FanKit.Transformers.TransformerBorder)@Param@elementName
+M:FanKit.Transformers.XML.SaveTransformerBorder(System.String,FanKit.Transformers.TransformerBorder)@Param@border
+M:FanKit.Transformers.XML.SaveTransformerBorder(System.String,FanKit.Transformers.TransformerBorder)@Returns
+M:FanKit.Transformers.XML.LoadTransformerBorder(System.Xml.Linq.XElement)@Summary
+M:FanKit.Transformers.XML.LoadTransformerBorder(System.Xml.Linq.XElement)@Param@element
+M:FanKit.Transformers.XML.LoadTransformerBorder(System.Xml.Linq.XElement)@Returns
 M:FanKit.Transformers.XML.SaveVector2(System.String,System.Numerics.Vector2)@Summary
 M:FanKit.Transformers.XML.SaveVector2(System.String,System.Numerics.Vector2)@Param@elementName
 M:FanKit.Transformers.XML.SaveVector2(System.String,System.Numerics.Vector2)@Param@vector

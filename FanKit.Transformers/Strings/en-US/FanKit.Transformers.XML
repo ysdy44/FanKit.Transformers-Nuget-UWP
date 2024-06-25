@@ -3610,6 +3610,23 @@
         The loaded <see cref="T:FanKit.Transformers.Transformer"/>.
       </returns>
     </member>
+    <member name="M:FanKit.Transformers.XML.SaveTransformerBorder(System.String,FanKit.Transformers.TransformerBorder)">
+      <summary>
+        Saves the entire <see cref="T:FanKit.Transformers.TransformerBorder"/> to a XElement.
+      </summary>
+      <param name="elementName"> The element name. </param>
+      <param name="border"> The source data. </param>
+      <returns> The saved XElement. </returns>
+    </member>
+    <member name="M:FanKit.Transformers.XML.LoadTransformerBorder(System.Xml.Linq.XElement)">
+      <summary>
+        Loads a <see cref="T:FanKit.Transformers.TransformerBorder"/> from an XElement.
+      </summary>
+      <param name="element"> The source XElement. </param>
+      <returns>
+        The loaded <see cref="T:FanKit.Transformers.TransformerBorder"/>.
+      </returns>
+    </member>
     <member name="M:FanKit.Transformers.XML.SaveVector2(System.String,System.Numerics.Vector2)">
       <summary>
         Saves the entire <see cref="T:System.Numerics.Vector2"/> to a XElement.
