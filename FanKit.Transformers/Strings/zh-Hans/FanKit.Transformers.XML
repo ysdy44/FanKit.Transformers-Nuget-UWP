@@ -2812,7 +2812,7 @@
       <param name="right"> 向量。 </param>
       <returns> 从边界减去向量的结果边界。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.TransformerBorder.op_Multiply(FanKit.Transformers.TransformerBorder,System.Numerics.Matrix3x2)">
+    <member name="M:FanKit.Transformers.TransformerBorder.op_Multiply(FanKit.Transformers.TransformerBorder,System.Single)">
       <summary>
         以特定的缩放值乘以特定的边界。
       </summary>

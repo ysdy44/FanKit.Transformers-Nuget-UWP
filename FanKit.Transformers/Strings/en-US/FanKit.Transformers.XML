@@ -2812,7 +2812,7 @@
       <param name="right"> The vector. </param>
       <returns> The border that results from subtracting vector from border. </returns>
     </member>
-    <member name="M:FanKit.Transformers.TransformerBorder.op_Multiply(FanKit.Transformers.TransformerBorder,System.Numerics.Matrix3x2)">
+    <member name="M:FanKit.Transformers.TransformerBorder.op_Multiply(FanKit.Transformers.TransformerBorder,System.Single)">
       <summary>
         Multiples the specified border by the specified scalar value.
       </summary>
