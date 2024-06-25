@@ -2311,22 +2311,6 @@
       <param name="isSnapToTick"> Snap to tick when spinning. </param>
       <returns> The controlled transformer. </returns>
     </member>
-    <member name="M:FanKit.Transformers.Transformer.MoveRightBottom(System.Numerics.Vector2,System.Boolean)">
-      <summary>
-        Move the position of the bottom-right corner of the transformer.
-      </summary>
-      <param name="point"> The point. </param>
-      <param name="isConvexQuadrilateral"> Is the transformer is a convex quadrilateral? </param>
-      <returns> The product point. </returns>
-    </member>
-    <member name="M:FanKit.Transformers.Transformer.MoveLeftBottom(System.Numerics.Vector2,System.Boolean)">
-      <summary>
-        Move the position of the bottom-left corner of the transformer.
-      </summary>
-      <param name="point"> The point. </param>
-      <param name="isConvexQuadrilateral"> Is the transformer is a convex quadrilateral? </param>
-      <returns> The product point. </returns>
-    </member>
     <member name="M:FanKit.Transformers.Transformer.MoveLeftTop(System.Numerics.Vector2,System.Boolean)">
       <summary>
         Move the position of the top-left corner of the transformer.
@@ -2338,6 +2322,22 @@
     <member name="M:FanKit.Transformers.Transformer.MoveRightTop(System.Numerics.Vector2,System.Boolean)">
       <summary>
         Move the position of the top-right corner of the transformer.
+      </summary>
+      <param name="point"> The point. </param>
+      <param name="isConvexQuadrilateral"> Is the transformer is a convex quadrilateral? </param>
+      <returns> The product point. </returns>
+    </member>
+    <member name="M:FanKit.Transformers.Transformer.MoveRightBottom(System.Numerics.Vector2,System.Boolean)">
+      <summary>
+        Move the position of the bottom-right corner of the transformer.
+      </summary>
+      <param name="point"> The point. </param>
+      <param name="isConvexQuadrilateral"> Is the transformer is a convex quadrilateral? </param>
+      <returns> The product point. </returns>
+    </member>
+    <member name="M:FanKit.Transformers.Transformer.MoveLeftBottom(System.Numerics.Vector2,System.Boolean)">
+      <summary>
+        Move the position of the bottom-left corner of the transformer.
       </summary>
       <param name="point"> The point. </param>
       <param name="isConvexQuadrilateral"> Is the transformer is a convex quadrilateral? </param>
