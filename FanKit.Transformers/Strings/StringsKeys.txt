@@ -1565,3 +1565,15 @@ M:FanKit.Math.RadiansToVector(System.Single,System.Numerics.Vector2,System.Singl
 M:FanKit.Math.VectorToRadians(System.Numerics.Vector2)@Summary
 M:FanKit.Math.VectorToRadians(System.Numerics.Vector2)@Param@vector
 M:FanKit.Math.VectorToRadians(System.Numerics.Vector2)@Returns
+M:FanKit.Math.Rotate(System.Numerics.Vector2,System.Single,System.Single)@Summary
+M:FanKit.Math.Rotate(System.Numerics.Vector2,System.Single,System.Single)@Param@value
+M:FanKit.Math.Rotate(System.Numerics.Vector2,System.Single,System.Single)@Param@cos
+M:FanKit.Math.Rotate(System.Numerics.Vector2,System.Single,System.Single)@Param@sin
+M:FanKit.Math.Rotate(System.Numerics.Vector2,System.Single,System.Single)@Returns
+M:FanKit.Math.Rotate(System.Numerics.Vector2,System.Numerics.Vector2)@Summary
+M:FanKit.Math.Rotate(System.Numerics.Vector2,System.Numerics.Vector2)@Param@value
+M:FanKit.Math.Rotate(System.Numerics.Vector2,System.Numerics.Vector2)@Param@rotation
+M:FanKit.Math.Rotate(System.Numerics.Vector2,System.Numerics.Vector2)@Returns
+M:FanKit.Math.CreateRotation(System.Single)@Summary
+M:FanKit.Math.CreateRotation(System.Single)@Param@radians
+M:FanKit.Math.CreateRotation(System.Single)@Returns
