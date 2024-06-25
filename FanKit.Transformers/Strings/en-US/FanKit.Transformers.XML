@@ -820,12 +820,29 @@
       <param name="drawingSession"> The drawing-session. </param>
       <param name="point"> The point. </param>
     </member>
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Single,System.Single)">
+      <summary>
+        Draw a ⊙.
+      </summary>
+      <param name="drawingSession"> The drawing-session. </param>
+      <param name="x"> The X-axis value of the point. </param>
+      <param name="y"> The Y-axis position of the point. </param>
+    </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2,Windows.UI.Color)">
       <summary>
         Draw a ⊙.
       </summary>
       <param name="drawingSession"> The drawing-session. </param>
       <param name="point"> The point. </param>
+      <param name="accentColor"> The accent color. </param>
+    </member>
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Single,System.Single,Windows.UI.Color)">
+      <summary>
+        Draw a ⊙.
+      </summary>
+      <param name="drawingSession"> The drawing-session. </param>
+      <param name="x"> The X-axis value of the point. </param>
+      <param name="y"> The Y-axis position of the point. </param>
       <param name="accentColor"> The accent color. </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode2(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2)">
@@ -835,12 +852,29 @@
       <param name="drawingSession"> The drawing-session. </param>
       <param name="point"> The point. </param>
     </member>
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode2(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Single,System.Single)">
+      <summary>
+        Draw a ◉.
+      </summary>
+      <param name="drawingSession"> The drawing-session. </param>
+      <param name="x"> The X-axis value of the point. </param>
+      <param name="y"> The Y-axis position of the point. </param>
+    </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode2(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2,Windows.UI.Color)">
       <summary>
         Draw a ◉.
       </summary>
       <param name="drawingSession"> The drawing-session. </param>
       <param name="point"> The point. </param>
+      <param name="accentColor"> The accent color. </param>
+    </member>
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode2(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Single,System.Single,Windows.UI.Color)">
+      <summary>
+        Draw a ◉.
+      </summary>
+      <param name="drawingSession"> The drawing-session. </param>
+      <param name="x"> The X-axis value of the point. </param>
+      <param name="y"> The Y-axis position of the point. </param>
       <param name="accentColor"> The accent color. </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode3(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2)">
@@ -850,12 +884,29 @@
       <param name="drawingSession"> The drawing-session. </param>
       <param name="point"> The point. </param>
     </member>
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode3(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Single,System.Single)">
+      <summary>
+        Draw a ◻.
+      </summary>
+      <param name="drawingSession"> The drawing-session. </param>
+      <param name="x"> The X-axis value of the point. </param>
+      <param name="y"> The Y-axis position of the point. </param>
+    </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode3(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2,Windows.UI.Color)">
       <summary>
         Draw a ◻.
       </summary>
       <param name="drawingSession"> The drawing-session. </param>
       <param name="point"> The point. </param>
+      <param name="accentColor"> The accent color. </param>
+    </member>
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode3(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Single,System.Single,Windows.UI.Color)">
+      <summary>
+        Draw a ◻.
+      </summary>
+      <param name="drawingSession"> The drawing-session. </param>
+      <param name="x"> The X-axis value of the point. </param>
+      <param name="y"> The Y-axis position of the point. </param>
       <param name="accentColor"> The accent color. </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode4(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2)">
@@ -865,12 +916,29 @@
       <param name="drawingSession"> The drawing-session. </param>
       <param name="point"> The point. </param>
     </member>
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode4(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Single,System.Single)">
+      <summary>
+        Draw a ◼.
+      </summary>
+      <param name="drawingSession"> The drawing-session. </param>
+      <param name="x"> The X-axis value of the point. </param>
+      <param name="y"> The Y-axis position of the point. </param>
+    </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode4(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2,Windows.UI.Color)">
       <summary>
         Draw a ◼.
       </summary>
       <param name="drawingSession"> The drawing-session. </param>
       <param name="point"> The point. </param>
+      <param name="accentColor"> The accent color. </param>
+    </member>
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode4(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Single,System.Single,Windows.UI.Color)">
+      <summary>
+        Draw a ◼.
+      </summary>
+      <param name="drawingSession"> The drawing-session. </param>
+      <param name="x"> The X-axis value of the point. </param>
+      <param name="y"> The Y-axis position of the point. </param>
       <param name="accentColor"> The accent color. </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode5(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2)">
@@ -880,12 +948,29 @@
       <param name="drawingSession"> The drawing-session. </param>
       <param name="point"> The point. </param>
     </member>
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode5(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Single,System.Single)">
+      <summary>
+        Draw a ◌.
+      </summary>
+      <param name="drawingSession"> The drawing-session. </param>
+      <param name="x"> The X-axis value of the point. </param>
+      <param name="y"> The Y-axis position of the point. </param>
+    </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode5(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2,Windows.UI.Color)">
       <summary>
         Draw a ◌.
       </summary>
       <param name="drawingSession"> The drawing-session. </param>
       <param name="point"> The point. </param>
+      <param name="accentColor"> The accent color. </param>
+    </member>
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode5(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Single,System.Single,Windows.UI.Color)">
+      <summary>
+        Draw a ◌.
+      </summary>
+      <param name="drawingSession"> The drawing-session. </param>
+      <param name="x"> The X-axis value of the point. </param>
+      <param name="y"> The Y-axis position of the point. </param>
       <param name="accentColor"> The accent color. </param>
     </member>
     <member name="F:FanKit.Transformers.CanvasDrawingSessionExtensions.ShadowColor">

@@ -820,12 +820,29 @@
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="point"> 点。 </param>
     </member>
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Single,System.Single)">
+      <summary>
+        绘制 ⊙。
+      </summary>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="x"> 点的 X 轴值。 </param>
+      <param name="y"> 点的 Y 轴位置。 </param>
+    </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2,Windows.UI.Color)">
       <summary>
         绘制 ⊙。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="point"> 点。 </param>
+      <param name="accentColor"> 强调色。 </param>
+    </member>
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Single,System.Single,Windows.UI.Color)">
+      <summary>
+        绘制 ⊙。
+      </summary>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="x"> 点的 X 轴值。 </param>
+      <param name="y"> 点的 Y 轴位置。 </param>
       <param name="accentColor"> 强调色。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode2(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2)">
@@ -835,12 +852,29 @@
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="point"> 点。 </param>
     </member>
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode2(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Single,System.Single)">
+      <summary>
+        绘制 ◉。
+      </summary>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="x"> 点的 X 轴值。 </param>
+      <param name="y"> 点的 Y 轴位置。 </param>
+    </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode2(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2,Windows.UI.Color)">
       <summary>
         绘制 ◉。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="point"> 点。 </param>
+      <param name="accentColor"> 强调色。 </param>
+    </member>
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode2(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Single,System.Single,Windows.UI.Color)">
+      <summary>
+        绘制 ◉。
+      </summary>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="x"> 点的 X 轴值。 </param>
+      <param name="y"> 点的 Y 轴位置。 </param>
       <param name="accentColor"> 强调色。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode3(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2)">
@@ -850,12 +884,29 @@
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="point"> 点。 </param>
     </member>
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode3(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Single,System.Single)">
+      <summary>
+        绘制 ◻。
+      </summary>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="x"> 点的 X 轴值。 </param>
+      <param name="y"> 点的 Y 轴位置。 </param>
+    </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode3(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2,Windows.UI.Color)">
       <summary>
         绘制 ◻。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="point"> 点。 </param>
+      <param name="accentColor"> 强调色。 </param>
+    </member>
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode3(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Single,System.Single,Windows.UI.Color)">
+      <summary>
+        绘制 ◻。
+      </summary>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="x"> 点的 X 轴值。 </param>
+      <param name="y"> 点的 Y 轴位置。 </param>
       <param name="accentColor"> 强调色。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode4(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2)">
@@ -865,12 +916,29 @@
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="point"> 点。 </param>
     </member>
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode4(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Single,System.Single)">
+      <summary>
+        绘制 ◼。
+      </summary>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="x"> 点的 X 轴值。 </param>
+      <param name="y"> 点的 Y 轴位置。 </param>
+    </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode4(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2,Windows.UI.Color)">
       <summary>
         绘制 ◼。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="point"> 点。 </param>
+      <param name="accentColor"> 强调色。 </param>
+    </member>
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode4(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Single,System.Single,Windows.UI.Color)">
+      <summary>
+        绘制 ◼。
+      </summary>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="x"> 点的 X 轴值。 </param>
+      <param name="y"> 点的 Y 轴位置。 </param>
       <param name="accentColor"> 强调色。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode5(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2)">
@@ -880,12 +948,29 @@
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="point"> 点。 </param>
     </member>
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode5(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Single,System.Single)">
+      <summary>
+        绘制 ◌。
+      </summary>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="x"> 点的 X 轴值。 </param>
+      <param name="y"> 点的 Y 轴位置。 </param>
+    </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode5(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2,Windows.UI.Color)">
       <summary>
         绘制 ◌。
       </summary>
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="point"> 点。 </param>
+      <param name="accentColor"> 强调色。 </param>
+    </member>
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawNode5(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Single,System.Single,Windows.UI.Color)">
+      <summary>
+        绘制 ◌。
+      </summary>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="x"> 点的 X 轴值。 </param>
+      <param name="y"> 点的 Y 轴位置。 </param>
       <param name="accentColor"> 强调色。 </param>
     </member>
     <member name="F:FanKit.Transformers.CanvasDrawingSessionExtensions.ShadowColor">
