@@ -141,6 +141,7 @@
     <Compile Include="Extensions\CanvasDrawingSessionExtensions.NodeCollection.cs" />
     <Compile Include="Extensions\CanvasDrawingSessionExtensions.Ruler.cs" />
     <Compile Include="Extensions\CanvasDrawingSessionExtensions.Transformer.cs" />
+    <Compile Include="Extensions\CanvasDrawingSessionExtensions.TransformerBorder.cs" />
     <Compile Include="Extensions\IndicatorModeExtensions.cs" />
     <Compile Include="Handlers\IndicatorModeHandler.cs" />
     <Compile Include="Handlers\RemoteVectorHandler.cs" />
