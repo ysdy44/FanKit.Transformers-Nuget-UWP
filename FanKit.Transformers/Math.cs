@@ -46,6 +46,14 @@ namespace FanKit
         /// <returns> Return **true** if the distance exceeds [NodeRadius], otherwise **false**. </returns>
         public static bool InNodeRadius(Vector2 point0, Vector2 point1) => Math.DistanceSquared(point0.X, point0.Y, point1.X, point1.Y) < Math.NodeRadiusSquare;
 
+        /// <summary>
+        /// Whether the distance exceeds [NodeRadius]. Default: 144.
+        /// </summary>
+        /// <param name="x0"> The X-axis value of the first point. </param>
+        /// <param name="y0"> The Y-axis position of the first point. </param>
+        /// <param name="x1"> The X-axis value of the second point. </param>
+        /// <param name="y1"> The Y-axis position of the second point. </param>
+        /// <returns> Return **true** if the distance exceeds [NodeRadius], otherwise **false**. </returns>
         public static bool InNodeRadius(float x0, float y0, float x1, float y1) => Math.DistanceSquared(x0, y0, x1, y1) < Math.NodeRadiusSquare;
 
         /// <summary>
@@ -56,6 +64,14 @@ namespace FanKit
         /// <returns> Return **true** if the distance's LengthSquared exceeds [NodeDistance], otherwise **false**. </returns>
         public static bool OutNodeDistance(Vector2 point0, Vector2 point1) => Math.DistanceSquared(point0.X, point0.Y, point1.X, point1.Y) > Math.NodeDistanceSquare;
 
+        /// <summary>
+        /// Whether the distance's LengthSquared exceeds [NodeDistance]. Default: 400.
+        /// </summary>
+        /// <param name="x0"> The X-axis value of the first point. </param>
+        /// <param name="y0"> The Y-axis position of the first point. </param>
+        /// <param name="x1"> The X-axis value of the second point. </param>
+        /// <param name="y1"> The Y-axis position of the second point. </param>
+        /// <returns> Return **true** if the distance's LengthSquared exceeds [NodeDistance], otherwise **false**. </returns>
         public static bool OutNodeDistance(float x0, float y0, float x1, float y1) => Math.DistanceSquared(x0, y0, x1, y1) > Math.NodeDistanceSquare;
 
         /// <summary>

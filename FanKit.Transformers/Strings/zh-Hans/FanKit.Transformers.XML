@@ -3872,12 +3872,32 @@
       <param name="point1"> 第二个点。 </param>
       <returns> 如果距离超过[节点半径]，则返回**true**，否则返回**false**。 </returns>
     </member>
+    <member name="M:FanKit.Math.InNodeRadius(System.Numerics.Vector2,System.Numerics.Vector2)">
+      <summary>
+        距离是否超过[节点半径]。最低：144。
+      </summary>
+      <param name="x0"> 第一个点的 X 轴值。 </param>
+      <param name="y0"> 第一个点的 Y 轴位置。 </param>
+      <param name="x1"> 第二个点的 X 轴值。 </param>
+      <param name="y1"> 第二个点的 Y 轴位置。 </param>
+      <returns> 如果距离超过[节点半径]，则返回**true**，否则返回**false**。 </returns>
+    </member>
     <member name="M:FanKit.Math.OutNodeDistance(System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>
         距离的长度平方是否超过[节点距离]。默认：400
       </summary>
       <param name="point0"> 第一个点。 </param>
       <param name="point1"> 第二个点。 </param>
+      <returns> 如果长度平方'的距离超过[节点距离]，则返回**true**，否则返回**false**。 </returns>
+    </member>
+    <member name="M:FanKit.Math.OutNodeDistance(System.Numerics.Vector2,System.Numerics.Vector2)">
+      <summary>
+        距离的长度平方是否超过[节点距离]。默认：400
+      </summary>
+      <param name="x0"> 第一个点的 X 轴值。 </param>
+      <param name="y0"> 第一个点的 Y 轴位置。 </param>
+      <param name="x1"> 第二个点的 X 轴值。 </param>
+      <param name="y1"> 第二个点的 Y 轴位置。 </param>
       <returns> 如果长度平方'的距离超过[节点距离]，则返回**true**，否则返回**false**。 </returns>
     </member>
     <member name="M:FanKit.Math.GetOutsidePointInTransformer(System.Numerics.Vector2,System.Numerics.Vector2)">

@@ -3872,12 +3872,32 @@
       <param name="point1"> The second point. </param>
       <returns> Return **true** if the distance exceeds [NodeRadius], otherwise **false**. </returns>
     </member>
+    <member name="M:FanKit.Math.InNodeRadius(System.Numerics.Vector2,System.Numerics.Vector2)">
+      <summary>
+        Whether the distance exceeds [NodeRadius]. Default: 144.
+      </summary>
+      <param name="x0"> The X-axis value of the first point. </param>
+      <param name="y0"> The Y-axis position of the first point. </param>
+      <param name="x1"> The X-axis value of the second point. </param>
+      <param name="y1"> The Y-axis position of the second point. </param>
+      <returns> Return **true** if the distance exceeds [NodeRadius], otherwise **false**. </returns>
+    </member>
     <member name="M:FanKit.Math.OutNodeDistance(System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>
         Whether the distance's LengthSquared exceeds [NodeDistance]. Default: 400.
       </summary>
       <param name="point0"> The first point. </param>
       <param name="point1"> The second point. </param>
+      <returns> Return **true** if the distance's LengthSquared exceeds [NodeDistance], otherwise **false**. </returns>
+    </member>
+    <member name="M:FanKit.Math.OutNodeDistance(System.Numerics.Vector2,System.Numerics.Vector2)">
+      <summary>
+        Whether the distance's LengthSquared exceeds [NodeDistance]. Default: 400.
+      </summary>
+      <param name="x0"> The X-axis value of the first point. </param>
+      <param name="y0"> The Y-axis position of the first point. </param>
+      <param name="x1"> The X-axis value of the second point. </param>
+      <param name="y1"> The Y-axis position of the second point. </param>
       <returns> Return **true** if the distance's LengthSquared exceeds [NodeDistance], otherwise **false**. </returns>
     </member>
     <member name="M:FanKit.Math.GetOutsidePointInTransformer(System.Numerics.Vector2,System.Numerics.Vector2)">
