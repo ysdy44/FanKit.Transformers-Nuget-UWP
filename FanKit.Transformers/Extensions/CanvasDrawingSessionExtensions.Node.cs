@@ -34,6 +34,7 @@ namespace FanKit.Transformers
         /// <param name="drawingSession"> The drawing-session. </param>
         /// <param name="x"> The X-axis value of the point. </param>
         /// <param name="y"> The Y-axis position of the point. </param>
+        /// <param name="accentColor"> The accent color. </param>
         public static void DrawNode(this CanvasDrawingSession drawingSession, float x, float y, Windows.UI.Color accentColor) => CanvasDrawingSessionExtensions.DrawNode1Core(drawingSession, x, y, accentColor);
 
         private static void DrawNode1Core(CanvasDrawingSession drawingSession, float x, float y, Windows.UI.Color accentColor)
