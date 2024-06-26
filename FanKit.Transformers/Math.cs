@@ -34,13 +34,17 @@ namespace FanKit
         private const float NodeDistanceSquare = Math.NodeDistance * Math.NodeDistance;
         private const float NodeDistanceDouble = Math.NodeDistance + Math.NodeDistance;
 
+        private static float LengthSquared(float x, float y) => x * x + y * y;
+
+        private static float DistanceSquared(float x0, float y0, float x1, float y1) => Math.LengthSquared(x1 - x0, y1 - y0);
+
         /// <summary>
         /// Whether the distance exceeds [NodeRadius]. Default: 144.
         /// </summary>
         /// <param name="point0"> The first point. </param>
         /// <param name="point1"> The second point. </param>
         /// <returns> Return **true** if the distance exceeds [NodeRadius], otherwise **false**. </returns>
-        public static bool InNodeRadius(Vector2 point0, Vector2 point1) => (point0 - point1).LengthSquared() < Math.NodeRadiusSquare;
+        public static bool InNodeRadius(Vector2 point0, Vector2 point1) => Math.DistanceSquared(point0.X, point0.Y, point1.X, point1.Y) < Math.NodeRadiusSquare;
 
         /// <summary>
         /// Whether the distance's LengthSquared exceeds [NodeDistance]. Default: 400.
@@ -48,7 +52,7 @@ namespace FanKit
         /// <param name="point0"> The first point. </param>
         /// <param name="point1"> The second point. </param>
         /// <returns> Return **true** if the distance's LengthSquared exceeds [NodeDistance], otherwise **false**. </returns>
-        public static bool OutNodeDistance(Vector2 point0, Vector2 point1) => (point0 - point1).LengthSquared() > Math.NodeDistanceSquare;
+        public static bool OutNodeDistance(Vector2 point0, Vector2 point1) => Math.DistanceSquared(point0.X, point0.Y, point1.X, point1.Y) > Math.NodeDistanceSquare;
 
         /// <summary>
         /// Get outside point in a line on a transformer.
