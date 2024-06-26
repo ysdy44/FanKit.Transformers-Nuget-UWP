@@ -746,6 +746,16 @@
       <param name="point0"> 第一个点。 </param>
       <param name="point1"> 第二个点。 </param>
     </member>
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawLineDodgerBlue(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Single,System.Single,System.Single,System.Single)">
+      <summary>
+        绘制线带着兰色颜色。
+      </summary>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="x0"> 第一个点的 X 轴值。 </param>
+      <param name="y0"> 第一个点的 Y 轴位置。 </param>
+      <param name="x1"> 第二个点的 X 轴值。 </param>
+      <param name="y1"> 第二个点的 Y 轴位置。 </param>
+    </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawThickLine(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>
         绘制粗线。
@@ -753,6 +763,16 @@
       <param name="drawingSession"> 绘制会话。 </param>
       <param name="point0"> 第一个点。 </param>
       <param name="point1"> 第二个点。 </param>
+    </member>
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawThickLine(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Single,System.Single,System.Single,System.Single)">
+      <summary>
+        绘制粗线。
+      </summary>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="x0"> 第一个点的 X 轴值。 </param>
+      <param name="y0"> 第一个点的 Y 轴位置。 </param>
+      <param name="x1"> 第二个点的 X 轴值。 </param>
+      <param name="y1"> 第二个点的 Y 轴位置。 </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawEllipseDodgerBlue(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2,System.Single,System.Single)">
       <summary>

@@ -23,6 +23,16 @@ namespace FanKit.Transformers
         public static void DrawLineDodgerBlue(this CanvasDrawingSession drawingSession, Vector2 point0, Vector2 point1) => drawingSession.DrawLine(point0, point1, Windows.UI.Colors.DodgerBlue);
 
         /// <summary>
+        /// Draw a line and the DodgerBlue color.
+        /// </summary>
+        /// <param name="drawingSession"> The drawing-session. </param>
+        /// <param name="x0"> The X-axis value of the first point. </param>
+        /// <param name="y0"> The Y-axis position of the first point. </param>
+        /// <param name="x1"> The X-axis value of the second point. </param>
+        /// <param name="y1"> The Y-axis position of the second point. </param>
+        public static void DrawLineDodgerBlue(this CanvasDrawingSession drawingSession, float x0, float y0, float x1, float y1) => drawingSession.DrawLine(x0, y0, x1, y1, Windows.UI.Colors.DodgerBlue);
+
+        /// <summary>
         /// Draw a thick line.
         /// </summary>
         /// <param name="drawingSession"> The drawing-session. </param>
@@ -32,6 +42,20 @@ namespace FanKit.Transformers
         {
             drawingSession.DrawLine(point0, point1, Windows.UI.Colors.Black, 2);
             drawingSession.DrawLine(point0, point1, Windows.UI.Colors.White);
+        }
+
+        /// <summary>
+        /// Draw a thick line.
+        /// </summary>
+        /// <param name="drawingSession"> The drawing-session. </param>
+        /// <param name="x0"> The X-axis value of the first point. </param>
+        /// <param name="y0"> The Y-axis position of the first point. </param>
+        /// <param name="x1"> The X-axis value of the second point. </param>
+        /// <param name="y1"> The Y-axis position of the second point. </param>
+        public static void DrawThickLine(this CanvasDrawingSession drawingSession, float x0, float y0, float x1, float y1)
+        {
+            drawingSession.DrawLine(x0, y0, x1, y1, Windows.UI.Colors.Black, 2);
+            drawingSession.DrawLine(x0, y0, x1, y1, Windows.UI.Colors.White);
         }
 
 

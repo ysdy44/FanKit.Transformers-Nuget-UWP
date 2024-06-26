@@ -746,6 +746,16 @@
       <param name="point0"> The first point. </param>
       <param name="point1"> The second point. </param>
     </member>
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawLineDodgerBlue(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Single,System.Single,System.Single,System.Single)">
+      <summary>
+        Draw a line and the DodgerBlue color.
+      </summary>
+      <param name="drawingSession"> The drawing-session. </param>
+      <param name="x0"> The X-axis value of the first point. </param>
+      <param name="y0"> The Y-axis position of the first point. </param>
+      <param name="x1"> The X-axis value of the second point. </param>
+      <param name="y1"> The Y-axis position of the second point. </param>
+    </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawThickLine(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>
         Draw a thick line.
@@ -753,6 +763,16 @@
       <param name="drawingSession"> The drawing-session. </param>
       <param name="point0"> The first point. </param>
       <param name="point1"> The second point. </param>
+    </member>
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawThickLine(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Single,System.Single,System.Single,System.Single)">
+      <summary>
+        Draw a thick line.
+      </summary>
+      <param name="drawingSession"> The drawing-session. </param>
+      <param name="x0"> The X-axis value of the first point. </param>
+      <param name="y0"> The Y-axis position of the first point. </param>
+      <param name="x1"> The X-axis value of the second point. </param>
+      <param name="y1"> The Y-axis position of the second point. </param>
     </member>
     <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawEllipseDodgerBlue(Microsoft.Graphics.Canvas.CanvasDrawingSession,System.Numerics.Vector2,System.Single,System.Single)">
       <summary>
