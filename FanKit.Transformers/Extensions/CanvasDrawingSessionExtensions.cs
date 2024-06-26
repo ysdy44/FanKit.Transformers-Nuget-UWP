@@ -21,6 +21,7 @@ namespace FanKit.Transformers
         /// <param name="point0"> The first point. </param>
         /// <param name="point1"> The second point. </param>
         public static void DrawLineDodgerBlue(this CanvasDrawingSession drawingSession, Vector2 point0, Vector2 point1) => drawingSession.DrawLine(point0, point1, Windows.UI.Colors.DodgerBlue);
+
         /// <summary>
         /// Draw a thick line.
         /// </summary>
@@ -46,6 +47,7 @@ namespace FanKit.Transformers
             drawingSession.DrawEllipse(centerPoint, radiusX, radiusY, Windows.UI.Colors.DodgerBlue);
             drawingSession.FillEllipse(centerPoint, radiusX, radiusY, CanvasDrawingSessionExtensions.TranslucentDodgerBlue);
         }
+
         /// <summary>
         /// Draw a thick ellipse.
         /// </summary>
@@ -70,6 +72,7 @@ namespace FanKit.Transformers
             drawingSession.DrawRectangle(rect, Windows.UI.Colors.DodgerBlue);
             drawingSession.FillRectangle(rect, CanvasDrawingSessionExtensions.TranslucentDodgerBlue);
         }
+
         /// <summary>
         /// Draw a thick rectangle.
         /// </summary>
@@ -92,6 +95,7 @@ namespace FanKit.Transformers
             drawingSession.DrawGeometry(canvasGeometry, Windows.UI.Colors.DodgerBlue);
             drawingSession.FillGeometry(canvasGeometry, CanvasDrawingSessionExtensions.TranslucentDodgerBlue);
         }
+
         /// <summary>
         /// Draw a thick geometry.
         /// </summary>
@@ -102,7 +106,6 @@ namespace FanKit.Transformers
             drawingSession.DrawGeometry(canvasGeometry, Windows.UI.Colors.Black, 2);
             drawingSession.DrawGeometry(canvasGeometry, Windows.UI.Colors.White);
         }
-
 
     }
 }

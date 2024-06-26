@@ -41,6 +41,7 @@ namespace FanKit.Transformers
         /// <param name="accentColor"> The accent color. </param>
         public static void DrawBound(this CanvasDrawingSession drawingSession, Transformer transformer, Matrix3x2 matrix, Windows.UI.Color accentColor) => CanvasDrawingSessionExtensions.DrawBoundCore(drawingSession, Vector2.Transform(transformer.LeftTop, matrix), Vector2.Transform(transformer.RightTop, matrix), Vector2.Transform(transformer.RightBottom, matrix), Vector2.Transform(transformer.LeftBottom, matrix), accentColor);
 
+
         private static void DrawBoundCore(CanvasDrawingSession drawingSession, Vector2 leftTop, Vector2 rightTop, Vector2 rightBottom, Vector2 leftBottom, Windows.UI.Color accentColor)
         {
             drawingSession.DrawLine(leftTop, rightTop, accentColor);
@@ -91,6 +92,7 @@ namespace FanKit.Transformers
         /// <param name="accentColor"> The accent color. </param>
         /// <param name="disabledRadian"> Disable the rotation angle. </param>
         public static void DrawBoundNodes(this CanvasDrawingSession drawingSession, Transformer transformer, Matrix3x2 matrix, Windows.UI.Color accentColor, bool disabledRadian = false) => CanvasDrawingSessionExtensions.DrawBoundNodesCore(drawingSession, Vector2.Transform(transformer.LeftTop, matrix), Vector2.Transform(transformer.RightTop, matrix), Vector2.Transform(transformer.RightBottom, matrix), Vector2.Transform(transformer.LeftBottom, matrix), accentColor, disabledRadian);
+
 
         private static void DrawBoundNodesCore(CanvasDrawingSession drawingSession, Vector2 leftTop, Vector2 rightTop, Vector2 rightBottom, Vector2 leftBottom, Windows.UI.Color accentColor, bool disabledRadian)
         {
@@ -193,6 +195,7 @@ namespace FanKit.Transformers
             Vector2 centerBottom = (leftBottom + rightBottom) / 2;
 
             // Vertical Horizontal
+            /*
             Vector2 vertical = centerBottom - centerTop;
             Vector2 horizontal = centerRight - centerLeft;
 
@@ -206,6 +209,7 @@ namespace FanKit.Transformers
             const float space = 2;
             Vector2 verticalSpace = verticalUnit * space;
             Vector2 horizontalSpace = horizontalUnit * space;
+             */
 
             // Scale2
             {
