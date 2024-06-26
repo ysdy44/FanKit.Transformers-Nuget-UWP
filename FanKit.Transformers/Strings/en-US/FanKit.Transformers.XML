@@ -1332,6 +1332,51 @@
       <param name="matrix"> The matrix. </param>
       <param name="accentColor"> The accent color. </param>
     </member>
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawBound(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.TransformerBorder)">
+      <summary>
+        Draw lines on bound.
+      </summary>
+      <param name="drawingSession"> The drawing-session. </param>
+      <param name="border"> The border. </param>
+    </member>
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawBound(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.TransformerBorder,Windows.UI.Color)">
+      <summary>
+        Draw lines on bound.
+      </summary>
+      <param name="drawingSession"> The drawing-session. </param>
+      <param name="border"> The border. </param>
+      <param name="accentColor"> The accent color. </param>
+    </member>
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawBoundNodes(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.TransformerBorder)">
+      <summary>
+        Draw nodes and lines on bound，just like【由】.
+      </summary>
+      <param name="drawingSession"> The drawing-session. </param>
+      <param name="border"> The border. </param>
+    </member>
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawBoundNodes(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.TransformerBorder,Windows.UI.Color)">
+      <summary>
+        Draw nodes and lines on bound，just like【由】.
+      </summary>
+      <param name="drawingSession"> The drawing-session. </param>
+      <param name="border"> The border. </param>
+      <param name="accentColor"> The accent color. </param>
+    </member>
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrop(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.TransformerBorder)">
+      <summary>
+        Draw box and lines on bound，just like 🔳.
+      </summary>
+      <param name="drawingSession"> The drawing-session. </param>
+      <param name="border"> The border. </param>
+    </member>
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrop(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.TransformerBorder,Windows.UI.Color)">
+      <summary>
+        Draw box and lines on bound，just like 🔳.
+      </summary>
+      <param name="drawingSession"> The drawing-session. </param>
+      <param name="border"> The border. </param>
+      <param name="accentColor"> The accent color. </param>
+    </member>
     <member name="T:FanKit.Transformers.IndicatorModeExtensions">
       <summary>
         Extensions of <see cref="T:FanKit.Transformers.IndicatorMode"/>.

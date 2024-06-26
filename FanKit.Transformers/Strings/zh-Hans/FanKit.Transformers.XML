@@ -1332,6 +1332,51 @@
       <param name="matrix"> 矩阵。 </param>
       <param name="accentColor"> 强调色。 </param>
     </member>
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawBound(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.TransformerBorder)">
+      <summary>
+        在边界上画线。
+      </summary>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="border"> 边界。 </param>
+    </member>
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawBound(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.TransformerBorder,Windows.UI.Color)">
+      <summary>
+        在边界上画线。
+      </summary>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="border"> 边界。 </param>
+      <param name="accentColor"> 强调色。 </param>
+    </member>
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawBoundNodes(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.TransformerBorder)">
+      <summary>
+        在边界上绘制节点和线，就像【由】一样。
+      </summary>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="border"> 边界。 </param>
+    </member>
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawBoundNodes(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.TransformerBorder,Windows.UI.Color)">
+      <summary>
+        在边界上绘制节点和线，就像【由】一样。
+      </summary>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="border"> 边界。 </param>
+      <param name="accentColor"> 强调色。 </param>
+    </member>
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrop(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.TransformerBorder)">
+      <summary>
+        在边界上绘制节点和线，就像 🔳一样。
+      </summary>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="border"> 边界。 </param>
+    </member>
+    <member name="M:FanKit.Transformers.CanvasDrawingSessionExtensions.DrawCrop(Microsoft.Graphics.Canvas.CanvasDrawingSession,FanKit.Transformers.TransformerBorder,Windows.UI.Color)">
+      <summary>
+        在边界上绘制节点和线，就像 🔳一样。
+      </summary>
+      <param name="drawingSession"> 绘制会话。 </param>
+      <param name="border"> 边界。 </param>
+      <param name="accentColor"> 强调色。 </param>
+    </member>
     <member name="T:FanKit.Transformers.IndicatorModeExtensions">
       <summary>
         <see cref="T:FanKit.Transformers.IndicatorMode"/> 的扩展。
