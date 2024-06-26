@@ -46,6 +46,8 @@ namespace FanKit
         /// <returns> Return **true** if the distance exceeds [NodeRadius], otherwise **false**. </returns>
         public static bool InNodeRadius(Vector2 point0, Vector2 point1) => Math.DistanceSquared(point0.X, point0.Y, point1.X, point1.Y) < Math.NodeRadiusSquare;
 
+        public static bool InNodeRadius(float x0, float y0, float x1, float y1) => Math.DistanceSquared(x0, y0, x1, y1) < Math.NodeRadiusSquare;
+
         /// <summary>
         /// Whether the distance's LengthSquared exceeds [NodeDistance]. Default: 400.
         /// </summary>
@@ -53,6 +55,8 @@ namespace FanKit
         /// <param name="point1"> The second point. </param>
         /// <returns> Return **true** if the distance's LengthSquared exceeds [NodeDistance], otherwise **false**. </returns>
         public static bool OutNodeDistance(Vector2 point0, Vector2 point1) => Math.DistanceSquared(point0.X, point0.Y, point1.X, point1.Y) > Math.NodeDistanceSquare;
+
+        public static bool OutNodeDistance(float x0, float y0, float x1, float y1) => Math.DistanceSquared(x0, y0, x1, y1) > Math.NodeDistanceSquare;
 
         /// <summary>
         /// Get outside point in a line on a transformer.
