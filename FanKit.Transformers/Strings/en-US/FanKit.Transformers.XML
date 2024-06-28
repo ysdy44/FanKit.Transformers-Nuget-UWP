@@ -3043,6 +3043,38 @@
       <param name="borderMode"> The border mode. </param>
       <returns> The produced value. </returns>
     </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.ContainsNodeMode(System.Numerics.Vector2,FanKit.Transformers.TransformerBorder)">
+      <summary>
+        Gets the all nodes by the border contains the specified point.
+      </summary>
+      <param name="point"> The input point. </param>
+      <param name="border"> The source border. </param>
+      <returns> The border-mode. </returns>
+    </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.FillContainsPoint(System.Numerics.Vector2)">
+      <summary>
+        Returns whether the area filled by the border contains the specified point.
+      </summary>
+      <param name="point"> The point. </param>
+      <returns> Return **true** if the area filled by the border contains the specified point, otherwise **false**. </returns>
+    </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.Contained(System.Single,System.Single,System.Single,System.Single)">
+      <summary>
+        Returns whether the border was contained in the rectangle.
+      </summary>
+      <param name="left"> The X-axis value of the left side of the destination rectangle. </param>
+      <param name="top"> The Y-axis position of the top of the destination rectangle. </param>
+      <param name="right"> The X-axis value of the right side of the destination rectangle. </param>
+      <param name="bottom"> The Y-axis position of the bottom of the destination rectangle. </param>
+      <returns> Return **true** if the border was contained in rectangle, otherwise **false**. </returns>
+    </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.Contained(FanKit.Transformers.TransformerBorder)">
+      <summary>
+        The border was contained in a rectangle.
+      </summary>
+      <param name="rect"> The destination rectangle. </param>
+      <returns> Return **true** if the border was contained in rectangle, otherwise **false**. </returns>
+    </member>
     <member name="T:FanKit.Transformers.BorderBorderSnap">
       <summary>
         Snapping tool for <see cref="T:FanKit.Transformers.TransformerBorder"/>.

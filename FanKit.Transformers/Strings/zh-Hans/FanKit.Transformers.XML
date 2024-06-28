@@ -3043,6 +3043,38 @@
       <param name="borderMode"> 边界模式。 </param>
       <returns> 产生的值。 </returns>
     </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.ContainsNodeMode(System.Numerics.Vector2,FanKit.Transformers.TransformerBorder)">
+      <summary>
+        通过包含指定点的边界获取所有节点。
+      </summary>
+      <param name="point"> 输入点。 </param>
+      <param name="border"> 源边界。 </param>
+      <returns> 边界模式。 </returns>
+    </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.FillContainsPoint(System.Numerics.Vector2)">
+      <summary>
+        返回由边界填充的区域是否包含指定的点。
+      </summary>
+      <param name="point"> 点。 </param>
+      <returns> 如果边界填充的区域包含指定点，则返回**true**，否则返回**false**。 </returns>
+    </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.Contained(System.Single,System.Single,System.Single,System.Single)">
+      <summary>
+        返回该边界是否包含在矩形中。
+      </summary>
+      <param name="left"> 目标矩形的左侧的 X 轴值。 </param>
+      <param name="top"> 目标矩形的顶部的 Y 轴位置。 </param>
+      <param name="right"> 目标矩形的右侧的 X 轴值。 </param>
+      <param name="bottom"> 目标矩形的底部的 Y 轴位置。 </param>
+      <returns> 如果边界包含在矩形中，则返回**true**，否则返回**false**。 </returns>
+    </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.Contained(FanKit.Transformers.TransformerBorder)">
+      <summary>
+        边界包含在一个矩形中。
+      </summary>
+      <param name="rect"> 目标矩形。 </param>
+      <returns> 如果边界包含在矩形中，则返回**true**，否则返回**false**。 </returns>
+    </member>
     <member name="T:FanKit.Transformers.BorderBorderSnap">
       <summary>
         <see cref="T:FanKit.Transformers.TransformerBorder"/> 的吸附工具。
