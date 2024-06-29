@@ -34,7 +34,11 @@ namespace FanKit
         private const float NodeDistanceSquare = Math.NodeDistance * Math.NodeDistance;
         private const float NodeDistanceDouble = Math.NodeDistance + Math.NodeDistance;
 
+        internal static float Length(float x, float y) => System.MathF.Sqrt(LengthSquared(x, y));
+
         internal static float LengthSquared(float x, float y) => x * x + y * y;
+
+        internal static float Distance(float x0, float y0, float x1, float y1) => Length(x1 - x0, y1 - y0);
 
         internal static float DistanceSquared(float x0, float y0, float x1, float y1) => Math.LengthSquared(x1 - x0, y1 - y0);
 
@@ -184,6 +188,21 @@ namespace FanKit
             {
                 X = point0.X - x * p / s,
                 Y = point0.Y - y * p / s
+            };
+        }
+
+        public static Vector2 FootPoint(Vector2 point, float x0, float y0, float x1, float y1)
+        {
+            float x = x0 - x1;
+            float y = y0 - y1;
+
+            float s = x * x + y * y;
+            float p = (y0 - point.Y) * y + (x0 - point.X) * x;
+
+            return new Vector2
+            {
+                X = x0 - x * p / s,
+                Y = y0 - y * p / s
             };
         }
 
