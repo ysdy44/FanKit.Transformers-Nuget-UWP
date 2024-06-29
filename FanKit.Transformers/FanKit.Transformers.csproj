@@ -191,6 +191,7 @@
     <Compile Include="Transformer.Property.cs" />
     <Compile Include="Transformer.XYWHRS.cs" />
     <Compile Include="TransformerBorder.Contains.cs" />
+    <Compile Include="TransformerBorder.Controller.cs" />
     <Compile Include="TransformerBorder.cs" />
     <Compile Include="TransformerBorder.Property.cs" />
     <Compile Include="TransformerGeometrys\GeometryArrowTailType.cs" />
