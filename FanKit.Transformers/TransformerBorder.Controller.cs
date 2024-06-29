@@ -5,6 +5,16 @@ namespace FanKit.Transformers
     partial struct TransformerBorder
     {
 
+        /// <summary>
+        /// It controls the transformation of border.
+        /// </summary>
+        /// <param name="mode"> The mode. </param>
+        /// <param name="startingPoint"> The starting point. </param>
+        /// <param name="point"> The point. </param>
+        /// <param name="startingBorder"> The starting border. </param>
+        /// <param name="isRatio"> Maintain a ratio when scaling. </param>
+        /// <param name="isCenter"> Scaling around the center. </param>
+        /// <returns> The controlled border. </returns>
         public static TransformerBorder Controller(TransformerMode mode, Vector2 startingPoint, Vector2 point, TransformerBorder startingBorder, bool isRatio = false, bool isCenter = false)
         {
             switch (mode)

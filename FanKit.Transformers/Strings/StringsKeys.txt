@@ -1233,6 +1233,14 @@ M:FanKit.Transformers.TransformerBorder.Contained(System.Single,System.Single,Sy
 M:FanKit.Transformers.TransformerBorder.Contained(FanKit.Transformers.TransformerBorder)@Summary
 M:FanKit.Transformers.TransformerBorder.Contained(FanKit.Transformers.TransformerBorder)@Param@rect
 M:FanKit.Transformers.TransformerBorder.Contained(FanKit.Transformers.TransformerBorder)@Returns
+M:FanKit.Transformers.TransformerBorder.Controller(FanKit.Transformers.TransformerMode,System.Numerics.Vector2,System.Numerics.Vector2,FanKit.Transformers.TransformerBorder,System.Boolean,System.Boolean)@Summary
+M:FanKit.Transformers.TransformerBorder.Controller(FanKit.Transformers.TransformerMode,System.Numerics.Vector2,System.Numerics.Vector2,FanKit.Transformers.TransformerBorder,System.Boolean,System.Boolean)@Param@mode
+M:FanKit.Transformers.TransformerBorder.Controller(FanKit.Transformers.TransformerMode,System.Numerics.Vector2,System.Numerics.Vector2,FanKit.Transformers.TransformerBorder,System.Boolean,System.Boolean)@Param@startingPoint
+M:FanKit.Transformers.TransformerBorder.Controller(FanKit.Transformers.TransformerMode,System.Numerics.Vector2,System.Numerics.Vector2,FanKit.Transformers.TransformerBorder,System.Boolean,System.Boolean)@Param@point
+M:FanKit.Transformers.TransformerBorder.Controller(FanKit.Transformers.TransformerMode,System.Numerics.Vector2,System.Numerics.Vector2,FanKit.Transformers.TransformerBorder,System.Boolean,System.Boolean)@Param@startingBorder
+M:FanKit.Transformers.TransformerBorder.Controller(FanKit.Transformers.TransformerMode,System.Numerics.Vector2,System.Numerics.Vector2,FanKit.Transformers.TransformerBorder,System.Boolean,System.Boolean)@Param@isRatio
+M:FanKit.Transformers.TransformerBorder.Controller(FanKit.Transformers.TransformerMode,System.Numerics.Vector2,System.Numerics.Vector2,FanKit.Transformers.TransformerBorder,System.Boolean,System.Boolean)@Param@isCenter
+M:FanKit.Transformers.TransformerBorder.Controller(FanKit.Transformers.TransformerMode,System.Numerics.Vector2,System.Numerics.Vector2,FanKit.Transformers.TransformerBorder,System.Boolean,System.Boolean)@Returns
 T:FanKit.Transformers.BorderBorderSnap@Summary
 M:FanKit.Transformers.BorderBorderSnap.SetXSnapMove(System.Single,FanKit.Transformers.TransformerBorder)@Summary
 M:FanKit.Transformers.BorderBorderSnap.SetXSnapMove(System.Single,FanKit.Transformers.TransformerBorder)@Param@moveX

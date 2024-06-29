@@ -3075,6 +3075,18 @@
       <param name="rect"> The destination rectangle. </param>
       <returns> Return **true** if the border was contained in rectangle, otherwise **false**. </returns>
     </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.Controller(FanKit.Transformers.TransformerMode,System.Numerics.Vector2,System.Numerics.Vector2,FanKit.Transformers.TransformerBorder,System.Boolean,System.Boolean)">
+      <summary>
+        It controls the transformation of border.
+      </summary>
+      <param name="mode"> The mode. </param>
+      <param name="startingPoint"> The starting point. </param>
+      <param name="point"> The point. </param>
+      <param name="startingBorder"> The starting border. </param>
+      <param name="isRatio"> Maintain a ratio when scaling. </param>
+      <param name="isCenter"> Scaling around the center. </param>
+      <returns> The controlled border. </returns>
+    </member>
     <member name="T:FanKit.Transformers.BorderBorderSnap">
       <summary>
         Snapping tool for <see cref="T:FanKit.Transformers.TransformerBorder"/>.

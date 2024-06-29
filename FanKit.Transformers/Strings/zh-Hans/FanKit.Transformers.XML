@@ -3075,6 +3075,18 @@
       <param name="rect"> 目标矩形。 </param>
       <returns> 如果边界包含在矩形中，则返回**true**，否则返回**false**。 </returns>
     </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.Controller(FanKit.Transformers.TransformerMode,System.Numerics.Vector2,System.Numerics.Vector2,FanKit.Transformers.TransformerBorder,System.Boolean,System.Boolean)">
+      <summary>
+        它控制边界的变换。
+      </summary>
+      <param name="mode"> 模式。 </param>
+      <param name="startingPoint"> 起始点。 </param>
+      <param name="point"> 点。 </param>
+      <param name="startingBorder"> 起始边界。 </param>
+      <param name="isRatio"> 缩放时保持比例。 </param>
+      <param name="isCenter"> 围绕中心缩放。 </param>
+      <returns> 受控制的边界。 </returns>
+    </member>
     <member name="T:FanKit.Transformers.BorderBorderSnap">
       <summary>
         <see cref="T:FanKit.Transformers.TransformerBorder"/> 的吸附工具。
