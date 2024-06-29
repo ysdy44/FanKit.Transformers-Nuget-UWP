@@ -189,6 +189,42 @@ namespace FanKit.Transformers
         public static TransformerBorder Divide(TransformerBorder left, float divisor) => left / divisor;
 
 
+        private TransformerBorder Scale(float scale)
+        {
+            return new TransformerBorder
+            {
+                Left = this.Left * scale,
+                Top = this.Top * scale,
+                Right = this.Right * scale,
+                Bottom = this.Bottom * scale
+            };
+        }
+
+        private TransformerBorder Scale(float scaleX, float scaleY)
+        {
+            return new TransformerBorder
+            {
+                Left = this.Left * scaleX,
+                Top = this.Top * scaleY,
+                Right = this.Right * scaleX,
+                Bottom = this.Bottom * scaleY
+            };
+        }
+
+        private TransformerBorder Scale(float scaleX, float scaleY, float centerPointX, float centerPointY)
+        {
+            float sx = centerPointX - centerPointX * scaleX;
+            float sy = centerPointY - centerPointY * scaleY;
+            return new TransformerBorder
+            {
+                Left = this.Left * scaleX + sx,
+                Top = this.Top * scaleY + sy,
+                Right = this.Right * scaleX + sx,
+                Bottom = this.Bottom * scaleY + sy
+            };
+        }
+
+
         /// <summary>
         /// Adds border and vector together.
         /// </summary>
