@@ -3087,6 +3087,34 @@
       <param name="isCenter"> 围绕中心缩放。 </param>
       <returns> 受控制的边界。 </returns>
     </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.FindHomography(FanKit.Transformers.TransformerBorder,FanKit.Transformers.TransformerBorder)">
+      <summary>
+        查找单应性。
+      </summary>
+      <param name="source"> 源边界。 </param>
+      <param name="destination"> 目标边界。 </param>
+      <returns> 单应性矩阵。 </returns>
+    </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.FindHomography(System.Single,System.Single,FanKit.Transformers.TransformerBorder)">
+      <summary>
+        查找单应性。
+      </summary>
+      <param name="sourceWidth"> 源矩形的宽度 </param>
+      <param name="sourceHeight"> 源矩形的高度 </param>
+      <param name="destination"> 目标边界。 </param>
+      <returns> 单应性矩阵。 </returns>
+    </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.FindHomography(System.Single,System.Single,System.Single,System.Single,FanKit.Transformers.TransformerBorder)">
+      <summary>
+        查找单应性。
+      </summary>
+      <param name="sourceX"> 源矩形的 X </param>
+      <param name="sourceY"> 源矩形的 Y </param>
+      <param name="sourceWidth"> 源矩形的宽度 </param>
+      <param name="sourceHeight"> 源矩形的高度 </param>
+      <param name="destination"> 目标边界。 </param>
+      <returns> 单应性矩阵。 </returns>
+    </member>
     <member name="T:FanKit.Transformers.BorderBorderSnap">
       <summary>
         <see cref="T:FanKit.Transformers.TransformerBorder"/> 的吸附工具。

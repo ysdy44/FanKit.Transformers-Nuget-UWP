@@ -3087,6 +3087,34 @@
       <param name="isCenter"> Scaling around the center. </param>
       <returns> The controlled border. </returns>
     </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.FindHomography(FanKit.Transformers.TransformerBorder,FanKit.Transformers.TransformerBorder)">
+      <summary>
+        Find homography.
+      </summary>
+      <param name="source"> The source border. </param>
+      <param name="destination"> The destination border. </param>
+      <returns> The homologous matrix. </returns>
+    </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.FindHomography(System.Single,System.Single,FanKit.Transformers.TransformerBorder)">
+      <summary>
+        Find homography.
+      </summary>
+      <param name="sourceWidth"> The width of source rectangle. </param>
+      <param name="sourceHeight"> The height of source rectangle. </param>
+      <param name="destination"> The destination border. </param>
+      <returns> The homologous matrix. </returns>
+    </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.FindHomography(System.Single,System.Single,System.Single,System.Single,FanKit.Transformers.TransformerBorder)">
+      <summary>
+        Find homography.
+      </summary>
+      <param name="sourceX"> The x of source rectangle. </param>
+      <param name="sourceY"> The y of source rectangle. </param>
+      <param name="sourceWidth"> The width of source rectangle. </param>
+      <param name="sourceHeight"> The height of source rectangle. </param>
+      <param name="destination"> The destination border. </param>
+      <returns> The homologous matrix. </returns>
+    </member>
     <member name="T:FanKit.Transformers.BorderBorderSnap">
       <summary>
         Snapping tool for <see cref="T:FanKit.Transformers.TransformerBorder"/>.
