@@ -193,6 +193,7 @@
     <Compile Include="TransformerBorder.Contains.cs" />
     <Compile Include="TransformerBorder.Controller.cs" />
     <Compile Include="TransformerBorder.cs" />
+    <Compile Include="TransformerBorder.Homography.cs" />
     <Compile Include="TransformerBorder.Property.cs" />
     <Compile Include="TransformerGeometrys\GeometryArrowTailType.cs" />
     <Compile Include="TransformerGeometrys\TransformerGeometry.0.cs" />
