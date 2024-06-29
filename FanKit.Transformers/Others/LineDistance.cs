@@ -35,6 +35,17 @@ namespace FanKit.Transformers
             this.PC = Vector2.Distance(point, center);
         }
 
+        public LineDistance(float footPointX, float footPointY, float pointX, float pointY, float centerX, float centerY)
+        {
+            float x = centerX + centerX - pointX;
+            float y = centerY + centerY - pointY;
+
+            this.FC = Math.Distance(footPointX, footPointY, centerX, centerY);
+            this.FP = Math.Distance(footPointX, footPointY, centerX, centerY);
+            this.FD = Math.Distance(footPointX, footPointY, x, y);
+            this.PC = Math.Distance(pointX, pointY, centerX, centerY);
+        }
+
         /// <summary> Scale of [Foot Point] betwwen [Center Point] / scale of [Point] betwwen [Center Point] (may be negative) </summary>
         /// <param name="distance"> The distance </param>
         /// <returns> Scale </returns>
@@ -46,6 +57,6 @@ namespace FanKit.Transformers
         }
 
         public static implicit operator float(LineDistance distance) => LineDistance.Scale(distance);
-  
+
     }
 }

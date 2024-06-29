@@ -34,9 +34,9 @@ namespace FanKit
         private const float NodeDistanceSquare = Math.NodeDistance * Math.NodeDistance;
         private const float NodeDistanceDouble = Math.NodeDistance + Math.NodeDistance;
 
-        private static float LengthSquared(float x, float y) => x * x + y * y;
+        internal static float LengthSquared(float x, float y) => x * x + y * y;
 
-        private static float DistanceSquared(float x0, float y0, float x1, float y1) => Math.LengthSquared(x1 - x0, y1 - y0);
+        internal static float DistanceSquared(float x0, float y0, float x1, float y1) => Math.LengthSquared(x1 - x0, y1 - y0);
 
         /// <summary>
         /// Whether the distance exceeds [NodeRadius]. Default: 144.
