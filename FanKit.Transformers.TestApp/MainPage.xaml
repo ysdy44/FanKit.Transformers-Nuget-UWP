@@ -18,7 +18,7 @@
         </canvas:CanvasControl>
 
         <StackPanel Padding="6" HorizontalAlignment="Left" VerticalAlignment="Top" Background="{ThemeResource SystemControlBackgroundAltMediumLowBrush}">
-            <ComboBox x:Name="ComboBox" SelectedIndex="0" SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBox x:Name="ComboBox" SelectedIndex="1" SelectionChanged="ComboBox_SelectionChanged">
                 <FrameworkElement.Style>
                     <Style TargetType="ComboBox">
                         <!--BaseTextBlockStyle-->
@@ -41,6 +41,20 @@
                         <Setter Property="FontSize" Value="20" />
                     </Style>
                 </ItemsControl.ItemContainerStyle>
+                <ComboBoxItem>
+                    <UIElement.AccessKey>
+                        Matrix2x2
+                    </UIElement.AccessKey>
+                    <FrameworkElement.Tag>
+                        <PointCollection>
+                            30,0
+                            110,00
+                            110,70
+                            30,70
+                        </PointCollection>
+                    </FrameworkElement.Tag>
+                    Transform
+                </ComboBoxItem>
                 <ComboBoxItem>
                     <UIElement.AccessKey>
                         Matrix3x2

@@ -10,6 +10,18 @@ using Windows.UI.Xaml.Controls;
 
 namespace FanKit.Transformers.TestApp
 {
+    public class Layer0
+    {
+        public TransformerBorder Source;
+        public TransformerBorder Destination;
+        public TransformerBorder StartingDestination;
+
+        public Matrix3x2 GetMatrix() => TransformerBorder.FindHomography(this.Source, this.Destination);
+
+        public void CacheTransform() => this.StartingDestination = this.Destination;
+        public void TransformAdd(Vector2 vector) => this.Destination = this.StartingDestination + vector;
+    }
+
     public class Layer1 : ICacheTransform
     {
         public TransformerRect Source;
@@ -38,6 +50,7 @@ namespace FanKit.Transformers.TestApp
         private TransformerMode TransformerMode;
         private CanvasBitmap Image;
 
+        readonly Layer0 Layer0 = new Layer0();
         readonly Layer1 Layer1 = new Layer1();
         readonly Layer2 Layer2 = new Layer2();
 
@@ -52,12 +65,14 @@ namespace FanKit.Transformers.TestApp
         {
             if (this.IsLoaded)
             {
-                this.RatioButton.IsEnabled = this.SelectedIndex != 1;
-                this.CenterButton.IsEnabled = this.SelectedIndex != 1;
-                this.ConvexQuadrilateralButton.IsEnabled = this.SelectedIndex == 1;
+                this.RatioButton.IsEnabled = this.SelectedIndex != 2;
+                this.CenterButton.IsEnabled = this.SelectedIndex != 2;
+                this.ConvexQuadrilateralButton.IsEnabled = this.SelectedIndex == 2;
 
-                this.M23.Opacity = this.SelectedIndex > 0 ? 1d : 0.5d;
-                this.M13.Opacity = this.SelectedIndex > 0 ? 1d : 0.5d;
+                this.M12.Opacity = ((this.SelectedIndex > 0) ? 1.0 : 0.5);
+                this.M21.Opacity = ((this.SelectedIndex > 0) ? 1.0 : 0.5);
+                this.M23.Opacity = ((this.SelectedIndex > 1) ? 1.0 : 0.5);
+                this.M13.Opacity = ((this.SelectedIndex > 1) ? 1.0 : 0.5);
             }
 
             if (this.CanvasControl.ReadyToDraw)
@@ -83,7 +98,15 @@ namespace FanKit.Transformers.TestApp
             float bitmapWidthOver2 = scale * width / 2;
             float bitmapHeightOver2 = scale * height / 2;
 
+            TransformerBorder border = new TransformerBorder(width, height);
             TransformerRect rect = new TransformerRect(width, height, Vector2.Zero);
+            TransformerBorder transformerBorder = new TransformerBorder
+            {
+                Left = centerX - bitmapWidthOver2,
+                Top = centerY - bitmapHeightOver2,
+                Right = centerX + bitmapWidthOver2,
+                Bottom = centerY + bitmapHeightOver2
+            };
             Transformer transformer = new Transformer
             {
                 LeftTop = new Vector2(centerX - bitmapWidthOver2, centerY - bitmapHeightOver2),
@@ -92,11 +115,14 @@ namespace FanKit.Transformers.TestApp
                 LeftBottom = new Vector2(centerX - bitmapWidthOver2, centerY + bitmapHeightOver2),
             };
 
+            this.Layer0.Source = border;
             this.Layer1.Source = rect;
             this.Layer2.Source = rect;
 
+            this.Layer0.StartingDestination = transformerBorder;
             this.Layer1.StartingDestination = transformer;
 
+            this.Layer0.Destination = transformerBorder;
             this.Layer1.Destination = transformer;
             this.Layer2.Destination = transformer;
         }
@@ -135,6 +161,23 @@ namespace FanKit.Transformers.TestApp
             {
                 case 0:
                     {
+                        Matrix3x2 matrix = this.Layer0.GetMatrix();
+
+                        this.M11.Text = $"{matrix.M11}"; this.M12.Text = $"{matrix.M12}"; this.M13.Text = "0";
+                        this.M21.Text = $"{matrix.M21}"; this.M22.Text = $"{matrix.M22}"; this.M23.Text = "0";
+                        this.M31.Text = $"{matrix.M31}"; this.M32.Text = $"{matrix.M32}";
+
+                        args.DrawingSession.DrawImage(new Transform2DEffect
+                        {
+                            Source = this.Image,
+                            TransformMatrix = matrix
+                            //TransformMatrix = matrix * this.Matrix
+                        });
+                        args.DrawingSession.DrawBoundNodes(this.Layer0.Destination);
+                    }
+                    break;
+                case 1:
+                    {
                         Matrix3x2 matrix = this.Layer1.GetMatrix();
                         this.M11.Text = $"{matrix.M11}"; this.M12.Text = $"{matrix.M12}"; this.M13.Text = "0";
                         this.M21.Text = $"{matrix.M21}"; this.M22.Text = $"{matrix.M22}"; this.M23.Text = "0";
@@ -155,7 +198,7 @@ namespace FanKit.Transformers.TestApp
                         args.DrawingSession.DrawNode4(center);
                     }
                     break;
-                case 1:
+                case 2:
                     {
                         Matrix4x4 matrix = this.Layer2.GetMatrix3D();
                         this.M11.Text = $"{matrix.M11}"; this.M12.Text = $"{matrix.M12}"; this.M13.Text = $"{matrix.M14}";
@@ -194,6 +237,18 @@ namespace FanKit.Transformers.TestApp
             {
                 case 0:
                     {
+                        TransformerBorder transformer = this.Layer0.Destination;
+
+                        this.StartingPoint = point;
+
+                        this.TransformerMode = TransformerBorder.ContainsNodeMode(point, transformer);
+                        this.Layer0.CacheTransform();
+
+                        this.CanvasControl.Invalidate();
+                    }
+                    break;
+                case 1:
+                    {
                         Transformer transformer = this.Layer1.Destination;
 
                         this.StartingPoint = point;
@@ -204,7 +259,7 @@ namespace FanKit.Transformers.TestApp
                         this.CanvasControl.Invalidate();
                     }
                     break;
-                case 1:
+                case 2:
                     {
                         Transformer transformer = this.Layer2.Destination;
 
@@ -213,8 +268,6 @@ namespace FanKit.Transformers.TestApp
                         this.CanvasControl.Invalidate();
                     }
                     break;
-                default:
-                    break;
             }
         }
         private void CanvasOperator_Single_Delta(Vector2 point, InputDevice device, PointerPointProperties properties)
@@ -222,6 +275,15 @@ namespace FanKit.Transformers.TestApp
             switch (this.SelectedIndex)
             {
                 case 0:
+                    {
+                        bool isRatio = this.RatioButton.IsOn;
+                        bool isCenter = this.CenterButton.IsOn;
+
+                        TransformerBorder transformer = TransformerBorder.Controller(this.TransformerMode, this.StartingPoint, point, this.Layer0.StartingDestination, isRatio, isCenter);
+                        this.Layer0.Destination = transformer;
+                    }
+                    break;
+                case 1:
                     //Single layer.
                     if (true)
                     {
@@ -245,7 +307,7 @@ namespace FanKit.Transformers.TestApp
                         //this.Layer3...
                     }
                     break;
-                case 1:
+                case 2:
                     {
                         bool isConvexQuadrilateral = this.ConvexQuadrilateralButton.IsOn;
                         if (isConvexQuadrilateral)
