@@ -1216,7 +1216,6 @@ P:FanKit.Transformers.TransformerBorder.Height@Summary
 P:FanKit.Transformers.TransformerBorder.CenterX@Summary
 P:FanKit.Transformers.TransformerBorder.CenterY@Summary
 P:FanKit.Transformers.TransformerBorder.Center@Summary
-M:FanKit.Transformers.TransformerBorder.ToTransformer@Summary
 M:FanKit.Transformers.TransformerBorder.GetBorderValue(FanKit.Transformers.BorderMode)@Summary
 M:FanKit.Transformers.TransformerBorder.GetBorderValue(FanKit.Transformers.BorderMode)@Param@borderMode
 M:FanKit.Transformers.TransformerBorder.GetBorderValue(FanKit.Transformers.BorderMode)@Returns
@@ -1274,6 +1273,8 @@ M:FanKit.Transformers.TransformerBorder.FindHomography(System.Single,System.Sing
 M:FanKit.Transformers.TransformerBorder.FindHomography(System.Single,System.Single,System.Single,System.Single,FanKit.Transformers.TransformerBorder)@Param@sourceHeight
 M:FanKit.Transformers.TransformerBorder.FindHomography(System.Single,System.Single,System.Single,System.Single,FanKit.Transformers.TransformerBorder)@Param@destination
 M:FanKit.Transformers.TransformerBorder.FindHomography(System.Single,System.Single,System.Single,System.Single,FanKit.Transformers.TransformerBorder)@Returns
+M:FanKit.Transformers.TransformerBorder.ToRect@Summary
+M:FanKit.Transformers.TransformerBorder.ToTransformer@Summary
 M:FanKit.Transformers.TransformerBorder.Union(System.Numerics.Vector2)@Summary
 M:FanKit.Transformers.TransformerBorder.Union(System.Numerics.Vector2)@Param@point
 M:FanKit.Transformers.TransformerBorder.Union(System.Numerics.Vector2)@Returns
@@ -1572,7 +1573,6 @@ M:FanKit.Transformers.TransformerBorder.#ctor(System.Single,System.Single,System
 M:FanKit.Transformers.TransformerBorder.#ctor(System.Single,System.Single,System.Numerics.Vector2)@Param@width
 M:FanKit.Transformers.TransformerBorder.#ctor(System.Single,System.Single,System.Numerics.Vector2)@Param@height
 M:FanKit.Transformers.TransformerBorder.#ctor(System.Single,System.Single,System.Numerics.Vector2)@Param@postion
-M:FanKit.Transformers.TransformerBorder.ToRect@Summary
 P:FanKit.Transformers.TransformerRect.Left@Summary
 P:FanKit.Transformers.TransformerRect.Top@Summary
 P:FanKit.Transformers.TransformerRect.Right@Summary

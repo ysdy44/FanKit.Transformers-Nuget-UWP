@@ -59,12 +59,6 @@ namespace FanKit.Transformers
 
 
         /// <summary>
-        /// Turn to transformer.
-        /// </summary>
-        public Transformer ToTransformer() => new Transformer(this.Left, this.Top, this.Right, this.Bottom);
-
-
-        /// <summary>
         /// Gets value by left, right, top, bottom.
         /// </summary>
         /// <param name="borderMode"> The border mode. </param>

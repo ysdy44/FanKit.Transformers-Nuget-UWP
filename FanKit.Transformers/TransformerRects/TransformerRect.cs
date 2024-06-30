@@ -147,11 +147,5 @@ namespace FanKit.Transformers
              */
         }
 
-
-        /// <summary>
-        /// Turn to rectangle.
-        /// </summary>
-        public Rect ToRect() => new Rect(this.Left, this.Top, this.Right - this.Left, this.Bottom - this.Top);
-
     }
 }

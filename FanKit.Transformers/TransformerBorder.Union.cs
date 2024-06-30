@@ -5,6 +5,18 @@ namespace FanKit.Transformers
 {
     partial struct TransformerBorder
     {
+
+        /// <summary>
+        /// Turn to rectangle.
+        /// </summary>
+        public Rect ToRect() => new Rect(this.Left, this.Top, this.Right - this.Left, this.Bottom - this.Top);
+
+        /// <summary>
+        /// Turn to transformer.
+        /// </summary>
+        public Transformer ToTransformer() => new Transformer(this.Left, this.Top, this.Right, this.Bottom);
+
+
         /// <summary>
         /// Expands the current border exactly enough to contain the specified point.
         /// </summary>

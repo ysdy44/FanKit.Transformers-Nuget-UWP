@@ -3040,11 +3040,6 @@
     <member name="P:FanKit.Transformers.TransformerBorder.Center">
       <summary> 获取边界的中心点的位置。 </summary>
     </member>
-    <member name="M:FanKit.Transformers.TransformerBorder.ToTransformer">
-      <summary>
-        转为变换者。
-      </summary>
-    </member>
     <member name="M:FanKit.Transformers.TransformerBorder.GetBorderValue(FanKit.Transformers.BorderMode)">
       <summary>
         通过左，右，上，下获取值。
@@ -3153,6 +3148,16 @@
       <param name="sourceHeight"> 源矩形的高度 </param>
       <param name="destination"> 目标边界。 </param>
       <returns> 单应性矩阵。 </returns>
+    </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.ToRect">
+      <summary>
+        转为矩形。
+      </summary>
+    </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.ToTransformer">
+      <summary>
+        转为变换者。
+      </summary>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.Union(System.Numerics.Vector2)">
       <summary>
@@ -3735,11 +3740,6 @@
       <param name="width"> 矩形的宽度。 </param>
       <param name="height"> 矩形的高度。 </param>
       <param name="postion"> 矩形的左上角的位置。 </param>
-    </member>
-    <member name="M:FanKit.Transformers.TransformerBorder.ToRect">
-      <summary>
-        转为矩形。
-      </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.Left">
       <summary> 获取矩形的左侧的 X 轴值。 </summary>
