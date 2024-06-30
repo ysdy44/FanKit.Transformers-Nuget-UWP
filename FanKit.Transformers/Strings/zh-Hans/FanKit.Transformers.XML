@@ -1915,22 +1915,22 @@
     </member>
     <member name="F:FanKit.Transformers.IndicatorMode.LeftTop">
       <summary>
-        <see cref="P:FanKit.Transformers.Transformer.LeftTop"/>。
+        <see cref="F:FanKit.Transformers.Transformer.LeftTop"/>。
       </summary>
     </member>
     <member name="F:FanKit.Transformers.IndicatorMode.RightTop">
       <summary>
-        <see cref="P:FanKit.Transformers.Transformer.RightTop"/>。
+        <see cref="F:FanKit.Transformers.Transformer.RightTop"/>。
       </summary>
     </member>
     <member name="F:FanKit.Transformers.IndicatorMode.RightBottom">
       <summary>
-        <see cref="P:FanKit.Transformers.Transformer.RightBottom"/>。
+        <see cref="F:FanKit.Transformers.Transformer.RightBottom"/>。
       </summary>
     </member>
     <member name="F:FanKit.Transformers.IndicatorMode.LeftBottom">
       <summary>
-        <see cref="P:FanKit.Transformers.Transformer.LeftBottom"/>。
+        <see cref="F:FanKit.Transformers.Transformer.LeftBottom"/>。
       </summary>
     </member>
     <member name="F:FanKit.Transformers.IndicatorMode.Left">
@@ -2442,16 +2442,16 @@
       <param name="isConvexQuadrilateral"> 变换者是否是凸四边形？ </param>
       <returns> 生成的点。 </returns>
     </member>
-    <member name="P:FanKit.Transformers.Transformer.LeftTop">
+    <member name="F:FanKit.Transformers.Transformer.LeftTop">
       <summary> 获取或设置变换者的左上角的位置。 </summary>
     </member>
-    <member name="P:FanKit.Transformers.Transformer.RightTop">
+    <member name="F:FanKit.Transformers.Transformer.RightTop">
       <summary> 获取或设置变换者的右上角的位置。 </summary>
     </member>
-    <member name="P:FanKit.Transformers.Transformer.RightBottom">
+    <member name="F:FanKit.Transformers.Transformer.RightBottom">
       <summary> 获取或设置变换者的右下角的位置。 </summary>
     </member>
-    <member name="P:FanKit.Transformers.Transformer.LeftBottom">
+    <member name="F:FanKit.Transformers.Transformer.LeftBottom">
       <summary> 获取或设置变换者的左下角的位置。 </summary>
     </member>
     <member name="M:FanKit.Transformers.Transformer.#ctor(System.Single,System.Single,System.Single,System.Single)">
@@ -2830,16 +2830,16 @@
         表示平面直角坐标系中的最大边界。
       </summary>
     </member>
-    <member name="P:FanKit.Transformers.TransformerBorder.Left">
+    <member name="F:FanKit.Transformers.TransformerBorder.Left">
       <summary> 获取边界的左侧的 X 轴值。 </summary>
     </member>
-    <member name="P:FanKit.Transformers.TransformerBorder.Top">
+    <member name="F:FanKit.Transformers.TransformerBorder.Top">
       <summary> 获取边界的顶部的 Y 轴位置。 </summary>
     </member>
-    <member name="P:FanKit.Transformers.TransformerBorder.Right">
+    <member name="F:FanKit.Transformers.TransformerBorder.Right">
       <summary> 获取边界的右侧的 X 轴值。 </summary>
     </member>
-    <member name="P:FanKit.Transformers.TransformerBorder.Bottom">
+    <member name="F:FanKit.Transformers.TransformerBorder.Bottom">
       <summary> 获取边界的底部的 Y 轴位置。 </summary>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.#ctor(System.Single,System.Single,System.Single,System.Single)">

@@ -10,13 +10,13 @@ namespace FanKit.Transformers
     {
 
         /// <summary> Gets or sets the position of the top-left corner of the transformer. </summary>
-        public Vector2 LeftTop { get; set; }
+        public Vector2 LeftTop;
         /// <summary> Gets or sets the position of the top-right corner of the transformer. </summary>
-        public Vector2 RightTop { get; set; }
+        public Vector2 RightTop;
         /// <summary> Gets or sets the position of the bottom-right corner of the transformer. </summary>
-        public Vector2 RightBottom { get; set; }
+        public Vector2 RightBottom;
         /// <summary> Gets or sets the position of the bottom-left corner of the transformer. </summary>
-        public Vector2 LeftBottom { get; set; }
+        public Vector2 LeftBottom;
 
         //@Constructs
         /// <summary>

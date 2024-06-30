@@ -11,13 +11,13 @@ namespace FanKit.Transformers
     {
 
         /// <summary> Gets the X-axis value of the left side of the border. </summary>
-        public float Left { get; set; }
+        public float Left;
         /// <summary> Gets the Y-axis position of the top of the border. </summary>
-        public float Top { get; set; }
+        public float Top;
         /// <summary> Gets the X-axis value of the right side of the border. </summary>
-        public float Right { get; set; }
+        public float Right;
         /// <summary> Gets the Y-axis position of the bottom of the border. </summary>
-        public float Bottom { get; set; }
+        public float Bottom;
 
         //@Constructs
         /// <summary>

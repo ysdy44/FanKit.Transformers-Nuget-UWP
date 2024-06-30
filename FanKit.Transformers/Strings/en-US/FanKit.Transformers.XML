@@ -1915,22 +1915,22 @@
     </member>
     <member name="F:FanKit.Transformers.IndicatorMode.LeftTop">
       <summary>
-        <see cref="P:FanKit.Transformers.Transformer.LeftTop"/>.
+        <see cref="F:FanKit.Transformers.Transformer.LeftTop"/>.
       </summary>
     </member>
     <member name="F:FanKit.Transformers.IndicatorMode.RightTop">
       <summary>
-        <see cref="P:FanKit.Transformers.Transformer.RightTop"/>.
+        <see cref="F:FanKit.Transformers.Transformer.RightTop"/>.
       </summary>
     </member>
     <member name="F:FanKit.Transformers.IndicatorMode.RightBottom">
       <summary>
-        <see cref="P:FanKit.Transformers.Transformer.RightBottom"/>.
+        <see cref="F:FanKit.Transformers.Transformer.RightBottom"/>.
       </summary>
     </member>
     <member name="F:FanKit.Transformers.IndicatorMode.LeftBottom">
       <summary>
-        <see cref="P:FanKit.Transformers.Transformer.LeftBottom"/>.
+        <see cref="F:FanKit.Transformers.Transformer.LeftBottom"/>.
       </summary>
     </member>
     <member name="F:FanKit.Transformers.IndicatorMode.Left">
@@ -2442,16 +2442,16 @@
       <param name="isConvexQuadrilateral"> Is the transformer is a convex quadrilateral? </param>
       <returns> The product point. </returns>
     </member>
-    <member name="P:FanKit.Transformers.Transformer.LeftTop">
+    <member name="F:FanKit.Transformers.Transformer.LeftTop">
       <summary> Gets or sets the position of the top-left corner of the transformer. </summary>
     </member>
-    <member name="P:FanKit.Transformers.Transformer.RightTop">
+    <member name="F:FanKit.Transformers.Transformer.RightTop">
       <summary> Gets or sets the position of the top-right corner of the transformer. </summary>
     </member>
-    <member name="P:FanKit.Transformers.Transformer.RightBottom">
+    <member name="F:FanKit.Transformers.Transformer.RightBottom">
       <summary> Gets or sets the position of the bottom-right corner of the transformer. </summary>
     </member>
-    <member name="P:FanKit.Transformers.Transformer.LeftBottom">
+    <member name="F:FanKit.Transformers.Transformer.LeftBottom">
       <summary> Gets or sets the position of the bottom-left corner of the transformer. </summary>
     </member>
     <member name="M:FanKit.Transformers.Transformer.#ctor(System.Single,System.Single,System.Single,System.Single)">
@@ -2830,16 +2830,16 @@
         Represents a maximum boundary in a plane right-angle coordinate system.
       </summary>
     </member>
-    <member name="P:FanKit.Transformers.TransformerBorder.Left">
+    <member name="F:FanKit.Transformers.TransformerBorder.Left">
       <summary> Gets the X-axis value of the left side of the border. </summary>
     </member>
-    <member name="P:FanKit.Transformers.TransformerBorder.Top">
+    <member name="F:FanKit.Transformers.TransformerBorder.Top">
       <summary> Gets the Y-axis position of the top of the border. </summary>
     </member>
-    <member name="P:FanKit.Transformers.TransformerBorder.Right">
+    <member name="F:FanKit.Transformers.TransformerBorder.Right">
       <summary> Gets the X-axis value of the right side of the border. </summary>
     </member>
-    <member name="P:FanKit.Transformers.TransformerBorder.Bottom">
+    <member name="F:FanKit.Transformers.TransformerBorder.Bottom">
       <summary> Gets the Y-axis position of the bottom of the border. </summary>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.#ctor(System.Single,System.Single,System.Single,System.Single)">
