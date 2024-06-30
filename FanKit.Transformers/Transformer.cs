@@ -33,16 +33,19 @@ namespace FanKit.Transformers
             this.RightBottom = new Vector2(right, bottom);
             this.LeftBottom = new Vector2(left, bottom);
         }
+
         /// <summary>
         /// Initialize a transformer.
         /// </summary>
-        /// <param name="rect"> The bounding rectangle. </param>
-        public Transformer(TransformerBorder rect)
+        /// <param name="width"> The width of the transformer. </param>
+        /// <param name="height"> The height of the transformer. </param>
+        /// <param name="postion"> The position of the top-left corner of the transformer. </param>
+        public Transformer(float width, float height, Vector2 postion)
         {
-            this.LeftTop = new Vector2(rect.Left, rect.Top);
-            this.RightTop = new Vector2(rect.Right, rect.Top);
-            this.RightBottom = new Vector2(rect.Right, rect.Bottom);
-            this.LeftBottom = new Vector2(rect.Left, rect.Bottom);
+            this.LeftTop = postion;
+            this.RightTop = new Vector2(postion.X + width, postion.Y);
+            this.RightBottom = new Vector2(postion.X + width, postion.Y + height);
+            this.LeftBottom = new Vector2(postion.X, postion.Y + height);
         }
 
         /// <summary>
@@ -80,15 +83,13 @@ namespace FanKit.Transformers
         /// <summary>
         /// Initialize a transformer.
         /// </summary>
-        /// <param name="width"> The width of the transformer. </param>
-        /// <param name="height"> The height of the transformer. </param>
-        /// <param name="postion"> The position of the top-left corner of the transformer. </param>
-        public Transformer(float width, float height, Vector2 postion)
+        /// <param name="rect"> The bounding rectangle. </param>
+        public Transformer(TransformerBorder rect)
         {
-            this.LeftTop = postion;
-            this.RightTop = new Vector2(postion.X + width, postion.Y);
-            this.RightBottom = new Vector2(postion.X + width, postion.Y + height);
-            this.LeftBottom = new Vector2(postion.X, postion.Y + height);
+            this.LeftTop = new Vector2(rect.Left, rect.Top);
+            this.RightTop = new Vector2(rect.Right, rect.Top);
+            this.RightBottom = new Vector2(rect.Right, rect.Bottom);
+            this.LeftBottom = new Vector2(rect.Left, rect.Bottom);
         }
 
 

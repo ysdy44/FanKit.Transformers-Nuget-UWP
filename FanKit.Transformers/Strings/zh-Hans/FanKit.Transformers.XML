@@ -2495,11 +2495,13 @@
       <param name="right"> 边框的右侧的 X 轴值。 </param>
       <param name="bottom"> 边框的底部的 Y 轴位置。 </param>
     </member>
-    <member name="M:FanKit.Transformers.Transformer.#ctor(FanKit.Transformers.TransformerBorder)">
+    <member name="M:FanKit.Transformers.Transformer.#ctor(System.Single,System.Single,System.Numerics.Vector2)">
       <summary>
         初始化变换者。
       </summary>
-      <param name="rect"> 边框矩形。 </param>
+      <param name="width"> 变换者的宽度。 </param>
+      <param name="height"> 变换者的高度。 </param>
+      <param name="postion"> 变换者的左上角的位置。 </param>
     </member>
     <member name="M:FanKit.Transformers.Transformer.#ctor(System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>
@@ -2517,13 +2519,11 @@
       <param name="isCenter"> 围绕中心缩放。 </param>
       <param name="isRatio"> 缩放时保持比例。 </param>
     </member>
-    <member name="M:FanKit.Transformers.Transformer.#ctor(System.Single,System.Single,System.Numerics.Vector2)">
+    <member name="M:FanKit.Transformers.Transformer.#ctor(FanKit.Transformers.TransformerBorder)">
       <summary>
         初始化变换者。
       </summary>
-      <param name="width"> 变换者的宽度。 </param>
-      <param name="height"> 变换者的高度。 </param>
-      <param name="postion"> 变换者的左上角的位置。 </param>
+      <param name="rect"> 边框矩形。 </param>
     </member>
     <member name="M:FanKit.Transformers.Transformer.Add(FanKit.Transformers.Transformer,System.Numerics.Vector2)">
       <summary>
