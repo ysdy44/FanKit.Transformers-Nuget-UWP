@@ -5,7 +5,7 @@ namespace FanKit.Transformers
     partial struct Transformer
     {
 
-        internal static Matrix3x2 FindHomographyFromIdentity(ITransformerLTRB transformer) => new Matrix3x2
+        internal static Matrix3x2 FindHomographyFromIdentity(Transformer transformer) => new Matrix3x2
         {
             M11 = transformer.RightTop.X - transformer.LeftTop.X,
             M12 = transformer.RightTop.Y - transformer.LeftTop.Y,
@@ -15,7 +15,7 @@ namespace FanKit.Transformers
             M32 = transformer.LeftTop.Y,
         };
 
-        internal static Matrix4x4 FindHomographyFromIdentity3D(ITransformerLTRB transformer) => new Matrix4x4
+        internal static Matrix4x4 FindHomographyFromIdentity3D(Transformer transformer) => new Matrix4x4
         {
             M11 = transformer.RightTop.X - transformer.LeftTop.X,
             M12 = transformer.RightTop.Y - transformer.LeftTop.Y,
@@ -34,7 +34,7 @@ namespace FanKit.Transformers
         /// <param name="sourceHeight"> The height of source rectangle. </param>
         /// <param name="destination"> The destination transformer. </param>
         /// <returns> The homologous matrix. </returns>
-        public static Matrix3x2 FindHomography(float sourceWidth, float sourceHeight, ITransformerLTRB destination) =>
+        public static Matrix3x2 FindHomography(float sourceWidth, float sourceHeight, Transformer destination) =>
           Matrix3x2.CreateScale(1f / sourceWidth, 1f / sourceHeight) * FindHomographyFromIdentity(destination);
 
         /// <summary>
@@ -44,7 +44,7 @@ namespace FanKit.Transformers
         /// <param name="sourceHeight"> The height of source rectangle. </param>
         /// <param name="destination"> The destination transformer. </param>
         /// <returns> The homologous matrix. </returns>
-        public static Matrix4x4 FindHomography3D(float sourceWidth, float sourceHeight, ITransformerLTRB destination)
+        public static Matrix4x4 FindHomography3D(float sourceWidth, float sourceHeight, Transformer destination)
         {
             Matrix4x4 S = FindHomographyFromIdentity3D(destination);
             return Matrix4x4.CreateScale(1f / sourceWidth, 1f / sourceHeight, 1) * B3D(S, destination.RightBottom) * S;
@@ -59,7 +59,7 @@ namespace FanKit.Transformers
         /// <param name="sourceHeight"> The height of source rectangle. </param>
         /// <param name="destination"> The destination transformer. </param>
         /// <returns> The homologous matrix. </returns>
-        public static Matrix3x2 FindHomography(float sourceX, float sourceY, float sourceWidth, float sourceHeight, ITransformerLTRB destination) => new Matrix3x2
+        public static Matrix3x2 FindHomography(float sourceX, float sourceY, float sourceWidth, float sourceHeight, Transformer destination) => new Matrix3x2
         {
             M11 = 1f / sourceWidth,
             M22 = 1f / sourceHeight,
@@ -76,7 +76,7 @@ namespace FanKit.Transformers
         /// <param name="sourceHeight"> The height of source rectangle. </param>
         /// <param name="destination"> The destination transformer. </param>
         /// <returns> The homologous matrix. </returns>
-        public static Matrix4x4 FindHomography3D(float sourceX, float sourceY, float sourceWidth, float sourceHeight, ITransformerLTRB destination)
+        public static Matrix4x4 FindHomography3D(float sourceX, float sourceY, float sourceWidth, float sourceHeight, Transformer destination)
         {
             Matrix4x4 S = FindHomographyFromIdentity3D(destination);
             return new Matrix4x4
@@ -96,7 +96,7 @@ namespace FanKit.Transformers
         /// <param name="source"> The source transformer. </param>
         /// <param name="destination"> The destination transformer. </param>
         /// <returns> The homologous matrix. </returns>
-        public static Matrix3x2 FindHomography(TransformerBorder source, ITransformerLTRB destination)
+        public static Matrix3x2 FindHomography(TransformerBorder source, Transformer destination)
         {
             return FindHomography(source.Left, source.Top, source.Width, source.Height, destination);
         }
@@ -107,7 +107,7 @@ namespace FanKit.Transformers
         /// <param name="source"> The source transformer. </param>
         /// <param name="destination"> The destination transformer. </param>
         /// <returns> The homologous matrix. </returns>
-        public static Matrix4x4 FindHomography3D(TransformerBorder source, ITransformerLTRB destination)
+        public static Matrix4x4 FindHomography3D(TransformerBorder source, Transformer destination)
         {
             return FindHomography3D(source.Left, source.Top, source.Width, source.Height, destination);
         }
@@ -118,7 +118,7 @@ namespace FanKit.Transformers
         /// <param name="source"> The source transformer. </param>
         /// <param name="destination"> The destination transformer. </param>
         /// <returns> The homologous matrix. </returns>
-        public static Matrix3x2 FindHomography(ITransformerLTRB source, ITransformerLTRB destination)
+        public static Matrix3x2 FindHomography(Transformer source, Transformer destination)
         {
             Matrix3x2 m = FindHomographyFromIdentity(source);
             return Matrix3x2.Invert(m, out m) ? m * FindHomographyFromIdentity(destination) : FindHomographyFromIdentity(destination);

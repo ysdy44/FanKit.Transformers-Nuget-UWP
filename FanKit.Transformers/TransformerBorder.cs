@@ -52,7 +52,7 @@ namespace FanKit.Transformers
         /// Initialize a <see cref="TransformerBorder"/>.
         /// </summary>
         /// <param name="bounds"> The bounds. </param>
-        public TransformerBorder(ITransformerLTRB bounds)
+        public TransformerBorder(Transformer bounds)
         {
             this.Left = float.MaxValue;
             this.Top = float.MaxValue;

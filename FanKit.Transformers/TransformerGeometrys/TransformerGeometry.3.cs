@@ -17,7 +17,7 @@ namespace FanKit.Transformers
         /// <param name="bounds"> The bounds. </param>
         /// <param name="holeRadius"> The hole-radius. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreateDonut(ICanvasResourceCreator resourceCreator, ITransformerLTRB bounds, float holeRadius)
+        public static CanvasGeometry CreateDonut(ICanvasResourceCreator resourceCreator, Transformer bounds, float holeRadius)
         {
             bool zeroHoleRadius = holeRadius == 0;
             CanvasGeometry outter = TransformerGeometry.CreateEllipse(resourceCreator, bounds);
@@ -40,7 +40,7 @@ namespace FanKit.Transformers
         /// <param name="matrix"> The matrix. </param>
         /// <param name="holeRadius"> The hole-radius. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreateDonut(ICanvasResourceCreator resourceCreator, ITransformerLTRB bounds, Matrix3x2 matrix, float holeRadius)
+        public static CanvasGeometry CreateDonut(ICanvasResourceCreator resourceCreator, Transformer bounds, Matrix3x2 matrix, float holeRadius)
         {
             bool zeroHoleRadius = holeRadius == 0;
             CanvasGeometry outter = TransformerGeometry.CreateEllipse(resourceCreator, bounds, matrix);
@@ -76,7 +76,7 @@ namespace FanKit.Transformers
         /// <param name="bounds"> The bounds. </param>
         /// <param name="sweepAngle"> The sweep-angle. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreatePie(ICanvasResourceCreator resourceCreator, ITransformerLTRB bounds, float sweepAngle)
+        public static CanvasGeometry CreatePie(ICanvasResourceCreator resourceCreator, Transformer bounds, float sweepAngle)
         {
             bool zeroSweepAngle = sweepAngle == 0;
 
@@ -98,7 +98,7 @@ namespace FanKit.Transformers
         /// <param name="matrix"> The matrix. </param>
         /// <param name="sweepAngle"> The sweep-angle. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreatePie(ICanvasResourceCreator resourceCreator, ITransformerLTRB bounds, Matrix3x2 matrix, float sweepAngle)
+        public static CanvasGeometry CreatePie(ICanvasResourceCreator resourceCreator, Transformer bounds, Matrix3x2 matrix, float sweepAngle)
         {
             bool zeroSweepAngle = sweepAngle == 0;
 
@@ -151,7 +151,7 @@ namespace FanKit.Transformers
         /// <param name="innerRadius"> The inner-radius. </param>
         /// <param name="sweepAngle"> The sweep-angle. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreateCookie(ICanvasResourceCreator resourceCreator, ITransformerLTRB bounds, float innerRadius, float sweepAngle)
+        public static CanvasGeometry CreateCookie(ICanvasResourceCreator resourceCreator, Transformer bounds, float innerRadius, float sweepAngle)
         {
             bool zeroInnerRadius = innerRadius == 0;
             bool zeroSweepAngle = sweepAngle == 0;
@@ -189,7 +189,7 @@ namespace FanKit.Transformers
         /// <param name="innerRadius"> The inner-radius. </param>
         /// <param name="sweepAngle"> The sweep-angle. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreateCookie(ICanvasResourceCreator resourceCreator, ITransformerLTRB bounds, Matrix3x2 matrix, float innerRadius, float sweepAngle)
+        public static CanvasGeometry CreateCookie(ICanvasResourceCreator resourceCreator, Transformer bounds, Matrix3x2 matrix, float innerRadius, float sweepAngle)
         {
             bool zeroInnerRadius = innerRadius == 0;
             bool zeroSweepAngle = sweepAngle == 0;

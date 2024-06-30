@@ -21,7 +21,7 @@ namespace FanKit.Transformers
         /// <param name="leftTail"> The left tail. </param>
         /// <param name="rightTail"> The right tail. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreateArrow(ICanvasResourceCreator resourceCreator, ITransformerLTRB bounds, bool isAbsolute = false, float width = 10, float value = 0.5f, GeometryArrowTailType leftTail = GeometryArrowTailType.None, GeometryArrowTailType rightTail = GeometryArrowTailType.Arrow)
+        public static CanvasGeometry CreateArrow(ICanvasResourceCreator resourceCreator, Transformer bounds, bool isAbsolute = false, float width = 10, float value = 0.5f, GeometryArrowTailType leftTail = GeometryArrowTailType.None, GeometryArrowTailType rightTail = GeometryArrowTailType.Arrow)
         {
             Vector2 center = bounds.Center;
             Vector2 centerLeft = bounds.CenterLeft;
@@ -78,7 +78,7 @@ namespace FanKit.Transformers
         /// <param name="leftTail"> The left tail. </param>
         /// <param name="rightTail"> The right tail. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreateArrow(ICanvasResourceCreator resourceCreator, ITransformerLTRB bounds, Matrix3x2 matrix, bool isAbsolute = false, float width = 10, float value = 0.5f, GeometryArrowTailType leftTail = GeometryArrowTailType.None, GeometryArrowTailType rightTail = GeometryArrowTailType.Arrow)
+        public static CanvasGeometry CreateArrow(ICanvasResourceCreator resourceCreator, Transformer bounds, Matrix3x2 matrix, bool isAbsolute = false, float width = 10, float value = 0.5f, GeometryArrowTailType leftTail = GeometryArrowTailType.None, GeometryArrowTailType rightTail = GeometryArrowTailType.Arrow)
         {
             Vector2 center = Vector2.Transform(bounds.Center, matrix);
             Vector2 centerLeft = Vector2.Transform(bounds.CenterLeft, matrix);
@@ -241,7 +241,7 @@ namespace FanKit.Transformers
         /// <param name="resourceCreator"> The resource-creator. </param>
         /// <param name="bounds"> The bounds. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreateCapsule(ICanvasResourceCreator resourceCreator, ITransformerLTRB bounds)
+        public static CanvasGeometry CreateCapsule(ICanvasResourceCreator resourceCreator, Transformer bounds)
         {
             Vector2 centerLeft = bounds.CenterLeft;
             Vector2 centerTop = bounds.CenterTop;
@@ -281,7 +281,7 @@ namespace FanKit.Transformers
         /// <param name="bounds"> The bounds. </param>
         /// <param name="matrix"> The matrix. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreateCapsule(ICanvasResourceCreator resourceCreator, ITransformerLTRB bounds, Matrix3x2 matrix)
+        public static CanvasGeometry CreateCapsule(ICanvasResourceCreator resourceCreator, Transformer bounds, Matrix3x2 matrix)
         {
             Vector2 leftTop = Vector2.Transform(bounds.LeftTop, matrix);
             Vector2 rightTop = Vector2.Transform(bounds.RightTop, matrix);
@@ -392,7 +392,7 @@ namespace FanKit.Transformers
         /// <param name="bounds"> The bounds. </param>
         /// <param name="spread"> The spread. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreateHeart(ICanvasResourceCreator resourceCreator, ITransformerLTRB bounds, float spread)
+        public static CanvasGeometry CreateHeart(ICanvasResourceCreator resourceCreator, Transformer bounds, float spread)
         {
             Matrix3x2 oneMatrix = Transformer.FindHomographyFromIdentity(bounds);
 
@@ -407,7 +407,7 @@ namespace FanKit.Transformers
         /// <param name="matrix"> The matrix. </param>
         /// <param name="spread"> The spread. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreateHeart(ICanvasResourceCreator resourceCreator, ITransformerLTRB bounds, Matrix3x2 matrix, float spread)
+        public static CanvasGeometry CreateHeart(ICanvasResourceCreator resourceCreator, Transformer bounds, Matrix3x2 matrix, float spread)
         {
             Matrix3x2 oneMatrix = Transformer.FindHomographyFromIdentity(bounds);
             Matrix3x2 oneMatrix2 = oneMatrix * matrix;

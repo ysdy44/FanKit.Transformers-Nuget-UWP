@@ -35,7 +35,7 @@ namespace FanKit.Transformers
         /// <param name="resourceCreator"> The resource-creator. </param>
         /// <param name="bounds"> The bounds. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreateRectangle(ICanvasResourceCreator resourceCreator, ITransformerLTRB bounds) => TransformerGeometry.CreateRectangleCore(resourceCreator, bounds.LeftTop, bounds.RightTop, bounds.RightBottom, bounds.LeftBottom);
+        public static CanvasGeometry CreateRectangle(ICanvasResourceCreator resourceCreator, Transformer bounds) => TransformerGeometry.CreateRectangleCore(resourceCreator, bounds.LeftTop, bounds.RightTop, bounds.RightBottom, bounds.LeftBottom);
 
         /// <summary>
         /// Create a new rectangle geometry.
@@ -44,7 +44,7 @@ namespace FanKit.Transformers
         /// <param name="bounds"> The bounds. </param>
         /// <param name="matrix"> The matrix. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreateRectangle(ICanvasResourceCreator resourceCreator, ITransformerLTRB bounds, Matrix3x2 matrix) => TransformerGeometry.CreateRectangle(resourceCreator, bounds.LeftTop, bounds.RightTop, bounds.RightBottom, bounds.LeftBottom, matrix);
+        public static CanvasGeometry CreateRectangle(ICanvasResourceCreator resourceCreator, Transformer bounds, Matrix3x2 matrix) => TransformerGeometry.CreateRectangle(resourceCreator, bounds.LeftTop, bounds.RightTop, bounds.RightBottom, bounds.LeftBottom, matrix);
 
         /// <summary>
         /// Create a new rectangle geometry.
@@ -97,7 +97,7 @@ namespace FanKit.Transformers
         /// <param name="resourceCreator"> The resource-creator. </param>
         /// <param name="bounds"> The bounds. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreateEllipse(ICanvasResourceCreator resourceCreator, ITransformerLTRB bounds) => TransformerGeometry.CreateEllipseCore(resourceCreator, bounds.CenterLeft, bounds.CenterTop, bounds.CenterRight, bounds.CenterBottom);
+        public static CanvasGeometry CreateEllipse(ICanvasResourceCreator resourceCreator, Transformer bounds) => TransformerGeometry.CreateEllipseCore(resourceCreator, bounds.CenterLeft, bounds.CenterTop, bounds.CenterRight, bounds.CenterBottom);
 
         /// <summary>
         /// Create a new ellipse geometry.
@@ -106,7 +106,7 @@ namespace FanKit.Transformers
         /// <param name="bounds"> The bounds. </param>
         /// <param name="matrix"> The matrix. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreateEllipse(ICanvasResourceCreator resourceCreator, ITransformerLTRB bounds, Matrix3x2 matrix) => TransformerGeometry.CreateEllipse(resourceCreator, bounds.CenterLeft, bounds.CenterTop, bounds.CenterRight, bounds.CenterBottom, matrix);
+        public static CanvasGeometry CreateEllipse(ICanvasResourceCreator resourceCreator, Transformer bounds, Matrix3x2 matrix) => TransformerGeometry.CreateEllipse(resourceCreator, bounds.CenterLeft, bounds.CenterTop, bounds.CenterRight, bounds.CenterBottom, matrix);
 
         /// <summary>
         /// Create a new ellipse geometry.

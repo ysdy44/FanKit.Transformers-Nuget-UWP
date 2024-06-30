@@ -2676,7 +2676,7 @@
       <param name="matrix"> 矩阵。 </param>
       <returns> 生成的几何形状。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.Transformer.FindHomography(System.Single,System.Single,FanKit.Transformers.ITransformerLTRB)">
+    <member name="M:FanKit.Transformers.Transformer.FindHomography(System.Single,System.Single,FanKit.Transformers.Transformer)">
       <summary>
         查找单应性。
       </summary>
@@ -2685,7 +2685,7 @@
       <param name="destination"> 目标变换者。 </param>
       <returns> 单应性矩阵。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.Transformer.FindHomography3D(System.Single,System.Single,FanKit.Transformers.ITransformerLTRB)">
+    <member name="M:FanKit.Transformers.Transformer.FindHomography3D(System.Single,System.Single,FanKit.Transformers.Transformer)">
       <summary>
         查找单应性。
       </summary>
@@ -2694,7 +2694,7 @@
       <param name="destination"> 目标变换者。 </param>
       <returns> 单应性矩阵。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.Transformer.FindHomography(System.Single,System.Single,System.Single,System.Single,FanKit.Transformers.ITransformerLTRB)">
+    <member name="M:FanKit.Transformers.Transformer.FindHomography(System.Single,System.Single,System.Single,System.Single,FanKit.Transformers.Transformer)">
       <summary>
         查找单应性。
       </summary>
@@ -2705,7 +2705,7 @@
       <param name="destination"> 目标变换者。 </param>
       <returns> 单应性矩阵。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.Transformer.FindHomography3D(System.Single,System.Single,System.Single,System.Single,FanKit.Transformers.ITransformerLTRB)">
+    <member name="M:FanKit.Transformers.Transformer.FindHomography3D(System.Single,System.Single,System.Single,System.Single,FanKit.Transformers.Transformer)">
       <summary>
         查找单应性。
       </summary>
@@ -2716,7 +2716,7 @@
       <param name="destination"> 目标变换者。 </param>
       <returns> 单应性矩阵。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.Transformer.FindHomography(FanKit.Transformers.TransformerBorder,FanKit.Transformers.ITransformerLTRB)">
+    <member name="M:FanKit.Transformers.Transformer.FindHomography(FanKit.Transformers.TransformerBorder,FanKit.Transformers.Transformer)">
       <summary>
         查找单应性。
       </summary>
@@ -2724,7 +2724,7 @@
       <param name="destination"> 目标变换者。 </param>
       <returns> 单应性矩阵。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.Transformer.FindHomography3D(FanKit.Transformers.TransformerBorder,FanKit.Transformers.ITransformerLTRB)">
+    <member name="M:FanKit.Transformers.Transformer.FindHomography3D(FanKit.Transformers.TransformerBorder,FanKit.Transformers.Transformer)">
       <summary>
         查找单应性。
       </summary>
@@ -2732,7 +2732,7 @@
       <param name="destination"> 目标变换者。 </param>
       <returns> 单应性矩阵。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.Transformer.FindHomography(FanKit.Transformers.ITransformerLTRB,FanKit.Transformers.ITransformerLTRB)">
+    <member name="M:FanKit.Transformers.Transformer.FindHomography(FanKit.Transformers.Transformer,FanKit.Transformers.Transformer)">
       <summary>
         查找单应性。
       </summary>
@@ -2902,7 +2902,7 @@
       <param name="width"> 边界的宽度。 </param>
       <param name="height"> 边界的高度。 </param>
     </member>
-    <member name="M:FanKit.Transformers.TransformerBorder.#ctor(FanKit.Transformers.ITransformerLTRB)">
+    <member name="M:FanKit.Transformers.TransformerBorder.#ctor(FanKit.Transformers.Transformer)">
       <summary>
         初始化 <see cref="T:FanKit.Transformers.TransformerBorder"/>。
       </summary>
@@ -3235,7 +3235,7 @@
       <param name="rotation"> 源旋转。 </param>
       <returns> 单位向量。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.TransformerGeometry.CreateRectangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB)">
+    <member name="M:FanKit.Transformers.TransformerGeometry.CreateRectangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.Transformer)">
       <summary>
         创建一个新的矩形几何形状。
       </summary>
@@ -3243,7 +3243,7 @@
       <param name="bounds"> 边框。 </param>
       <returns> 生成的几何形状。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.TransformerGeometry.CreateRectangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2)">
+    <member name="M:FanKit.Transformers.TransformerGeometry.CreateRectangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.Transformer,System.Numerics.Matrix3x2)">
       <summary>
         创建一个新的矩形几何形状。
       </summary>
@@ -3275,7 +3275,7 @@
       <param name="matrix"> 矩阵。 </param>
       <returns> 生成的几何形状。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.TransformerGeometry.CreateEllipse(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB)">
+    <member name="M:FanKit.Transformers.TransformerGeometry.CreateEllipse(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.Transformer)">
       <summary>
         创建一个新的椭圆几何形状。
       </summary>
@@ -3283,7 +3283,7 @@
       <param name="bounds"> 边框。 </param>
       <returns> 生成的几何形状。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.TransformerGeometry.CreateEllipse(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2)">
+    <member name="M:FanKit.Transformers.TransformerGeometry.CreateEllipse(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.Transformer,System.Numerics.Matrix3x2)">
       <summary>
         创建一个新的椭圆几何形状。
       </summary>
@@ -3315,7 +3315,7 @@
       <param name="matrix"> 矩阵。 </param>
       <returns> 生成的几何形状。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.TransformerGeometry.CreateRoundRect(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Single)">
+    <member name="M:FanKit.Transformers.TransformerGeometry.CreateRoundRect(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.Transformer,System.Single)">
       <summary>
         创建一个新的圆角矩形几何形状。
       </summary>
@@ -3324,7 +3324,7 @@
       <param name="corner"> 角落。 </param>
       <returns> 生成的几何形状。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.TransformerGeometry.CreateRoundRect(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Single)">
+    <member name="M:FanKit.Transformers.TransformerGeometry.CreateRoundRect(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.Transformer,System.Numerics.Matrix3x2,System.Single)">
       <summary>
         创建一个新的圆角矩形几何形状。
       </summary>
@@ -3334,7 +3334,7 @@
       <param name="corner"> 角落。 </param>
       <returns> 生成的几何形状。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.TransformerGeometry.CreateTriangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Single)">
+    <member name="M:FanKit.Transformers.TransformerGeometry.CreateTriangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.Transformer,System.Single)">
       <summary>
         创建一个新的三角形几何形状。
       </summary>
@@ -3343,7 +3343,7 @@
       <param name="center"> 中心的值， </param>
       <returns> 生成的几何形状。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.TransformerGeometry.CreateTriangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Single)">
+    <member name="M:FanKit.Transformers.TransformerGeometry.CreateTriangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.Transformer,System.Numerics.Matrix3x2,System.Single)">
       <summary>
         创建一个新的三角形几何形状。
       </summary>
@@ -3378,7 +3378,7 @@
       <param name="center"> 中心的值， </param>
       <returns> 生成的几何形状。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.TransformerGeometry.CreateDiamond(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Single)">
+    <member name="M:FanKit.Transformers.TransformerGeometry.CreateDiamond(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.Transformer,System.Single)">
       <summary>
         创建一个新的菱形几何形状。
       </summary>
@@ -3387,7 +3387,7 @@
       <param name="mid"> 中间值。 </param>
       <returns> 生成的几何形状。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.TransformerGeometry.CreateDiamond(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Single)">
+    <member name="M:FanKit.Transformers.TransformerGeometry.CreateDiamond(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.Transformer,System.Numerics.Matrix3x2,System.Single)">
       <summary>
         创建一个新的菱形几何形状。
       </summary>
@@ -3397,7 +3397,7 @@
       <param name="mid"> 中间值。 </param>
       <returns> 生成的几何形状。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.TransformerGeometry.CreatePentagon(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Int32)">
+    <member name="M:FanKit.Transformers.TransformerGeometry.CreatePentagon(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.Transformer,System.Int32)">
       <summary>
         创建一个新的五边形几何形状。
       </summary>
@@ -3406,7 +3406,7 @@
       <param name="points"> 点数。 </param>
       <returns> 生成的几何形状。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.TransformerGeometry.CreatePentagon(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Int32)">
+    <member name="M:FanKit.Transformers.TransformerGeometry.CreatePentagon(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.Transformer,System.Numerics.Matrix3x2,System.Int32)">
       <summary>
         创建一个新的五边形几何形状。
       </summary>
@@ -3416,7 +3416,7 @@
       <param name="points"> 点数。 </param>
       <returns> 生成的几何形状。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.TransformerGeometry.CreateStar(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Int32,System.Single)">
+    <member name="M:FanKit.Transformers.TransformerGeometry.CreateStar(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.Transformer,System.Int32,System.Single)">
       <summary>
         创建一个新的星形几何形状。
       </summary>
@@ -3426,7 +3426,7 @@
       <param name="innerRadius"> 内部半径。 </param>
       <returns> 生成的几何形状。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.TransformerGeometry.CreateStar(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Int32,System.Single)">
+    <member name="M:FanKit.Transformers.TransformerGeometry.CreateStar(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.Transformer,System.Numerics.Matrix3x2,System.Int32,System.Single)">
       <summary>
         创建一个新的星形几何形状。
       </summary>
@@ -3437,7 +3437,7 @@
       <param name="innerRadius"> 内部半径。 </param>
       <returns> 生成的几何形状。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.TransformerGeometry.CreateCog(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Int32,System.Single,System.Single,System.Single)">
+    <member name="M:FanKit.Transformers.TransformerGeometry.CreateCog(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.Transformer,System.Int32,System.Single,System.Single,System.Single)">
       <summary>
         创建一个新的齿轮几何形状。
       </summary>
@@ -3449,7 +3449,7 @@
       <param name="notch"> 缺口。 </param>
       <returns> 生成的几何形状。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.TransformerGeometry.CreateCog(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Int32,System.Single,System.Single,System.Single)">
+    <member name="M:FanKit.Transformers.TransformerGeometry.CreateCog(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.Transformer,System.Numerics.Matrix3x2,System.Int32,System.Single,System.Single,System.Single)">
       <summary>
         创建一个新的齿轮几何形状。
       </summary>
@@ -3462,7 +3462,7 @@
       <param name="notch"> 缺口。 </param>
       <returns> 生成的几何形状。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.TransformerGeometry.CreateDonut(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Single)">
+    <member name="M:FanKit.Transformers.TransformerGeometry.CreateDonut(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.Transformer,System.Single)">
       <summary>
         创建一个新的甜甜圈几何形状。
       </summary>
@@ -3471,7 +3471,7 @@
       <param name="holeRadius"> 孔半径。 </param>
       <returns> 生成的几何形状。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.TransformerGeometry.CreateDonut(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Single)">
+    <member name="M:FanKit.Transformers.TransformerGeometry.CreateDonut(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.Transformer,System.Numerics.Matrix3x2,System.Single)">
       <summary>
         创建一个新的甜甜圈几何形状。
       </summary>
@@ -3481,7 +3481,7 @@
       <param name="holeRadius"> 孔半径。 </param>
       <returns> 生成的几何形状。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.TransformerGeometry.CreatePie(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Single)">
+    <member name="M:FanKit.Transformers.TransformerGeometry.CreatePie(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.Transformer,System.Single)">
       <summary>
         创建一个新的饼图几何形状。
       </summary>
@@ -3490,7 +3490,7 @@
       <param name="sweepAngle"> 扫描角度。 </param>
       <returns> 生成的几何形状。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.TransformerGeometry.CreatePie(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Single)">
+    <member name="M:FanKit.Transformers.TransformerGeometry.CreatePie(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.Transformer,System.Numerics.Matrix3x2,System.Single)">
       <summary>
         创建一个新的饼图几何形状。
       </summary>
@@ -3500,7 +3500,7 @@
       <param name="sweepAngle"> 扫描角度。 </param>
       <returns> 生成的几何形状。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.TransformerGeometry.CreateCookie(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Single,System.Single)">
+    <member name="M:FanKit.Transformers.TransformerGeometry.CreateCookie(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.Transformer,System.Single,System.Single)">
       <summary>
         创建一个新的曲奇饼几何形状。
       </summary>
@@ -3510,7 +3510,7 @@
       <param name="sweepAngle"> 扫描角度。 </param>
       <returns> 生成的几何形状。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.TransformerGeometry.CreateCookie(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Single,System.Single)">
+    <member name="M:FanKit.Transformers.TransformerGeometry.CreateCookie(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.Transformer,System.Numerics.Matrix3x2,System.Single,System.Single)">
       <summary>
         创建一个新的曲奇饼几何形状。
       </summary>
@@ -3521,7 +3521,7 @@
       <param name="sweepAngle"> 扫描角度。 </param>
       <returns> 生成的几何形状。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.TransformerGeometry.CreateArrow(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Boolean,System.Single,System.Single,FanKit.Transformers.GeometryArrowTailType,FanKit.Transformers.GeometryArrowTailType)">
+    <member name="M:FanKit.Transformers.TransformerGeometry.CreateArrow(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.Transformer,System.Boolean,System.Single,System.Single,FanKit.Transformers.GeometryArrowTailType,FanKit.Transformers.GeometryArrowTailType)">
       <summary>
         创建一个新的箭头几何形状。
       </summary>
@@ -3534,7 +3534,7 @@
       <param name="rightTail"> 右尾。 </param>
       <returns> 生成的几何形状。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.TransformerGeometry.CreateArrow(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Boolean,System.Single,System.Single,FanKit.Transformers.GeometryArrowTailType,FanKit.Transformers.GeometryArrowTailType)">
+    <member name="M:FanKit.Transformers.TransformerGeometry.CreateArrow(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.Transformer,System.Numerics.Matrix3x2,System.Boolean,System.Single,System.Single,FanKit.Transformers.GeometryArrowTailType,FanKit.Transformers.GeometryArrowTailType)">
       <summary>
         创建一个新的箭头几何形状。
       </summary>
@@ -3548,7 +3548,7 @@
       <param name="rightTail"> 右尾。 </param>
       <returns> 生成的几何形状。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.TransformerGeometry.CreateCapsule(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB)">
+    <member name="M:FanKit.Transformers.TransformerGeometry.CreateCapsule(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.Transformer)">
       <summary>
         创建一个新的胶囊几何形状。
       </summary>
@@ -3556,7 +3556,7 @@
       <param name="bounds"> 边框。 </param>
       <returns> 生成的几何形状。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.TransformerGeometry.CreateCapsule(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2)">
+    <member name="M:FanKit.Transformers.TransformerGeometry.CreateCapsule(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.Transformer,System.Numerics.Matrix3x2)">
       <summary>
         创建一个新的胶囊几何形状。
       </summary>
@@ -3565,7 +3565,7 @@
       <param name="matrix"> 矩阵。 </param>
       <returns> 生成的几何形状。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.TransformerGeometry.CreateHeart(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Single)">
+    <member name="M:FanKit.Transformers.TransformerGeometry.CreateHeart(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.Transformer,System.Single)">
       <summary>
         创建一个新的心脏几何形状。
       </summary>
@@ -3574,7 +3574,7 @@
       <param name="spread"> 扩展。 </param>
       <returns> 生成的几何形状。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.TransformerGeometry.CreateHeart(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.ITransformerLTRB,System.Numerics.Matrix3x2,System.Single)">
+    <member name="M:FanKit.Transformers.TransformerGeometry.CreateHeart(Microsoft.Graphics.Canvas.ICanvasResourceCreator,FanKit.Transformers.Transformer,System.Numerics.Matrix3x2,System.Single)">
       <summary>
         创建一个新的心脏几何形状。
       </summary>

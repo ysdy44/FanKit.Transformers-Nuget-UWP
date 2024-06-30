@@ -17,7 +17,7 @@ namespace FanKit.Transformers
         /// <param name="bounds"> The bounds. </param>
         /// <param name="points"> The points count. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreatePentagon(ICanvasResourceCreator resourceCreator, ITransformerLTRB bounds, int points)
+        public static CanvasGeometry CreatePentagon(ICanvasResourceCreator resourceCreator, Transformer bounds, int points)
         {
             Matrix3x2 oneMatrix = Transformer.FindHomographyFromIdentity(bounds);
 
@@ -32,7 +32,7 @@ namespace FanKit.Transformers
         /// <param name="matrix"> The matrix. </param>
         /// <param name="points"> The points count. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreatePentagon(ICanvasResourceCreator resourceCreator, ITransformerLTRB bounds, Matrix3x2 matrix, int points)
+        public static CanvasGeometry CreatePentagon(ICanvasResourceCreator resourceCreator, Transformer bounds, Matrix3x2 matrix, int points)
         {
             Matrix3x2 oneMatrix = Transformer.FindHomographyFromIdentity(bounds);
             Matrix3x2 oneMatrix2 = oneMatrix * matrix;
@@ -75,7 +75,7 @@ namespace FanKit.Transformers
         /// <param name="points"> The points count. </param>
         /// <param name="innerRadius"> The inner-radius. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreateStar(ICanvasResourceCreator resourceCreator, ITransformerLTRB bounds, int points, float innerRadius)
+        public static CanvasGeometry CreateStar(ICanvasResourceCreator resourceCreator, Transformer bounds, int points, float innerRadius)
         {
             Matrix3x2 oneMatrix = Transformer.FindHomographyFromIdentity(bounds);
 
@@ -91,7 +91,7 @@ namespace FanKit.Transformers
         /// <param name="points"> The points count. </param>
         /// <param name="innerRadius"> The inner-radius. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreateStar(ICanvasResourceCreator resourceCreator, ITransformerLTRB bounds, Matrix3x2 matrix, int points, float innerRadius)
+        public static CanvasGeometry CreateStar(ICanvasResourceCreator resourceCreator, Transformer bounds, Matrix3x2 matrix, int points, float innerRadius)
         {
             Matrix3x2 oneMatrix = Transformer.FindHomographyFromIdentity(bounds);
             Matrix3x2 oneMatrix2 = oneMatrix * matrix;
@@ -143,7 +143,7 @@ namespace FanKit.Transformers
         /// <param name="tooth"> The tooth. </param>
         /// <param name="notch"> The notch. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreateCog(ICanvasResourceCreator resourceCreator, ITransformerLTRB bounds, int count, float innerRadius, float tooth, float notch)
+        public static CanvasGeometry CreateCog(ICanvasResourceCreator resourceCreator, Transformer bounds, int count, float innerRadius, float tooth, float notch)
         {
             Matrix3x2 oneMatrix = Transformer.FindHomographyFromIdentity(bounds);
 
@@ -161,7 +161,7 @@ namespace FanKit.Transformers
         /// <param name="tooth"> The tooth. </param>
         /// <param name="notch"> The notch. </param>
         /// <returns> The product geometry. </returns>
-        public static CanvasGeometry CreateCog(ICanvasResourceCreator resourceCreator, ITransformerLTRB bounds, Matrix3x2 matrix, int count, float innerRadius, float tooth, float notch)
+        public static CanvasGeometry CreateCog(ICanvasResourceCreator resourceCreator, Transformer bounds, Matrix3x2 matrix, int count, float innerRadius, float tooth, float notch)
         {
             Matrix3x2 oneMatrix = Transformer.FindHomographyFromIdentity(bounds);
             Matrix3x2 oneMatrix2 = oneMatrix * matrix;
