@@ -604,10 +604,6 @@ M:FanKit.Transformers.ITransformerGeometry.ToEllipse(Microsoft.Graphics.Canvas.I
 M:FanKit.Transformers.ITransformerGeometry.ToEllipse(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Matrix3x2)@Param@matrix
 M:FanKit.Transformers.ITransformerGeometry.ToEllipse(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Matrix3x2)@Returns
 T:FanKit.Transformers.ITransformerLTRB@Summary
-P:FanKit.Transformers.ITransformerLTRB.LeftTop@Summary
-P:FanKit.Transformers.ITransformerLTRB.RightTop@Summary
-P:FanKit.Transformers.ITransformerLTRB.RightBottom@Summary
-P:FanKit.Transformers.ITransformerLTRB.LeftBottom@Summary
 P:FanKit.Transformers.ITransformerLTRB.CenterX@Summary
 P:FanKit.Transformers.ITransformerLTRB.CenterY@Summary
 P:FanKit.Transformers.ITransformerLTRB.Center@Summary

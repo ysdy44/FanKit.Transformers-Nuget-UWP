@@ -1466,18 +1466,6 @@
         A interface provides four positions (top-left, top-right, bottom-right, bottom-left corners).
       </summary>
     </member>
-    <member name="P:FanKit.Transformers.ITransformerLTRB.LeftTop">
-      <summary> Gets the position of the top-left corner. </summary>
-    </member>
-    <member name="P:FanKit.Transformers.ITransformerLTRB.RightTop">
-      <summary> Gets the position of the top-right corner. </summary>
-    </member>
-    <member name="P:FanKit.Transformers.ITransformerLTRB.RightBottom">
-      <summary> Gets the position of the bottom-right corner. </summary>
-    </member>
-    <member name="P:FanKit.Transformers.ITransformerLTRB.LeftBottom">
-      <summary> Gets the position of the bottom-left corner. </summary>
-    </member>
     <member name="P:FanKit.Transformers.ITransformerLTRB.CenterX">
       <summary> Gets the X-axis value of the center. </summary>
     </member>

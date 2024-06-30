@@ -1466,18 +1466,6 @@
         提供四个位置（左上，右上，右下，左下角）的接口。
       </summary>
     </member>
-    <member name="P:FanKit.Transformers.ITransformerLTRB.LeftTop">
-      <summary> 获取左上角的位置。 </summary>
-    </member>
-    <member name="P:FanKit.Transformers.ITransformerLTRB.RightTop">
-      <summary> 获取右上角的位置。 </summary>
-    </member>
-    <member name="P:FanKit.Transformers.ITransformerLTRB.RightBottom">
-      <summary> 获取右下角的位置。 </summary>
-    </member>
-    <member name="P:FanKit.Transformers.ITransformerLTRB.LeftBottom">
-      <summary> 获取左下角的位置。 </summary>
-    </member>
     <member name="P:FanKit.Transformers.ITransformerLTRB.CenterX">
       <summary> 获取中心点的 X 轴值。 </summary>
     </member>
