@@ -2443,16 +2443,16 @@
       <returns> 生成的点。 </returns>
     </member>
     <member name="F:FanKit.Transformers.Transformer.LeftTop">
-      <summary> 获取或设置变换者的左上角的位置。 </summary>
+      <summary> 变换者的左上角的位置。 </summary>
     </member>
     <member name="F:FanKit.Transformers.Transformer.RightTop">
-      <summary> 获取或设置变换者的右上角的位置。 </summary>
+      <summary> 变换者的右上角的位置。 </summary>
     </member>
     <member name="F:FanKit.Transformers.Transformer.RightBottom">
-      <summary> 获取或设置变换者的右下角的位置。 </summary>
+      <summary> 变换者的右下角的位置。 </summary>
     </member>
     <member name="F:FanKit.Transformers.Transformer.LeftBottom">
-      <summary> 获取或设置变换者的左下角的位置。 </summary>
+      <summary> 变换者的左下角的位置。 </summary>
     </member>
     <member name="M:FanKit.Transformers.Transformer.#ctor(System.Single,System.Single,System.Single,System.Single)">
       <summary>
@@ -2831,16 +2831,16 @@
       </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerBorder.Left">
-      <summary> 获取边界的左侧的 X 轴值。 </summary>
+      <summary> 边界的左侧的 X 轴值。 </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerBorder.Top">
-      <summary> 获取边界的顶部的 Y 轴位置。 </summary>
+      <summary> 边界的顶部的 Y 轴位置。 </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerBorder.Right">
-      <summary> 获取边界的右侧的 X 轴值。 </summary>
+      <summary> 边界的右侧的 X 轴值。 </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerBorder.Bottom">
-      <summary> 获取边界的底部的 Y 轴位置。 </summary>
+      <summary> 边界的底部的 Y 轴位置。 </summary>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.#ctor(System.Single,System.Single,System.Single,System.Single)">
       <summary>

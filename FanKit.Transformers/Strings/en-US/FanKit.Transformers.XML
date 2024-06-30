@@ -2443,16 +2443,16 @@
       <returns> The product point. </returns>
     </member>
     <member name="F:FanKit.Transformers.Transformer.LeftTop">
-      <summary> Gets or sets the position of the top-left corner of the transformer. </summary>
+      <summary> The position of the top-left corner of the transformer. </summary>
     </member>
     <member name="F:FanKit.Transformers.Transformer.RightTop">
-      <summary> Gets or sets the position of the top-right corner of the transformer. </summary>
+      <summary> The position of the top-right corner of the transformer. </summary>
     </member>
     <member name="F:FanKit.Transformers.Transformer.RightBottom">
-      <summary> Gets or sets the position of the bottom-right corner of the transformer. </summary>
+      <summary> The position of the bottom-right corner of the transformer. </summary>
     </member>
     <member name="F:FanKit.Transformers.Transformer.LeftBottom">
-      <summary> Gets or sets the position of the bottom-left corner of the transformer. </summary>
+      <summary> The position of the bottom-left corner of the transformer. </summary>
     </member>
     <member name="M:FanKit.Transformers.Transformer.#ctor(System.Single,System.Single,System.Single,System.Single)">
       <summary>
@@ -2831,16 +2831,16 @@
       </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerBorder.Left">
-      <summary> Gets the X-axis value of the left side of the border. </summary>
+      <summary> The X-axis value of the left side of the border. </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerBorder.Top">
-      <summary> Gets the Y-axis position of the top of the border. </summary>
+      <summary> The Y-axis position of the top of the border. </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerBorder.Right">
-      <summary> Gets the X-axis value of the right side of the border. </summary>
+      <summary> The X-axis value of the right side of the border. </summary>
     </member>
     <member name="F:FanKit.Transformers.TransformerBorder.Bottom">
-      <summary> Gets the Y-axis position of the bottom of the border. </summary>
+      <summary> The Y-axis position of the bottom of the border. </summary>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.#ctor(System.Single,System.Single,System.Single,System.Single)">
       <summary>
