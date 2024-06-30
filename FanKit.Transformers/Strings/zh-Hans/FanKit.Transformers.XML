@@ -3704,68 +3704,6 @@
     <member name="F:FanKit.Transformers.TransformerMode.ScaleLeftBottom">
       <summary> 缩放（拖拽左下角的节点）。 </summary>
     </member>
-    <member name="T:FanKit.Transformers.TransformerRect">
-      <summary>
-        封装四个范围值（左，上，右，下）的结构。
-      </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerRect.Left">
-      <summary> 获取矩形的左侧的 X 轴值。 </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerRect.Top">
-      <summary> 获取矩形的顶部的 Y 轴位置。 </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerRect.Right">
-      <summary> 获取矩形的右侧的 X 轴值。 </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerRect.Bottom">
-      <summary> 获取矩形的底部的 Y 轴位置。 </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerRect.Width">
-      <summary> 获取矩形的宽度。 </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerRect.Height">
-      <summary> 获取矩形的高度。 </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerRect.CenterX">
-      <summary> 获取矩形的中心点的 X 轴值。 </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerRect.CenterY">
-      <summary> 获取矩形的中心点的 Y 轴位置。 </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerRect.Center">
-      <summary> 获取矩形的中心点的位置。 </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerRect.CenterLeft">
-      <summary> 获取矩形的左下角和左上角的中心点的位置。 </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerRect.CenterTop">
-      <summary> 获取矩形的左上角和右上角的中心点的位置。 </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerRect.CenterRight">
-      <summary> 获取矩形的右上角和右下角的中心点的位置。 </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerRect.CenterBottom">
-      <summary> 获取矩形的右下角和左下角的中心点的位置。 </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerRect.LeftTop">
-      <summary> 获取矩形的左上角的位置。 </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerRect.RightTop">
-      <summary> 获取矩形的左上角的位置。 </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerRect.RightBottom">
-      <summary> 获取矩形的右下角的位置。 </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerRect.LeftBottom">
-      <summary> 获取矩形的左下角的位置。 </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerRect.Horizontal">
-      <summary> 获取矩形的水平向量。 </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerRect.Vertical">
-      <summary> 获取矩形的垂直向量。 </summary>
-    </member>
     <member name="T:FanKit.Transformers.XML">
       <summary>
         为 XElement 提供常量和静态方法。

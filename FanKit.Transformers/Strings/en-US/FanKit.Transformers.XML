@@ -3704,68 +3704,6 @@
     <member name="F:FanKit.Transformers.TransformerMode.ScaleLeftBottom">
       <summary> Scale (The node at the bottom-left corner is dragged). </summary>
     </member>
-    <member name="T:FanKit.Transformers.TransformerRect">
-      <summary>
-        A structure encapsulating four range values (Left, Top, Right, Bottom).
-      </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerRect.Left">
-      <summary> Gets the X-axis value of the left side of the rectangle. </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerRect.Top">
-      <summary> Gets the Y-axis position of the top of the rectangle. </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerRect.Right">
-      <summary> Gets the X-axis value of the right side of the rectangle. </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerRect.Bottom">
-      <summary> Gets the Y-axis position of the bottom of the rectangle. </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerRect.Width">
-      <summary> Gets the width of the rectangle. </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerRect.Height">
-      <summary> Gets the height of the rectangle. </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerRect.CenterX">
-      <summary> Gets the X-axis value of the center of the rectangle. </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerRect.CenterY">
-      <summary> Gets the Y-axis position of the center of the rectangle. </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerRect.Center">
-      <summary> Gets the position of the center of the rectangle. </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerRect.CenterLeft">
-      <summary> Gets the position of the center of bottom-left and top-left corners of the rectangle. </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerRect.CenterTop">
-      <summary> Gets the position of the center of top-left and top-right corners of the rectangle. </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerRect.CenterRight">
-      <summary> Gets the position of the center of top-right and bottom-right corners of the rectangle. </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerRect.CenterBottom">
-      <summary> Gets the position of the center of bottom-right and bottom-left corners of the rectangle. </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerRect.LeftTop">
-      <summary> Gets the position of the top-left corner of the rectangle. </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerRect.RightTop">
-      <summary> Gets the position of the top-right corner of the rectangle. </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerRect.RightBottom">
-      <summary> Gets the position of the bottom-right corner of the rectangle. </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerRect.LeftBottom">
-      <summary> Gets the position of the bottom-left corner of the rectangle. </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerRect.Horizontal">
-      <summary> Gets the horizontal vector of the rectangle. </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerRect.Vertical">
-      <summary> Gets the vertical vector of the rectangle. </summary>
-    </member>
     <member name="T:FanKit.Transformers.XML">
       <summary>
         Provide constant and static methods for XElement.
