@@ -5,6 +5,11 @@ namespace FanKit.Transformers
 {
     partial struct TransformerBorder
     {
+        /// <summary>
+        /// Expands the current border exactly enough to contain the specified point.
+        /// </summary>
+        /// <param name="point"> The specified point. </param>
+        /// <returns> The product border. </returns>
         public TransformerBorder Union(Vector2 point)
         {
             return this.IsEmpty ? TransformerBorder.Empty : new TransformerBorder
@@ -16,6 +21,11 @@ namespace FanKit.Transformers
             };
         }
 
+        /// <summary>
+        /// Expands the current border exactly enough to contain the specified border.
+        /// </summary>
+        /// <param name="border"> The specified border. </param>
+        /// <returns> The product border. </returns>
         public TransformerBorder Union(TransformerBorder border)
         {
             return this.IsEmpty ? border : new TransformerBorder
@@ -27,6 +37,12 @@ namespace FanKit.Transformers
             };
         }
 
+        /// <summary>
+        /// Creates a border that is exactly large enough to include the specified border and the specified point.
+        /// </summary>
+        /// <param name="border"> The specified border. </param>
+        /// <param name="point"> The specified point. </param>
+        /// <returns> The product border. </returns>
         public static TransformerBorder Union(TransformerBorder border, Vector2 point)
         {
             return border.IsEmpty ? TransformerBorder.Empty : new TransformerBorder
@@ -38,6 +54,12 @@ namespace FanKit.Transformers
             };
         }
 
+        /// <summary>
+        /// Creates a border that is exactly large enough to contain the two specified borders.
+        /// </summary>
+        /// <param name="border1"> The specified first border. </param>
+        /// <param name="border2"> The specified second border. </param>
+        /// <returns> The product border. </returns>
         public static TransformerBorder Union(TransformerBorder border1, TransformerBorder border2)
         {
             return border1.IsEmpty ? border2 : new TransformerBorder

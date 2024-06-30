@@ -3128,6 +3128,36 @@
       <param name="destination"> The destination border. </param>
       <returns> The homologous matrix. </returns>
     </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.Union(System.Numerics.Vector2)">
+      <summary>
+        Expands the current border exactly enough to contain the specified point.
+      </summary>
+      <param name="point"> The specified point. </param>
+      <returns> The product border. </returns>
+    </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.Union(FanKit.Transformers.TransformerBorder)">
+      <summary>
+        Expands the current border exactly enough to contain the specified border.
+      </summary>
+      <param name="border"> The specified border. </param>
+      <returns> The product border. </returns>
+    </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.Union(FanKit.Transformers.TransformerBorder,System.Numerics.Vector2)">
+      <summary>
+        Creates a border that is exactly large enough to include the specified border and the specified point.
+      </summary>
+      <param name="border"> The specified border. </param>
+      <param name="point"> The specified point. </param>
+      <returns> The product border. </returns>
+    </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.Union(FanKit.Transformers.TransformerBorder,FanKit.Transformers.TransformerBorder)">
+      <summary>
+        Creates a border that is exactly large enough to contain the two specified borders.
+      </summary>
+      <param name="border1"> The specified first border. </param>
+      <param name="border2"> The specified second border. </param>
+      <returns> The product border. </returns>
+    </member>
     <member name="T:FanKit.Transformers.BorderBorderSnap">
       <summary>
         Snapping tool for <see cref="T:FanKit.Transformers.TransformerBorder"/>.

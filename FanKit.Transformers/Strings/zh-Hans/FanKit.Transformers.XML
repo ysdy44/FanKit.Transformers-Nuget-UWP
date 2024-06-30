@@ -3128,6 +3128,36 @@
       <param name="destination"> 目标边界。 </param>
       <returns> 单应性矩阵。 </returns>
     </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.Union(System.Numerics.Vector2)">
+      <summary>
+        扩大当前边界刚好足以包含指定的点。
+      </summary>
+      <param name="point"> 指定的点。 </param>
+      <returns> 生成的边界。 </returns>
+    </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.Union(FanKit.Transformers.TransformerBorder)">
+      <summary>
+        扩大当前边界刚好足以包含指定的边界。
+      </summary>
+      <param name="border"> 指定的边界。 </param>
+      <returns> 生成的边界。 </returns>
+    </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.Union(FanKit.Transformers.TransformerBorder,System.Numerics.Vector2)">
+      <summary>
+        创建正好包含指定的边界和指定的点的边界。
+      </summary>
+      <param name="border"> 指定的边界。 </param>
+      <param name="point"> 指定的点。 </param>
+      <returns> 生成的边界。 </returns>
+    </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.Union(FanKit.Transformers.TransformerBorder,FanKit.Transformers.TransformerBorder)">
+      <summary>
+        创建正好包含两个指定的边界的边界。
+      </summary>
+      <param name="border1"> 指定的第一个边界。 </param>
+      <param name="border2"> 指定的第二个边界。 </param>
+      <returns> 生成的边界。 </returns>
+    </member>
     <member name="T:FanKit.Transformers.BorderBorderSnap">
       <summary>
         <see cref="T:FanKit.Transformers.TransformerBorder"/> 的吸附工具。
