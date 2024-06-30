@@ -2716,7 +2716,7 @@
       <param name="destination"> 目标变换者。 </param>
       <returns> 单应性矩阵。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.Transformer.FindHomography(FanKit.Transformers.ITransformerLTRB,FanKit.Transformers.ITransformerLTRB)">
+    <member name="M:FanKit.Transformers.Transformer.FindHomography(FanKit.Transformers.TransformerRect,FanKit.Transformers.ITransformerLTRB)">
       <summary>
         查找单应性。
       </summary>
@@ -2725,6 +2725,14 @@
       <returns> 单应性矩阵。 </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.FindHomography3D(FanKit.Transformers.TransformerRect,FanKit.Transformers.ITransformerLTRB)">
+      <summary>
+        查找单应性。
+      </summary>
+      <param name="source"> 源变换者。 </param>
+      <param name="destination"> 目标变换者。 </param>
+      <returns> 单应性矩阵。 </returns>
+    </member>
+    <member name="M:FanKit.Transformers.Transformer.FindHomography(FanKit.Transformers.ITransformerLTRB,FanKit.Transformers.ITransformerLTRB)">
       <summary>
         查找单应性。
       </summary>

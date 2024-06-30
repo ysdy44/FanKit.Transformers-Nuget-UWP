@@ -96,10 +96,9 @@ namespace FanKit.Transformers
         /// <param name="source"> The source transformer. </param>
         /// <param name="destination"> The destination transformer. </param>
         /// <returns> The homologous matrix. </returns>
-        public static Matrix3x2 FindHomography(ITransformerLTRB source, ITransformerLTRB destination)
+        public static Matrix3x2 FindHomography(TransformerRect source, ITransformerLTRB destination)
         {
-            Matrix3x2 m = FindHomographyFromIdentity(source);
-            return Matrix3x2.Invert(m, out m) ? m * FindHomographyFromIdentity(destination) : FindHomographyFromIdentity(destination);
+            return FindHomography(source.Left, source.Top, source.Width, source.Height, destination);
         }
 
         /// <summary>
@@ -109,7 +108,21 @@ namespace FanKit.Transformers
         /// <param name="destination"> The destination transformer. </param>
         /// <returns> The homologous matrix. </returns>
         public static Matrix4x4 FindHomography3D(TransformerRect source, ITransformerLTRB destination)
-            => FindHomography3D(source.Left, source.Top, source.Width, source.Height, destination);
+        {
+            return FindHomography3D(source.Left, source.Top, source.Width, source.Height, destination);
+        }
+
+        /// <summary>
+        /// Find homography.  
+        /// </summary>
+        /// <param name="source"> The source transformer. </param>
+        /// <param name="destination"> The destination transformer. </param>
+        /// <returns> The homologous matrix. </returns>
+        public static Matrix3x2 FindHomography(ITransformerLTRB source, ITransformerLTRB destination)
+        {
+            Matrix3x2 m = FindHomographyFromIdentity(source);
+            return Matrix3x2.Invert(m, out m) ? m * FindHomographyFromIdentity(destination) : FindHomographyFromIdentity(destination);
+        }
 
         private static Matrix4x4 B3D(Matrix4x4 A, Vector2 lrt)
         {

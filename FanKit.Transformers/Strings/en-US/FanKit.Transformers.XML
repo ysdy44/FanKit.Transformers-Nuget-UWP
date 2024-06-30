@@ -2716,7 +2716,7 @@
       <param name="destination"> The destination transformer. </param>
       <returns> The homologous matrix. </returns>
     </member>
-    <member name="M:FanKit.Transformers.Transformer.FindHomography(FanKit.Transformers.ITransformerLTRB,FanKit.Transformers.ITransformerLTRB)">
+    <member name="M:FanKit.Transformers.Transformer.FindHomography(FanKit.Transformers.TransformerRect,FanKit.Transformers.ITransformerLTRB)">
       <summary>
         Find homography.
       </summary>
@@ -2725,6 +2725,14 @@
       <returns> The homologous matrix. </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.FindHomography3D(FanKit.Transformers.TransformerRect,FanKit.Transformers.ITransformerLTRB)">
+      <summary>
+        Find homography.
+      </summary>
+      <param name="source"> The source transformer. </param>
+      <param name="destination"> The destination transformer. </param>
+      <returns> The homologous matrix. </returns>
+    </member>
+    <member name="M:FanKit.Transformers.Transformer.FindHomography(FanKit.Transformers.ITransformerLTRB,FanKit.Transformers.ITransformerLTRB)">
       <summary>
         Find homography.
       </summary>
