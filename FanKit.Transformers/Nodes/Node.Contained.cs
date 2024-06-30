@@ -21,7 +21,7 @@
         /// </summary>
         /// <param name="rect"> The destination rectangle. </param>
         /// <returns> Return **true** if the vector was contained in rectangle. </returns>
-        public bool Contained(TransformerRect rect) => this.Contained(rect.Left, rect.Top, rect.Right, rect.Bottom);
+        public bool Contained(TransformerBorder rect) => this.Contained(rect.Left, rect.Top, rect.Right, rect.Bottom);
 
     }
 }

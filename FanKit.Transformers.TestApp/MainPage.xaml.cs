@@ -24,7 +24,7 @@ namespace FanKit.Transformers.TestApp
 
     public class Layer1 : ICacheTransform
     {
-        public TransformerRect Source;
+        public TransformerBorder Source;
         public Transformer Destination;
         public Transformer StartingDestination;
 
@@ -37,7 +37,7 @@ namespace FanKit.Transformers.TestApp
 
     public class Layer2
     {
-        public TransformerRect Source;
+        public TransformerBorder Source;
         public Transformer Destination;
 
         public Matrix4x4 GetMatrix3D() => Transformer.FindHomography3D(this.Source, this.Destination);
@@ -99,7 +99,7 @@ namespace FanKit.Transformers.TestApp
             float bitmapHeightOver2 = scale * height / 2;
 
             TransformerBorder border = new TransformerBorder(width, height);
-            TransformerRect rect = new TransformerRect(width, height, Vector2.Zero);
+            TransformerBorder rect = new TransformerBorder(width, height, Vector2.Zero);
             TransformerBorder transformerBorder = new TransformerBorder
             {
                 Left = centerX - bitmapWidthOver2,

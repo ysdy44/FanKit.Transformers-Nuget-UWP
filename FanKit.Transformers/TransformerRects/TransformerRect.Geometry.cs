@@ -4,7 +4,7 @@ using System.Numerics;
 
 namespace FanKit.Transformers
 {
-    partial struct TransformerRect
+    partial struct TransformerBorder
     {
 
         /// <summary>

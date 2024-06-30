@@ -104,14 +104,14 @@ namespace FanKit.Transformers
                 {
                     case MarqueeToolType.Rectangular:
                         {
-                            TransformerRect transformerRect = marqueeTool.TransformerRect;
+                            TransformerBorder transformerRect = marqueeTool.TransformerRect;
                             CanvasGeometry canvasGeometry = transformerRect.ToRectangle(resourceCreator, matrix);
                             drawingSession.DrawThickGeometry(canvasGeometry);
                         }
                         break;
                     case MarqueeToolType.Elliptical:
                         {
-                            TransformerRect transformerRect = marqueeTool.TransformerRect;
+                            TransformerBorder transformerRect = marqueeTool.TransformerRect;
                             CanvasGeometry canvasGeometry = transformerRect.ToEllipse(resourceCreator, matrix);
                             drawingSession.DrawThickGeometry(canvasGeometry);
                         }
@@ -192,7 +192,7 @@ namespace FanKit.Transformers
         }
 
 
-        private static CanvasCommandList GetMarqueeToolRectangular(ICanvasResourceCreator resourceCreator, TransformerRect transformerRect)
+        private static CanvasCommandList GetMarqueeToolRectangular(ICanvasResourceCreator resourceCreator, TransformerBorder transformerRect)
         {
             CanvasCommandList canvasCommandList = new CanvasCommandList(resourceCreator);
             using (CanvasDrawingSession ds = canvasCommandList.CreateDrawingSession())
@@ -203,7 +203,7 @@ namespace FanKit.Transformers
             return canvasCommandList;
         }
 
-        private static void FillMarqueeToolRectangular(this CanvasDrawingSession drawingSession, ICanvasResourceCreator resourceCreator, TransformerRect transformerRect, Rect sourceRectangle, MarqueeCompositeMode compositeMode = MarqueeCompositeMode.New)
+        private static void FillMarqueeToolRectangular(this CanvasDrawingSession drawingSession, ICanvasResourceCreator resourceCreator, TransformerBorder transformerRect, Rect sourceRectangle, MarqueeCompositeMode compositeMode = MarqueeCompositeMode.New)
         {
             switch (compositeMode)
             {
@@ -245,7 +245,7 @@ namespace FanKit.Transformers
         }
 
 
-        private static CanvasCommandList GetMarqueeToolEllipse(ICanvasResourceCreator resourceCreator, TransformerRect transformerRect)
+        private static CanvasCommandList GetMarqueeToolEllipse(ICanvasResourceCreator resourceCreator, TransformerBorder transformerRect)
         {
             CanvasCommandList canvasCommandList = new CanvasCommandList(resourceCreator);
             using (CanvasDrawingSession ds = canvasCommandList.CreateDrawingSession())
@@ -259,7 +259,7 @@ namespace FanKit.Transformers
             return canvasCommandList;
         }
 
-        private static void FillMarqueeToolEllipse(this CanvasDrawingSession drawingSession, ICanvasResourceCreator resourceCreator, TransformerRect transformerRect, Rect sourceRectangle, MarqueeCompositeMode compositeMode = MarqueeCompositeMode.New)
+        private static void FillMarqueeToolEllipse(this CanvasDrawingSession drawingSession, ICanvasResourceCreator resourceCreator, TransformerBorder transformerRect, Rect sourceRectangle, MarqueeCompositeMode compositeMode = MarqueeCompositeMode.New)
         {
             switch (compositeMode)
             {

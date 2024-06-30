@@ -37,7 +37,7 @@ namespace FanKit.Transformers
         /// Initialize a transformer.
         /// </summary>
         /// <param name="rect"> The bounding rectangle. </param>
-        public Transformer(TransformerRect rect)
+        public Transformer(TransformerBorder rect)
         {
             this.LeftTop = new Vector2(rect.Left, rect.Top);
             this.RightTop = new Vector2(rect.Right, rect.Top);
@@ -52,7 +52,7 @@ namespace FanKit.Transformers
         /// <param name="pointB"> The second point that new transformer must contain. </param>
         public Transformer(Vector2 pointA, Vector2 pointB)
         {
-            TransformerRect rect = new TransformerRect(pointA, pointB);
+            TransformerBorder rect = new TransformerBorder(pointA, pointB);
 
             this.LeftTop = new Vector2(rect.Left, rect.Top);
             this.RightTop = new Vector2(rect.Right, rect.Top);
@@ -69,7 +69,7 @@ namespace FanKit.Transformers
         /// <param name="isRatio"> Maintain a ratio when scaling. </param>
         public Transformer(Vector2 pointA, Vector2 pointB, bool isCenter, bool isRatio)
         {
-            TransformerRect rect = new TransformerRect(pointA, pointB, isCenter, isRatio);
+            TransformerBorder rect = new TransformerBorder(pointA, pointB, isCenter, isRatio);
 
             this.LeftTop = new Vector2(rect.Left, rect.Top);
             this.RightTop = new Vector2(rect.Right, rect.Top);

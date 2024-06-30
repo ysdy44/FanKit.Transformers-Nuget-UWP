@@ -96,7 +96,7 @@ namespace FanKit.Transformers
         /// Check node which in the rectangle.
         /// </summary>
         /// <param name="boxRect"> The destination rectangle. </param>
-        public void BoxChoose(TransformerRect boxRect) => this.RectChoose(boxRect.Left, boxRect.Top, boxRect.Right, boxRect.Bottom);
+        public void BoxChoose(TransformerBorder boxRect) => this.RectChoose(boxRect.Left, boxRect.Top, boxRect.Right, boxRect.Bottom);
 
     }
 }

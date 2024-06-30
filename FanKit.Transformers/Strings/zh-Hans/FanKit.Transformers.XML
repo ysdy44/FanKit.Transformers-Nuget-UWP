@@ -641,7 +641,7 @@
       <param name="right"> 目标矩形的右侧的 X 轴值。 </param>
       <param name="bottom"> 目标矩形的底部的 Y 轴位置。 </param>
     </member>
-    <member name="M:FanKit.Transformers.NodeCollection.BoxChoose(FanKit.Transformers.TransformerRect)">
+    <member name="M:FanKit.Transformers.NodeCollection.BoxChoose(FanKit.Transformers.TransformerBorder)">
       <summary>
         选中在矩形中的节点。
       </summary>
@@ -1558,7 +1558,7 @@
       <param name="bottom"> 目标矩形的底部的 Y 轴位置。 </param>
       <returns> 如果向量包含在矩形中，则返回**true**，否则返回**false**。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.Node.Contained(FanKit.Transformers.TransformerRect)">
+    <member name="M:FanKit.Transformers.Node.Contained(FanKit.Transformers.TransformerBorder)">
       <summary>
         该矢量包含在一个矩形中。
       </summary>
@@ -2420,7 +2420,7 @@
       <param name="bottom"> 目标矩形的底部的 Y 轴位置。 </param>
       <returns> 如果变换者包含在矩形中，则返回**true**，否则返回**false**。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.Transformer.Contained(FanKit.Transformers.TransformerRect)">
+    <member name="M:FanKit.Transformers.Transformer.Contained(FanKit.Transformers.TransformerBorder)">
       <summary>
         变换者包含在一个矩形中。
       </summary>
@@ -2507,7 +2507,7 @@
       <param name="right"> 边框的右侧的 X 轴值。 </param>
       <param name="bottom"> 边框的底部的 Y 轴位置。 </param>
     </member>
-    <member name="M:FanKit.Transformers.Transformer.#ctor(FanKit.Transformers.TransformerRect)">
+    <member name="M:FanKit.Transformers.Transformer.#ctor(FanKit.Transformers.TransformerBorder)">
       <summary>
         初始化变换者。
       </summary>
@@ -2716,7 +2716,7 @@
       <param name="destination"> 目标变换者。 </param>
       <returns> 单应性矩阵。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.Transformer.FindHomography(FanKit.Transformers.TransformerRect,FanKit.Transformers.ITransformerLTRB)">
+    <member name="M:FanKit.Transformers.Transformer.FindHomography(FanKit.Transformers.TransformerBorder,FanKit.Transformers.ITransformerLTRB)">
       <summary>
         查找单应性。
       </summary>
@@ -2724,7 +2724,7 @@
       <param name="destination"> 目标变换者。 </param>
       <returns> 单应性矩阵。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.Transformer.FindHomography3D(FanKit.Transformers.TransformerRect,FanKit.Transformers.ITransformerLTRB)">
+    <member name="M:FanKit.Transformers.Transformer.FindHomography3D(FanKit.Transformers.TransformerBorder,FanKit.Transformers.ITransformerLTRB)">
       <summary>
         查找单应性。
       </summary>
@@ -3694,43 +3694,43 @@
         封装四个范围值（左，上，右，下）的结构。
       </summary>
     </member>
-    <member name="M:FanKit.Transformers.TransformerRect.#ctor(System.Numerics.Vector2,System.Numerics.Vector2)">
+    <member name="M:FanKit.Transformers.TransformerBorder.#ctor(System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>
-        初始化 <see cref="T:FanKit.Transformers.TransformerRect"/>。
+        初始化 <see cref="T:FanKit.Transformers.TransformerBorder"/>。
       </summary>
       <param name="pointA"> 新添加的矩形必须包含的第一个点。 </param>
       <param name="pointB"> 新添加的矩形必须包含的第二个点。 </param>
     </member>
-    <member name="M:FanKit.Transformers.TransformerRect.#ctor(System.Numerics.Vector2,System.Numerics.Vector2,System.Boolean,System.Boolean)">
+    <member name="M:FanKit.Transformers.TransformerBorder.#ctor(System.Numerics.Vector2,System.Numerics.Vector2,System.Boolean,System.Boolean)">
       <summary>
-        初始化 <see cref="T:FanKit.Transformers.TransformerRect"/>。
+        初始化 <see cref="T:FanKit.Transformers.TransformerBorder"/>。
       </summary>
       <param name="pointA"> 新添加的矩形必须包含的第一个点。 </param>
       <param name="pointB"> 新添加的矩形必须包含的第二个点。 </param>
       <param name="isCenter"> 围绕中心缩放。 </param>
       <param name="isSquare"> 宽度和高度相等。 </param>
     </member>
-    <member name="M:FanKit.Transformers.TransformerRect.#ctor(System.Single,System.Single,System.Numerics.Vector2)">
+    <member name="M:FanKit.Transformers.TransformerBorder.#ctor(System.Single,System.Single,System.Numerics.Vector2)">
       <summary>
-        初始化 <see cref="T:FanKit.Transformers.TransformerRect"/>。
+        初始化 <see cref="T:FanKit.Transformers.TransformerBorder"/>。
       </summary>
       <param name="width"> 矩形的宽度。 </param>
       <param name="height"> 矩形的高度。 </param>
       <param name="postion"> 矩形的左上角的位置。 </param>
     </member>
-    <member name="M:FanKit.Transformers.TransformerRect.ToRect">
+    <member name="M:FanKit.Transformers.TransformerBorder.ToRect">
       <summary>
         转为矩形。
       </summary>
     </member>
-    <member name="M:FanKit.Transformers.TransformerRect.ToRectangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator)">
+    <member name="M:FanKit.Transformers.TransformerBorder.ToRectangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator)">
       <summary>
         转为几何形状。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
       <returns> 生成的几何形状。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.TransformerRect.ToRectangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Matrix3x2)">
+    <member name="M:FanKit.Transformers.TransformerBorder.ToRectangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Matrix3x2)">
       <summary>
         转为几何形状。
       </summary>
@@ -3738,14 +3738,14 @@
       <param name="matrix"> 矩阵。 </param>
       <returns> 生成的几何形状。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.TransformerRect.ToEllipse(Microsoft.Graphics.Canvas.ICanvasResourceCreator)">
+    <member name="M:FanKit.Transformers.TransformerBorder.ToEllipse(Microsoft.Graphics.Canvas.ICanvasResourceCreator)">
       <summary>
         转为几何形状。
       </summary>
       <param name="resourceCreator"> 资源创建者。 </param>
       <returns> 生成的几何形状。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.TransformerRect.ToEllipse(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Matrix3x2)">
+    <member name="M:FanKit.Transformers.TransformerBorder.ToEllipse(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Matrix3x2)">
       <summary>
         转为几何形状。
       </summary>

@@ -8,15 +8,15 @@ namespace FanKit.Transformers
     /// <summary> 
     /// A structure encapsulating four range values (Left, Top, Right, Bottom). 
     /// </summary>
-    public partial struct TransformerRect : ITransformerWH, ITransformerLTRB, ITransformerGeometry
+    public partial struct TransformerRect : ITransformerWH, ITransformerLTRB { } partial struct TransformerBorder
     {
         //@Constructs
         /// <summary>
-        /// Initialize a <see cref="TransformerRect"/>.
+        /// Initialize a <see cref="TransformerBorder"/>.
         /// </summary>
         /// <param name="pointA"> The first point that new rectangle must contain. </param>
         /// <param name="pointB"> The second point that new rectangle must contain. </param>
-        public TransformerRect(Vector2 pointA, Vector2 pointB)
+        public TransformerBorder(Vector2 pointA, Vector2 pointB)
         {
             float left = System.Math.Min(pointA.X, pointB.X);
             float top = System.Math.Min(pointA.Y, pointB.Y);
@@ -32,7 +32,7 @@ namespace FanKit.Transformers
             this.Top = top;
             this.Right = right;
             this.Bottom = bottom;
-
+            /*
             this.Width = width;
             this.Height = height;
 
@@ -49,16 +49,17 @@ namespace FanKit.Transformers
             this.RightTop = new Vector2(right, top);
             this.RightBottom = new Vector2(right, bottom);
             this.LeftBottom = new Vector2(left, bottom);
+             */
         }
 
         /// <summary>
-        /// Initialize a <see cref="TransformerRect"/>.
+        /// Initialize a <see cref="TransformerBorder"/>.
         /// </summary>
         /// <param name="pointA"> The first point that new rectangle must contain. </param>
         /// <param name="pointB"> The second point that new rectangle must contain. </param>
         /// <param name="isCenter"> Scaling around the center. </param>
         /// <param name="isSquare"> Equal in width and height. </param>
-        public TransformerRect(Vector2 pointA, Vector2 pointB, bool isCenter, bool isSquare)
+        public TransformerBorder(Vector2 pointA, Vector2 pointB, bool isCenter, bool isSquare)
         {
             if (isSquare)
             {
@@ -86,7 +87,7 @@ namespace FanKit.Transformers
             this.Top = top;
             this.Right = right;
             this.Bottom = bottom;
-
+            /*
             this.Width = width;
             this.Height = height;
 
@@ -103,15 +104,16 @@ namespace FanKit.Transformers
             this.RightTop = new Vector2(right, top);
             this.RightBottom = new Vector2(right, bottom);
             this.LeftBottom = new Vector2(left, bottom);
+             */
         }
 
         /// <summary>
-        /// Initialize a <see cref="TransformerRect"/>.
+        /// Initialize a <see cref="TransformerBorder"/>.
         /// </summary>
         /// <param name="width"> The width of the rectangle. </param>
         /// <param name="height"> The height of the rectangle. </param>
         /// <param name="postion"> The position of the top-left corner of the rectangle. </param>
-        public TransformerRect(float width, float height, Vector2 postion)
+        public TransformerBorder(float width, float height, Vector2 postion)
         {
             float left = postion.X;
             float top = postion.Y;
@@ -125,7 +127,7 @@ namespace FanKit.Transformers
             this.Top = top;
             this.Right = right;
             this.Bottom = bottom;
-
+            /*
             this.Width = width;
             this.Height = height;
 
@@ -142,6 +144,7 @@ namespace FanKit.Transformers
             this.RightTop = new Vector2(right, top);
             this.RightBottom = new Vector2(right, bottom);
             this.LeftBottom = new Vector2(left, bottom);
+             */
         }
 
 

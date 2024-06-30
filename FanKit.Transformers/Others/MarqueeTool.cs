@@ -13,7 +13,7 @@ namespace FanKit.Transformers
         /// <summary> Gets or sets whether the tool in use. </summary>
         public bool IsStarted { get; set; }
         /// <summary> Gets transformer-rect for rectangular or elliptical tool. </summary>
-        public TransformerRect TransformerRect { get; private set; }
+        public TransformerBorder TransformerRect { get; private set; }
         /// <summary> Gets points for polygonal or free hand tool. </summary>
         public List<Vector2> Points { get; private set; } = new List<Vector2>();
 
@@ -31,11 +31,11 @@ namespace FanKit.Transformers
             {
                 case MarqueeToolType.Rectangular:
                     this.IsStarted = true;
-                    this.TransformerRect = new TransformerRect(point, point, isCenter, isSquare);
+                    this.TransformerRect = new TransformerBorder(point, point, isCenter, isSquare);
                     break;
                 case MarqueeToolType.Elliptical:
                     this.IsStarted = true;
-                    this.TransformerRect = new TransformerRect(point, point, isCenter, isSquare);
+                    this.TransformerRect = new TransformerBorder(point, point, isCenter, isSquare);
                     break;
                 case MarqueeToolType.Polygonal:
                     if (this.IsStarted == false)
@@ -67,10 +67,10 @@ namespace FanKit.Transformers
             switch (toolType)
             {
                 case MarqueeToolType.Rectangular:
-                    this.TransformerRect = new TransformerRect(startingPoint, point, isCenter, isSquare);
+                    this.TransformerRect = new TransformerBorder(startingPoint, point, isCenter, isSquare);
                     break;
                 case MarqueeToolType.Elliptical:
-                    this.TransformerRect = new TransformerRect(startingPoint, point, isCenter, isSquare);
+                    this.TransformerRect = new TransformerBorder(startingPoint, point, isCenter, isSquare);
                     break;
                 case MarqueeToolType.Polygonal:
                     if (this.Points.Count == 1)
@@ -100,11 +100,11 @@ namespace FanKit.Transformers
             {
                 case MarqueeToolType.Rectangular:
                     this.IsStarted = false;
-                    this.TransformerRect = new TransformerRect(startingPoint, point, isCenter, isSquare);
+                    this.TransformerRect = new TransformerBorder(startingPoint, point, isCenter, isSquare);
                     return true;
                 case MarqueeToolType.Elliptical:
                     this.IsStarted = false;
-                    this.TransformerRect = new TransformerRect(startingPoint, point, isCenter, isSquare);
+                    this.TransformerRect = new TransformerBorder(startingPoint, point, isCenter, isSquare);
                     return true;
                 case MarqueeToolType.Polygonal:
                     Vector2 firstPoint = this.Points.First();
@@ -142,11 +142,11 @@ namespace FanKit.Transformers
             {
                 case MarqueeToolType.Rectangular:
                     this.IsStarted = false;
-                    this.TransformerRect = new TransformerRect(startingPoint, point, isCenter, isSquare);
+                    this.TransformerRect = new TransformerBorder(startingPoint, point, isCenter, isSquare);
                     return true;
                 case MarqueeToolType.Elliptical:
                     this.IsStarted = false;
-                    this.TransformerRect = new TransformerRect(startingPoint, point, isCenter, isSquare);
+                    this.TransformerRect = new TransformerBorder(startingPoint, point, isCenter, isSquare);
                     return true;
                 case MarqueeToolType.Polygonal:
                     Vector2 firstPoint = Vector2.Transform(this.Points.First(), matrix);
