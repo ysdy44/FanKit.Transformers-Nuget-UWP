@@ -39,10 +39,10 @@ namespace FanKit.Transformers
         /// <param name="rect"> The bounding rectangle. </param>
         public Transformer(TransformerRect rect)
         {
-            this.LeftTop = rect.LeftTop;
-            this.RightTop = rect.RightTop;
-            this.RightBottom = rect.RightBottom;
-            this.LeftBottom = rect.LeftBottom;
+            this.LeftTop = new Vector2(rect.Left, rect.Top);
+            this.RightTop = new Vector2(rect.Right, rect.Top);
+            this.RightBottom = new Vector2(rect.Right, rect.Bottom);
+            this.LeftBottom = new Vector2(rect.Left, rect.Bottom);
         }
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace FanKit.Transformers
         {
             TransformerRect rect = new TransformerRect(pointA, pointB);
 
-            this.LeftTop = rect.LeftTop;
-            this.RightTop = rect.RightTop;
-            this.RightBottom = rect.RightBottom;
-            this.LeftBottom = rect.LeftBottom;
+            this.LeftTop = new Vector2(rect.Left, rect.Top);
+            this.RightTop = new Vector2(rect.Right, rect.Top);
+            this.RightBottom = new Vector2(rect.Right, rect.Bottom);
+            this.LeftBottom = new Vector2(rect.Left, rect.Bottom);
         }
 
         /// <summary>
@@ -71,10 +71,10 @@ namespace FanKit.Transformers
         {
             TransformerRect rect = new TransformerRect(pointA, pointB, isCenter, isRatio);
 
-            this.LeftTop = rect.LeftTop;
-            this.RightTop = rect.RightTop;
-            this.RightBottom = rect.RightBottom;
-            this.LeftBottom = rect.LeftBottom;
+            this.LeftTop = new Vector2(rect.Left, rect.Top);
+            this.RightTop = new Vector2(rect.Right, rect.Top);
+            this.RightBottom = new Vector2(rect.Right, rect.Bottom);
+            this.LeftBottom = new Vector2(rect.Left, rect.Bottom);
         }
 
         /// <summary>

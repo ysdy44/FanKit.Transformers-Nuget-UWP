@@ -12,7 +12,7 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
         /// <returns> The product geometry. </returns>
-        public CanvasGeometry ToRectangle(ICanvasResourceCreator resourceCreator) => TransformerGeometry.CreateRectangle(resourceCreator, this);
+        public CanvasGeometry ToRectangle(ICanvasResourceCreator resourceCreator) => TransformerGeometry.CreateRectangle(resourceCreator, new Transformer(this));
 
         /// <summary>
         /// Turn to geometry.
@@ -20,7 +20,7 @@ namespace FanKit.Transformers
         /// <param name="resourceCreator"> The resource-creator. </param>
         /// <param name="matrix"> The matrix. </param>
         /// <returns> The product geometry. </returns>
-        public CanvasGeometry ToRectangle(ICanvasResourceCreator resourceCreator, Matrix3x2 matrix) => TransformerGeometry.CreateRectangle(resourceCreator, this, matrix);
+        public CanvasGeometry ToRectangle(ICanvasResourceCreator resourceCreator, Matrix3x2 matrix) => TransformerGeometry.CreateRectangle(resourceCreator, new Transformer(this), matrix);
 
 
         /// <summary>
@@ -28,7 +28,7 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="resourceCreator"> The resource-creator. </param>
         /// <returns> The product geometry. </returns>
-        public CanvasGeometry ToEllipse(ICanvasResourceCreator resourceCreator) => TransformerGeometry.CreateEllipse(resourceCreator, this);
+        public CanvasGeometry ToEllipse(ICanvasResourceCreator resourceCreator) => TransformerGeometry.CreateEllipse(resourceCreator, new Transformer(this));
 
         /// <summary>
         /// Turn to geometry.
@@ -36,7 +36,7 @@ namespace FanKit.Transformers
         /// <param name="resourceCreator"> The resource-creator. </param>
         /// <param name="matrix"> The matrix. </param>
         /// <returns> The product geometry. </returns>
-        public CanvasGeometry ToEllipse(ICanvasResourceCreator resourceCreator, Matrix3x2 matrix) => TransformerGeometry.CreateEllipse(resourceCreator, this, matrix);
+        public CanvasGeometry ToEllipse(ICanvasResourceCreator resourceCreator, Matrix3x2 matrix) => TransformerGeometry.CreateEllipse(resourceCreator, new Transformer(this), matrix);
 
     }
 }
