@@ -201,8 +201,6 @@
     <Compile Include="TransformerGeometrys\TransformerGeometry.3.cs" />
     <Compile Include="TransformerGeometrys\TransformerGeometry.4.cs" />
     <Compile Include="TransformerMatrix.cs" />
-    <Compile Include="TransformerRects\TransformerRect.cs" />
-    <Compile Include="TransformerRects\TransformerRect.Property.cs" />
     <Compile Include="XMLs\XML.Color.cs" />
     <Compile Include="XMLs\XML.GeometryArrowTailTypeFactory.cs" />
     <Compile Include="XMLs\XML.Node.cs" />
