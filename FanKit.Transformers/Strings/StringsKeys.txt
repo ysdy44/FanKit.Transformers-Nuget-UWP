@@ -1142,6 +1142,10 @@ M:FanKit.Transformers.SnapBase`2.YLeft@Summary
 M:FanKit.Transformers.SnapBase`2.YRight@Summary
 M:FanKit.Transformers.SnapBase`2.Default@Summary
 T:FanKit.Transformers.TransformerBorder@Summary
+P:FanKit.Transformers.TransformerBorder.Left@Summary
+P:FanKit.Transformers.TransformerBorder.Top@Summary
+P:FanKit.Transformers.TransformerBorder.Right@Summary
+P:FanKit.Transformers.TransformerBorder.Bottom@Summary
 M:FanKit.Transformers.TransformerBorder.#ctor(System.Single,System.Single,System.Single,System.Single)@Summary
 M:FanKit.Transformers.TransformerBorder.#ctor(System.Single,System.Single,System.Single,System.Single)@Param@left
 M:FanKit.Transformers.TransformerBorder.#ctor(System.Single,System.Single,System.Single,System.Single)@Param@top
@@ -1205,10 +1209,6 @@ M:FanKit.Transformers.TransformerBorder.op_Inequality(FanKit.Transformers.Transf
 M:FanKit.Transformers.TransformerBorder.op_Inequality(FanKit.Transformers.TransformerBorder,FanKit.Transformers.TransformerBorder)@Param@left
 M:FanKit.Transformers.TransformerBorder.op_Inequality(FanKit.Transformers.TransformerBorder,FanKit.Transformers.TransformerBorder)@Param@right
 M:FanKit.Transformers.TransformerBorder.op_Inequality(FanKit.Transformers.TransformerBorder,FanKit.Transformers.TransformerBorder)@Returns
-P:FanKit.Transformers.TransformerBorder.Left@Summary
-P:FanKit.Transformers.TransformerBorder.Top@Summary
-P:FanKit.Transformers.TransformerBorder.Right@Summary
-P:FanKit.Transformers.TransformerBorder.Bottom@Summary
 P:FanKit.Transformers.TransformerBorder.Width@Summary
 P:FanKit.Transformers.TransformerBorder.Height@Summary
 P:FanKit.Transformers.TransformerBorder.CenterX@Summary

@@ -2866,6 +2866,18 @@
         表示平面直角坐标系中的最大边界。
       </summary>
     </member>
+    <member name="P:FanKit.Transformers.TransformerBorder.Left">
+      <summary> 获取边界的左侧的 X 轴值。 </summary>
+    </member>
+    <member name="P:FanKit.Transformers.TransformerBorder.Top">
+      <summary> 获取边界的顶部的 Y 轴位置。 </summary>
+    </member>
+    <member name="P:FanKit.Transformers.TransformerBorder.Right">
+      <summary> 获取边界的右侧的 X 轴值。 </summary>
+    </member>
+    <member name="P:FanKit.Transformers.TransformerBorder.Bottom">
+      <summary> 获取边界的底部的 Y 轴位置。 </summary>
+    </member>
     <member name="M:FanKit.Transformers.TransformerBorder.#ctor(System.Single,System.Single,System.Single,System.Single)">
       <summary>
         初始化 <see cref="T:FanKit.Transformers.TransformerBorder"/>。
@@ -3006,18 +3018,6 @@
       <param name="left"> 要比较的第一个边界。 </param>
       <param name="right"> 要比较的第二个边界。 </param>
       <returns> 如果节点不相等，则返回**true**；如果它们相等，则为假。 </returns>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerBorder.Left">
-      <summary> 获取边界的左侧的 X 轴值。 </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerBorder.Top">
-      <summary> 获取边界的顶部的 Y 轴位置。 </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerBorder.Right">
-      <summary> 获取边界的右侧的 X 轴值。 </summary>
-    </member>
-    <member name="P:FanKit.Transformers.TransformerBorder.Bottom">
-      <summary> 获取边界的底部的 Y 轴位置。 </summary>
     </member>
     <member name="P:FanKit.Transformers.TransformerBorder.Width">
       <summary> 获取边界的宽度。 </summary>

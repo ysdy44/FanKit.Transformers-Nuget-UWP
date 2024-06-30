@@ -3,15 +3,6 @@
     partial struct TransformerBorder
     {
 
-        /// <summary> Gets the X-axis value of the left side of the border. </summary>
-        public float Left { get; set; }
-        /// <summary> Gets the Y-axis position of the top of the border. </summary>
-        public float Top { get; set; }
-        /// <summary> Gets the X-axis value of the right side of the border. </summary>
-        public float Right { get; set; }
-        /// <summary> Gets the Y-axis position of the bottom of the border. </summary>
-        public float Bottom { get; set; }
-
         /// <summary> Gets the width of the border. </summary>
         public float Width => this.Right - this.Left;
         /// <summary> Gets the height of the border. </summary>

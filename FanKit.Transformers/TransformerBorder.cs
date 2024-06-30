@@ -9,6 +9,16 @@ namespace FanKit.Transformers
     [System.Runtime.InteropServices.StructLayout(System.Runtime.InteropServices.LayoutKind.Sequential)]
     public partial struct TransformerBorder : ITransformerWH //, ITransformerLTRB
     {
+
+        /// <summary> Gets the X-axis value of the left side of the border. </summary>
+        public float Left { get; set; }
+        /// <summary> Gets the Y-axis position of the top of the border. </summary>
+        public float Top { get; set; }
+        /// <summary> Gets the X-axis value of the right side of the border. </summary>
+        public float Right { get; set; }
+        /// <summary> Gets the Y-axis position of the bottom of the border. </summary>
+        public float Bottom { get; set; }
+
         //@Constructs
         /// <summary>
         /// Initialize a <see cref="TransformerBorder"/>.
