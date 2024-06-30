@@ -193,6 +193,7 @@
     <Compile Include="TransformerBorder.Contains.cs" />
     <Compile Include="TransformerBorder.Controller.cs" />
     <Compile Include="TransformerBorder.cs" />
+    <Compile Include="TransformerBorder.Geometry.cs" />
     <Compile Include="TransformerBorder.Homography.cs" />
     <Compile Include="TransformerBorder.Property.cs" />
     <Compile Include="TransformerBorder.Union.cs" />
@@ -204,7 +205,6 @@
     <Compile Include="TransformerGeometrys\TransformerGeometry.4.cs" />
     <Compile Include="TransformerMatrix.cs" />
     <Compile Include="TransformerRects\TransformerRect.cs" />
-    <Compile Include="TransformerRects\TransformerRect.Geometry.cs" />
     <Compile Include="TransformerRects\TransformerRect.Property.cs" />
     <Compile Include="XMLs\XML.Color.cs" />
     <Compile Include="XMLs\XML.GeometryArrowTailTypeFactory.cs" />
