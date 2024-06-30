@@ -1,7 +1,18 @@
-﻿namespace FanKit.Transformers
+﻿using System.Numerics;
+
+namespace FanKit.Transformers
 {
     partial struct TransformerBorder
     {
+        public static TransformerBorder Empty => new TransformerBorder
+        {
+            Left = float.MaxValue,
+            Top = float.MaxValue,
+            Right = float.MinValue,
+            Bottom = float.MinValue
+        };
+
+        public bool IsEmpty => this.Left == float.MaxValue || this.Top == float.MaxValue || this.Right == float.MinValue || this.Bottom == float.MinValue;
 
         /// <summary> Gets the width of the border. </summary>
         public float Width => this.Right - this.Left;
@@ -12,10 +23,11 @@
         public float CenterX => (this.Left + this.Right) / 2;
         /// <summary> Gets the Y-axis position of the center of the border. </summary>
         public float CenterY => (this.Top + this.Bottom) / 2;
+        public Vector2 Center => new Vector2(this.CenterX, this.CenterY);
+
         /*
         /// <summary> Gets the position of the center of the border. </summary>
-        public Vector2 Center => new Vector2(this.CenterX, this.CenterY);   
-        
+            
         /// <summary> Gets the position of the center of bottom-left and top-left corners of the border. </summary>
         public Vector2 CenterLeft => new Vector2(this.Left, this.CenterY);
         /// <summary> Gets the position of the center of top-left and top-right corners of the border. </summary>
