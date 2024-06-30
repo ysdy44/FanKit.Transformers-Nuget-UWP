@@ -1461,38 +1461,6 @@
       <param name="matrix"> 矩阵。 </param>
       <returns> 生成的几何形状。 </returns>
     </member>
-    <member name="T:FanKit.Transformers.ITransformerLTRB">
-      <summary>
-        提供四个位置（左上，右上，右下，左下角）的接口。
-      </summary>
-    </member>
-    <member name="P:FanKit.Transformers.ITransformerLTRB.CenterX">
-      <summary> 获取中心点的 X 轴值。 </summary>
-    </member>
-    <member name="P:FanKit.Transformers.ITransformerLTRB.CenterY">
-      <summary> 获取中心点的 Y 轴位置。 </summary>
-    </member>
-    <member name="P:FanKit.Transformers.ITransformerLTRB.Center">
-      <summary> 获取中心点的位置。 </summary>
-    </member>
-    <member name="P:FanKit.Transformers.ITransformerLTRB.CenterLeft">
-      <summary> 获取左下角和左上角的中心点的位置。 </summary>
-    </member>
-    <member name="P:FanKit.Transformers.ITransformerLTRB.CenterTop">
-      <summary> 获取左上角和右上角的中心点的位置。 </summary>
-    </member>
-    <member name="P:FanKit.Transformers.ITransformerLTRB.CenterRight">
-      <summary> 获取右上角和右下角的中心点的位置。 </summary>
-    </member>
-    <member name="P:FanKit.Transformers.ITransformerLTRB.CenterBottom">
-      <summary> 获取右下角和左下角的中心点的位置。 </summary>
-    </member>
-    <member name="P:FanKit.Transformers.ITransformerLTRB.Horizontal">
-      <summary> 获取水平向量。 </summary>
-    </member>
-    <member name="P:FanKit.Transformers.ITransformerLTRB.Vertical">
-      <summary> 获取垂直向量。 </summary>
-    </member>
     <member name="T:FanKit.Transformers.EachControlPointAngleMode">
       <summary>
         每个控制点的角度模式。

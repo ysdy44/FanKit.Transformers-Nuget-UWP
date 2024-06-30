@@ -1461,38 +1461,6 @@
       <param name="matrix"> The matrix. </param>
       <returns> The product geometry. </returns>
     </member>
-    <member name="T:FanKit.Transformers.ITransformerLTRB">
-      <summary>
-        A interface provides four positions (top-left, top-right, bottom-right, bottom-left corners).
-      </summary>
-    </member>
-    <member name="P:FanKit.Transformers.ITransformerLTRB.CenterX">
-      <summary> Gets the X-axis value of the center. </summary>
-    </member>
-    <member name="P:FanKit.Transformers.ITransformerLTRB.CenterY">
-      <summary> Gets the Y-axis position of the center. </summary>
-    </member>
-    <member name="P:FanKit.Transformers.ITransformerLTRB.Center">
-      <summary> Gets the position of the center. </summary>
-    </member>
-    <member name="P:FanKit.Transformers.ITransformerLTRB.CenterLeft">
-      <summary> Gets the position of the center of bottom-left and top-left corners. </summary>
-    </member>
-    <member name="P:FanKit.Transformers.ITransformerLTRB.CenterTop">
-      <summary> Gets the position of the center of top-left and top-right corners. </summary>
-    </member>
-    <member name="P:FanKit.Transformers.ITransformerLTRB.CenterRight">
-      <summary> Gets the position of the center of top-right and bottom-right corners. </summary>
-    </member>
-    <member name="P:FanKit.Transformers.ITransformerLTRB.CenterBottom">
-      <summary> Gets the position of the center of bottom-right and bottom-left corners. </summary>
-    </member>
-    <member name="P:FanKit.Transformers.ITransformerLTRB.Horizontal">
-      <summary> Gets the horizontal vector. </summary>
-    </member>
-    <member name="P:FanKit.Transformers.ITransformerLTRB.Vertical">
-      <summary> Gets the vertical vector. </summary>
-    </member>
     <member name="T:FanKit.Transformers.EachControlPointAngleMode">
       <summary>
         Mode of angle by each control point.

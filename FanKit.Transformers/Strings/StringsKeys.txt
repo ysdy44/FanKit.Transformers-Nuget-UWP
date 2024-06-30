@@ -603,16 +603,6 @@ M:FanKit.Transformers.ITransformerGeometry.ToEllipse(Microsoft.Graphics.Canvas.I
 M:FanKit.Transformers.ITransformerGeometry.ToEllipse(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Matrix3x2)@Param@resourceCreator
 M:FanKit.Transformers.ITransformerGeometry.ToEllipse(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Matrix3x2)@Param@matrix
 M:FanKit.Transformers.ITransformerGeometry.ToEllipse(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Matrix3x2)@Returns
-T:FanKit.Transformers.ITransformerLTRB@Summary
-P:FanKit.Transformers.ITransformerLTRB.CenterX@Summary
-P:FanKit.Transformers.ITransformerLTRB.CenterY@Summary
-P:FanKit.Transformers.ITransformerLTRB.Center@Summary
-P:FanKit.Transformers.ITransformerLTRB.CenterLeft@Summary
-P:FanKit.Transformers.ITransformerLTRB.CenterTop@Summary
-P:FanKit.Transformers.ITransformerLTRB.CenterRight@Summary
-P:FanKit.Transformers.ITransformerLTRB.CenterBottom@Summary
-P:FanKit.Transformers.ITransformerLTRB.Horizontal@Summary
-P:FanKit.Transformers.ITransformerLTRB.Vertical@Summary
 T:FanKit.Transformers.EachControlPointAngleMode@Summary
 F:FanKit.Transformers.EachControlPointAngleMode.None@Summary
 F:FanKit.Transformers.EachControlPointAngleMode.Asymmetric@Summary
