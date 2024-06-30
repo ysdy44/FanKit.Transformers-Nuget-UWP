@@ -4076,29 +4076,29 @@
       <param name="vector"> 向量。 </param>
       <returns> 生成的弧度。 </returns>
     </member>
+    <member name="M:FanKit.Math.Rotate(System.Numerics.Vector2,System.Single,System.Single)">
+      <summary>
+        以指定的旋转值变换向量。
+      </summary>
+      <param name="value"> 要旋转的向量。 </param>
+      <param name="cos"> 应用的旋转的余弦值。 </param>
+      <param name="sin"> 应用的旋转的正弦值。 </param>
+      <returns> 变换的向量。 </returns>
+    </member>
+    <member name="M:FanKit.Math.Rotate(System.Numerics.Vector2,System.Numerics.Vector2)">
+      <summary>
+        以指定的旋转值变换向量。
+      </summary>
+      <param name="value"> 要旋转的向量。 </param>
+      <param name="rotation"> 应用的旋转。 </param>
+      <returns> 变换的向量。 </returns>
+    </member>
+    <member name="M:FanKit.Math.CreateRotation(System.Single)">
+      <summary>
+        使用给定的旋转弧度创建旋转向量。
+      </summary>
+      <param name="radians"> 弧度旋转量。 </param>
+      <returns> 旋转向量。 </returns>
+    </member>
   </members>
-  <member name="M:FanKit.Math.Rotate(System.Numerics.Vector2,System.Single,System.Single)">
-    <summary>
-      以指定的旋转值变换向量。
-    </summary>
-    <param name="value"> 要旋转的向量。 </param>
-    <param name="cos"> 应用的旋转的余弦值。 </param>
-    <param name="sin"> 应用的旋转的正弦值。 </param>
-    <returns> 变换的向量。 </returns>
-  </member>
-  <member name="M:FanKit.Math.Rotate(System.Numerics.Vector2,System.Numerics.Vector2)">
-    <summary>
-      以指定的旋转值变换向量。
-    </summary>
-    <param name="value"> 要旋转的向量。 </param>
-    <param name="rotation"> 应用的旋转。 </param>
-    <returns> 变换的向量。 </returns>
-  </member>
-  <member name="M:FanKit.Math.CreateRotation(System.Single)">
-    <summary>
-      使用给定的旋转弧度创建旋转向量。
-    </summary>
-    <param name="radians"> 弧度旋转量。 </param>
-    <returns> 旋转向量。 </returns>
-  </member>
 </doc>
