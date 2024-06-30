@@ -3096,6 +3096,36 @@
       <param name="isCenter"> 围绕中心缩放。 </param>
       <returns> 受控制的边界。 </returns>
     </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.ToRectangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator)">
+      <summary>
+        转为几何形状。
+      </summary>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <returns> 生成的几何形状。 </returns>
+    </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.ToRectangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Matrix3x2)">
+      <summary>
+        转为几何形状。
+      </summary>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="matrix"> 矩阵。 </param>
+      <returns> 生成的几何形状。 </returns>
+    </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.ToEllipse(Microsoft.Graphics.Canvas.ICanvasResourceCreator)">
+      <summary>
+        转为几何形状。
+      </summary>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <returns> 生成的几何形状。 </returns>
+    </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.ToEllipse(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Matrix3x2)">
+      <summary>
+        转为几何形状。
+      </summary>
+      <param name="resourceCreator"> 资源创建者。 </param>
+      <param name="matrix"> 矩阵。 </param>
+      <returns> 生成的几何形状。 </returns>
+    </member>
     <member name="M:FanKit.Transformers.TransformerBorder.FindHomography(FanKit.Transformers.TransformerBorder,FanKit.Transformers.TransformerBorder)">
       <summary>
         查找单应性。
@@ -3710,36 +3740,6 @@
       <summary>
         转为矩形。
       </summary>
-    </member>
-    <member name="M:FanKit.Transformers.TransformerBorder.ToRectangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator)">
-      <summary>
-        转为几何形状。
-      </summary>
-      <param name="resourceCreator"> 资源创建者。 </param>
-      <returns> 生成的几何形状。 </returns>
-    </member>
-    <member name="M:FanKit.Transformers.TransformerBorder.ToRectangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Matrix3x2)">
-      <summary>
-        转为几何形状。
-      </summary>
-      <param name="resourceCreator"> 资源创建者。 </param>
-      <param name="matrix"> 矩阵。 </param>
-      <returns> 生成的几何形状。 </returns>
-    </member>
-    <member name="M:FanKit.Transformers.TransformerBorder.ToEllipse(Microsoft.Graphics.Canvas.ICanvasResourceCreator)">
-      <summary>
-        转为几何形状。
-      </summary>
-      <param name="resourceCreator"> 资源创建者。 </param>
-      <returns> 生成的几何形状。 </returns>
-    </member>
-    <member name="M:FanKit.Transformers.TransformerBorder.ToEllipse(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Matrix3x2)">
-      <summary>
-        转为几何形状。
-      </summary>
-      <param name="resourceCreator"> 资源创建者。 </param>
-      <param name="matrix"> 矩阵。 </param>
-      <returns> 生成的几何形状。 </returns>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.Left">
       <summary> 获取矩形的左侧的 X 轴值。 </summary>

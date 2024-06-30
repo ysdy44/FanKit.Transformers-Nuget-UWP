@@ -3096,6 +3096,36 @@
       <param name="isCenter"> Scaling around the center. </param>
       <returns> The controlled border. </returns>
     </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.ToRectangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator)">
+      <summary>
+        Turn to geometry.
+      </summary>
+      <param name="resourceCreator"> The resource-creator. </param>
+      <returns> The product geometry. </returns>
+    </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.ToRectangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Matrix3x2)">
+      <summary>
+        Turn to geometry.
+      </summary>
+      <param name="resourceCreator"> The resource-creator. </param>
+      <param name="matrix"> The matrix. </param>
+      <returns> The product geometry. </returns>
+    </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.ToEllipse(Microsoft.Graphics.Canvas.ICanvasResourceCreator)">
+      <summary>
+        Turn to geometry.
+      </summary>
+      <param name="resourceCreator"> The resource-creator. </param>
+      <returns> The product geometry. </returns>
+    </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.ToEllipse(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Matrix3x2)">
+      <summary>
+        Turn to geometry.
+      </summary>
+      <param name="resourceCreator"> The resource-creator. </param>
+      <param name="matrix"> The matrix. </param>
+      <returns> The product geometry. </returns>
+    </member>
     <member name="M:FanKit.Transformers.TransformerBorder.FindHomography(FanKit.Transformers.TransformerBorder,FanKit.Transformers.TransformerBorder)">
       <summary>
         Find homography.
@@ -3710,36 +3740,6 @@
       <summary>
         Turn to rectangle.
       </summary>
-    </member>
-    <member name="M:FanKit.Transformers.TransformerBorder.ToRectangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator)">
-      <summary>
-        Turn to geometry.
-      </summary>
-      <param name="resourceCreator"> The resource-creator. </param>
-      <returns> The product geometry. </returns>
-    </member>
-    <member name="M:FanKit.Transformers.TransformerBorder.ToRectangle(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Matrix3x2)">
-      <summary>
-        Turn to geometry.
-      </summary>
-      <param name="resourceCreator"> The resource-creator. </param>
-      <param name="matrix"> The matrix. </param>
-      <returns> The product geometry. </returns>
-    </member>
-    <member name="M:FanKit.Transformers.TransformerBorder.ToEllipse(Microsoft.Graphics.Canvas.ICanvasResourceCreator)">
-      <summary>
-        Turn to geometry.
-      </summary>
-      <param name="resourceCreator"> The resource-creator. </param>
-      <returns> The product geometry. </returns>
-    </member>
-    <member name="M:FanKit.Transformers.TransformerBorder.ToEllipse(Microsoft.Graphics.Canvas.ICanvasResourceCreator,System.Numerics.Matrix3x2)">
-      <summary>
-        Turn to geometry.
-      </summary>
-      <param name="resourceCreator"> The resource-creator. </param>
-      <param name="matrix"> The matrix. </param>
-      <returns> The product geometry. </returns>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.Left">
       <summary> Gets the X-axis value of the left side of the rectangle. </summary>
