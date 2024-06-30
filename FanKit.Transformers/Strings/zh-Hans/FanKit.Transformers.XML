@@ -3019,6 +3019,16 @@
       <param name="right"> 要比较的第二个边界。 </param>
       <returns> 如果节点不相等，则返回**true**；如果它们相等，则为假。 </returns>
     </member>
+    <member name="P:FanKit.Transformers.TransformerBorder.Empty">
+      <summary>
+        获取一个特殊值，表示一个边界没有位置或区域。
+      </summary>
+    </member>
+    <member name="P:FanKit.Transformers.TransformerBorder.IsEmpty">
+      <summary>
+        获取一个值，该值指示该边界是否为 <see cref="P:FanKit.Transformers.TransformerBorder.Empty"/> 边界。
+      </summary>
+    </member>
     <member name="P:FanKit.Transformers.TransformerBorder.Width">
       <summary> 获取边界的宽度。 </summary>
     </member>
@@ -3030,6 +3040,9 @@
     </member>
     <member name="P:FanKit.Transformers.TransformerBorder.CenterY">
       <summary> 获取边界的中心点的 Y 轴位置。 </summary>
+    </member>
+    <member name="P:FanKit.Transformers.TransformerBorder.Center">
+      <summary> 获取边界的中心点的位置。 </summary>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.ToTransformer">
       <summary>

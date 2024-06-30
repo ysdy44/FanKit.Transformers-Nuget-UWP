@@ -4,6 +4,9 @@ namespace FanKit.Transformers
 {
     partial struct TransformerBorder
     {
+        /// <summary>
+        /// Gets a special value that represents a border with no position or area.
+        /// </summary>
         public static TransformerBorder Empty => new TransformerBorder
         {
             Left = float.MaxValue,
@@ -12,6 +15,9 @@ namespace FanKit.Transformers
             Bottom = float.MinValue
         };
 
+        /// <summary>
+        /// Gets a value that indicates whether the border is the <see cref="P:FanKit.Transformers.TransformerBorder.Empty"/> border.
+        /// </summary>
         public bool IsEmpty => this.Left == float.MaxValue || this.Top == float.MaxValue || this.Right == float.MinValue || this.Bottom == float.MinValue;
 
         /// <summary> Gets the width of the border. </summary>
@@ -23,11 +29,10 @@ namespace FanKit.Transformers
         public float CenterX => (this.Left + this.Right) / 2;
         /// <summary> Gets the Y-axis position of the center of the border. </summary>
         public float CenterY => (this.Top + this.Bottom) / 2;
+        /// <summary> Gets the position of the center of the border. </summary>
         public Vector2 Center => new Vector2(this.CenterX, this.CenterY);
 
         /*
-        /// <summary> Gets the position of the center of the border. </summary>
-            
         /// <summary> Gets the position of the center of bottom-left and top-left corners of the border. </summary>
         public Vector2 CenterLeft => new Vector2(this.Left, this.CenterY);
         /// <summary> Gets the position of the center of top-left and top-right corners of the border. </summary>

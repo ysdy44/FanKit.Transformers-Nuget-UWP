@@ -3019,6 +3019,16 @@
       <param name="right"> The second border to compare. </param>
       <returns> Return **true** if the nodes are not equal; False if they are equal. </returns>
     </member>
+    <member name="P:FanKit.Transformers.TransformerBorder.Empty">
+      <summary>
+        Gets a special value that represents a border with no position or area.
+      </summary>
+    </member>
+    <member name="P:FanKit.Transformers.TransformerBorder.IsEmpty">
+      <summary>
+        Gets a value that indicates whether the border is the <see cref="P:FanKit.Transformers.TransformerBorder.Empty"/> border.
+      </summary>
+    </member>
     <member name="P:FanKit.Transformers.TransformerBorder.Width">
       <summary> Gets the width of the border. </summary>
     </member>
@@ -3030,6 +3040,9 @@
     </member>
     <member name="P:FanKit.Transformers.TransformerBorder.CenterY">
       <summary> Gets the Y-axis position of the center of the border. </summary>
+    </member>
+    <member name="P:FanKit.Transformers.TransformerBorder.Center">
+      <summary> Gets the position of the center of the border. </summary>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.ToTransformer">
       <summary>
