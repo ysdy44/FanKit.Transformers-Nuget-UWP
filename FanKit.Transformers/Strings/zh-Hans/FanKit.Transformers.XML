@@ -2561,7 +2561,7 @@
       <param name="matrix"> 变换矩阵。 </param>
       <returns> 产生的变换者。 </returns>
     </member>
-    <member name="M:FanKit.Transformers.Transformer.Divide(FanKit.Transformers.Transformer,System.Single)">
+    <member name="M:FanKit.Transformers.Transformer.Multiply(FanKit.Transformers.Transformer,System.Single)">
       <summary>
         以特定的缩放乘以变换者。
       </summary>
