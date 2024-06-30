@@ -2563,7 +2563,7 @@
     </member>
     <member name="M:FanKit.Transformers.Transformer.Multiply(FanKit.Transformers.Transformer,System.Single)">
       <summary>
-        以特定的缩放乘以变换者。
+        以指定的缩放乘以变换者。
       </summary>
       <param name="left"> 要相乘的变换者。 </param>
       <param name="right"> 缩放值。 </param>
@@ -2571,7 +2571,7 @@
     </member>
     <member name="M:FanKit.Transformers.Transformer.Divide(FanKit.Transformers.Transformer,System.Single)">
       <summary>
-        以特定的缩放除以变换者。
+        以指定的缩放除以变换者。
       </summary>
       <param name="left"> 变换者。 </param>
       <param name="divisor"> 缩放值。 </param>
@@ -2603,7 +2603,7 @@
     </member>
     <member name="M:FanKit.Transformers.Transformer.op_Multiply(FanKit.Transformers.Transformer,System.Single)">
       <summary>
-        以特定的缩放值乘以特定的变换者。
+        以指定的缩放值乘以指定的变换者。
       </summary>
       <param name="left"> 变换者。 </param>
       <param name="right"> 缩放值。 </param>
@@ -2611,7 +2611,7 @@
     </member>
     <member name="M:FanKit.Transformers.Transformer.op_Division(FanKit.Transformers.Transformer,System.Single)">
       <summary>
-        以特定的缩放除以变换者。
+        以指定的缩放除以变换者。
       </summary>
       <param name="left"> 变换者。 </param>
       <param name="right"> 缩放值。 </param>
@@ -2944,7 +2944,7 @@
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.Multiply(FanKit.Transformers.TransformerBorder,System.Single)">
       <summary>
-        以特定的缩放乘以边界。
+        以指定的缩放乘以边界。
       </summary>
       <param name="left"> 要相乘的边界。 </param>
       <param name="right"> 缩放值。 </param>
@@ -2952,7 +2952,7 @@
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.Divide(FanKit.Transformers.TransformerBorder,System.Single)">
       <summary>
-        以特定的缩放除以边界。
+        以指定的缩放除以边界。
       </summary>
       <param name="left"> 边界。 </param>
       <param name="divisor"> 缩放值。 </param>
@@ -2976,7 +2976,7 @@
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.op_Multiply(FanKit.Transformers.TransformerBorder,System.Single)">
       <summary>
-        以特定的缩放值乘以特定的边界。
+        以指定的缩放值乘以指定的边界。
       </summary>
       <param name="left"> 边界。 </param>
       <param name="right"> 缩放值。 </param>
@@ -2984,7 +2984,7 @@
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.op_Division(FanKit.Transformers.TransformerBorder,System.Single)">
       <summary>
-        以特定的缩放除以边界。
+        以指定的缩放除以边界。
       </summary>
       <param name="left"> 边界。 </param>
       <param name="right"> 缩放值。 </param>
@@ -4053,7 +4053,7 @@
   </members>
   <member name="M:FanKit.Math.Rotate(System.Numerics.Vector2,System.Single,System.Single)">
     <summary>
-      以特定的旋转值变换向量。
+      以指定的旋转值变换向量。
     </summary>
     <param name="value"> 要旋转的向量。 </param>
     <param name="cos"> 应用的旋转的余弦值。 </param>
@@ -4062,7 +4062,7 @@
   </member>
   <member name="M:FanKit.Math.Rotate(System.Numerics.Vector2,System.Numerics.Vector2)">
     <summary>
-      以特定的旋转值变换向量。
+      以指定的旋转值变换向量。
     </summary>
     <param name="value"> 要旋转的向量。 </param>
     <param name="rotation"> 应用的旋转。 </param>
