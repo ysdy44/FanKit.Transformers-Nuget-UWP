@@ -8,5 +8,5 @@ namespace FanKit.Transformers
     /// <summary> 
     /// A structure encapsulating four range values (Left, Top, Right, Bottom). 
     /// </summary>
-    public partial struct TransformerRect : ITransformerWH, ITransformerLTRB { }
+    public partial struct TransformerRect { }
 }

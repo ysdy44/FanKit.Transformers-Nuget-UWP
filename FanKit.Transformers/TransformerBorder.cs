@@ -7,7 +7,7 @@ namespace FanKit.Transformers
     /// Represents a maximum boundary in a plane right-angle coordinate system.
     /// </summary>
     [System.Runtime.InteropServices.StructLayout(System.Runtime.InteropServices.LayoutKind.Sequential)]
-    public partial struct TransformerBorder : ITransformerWH //, ITransformerLTRB
+    public partial struct TransformerBorder : ITransformerGeometry
     {
 
         /// <summary> Gets the X-axis value of the left side of the border. </summary>
