@@ -2890,6 +2890,30 @@
       <param name="width"> 边界的宽度。 </param>
       <param name="height"> 边界的高度。 </param>
     </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.#ctor(System.Single,System.Single,System.Numerics.Vector2)">
+      <summary>
+        初始化 <see cref="T:FanKit.Transformers.TransformerBorder"/>。
+      </summary>
+      <param name="width"> 矩形的宽度。 </param>
+      <param name="height"> 矩形的高度。 </param>
+      <param name="postion"> 矩形的左上角的位置。 </param>
+    </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.#ctor(System.Numerics.Vector2,System.Numerics.Vector2)">
+      <summary>
+        初始化 <see cref="T:FanKit.Transformers.TransformerBorder"/>。
+      </summary>
+      <param name="pointA"> 新添加的矩形必须包含的第一个点。 </param>
+      <param name="pointB"> 新添加的矩形必须包含的第二个点。 </param>
+    </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.#ctor(System.Numerics.Vector2,System.Numerics.Vector2,System.Boolean,System.Boolean)">
+      <summary>
+        初始化 <see cref="T:FanKit.Transformers.TransformerBorder"/>。
+      </summary>
+      <param name="pointA"> 新添加的矩形必须包含的第一个点。 </param>
+      <param name="pointB"> 新添加的矩形必须包含的第二个点。 </param>
+      <param name="isCenter"> 围绕中心缩放。 </param>
+      <param name="isSquare"> 宽度和高度相等。 </param>
+    </member>
     <member name="M:FanKit.Transformers.TransformerBorder.#ctor(FanKit.Transformers.Transformer)">
       <summary>
         初始化 <see cref="T:FanKit.Transformers.TransformerBorder"/>。
@@ -3716,30 +3740,6 @@
       <summary>
         封装四个范围值（左，上，右，下）的结构。
       </summary>
-    </member>
-    <member name="M:FanKit.Transformers.TransformerBorder.#ctor(System.Numerics.Vector2,System.Numerics.Vector2)">
-      <summary>
-        初始化 <see cref="T:FanKit.Transformers.TransformerBorder"/>。
-      </summary>
-      <param name="pointA"> 新添加的矩形必须包含的第一个点。 </param>
-      <param name="pointB"> 新添加的矩形必须包含的第二个点。 </param>
-    </member>
-    <member name="M:FanKit.Transformers.TransformerBorder.#ctor(System.Numerics.Vector2,System.Numerics.Vector2,System.Boolean,System.Boolean)">
-      <summary>
-        初始化 <see cref="T:FanKit.Transformers.TransformerBorder"/>。
-      </summary>
-      <param name="pointA"> 新添加的矩形必须包含的第一个点。 </param>
-      <param name="pointB"> 新添加的矩形必须包含的第二个点。 </param>
-      <param name="isCenter"> 围绕中心缩放。 </param>
-      <param name="isSquare"> 宽度和高度相等。 </param>
-    </member>
-    <member name="M:FanKit.Transformers.TransformerBorder.#ctor(System.Single,System.Single,System.Numerics.Vector2)">
-      <summary>
-        初始化 <see cref="T:FanKit.Transformers.TransformerBorder"/>。
-      </summary>
-      <param name="width"> 矩形的宽度。 </param>
-      <param name="height"> 矩形的高度。 </param>
-      <param name="postion"> 矩形的左上角的位置。 </param>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.Left">
       <summary> 获取矩形的左侧的 X 轴值。 </summary>

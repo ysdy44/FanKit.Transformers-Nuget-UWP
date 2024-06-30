@@ -51,6 +51,75 @@ namespace FanKit.Transformers
         /// <summary>
         /// Initialize a <see cref="TransformerBorder"/>.
         /// </summary>
+        /// <param name="width"> The width of the rectangle. </param>
+        /// <param name="height"> The height of the rectangle. </param>
+        /// <param name="postion"> The position of the top-left corner of the rectangle. </param>
+        public TransformerBorder(float width, float height, Vector2 postion)
+        {
+            float left = postion.X;
+            float top = postion.Y;
+            float right = width + postion.X;
+            float bottom = height + postion.Y;
+
+            this.Left = left;
+            this.Top = top;
+            this.Right = right;
+            this.Bottom = bottom;
+        }
+
+        /// <summary>
+        /// Initialize a <see cref="TransformerBorder"/>.
+        /// </summary>
+        /// <param name="pointA"> The first point that new rectangle must contain. </param>
+        /// <param name="pointB"> The second point that new rectangle must contain. </param>
+        public TransformerBorder(Vector2 pointA, Vector2 pointB)
+        {
+            float left = System.Math.Min(pointA.X, pointB.X);
+            float top = System.Math.Min(pointA.Y, pointB.Y);
+            float right = System.Math.Max(pointA.X, pointB.X);
+            float bottom = System.Math.Max(pointA.Y, pointB.Y);
+
+            this.Left = left;
+            this.Top = top;
+            this.Right = right;
+            this.Bottom = bottom;
+        }
+
+        /// <summary>
+        /// Initialize a <see cref="TransformerBorder"/>.
+        /// </summary>
+        /// <param name="pointA"> The first point that new rectangle must contain. </param>
+        /// <param name="pointB"> The second point that new rectangle must contain. </param>
+        /// <param name="isCenter"> Scaling around the center. </param>
+        /// <param name="isSquare"> Equal in width and height. </param>
+        public TransformerBorder(Vector2 pointA, Vector2 pointB, bool isCenter, bool isSquare)
+        {
+            if (isSquare)
+            {
+                float square = Vector2.Distance(pointA, pointB) / 1.4142135623730950488016887242097f;
+
+                pointB = pointA + new Vector2((pointB.X > pointA.X) ? square : -square, (pointB.Y > pointA.Y) ? square : -square);
+            }
+
+            if (isCenter)
+            {
+                pointA = pointA + pointA - pointB;
+            }
+
+            float left = System.Math.Min(pointA.X, pointB.X);
+            float top = System.Math.Min(pointA.Y, pointB.Y);
+            float right = System.Math.Max(pointA.X, pointB.X);
+            float bottom = System.Math.Max(pointA.Y, pointB.Y);
+
+            this.Left = left;
+            this.Top = top;
+            this.Right = right;
+            this.Bottom = bottom;
+        }
+
+        /// <summary>
+        /// Initialize a <see cref="TransformerBorder"/>.
+        /// </summary>
         /// <param name="bounds"> The bounds. </param>
         public TransformerBorder(Transformer bounds)
         {

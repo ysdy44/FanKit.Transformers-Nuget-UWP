@@ -2890,6 +2890,30 @@
       <param name="width"> The width of the border. </param>
       <param name="height"> The height of the border. </param>
     </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.#ctor(System.Single,System.Single,System.Numerics.Vector2)">
+      <summary>
+        Initialize a <see cref="T:FanKit.Transformers.TransformerBorder"/>.
+      </summary>
+      <param name="width"> The width of the rectangle. </param>
+      <param name="height"> The height of the rectangle. </param>
+      <param name="postion"> The position of the top-left corner of the rectangle. </param>
+    </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.#ctor(System.Numerics.Vector2,System.Numerics.Vector2)">
+      <summary>
+        Initialize a <see cref="T:FanKit.Transformers.TransformerBorder"/>.
+      </summary>
+      <param name="pointA"> The first point that new rectangle must contain. </param>
+      <param name="pointB"> The second point that new rectangle must contain. </param>
+    </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.#ctor(System.Numerics.Vector2,System.Numerics.Vector2,System.Boolean,System.Boolean)">
+      <summary>
+        Initialize a <see cref="T:FanKit.Transformers.TransformerBorder"/>.
+      </summary>
+      <param name="pointA"> The first point that new rectangle must contain. </param>
+      <param name="pointB"> The second point that new rectangle must contain. </param>
+      <param name="isCenter"> Scaling around the center. </param>
+      <param name="isSquare"> Equal in width and height. </param>
+    </member>
     <member name="M:FanKit.Transformers.TransformerBorder.#ctor(FanKit.Transformers.Transformer)">
       <summary>
         Initialize a <see cref="T:FanKit.Transformers.TransformerBorder"/>.
@@ -3716,30 +3740,6 @@
       <summary>
         A structure encapsulating four range values (Left, Top, Right, Bottom).
       </summary>
-    </member>
-    <member name="M:FanKit.Transformers.TransformerBorder.#ctor(System.Numerics.Vector2,System.Numerics.Vector2)">
-      <summary>
-        Initialize a <see cref="T:FanKit.Transformers.TransformerBorder"/>.
-      </summary>
-      <param name="pointA"> The first point that new rectangle must contain. </param>
-      <param name="pointB"> The second point that new rectangle must contain. </param>
-    </member>
-    <member name="M:FanKit.Transformers.TransformerBorder.#ctor(System.Numerics.Vector2,System.Numerics.Vector2,System.Boolean,System.Boolean)">
-      <summary>
-        Initialize a <see cref="T:FanKit.Transformers.TransformerBorder"/>.
-      </summary>
-      <param name="pointA"> The first point that new rectangle must contain. </param>
-      <param name="pointB"> The second point that new rectangle must contain. </param>
-      <param name="isCenter"> Scaling around the center. </param>
-      <param name="isSquare"> Equal in width and height. </param>
-    </member>
-    <member name="M:FanKit.Transformers.TransformerBorder.#ctor(System.Single,System.Single,System.Numerics.Vector2)">
-      <summary>
-        Initialize a <see cref="T:FanKit.Transformers.TransformerBorder"/>.
-      </summary>
-      <param name="width"> The width of the rectangle. </param>
-      <param name="height"> The height of the rectangle. </param>
-      <param name="postion"> The position of the top-left corner of the rectangle. </param>
     </member>
     <member name="P:FanKit.Transformers.TransformerRect.Left">
       <summary> Gets the X-axis value of the left side of the rectangle. </summary>
