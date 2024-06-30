@@ -1732,7 +1732,7 @@
     <member name="P:FanKit.Transformers.MarqueeTool.IsStarted">
       <summary> Gets or sets whether the tool in use. </summary>
     </member>
-    <member name="P:FanKit.Transformers.MarqueeTool.TransformerRect">
+    <member name="P:FanKit.Transformers.MarqueeTool.Rect">
       <summary> Gets transformer-rect for rectangular or elliptical tool. </summary>
     </member>
     <member name="P:FanKit.Transformers.MarqueeTool.Points">

@@ -1732,7 +1732,7 @@
     <member name="P:FanKit.Transformers.MarqueeTool.IsStarted">
       <summary> 获取或设置是否正在使用该工具。 </summary>
     </member>
-    <member name="P:FanKit.Transformers.MarqueeTool.TransformerRect">
+    <member name="P:FanKit.Transformers.MarqueeTool.Rect">
       <summary> 获取矩形或椭圆形工具的变换者矩形。 </summary>
     </member>
     <member name="P:FanKit.Transformers.MarqueeTool.Points">

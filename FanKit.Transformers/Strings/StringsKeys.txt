@@ -694,7 +694,7 @@ F:FanKit.Transformers.InputDevice.LeftButton@Summary
 F:FanKit.Transformers.InputDevice.RightButton@Summary
 T:FanKit.Transformers.MarqueeTool@Summary
 P:FanKit.Transformers.MarqueeTool.IsStarted@Summary
-P:FanKit.Transformers.MarqueeTool.TransformerBorder@Summary
+P:FanKit.Transformers.MarqueeTool.Rect@Summary
 P:FanKit.Transformers.MarqueeTool.Points@Summary
 M:FanKit.Transformers.MarqueeTool.Start(System.Numerics.Vector2,FanKit.Transformers.MarqueeToolType,System.Boolean,System.Boolean)@Summary
 M:FanKit.Transformers.MarqueeTool.Start(System.Numerics.Vector2,FanKit.Transformers.MarqueeToolType,System.Boolean,System.Boolean)@Param@point

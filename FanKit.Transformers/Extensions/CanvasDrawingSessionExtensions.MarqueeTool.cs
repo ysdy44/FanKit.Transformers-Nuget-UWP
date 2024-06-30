@@ -23,10 +23,10 @@ namespace FanKit.Transformers
             switch (toolType)
             {
                 case MarqueeToolType.Rectangular:
-                    drawingSession.FillMarqueeToolRectangular(resourceCreator, marqueeTool.TransformerRect, sourceRectangle, compositeMode);
+                    drawingSession.FillMarqueeToolRectangular(resourceCreator, marqueeTool.Rect, sourceRectangle, compositeMode);
                     break;
                 case MarqueeToolType.Elliptical:
-                    drawingSession.FillMarqueeToolEllipse(resourceCreator, marqueeTool.TransformerRect, sourceRectangle, compositeMode);
+                    drawingSession.FillMarqueeToolEllipse(resourceCreator, marqueeTool.Rect, sourceRectangle, compositeMode);
                     break;
                 case MarqueeToolType.Polygonal:
                 case MarqueeToolType.FreeHand:
@@ -53,15 +53,15 @@ namespace FanKit.Transformers
                 {
                     case MarqueeToolType.Rectangular:
                         {
-                            Rect rect = marqueeTool.TransformerRect.ToRect();
+                            Rect rect = marqueeTool.Rect.ToRect();
                             drawingSession.DrawThickRectangle(rect);
                         }
                         break;
                     case MarqueeToolType.Elliptical:
                         {
-                            Vector2 centerPoint = marqueeTool.TransformerRect.Center;
-                            float width = marqueeTool.TransformerRect.Width / 2;
-                            float height = marqueeTool.TransformerRect.Height / 2;
+                            Vector2 centerPoint = marqueeTool.Rect.Center;
+                            float width = marqueeTool.Rect.Width / 2;
+                            float height = marqueeTool.Rect.Height / 2;
 
                             drawingSession.DrawThickEllipse(centerPoint, width, height);
                         }
@@ -104,14 +104,14 @@ namespace FanKit.Transformers
                 {
                     case MarqueeToolType.Rectangular:
                         {
-                            TransformerBorder transformerRect = marqueeTool.TransformerRect;
+                            TransformerBorder transformerRect = marqueeTool.Rect;
                             CanvasGeometry canvasGeometry = transformerRect.ToRectangle(resourceCreator, matrix);
                             drawingSession.DrawThickGeometry(canvasGeometry);
                         }
                         break;
                     case MarqueeToolType.Elliptical:
                         {
-                            TransformerBorder transformerRect = marqueeTool.TransformerRect;
+                            TransformerBorder transformerRect = marqueeTool.Rect;
                             CanvasGeometry canvasGeometry = transformerRect.ToEllipse(resourceCreator, matrix);
                             drawingSession.DrawThickGeometry(canvasGeometry);
                         }
