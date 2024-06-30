@@ -2326,17 +2326,10 @@
       <param name="sizeHeight"> 源高度。 </param>
       <returns> 提供的变换者。 </returns>
     </member>
-    <member name="P:FanKit.Transformers.Transformer.LeftTop">
-      <summary> 获取或设置变换者的左上角的位置。 </summary>
-    </member>
-    <member name="P:FanKit.Transformers.Transformer.RightTop">
-      <summary> 获取或设置变换者的右上角的位置。 </summary>
-    </member>
-    <member name="P:FanKit.Transformers.Transformer.RightBottom">
-      <summary> 获取或设置变换者的右下角的位置。 </summary>
-    </member>
-    <member name="P:FanKit.Transformers.Transformer.LeftBottom">
-      <summary> 获取或设置变换者的左下角的位置。 </summary>
+    <member name="P:FanKit.Transformers.Transformer.One">
+      <summary>
+        返回变换者（-1,-1）（1,-1）（1,1）（-1,1）。
+      </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.CenterX">
       <summary> 获取变换者的中心点的 X 轴值。 </summary>
@@ -2493,10 +2486,17 @@
       <param name="isConvexQuadrilateral"> 变换者是否是凸四边形？ </param>
       <returns> 产生的点。 </returns>
     </member>
-    <member name="P:FanKit.Transformers.Transformer.One">
-      <summary>
-        返回变换者（-1,-1）（1,-1）（1,1）（-1,1）。
-      </summary>
+    <member name="P:FanKit.Transformers.Transformer.LeftTop">
+      <summary> 获取或设置变换者的左上角的位置。 </summary>
+    </member>
+    <member name="P:FanKit.Transformers.Transformer.RightTop">
+      <summary> 获取或设置变换者的右上角的位置。 </summary>
+    </member>
+    <member name="P:FanKit.Transformers.Transformer.RightBottom">
+      <summary> 获取或设置变换者的右下角的位置。 </summary>
+    </member>
+    <member name="P:FanKit.Transformers.Transformer.LeftBottom">
+      <summary> 获取或设置变换者的左下角的位置。 </summary>
     </member>
     <member name="M:FanKit.Transformers.Transformer.#ctor(System.Single,System.Single,System.Single,System.Single)">
       <summary>

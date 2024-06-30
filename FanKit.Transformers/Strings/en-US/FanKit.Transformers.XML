@@ -2326,17 +2326,10 @@
       <param name="sizeHeight"> The source height. </param>
       <returns> The provided transformer. </returns>
     </member>
-    <member name="P:FanKit.Transformers.Transformer.LeftTop">
-      <summary> Gets or sets the position of the top-left corner of the transformer. </summary>
-    </member>
-    <member name="P:FanKit.Transformers.Transformer.RightTop">
-      <summary> Gets or sets the position of the top-right corner of the transformer. </summary>
-    </member>
-    <member name="P:FanKit.Transformers.Transformer.RightBottom">
-      <summary> Gets or sets the position of the bottom-right corner of the transformer. </summary>
-    </member>
-    <member name="P:FanKit.Transformers.Transformer.LeftBottom">
-      <summary> Gets or sets the position of the bottom-left corner of the transformer. </summary>
+    <member name="P:FanKit.Transformers.Transformer.One">
+      <summary>
+        Returns the transformer (-1,-1) (1,-1) (1,1) (-1,1).
+      </summary>
     </member>
     <member name="P:FanKit.Transformers.Transformer.CenterX">
       <summary> Gets the X-axis value of the center of the transformer. </summary>
@@ -2493,10 +2486,17 @@
       <param name="isConvexQuadrilateral"> Is the transformer is a convex quadrilateral? </param>
       <returns> The product point. </returns>
     </member>
-    <member name="P:FanKit.Transformers.Transformer.One">
-      <summary>
-        Returns the transformer (-1,-1) (1,-1) (1,1) (-1,1).
-      </summary>
+    <member name="P:FanKit.Transformers.Transformer.LeftTop">
+      <summary> Gets or sets the position of the top-left corner of the transformer. </summary>
+    </member>
+    <member name="P:FanKit.Transformers.Transformer.RightTop">
+      <summary> Gets or sets the position of the top-right corner of the transformer. </summary>
+    </member>
+    <member name="P:FanKit.Transformers.Transformer.RightBottom">
+      <summary> Gets or sets the position of the bottom-right corner of the transformer. </summary>
+    </member>
+    <member name="P:FanKit.Transformers.Transformer.LeftBottom">
+      <summary> Gets or sets the position of the bottom-left corner of the transformer. </summary>
     </member>
     <member name="M:FanKit.Transformers.Transformer.#ctor(System.Single,System.Single,System.Single,System.Single)">
       <summary>

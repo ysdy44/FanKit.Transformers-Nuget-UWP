@@ -9,17 +9,14 @@ namespace FanKit.Transformers
     public partial struct Transformer : ITransformerXY, ITransformerLTRB, ITransformerGeometry
     {
 
-        //@Static
-        /// <summary>
-        /// Returns the transformer (-1,-1) (1,-1) (1,1) (-1,1).
-        /// </summary>
-        public static Transformer One => new Transformer
-        {
-            LeftTop = new Vector2(-1f, -1f),
-            RightTop = new Vector2(1f, -1f),
-            RightBottom = new Vector2(1f, 1f),
-            LeftBottom = new Vector2(-1f, 1f),
-        };
+        /// <summary> Gets or sets the position of the top-left corner of the transformer. </summary>
+        public Vector2 LeftTop { get; set; }
+        /// <summary> Gets or sets the position of the top-right corner of the transformer. </summary>
+        public Vector2 RightTop { get; set; }
+        /// <summary> Gets or sets the position of the bottom-right corner of the transformer. </summary>
+        public Vector2 RightBottom { get; set; }
+        /// <summary> Gets or sets the position of the bottom-left corner of the transformer. </summary>
+        public Vector2 LeftBottom { get; set; }
 
         //@Constructs
         /// <summary>

@@ -886,11 +886,8 @@ M:FanKit.Transformers.Transformer.CreateWithAspectRatio(System.Numerics.Vector2,
 M:FanKit.Transformers.Transformer.CreateWithAspectRatio(System.Numerics.Vector2,System.Numerics.Vector2,System.Single,System.Single)@Param@sizeWidth
 M:FanKit.Transformers.Transformer.CreateWithAspectRatio(System.Numerics.Vector2,System.Numerics.Vector2,System.Single,System.Single)@Param@sizeHeight
 M:FanKit.Transformers.Transformer.CreateWithAspectRatio(System.Numerics.Vector2,System.Numerics.Vector2,System.Single,System.Single)@Returns
-P:FanKit.Transformers.Transformer.LeftTop@Summary
-P:FanKit.Transformers.Transformer.RightTop@Summary
-P:FanKit.Transformers.Transformer.RightBottom@Summary
-P:FanKit.Transformers.Transformer.LeftBottom@Summary
-P:FanKit.Transformers.Transformer.CenterX@Summary
+P:FanKit.Transformers.Transformer.One@Summary
+:FanKit.Transformers.Transformer.CenterX@Summary
 P:FanKit.Transformers.Transformer.CenterY@Summary
 P:FanKit.Transformers.Transformer.Center@Summary
 P:FanKit.Transformers.Transformer.CenterLeft@Summary
@@ -967,7 +964,10 @@ M:FanKit.Transformers.Transformer.MoveLeftBottom(System.Numerics.Vector2,System.
 M:FanKit.Transformers.Transformer.MoveLeftBottom(System.Numerics.Vector2,System.Boolean)@Param@point
 M:FanKit.Transformers.Transformer.MoveLeftBottom(System.Numerics.Vector2,System.Boolean)@Param@isConvexQuadrilateral
 M:FanKit.Transformers.Transformer.MoveLeftBottom(System.Numerics.Vector2,System.Boolean)@Returns
-P:FanKit.Transformers.Transformer.One@Summary
+P:FanKit.Transformers.Transformer.LeftTop@Summary
+P:FanKit.Transformers.Transformer.RightTop@Summary
+P:FanKit.Transformers.Transformer.RightBottom@Summary
+P:FanKit.Transformers.Transformer.LeftBottom@Summary
 M:FanKit.Transformers.Transformer.#ctor(System.Single,System.Single,System.Single,System.Single)@Summary
 M:FanKit.Transformers.Transformer.#ctor(System.Single,System.Single,System.Single,System.Single)@Param@left
 M:FanKit.Transformers.Transformer.#ctor(System.Single,System.Single,System.Single,System.Single)@Param@top
