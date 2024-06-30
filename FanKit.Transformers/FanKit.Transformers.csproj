@@ -195,6 +195,7 @@
     <Compile Include="TransformerBorder.cs" />
     <Compile Include="TransformerBorder.Homography.cs" />
     <Compile Include="TransformerBorder.Property.cs" />
+    <Compile Include="TransformerBorder.Union.cs" />
     <Compile Include="TransformerGeometrys\GeometryArrowTailType.cs" />
     <Compile Include="TransformerGeometrys\TransformerGeometry.0.cs" />
     <Compile Include="TransformerGeometrys\TransformerGeometry.1.cs" />
