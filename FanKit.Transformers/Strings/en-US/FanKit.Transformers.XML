@@ -3957,7 +3957,7 @@
       <param name="point1"> The second point. </param>
       <returns> Return **true** if the distance exceeds [NodeRadius], otherwise **false**. </returns>
     </member>
-    <member name="M:FanKit.Math.InNodeRadius(System.Numerics.Vector2,System.Numerics.Vector2)">
+    <member name="M:FanKit.Math.InNodeRadius(System.Single,System.Single,System.Single,System.Single)">
       <summary>
         Whether the distance exceeds [NodeRadius]. Default: 144.
       </summary>
@@ -3975,7 +3975,7 @@
       <param name="point1"> The second point. </param>
       <returns> Return **true** if the distance's LengthSquared exceeds [NodeDistance], otherwise **false**. </returns>
     </member>
-    <member name="M:FanKit.Math.OutNodeDistance(System.Numerics.Vector2,System.Numerics.Vector2)">
+    <member name="M:FanKit.Math.OutNodeDistance(System.Single,System.Single,System.Single,System.Single)">
       <summary>
         Whether the distance's LengthSquared exceeds [NodeDistance]. Default: 400.
       </summary>
