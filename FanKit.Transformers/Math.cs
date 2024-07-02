@@ -170,12 +170,12 @@ namespace FanKit
 
 
         /// <summary>
-        /// Get the [Foot Point] of point and LIne.
+        /// Get the [Foot Point] of point and line.
         /// </summary>
         /// <param name="point"> The point. </param>
         /// <param name="point0"> The first point on the line. </param>
         /// <param name="point1"> The second point on the line. </param>
-        /// <returns> The product vector. </returns>
+        /// <returns> The product point. </returns>
         public static Vector2 FootPoint(Vector2 point, Vector2 point0, Vector2 point1)
         {
             float x = point0.X - point1.X;

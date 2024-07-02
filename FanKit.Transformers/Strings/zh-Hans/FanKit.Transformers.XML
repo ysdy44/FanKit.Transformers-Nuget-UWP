@@ -3954,7 +3954,7 @@
       <param name="point"> 点。 </param>
       <param name="point0"> 线的第一个点。 </param>
       <param name="point1"> 线的第二个点。 </param>
-      <returns> 生成的向量。 </returns>
+      <returns> 生成的点。 </returns>
     </member>
     <member name="M:FanKit.Math.IntersectionPoint(System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>
