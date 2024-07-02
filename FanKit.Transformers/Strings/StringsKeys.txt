@@ -1669,6 +1669,13 @@ M:FanKit.Math.FootPoint(System.Numerics.Vector2,System.Numerics.Vector2,System.N
 M:FanKit.Math.FootPoint(System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2)@Param@point0
 M:FanKit.Math.FootPoint(System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2)@Param@point1
 M:FanKit.Math.FootPoint(System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2)@Returns
+M:FanKit.Math.FootPoint(System.Numerics.Vector2,System.Single,System.Single,System.Single,System.Single)@Summary
+M:FanKit.Math.FootPoint(System.Numerics.Vector2,System.Single,System.Single,System.Single,System.Single)@Param@point
+M:FanKit.Math.FootPoint(System.Numerics.Vector2,System.Single,System.Single,System.Single,System.Single)@Param@x0
+M:FanKit.Math.FootPoint(System.Numerics.Vector2,System.Single,System.Single,System.Single,System.Single)@Param@y0
+M:FanKit.Math.FootPoint(System.Numerics.Vector2,System.Single,System.Single,System.Single,System.Single)@Param@x1
+M:FanKit.Math.FootPoint(System.Numerics.Vector2,System.Single,System.Single,System.Single,System.Single)@Param@y1
+M:FanKit.Math.FootPoint(System.Numerics.Vector2,System.Single,System.Single,System.Single,System.Single)@Returns
 M:FanKit.Math.IntersectionPoint(System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2)@Summary
 M:FanKit.Math.IntersectionPoint(System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2)@Param@line1A
 M:FanKit.Math.IntersectionPoint(System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2)@Param@line1B

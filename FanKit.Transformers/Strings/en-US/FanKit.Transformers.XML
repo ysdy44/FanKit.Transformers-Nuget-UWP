@@ -3956,6 +3956,17 @@
       <param name="point1"> The second point on the line. </param>
       <returns> The product point. </returns>
     </member>
+    <member name="M:FanKit.Math.FootPoint(System.Numerics.Vector2,System.Single,System.Single,System.Single,System.Single)">
+      <summary>
+        Get the [Foot Point] of point and line.
+      </summary>
+      <param name="point"> The point. </param>
+      <param name="x0"> The X-axis value of the first point on the line. </param>
+      <param name="y0"> The Y-axis position of the first point on the line. </param>
+      <param name="x1"> The X-axis value of the second point on the line. </param>
+      <param name="y1"> The Y-axis position of the second point on the line. </param>
+      <returns> The product point. </returns>
+    </member>
     <member name="M:FanKit.Math.IntersectionPoint(System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>
         Get the intersection-point of Line1 and LIne2.

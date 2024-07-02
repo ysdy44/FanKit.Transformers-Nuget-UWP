@@ -3956,6 +3956,17 @@
       <param name="point1"> 线的第二个点。 </param>
       <returns> 生成的点。 </returns>
     </member>
+    <member name="M:FanKit.Math.FootPoint(System.Numerics.Vector2,System.Single,System.Single,System.Single,System.Single)">
+      <summary>
+        获取点和线的[垂足]。
+      </summary>
+      <param name="point"> 点。 </param>
+      <param name="x0"> 线的第一个点的 X 轴值。 </param>
+      <param name="y0"> 线的第一个点的 Y 轴位置。 </param>
+      <param name="x1"> 线的第二个点的 X 轴值。 </param>
+      <param name="y1"> 线的第二个点的 Y 轴位置。 </param>
+      <returns> 生成的点。 </returns>
+    </member>
     <member name="M:FanKit.Math.IntersectionPoint(System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>
         获取线 1 和线 2 的交点。
