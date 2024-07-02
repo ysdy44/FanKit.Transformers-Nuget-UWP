@@ -244,10 +244,10 @@ namespace FanKit.Transformers
 
 
         /// <summary>
-        /// Returns a boolean indicating whether the given Transformer is equal to this Transformer instance.
+        /// Returns a boolean indicating whether the given transformer is equal to this transformer instance.
         /// </summary>
-        /// <param name="other"> The Transformer to compare this instance to. </param>
-        /// <returns> Return **true** if the other Transformer is equal to this instance, otherwise **false**. </returns>
+        /// <param name="other"> The transformer to compare this instance to. </param>
+        /// <returns> Return **true** if the other transformer is equal to this instance, otherwise **false**. </returns>
         public bool Equals(Transformer other)
         {
             return this.LeftTop == other.LeftTop && this.RightTop == other.RightTop && this.RightBottom == other.RightBottom && this.LeftBottom == other.LeftBottom;

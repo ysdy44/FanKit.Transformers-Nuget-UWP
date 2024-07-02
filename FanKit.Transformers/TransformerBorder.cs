@@ -362,10 +362,10 @@ namespace FanKit.Transformers
 
 
         /// <summary>
-        /// Returns a boolean indicating whether the given TransformerBorder is equal to this TransformerBorder instance.
+        /// Returns a boolean indicating whether the given border is equal to this border instance.
         /// </summary>
-        /// <param name="other"> The TransformerBorder to compare this instance to. </param>
-        /// <returns> Return **true** if the other TransformerBorder is equal to this instance, otherwise **false**. </returns>
+        /// <param name="other"> The border to compare this instance to. </param>
+        /// <returns> Return **true** if the other border is equal to this instance, otherwise **false**. </returns>
         public bool Equals(TransformerBorder other)
         {
             return this.Left == other.Left && this.Top == other.Top && this.Right == other.Right && this.Bottom == other.Bottom;

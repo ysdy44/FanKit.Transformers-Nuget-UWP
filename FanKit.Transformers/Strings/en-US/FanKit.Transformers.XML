@@ -2575,10 +2575,10 @@
     </member>
     <member name="M:FanKit.Transformers.Transformer.Equals(FanKit.Transformers.Transformer)">
       <summary>
-        Returns a boolean indicating whether the given Transformer is equal to this Transformer instance.
+        Returns a boolean indicating whether the given transformer is equal to this transformer instance.
       </summary>
-      <param name="other"> The Transformer to compare this instance to. </param>
-      <returns> Return **true** if the other Transformer is equal to this instance, otherwise **false**. </returns>
+      <param name="other"> The transformer to compare this instance to. </param>
+      <returns> Return **true** if the other transformer is equal to this instance, otherwise **false**. </returns>
     </member>
     <member name="M:FanKit.Transformers.Transformer.GetHashCode">
       <summary>
@@ -2980,10 +2980,10 @@
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.Equals(FanKit.Transformers.TransformerBorder)">
       <summary>
-        Returns a boolean indicating whether the given TransformerBorder is equal to this TransformerBorder instance.
+        Returns a boolean indicating whether the given border is equal to this border instance.
       </summary>
-      <param name="other"> The TransformerBorder to compare this instance to. </param>
-      <returns> Return **true** if the other TransformerBorder is equal to this instance, otherwise **false**. </returns>
+      <param name="other"> The border to compare this instance to. </param>
+      <returns> Return **true** if the other border is equal to this instance, otherwise **false**. </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.GetHashCode">
       <summary>

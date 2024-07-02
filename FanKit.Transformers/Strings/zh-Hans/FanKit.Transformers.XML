@@ -2980,10 +2980,10 @@
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.Equals(FanKit.Transformers.TransformerBorder)">
       <summary>
-        返回一个布尔值，该布尔值指示给定的变换者边界是否等于此变换者边界实例。
+        返回一个布尔值，该布尔值指示给定的边界是否等于此边界实例。
       </summary>
-      <param name="other"> 与该实例进行比较的变换者边界。 </param>
-      <returns> 如果另一个变换者边界等于此实例，则返回**true**，否则返回**false**。 </returns>
+      <param name="other"> 与该实例进行比较的边界。 </param>
+      <returns> 如果另一个边界等于此实例，则返回**true**，否则返回**false**。 </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.GetHashCode">
       <summary>
