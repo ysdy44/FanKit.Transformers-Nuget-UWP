@@ -2491,7 +2491,7 @@
       <summary>
         Initialize a transformer.
       </summary>
-      <param name="rect"> The bounding rectangle. </param>
+      <param name="bounds"> The bounding rectangle. </param>
     </member>
     <member name="M:FanKit.Transformers.Transformer.Add(FanKit.Transformers.Transformer,System.Numerics.Vector2)">
       <summary>

@@ -2491,7 +2491,7 @@
       <summary>
         初始化变换者。
       </summary>
-      <param name="rect"> 边框矩形。 </param>
+      <param name="bounds"> 边框矩形。 </param>
     </member>
     <member name="M:FanKit.Transformers.Transformer.Add(FanKit.Transformers.Transformer,System.Numerics.Vector2)">
       <summary>

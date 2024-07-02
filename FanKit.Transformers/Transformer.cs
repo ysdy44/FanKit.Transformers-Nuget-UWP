@@ -55,12 +55,12 @@ namespace FanKit.Transformers
         /// <param name="pointB"> The second point that new transformer must contain. </param>
         public Transformer(Vector2 pointA, Vector2 pointB)
         {
-            TransformerBorder rect = new TransformerBorder(pointA, pointB);
+            TransformerBorder bounds = new TransformerBorder(pointA, pointB);
 
-            this.LeftTop = new Vector2(rect.Left, rect.Top);
-            this.RightTop = new Vector2(rect.Right, rect.Top);
-            this.RightBottom = new Vector2(rect.Right, rect.Bottom);
-            this.LeftBottom = new Vector2(rect.Left, rect.Bottom);
+            this.LeftTop = new Vector2(bounds.Left, bounds.Top);
+            this.RightTop = new Vector2(bounds.Right, bounds.Top);
+            this.RightBottom = new Vector2(bounds.Right, bounds.Bottom);
+            this.LeftBottom = new Vector2(bounds.Left, bounds.Bottom);
         }
 
         /// <summary>
@@ -72,24 +72,24 @@ namespace FanKit.Transformers
         /// <param name="isRatio"> Maintain a ratio when scaling. </param>
         public Transformer(Vector2 pointA, Vector2 pointB, bool isCenter, bool isRatio)
         {
-            TransformerBorder rect = new TransformerBorder(pointA, pointB, isCenter, isRatio);
+            TransformerBorder bounds = new TransformerBorder(pointA, pointB, isCenter, isRatio);
 
-            this.LeftTop = new Vector2(rect.Left, rect.Top);
-            this.RightTop = new Vector2(rect.Right, rect.Top);
-            this.RightBottom = new Vector2(rect.Right, rect.Bottom);
-            this.LeftBottom = new Vector2(rect.Left, rect.Bottom);
+            this.LeftTop = new Vector2(bounds.Left, bounds.Top);
+            this.RightTop = new Vector2(bounds.Right, bounds.Top);
+            this.RightBottom = new Vector2(bounds.Right, bounds.Bottom);
+            this.LeftBottom = new Vector2(bounds.Left, bounds.Bottom);
         }
 
         /// <summary>
         /// Initialize a transformer.
         /// </summary>
-        /// <param name="rect"> The bounding rectangle. </param>
-        public Transformer(TransformerBorder rect)
+        /// <param name="bounds"> The bounding rectangle. </param>
+        public Transformer(TransformerBorder bounds)
         {
-            this.LeftTop = new Vector2(rect.Left, rect.Top);
-            this.RightTop = new Vector2(rect.Right, rect.Top);
-            this.RightBottom = new Vector2(rect.Right, rect.Bottom);
-            this.LeftBottom = new Vector2(rect.Left, rect.Bottom);
+            this.LeftTop = new Vector2(bounds.Left, bounds.Top);
+            this.RightTop = new Vector2(bounds.Right, bounds.Top);
+            this.RightBottom = new Vector2(bounds.Right, bounds.Bottom);
+            this.LeftBottom = new Vector2(bounds.Left, bounds.Bottom);
         }
 
 
