@@ -253,6 +253,11 @@ namespace FanKit.Transformers
             return this.LeftTop == other.LeftTop && this.RightTop == other.RightTop && this.RightBottom == other.RightBottom && this.LeftBottom == other.LeftBottom;
         }
 
+        public override bool Equals(object obj)
+        {
+            return obj is Transformer transformer && this.Equals(transformer);
+        }
+
         /// <summary>
         /// Returns the hash code for this instance.
         /// </summary>

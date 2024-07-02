@@ -371,6 +371,11 @@ namespace FanKit.Transformers
             return this.Left == other.Left && this.Top == other.Top && this.Right == other.Right && this.Bottom == other.Bottom;
         }
 
+        public override bool Equals(object obj)
+        {
+            return obj is TransformerBorder border && this.Equals(border);
+        }
+
         /// <summary>
         /// Returns the hash code for this instance.
         /// </summary>
@@ -382,8 +387,8 @@ namespace FanKit.Transformers
             hashCode = hashCode * -1521134295 + this.Top.GetHashCode();
             hashCode = hashCode * -1521134295 + this.Right.GetHashCode();
             hashCode = hashCode * -1521134295 + this.Bottom.GetHashCode();
-            hashCode = hashCode * -1521134295 + this.CenterX.GetHashCode();
-            hashCode = hashCode * -1521134295 + this.CenterY.GetHashCode();
+            //hashCode = hashCode * -1521134295 + this.CenterX.GetHashCode();
+            //hashCode = hashCode * -1521134295 + this.CenterY.GetHashCode();
             //hashCode = hashCode * -1521134295 + this.Center.GetHashCode();
             //hashCode = hashCode * -1521134295 + this.CenterLeft.GetHashCode();
             //hashCode = hashCode * -1521134295 + this.CenterTop.GetHashCode();
