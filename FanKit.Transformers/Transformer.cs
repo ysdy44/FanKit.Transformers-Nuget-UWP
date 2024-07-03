@@ -253,6 +253,11 @@ namespace FanKit.Transformers
             return this.LeftTop == other.LeftTop && this.RightTop == other.RightTop && this.RightBottom == other.RightBottom && this.LeftBottom == other.LeftBottom;
         }
 
+        /// <summary>
+        /// Returns a value that indicates whether this instance and a specified object are equal.
+        /// </summary>
+        /// <param name="obj"> The object to compare with the current instance. </param>
+        /// <returns> Return **true** if the current instance and obj are equal, otherwise **false**. If obj is null, the method returns **false**. </returns>
         public override bool Equals(object obj)
         {
             return obj is Transformer transformer && this.Equals(transformer);

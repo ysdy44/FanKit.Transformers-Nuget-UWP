@@ -2580,6 +2580,13 @@
       <param name="other"> The transformer to compare this instance to. </param>
       <returns> Return **true** if the other transformer is equal to this instance, otherwise **false**. </returns>
     </member>
+    <member name="M:FanKit.Transformers.Transformer.Equals(System.Object)">
+      <summary>
+        Returns a value that indicates whether this instance and a specified object are equal.
+      </summary>
+      <param name="obj"> The object to compare with the current instance. </param>
+      <returns> Return **true** if the current instance and obj are equal, otherwise **false**. If obj is null, the method returns **false**. </returns>
+    </member>
     <member name="M:FanKit.Transformers.Transformer.GetHashCode">
       <summary>
         Returns the hash code for this instance.
@@ -2984,6 +2991,13 @@
       </summary>
       <param name="other"> The border to compare this instance to. </param>
       <returns> Return **true** if the other border is equal to this instance, otherwise **false**. </returns>
+    </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.Equals(System.Object)">
+      <summary>
+        Returns a value that indicates whether this instance and a specified object are equal.
+      </summary>
+      <param name="obj"> The object to compare with the current instance. </param>
+      <returns> Return **true** if the current instance and obj are equal, otherwise **false**. If obj is null, the method returns **false**. </returns>
     </member>
     <member name="M:FanKit.Transformers.TransformerBorder.GetHashCode">
       <summary>

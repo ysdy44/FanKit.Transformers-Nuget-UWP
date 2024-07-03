@@ -1016,6 +1016,9 @@ M:FanKit.Transformers.Transformer.op_Division(FanKit.Transformers.Transformer,Sy
 M:FanKit.Transformers.Transformer.Equals(FanKit.Transformers.Transformer)@Summary
 M:FanKit.Transformers.Transformer.Equals(FanKit.Transformers.Transformer)@Param@other
 M:FanKit.Transformers.Transformer.Equals(FanKit.Transformers.Transformer)@Returns
+M:FanKit.Transformers.Transformer.Equals(System.Object)@Summary
+M:FanKit.Transformers.Transformer.Equals(System.Object)@Param@obj
+M:FanKit.Transformers.Transformer.Equals(System.Object)@Returns
 M:FanKit.Transformers.Transformer.GetHashCode@Summary
 M:FanKit.Transformers.Transformer.GetHashCode@Returns
 M:FanKit.Transformers.Transformer.op_Equality(FanKit.Transformers.Transformer,FanKit.Transformers.Transformer)@Summary
@@ -1201,6 +1204,9 @@ M:FanKit.Transformers.TransformerBorder.op_Division(FanKit.Transformers.Transfor
 M:FanKit.Transformers.TransformerBorder.Equals(FanKit.Transformers.TransformerBorder)@Summary
 M:FanKit.Transformers.TransformerBorder.Equals(FanKit.Transformers.TransformerBorder)@Param@other
 M:FanKit.Transformers.TransformerBorder.Equals(FanKit.Transformers.TransformerBorder)@Returns
+M:FanKit.Transformers.TransformerBorder.Equals(System.Object)@Summary
+M:FanKit.Transformers.TransformerBorder.Equals(System.Object)@Param@obj
+M:FanKit.Transformers.TransformerBorder.Equals(System.Object)@Returns
 M:FanKit.Transformers.TransformerBorder.GetHashCode@Summary
 M:FanKit.Transformers.TransformerBorder.GetHashCode@Returns
 M:FanKit.Transformers.TransformerBorder.op_Equality(FanKit.Transformers.TransformerBorder,FanKit.Transformers.TransformerBorder)@Summary

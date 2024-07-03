@@ -2580,6 +2580,13 @@
       <param name="other"> 与该实例进行比较的变换者。 </param>
       <returns> 如果另一个变换者与此实例相等，则返回**true**，否则返回**false**。 </returns>
     </member>
+    <member name="M:FanKit.Transformers.Transformer.Equals(System.Object)">
+      <summary>
+        返回一个布尔值，该布尔值指示此实例和给定的对象是否相等。
+      </summary>
+      <param name="obj"> 与该实例进行比较的对象。 </param>
+      <returns> 如果此实例和 obj 相等，则返回**true**，否则返回**false**。如果 obj 是空，此方法返回**false**。 </returns>
+    </member>
     <member name="M:FanKit.Transformers.Transformer.GetHashCode">
       <summary>
         返回此实例的哈希码。
@@ -2985,6 +2992,13 @@
       <param name="other"> 与该实例进行比较的边界。 </param>
       <returns> 如果另一个边界等于此实例，则返回**true**，否则返回**false**。 </returns>
     </member>
+    <member name="M:FanKit.Transformers.TransformerBorder.Equals(System.Object)">
+      <summary>
+        返回一个布尔值，该布尔值指示此实例和给定的对象是否相等。
+      </summary>
+      <param name="obj"> 与该实例进行比较的对象。 </param>
+      <returns> 如果此实例和 obj 相等，则返回**true**，否则返回**false**。如果 obj 是空，此方法返回**false**。 </returns>
+    </member>    
     <member name="M:FanKit.Transformers.TransformerBorder.GetHashCode">
       <summary>
         返回此实例的哈希码。
