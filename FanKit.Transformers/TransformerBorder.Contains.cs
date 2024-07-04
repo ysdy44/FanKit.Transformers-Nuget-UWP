@@ -36,6 +36,7 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="point"> The point. </param>
         /// <returns> Return **true** if the area filled by the border contains the specified point, otherwise **false**. </returns>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public bool FillContainsPoint(Vector2 point)
         {
             return point.X > this.Left && point.X < this.Right && point.Y > this.Top && point.Y < this.Bottom;
@@ -49,6 +50,7 @@ namespace FanKit.Transformers
         /// <param name="right"> The X-axis value of the right side of the destination rectangle. </param>
         /// <param name="bottom"> The Y-axis position of the bottom of the destination rectangle. </param>
         /// <returns> Return **true** if the border was contained in rectangle, otherwise **false**. </returns>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public bool Contained(float left, float top, float right, float bottom)
         {
             return this.Left >= left && this.Top >= top && this.Right <= right && this.Bottom <= bottom;
@@ -59,6 +61,7 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="rect"> The destination rectangle. </param>
         /// <returns> Return **true** if the border was contained in rectangle, otherwise **false**. </returns>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public bool Contained(TransformerBorder rect)
         {
             return this.Left >= rect.Left && this.Top >= rect.Top && this.Right <= rect.Right && this.Bottom <= rect.Bottom;

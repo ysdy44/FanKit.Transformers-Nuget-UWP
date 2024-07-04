@@ -123,6 +123,7 @@ namespace FanKit.Transformers
             }
         }
 
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         private static TransformerBorder ScaleAroundCenter(Vector2 point, TransformerBorder startingBorder, float linePointX, float linePointY)
         {
             float centerX = startingBorder.CenterX;
@@ -132,6 +133,7 @@ namespace FanKit.Transformers
             return startingBorder.Scale(num, num, centerX, centerY);
         }
 
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         private static TransformerBorder ScaleAround(Vector2 point, TransformerBorder startingBorder, float linePointX, float linePointY, float centerX, float centerY)
         {
             Vector2 vector = Math.FootPoint(point, linePointX, linePointY, centerX, centerY);

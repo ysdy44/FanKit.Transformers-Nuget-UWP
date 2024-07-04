@@ -53,6 +53,7 @@ namespace FanKit.Transformers
         /// <param name="transformer"> The source transformer. </param>
         /// <param name="disabledRadian"> The disabled radian. </param>
         /// <returns> The transformer-mode. </returns>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static TransformerMode ContainsNodeMode(Vector2 point, Transformer transformer, bool disabledRadian = false)
         {
             Vector2 leftTop = transformer.LeftTop;
@@ -71,6 +72,7 @@ namespace FanKit.Transformers
         /// <param name="matrix"> The matrix. </param>
         /// <param name="disabledRadian"> The disabled radian. </param>
         /// <returns> The transformer-mode. </returns>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static TransformerMode ContainsNodeMode(Vector2 point, Transformer transformer, Matrix3x2 matrix, bool disabledRadian = false)
         {
             Vector2 leftTop = Vector2.Transform(transformer.LeftTop, matrix);
@@ -87,6 +89,7 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="point"> The point. </param>
         /// <returns> Return **true** if the area filled by the transformer contains the specified point, otherwise **false**. </returns>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public bool FillContainsPoint(Vector2 point) => Math.InQuadrangle(point, this.LeftTop, this.RightTop, this.RightBottom, this.LeftBottom);
 
         /// <summary>
@@ -97,6 +100,7 @@ namespace FanKit.Transformers
         /// <param name="right"> The X-axis value of the right side of the destination rectangle. </param>
         /// <param name="bottom"> The Y-axis position of the bottom of the destination rectangle. </param>
         /// <returns> Return **true** if the transformer was contained in rectangle, otherwise **false**. </returns>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public bool Contained(float left, float top, float right, float bottom)
         {
             return this.MinX >= left && this.MinY >= top && this.MaxX <= right && this.MaxY <= bottom;
@@ -107,6 +111,7 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="rect"> The destination rectangle. </param>
         /// <returns> Return **true** if the transformer was contained in rectangle, otherwise **false**. </returns>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public bool Contained(TransformerBorder rect) => this.Contained(rect.Left, rect.Top, rect.Right, rect.Bottom);
 
     }

@@ -408,7 +408,8 @@ namespace FanKit.Transformers
             }
         }
 
-        // Rotation      
+        // Rotation
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         private static Transformer Rotate(Vector2 canvasStartingPoint, Vector2 canvasPoint, Transformer startingTransformer, bool isSnapToTick)
         {
             Vector2 center = startingTransformer.Center;
@@ -423,6 +424,7 @@ namespace FanKit.Transformers
         }
 
         // Skew
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         private static Vector2 Skew(Vector2 startingPoint, Vector2 point, Vector2 linePoineA, Vector2 linePoineB)
         {
             Vector2 canvasStartingSkewPoint = Math.FootPoint(startingPoint, linePoineA, linePoineB);
@@ -435,6 +437,7 @@ namespace FanKit.Transformers
         }
 
         // ScaleAround
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         private static Transformer ScaleAroundRatioCenter(Transformer startingTransformer, LinePD1C line)
         {
             Vector2 center = startingTransformer.Center;
@@ -445,6 +448,7 @@ namespace FanKit.Transformers
         }
 
         // ScaleCorner
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         private static Transformer ScaleCornerRatioCenter(Transformer startingTransformer, LineP1C line)
         {
             Vector2 center = startingTransformer.Center;
@@ -455,6 +459,7 @@ namespace FanKit.Transformers
         }
 
         // Scale
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         private static Transformer ScaleRatio(Transformer startingTransformer, LinePD1C line)
         {
             Vector2 center = line.DiagonalPoint;
@@ -464,6 +469,7 @@ namespace FanKit.Transformers
             return startingTransformer.Scale(distance, center);
         }
 
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         private static Vector2 ScaleVector(LinePD1C line)
         {
             Vector2 footPoint = Math.FootPoint(line.CanvasPoint, line.Point, line.DiagonalPoint);

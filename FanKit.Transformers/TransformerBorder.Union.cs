@@ -9,11 +9,13 @@ namespace FanKit.Transformers
         /// <summary>
         /// Turn to rectangle.
         /// </summary>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public Rect ToRect() => new Rect(this.Left, this.Top, this.Right - this.Left, this.Bottom - this.Top);
 
         /// <summary>
         /// Turn to transformer.
         /// </summary>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public Transformer ToTransformer() => new Transformer(this.Left, this.Top, this.Right, this.Bottom);
 
 
@@ -22,6 +24,7 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="point"> The specified point. </param>
         /// <returns> The product border. </returns>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public TransformerBorder Union(Vector2 point)
         {
             return this.IsEmpty ? TransformerBorder.Empty : new TransformerBorder
@@ -38,6 +41,7 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="border"> The specified border. </param>
         /// <returns> The product border. </returns>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public TransformerBorder Union(TransformerBorder border)
         {
             return this.IsEmpty ? border : new TransformerBorder
@@ -55,6 +59,7 @@ namespace FanKit.Transformers
         /// <param name="border"> The specified border. </param>
         /// <param name="point"> The specified point. </param>
         /// <returns> The product border. </returns>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static TransformerBorder Union(TransformerBorder border, Vector2 point)
         {
             return border.IsEmpty ? TransformerBorder.Empty : new TransformerBorder
@@ -72,6 +77,7 @@ namespace FanKit.Transformers
         /// <param name="border1"> The specified first border. </param>
         /// <param name="border2"> The specified second border. </param>
         /// <returns> The product border. </returns>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static TransformerBorder Union(TransformerBorder border1, TransformerBorder border2)
         {
             return border1.IsEmpty ? border2 : new TransformerBorder
