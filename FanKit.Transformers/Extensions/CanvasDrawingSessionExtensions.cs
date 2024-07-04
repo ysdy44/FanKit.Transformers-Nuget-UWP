@@ -20,6 +20,7 @@ namespace FanKit.Transformers
         /// <param name="drawingSession"> The drawing-session. </param>
         /// <param name="point0"> The first point. </param>
         /// <param name="point1"> The second point. </param>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static void DrawLineDodgerBlue(this CanvasDrawingSession drawingSession, Vector2 point0, Vector2 point1) => drawingSession.DrawLine(point0, point1, Windows.UI.Colors.DodgerBlue);
 
         /// <summary>
@@ -30,6 +31,7 @@ namespace FanKit.Transformers
         /// <param name="y0"> The Y-axis position of the first point. </param>
         /// <param name="x1"> The X-axis value of the second point. </param>
         /// <param name="y1"> The Y-axis position of the second point. </param>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static void DrawLineDodgerBlue(this CanvasDrawingSession drawingSession, float x0, float y0, float x1, float y1) => drawingSession.DrawLine(x0, y0, x1, y1, Windows.UI.Colors.DodgerBlue);
 
         /// <summary>
@@ -38,6 +40,7 @@ namespace FanKit.Transformers
         /// <param name="drawingSession"> The drawing-session. </param>
         /// <param name="point0"> The first point. </param>
         /// <param name="point1"> The second point. </param>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static void DrawThickLine(this CanvasDrawingSession drawingSession, Vector2 point0, Vector2 point1)
         {
             drawingSession.DrawLine(point0, point1, Windows.UI.Colors.Black, 2);
@@ -52,6 +55,7 @@ namespace FanKit.Transformers
         /// <param name="y0"> The Y-axis position of the first point. </param>
         /// <param name="x1"> The X-axis value of the second point. </param>
         /// <param name="y1"> The Y-axis position of the second point. </param>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static void DrawThickLine(this CanvasDrawingSession drawingSession, float x0, float y0, float x1, float y1)
         {
             drawingSession.DrawLine(x0, y0, x1, y1, Windows.UI.Colors.Black, 2);
@@ -66,6 +70,7 @@ namespace FanKit.Transformers
         /// <param name="centerPoint"> The center point. </param>
         /// <param name="radiusX"> The X-axis radius of the ellipse. </param>
         /// <param name="radiusY"> The Y-axis radius of the ellipse. </param>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static void DrawEllipseDodgerBlue(this CanvasDrawingSession drawingSession, Vector2 centerPoint, float radiusX, float radiusY)
         {
             drawingSession.DrawEllipse(centerPoint, radiusX, radiusY, Windows.UI.Colors.DodgerBlue);
@@ -79,6 +84,7 @@ namespace FanKit.Transformers
         /// <param name="centerPoint"> The center point. </param>
         /// <param name="radiusX"> The X-axis radius of the ellipse. </param>
         /// <param name="radiusY"> The Y-axis radius of the ellipse. </param>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static void DrawThickEllipse(this CanvasDrawingSession drawingSession, Vector2 centerPoint, float radiusX, float radiusY)
         {
             drawingSession.DrawEllipse(centerPoint, radiusX, radiusY, Windows.UI.Colors.Black, 2);
@@ -91,6 +97,7 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="drawingSession"> The drawing-session. </param>
         /// <param name="rect"> The rectangle. </param>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static void DrawRectangleDodgerBlue(this CanvasDrawingSession drawingSession, Rect rect)
         {
             drawingSession.DrawRectangle(rect, Windows.UI.Colors.DodgerBlue);
@@ -102,6 +109,7 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="drawingSession"> The drawing-session. </param>
         /// <param name="rect"> The rectangle. </param>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static void DrawThickRectangle(this CanvasDrawingSession drawingSession, Rect rect)
         {
             drawingSession.DrawRectangle(rect, Windows.UI.Colors.Black, 2);
@@ -114,6 +122,7 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="drawingSession"> The drawing-session. </param>
         /// <param name="canvasGeometry"> The canvas-geometry. </param>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static void DrawGeometryDodgerBlue(this CanvasDrawingSession drawingSession, CanvasGeometry canvasGeometry)
         {
             drawingSession.DrawGeometry(canvasGeometry, Windows.UI.Colors.DodgerBlue);
@@ -125,6 +134,7 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="drawingSession"> The drawing-session. </param>
         /// <param name="canvasGeometry"> The canvas-geometry. </param>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static void DrawThickGeometry(this CanvasDrawingSession drawingSession, CanvasGeometry canvasGeometry)
         {
             drawingSession.DrawGeometry(canvasGeometry, Windows.UI.Colors.Black, 2);

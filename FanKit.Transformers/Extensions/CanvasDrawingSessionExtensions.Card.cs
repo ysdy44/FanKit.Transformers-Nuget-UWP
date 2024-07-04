@@ -12,6 +12,7 @@ namespace FanKit.Transformers
         /// <summary> The color of the drop shadow. Default (A64 R0 G0 B0). </summary>
         public static Windows.UI.Color ShadowColor = Windows.UI.Color.FromArgb(64, 0, 0, 0);
 
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         private static void DrawShadowCore(CanvasDrawingSession drawingSession, ICanvasImage image, Windows.UI.Color shadowColor, float shadowBlurAmount, float shadowOffset)
         {
             ICanvasImage shadow = new ShadowEffect
@@ -25,11 +26,14 @@ namespace FanKit.Transformers
         }
 
 
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         private static void DrawCradCore(CanvasDrawingSession drawingSession, ICanvasImage previousImage, Rect cropRect, Windows.UI.Color shadowColor, float shadowBlurAmount, float shadowOffset) => CanvasDrawingSessionExtensions.DrawShadowCore(drawingSession, new CropEffect
         {
             Source = previousImage,
             SourceRectangle = cropRect
         }, shadowColor, shadowBlurAmount, shadowOffset);
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+      
         private static void DrawCradCore(CanvasDrawingSession drawingSession, ICanvasImage previousImage, Rect cropRect, Matrix3x2 matrix, Windows.UI.Color shadowColor, float shadowBlurAmount, float shadowOffset) => CanvasDrawingSessionExtensions.DrawShadowCore(drawingSession, new Transform2DEffect
         {
             TransformMatrix = matrix,
@@ -41,6 +45,7 @@ namespace FanKit.Transformers
         }, shadowColor, shadowBlurAmount, shadowOffset);
 
 
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         private static void DrawCradCore(CanvasDrawingSession drawingSession, ICanvasImage previousImage, CanvasTransformer canvasTransformer, Windows.UI.Color shadowColor, float shadowBlurAmount, float shadowOffset)
         {
             float width = canvasTransformer.Width * canvasTransformer.Scale;

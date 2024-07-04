@@ -42,6 +42,7 @@ namespace FanKit.Transformers
         public static void DrawBound(this CanvasDrawingSession drawingSession, Transformer transformer, Matrix3x2 matrix, Windows.UI.Color accentColor) => CanvasDrawingSessionExtensions.DrawBoundCore(drawingSession, Vector2.Transform(transformer.LeftTop, matrix), Vector2.Transform(transformer.RightTop, matrix), Vector2.Transform(transformer.RightBottom, matrix), Vector2.Transform(transformer.LeftBottom, matrix), accentColor);
 
 
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         private static void DrawBoundCore(CanvasDrawingSession drawingSession, Vector2 leftTop, Vector2 rightTop, Vector2 rightBottom, Vector2 leftBottom, Windows.UI.Color accentColor)
         {
             drawingSession.DrawLine(leftTop, rightTop, accentColor);

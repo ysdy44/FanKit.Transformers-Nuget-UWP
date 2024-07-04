@@ -13,6 +13,7 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="drawingSession"> The drawing-session. </param>
         /// <param name="border"> The border. </param>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static void DrawBound(this CanvasDrawingSession drawingSession, TransformerBorder border) => CanvasDrawingSessionExtensions.DrawBoundCore(drawingSession, border, Windows.UI.Colors.DodgerBlue);
 
         /// <summary>
@@ -21,9 +22,11 @@ namespace FanKit.Transformers
         /// <param name="drawingSession"> The drawing-session. </param>
         /// <param name="border"> The border. </param>
         /// <param name="accentColor"> The accent color. </param>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static void DrawBound(this CanvasDrawingSession drawingSession, TransformerBorder border, Windows.UI.Color accentColor) => CanvasDrawingSessionExtensions.DrawBoundCore(drawingSession, border, accentColor);
 
 
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         private static void DrawBoundCore(CanvasDrawingSession drawingSession, TransformerBorder border, Windows.UI.Color accentColor)
         {
             drawingSession.DrawLine(border.Left, border.Top, border.Right, border.Top, accentColor);

@@ -10,6 +10,7 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="drawingSession"> The drawing-session. </param>
         /// <param name="point"> The point. </param>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static void DrawNode(this CanvasDrawingSession drawingSession, Vector2 point) => CanvasDrawingSessionExtensions.DrawNode1Core(drawingSession, point.X, point.Y, Windows.UI.Colors.DodgerBlue);
 
         /// <summary>
@@ -18,6 +19,7 @@ namespace FanKit.Transformers
         /// <param name="drawingSession"> The drawing-session. </param>
         /// <param name="x"> The X-axis value of the point. </param>
         /// <param name="y"> The Y-axis position of the point. </param>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static void DrawNode(this CanvasDrawingSession drawingSession, float x, float y) => CanvasDrawingSessionExtensions.DrawNode1Core(drawingSession, x, y, Windows.UI.Colors.DodgerBlue);
 
         /// <summary>
@@ -26,6 +28,7 @@ namespace FanKit.Transformers
         /// <param name="drawingSession"> The drawing-session. </param>
         /// <param name="point"> The point. </param>
         /// <param name="accentColor"> The accent color. </param>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static void DrawNode(this CanvasDrawingSession drawingSession, Vector2 point, Windows.UI.Color accentColor) => CanvasDrawingSessionExtensions.DrawNode1Core(drawingSession, point.X, point.Y, accentColor);
 
         /// <summary>
@@ -35,8 +38,10 @@ namespace FanKit.Transformers
         /// <param name="x"> The X-axis value of the point. </param>
         /// <param name="y"> The Y-axis position of the point. </param>
         /// <param name="accentColor"> The accent color. </param>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static void DrawNode(this CanvasDrawingSession drawingSession, float x, float y, Windows.UI.Color accentColor) => CanvasDrawingSessionExtensions.DrawNode1Core(drawingSession, x, y, accentColor);
 
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         private static void DrawNode1Core(CanvasDrawingSession drawingSession, float x, float y, Windows.UI.Color accentColor)
         {
             drawingSession.FillCircle(x, y, 10, Windows.UI.Color.FromArgb(70, 127, 127, 127));
@@ -50,6 +55,7 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="drawingSession"> The drawing-session. </param>
         /// <param name="point"> The point. </param>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static void DrawNode2(this CanvasDrawingSession drawingSession, Vector2 point) => CanvasDrawingSessionExtensions.DrawNode2Core(drawingSession, point.X, point.Y, Windows.UI.Colors.DodgerBlue);
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace FanKit.Transformers
         /// <param name="drawingSession"> The drawing-session. </param>
         /// <param name="x"> The X-axis value of the point. </param>
         /// <param name="y"> The Y-axis position of the point. </param>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static void DrawNode2(this CanvasDrawingSession drawingSession, float x, float y) => CanvasDrawingSessionExtensions.DrawNode2Core(drawingSession, x, y, Windows.UI.Colors.DodgerBlue);
 
         /// <summary>
@@ -66,6 +73,7 @@ namespace FanKit.Transformers
         /// <param name="drawingSession"> The drawing-session. </param>
         /// <param name="point"> The point. </param>
         /// <param name="accentColor"> The accent color. </param>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static void DrawNode2(this CanvasDrawingSession drawingSession, Vector2 point, Windows.UI.Color accentColor) => CanvasDrawingSessionExtensions.DrawNode2Core(drawingSession, point.X, point.Y, accentColor);
 
         /// <summary>
@@ -75,8 +83,10 @@ namespace FanKit.Transformers
         /// <param name="x"> The X-axis value of the point. </param>
         /// <param name="y"> The Y-axis position of the point. </param>
         /// <param name="accentColor"> The accent color. </param>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static void DrawNode2(this CanvasDrawingSession drawingSession, float x, float y, Windows.UI.Color accentColor) => CanvasDrawingSessionExtensions.DrawNode2Core(drawingSession, x, y, accentColor);
 
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         private static void DrawNode2Core(CanvasDrawingSession drawingSession, float x, float y, Windows.UI.Color accentColor)
         {
             drawingSession.FillCircle(x, y, 10, Windows.UI.Color.FromArgb(70, 127, 127, 127));
@@ -90,6 +100,7 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="drawingSession"> The drawing-session. </param>
         /// <param name="point"> The point. </param>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static void DrawNode3(this CanvasDrawingSession drawingSession, Vector2 point) => CanvasDrawingSessionExtensions.DrawNode3Core(drawingSession, point.X, point.Y, Windows.UI.Colors.DodgerBlue);
 
         /// <summary>
@@ -98,6 +109,7 @@ namespace FanKit.Transformers
         /// <param name="drawingSession"> The drawing-session. </param>
         /// <param name="x"> The X-axis value of the point. </param>
         /// <param name="y"> The Y-axis position of the point. </param>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static void DrawNode3(this CanvasDrawingSession drawingSession, float x, float y) => CanvasDrawingSessionExtensions.DrawNode3Core(drawingSession, x, y, Windows.UI.Colors.DodgerBlue);
 
         /// <summary>
@@ -106,6 +118,7 @@ namespace FanKit.Transformers
         /// <param name="drawingSession"> The drawing-session. </param>
         /// <param name="point"> The point. </param>
         /// <param name="accentColor"> The accent color. </param>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static void DrawNode3(this CanvasDrawingSession drawingSession, Vector2 point, Windows.UI.Color accentColor) => CanvasDrawingSessionExtensions.DrawNode3Core(drawingSession, point.X, point.Y, accentColor);
 
         /// <summary>
@@ -115,8 +128,10 @@ namespace FanKit.Transformers
         /// <param name="x"> The X-axis value of the point. </param>
         /// <param name="y"> The Y-axis position of the point. </param>
         /// <param name="accentColor"> The accent color. </param>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static void DrawNode3(this CanvasDrawingSession drawingSession, float x, float y, Windows.UI.Color accentColor) => CanvasDrawingSessionExtensions.DrawNode3Core(drawingSession, x, y, accentColor);
 
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         private static void DrawNode3Core(CanvasDrawingSession drawingSession, float x, float y, Windows.UI.Color accentColor)
         {
             drawingSession.FillRectangle(x - 7, y - 7, 14, 14, Windows.UI.Color.FromArgb(70, 127, 127, 127));
@@ -130,6 +145,7 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="drawingSession"> The drawing-session. </param>
         /// <param name="point"> The point. </param>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static void DrawNode4(this CanvasDrawingSession drawingSession, Vector2 point) => CanvasDrawingSessionExtensions.DrawNode4Core(drawingSession, point.X, point.Y, Windows.UI.Colors.DodgerBlue);
 
         /// <summary>
@@ -138,6 +154,7 @@ namespace FanKit.Transformers
         /// <param name="drawingSession"> The drawing-session. </param>
         /// <param name="x"> The X-axis value of the point. </param>
         /// <param name="y"> The Y-axis position of the point. </param>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static void DrawNode4(this CanvasDrawingSession drawingSession, float x, float y) => CanvasDrawingSessionExtensions.DrawNode4Core(drawingSession, x, y, Windows.UI.Colors.DodgerBlue);
 
         /// <summary>
@@ -146,6 +163,7 @@ namespace FanKit.Transformers
         /// <param name="drawingSession"> The drawing-session. </param>
         /// <param name="point"> The point. </param>
         /// <param name="accentColor"> The accent color. </param>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static void DrawNode4(this CanvasDrawingSession drawingSession, Vector2 point, Windows.UI.Color accentColor) => CanvasDrawingSessionExtensions.DrawNode4Core(drawingSession, point.X, point.Y, accentColor);
 
         /// <summary>
@@ -155,8 +173,10 @@ namespace FanKit.Transformers
         /// <param name="x"> The X-axis value of the point. </param>
         /// <param name="y"> The Y-axis position of the point. </param>
         /// <param name="accentColor"> The accent color. </param>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static void DrawNode4(this CanvasDrawingSession drawingSession, float x, float y, Windows.UI.Color accentColor) => CanvasDrawingSessionExtensions.DrawNode4Core(drawingSession, x, y, accentColor);
 
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         private static void DrawNode4Core(CanvasDrawingSession drawingSession, float x, float y, Windows.UI.Color accentColor)
         {
             drawingSession.FillRectangle(x - 7, y - 7, 14, 14, Windows.UI.Color.FromArgb(70, 127, 127, 127));
@@ -170,6 +190,7 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="drawingSession"> The drawing-session. </param>
         /// <param name="point"> The point. </param>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static void DrawNode5(this CanvasDrawingSession drawingSession, Vector2 point) => CanvasDrawingSessionExtensions.DrawNode5Core(drawingSession, point.X, point.Y, Windows.UI.Colors.DodgerBlue);
 
         /// <summary>
@@ -178,6 +199,7 @@ namespace FanKit.Transformers
         /// <param name="drawingSession"> The drawing-session. </param>
         /// <param name="x"> The X-axis value of the point. </param>
         /// <param name="y"> The Y-axis position of the point. </param>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static void DrawNode5(this CanvasDrawingSession drawingSession, float x, float y) => CanvasDrawingSessionExtensions.DrawNode5Core(drawingSession, x, y, Windows.UI.Colors.DodgerBlue);
 
         /// <summary>
@@ -186,6 +208,7 @@ namespace FanKit.Transformers
         /// <param name="drawingSession"> The drawing-session. </param>
         /// <param name="point"> The point. </param>
         /// <param name="accentColor"> The accent color. </param>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static void DrawNode5(this CanvasDrawingSession drawingSession, Vector2 point, Windows.UI.Color accentColor) => CanvasDrawingSessionExtensions.DrawNode5Core(drawingSession, point.X, point.Y, accentColor);
 
         /// <summary>
@@ -195,8 +218,10 @@ namespace FanKit.Transformers
         /// <param name="x"> The X-axis value of the point. </param>
         /// <param name="y"> The Y-axis position of the point. </param>
         /// <param name="accentColor"> The accent color. </param>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static void DrawNode5(this CanvasDrawingSession drawingSession, float x, float y, Windows.UI.Color accentColor) => CanvasDrawingSessionExtensions.DrawNode5Core(drawingSession, x, y, accentColor);
 
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         private static void DrawNode5Core(CanvasDrawingSession drawingSession, float x, float y, Windows.UI.Color accentColor)
         {
             drawingSession.FillCircle(x, y, 6, accentColor);
