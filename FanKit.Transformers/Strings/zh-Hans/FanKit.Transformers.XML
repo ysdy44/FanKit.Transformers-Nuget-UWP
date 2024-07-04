@@ -2201,6 +2201,7 @@
       <summary>
         获取 <see cref="F:FanKit.Transformers.SnapBase`2.XSnap"/> 和 <see cref="F:FanKit.Transformers.SnapBase`2.XSnap"/>。
       </summary>
+      <param name="point"> 点。 </param>
       <returns> 生成的向量。 </returns>
     </member>
     <member name="M:FanKit.Transformers.VectorSnapBase`1.SetXSnap(System.Single,`0)">

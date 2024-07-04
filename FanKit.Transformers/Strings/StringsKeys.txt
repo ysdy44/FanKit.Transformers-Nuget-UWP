@@ -840,6 +840,7 @@ M:FanKit.Transformers.VectorSnapBase`1.Snap(System.Numerics.Vector2)@Returns
 M:FanKit.Transformers.VectorSnapBase`1.SetSnap(System.Numerics.Vector2)@Summary
 M:FanKit.Transformers.VectorSnapBase`1.SetSnap(System.Numerics.Vector2)@Param@point
 M:FanKit.Transformers.VectorSnapBase`1.GetSnap(System.Numerics.Vector2)@Summary
+M:FanKit.Transformers.VectorSnapBase`1.GetSnap(System.Numerics.Vector2)@Param@point
 M:FanKit.Transformers.VectorSnapBase`1.GetSnap(System.Numerics.Vector2)@Returns
 M:FanKit.Transformers.VectorSnapBase`1.SetXSnap(System.Single,`0)@Summary
 M:FanKit.Transformers.VectorSnapBase`1.SetXSnap(System.Single,`0)@Param@pointX

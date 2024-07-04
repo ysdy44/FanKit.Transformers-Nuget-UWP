@@ -55,6 +55,7 @@ namespace FanKit.Transformers
         /// <summary>
         /// Gets <see cref="SnapBase{S, D}.XSnap"/> and <see cref="SnapBase{S, D}.XSnap"/>.
         /// </summary>
+        /// <param name="point"> The point. </param>
         /// <returns> The product vector. </returns>
         public Vector2 GetSnap(Vector2 point)
         {

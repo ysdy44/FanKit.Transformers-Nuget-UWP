@@ -2201,6 +2201,7 @@
       <summary>
         Gets <see cref="F:FanKit.Transformers.SnapBase`2.XSnap"/> and <see cref="F:FanKit.Transformers.SnapBase`2.XSnap"/>.
       </summary>
+      <param name="point"> The point. </param>
       <returns> The product vector. </returns>
     </member>
     <member name="M:FanKit.Transformers.VectorSnapBase`1.SetXSnap(System.Single,`0)">
