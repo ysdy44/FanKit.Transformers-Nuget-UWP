@@ -3983,13 +3983,13 @@
     </member>
     <member name="M:FanKit.Math.IntersectionPoint(System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>
-        获取线 1 和线 2 的交点。
+        获取两条线的交点。
       </summary>
-      <param name="line1A"> 线 1 的第一个点。 </param>
-      <param name="line1B"> 线 1 的第二个点。 </param>
-      <param name="line2A"> 线 2 的第一个点。 </param>
-      <param name="line2B"> 线 2 的第二个点。 </param>
-      <returns> 生成的向量。 </returns>
+      <param name="line1A"> 第一条线的第一个点。 </param>
+      <param name="line1B"> 第一条线的第二个点。 </param>
+      <param name="line2A"> 第二条线的第一个点。 </param>
+      <param name="line2B"> 第二条线的第二个点。 </param>
+      <returns> 生成的点。 </returns>
     </member>
     <member name="M:FanKit.Math.RadiansToVector(System.Single,System.Numerics.Vector2,System.Single)">
       <summary>

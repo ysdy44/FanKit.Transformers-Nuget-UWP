@@ -207,13 +207,13 @@ namespace FanKit
         }
 
         /// <summary>
-        /// Get the intersection-point of Line1 and LIne2.
+        /// Get the intersection-point of two lines.
         /// </summary>
-        /// <param name="line1A"> The first line first point. </param>
-        /// <param name="line1B"> The first line second point. </param>
-        /// <param name="line2A"> The second line first point. </param>
-        /// <param name="line2B"> The second line second point. </param>
-        /// <returns> The product vector. </returns>
+        /// <param name="line1A"> The first point on the first line. </param>
+        /// <param name="line1B"> The second point on the first line. </param>
+        /// <param name="line2A"> The first point on the second line. </param>
+        /// <param name="line2B"> The second point on the second line. </param>
+        /// <returns> The product point. </returns>
         public static Vector2 IntersectionPoint(Vector2 line1A, Vector2 line1B, Vector2 line2A, Vector2 line2B)
         {
             float a = 0, b = 0;
