@@ -270,6 +270,7 @@ namespace FanKit.Transformers.TestApp
                     break;
             }
         }
+
         private void CanvasOperator_Single_Delta(Vector2 point, InputDevice device, PointerPointProperties properties)
         {
             switch (this.SelectedIndex)
@@ -308,114 +309,22 @@ namespace FanKit.Transformers.TestApp
                     }
                     break;
                 case 2:
+                    switch (this.TransformerMode)
                     {
-                        bool isConvexQuadrilateral = this.ConvexQuadrilateralButton.IsOn;
-                        if (isConvexQuadrilateral)
-                        {
-                            Transformer t = this.Layer2.Destination;
-                            switch (this.TransformerMode)
-                            {
-                                case TransformerMode.ScaleLeftTop: this.Layer2.Destination.LeftTop = FanKit.Math.MovePointOfConvexQuadrilateral(point, t.RightBottom, t.RightTop, t.LeftBottom, 8); break;
-                                case TransformerMode.ScaleRightTop: this.Layer2.Destination.RightTop = FanKit.Math.MovePointOfConvexQuadrilateral(point, t.LeftBottom, t.RightBottom, t.LeftTop, 8); break;
-                                case TransformerMode.ScaleRightBottom: this.Layer2.Destination.RightBottom = FanKit.Math.MovePointOfConvexQuadrilateral(point, t.LeftTop, t.LeftBottom, t.RightTop, 8); break;
-                                case TransformerMode.ScaleLeftBottom: this.Layer2.Destination.LeftBottom = FanKit.Math.MovePointOfConvexQuadrilateral(point, t.RightTop, t.LeftTop, t.RightBottom, 8); break;
-                                default: break;
-                            }
-                        }
-                        else
-                        {
-                            switch (this.TransformerMode)
-                            {
-                                case TransformerMode.ScaleLeftTop: this.Layer2.Destination.LeftTop = point; break;
-                                case TransformerMode.ScaleRightTop: this.Layer2.Destination.RightTop = point; break;
-                                case TransformerMode.ScaleRightBottom: this.Layer2.Destination.RightBottom = point; break;
-                                case TransformerMode.ScaleLeftBottom: this.Layer2.Destination.LeftBottom = point; break;
-                                default: break;
-                            }
-                        }
+                        case TransformerMode.ScaleLeftTop: this.Layer2.Destination = this.Layer2.Destination.MoveLeftTop(point, this.ConvexQuadrilateralButton.IsOn); break;
+                        case TransformerMode.ScaleRightTop: this.Layer2.Destination = this.Layer2.Destination.MoveRightTop(point, this.ConvexQuadrilateralButton.IsOn); break;
+                        case TransformerMode.ScaleRightBottom: this.Layer2.Destination = this.Layer2.Destination.MoveRightBottom(point, this.ConvexQuadrilateralButton.IsOn); break;
+                        case TransformerMode.ScaleLeftBottom: this.Layer2.Destination = this.Layer2.Destination.MoveLeftBottom(point, this.ConvexQuadrilateralButton.IsOn); break;
+                        default: break;
                     }
                     break;
-                default:
-                    break;
             }
-
             this.CanvasControl.Invalidate();
         }
+
         private void CanvasOperator_Single_Complete(Vector2 point, InputDevice device, PointerPointProperties properties)
         {
             this.CanvasControl.Invalidate();
         }
-        /*
-        private static Vector3 Transform3D(Vector3 p, Matrix4x4 m)
-        {
-            //return Vector3.Transform(p, m);
-            float x = m.M11 * p.X + m.M21 * p.Y + m.M41 * p.Z;
-            float y = m.M12 * p.X + m.M22 * p.Y + m.M42 * p.Z;
-            float z = m.M14 * p.X + m.M24 * p.Y + m.M44 * p.Z;
-            return new Vector3(x, y, z);
-        }
-
-        private static Vector2 Transform3D(Vector2 p, Matrix4x4 m)
-        {
-            //Vector3 v = Vector3.Transform(new Vector3(p, 1), m);
-            //return new Vector2(v.X / v.Z, v.Y / v.Z);
-            float x = m.M11 * p.X + m.M21 * p.Y + m.M41;
-            float y = m.M12 * p.X + m.M22 * p.Y + m.M42;
-            float z = m.M14 * p.X + m.M24 * p.Y + m.M44;
-            return new Vector2(x / z, y / z);
-        }
-
-        private static Vector2 MovePointOnConvexQuadrilateral(Vector2 point, Vector2 leftTop, Vector2 rightTop, Vector2 rightBottom, Vector2 leftBottom, int limitFactor = 8)
-        {
-            Vector2 limit1 = 2 * limitFactor * Vector2.Normalize(leftTop - rightBottom);
-            Vector2 limit2 = limitFactor * Vector2.Normalize(leftBottom - rightTop);
-            Vector2 left = limit1 + limit2 + rightTop;
-            Vector2 right = limit1 - limit2 + leftBottom;
-            Vector2 tag = rightBottom;
-
-            Vector2 foot = point;
-            int i = 0;
-
-            do
-            {
-                Vector2 lineA;
-                Vector2 lineB;
-                switch (i)
-                {
-                    case 1:
-                        lineA = tag;
-                        lineB = right;
-                        break;
-                    case 2:
-                        lineA = left;
-                        lineB = tag;
-                        break;
-                    default:
-                        lineA = left;
-                        lineB = right;
-                        break;
-                }
-
-                float bx = lineA.X - lineB.X;
-                float by = lineA.Y - lineB.Y;
-                float px = lineA.X - foot.X;
-                float py = lineA.Y - foot.Y;
-
-                if (bx * py - by * px < 0f)
-                {
-                    float s = bx * bx + by * by;
-                    float p = py * by + px * bx;
-                    foot = new Vector2
-                    {
-                        X = lineA.X - bx * p / s,
-                        Y = lineA.Y - by * p / s
-                    };
-                }
-                i++;
-            } while (i < 4);
-
-            return foot;
-        }
-         */
     }
 }
