@@ -973,7 +973,7 @@ M:FanKit.Transformers.Transformer.#ctor(System.Numerics.Vector2,System.Numerics.
 M:FanKit.Transformers.Transformer.#ctor(System.Numerics.Vector2,System.Numerics.Vector2,System.Boolean,System.Boolean)@Param@isCenter
 M:FanKit.Transformers.Transformer.#ctor(System.Numerics.Vector2,System.Numerics.Vector2,System.Boolean,System.Boolean)@Param@isRatio
 M:FanKit.Transformers.Transformer.#ctor(FanKit.Transformers.TransformerBorder)@Summary
-M:FanKit.Transformers.Transformer.#ctor(FanKit.Transformers.TransformerBorder)@Param@rect
+M:FanKit.Transformers.Transformer.#ctor(FanKit.Transformers.TransformerBorder)@Param@bounds
 M:FanKit.Transformers.Transformer.Add(FanKit.Transformers.Transformer,System.Numerics.Vector2)@Summary
 M:FanKit.Transformers.Transformer.Add(FanKit.Transformers.Transformer,System.Numerics.Vector2)@Param@left
 M:FanKit.Transformers.Transformer.Add(FanKit.Transformers.Transformer,System.Numerics.Vector2)@Param@right
@@ -1569,7 +1569,6 @@ F:FanKit.Transformers.TransformerMode.ScaleLeftTop@Summary
 F:FanKit.Transformers.TransformerMode.ScaleRightTop@Summary
 F:FanKit.Transformers.TransformerMode.ScaleRightBottom@Summary
 F:FanKit.Transformers.TransformerMode.ScaleLeftBottom@Summary
-T:FanKit.Transformers.TransformerBorder@Summary
 T:FanKit.Transformers.XML@Summary
 M:FanKit.Transformers.XML.SaveColor(System.String,Windows.UI.Color)@Summary
 M:FanKit.Transformers.XML.SaveColor(System.String,Windows.UI.Color)@Param@elementName

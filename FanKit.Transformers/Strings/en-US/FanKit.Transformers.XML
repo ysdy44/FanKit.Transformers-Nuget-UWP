@@ -1999,7 +1999,7 @@
     </member>
     <member name="M:FanKit.Transformers.LineDistance.Scale(FanKit.Transformers.LineDistance)">
       <summary> Scale of [Foot Point] betwwen [Center Point] / scale of [Point] betwwen [Center Point] (may be negative) </summary>
-      <param name="distance"> The distance </param>
+      <param name="distance"> The distance. </param>
       <returns> Scale </returns>
     </member>
     <member name="T:FanKit.Transformers.MatrixTransformerMode">

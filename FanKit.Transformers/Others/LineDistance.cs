@@ -47,7 +47,7 @@ namespace FanKit.Transformers
         }
 
         /// <summary> Scale of [Foot Point] betwwen [Center Point] / scale of [Point] betwwen [Center Point] (may be negative) </summary>
-        /// <param name="distance"> The distance </param>
+        /// <param name="distance"> The distance. </param>
         /// <returns> Scale </returns>
         public static float Scale(LineDistance distance)
         {

@@ -1999,7 +1999,7 @@
     </member>
     <member name="M:FanKit.Transformers.LineDistance.Scale(FanKit.Transformers.LineDistance)">
       <summary> [垂足][中心点]的缩放 / [点][中心点]的缩放（可能为负） </summary>
-      <param name="distance"> 距离 </param>
+      <param name="distance"> 距离。 </param>
       <returns> 缩放 </returns>
     </member>
     <member name="T:FanKit.Transformers.MatrixTransformerMode">
@@ -3920,7 +3920,7 @@
       <param name="y0"> 第一个点的 Y 轴位置。 </param>
       <param name="x1"> 第二个点的 X 轴值。 </param>
       <param name="y1"> 第二个点的 Y 轴位置。 </param>
-      <returns> 距离 </returns>
+      <returns> 距离。 </returns>
     </member>
     <member name="M:FanKit.Math.DistanceSquared(System.Single,System.Single,System.Single,System.Single)">
       <summary>
