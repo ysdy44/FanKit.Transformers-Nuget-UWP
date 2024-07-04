@@ -2998,7 +2998,7 @@
       </summary>
       <param name="obj"> 与该实例进行比较的对象。 </param>
       <returns> 如果此实例和 obj 相等，则返回**true**，否则返回**false**。如果 obj 是空，此方法返回**false**。 </returns>
-    </member>    
+    </member>
     <member name="M:FanKit.Transformers.TransformerBorder.GetHashCode">
       <summary>
         返回此实例的哈希码。
@@ -4030,6 +4030,38 @@
       </summary>
       <param name="radians"> 弧度旋转量。 </param>
       <returns> 旋转向量。 </returns>
+    </member>
+    <member name="M:FanKit.Math.Transform3D(System.Numerics.Vector2,System.Numerics.Matrix4x4)">
+      <summary>
+        用给定的 4x4 矩阵变换一个向量。
+      </summary>
+      <param name="position"> 要变换的向量。 </param>
+      <param name="matrix3D"> 变换矩阵。 </param>
+      <returns> 变换的向量。 </returns>
+    </member>
+    <member name="M:FanKit.Math.Transform3D(System.Numerics.Vector3,System.Numerics.Matrix4x4)">
+      <summary>
+        用给定的 4x4 矩阵变换一个向量。
+      </summary>
+      <param name="position"> 要变换的向量。 </param>
+      <param name="matrix3D"> 变换矩阵。 </param>
+      <returns> 变换的向量。 </returns>
+    </member>
+    <member name="M:FanKit.Math.Transform3D(System.Numerics.Matrix3x2,System.Numerics.Matrix4x4)">
+      <summary>
+        用给定的 4x4 矩阵变换一个矩阵。
+      </summary>
+      <param name="matrix"> 要变换的矩阵。 </param>
+      <param name="matrix3D"> 变换矩阵。 </param>
+      <returns> 变换的矩阵。 </returns>
+    </member>
+    <member name="M:FanKit.Math.Transform(System.Numerics.Matrix4x4,System.Numerics.Matrix3x2)">
+      <summary>
+        用给定的 3x2 矩阵变换一个矩阵。
+      </summary>
+      <param name="matrix3D"> 要变换的矩阵。 </param>
+      <param name="matrix"> 变换矩阵。 </param>
+      <returns> 变换的矩阵。 </returns>
     </member>
   </members>
 </doc>

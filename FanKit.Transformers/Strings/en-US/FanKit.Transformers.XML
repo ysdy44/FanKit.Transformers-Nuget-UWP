@@ -4031,5 +4031,37 @@
       <param name="radians"> The amount of rotation, in radians. </param>
       <returns> The rotation vector. </returns>
     </member>
+    <member name="M:FanKit.Math.Transform3D(System.Numerics.Vector2,System.Numerics.Matrix4x4)">
+      <summary>
+        Transforms a vector by a specified 4x4 matrix.
+      </summary>
+      <param name="position"> The vector to transform. </param>
+      <param name="matrix3D"> The transformation matrix. </param>
+      <returns> The transformed vector. </returns>
+    </member>
+    <member name="M:FanKit.Math.Transform3D(System.Numerics.Vector3,System.Numerics.Matrix4x4)">
+      <summary>
+        Transforms a vector by a specified 4x4 matrix.
+      </summary>
+      <param name="position"> The vector to transform. </param>
+      <param name="matrix3D"> The transformation matrix. </param>
+      <returns> The transformed vector. </returns>
+    </member>
+    <member name="M:FanKit.Math.Transform3D(System.Numerics.Matrix3x2,System.Numerics.Matrix4x4)">
+      <summary>
+        Transforms a matrix by a specified 4x4 matrix.
+      </summary>
+      <param name="matrix"> The matrix to transform. </param>
+      <param name="matrix3D"> The transformation matrix. </param>
+      <returns> The transformed matrix. </returns>
+    </member>
+    <member name="M:FanKit.Math.Transform(System.Numerics.Matrix4x4,System.Numerics.Matrix3x2)">
+      <summary>
+        Transforms a matrix by a specified 3x2 matrix.
+      </summary>
+      <param name="matrix3D"> The matrix to transform. </param>
+      <param name="matrix"> The transformation matrix. </param>
+      <returns> The transformed matrix. </returns>
+    </member>
   </members>
 </doc>
