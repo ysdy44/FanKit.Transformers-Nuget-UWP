@@ -3895,6 +3895,42 @@
     <member name="F:FanKit.Math.NodeDistance">
       <summary> Minimum distance between two nodes. Default 20. </summary>
     </member>
+    <member name="M:FanKit.Math.Length(System.Single,System.Single)">
+      <summary>
+        Returns the length of the vector.
+      </summary>
+      <param name="x"> The X-axis value of the vector. </param>
+      <param name="y"> The Y-axis position of the vector. </param>
+      <returns> The length of the vector. </returns>
+    </member>
+    <member name="M:FanKit.Math.LengthSquared(System.Single,System.Single)">
+      <summary>
+        Returns the length of the vector squared.
+      </summary>
+      <param name="x"> The X-axis value of the vector. </param>
+      <param name="y"> The Y-axis position of the vector. </param>
+      <returns> The length of the vector squared.. </returns>
+    </member>
+    <member name="M:FanKit.Math.Distance(System.Single,System.Single,System.Single,System.Single)">
+      <summary>
+        Computes the Euclidean distance between the two given points.
+      </summary>
+      <param name="x0"> The X-axis value of the first point. </param>
+      <param name="y0"> The Y-axis position of the first point. </param>
+      <param name="x1"> The X-axis value of the second point. </param>
+      <param name="y1"> The Y-axis position of the second point. </param>
+      <returns> The distance. </returns>
+    </member>
+    <member name="M:FanKit.Math.DistanceSquared(System.Single,System.Single,System.Single,System.Single)">
+      <summary>
+        Returns the Euclidean distance squared between two specified points.
+      </summary>
+      <param name="x0"> The X-axis value of the first point. </param>
+      <param name="y0"> The Y-axis position of the first point. </param>
+      <param name="x1"> The X-axis value of the second point. </param>
+      <param name="y1"> The Y-axis position of the second point. </param>
+      <returns> The distance squared. </returns>
+    </member>
     <member name="M:FanKit.Math.InNodeRadius(System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>
         Whether the distance exceeds [NodeRadius]. Default: 144.

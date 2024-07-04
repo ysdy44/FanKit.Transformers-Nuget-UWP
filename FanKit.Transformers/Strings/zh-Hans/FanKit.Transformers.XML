@@ -3895,6 +3895,42 @@
     <member name="F:FanKit.Math.NodeDistance">
       <summary> 两个节点之间的最小距离。默认 20。 </summary>
     </member>
+    <member name="M:FanKit.Math.Length(System.Single,System.Single)">
+      <summary>
+        返回向量的长度。
+      </summary>
+      <param name="x"> 向量的 X 轴值。 </param>
+      <param name="y"> 向量的 Y 轴位置。 </param>
+      <returns> 向量的长度。 </returns>
+    </member>
+    <member name="M:FanKit.Math.LengthSquared(System.Single,System.Single)">
+      <summary>
+        返回向量的长度平方。
+      </summary>
+      <param name="x"> 向量的 X 轴值。 </param>
+      <param name="y"> 向量的 Y 轴位置。 </param>
+      <returns> 向量的长度平方。 </returns>
+    </member>
+    <member name="M:FanKit.Math.Distance(System.Single,System.Single,System.Single,System.Single)">
+      <summary>
+        计算给定的两个点的欧几里得距离。
+      </summary>
+      <param name="x0"> 第一个点的 X 轴值。 </param>
+      <param name="y0"> 第一个点的 Y 轴位置。 </param>
+      <param name="x1"> 第二个点的 X 轴值。 </param>
+      <param name="y1"> 第二个点的 Y 轴位置。 </param>
+      <returns> 距离 </returns>
+    </member>
+    <member name="M:FanKit.Math.DistanceSquared(System.Single,System.Single,System.Single,System.Single)">
+      <summary>
+        返回指定的两个点的欧几里得距离平方。
+      </summary>
+      <param name="x0"> 第一个点的 X 轴值。 </param>
+      <param name="y0"> 第一个点的 Y 轴位置。 </param>
+      <param name="x1"> 第二个点的 X 轴值。 </param>
+      <param name="y1"> 第二个点的 Y 轴位置。 </param>
+      <returns> 距离平方。 </returns>
+    </member>
     <member name="M:FanKit.Math.InNodeRadius(System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>
         距离是否超过[节点半径]。最低：144。

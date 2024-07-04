@@ -34,13 +34,41 @@ namespace FanKit
         private const float NodeDistanceSquare = Math.NodeDistance * Math.NodeDistance;
         private const float NodeDistanceDouble = Math.NodeDistance + Math.NodeDistance;
 
-        internal static float Length(float x, float y) => System.MathF.Sqrt(LengthSquared(x, y));
+        /// <summary>
+        /// Returns the length of the vector.
+        /// </summary>
+        /// <param name="x"> The X-axis value of the vector. </param>
+        /// <param name="y"> The Y-axis position of the vector. </param>
+        /// <returns> The length of the vector. </returns>
+        public static float Length(float x, float y) => System.MathF.Sqrt(LengthSquared(x, y));
 
-        internal static float LengthSquared(float x, float y) => x * x + y * y;
+        /// <summary>
+        /// Returns the length of the vector squared.
+        /// </summary>
+        /// <param name="x"> The X-axis value of the vector. </param>
+        /// <param name="y"> The Y-axis position of the vector. </param>
+        /// <returns> The length of the vector squared. </returns>
+        public static float LengthSquared(float x, float y) => x * x + y * y;
 
-        internal static float Distance(float x0, float y0, float x1, float y1) => Length(x1 - x0, y1 - y0);
+        /// <summary>
+        /// Computes the Euclidean distance between the two given points.
+        /// </summary>
+        /// <param name="x0"> The X-axis value of the first point. </param>
+        /// <param name="y0"> The Y-axis position of the first point. </param>
+        /// <param name="x1"> The X-axis value of the second point. </param>
+        /// <param name="y1"> The Y-axis position of the second point. </param>
+        /// <returns> The distance. </returns>
+        public static float Distance(float x0, float y0, float x1, float y1) => Math.Length(x1 - x0, y1 - y0);
 
-        internal static float DistanceSquared(float x0, float y0, float x1, float y1) => Math.LengthSquared(x1 - x0, y1 - y0);
+        /// <summary>
+        /// Returns the Euclidean distance squared between two specified points.
+        /// </summary>
+        /// <param name="x0"> The X-axis value of the first point. </param>
+        /// <param name="y0"> The Y-axis position of the first point. </param>
+        /// <param name="x1"> The X-axis value of the second point. </param>
+        /// <param name="y1"> The Y-axis position of the second point. </param>
+        /// <returns> The distance squared. </returns>
+        public static float DistanceSquared(float x0, float y0, float x1, float y1) => Math.LengthSquared(x1 - x0, y1 - y0);
 
         /// <summary>
         /// Whether the distance exceeds [NodeRadius]. Default: 144.
@@ -374,7 +402,7 @@ namespace FanKit
             float x = matrix3D.M11 * position.X + matrix3D.M21 * position.Y + matrix3D.M41;
             float y = matrix3D.M12 * position.X + matrix3D.M22 * position.Y + matrix3D.M42;
             float z = matrix3D.M14 * position.X + matrix3D.M24 * position.Y + matrix3D.M44;
-     
+
             return new Vector2(x / z, y / z);
         }
 
@@ -389,7 +417,7 @@ namespace FanKit
             float x = matrix3D.M11 * position.X + matrix3D.M21 * position.Y + matrix3D.M41 * position.Z;
             float y = matrix3D.M12 * position.X + matrix3D.M22 * position.Y + matrix3D.M42 * position.Z;
             float z = matrix3D.M14 * position.X + matrix3D.M24 * position.Y + matrix3D.M44 * position.Z;
-        
+
             return new Vector3(x, y, z);
         }
 
