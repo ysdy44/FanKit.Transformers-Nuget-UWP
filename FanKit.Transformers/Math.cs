@@ -352,5 +352,62 @@ namespace FanKit
                 return new Vector2(c, s);
             }
         }
+
+
+        public static Vector2 Transform3D(Vector2 position, Matrix4x4 matrix3D)
+        {
+            float x = matrix3D.M11 * position.X + matrix3D.M21 * position.Y + matrix3D.M41;
+            float y = matrix3D.M12 * position.X + matrix3D.M22 * position.Y + matrix3D.M42;
+            float z = matrix3D.M14 * position.X + matrix3D.M24 * position.Y + matrix3D.M44;
+        
+            return new Vector2(x / z, y / z);
+        }
+
+        public static Vector3 Transform3D(Vector3 position, Matrix4x4 matrix3D)
+        {
+            float x = matrix3D.M11 * position.X + matrix3D.M21 * position.Y + matrix3D.M41 * position.Z;
+            float y = matrix3D.M12 * position.X + matrix3D.M22 * position.Y + matrix3D.M42 * position.Z;
+            float z = matrix3D.M14 * position.X + matrix3D.M24 * position.Y + matrix3D.M44 * position.Z;
+         
+            return new Vector3(x, y, z);
+        }
+
+        public static Matrix3x2 Transform3D(Matrix3x2 matrix, Matrix4x4 matrix3D)
+        {
+            float x1 = matrix3D.M11 * matrix.M11 + matrix3D.M21 * matrix.M21 + matrix3D.M41 * matrix.M31;
+            float y1 = matrix3D.M12 * matrix.M11 + matrix3D.M22 * matrix.M21 + matrix3D.M42 * matrix.M31;
+            float z1 = matrix3D.M14 * matrix.M11 + matrix3D.M24 * matrix.M21 + matrix3D.M44 * matrix.M31;
+         
+            float x2 = matrix3D.M11 * matrix.M12 + matrix3D.M21 * matrix.M22 + matrix3D.M41 * matrix.M32;
+            float y2 = matrix3D.M12 * matrix.M12 + matrix3D.M22 * matrix.M22 + matrix3D.M42 * matrix.M32;
+            float z2 = matrix3D.M14 * matrix.M12 + matrix3D.M24 * matrix.M22 + matrix3D.M44 * matrix.M32;
+        
+            return new Matrix3x2(x1, x2, y1, y2, z1, z2);
+        }
+
+        public static Matrix4x4 Transform(Matrix4x4 matrix3D, Matrix3x2 matrix)
+        {
+            float m11 = matrix.M11;
+            float m13 = matrix.M21;
+            float m15 = matrix.M31;
+      
+            float m12 = matrix.M12;
+            float m14 = matrix.M22;
+            float m16 = matrix.M32;
+
+            float x1 = m11 * matrix3D.M11 + m13 * matrix3D.M12 + matrix3D.M13 + m15 * matrix3D.M14;
+            float x2 = m11 * matrix3D.M21 + m13 * matrix3D.M22 + matrix3D.M13 + m15 * matrix3D.M24;
+            float x3 = m11 * matrix3D.M41 + m13 * matrix3D.M42 + matrix3D.M43 + m15 * matrix3D.M44;
+         
+            float y1 = m12 * matrix3D.M11 + m14 * matrix3D.M12 + matrix3D.M13 + m16 * matrix3D.M14;
+            float y2 = m12 * matrix3D.M21 + m14 * matrix3D.M22 + matrix3D.M13 + m16 * matrix3D.M24;
+            float y3 = m12 * matrix3D.M41 + m14 * matrix3D.M42 + matrix3D.M43 + m16 * matrix3D.M44;
+     
+            return new Matrix4x4(
+                x1, y1, matrix3D.M13, matrix3D.M14, 
+                x2, y2, matrix3D.M23, matrix3D.M24, 
+                matrix3D.M31, matrix3D.M32, matrix3D.M33, matrix3D.M34,
+                x3, y3, matrix3D.M43, matrix3D.M44);
+        }
     }
 }

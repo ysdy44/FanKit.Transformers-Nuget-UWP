@@ -211,7 +211,7 @@ namespace FanKit.Transformers.TestApp
                             TransformMatrix = matrix
                         });
 
-                        Vector2 center = Transform3D(this.Layer2.Source.Center, matrix);
+                        Vector2 center = FanKit.Math.Transform3D(this.Layer2.Source.Center, matrix);
                         args.DrawingSession.DrawBound(this.Layer2.Destination);
                         args.DrawingSession.DrawLineDodgerBlue(this.Layer2.Destination.LeftTop, center);
                         args.DrawingSession.DrawLineDodgerBlue(this.Layer2.Destination.RightTop, center);
@@ -315,10 +315,10 @@ namespace FanKit.Transformers.TestApp
                             Transformer t = this.Layer2.Destination;
                             switch (this.TransformerMode)
                             {
-                                case TransformerMode.ScaleLeftTop: this.Layer2.Destination.LeftTop = MovePointOnConvexQuadrilateral(point, t.LeftTop, t.RightTop, t.RightBottom, t.LeftBottom, 8); break;
-                                case TransformerMode.ScaleRightTop: this.Layer2.Destination.RightTop = MovePointOnConvexQuadrilateral(point, t.RightTop, t.RightBottom, t.LeftBottom, t.LeftTop, 8); break;
-                                case TransformerMode.ScaleRightBottom: this.Layer2.Destination.RightBottom = MovePointOnConvexQuadrilateral(point, t.RightBottom, t.LeftBottom, t.LeftTop, t.RightTop, 8); break;
-                                case TransformerMode.ScaleLeftBottom: this.Layer2.Destination.LeftBottom = MovePointOnConvexQuadrilateral(point, t.LeftBottom, t.LeftTop, t.RightTop, t.RightBottom, 8); break;
+                                case TransformerMode.ScaleLeftTop: this.Layer2.Destination.LeftTop = FanKit.Math.MovePointOfConvexQuadrilateral(point, t.RightBottom, t.RightTop, t.LeftBottom, 8); break;
+                                case TransformerMode.ScaleRightTop: this.Layer2.Destination.RightTop = FanKit.Math.MovePointOfConvexQuadrilateral(point, t.LeftBottom, t.RightBottom, t.LeftTop, 8); break;
+                                case TransformerMode.ScaleRightBottom: this.Layer2.Destination.RightBottom = FanKit.Math.MovePointOfConvexQuadrilateral(point, t.LeftTop, t.LeftBottom, t.RightTop, 8); break;
+                                case TransformerMode.ScaleLeftBottom: this.Layer2.Destination.LeftBottom = FanKit.Math.MovePointOfConvexQuadrilateral(point, t.RightTop, t.LeftTop, t.RightBottom, 8); break;
                                 default: break;
                             }
                         }
@@ -345,7 +345,7 @@ namespace FanKit.Transformers.TestApp
         {
             this.CanvasControl.Invalidate();
         }
-
+        /*
         private static Vector3 Transform3D(Vector3 p, Matrix4x4 m)
         {
             //return Vector3.Transform(p, m);
@@ -416,6 +416,6 @@ namespace FanKit.Transformers.TestApp
 
             return foot;
         }
-
+         */
     }
 }
