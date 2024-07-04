@@ -12,6 +12,7 @@ namespace FanKit
         /// <summary> 7.5 degress in angle system. </summary>
         public const float RadiansStepHalf = System.MathF.PI / 24f;
         /// <summary> To find a multiple of the nearest 15. </summary>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static float RadiansStepFrequency(float radian) => ((int)((radian + Math.RadiansStepHalf) / Math.RadiansStep)) * Math.RadiansStep; // Get step radians
 
 
@@ -40,6 +41,7 @@ namespace FanKit
         /// <param name="x"> The X-axis value of the vector. </param>
         /// <param name="y"> The Y-axis position of the vector. </param>
         /// <returns> The length of the vector. </returns>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static float Length(float x, float y) => System.MathF.Sqrt(LengthSquared(x, y));
 
         /// <summary>
@@ -48,6 +50,7 @@ namespace FanKit
         /// <param name="x"> The X-axis value of the vector. </param>
         /// <param name="y"> The Y-axis position of the vector. </param>
         /// <returns> The length of the vector squared. </returns>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static float LengthSquared(float x, float y) => x * x + y * y;
 
         /// <summary>
@@ -58,6 +61,7 @@ namespace FanKit
         /// <param name="x1"> The X-axis value of the second point. </param>
         /// <param name="y1"> The Y-axis position of the second point. </param>
         /// <returns> The distance. </returns>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static float Distance(float x0, float y0, float x1, float y1) => Math.Length(x1 - x0, y1 - y0);
 
         /// <summary>
@@ -68,6 +72,7 @@ namespace FanKit
         /// <param name="x1"> The X-axis value of the second point. </param>
         /// <param name="y1"> The Y-axis position of the second point. </param>
         /// <returns> The distance squared. </returns>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static float DistanceSquared(float x0, float y0, float x1, float y1) => Math.LengthSquared(x1 - x0, y1 - y0);
 
         /// <summary>
@@ -76,6 +81,7 @@ namespace FanKit
         /// <param name="point0"> The first point. </param>
         /// <param name="point1"> The second point. </param>
         /// <returns> Return **true** if the distance exceeds [NodeRadius], otherwise **false**. </returns>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static bool InNodeRadius(Vector2 point0, Vector2 point1) => Math.DistanceSquared(point0.X, point0.Y, point1.X, point1.Y) < Math.NodeRadiusSquare;
 
         /// <summary>
@@ -86,6 +92,7 @@ namespace FanKit
         /// <param name="x1"> The X-axis value of the second point. </param>
         /// <param name="y1"> The Y-axis position of the second point. </param>
         /// <returns> Return **true** if the distance exceeds [NodeRadius], otherwise **false**. </returns>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static bool InNodeRadius(float x0, float y0, float x1, float y1) => Math.DistanceSquared(x0, y0, x1, y1) < Math.NodeRadiusSquare;
 
         /// <summary>
@@ -94,6 +101,7 @@ namespace FanKit
         /// <param name="point0"> The first point. </param>
         /// <param name="point1"> The second point. </param>
         /// <returns> Return **true** if the distance's LengthSquared exceeds [NodeDistance], otherwise **false**. </returns>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static bool OutNodeDistance(Vector2 point0, Vector2 point1) => Math.DistanceSquared(point0.X, point0.Y, point1.X, point1.Y) > Math.NodeDistanceSquare;
 
         /// <summary>
@@ -104,6 +112,7 @@ namespace FanKit
         /// <param name="x1"> The X-axis value of the second point. </param>
         /// <param name="y1"> The Y-axis position of the second point. </param>
         /// <returns> Return **true** if the distance's LengthSquared exceeds [NodeDistance], otherwise **false**. </returns>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static bool OutNodeDistance(float x0, float y0, float x1, float y1) => Math.DistanceSquared(x0, y0, x1, y1) > Math.NodeDistanceSquare;
 
         /// <summary>
@@ -112,6 +121,7 @@ namespace FanKit
         /// <param name="nearPoint"> The nearest point to outside point in a line on a transformer. </param>
         /// <param name="farPoint"> The farthest point to outside point in a line on a transformer. </param>
         /// <returns> The product point. </returns>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static Vector2 GetOutsidePointInTransformer(Vector2 nearPoint, Vector2 farPoint) => nearPoint - Vector2.Normalize(farPoint - nearPoint) * Math.NodeDistanceDouble;
 
 
@@ -124,6 +134,7 @@ namespace FanKit
         /// <param name="rightBottom"> The position of the bottom-right corner of the quadrangle. </param>
         /// <param name="leftBottom"> The position of the bottom-left corner of the quadrangle. </param>
         /// <returns> Return **true** if the quadrangle contains the specified point, otherwise **false**. </returns>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static bool InQuadrangle(Vector2 point, Vector2 leftTop, Vector2 rightTop, Vector2 rightBottom, Vector2 leftBottom)
         {
             float a = (leftTop.X - leftBottom.X) * (point.Y - leftBottom.Y) - (leftTop.Y - leftBottom.Y) * (point.X - leftBottom.X);
@@ -301,6 +312,7 @@ namespace FanKit
         /// <param name="center"> The center of coordinate system. </param>
         /// <param name="length"> The length of vector. </param>
         /// <returns> The product vector. </returns>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static Vector2 RadiansToVector(float radians, Vector2 center, float length = 40.0f) => new Vector2(System.MathF.Cos(radians) * length + center.X, System.MathF.Sin(radians) * length + center.Y);
 
         /// <summary>
@@ -330,6 +342,7 @@ namespace FanKit
         /// <param name="cos"> The cos value of rotation to apply. </param>
         /// <param name="sin"> The sin value of rotation to apply. </param>
         /// <returns> The transformed vector. </returns>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static Vector2 Rotate(Vector2 value, float cos, float sin)
         {
             float x = cos * value.X - sin * value.Y;
@@ -343,6 +356,7 @@ namespace FanKit
         /// <param name="value"> The vector to rotate. </param>
         /// <param name="rotation"> The rotation to apply. </param>
         /// <returns> The transformed vector. </returns>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public static Vector2 Rotate(Vector2 value, Vector2 rotation)
         {
             float x = rotation.X * value.X - rotation.Y * value.Y;
