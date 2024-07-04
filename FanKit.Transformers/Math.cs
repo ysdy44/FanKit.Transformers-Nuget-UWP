@@ -191,6 +191,15 @@ namespace FanKit
             };
         }
 
+        /// <summary>
+        /// Get the [Foot Point] of point and line.
+        /// </summary>
+        /// <param name="point"> The point. </param>
+        /// <param name="x0"> The X-axis value of the first point on the line. </param>
+        /// <param name="y0"> The Y-axis position of the first point on the line. </param>
+        /// <param name="x1"> The X-axis value of the second point on the line. </param>
+        /// <param name="y1"> The Y-axis position of the second point on the line. </param>
+        /// <returns> The product point. </returns>
         public static Vector2 FootPoint(Vector2 point, float x0, float y0, float x1, float y1)
         {
             float x = x0 - x1;
