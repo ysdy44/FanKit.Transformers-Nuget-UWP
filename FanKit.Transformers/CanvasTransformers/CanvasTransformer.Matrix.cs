@@ -23,6 +23,7 @@ namespace FanKit.Transformers
         /// Call the <see cref="CanvasTransformer.ReloadMatrix"/> method before using.
         /// </summary>
         /// <returns> The product matrix. </returns>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public Matrix3x2 GetMatrix() => this.Matrix;
         /// <summary>
         /// Gets <see cref="CanvasTransformer"/>'s matrix.
@@ -30,6 +31,7 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="mode"> The matrix mode. </param>
         /// <returns> The product matrix. </returns>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public Matrix3x2 GetMatrix(MatrixTransformerMode mode)
         {
             switch (mode)
@@ -49,6 +51,7 @@ namespace FanKit.Transformers
         /// Call the <see cref="CanvasTransformer.ReloadMatrix"/> method before using.
         /// </summary>
         /// <returns> The product inverse matrix. </returns>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public Matrix3x2 GetInverseMatrix() => this.InverseMatrix;
         /// <summary>
         /// Gets <see cref="CanvasTransformer"/>'s inverse matrix.
@@ -56,6 +59,7 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="mode"> The inverse matrix mode. </param>
         /// <returns> The product inverse matrix. </returns>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public Matrix3x2 GetInverseMatrix(InverseMatrixTransformerMode mode)
         {
             switch (mode)

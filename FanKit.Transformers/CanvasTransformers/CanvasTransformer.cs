@@ -82,6 +82,7 @@ namespace FanKit.Transformers
         /// </summary>
         /// <param name="bitmapSize"> The bitmap size. </param>
         /// <returns> The produced vector. </returns>
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public Vector2 GetScale(BitmapSize bitmapSize) => new Vector2((float)bitmapSize.Width / (float)this.Width, (float)bitmapSize.Height / (float)this.Height);
 
 
