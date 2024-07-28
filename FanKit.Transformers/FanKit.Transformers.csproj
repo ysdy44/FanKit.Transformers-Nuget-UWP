@@ -178,6 +178,7 @@
     <Compile Include="Snappings\3.BorderBorderSnap.cs" />
     <Compile Include="Snappings\3.VectorBorderSnap.cs" />
     <Compile Include="Snappings\3.VectorVectorSnap.cs" />
+    <Compile Include="Transformer.Around.cs" />
     <Compile Include="Transformer.AspectRatio.cs" />
     <Compile Include="Transformer.Contains.cs" />
     <Compile Include="Transformer.Controller.cs" />
