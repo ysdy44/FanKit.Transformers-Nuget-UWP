@@ -39,8 +39,11 @@ namespace FanKit.Transformers.TestApp
     {
         public TransformerBorder Source;
         public Transformer Destination;
+        public Transformer StartingDestination;
 
         public Matrix4x4 GetMatrix3D() => Transformer.FindHomography3D(this.Source, this.Destination);
+
+        public void CacheTransform() => this.StartingDestination = this.Destination;
     }
 
     public sealed partial class MainPage : Page
@@ -263,7 +266,10 @@ namespace FanKit.Transformers.TestApp
                     {
                         Transformer transformer = this.Layer2.Destination;
 
+                        this.StartingPoint = point;
+
                         this.TransformerMode = Transformer.ContainsNodeMode(point, transformer, disabledRadian: true);
+                        this.Layer2.CacheTransform();
 
                         this.CanvasControl.Invalidate();
                     }
@@ -311,10 +317,10 @@ namespace FanKit.Transformers.TestApp
                 case 2:
                     switch (this.TransformerMode)
                     {
-                        case TransformerMode.ScaleLeftTop: this.Layer2.Destination = this.Layer2.Destination.MoveLeftTop(point, this.ConvexQuadrilateralButton.IsOn); break;
-                        case TransformerMode.ScaleRightTop: this.Layer2.Destination = this.Layer2.Destination.MoveRightTop(point, this.ConvexQuadrilateralButton.IsOn); break;
-                        case TransformerMode.ScaleRightBottom: this.Layer2.Destination = this.Layer2.Destination.MoveRightBottom(point, this.ConvexQuadrilateralButton.IsOn); break;
-                        case TransformerMode.ScaleLeftBottom: this.Layer2.Destination = this.Layer2.Destination.MoveLeftBottom(point, this.ConvexQuadrilateralButton.IsOn); break;
+                        case TransformerMode.ScaleLeftTop: this.Layer2.Destination = this.Layer2.StartingDestination.MoveLeftTop(point, this.ConvexQuadrilateralButton.IsOn); break;
+                        case TransformerMode.ScaleRightTop: this.Layer2.Destination = this.Layer2.StartingDestination.MoveRightTop(point, this.ConvexQuadrilateralButton.IsOn); break;
+                        case TransformerMode.ScaleRightBottom: this.Layer2.Destination = this.Layer2.StartingDestination.MoveRightBottom(point, this.ConvexQuadrilateralButton.IsOn); break;
+                        case TransformerMode.ScaleLeftBottom: this.Layer2.Destination = this.Layer2.StartingDestination.MoveLeftBottom(point, this.ConvexQuadrilateralButton.IsOn); break;
                         default: break;
                     }
                     break;
