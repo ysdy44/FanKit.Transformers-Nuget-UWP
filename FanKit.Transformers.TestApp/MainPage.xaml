@@ -148,7 +148,7 @@
 
             <TextBlock x:Name="M31" Grid.Column="0" Grid.Row="2">0</TextBlock>
             <TextBlock x:Name="M32" Grid.Column="1" Grid.Row="2">0</TextBlock>
-            <TextBlock Opacity="0.5" Grid.Column="2" Grid.Row="2">1</TextBlock>
+            <TextBlock x:Name="M33" Opacity="0.5" Grid.Column="2" Grid.Row="2">1</TextBlock>
 
         </Grid>
 

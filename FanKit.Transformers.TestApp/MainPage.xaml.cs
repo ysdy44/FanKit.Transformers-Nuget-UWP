@@ -76,6 +76,7 @@ namespace FanKit.Transformers.TestApp
                 this.M21.Opacity = ((this.SelectedIndex > 0) ? 1.0 : 0.5);
                 this.M23.Opacity = ((this.SelectedIndex > 1) ? 1.0 : 0.5);
                 this.M13.Opacity = ((this.SelectedIndex > 1) ? 1.0 : 0.5);
+                this.M33.Opacity = ((this.SelectedIndex > 1) ? 1.0 : 0.5);
             }
 
             if (this.CanvasControl.ReadyToDraw)
@@ -168,7 +169,7 @@ namespace FanKit.Transformers.TestApp
 
                         this.M11.Text = $"{matrix.M11}"; this.M12.Text = $"{matrix.M12}"; this.M13.Text = "0";
                         this.M21.Text = $"{matrix.M21}"; this.M22.Text = $"{matrix.M22}"; this.M23.Text = "0";
-                        this.M31.Text = $"{matrix.M31}"; this.M32.Text = $"{matrix.M32}";
+                        this.M31.Text = $"{matrix.M31}"; this.M32.Text = $"{matrix.M32}"; this.M33.Text = "1";
 
                         args.DrawingSession.DrawImage(new Transform2DEffect
                         {
@@ -184,7 +185,7 @@ namespace FanKit.Transformers.TestApp
                         Matrix3x2 matrix = this.Layer1.GetMatrix();
                         this.M11.Text = $"{matrix.M11}"; this.M12.Text = $"{matrix.M12}"; this.M13.Text = "0";
                         this.M21.Text = $"{matrix.M21}"; this.M22.Text = $"{matrix.M22}"; this.M23.Text = "0";
-                        this.M31.Text = $"{matrix.M31}"; this.M32.Text = $"{matrix.M32}";
+                        this.M31.Text = $"{matrix.M31}"; this.M32.Text = $"{matrix.M32}"; this.M33.Text = "1";
 
                         args.DrawingSession.DrawImage(new Transform2DEffect
                         {
@@ -206,7 +207,7 @@ namespace FanKit.Transformers.TestApp
                         Matrix4x4 matrix = this.Layer2.GetMatrix3D();
                         this.M11.Text = $"{matrix.M11}"; this.M12.Text = $"{matrix.M12}"; this.M13.Text = $"{matrix.M14}";
                         this.M21.Text = $"{matrix.M21}"; this.M22.Text = $"{matrix.M22}"; this.M23.Text = $"{matrix.M24}";
-                        this.M31.Text = $"{matrix.M41}"; this.M32.Text = $"{matrix.M42}";
+                        this.M31.Text = $"{matrix.M41}"; this.M32.Text = $"{matrix.M42}"; this.M33.Text = $"{matrix.M44}";
 
                         args.DrawingSession.DrawImage(new Transform3DEffect
                         {
