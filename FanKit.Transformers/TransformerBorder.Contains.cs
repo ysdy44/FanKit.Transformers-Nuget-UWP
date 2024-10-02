@@ -39,7 +39,7 @@ namespace FanKit.Transformers
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public bool FillContainsPoint(Vector2 point)
         {
-            return point.X > this.Left && point.X < this.Right && point.Y > this.Top && point.Y < this.Bottom;
+            return point.X > this.Left == point.X < this.Right && point.Y > this.Top == point.Y < this.Bottom;
         }
 
         /// <summary>
