@@ -14,12 +14,14 @@
 |Programing language|C#|
 |Display language|English|
 
-  ![](ScreenShot/logo.png)
+![](ScreenShot/logo.png)
 
+  
+## Nuget
 
-Search 'FanKit.Transformers
-' in Nuget and download it.  
-  ![](ScreenShot/Thumbnails000.jpg)
+1. Access [Nuget Gallery | FanKit.Transformers](https://www.nuget.org/packages/FanKit.Transformers)
+2. Search "**FanKit.Transformers**" in **Nuget Packages Manager** and download it.  
+![](ScreenShot/Thumbnails000.jpg)
 
 
 ### Example

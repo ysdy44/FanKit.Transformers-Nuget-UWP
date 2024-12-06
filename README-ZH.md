@@ -15,12 +15,14 @@
 |显示语言|English|
 |评论语言|中文|
 
-  ![](ScreenShot/logo.png)
+![](ScreenShot/logo.png)
 
 
-在 Nuget 里搜索 'FanKit.Transformers
-' 并下载。
-  ![](ScreenShot/Thumbnails000.jpg)
+## Nuget
+
+1. 访问 [Nuget Gallery | FanKit.Transformers](https://www.nuget.org/packages/FanKit.Transformers)
+2. 在 **Nuget 包管理器** 里搜索 "**FanKit.Transformers**" 并下载。
+![](ScreenShot/Thumbnails000.jpg)
 
 
 ### 示例
