@@ -1,11 +1,28 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2036
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35219.272
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FanKit.Transformers", "FanKit.Transformers\FanKit.Transformers.csproj", "{A98A4671-07F5-46C7-BAD2-9FA0242D2855}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FanKit.Transformers.TestApp", "FanKit.Transformers.TestApp\FanKit.Transformers.TestApp.csproj", "{16404AC2-A6FC-45ED-B988-AC73D6CAF40E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Root", "Root", "{0D925E0B-2056-4CE2-A090-91C055613F2F}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+		README-EN.md = README-EN.md
+		README-ZH.md = README-ZH.md
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ScreenShot", "ScreenShot", "{EE1711F5-9129-4531-81C3-CCA88B0F1A6F}"
+	ProjectSection(SolutionItems) = preProject
+		ScreenShot\logo.png = ScreenShot\logo.png
+		ScreenShot\ScreenShot001.jpg = ScreenShot\ScreenShot001.jpg
+		ScreenShot\Thumbnails000.jpg = ScreenShot\Thumbnails000.jpg
+		ScreenShot\Thumbnails001.jpg = ScreenShot\Thumbnails001.jpg
+		ScreenShot\Thumbnails002.jpg = ScreenShot\Thumbnails002.jpg
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -58,6 +75,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EE1711F5-9129-4531-81C3-CCA88B0F1A6F} = {0D925E0B-2056-4CE2-A090-91C055613F2F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {993D467C-8458-44E1-B224-49FDA3DC26D7}
