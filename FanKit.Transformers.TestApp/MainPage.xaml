@@ -109,9 +109,9 @@
             </TextBlock>
             <HyperlinkButton>
                 <HyperlinkButton.NavigateUri>
-                    https://www.microsoft.com/store/productId/9PD2JJZQF524
+                    https://apps.microsoft.com/detail/9pd2jjzqf524
                 </HyperlinkButton.NavigateUri>
-                https://www.microsoft.com/store/productId/9PD2JJZQF524
+                https://apps.microsoft.com/detail/9pd2jjzqf524
             </HyperlinkButton>
         </StackPanel>
 

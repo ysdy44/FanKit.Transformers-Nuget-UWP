@@ -57,7 +57,7 @@ using System.Numerics;
 ## Learn More
 
 You can learn more from the demo application in windows 10 store:<br/>
-[FanKit](https://www.microsoft.com/store/productId/9PD2JJZQF524)
+[FanKit](https://apps.microsoft.com/detail/9pd2jjzqf524)
 
 
 1.Click on item "Transformers" in the top bar.  

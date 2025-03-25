@@ -58,7 +58,7 @@ using System.Numerics;
 ## 了解更多
 
 您可以从 Windows 10 商店中的演示应用程序中了解更多信息:<br/>
-[FanKit](https://www.microsoft.com/store/productId/9PD2JJZQF524)
+[FanKit](https://apps.microsoft.com/detail/9pd2jjzqf524)
 
 
 1.点击顶部栏中的“Transformers” 项。
